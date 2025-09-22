@@ -55,7 +55,7 @@ export function ProductsOverview() {
           {products.map((product, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-3 h-96"
+              className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-3 h-96 cursor-pointer"
             >
               {/* Full-size background image */}
               <div
@@ -63,54 +63,81 @@ export function ProductsOverview() {
                 style={{ backgroundImage: `url('${product.image}')` }}
               />
 
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/20 group-hover:from-black/90 transition-all duration-500" />
+              {/* Gradient overlay - hover'da resmi bulanıklaştırır */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10 group-hover:from-black/95 group-hover:via-black/70 group-hover:to-black/30 transition-all duration-500" />
+              
+              {/* Hover'da resim bulanıklığı */}
+              <div className="absolute inset-0 backdrop-blur-none group-hover:backdrop-blur-sm transition-all duration-500" />
 
               {/* Badge */}
               <div className="absolute top-4 right-4 z-20">
-                <span className="bg-primary text-primary-foreground px-3 py-1.5 rounded-full text-sm font-semibold backdrop-blur-sm">
+                <span className="bg-primary text-primary-foreground px-3 py-1.5 rounded-full text-sm font-semibold backdrop-blur-sm group-hover:scale-105 transition-transform duration-300">
                   {product.badge}
                 </span>
               </div>
 
               {/* Icon */}
-              <div className="absolute top-4 left-4 w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white group-hover:scale-110 group-hover:bg-white/30 transition-all duration-300">
+              <div className="absolute top-4 left-4 w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white group-hover:scale-110 group-hover:bg-white/30 group-hover:rotate-12 transition-all duration-300">
                 {product.icon}
               </div>
 
-              {/* Bottom overlay content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white bg-black/30 backdrop-blur-sm">
-                <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-primary-foreground transition-colors">
+              {/* Hover ile gelen bilgiler - alttan yukarı doğru */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-full group-hover:translate-y-0 z-20">
+                <div className="bg-black/60 backdrop-blur-md rounded-xl p-6 border border-white/20">
+                  <h3 className="text-2xl font-bold mb-3 text-white">
+                    {product.title}
+                  </h3>
+                  <p className="text-white/90 mb-4 text-sm leading-relaxed">
+                    {product.description}
+                  </p>
+                  
+                  {/* Features listesi */}
+                  <div className="space-y-2 mb-4">
+                    {product.features.map((feature, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-center text-xs text-white/80 bg-white/10 px-3 py-2 rounded-lg backdrop-blur-sm border border-white/20"
+                      >
+                        <div className="w-1.5 h-1.5 bg-white rounded-full mr-2"></div>
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+
+                  <Button
+                    variant="secondary"
+                    asChild
+                    className="w-full bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300 relative z-30"
+                  >
+                    <Link 
+                      href={product.href} 
+                      className="flex items-center justify-center"
+                      onClick={() => console.log('Butona tıklandı, yönlendiriliyor:', product.href)}
+                    >
+                      <span>Detayları İncele</span>
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Alt kısım - hover olmadığında görünen minimal bilgi */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white group-hover:opacity-0 transition-opacity duration-300">
+                <h3 className="text-2xl font-bold mb-2 text-white">
                   {product.title}
                 </h3>
-                <p className="text-white mb-4 text-pretty leading-relaxed">{product.description}</p>
-
-                {/* Features as dots */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {product.features.map((feature, idx) => (
-                    <span
-                      key={idx}
-                      className="text-xs bg-black/40 backdrop-blur-sm px-2 py-1 rounded-full text-white border border-white/20"
-                    >
-                      {feature}
-                    </span>
-                  ))}
+                <p className="text-white/90 text-sm mb-4 line-clamp-2">
+                  {product.description}
+                </p>
+                
+                <div className="flex items-center text-white/80 text-sm">
+                  <span>Detayları görmek için üzerine gelin</span>
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </div>
-
-                <Button
-                  variant="secondary"
-                  asChild
-                  className="w-full bg-black/40 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-black transition-all duration-300"
-                >
-                  <Link href={product.href} className="flex items-center justify-center">
-                    <span>Detayları İncele</span>
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </Button>
               </div>
 
               {/* Hover effect overlay */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10" />
             </div>
           ))}
         </div>

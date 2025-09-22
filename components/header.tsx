@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, memo, useMemo } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import {
@@ -22,11 +22,283 @@ import { LanguageSwitcher } from "@/components/language-switcher"
 import { useLanguage } from "@/contexts/language-context"
 import { contactInfo } from "@/lib/contact-info"
 
+// Memoized dropdown content components - sadece çeviriler değiştiğinde güncellenir
+const PergolaDropdownContent = memo(({ 
+  bioclimaticTitle, 
+  bioclimaticDesc 
+}: { 
+  bioclimaticTitle: string
+  bioclimaticDesc: string
+}) => (
+  <NavigationMenuContent>
+    <div className="grid gap-3 p-6 w-[400px]">
+      <NavigationMenuLink asChild>
+        <Link
+          href="/pergola/biyoklimatik"
+          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 hover:text-gray-900"
+        >
+          <div className="text-sm font-medium leading-none">{bioclimaticTitle}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {bioclimaticDesc}
+          </p>
+        </Link>
+      </NavigationMenuLink>
+    </div>
+  </NavigationMenuContent>
+))
+PergolaDropdownContent.displayName = "PergolaDropdownContent"
+
+const GlassDropdownContent = memo(({ 
+  glassTitle, 
+  glassDesc 
+}: { 
+  glassTitle: string
+  glassDesc: string
+}) => (
+  <NavigationMenuContent>
+    <div className="grid gap-3 p-6 w-[400px]">
+      <NavigationMenuLink asChild>
+        <Link
+          href="/cam-sistemleri"
+          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 hover:text-gray-900"
+        >
+          <div className="text-sm font-medium leading-none">{glassTitle}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {glassDesc}
+          </p>
+        </Link>
+      </NavigationMenuLink>
+    </div>
+  </NavigationMenuContent>
+))
+GlassDropdownContent.displayName = "GlassDropdownContent"
+
+// Memoized mobile menu content - sadece çeviriler değiştiğinde güncellenir
+const MobileMenuContent = memo(({ 
+  translations,
+  isMenuOpen, 
+  setIsMenuOpen 
+}: { 
+  translations: {
+    products: string
+    services: string
+    company: string
+    pergolaSystems: string
+    glassSystems: string
+    winterGarden: string
+    sunBreakers: string
+    zipScreen: string
+    catalog: string
+    arDemo: string
+    export: string
+    getQuote: string
+    contact: string
+  }
+  isMenuOpen: boolean
+  setIsMenuOpen: (open: boolean) => void
+}) => {
+  const {
+    products,
+    services,
+    company,
+    pergolaSystems,
+    glassSystems,
+    winterGarden,
+    sunBreakers,
+    zipScreen,
+    catalog,
+    arDemo,
+    export: exportText,
+    getQuote,
+    contact
+  } = translations
+
+  if (!isMenuOpen) return null
+
+  return (
+    <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}>
+      <div className="flex items-center justify-center min-h-screen p-4">
+        <div 
+          className="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl max-w-4xl w-full max-h-[80vh] overflow-y-auto"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="p-8">
+            {/* Menu Header */}
+            <div className="flex items-center justify-between mb-8">
+              <h2 className="text-2xl font-bold text-gray-800">Menü</h2>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-gray-600 hover:text-gray-800"
+              >
+                <X className="h-6 w-6" />
+              </Button>
+            </div>
+
+            {/* Menu Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Ana Kategoriler */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{products}</h3>
+                <Link
+                  href="/pergola"
+                  className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{pergolaSystems}</div>
+                  <div className="text-sm text-gray-600">Biyoklimatik IDEA sistemleri</div>
+                </Link>
+                <Link
+                  href="/cam-sistemleri"
+                  className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{glassSystems}</div>
+                  <div className="text-sm text-gray-600">Frameless cam çözümleri</div>
+                </Link>
+                <Link
+                  href="/kis-bahcesi"
+                  className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{winterGarden}</div>
+                  <div className="text-sm text-gray-600">4 mevsim konfor</div>
+                </Link>
+                <Link
+                  href="/gunes-kiriclari"
+                  className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{sunBreakers}</div>
+                  <div className="text-sm text-gray-600">Güneş kontrol sistemleri</div>
+                </Link>
+                <Link
+                  href="/zip-perde"
+                  className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{zipScreen}</div>
+                  <div className="text-sm text-gray-600">Rüzgar ve güneş koruması</div>
+                </Link>
+              </div>
+
+              {/* Hizmetler */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{services}</h3>
+                <Link
+                  href="/katalog"
+                  className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{catalog}</div>
+                  <div className="text-sm text-gray-600">Ürün kataloğu indir</div>
+                </Link>
+                <Link
+                  href="/ar-demo"
+                  className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{arDemo}</div>
+                  <div className="text-sm text-gray-600">AR ile görselleştir</div>
+                </Link>
+                <Link
+                  href="/export"
+                  className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{exportText}</div>
+                  <div className="text-sm text-gray-600">İhracat ve distribütörlük</div>
+                </Link>
+                <Link
+                  href="/teklif-al"
+                  className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{getQuote}</div>
+                  <div className="text-sm text-gray-600">Ücretsiz fiyat teklifi</div>
+                </Link>
+              </div>
+
+              {/* Şirket */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{company}</h3>
+                <Link
+                  href="/hakkimizda"
+                  className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <div className="font-medium text-gray-800 group-hover:text-orange-600">Hakkımızda</div>
+                  <div className="text-sm text-gray-600">15 yıllık deneyim</div>
+                </Link>
+                <Link
+                  href="/referanslar"
+                  className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <div className="font-medium text-gray-800 group-hover:text-orange-600">Referanslar</div>
+                  <div className="text-sm text-gray-600">5000+ başarılı proje</div>
+                </Link>
+                <Link
+                  href="/blog"
+                  className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <div className="font-medium text-gray-800 group-hover:text-orange-600">Blog</div>
+                  <div className="text-sm text-gray-600">Outdoor yaşam rehberi</div>
+                </Link>
+                <Link
+                  href="/iletisim"
+                  className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{contact}</div>
+                  <div className="text-sm text-gray-600">İletişim bilgileri</div>
+                </Link>
+              </div>
+            </div>
+
+            {/* Language Switcher */}
+            <div className="mt-8 pt-6 border-t border-gray-200">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-600">Dil Seçimi</span>
+                <LanguageSwitcher theme="light" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+})
+MobileMenuContent.displayName = "MobileMenuContent"
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false)
   const { t } = useLanguage()
+
+  // Çevirileri memoize et - sadece dil değiştiğinde güncellenir
+  const navTranslations = useMemo(() => ({
+    pergolaSystems: t("nav.pergolaSystems"),
+    glassSystems: t("nav.glassSystems"),
+    winterGarden: t("nav.winterGarden"),
+    sunBreakers: t("nav.sunBreakers"),
+    zipScreen: t("nav.zipScreen"),
+    catalog: t("nav.catalog"),
+    arDemo: t("nav.arDemo"),
+    export: t("nav.export"),
+    contact: t("nav.contact"),
+    getQuote: t("nav.getQuote"),
+    products: t("nav.products"),
+    services: t("nav.services"),
+    company: t("nav.company"),
+    bioclimaticTitle: t("nav.bioclimaticTitle"),
+    bioclimaticDesc: t("nav.bioclimaticDesc"),
+    glassTitle: t("nav.glassTitle"),
+    glassDesc: t("nav.glassDesc"),
+  }), [t])
 
   // Scroll event listener for sticky header
   useEffect(() => {
@@ -91,44 +363,22 @@ export function Header() {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-gray-800 hover:text-orange-600 bg-transparent drop-shadow-sm">
-                    {t("nav.pergolaSystems")}
+                    {navTranslations.pergolaSystems}
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="grid gap-3 p-6 w-[400px]">
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="/pergola/biyoklimatik"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 hover:text-gray-900"
-                        >
-                          <div className="text-sm font-medium leading-none">{t("nav.bioclimaticTitle")}</div>
-                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                            {t("nav.bioclimaticDesc")}
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
-                    </div>
-                  </NavigationMenuContent>
+                  <PergolaDropdownContent 
+                    bioclimaticTitle={navTranslations.bioclimaticTitle}
+                    bioclimaticDesc={navTranslations.bioclimaticDesc}
+                  />
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-gray-800 hover:text-orange-600 bg-transparent drop-shadow-sm">
-                    {t("nav.glassSystems")}
+                    {navTranslations.glassSystems}
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="grid gap-3 p-6 w-[400px]">
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="/cam-sistemleri"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 hover:text-gray-900"
-                        >
-                          <div className="text-sm font-medium leading-none">{t("nav.glassTitle")}</div>
-                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                            {t("nav.glassDesc")}
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
-                    </div>
-                  </NavigationMenuContent>
+                  <GlassDropdownContent 
+                    glassTitle={navTranslations.glassTitle}
+                    glassDesc={navTranslations.glassDesc}
+                  />
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
@@ -137,7 +387,7 @@ export function Header() {
                       href="/kis-bahcesi"
                       className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-gray-800 transition-colors hover:bg-orange-50 hover:text-orange-600 drop-shadow-sm"
                     >
-                      {t("nav.winterGarden")}
+                      {navTranslations.winterGarden}
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -148,7 +398,7 @@ export function Header() {
                       href="/gunes-kiriclari"
                       className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-gray-800 transition-colors hover:bg-orange-50 hover:text-orange-600 drop-shadow-sm"
                     >
-                      {t("nav.sunBreakers")}
+                      {navTranslations.sunBreakers}
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -159,7 +409,7 @@ export function Header() {
                       href="/zip-perde"
                       className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-gray-800 transition-colors hover:bg-orange-50 hover:text-orange-600 drop-shadow-sm"
                     >
-                      {t("nav.zipScreen")}
+                      {navTranslations.zipScreen}
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -170,7 +420,7 @@ export function Header() {
                       href="/katalog"
                       className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-gray-800 transition-colors hover:bg-orange-50 hover:text-orange-600 drop-shadow-sm"
                     >
-                      {t("nav.catalog")}
+                      {navTranslations.catalog}
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -181,7 +431,7 @@ export function Header() {
                       href="/ar-demo"
                       className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-gray-800 transition-colors hover:bg-orange-50 hover:text-orange-600 drop-shadow-sm"
                     >
-                      {t("nav.arDemo")}
+                      {navTranslations.arDemo}
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -192,7 +442,7 @@ export function Header() {
                       href="/export"
                       className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-gray-800 transition-colors hover:bg-orange-50 hover:text-orange-600 drop-shadow-sm"
                     >
-                      {t("nav.export")}
+                      {navTranslations.export}
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -203,7 +453,7 @@ export function Header() {
                       href="/iletisim"
                       className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium text-gray-800 transition-colors hover:bg-orange-50 hover:text-orange-600 drop-shadow-sm"
                     >
-                      {t("nav.contact")}
+                      {navTranslations.contact}
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -228,161 +478,25 @@ export function Header() {
           </div>
 
           {/* Full Screen Menu */}
-          {isMenuOpen && (
-            <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}>
-              <div className="flex items-center justify-center min-h-screen p-4">
-                <div 
-                  className="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl max-w-4xl w-full max-h-[80vh] overflow-y-auto"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <div className="p-8">
-                    {/* Menu Header */}
-                    <div className="flex items-center justify-between mb-8">
-                      <h2 className="text-2xl font-bold text-gray-800">Menü</h2>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={() => setIsMenuOpen(false)}
-                        className="text-gray-600 hover:text-gray-800"
-                      >
-                        <X className="h-6 w-6" />
-                      </Button>
-                    </div>
-
-                    {/* Menu Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {/* Ana Kategoriler */}
-                      <div className="space-y-4">
-                        <h3 className="text-lg font-semibold text-gray-800 mb-4">{t("nav.products")}</h3>
-                        <Link
-                          href="/pergola"
-                          className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <div className="font-medium text-gray-800 group-hover:text-orange-600">{t("nav.pergolaSystems")}</div>
-                          <div className="text-sm text-gray-600">Biyoklimatik IDEA sistemleri</div>
-                        </Link>
-                        <Link
-                          href="/cam-sistemleri"
-                          className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <div className="font-medium text-gray-800 group-hover:text-orange-600">{t("nav.glassSystems")}</div>
-                          <div className="text-sm text-gray-600">Frameless cam çözümleri</div>
-                        </Link>
-                        <Link
-                          href="/kis-bahcesi"
-                          className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <div className="font-medium text-gray-800 group-hover:text-orange-600">{t("nav.winterGarden")}</div>
-                          <div className="text-sm text-gray-600">4 mevsim konfor</div>
-                        </Link>
-                        <Link
-                          href="/gunes-kiriclari"
-                          className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <div className="font-medium text-gray-800 group-hover:text-orange-600">{t("nav.sunBreakers")}</div>
-                          <div className="text-sm text-gray-600">Güneş kontrol sistemleri</div>
-                        </Link>
-                        <Link
-                          href="/zip-perde"
-                          className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <div className="font-medium text-gray-800 group-hover:text-orange-600">{t("nav.zipScreen")}</div>
-                          <div className="text-sm text-gray-600">Rüzgar ve güneş koruması</div>
-                        </Link>
-                      </div>
-
-                      {/* Hizmetler */}
-                      <div className="space-y-4">
-                        <h3 className="text-lg font-semibold text-gray-800 mb-4">{t("nav.services")}</h3>
-                        <Link
-                          href="/katalog"
-                          className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <div className="font-medium text-gray-800 group-hover:text-orange-600">{t("nav.catalog")}</div>
-                          <div className="text-sm text-gray-600">Ürün kataloğu indir</div>
-                        </Link>
-                        <Link
-                          href="/ar-demo"
-                          className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <div className="font-medium text-gray-800 group-hover:text-orange-600">{t("nav.arDemo")}</div>
-                          <div className="text-sm text-gray-600">AR ile görselleştir</div>
-                        </Link>
-                        <Link
-                          href="/export"
-                          className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <div className="font-medium text-gray-800 group-hover:text-orange-600">{t("nav.export")}</div>
-                          <div className="text-sm text-gray-600">İhracat ve distribütörlük</div>
-                        </Link>
-                        <Link
-                          href="/teklif-al"
-                          className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <div className="font-medium text-gray-800 group-hover:text-orange-600">{t("nav.getQuote")}</div>
-                          <div className="text-sm text-gray-600">Ücretsiz fiyat teklifi</div>
-                        </Link>
-                      </div>
-
-                      {/* Şirket */}
-                      <div className="space-y-4">
-                        <h3 className="text-lg font-semibold text-gray-800 mb-4">{t("nav.company")}</h3>
-                        <Link
-                          href="/hakkimizda"
-                          className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <div className="font-medium text-gray-800 group-hover:text-orange-600">Hakkımızda</div>
-                          <div className="text-sm text-gray-600">15 yıllık deneyim</div>
-                        </Link>
-                        <Link
-                          href="/referanslar"
-                          className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <div className="font-medium text-gray-800 group-hover:text-orange-600">Referanslar</div>
-                          <div className="text-sm text-gray-600">5000+ başarılı proje</div>
-                        </Link>
-                        <Link
-                          href="/blog"
-                          className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <div className="font-medium text-gray-800 group-hover:text-orange-600">Blog</div>
-                          <div className="text-sm text-gray-600">Outdoor yaşam rehberi</div>
-                        </Link>
-                        <Link
-                          href="/iletisim"
-                          className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <div className="font-medium text-gray-800 group-hover:text-orange-600">{t("nav.contact")}</div>
-                          <div className="text-sm text-gray-600">İletişim bilgileri</div>
-                        </Link>
-                      </div>
-                    </div>
-
-                    {/* Language Switcher */}
-                    <div className="mt-8 pt-6 border-t border-gray-200">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-600">Dil Seçimi</span>
-                        <LanguageSwitcher theme="light" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
+          <MobileMenuContent 
+            translations={{
+              products: navTranslations.products,
+              services: navTranslations.services,
+              company: navTranslations.company,
+              pergolaSystems: navTranslations.pergolaSystems,
+              glassSystems: navTranslations.glassSystems,
+              winterGarden: navTranslations.winterGarden,
+              sunBreakers: navTranslations.sunBreakers,
+              zipScreen: navTranslations.zipScreen,
+              catalog: navTranslations.catalog,
+              arDemo: navTranslations.arDemo,
+              export: navTranslations.export,
+              getQuote: navTranslations.getQuote,
+              contact: navTranslations.contact,
+            }}
+            isMenuOpen={isMenuOpen} 
+            setIsMenuOpen={setIsMenuOpen} 
+          />
         </div>
       </header>
     </>

@@ -123,29 +123,6 @@ export const translations = {
       installation: "Profesyonel Montaj",
       maintenance: "Bakım Hizmeti",
       warranty: "Garanti"
-    },
-    // Products
-    products: {
-      title: "Ürünler",
-      subtitle: "Ürün Yelpazemizi Keşfedin",
-      viewDetails: "Detayları Gör",
-      getQuote: "Teklif Al",
-      features: "Özellikler",
-      specifications: "Teknik Özellikler",
-      gallery: "Galeri"
-    },
-    // Contact
-    contact: {
-      title: "İletişim",
-      subtitle: "Uzman ekibimizle iletişime geçin",
-      name: "Ad Soyad",
-      email: "E-posta",
-      phone: "Telefon",
-      message: "Mesaj",
-      send: "Mesaj Gönder",
-      address: "Adres",
-      workingHours: "Çalışma Saatleri",
-      quickContact: "Hızlı İletişim"
     }
   },
   en: {
@@ -272,29 +249,6 @@ export const translations = {
       installation: "Professional Installation",
       maintenance: "Maintenance Service",
       warranty: "Warranty"
-    },
-    // Products
-    products: {
-      title: "Products",
-      subtitle: "Discover Our Product Range",
-      viewDetails: "View Details",
-      getQuote: "Get Quote",
-      features: "Features",
-      specifications: "Specifications",
-      gallery: "Gallery"
-    },
-    // Contact
-    contact: {
-      title: "Contact Us",
-      subtitle: "Get in touch with our expert team",
-      name: "Name",
-      email: "Email",
-      phone: "Phone",
-      message: "Message",
-      send: "Send Message",
-      address: "Address",
-      workingHours: "Working Hours",
-      quickContact: "Quick Contact"
     }
   },
   ar: {
