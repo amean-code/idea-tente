@@ -77,7 +77,7 @@ export const translations = {
     },
     // Products
     products: {
-      bioclimatic: "Biyoklimatik IDEA",
+      bioclimatic: "Biyoklimatik Pergola",
       bioclimaticDesc: "Akıllı lamelli sistemler",
       fixed: "Sabit IDEA",
       glass: "Cam Sistemleri",

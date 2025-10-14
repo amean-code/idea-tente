@@ -7,11 +7,11 @@ import { MessageCircle, Play, ArrowRight } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 
 const heroImages = [
-  "/luxury-modern-pergola-with-glass-panels-by-pool-at.jpg",
-  "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
-  "/frameless-glass-sliding-system--modern-terrace-wit.jpg",
-  "/winter-garden-conservatory-with-glass-roof--indoor.jpg",
-  "/back.jpg",
+  "/pergola/pergola-kapak.jpeg",
+  "/pergola/pergola-kafe-gorsel.jpg",
+  "/giyotin-cam/giyotin-cam.png",
+  "/pergola/pergola-dıs-mekan.jpeg",
+  "/pergola/pergola-render-siyah-gece.jpg",
   "/slide-1.jpg",
 ]
 
@@ -22,7 +22,7 @@ export function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % heroImages.length)
-    }, 5000)
+    }, 8000)
 
     return () => clearInterval(interval)
   }, [])
@@ -71,7 +71,7 @@ export function HeroSection() {
               asChild
               className="text-lg px-8 py-6 bg-black/30 border-white/60 text-white hover:bg-black/40 backdrop-blur-sm hover:scale-105 transition-all"
             >
-              <Link href="/katalog">
+              <Link href="#products">
                 {t("hero.viewProducts")}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -93,7 +93,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
           {heroImages.map((_, index) => (
             <button
               key={index}

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Play, Eye } from "lucide-react"
+import { Play, Eye, ArrowRight } from "lucide-react"
 
 const arDemos = [
   {
@@ -28,15 +28,18 @@ const arDemos = [
   },
 ]
 
+/**
+ * AR Demo galerisi - modern ve çerçevesiz kart tasarımı
+ */
 export function ARGallery() {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 text-balance">
             AR Demo Galerisi
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">
             Farklı ürün kategorilerimizi artırılmış gerçeklik ile keşfedin
           </p>
         </div>
@@ -45,34 +48,49 @@ export function ARGallery() {
           {arDemos.map((demo, index) => (
             <div
               key={index}
-              className="bg-card rounded-lg overflow-hidden border group hover:shadow-lg transition-shadow"
+              className="group cursor-pointer"
             >
-              <div className="relative aspect-video overflow-hidden">
-                <img
-                  src={demo.image || "/placeholder.svg"}
-                  alt={demo.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <Button size="lg" className="bg-primary/90 hover:bg-primary">
-                    <Play className="h-5 w-5 mr-2" />
-                    AR Demo
-                  </Button>
-                </div>
-                <div className="absolute top-4 left-4">
-                  <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                    {demo.category}
-                  </span>
-                </div>
-              </div>
+              {/* Modern Çerçevesiz Kart */}
+              <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img
+                    src={demo.image || "/placeholder.svg"}
+                    alt={demo.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                  />
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  {/* Kategori Badge */}
+                  <div className="absolute top-5 left-5">
+                    <span className="inline-block bg-orange-500 text-white px-4 py-2 rounded-xl text-sm font-semibold shadow-lg">
+                      {demo.category}
+                    </span>
+                  </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-2">{demo.title}</h3>
-                <p className="text-muted-foreground mb-4">{demo.description}</p>
-                <Button variant="outline" className="w-full bg-transparent">
-                  <Eye className="h-4 w-4 mr-2" />
-                  AR Demo Başlat
-                </Button>
+                  {/* Play Button - Hover'da görünür */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center shadow-2xl transform scale-90 group-hover:scale-100 transition-transform">
+                      <Play className="h-8 w-8 text-white ml-1" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6 space-y-4">
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
+                    {demo.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">{demo.description}</p>
+                  
+                  {/* AR Demo Butonu */}
+                  <div className="pt-2">
+                    <div className="flex items-center text-orange-600 font-semibold group-hover:gap-2 transition-all">
+                      <Eye className="h-5 w-5" />
+                      <span className="ml-2">AR Demo Başlat</span>
+                      <ArrowRight className="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           ))}

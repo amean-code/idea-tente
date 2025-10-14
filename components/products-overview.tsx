@@ -118,7 +118,7 @@ export function ProductsOverview() {
   }, [isDragging, products.length])
   
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-secondary/10 overflow-hidden">
+    <section id="products" className="py-20 bg-gradient-to-b from-background to-secondary/10 overflow-hidden">
       <div className="container mx-auto px-4 mb-12">
         <div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 text-balance">

@@ -15,6 +15,16 @@ export const metadata: Metadata = {
     "Türkiye'nin önde gelen IDEA, cam sistemleri, kış bahçesi ve güneş kırıcı üreticisi. Oteller, restoranlar ve konutlar için premium çözümler.",
   keywords: "IDEA, cam sistemleri, kış bahçesi, güneş kırıcı, zip perde, outdoor, tente",
   generator: "v0.app",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/idea-logo.jpg", sizes: "167x161", type: "image/jpeg" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/idea-logo.jpg",
+    shortcut: "/favicon.ico",
+  },
 }
 
 export default function RootLayout({

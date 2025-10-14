@@ -1,4 +1,4 @@
-import { Smartphone, Camera, Hand, CheckCircle } from "lucide-react"
+import { Smartphone, Camera, Hand, CheckCircle, ArrowRight } from "lucide-react"
 
 const steps = [
   {
@@ -23,35 +23,47 @@ const steps = [
   },
 ]
 
+/**
+ * AR kullanım talimatları - modern step by step tasarım
+ */
 export function ARInstructions() {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 text-balance">
             AR Demo Nasıl Kullanılır?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">
             Artırılmış gerçeklik deneyimini başlatmak için bu basit adımları takip edin
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {steps.map((step, index) => (
-            <div key={index} className="text-center relative">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 relative">
-                <step.icon className="h-8 w-8 text-primary" />
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold">
+            <div key={index} className="relative group">
+              {/* Modern Step Kartı */}
+              <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-orange-200 h-full">
+                {/* Step Number Badge */}
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-orange-500 text-white rounded-xl flex items-center justify-center text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
                   {index + 1}
                 </div>
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">{step.title}</h3>
-              <p className="text-muted-foreground">{step.description}</p>
 
+                <div className="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-orange-100 transition-colors">
+                  <step.icon className="h-8 w-8 text-orange-500" />
+                </div>
+                
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center group-hover:text-orange-600 transition-colors">
+                  {step.title}
+                </h3>
+                <p className="text-gray-600 text-center leading-relaxed">{step.description}</p>
+              </div>
+
+              {/* Arrow between steps */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-8 left-full w-full">
-                  <div className="w-full h-0.5 bg-primary/20 relative">
-                    <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-primary/40 rounded-full" />
+                <div className="hidden lg:flex absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                    <ArrowRight className="h-5 w-5 text-orange-500" />
                   </div>
                 </div>
               )}
