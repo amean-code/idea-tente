@@ -74,9 +74,17 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     setMounted(true)
     
-    // localStorage'dan dil yükle
+    // Cookie ve localStorage'dan dil yükle
     if (typeof window !== 'undefined') {
-      const savedLanguage = localStorage.getItem("language")
+      // Önce cookie'den deneyelim (middleware ile senkron)
+      const cookieLanguage = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('language='))
+        ?.split('=')[1]
+      
+      // Sonra localStorage'a bakalım
+      const savedLanguage = cookieLanguage || localStorage.getItem("language")
+      
       if (savedLanguage && supportedLanguages.includes(savedLanguage as Language)) {
         const validLanguage = savedLanguage as Language
         setLanguageState(validLanguage)
@@ -87,12 +95,16 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }
   }, [])
 
-  // Save language to localStorage when it changes
+  // Save language to localStorage and cookie when it changes
   const setLanguage = useCallback((lang: Language) => {
     setLanguageState(lang)
     
     if (typeof window !== 'undefined') {
+      // localStorage'a kaydet
       localStorage.setItem("language", lang)
+      
+      // Cookie'ye de kaydet (middleware ile senkron)
+      document.cookie = `language=${lang}; path=/; max-age=${60 * 60 * 24 * 365}; samesite=lax`
     }
 
     // Update document direction for RTL languages
