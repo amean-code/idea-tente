@@ -308,5 +308,82 @@ export const arTranslations = {
       subtitle: "اختر نموذج ستارة زيب المناسب لاحتياجاتك واجعل مناطقك الخارجية مريحة",
       viewDetails: "عرض التفاصيل"
     }
+  },
+
+  // CTA Section translations
+  cta: {
+    title: "اجعل مساحتك الخارجية الحلم حقيقة",
+    subtitle: "احصل على فحص مجاني وعرض سعر مع فريق الخبراء لدينا. اتصل بنا الآن للحصول على أنظمة برجولا وزجاج ذات جودة ممتازة.",
+    whatsappContact: "اتصال واتساب",
+    quoteForm: "نموذج عرض الأسعار",
+    downloadCatalog: "تحميل الكتالوج",
+    becomeDistributor: "كن موزعاً"
+  },
+
+  // Stats Section translations
+  stats: {
+    completedProjects: "المشاريع المكتملة",
+    exportCountries: "دول التصدير",
+    yearsExperience: "سنوات الخبرة",
+    customerSatisfaction: "رضا العملاء",
+    projects: "المشاريع",
+    countries: "البلدان",
+    years: "سنوات",
+    satisfaction: "الرضا"
+  },
+
+  // Why Choose Us Section translations
+  whyChooseUs: {
+    badge: "لماذا IDEA؟",
+    title: "الشركة الرائدة في تركيا",
+    titleHighlight: "لتصنيع البرجولا",
+    subtitle: "مع خبرتنا التي تزيد عن 20 عاماً و5000+ مشروع ناجح، نخدم كعنوان للجودة والثقة.",
+    features: {
+      experience: {
+        title: "خبرة 20+ عاماً",
+        description: "نقدم أفضل خدمة لعملائنا مع سنوات من الخبرة والتخصص في الصناعة.",
+        cta: "اعرف المزيد",
+        founded: "التأسيس"
+      },
+      quality: {
+        title: "ضمان الجودة",
+        description: "نقدم حلولاً موثوقة مع منتجات معتمدة من CE وضمان 10 سنوات.",
+        cta: "الشهادات",
+        warranty: "الضمان"
+      },
+      team: {
+        title: "فريق خبراء",
+        description: "نحن معك مع خدمة التركيب الاحترافية ودعم ما بعد البيع.",
+        cta: "فريقنا"
+      },
+      global: {
+        title: "الوصول العالمي",
+        description: "نخدم في جميع أنحاء العالم مع التصدير إلى أكثر من 50 دولة وشبكة موزعين.",
+        cta: "التصدير",
+        countries: "البلدان"
+      },
+      design: {
+        title: "تصميم مخصص",
+        description: "نقدم خدمات تصميم وإنتاج مخصصة حسب احتياجاتك.",
+        cta: "التصميم",
+        custom: "مخصص"
+      },
+      delivery: {
+        title: "تسليم سريع",
+        description: "نحقق مشاريعك بخدمات الإنتاج والتجميع في وقت قصير.",
+        cta: "العملية",
+        days: "أيام"
+      }
+    },
+    projectShowcase: {
+      villa: "مشروع فيلا",
+      hotel: "شرفة فندق",
+      restaurant: "مطعم",
+      residence: "مسكن",
+      istanbul: "إسطنبول",
+      antalya: "أنطاليا",
+      izmir: "إزمير",
+      ankara: "أنقرة"
+    }
   }
 } as const

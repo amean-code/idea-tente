@@ -357,5 +357,82 @@ export const deTranslations = {
       subtitle: "Wählen Sie das Zip-Screen-Modell, das Ihren Bedürfnissen entspricht und machen Sie Ihre Außenbereiche komfortabel",
       viewDetails: "Details anzeigen"
     }
+  },
+
+  // CTA Section translations
+  cta: {
+    title: "Verwirklichen Sie Ihren Traum-Außenbereich",
+    subtitle: "Erhalten Sie kostenlose Inspektion und Angebot mit unserem Expertenteam. Kontaktieren Sie uns jetzt für Premium-Qualität Pergola- und Glassysteme.",
+    whatsappContact: "WhatsApp-Kontakt",
+    quoteForm: "Angebotsformular",
+    downloadCatalog: "Katalog herunterladen",
+    becomeDistributor: "Händler werden"
+  },
+
+  // Stats Section translations
+  stats: {
+    completedProjects: "Abgeschlossene Projekte",
+    exportCountries: "Exportländer",
+    yearsExperience: "Jahre Erfahrung",
+    customerSatisfaction: "Kundenzufriedenheit",
+    projects: "Projekte",
+    countries: "Länder",
+    years: "Jahre",
+    satisfaction: "Zufriedenheit"
+  },
+
+  // Why Choose Us Section translations
+  whyChooseUs: {
+    badge: "Warum IDEA?",
+    title: "Türkeis führender",
+    titleHighlight: "Pergola-Hersteller",
+    subtitle: "Mit unserer über 20-jährigen Erfahrung und 5000+ erfolgreichen Projekten dienen wir als Adresse für Qualität und Vertrauen.",
+    features: {
+      experience: {
+        title: "20+ Jahre Erfahrung",
+        description: "Wir bieten unseren Kunden mit jahrelanger Erfahrung und Expertise in der Branche den besten Service.",
+        cta: "Mehr erfahren",
+        founded: "Gegründet"
+      },
+      quality: {
+        title: "Qualitätsgarantie",
+        description: "Wir bieten zuverlässige Lösungen mit CE-zertifizierten Produkten und 10 Jahren Garantie.",
+        cta: "Zertifikate",
+        warranty: "Garantie"
+      },
+      team: {
+        title: "Expertenteam",
+        description: "Wir sind mit professioneller Installation und After-Sales-Support-Service an Ihrer Seite.",
+        cta: "Unser Team"
+      },
+      global: {
+        title: "Globale Reichweite",
+        description: "Wir bedienen weltweit mit Exporten in über 50 Länder und Händlernetzwerk.",
+        cta: "Export",
+        countries: "Länder"
+      },
+      design: {
+        title: "Individuelles Design",
+        description: "Wir bieten maßgeschneiderte Design- und Produktionsdienstleistungen nach Ihren Bedürfnissen.",
+        cta: "Design",
+        custom: "Individuell"
+      },
+      delivery: {
+        title: "Schnelle Lieferung",
+        description: "Wir verwirklichen Ihre Projekte mit Produktions- und Montageservices in kurzer Zeit.",
+        cta: "Prozess",
+        days: "Tage"
+      }
+    },
+    projectShowcase: {
+      villa: "Villen-Projekt",
+      hotel: "Hotel-Terrasse",
+      restaurant: "Restaurant",
+      residence: "Residenz",
+      istanbul: "Istanbul",
+      antalya: "Antalya",
+      izmir: "Izmir",
+      ankara: "Ankara"
+    }
   }
 } as const

@@ -357,5 +357,82 @@ export const enTranslations = {
       subtitle: "Choose the zip screen model that suits your needs and make your outdoor areas comfortable",
       viewDetails: "View Details"
     }
+  },
+
+  // CTA Section translations
+  cta: {
+    title: "Make Your Dream Outdoor Space a Reality",
+    subtitle: "Get free inspection and quote with our expert team. Contact us now for premium quality pergola and glass systems.",
+    whatsappContact: "WhatsApp Contact",
+    quoteForm: "Quote Form",
+    downloadCatalog: "Download Catalog",
+    becomeDistributor: "Become Distributor"
+  },
+
+  // Stats Section translations
+  stats: {
+    completedProjects: "Completed Projects",
+    exportCountries: "Export Countries",
+    yearsExperience: "Years Experience",
+    customerSatisfaction: "Customer Satisfaction",
+    projects: "Projects",
+    countries: "Countries",
+    years: "Years",
+    satisfaction: "Satisfaction"
+  },
+
+  // Why Choose Us Section translations
+  whyChooseUs: {
+    badge: "Why IDEA?",
+    title: "Turkey's Leading",
+    titleHighlight: "Pergola Manufacturer",
+    subtitle: "With our 20+ years of experience and 5000+ successful projects, we serve as the address of quality and trust.",
+    features: {
+      experience: {
+        title: "20+ Years Experience",
+        description: "We provide the best service to our customers with years of experience and expertise in the industry.",
+        cta: "Learn More",
+        founded: "Founded"
+      },
+      quality: {
+        title: "Quality Guarantee",
+        description: "We offer reliable solutions with CE certified products and 10-year warranty.",
+        cta: "Certificates",
+        warranty: "Warranty"
+      },
+      team: {
+        title: "Expert Team",
+        description: "We are with you with professional installation and after-sales support service.",
+        cta: "Our Team"
+      },
+      global: {
+        title: "Global Reach",
+        description: "We serve worldwide with exports to 50+ countries and distributor network.",
+        cta: "Export",
+        countries: "Countries"
+      },
+      design: {
+        title: "Custom Design",
+        description: "We offer custom design and production services tailored to your needs.",
+        cta: "Design",
+        custom: "Custom"
+      },
+      delivery: {
+        title: "Fast Delivery",
+        description: "We bring your projects to life with production and assembly services in a short time.",
+        cta: "Process",
+        days: "Days"
+      }
+    },
+    projectShowcase: {
+      villa: "Villa Project",
+      hotel: "Hotel Terrace",
+      restaurant: "Restaurant",
+      residence: "Residence",
+      istanbul: "Istanbul",
+      antalya: "Antalya",
+      izmir: "Izmir",
+      ankara: "Ankara"
+    }
   }
 } as const

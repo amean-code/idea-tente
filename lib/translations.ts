@@ -372,6 +372,83 @@ export const translations = {
         subtitle: "İhtiyaçlarınıza uygun zip perde modelini seçin ve açık alanlarınızı konforlu hale getirin",
         viewDetails: "Detayları Gör"
       }
+    },
+
+    // CTA Section translations
+    cta: {
+      title: "Hayalinizdeki Outdoor Alanı Gerçekleştirin",
+      subtitle: "Uzman ekibimizle ücretsiz keşif ve teklif alın. Premium kalitede IDEA ve cam sistemleri için hemen iletişime geçin.",
+      whatsappContact: "WhatsApp İletişim",
+      quoteForm: "Teklif Formu",
+      downloadCatalog: "Katalog İndir",
+      becomeDistributor: "Distribütör Ol"
+    },
+
+    // Stats Section translations
+    stats: {
+      completedProjects: "Tamamlanan Proje",
+      exportCountries: "İhracat Ülkesi",
+      yearsExperience: "Yıl Deneyim",
+      customerSatisfaction: "Müşteri Memnuniyeti",
+      projects: "Proje",
+      countries: "Ülke",
+      years: "Yıl",
+      satisfaction: "Memnuniyet"
+    },
+
+    // Why Choose Us Section translations
+    whyChooseUs: {
+      badge: "Neden IDEA?",
+      title: "Türkiye'nin Önde Gelen",
+      titleHighlight: "Pergola Üreticisi",
+      subtitle: "20+ yıllık deneyimimiz ve 5000+ başarılı projemizle, kalite ve güvenin adresi olarak hizmet veriyoruz.",
+      features: {
+        experience: {
+          title: "20+ Yıl Deneyim",
+          description: "Sektörde uzun yıllara dayanan deneyim ve uzmanlık ile müşterilerimize en iyi hizmeti sunuyoruz.",
+          cta: "Daha Fazla",
+          founded: "Kuruluş"
+        },
+        quality: {
+          title: "Kalite Garantisi",
+          description: "CE sertifikalı ürünler ve 10 yıl garanti ile güvenilir çözümler sunuyoruz.",
+          cta: "Sertifikalar",
+          warranty: "Garanti"
+        },
+        team: {
+          title: "Uzman Ekip",
+          description: "Profesyonel montaj ve satış sonrası destek hizmeti ile yanınızdayız.",
+          cta: "Ekibimiz"
+        },
+        global: {
+          title: "Global Reach",
+          description: "50+ ülkeye ihracat ve distribütör ağı ile dünya çapında hizmet veriyoruz.",
+          cta: "İhracat",
+          countries: "Ülke"
+        },
+        design: {
+          title: "Özel Tasarım",
+          description: "İhtiyaçlarınıza özel tasarım ve üretim hizmeti sunuyoruz.",
+          cta: "Tasarım",
+          custom: "Özel"
+        },
+        delivery: {
+          title: "Hızlı Teslimat",
+          description: "Kısa sürede üretim ve montaj hizmeti ile projelerinizi hayata geçiriyoruz.",
+          cta: "Süreç",
+          days: "Gün"
+        }
+      },
+      projectShowcase: {
+        villa: "Villa Projesi",
+        hotel: "Otel Terası",
+        restaurant: "Restoran",
+        residence: "Rezidans",
+        istanbul: "İstanbul",
+        antalya: "Antalya",
+        izmir: "İzmir",
+        ankara: "Ankara"
+      }
     }
   },
   en: {
@@ -588,6 +665,83 @@ export const translations = {
         freeInspection: "Request Free Inspection",
         viewReferences: "View Our Reference Projects"
       }
+    },
+
+    // CTA Section translations
+    cta: {
+      title: "Make Your Dream Outdoor Space a Reality",
+      subtitle: "Get free inspection and quote with our expert team. Contact us now for premium quality pergola and glass systems.",
+      whatsappContact: "WhatsApp Contact",
+      quoteForm: "Quote Form",
+      downloadCatalog: "Download Catalog",
+      becomeDistributor: "Become Distributor"
+    },
+
+    // Stats Section translations
+    stats: {
+      completedProjects: "Completed Projects",
+      exportCountries: "Export Countries",
+      yearsExperience: "Years Experience",
+      customerSatisfaction: "Customer Satisfaction",
+      projects: "Projects",
+      countries: "Countries",
+      years: "Years",
+      satisfaction: "Satisfaction"
+    },
+
+    // Why Choose Us Section translations
+    whyChooseUs: {
+      badge: "Why IDEA?",
+      title: "Turkey's Leading",
+      titleHighlight: "Pergola Manufacturer",
+      subtitle: "With our 20+ years of experience and 5000+ successful projects, we serve as the address of quality and trust.",
+      features: {
+        experience: {
+          title: "20+ Years Experience",
+          description: "We provide the best service to our customers with years of experience and expertise in the industry.",
+          cta: "Learn More",
+          founded: "Founded"
+        },
+        quality: {
+          title: "Quality Guarantee",
+          description: "We offer reliable solutions with CE certified products and 10-year warranty.",
+          cta: "Certificates",
+          warranty: "Warranty"
+        },
+        team: {
+          title: "Expert Team",
+          description: "We are with you with professional installation and after-sales support service.",
+          cta: "Our Team"
+        },
+        global: {
+          title: "Global Reach",
+          description: "We serve worldwide with exports to 50+ countries and distributor network.",
+          cta: "Export",
+          countries: "Countries"
+        },
+        design: {
+          title: "Custom Design",
+          description: "We offer custom design and production services tailored to your needs.",
+          cta: "Design",
+          custom: "Custom"
+        },
+        delivery: {
+          title: "Fast Delivery",
+          description: "We bring your projects to life with production and assembly services in a short time.",
+          cta: "Process",
+          days: "Days"
+        }
+      },
+      projectShowcase: {
+        villa: "Villa Project",
+        hotel: "Hotel Terrace",
+        restaurant: "Restaurant",
+        residence: "Residence",
+        istanbul: "Istanbul",
+        antalya: "Antalya",
+        izmir: "Izmir",
+        ankara: "Ankara"
+      }
     }
   },
   ar: {
@@ -757,6 +911,83 @@ export const translations = {
         freeInspection: "طلب فحص مجاني",
         viewReferences: "عرض مشاريعنا المرجعية"
       }
+    },
+
+    // CTA Section translations
+    cta: {
+      title: "اجعل مساحتك الخارجية الحلم حقيقة",
+      subtitle: "احصل على فحص مجاني وعرض سعر مع فريق الخبراء لدينا. اتصل بنا الآن للحصول على أنظمة برجولا وزجاج ذات جودة ممتازة.",
+      whatsappContact: "اتصال واتساب",
+      quoteForm: "نموذج عرض الأسعار",
+      downloadCatalog: "تحميل الكتالوج",
+      becomeDistributor: "كن موزعاً"
+    },
+
+    // Stats Section translations
+    stats: {
+      completedProjects: "المشاريع المكتملة",
+      exportCountries: "دول التصدير",
+      yearsExperience: "سنوات الخبرة",
+      customerSatisfaction: "رضا العملاء",
+      projects: "المشاريع",
+      countries: "البلدان",
+      years: "سنوات",
+      satisfaction: "الرضا"
+    },
+
+    // Why Choose Us Section translations
+    whyChooseUs: {
+      badge: "لماذا IDEA؟",
+      title: "الشركة الرائدة في تركيا",
+      titleHighlight: "لتصنيع البرجولا",
+      subtitle: "مع خبرتنا التي تزيد عن 20 عاماً و5000+ مشروع ناجح، نخدم كعنوان للجودة والثقة.",
+      features: {
+        experience: {
+          title: "خبرة 20+ عاماً",
+          description: "نقدم أفضل خدمة لعملائنا مع سنوات من الخبرة والتخصص في الصناعة.",
+          cta: "اعرف المزيد",
+          founded: "التأسيس"
+        },
+        quality: {
+          title: "ضمان الجودة",
+          description: "نقدم حلولاً موثوقة مع منتجات معتمدة من CE وضمان 10 سنوات.",
+          cta: "الشهادات",
+          warranty: "الضمان"
+        },
+        team: {
+          title: "فريق خبراء",
+          description: "نحن معك مع خدمة التركيب الاحترافية ودعم ما بعد البيع.",
+          cta: "فريقنا"
+        },
+        global: {
+          title: "الوصول العالمي",
+          description: "نخدم في جميع أنحاء العالم مع التصدير إلى أكثر من 50 دولة وشبكة موزعين.",
+          cta: "التصدير",
+          countries: "البلدان"
+        },
+        design: {
+          title: "تصميم مخصص",
+          description: "نقدم خدمات تصميم وإنتاج مخصصة حسب احتياجاتك.",
+          cta: "التصميم",
+          custom: "مخصص"
+        },
+        delivery: {
+          title: "تسليم سريع",
+          description: "نحقق مشاريعك بخدمات الإنتاج والتجميع في وقت قصير.",
+          cta: "العملية",
+          days: "أيام"
+        }
+      },
+      projectShowcase: {
+        villa: "مشروع فيلا",
+        hotel: "شرفة فندق",
+        restaurant: "مطعم",
+        residence: "مسكن",
+        istanbul: "إسطنبول",
+        antalya: "أنطاليا",
+        izmir: "إزمير",
+        ankara: "أنقرة"
+      }
     }
   },
   de: {
@@ -925,6 +1156,83 @@ export const translations = {
         subtitle: "Mit unserer 15-jährigen Erfahrung und unserem Expertenteam bieten wir maßgeschneiderte Lösungen. Kontaktieren Sie uns sofort für eine kostenlose Inspektion und ein Angebot.",
         freeInspection: "Kostenlose Inspektion anfordern",
         viewReferences: "Unsere Referenzprojekte ansehen"
+      }
+    },
+
+    // CTA Section translations
+    cta: {
+      title: "Verwirklichen Sie Ihren Traum-Außenbereich",
+      subtitle: "Erhalten Sie kostenlose Inspektion und Angebot mit unserem Expertenteam. Kontaktieren Sie uns jetzt für Premium-Qualität Pergola- und Glassysteme.",
+      whatsappContact: "WhatsApp-Kontakt",
+      quoteForm: "Angebotsformular",
+      downloadCatalog: "Katalog herunterladen",
+      becomeDistributor: "Händler werden"
+    },
+
+    // Stats Section translations
+    stats: {
+      completedProjects: "Abgeschlossene Projekte",
+      exportCountries: "Exportländer",
+      yearsExperience: "Jahre Erfahrung",
+      customerSatisfaction: "Kundenzufriedenheit",
+      projects: "Projekte",
+      countries: "Länder",
+      years: "Jahre",
+      satisfaction: "Zufriedenheit"
+    },
+
+    // Why Choose Us Section translations
+    whyChooseUs: {
+      badge: "Warum IDEA?",
+      title: "Türkeis führender",
+      titleHighlight: "Pergola-Hersteller",
+      subtitle: "Mit unserer über 20-jährigen Erfahrung und 5000+ erfolgreichen Projekten dienen wir als Adresse für Qualität und Vertrauen.",
+      features: {
+        experience: {
+          title: "20+ Jahre Erfahrung",
+          description: "Wir bieten unseren Kunden mit jahrelanger Erfahrung und Expertise in der Branche den besten Service.",
+          cta: "Mehr erfahren",
+          founded: "Gegründet"
+        },
+        quality: {
+          title: "Qualitätsgarantie",
+          description: "Wir bieten zuverlässige Lösungen mit CE-zertifizierten Produkten und 10 Jahren Garantie.",
+          cta: "Zertifikate",
+          warranty: "Garantie"
+        },
+        team: {
+          title: "Expertenteam",
+          description: "Wir sind mit professioneller Installation und After-Sales-Support-Service an Ihrer Seite.",
+          cta: "Unser Team"
+        },
+        global: {
+          title: "Globale Reichweite",
+          description: "Wir bedienen weltweit mit Exporten in über 50 Länder und Händlernetzwerk.",
+          cta: "Export",
+          countries: "Länder"
+        },
+        design: {
+          title: "Individuelles Design",
+          description: "Wir bieten maßgeschneiderte Design- und Produktionsdienstleistungen nach Ihren Bedürfnissen.",
+          cta: "Design",
+          custom: "Individuell"
+        },
+        delivery: {
+          title: "Schnelle Lieferung",
+          description: "Wir verwirklichen Ihre Projekte mit Produktions- und Montageservices in kurzer Zeit.",
+          cta: "Prozess",
+          days: "Tage"
+        }
+      },
+      projectShowcase: {
+        villa: "Villen-Projekt",
+        hotel: "Hotel-Terrasse",
+        restaurant: "Restaurant",
+        residence: "Residenz",
+        istanbul: "Istanbul",
+        antalya: "Antalya",
+        izmir: "Izmir",
+        ankara: "Ankara"
       }
     }
   },
@@ -1097,11 +1405,80 @@ export const translations = {
       }
     },
 
-    // Pergola specific translations
-    pergola: {
-      hero: {
-        description: "IDEA pergola sistemleri, dayanıklı alüminyum taşıyıcı yapıya sahiptir ve çeşitli tavan seçenekleri sunarak farklı mimari tasarımlar için idealdir. Cam, PVC kumaş veya alüminyum panel gibi seçeneklerle, dış mekanlarınızı özgün bir tarzla güçlendirir.",
-        subdescription: "Biyoklimatik pergola ve şezlonglarla çevrili, dinlenmek ve güneşi içinize çekmek için mükemmel olan sakin bir alan yaratın."
+    // CTA Section translations
+    cta: {
+      title: "Воплотите свое идеальное открытое пространство в реальность",
+      subtitle: "Получите бесплатный осмотр и предложение с нашей командой экспертов. Свяжитесь с нами сейчас для систем пергол и стекла премиум-качества.",
+      whatsappContact: "WhatsApp контакт",
+      quoteForm: "Форма предложения",
+      downloadCatalog: "Скачать каталог",
+      becomeDistributor: "Стать дистрибьютором"
+    },
+
+    // Stats Section translations
+    stats: {
+      completedProjects: "Завершенные проекты",
+      exportCountries: "Страны экспорта",
+      yearsExperience: "Лет опыта",
+      customerSatisfaction: "Удовлетворенность клиентов",
+      projects: "Проекты",
+      countries: "Страны",
+      years: "Лет",
+      satisfaction: "Удовлетворенность"
+    },
+
+    // Why Choose Us Section translations
+    whyChooseUs: {
+      badge: "Почему IDEA?",
+      title: "Ведущий производитель",
+      titleHighlight: "пергол в Турции",
+      subtitle: "С нашим более чем 20-летним опытом и более чем 5000 успешными проектами мы служим адресом качества и доверия.",
+      features: {
+        experience: {
+          title: "20+ лет опыта",
+          description: "Мы предоставляем нашим клиентам лучший сервис с многолетним опытом и экспертизой в отрасли.",
+          cta: "Узнать больше",
+          founded: "Основано"
+        },
+        quality: {
+          title: "Гарантия качества",
+          description: "Мы предлагаем надежные решения с сертифицированными CE продуктами и 10-летней гарантией.",
+          cta: "Сертификаты",
+          warranty: "Гарантия"
+        },
+        team: {
+          title: "Команда экспертов",
+          description: "Мы с вами с профессиональной установкой и послепродажным обслуживанием.",
+          cta: "Наша команда"
+        },
+        global: {
+          title: "Глобальный охват",
+          description: "Мы обслуживаем по всему миру с экспортом в более чем 50 стран и сетью дистрибьюторов.",
+          cta: "Экспорт",
+          countries: "Страны"
+        },
+        design: {
+          title: "Индивидуальный дизайн",
+          description: "Мы предлагаем индивидуальные услуги по дизайну и производству в соответствии с вашими потребностями.",
+          cta: "Дизайн",
+          custom: "Индивидуальный"
+        },
+        delivery: {
+          title: "Быстрая доставка",
+          description: "Мы воплощаем ваши проекты в жизнь с производственными и монтажными услугами в короткие сроки.",
+          cta: "Процесс",
+          days: "Дни"
+        }
+      },
+      projectShowcase: {
+        villa: "Проект виллы",
+        hotel: "Терраса отеля",
+        restaurant: "Ресторан",
+        residence: "Резиденция",
+        istanbul: "Стамбул",
+        antalya: "Анталья",
+        izmir: "Измир",
+        ankara: "Анкара"
       }
     }
   },

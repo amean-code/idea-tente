@@ -1,23 +1,34 @@
-const stats = [
-  {
-    number: "5000+",
-    label: "Tamamlanan Proje",
-  },
-  {
-    number: "50+",
-    label: "İhracat Ülkesi",
-  },
-  {
-    number: "20+",
-    label: "Yıl Deneyim",
-  },
-  {
-    number: "98%",
-    label: "Müşteri Memnuniyeti",
-  },
-]
+"use client"
 
+import { useLanguage } from "@/contexts/language-context"
+
+/**
+ * İstatistikler bölümü bileşeni
+ * Şirket başarılarını sayısal olarak sergiler
+ */
 export function StatsSection() {
+  const { t } = useLanguage()
+
+  // İstatistik verileri
+  const stats = [
+    {
+      number: "5000+",
+      label: t("stats.completedProjects"),
+    },
+    {
+      number: "50+",
+      label: t("stats.exportCountries"),
+    },
+    {
+      number: "20+",
+      label: t("stats.yearsExperience"),
+    },
+    {
+      number: "98%",
+      label: t("stats.customerSatisfaction"),
+    },
+  ]
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
