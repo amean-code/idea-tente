@@ -48,51 +48,69 @@ const getTranslation = (key: string, currentLanguage: Language): string => {
     value = fallbackValue
   }
 
-  const result = value || key
+  const result: string = typeof value === 'string' ? value : key
   
   // Cache'e kaydet (maksimum 1000 çeviri cache'de tut)
   if (translationCache.size > 1000) {
     const firstKey = translationCache.keys().next().value
-    translationCache.delete(firstKey)
+    if (firstKey) {
+      translationCache.delete(firstKey)
+    }
   }
   translationCache.set(cacheKey, result)
   
   return result
 }
 
+/**
+ * Dil provider bileşeni
+ * Hydration hatasını önlemek için client-side mounted kontrolü ile
+ */
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>(defaultLanguage)
-  const [isInitialized, setIsInitialized] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
-  // Load language from localStorage on mount - sadece bir kez
+  // Client-side mounting kontrolü - hydration için
   useEffect(() => {
-    const savedLanguage = localStorage.getItem("language") as Language
-    if (savedLanguage && supportedLanguages.includes(savedLanguage)) {
-      setLanguageState(savedLanguage)
+    setMounted(true)
+    
+    // localStorage'dan dil yükle
+    if (typeof window !== 'undefined') {
+      const savedLanguage = localStorage.getItem("language")
+      if (savedLanguage && supportedLanguages.includes(savedLanguage as Language)) {
+        const validLanguage = savedLanguage as Language
+        setLanguageState(validLanguage)
+        // RTL ayarını uygula
+        document.documentElement.dir = validLanguage === "ar" ? "rtl" : "ltr"
+        document.documentElement.lang = validLanguage
+      }
     }
-    setIsInitialized(true)
   }, [])
 
-  // Save language to localStorage when it changes - useCallback ile optimize edildi
+  // Save language to localStorage when it changes
   const setLanguage = useCallback((lang: Language) => {
     setLanguageState(lang)
-    localStorage.setItem("language", lang)
+    
+    if (typeof window !== 'undefined') {
+      localStorage.setItem("language", lang)
+    }
 
     // Update document direction for RTL languages
-    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr"
-    document.documentElement.lang = lang
+    if (typeof document !== 'undefined') {
+      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr"
+      document.documentElement.lang = lang
+    }
   }, [])
 
-  // Translation function - useMemo ile optimize edildi
+  // Translation function
   const t = useCallback((key: string): string => {
-    if (!isInitialized) return key // İlk yükleme sırasında key'i döndür
     return getTranslation(key, language)
-  }, [language, isInitialized])
+  }, [language])
 
-  // RTL kontrolü - useMemo ile optimize edildi
+  // RTL kontrolü
   const isRTL = useMemo(() => language === "ar", [language])
 
-  // Context value - useMemo ile optimize edildi
+  // Context value
   const contextValue = useMemo(() => ({
     language,
     setLanguage,
@@ -100,9 +118,24 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     isRTL
   }), [language, setLanguage, t, isRTL])
 
+  // Hydration için: Server ve client'ta aynı içeriği render et
+  // Client-side mounted olana kadar defaultLanguage kullan
+  if (!mounted) {
+    const defaultContextValue = {
+      language: defaultLanguage,
+      setLanguage,
+      t,
+      isRTL: false
+    }
+    return <LanguageContext.Provider value={defaultContextValue}>{children}</LanguageContext.Provider>
+  }
+
   return <LanguageContext.Provider value={contextValue}>{children}</LanguageContext.Provider>
 }
 
+/**
+ * Dil context hook'u
+ */
 export function useLanguage() {
   const context = useContext(LanguageContext)
   if (context === undefined) {
