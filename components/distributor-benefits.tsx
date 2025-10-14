@@ -1,4 +1,7 @@
+"use client"
+
 import { Handshake, TrendingUp, Shield, Headphones, Truck, Award } from "lucide-react"
+import { motion } from "motion/react"
 
 const benefits = [
   {
@@ -33,28 +36,51 @@ const benefits = [
   },
 ]
 
+/**
+ * Distribütör avantajları bölümü
+ * İş ortaklarına sunulan avantajları modern kartlarla gösterir
+ */
 export function DistributorBenefits() {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance"
+          >
             Distribütör Avantajları
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-            İş ortaklarımıza sunduğumuz kapsamlı destek ve avantajlar
-          </p>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty"
+          >
+            İş ortaklarımıza sunduğumuz kapsamlı destek ve avantajlar ile birlikte büyüyün
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
-            <div key={index} className="bg-card rounded-lg p-6 border text-center group hover:shadow-lg transition-all">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
-                <benefit.icon className="h-8 w-8 text-primary" />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-card rounded-lg p-6 border hover:shadow-md transition-all"
+            >
+              <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                <benefit.icon className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-foreground">{benefit.title}</h3>
-              <p className="text-muted-foreground text-pretty">{benefit.description}</p>
-            </div>
+              <h3 className="text-xl font-bold mb-4 text-foreground">{benefit.title}</h3>
+              <p className="text-muted-foreground text-pretty leading-relaxed">{benefit.description}</p>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -14,7 +14,6 @@ export default function EnglishHomePage() {
         <HeroSection />
         <ProductsOverview />
         <FeaturedProjects />
-        <WhyChooseUs />
         <StatsSection />
         <CTASection />
       </main>

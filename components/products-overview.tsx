@@ -2,60 +2,151 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Star, Shield, Zap } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+import { getProducts } from "@/data/products"
+import { useState, useRef, useEffect } from "react"
 
-const getProducts = (t: any) => [
-  {
-    title: t("products.bioclimatic"),
-    description: t("products.bioclimaticDesc"),
-    image: "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
-    href: "/pergola/biyoklimatik",
-    features: [t("products.features.smartLouver"), t("products.features.climateControl"), t("products.features.ledLighting")],
-    badge: t("products.badges.popular"),
-    icon: <Zap className="h-6 w-6" />,
-  },
-  {
-    title: t("products.glass"),
-    description: t("nav.glassDesc"),
-    image: "/frameless-glass-sliding-system--modern-terrace-wit.jpg",
-    href: "/cam-sistemleri",
-    features: [t("products.features.framelessDesign"), t("products.features.slidingSystem"), t("products.features.safetyGlass")],
-    badge: t("products.badges.premium"),
-    icon: <Shield className="h-6 w-6" />,
-  },
-  {
-    title: t("products.winterGarden"),
-    description: "Dört mevsim kullanım için kapalı alan çözümleri",
-    image: "/winter-garden-conservatory-with-glass-roof--indoor.jpg",
-    href: "/kis-bahcesi",
-    features: [t("products.features.fourSeasons"), t("products.features.thermalInsulation"), t("products.features.naturalLighting")],
-    badge: t("products.badges.new"),
-    icon: <Star className="h-6 w-6" />,
-  },
-]
-
+/**
+ * Ana sayfa ürünler bölümü bileşeni
+ * Aralıklı otomatik kaydırma ve manuel kontrol destekler
+ */
 export function ProductsOverview() {
   const { t } = useLanguage()
   const products = getProducts(t)
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const [isDragging, setIsDragging] = useState(false)
+  const [startX, setStartX] = useState(0)
+  const [scrollLeft, setScrollLeft] = useState(0)
+  const [isHovered, setIsHovered] = useState(false)
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  /**
+   * Otomatik kaydırma - 6 saniyede bir
+   */
+  useEffect(() => {
+    if (isHovered || isDragging) return
+
+    const interval = setInterval(() => {
+      if (scrollRef.current) {
+        const cardWidth = 380 + 32 // kart genişliği + gap
+        const currentScroll = scrollRef.current.scrollLeft
+        const maxScroll = scrollRef.current.scrollWidth - scrollRef.current.clientWidth
+        
+        if (currentScroll >= maxScroll - 100) {
+          // Sona yaklaştıysak başa dön
+          scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' })
+          setCurrentIndex(0)
+        } else {
+          // Bir kart kaydır
+          scrollRef.current.scrollBy({ left: cardWidth, behavior: 'smooth' })
+          setCurrentIndex((prev) => (prev + 1) % products.length)
+        }
+      }
+    }, 6000) // 6 saniye
+
+    return () => clearInterval(interval)
+  }, [isHovered, isDragging, products.length])
+
+  /**
+   * Mouse ile sürükleme başlangıcı
+   */
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true)
+    setStartX(e.pageX - (scrollRef.current?.offsetLeft || 0))
+    setScrollLeft(scrollRef.current?.scrollLeft || 0)
+  }
+
+  /**
+   * Mouse ile sürükleme bitişi
+   */
+  const handleMouseUp = () => {
+    setIsDragging(false)
+  }
+
+  /**
+   * Mouse ile sürükleme hareketi
+   */
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return
+    e.preventDefault()
+    const x = e.pageX - (scrollRef.current?.offsetLeft || 0)
+    const walk = (x - startX) * 2
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft = scrollLeft - walk
+    }
+  }
+
+  /**
+   * Mouse leave event'i
+   */
+  const handleMouseLeave = () => {
+    setIsDragging(false)
+    setIsHovered(false)
+  }
+
+  /**
+   * Belirli bir ürüne kaydır
+   */
+  const scrollToIndex = (index: number) => {
+    if (scrollRef.current) {
+      const cardWidth = 380 + 32
+      scrollRef.current.scrollTo({ left: cardWidth * index, behavior: 'smooth' })
+      setCurrentIndex(index)
+    }
+  }
+
+  /**
+   * Scroll pozisyonunu takip et
+   */
+  useEffect(() => {
+    const handleScroll = () => {
+      if (scrollRef.current && !isDragging) {
+        const cardWidth = 380 + 32
+        const scrollPosition = scrollRef.current.scrollLeft
+        const newIndex = Math.round(scrollPosition / cardWidth) % products.length
+        setCurrentIndex(newIndex)
+      }
+    }
+
+    const scrollElement = scrollRef.current
+    if (scrollElement) {
+      scrollElement.addEventListener('scroll', handleScroll)
+      return () => scrollElement.removeEventListener('scroll', handleScroll)
+    }
+  }, [isDragging, products.length])
   
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-secondary/10">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section className="py-20 bg-gradient-to-b from-background to-secondary/10 overflow-hidden">
+      <div className="container mx-auto px-4 mb-12">
+        <div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 text-balance">
             {t("products.title")}
           </h2>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto text-pretty">
+          <p className="text-lg text-gray-700 max-w-2xl text-pretty">
             {t("products.subtitle")}
           </p>
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {products.map((product, index) => (
+      <div 
+        ref={scrollRef}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        onMouseEnter={() => setIsHovered(true)}
+        className="flex overflow-x-auto scrollbar-hide gap-8 px-8 cursor-grab active:cursor-grabbing scroll-smooth"
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+      >
+        {/* Ürünleri tekrarla (sonsuz efekti için) */}
+        {[...products, ...products, ...products].map((product, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-3 h-96 cursor-pointer"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-3 cursor-pointer flex-shrink-0 w-[380px] h-[480px]"
             >
               {/* Full-size background image */}
               <div
@@ -78,11 +169,15 @@ export function ProductsOverview() {
 
               {/* Icon */}
               <div className="absolute top-4 left-4 w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white group-hover:scale-110 group-hover:bg-white/30 group-hover:rotate-12 transition-all duration-300">
-                {product.icon}
+                <product.icon className="h-6 w-6" />
               </div>
 
               {/* Hover ile gelen bilgiler - alttan yukarı doğru */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-full group-hover:translate-y-0 z-20">
+              <div className={`absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 transform z-20 ${
+                hoveredIndex === index 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-full'
+              }`}>
                 <div className="bg-black/60 backdrop-blur-md rounded-xl p-6 border border-white/20">
                   <h3 className="text-2xl font-bold mb-3 text-white">
                     {product.title}
@@ -112,7 +207,6 @@ export function ProductsOverview() {
                     <Link 
                       href={product.href} 
                       className="flex items-center justify-center"
-                      onClick={() => console.log('Butona tıklandı, yönlendiriliyor:', product.href)}
                     >
                       <span>Detayları İncele</span>
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -122,7 +216,9 @@ export function ProductsOverview() {
               </div>
 
               {/* Alt kısım - hover olmadığında görünen minimal bilgi */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white group-hover:opacity-0 transition-opacity duration-300">
+              <div className={`absolute bottom-0 left-0 right-0 p-6 text-white transition-opacity duration-300 ${
+                hoveredIndex === index ? 'opacity-0' : 'opacity-100'
+              }`}>
                 <h3 className="text-2xl font-bold mb-2 text-white">
                   {product.title}
                 </h3>
@@ -139,17 +235,23 @@ export function ProductsOverview() {
               {/* Hover effect overlay */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10" />
             </div>
-          ))}
-        </div>
+        ))}
+      </div>
 
-        <div className="text-center">
-          <Button size="lg" asChild className="hover:scale-105 transition-transform">
-            <Link href="/urunler">
-              Tüm Ürünleri Görüntüle
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-        </div>
+      {/* Desktop Navigation Indicators */}
+      <div className="hidden md:flex items-center justify-center gap-3 mt-8">
+        {products.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => scrollToIndex(index)}
+            className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+              currentIndex === index 
+                ? 'w-12 bg-primary' 
+                : 'w-8 bg-gray-300 hover:bg-primary/50'
+            }`}
+            aria-label={`Ürün ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   )

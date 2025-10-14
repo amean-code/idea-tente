@@ -53,23 +53,24 @@ export function SubProductsShowcase({ title, subtitle, products }: SubProductsSh
               transition={{ duration: 0.6, delay: index * 0.1 }}
               onHoverStart={() => setHoveredProduct(product.id)}
               onHoverEnd={() => setHoveredProduct(null)}
+              className="h-full"
             >
-              <Card className="group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white/80 backdrop-blur-sm">
+              <Card className="group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white/90 backdrop-blur-sm h-full flex flex-col">
                 {product.badge && (
-                  <Badge className="absolute top-4 left-4 z-10 bg-orange-500 hover:bg-orange-600 text-white">
+                  <Badge className="absolute top-4 left-4 z-10 bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg">
                     <Star className="w-3 h-3 mr-1" />
                     {product.badge}
                   </Badge>
                 )}
 
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-72 overflow-hidden">
                   <Image
                     src={product.image || "/placeholder.svg"}
                     alt={product.name}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -82,7 +83,7 @@ export function SubProductsShowcase({ title, subtitle, products }: SubProductsSh
                   >
                     <div className="flex flex-wrap gap-2">
                       {product.features.slice(0, 2).map((feature, idx) => (
-                        <Badge key={idx} variant="secondary" className="bg-white/90 text-gray-800 text-xs">
+                        <Badge key={idx} variant="secondary" className="bg-white/95 text-gray-800 text-xs backdrop-blur-sm">
                           {feature}
                         </Badge>
                       ))}
@@ -90,7 +91,7 @@ export function SubProductsShowcase({ title, subtitle, products }: SubProductsSh
                   </motion.div>
                 </div>
 
-                <CardContent className="p-6">
+                <CardContent className="p-6 flex-1 flex flex-col">
                   <div className="flex items-start justify-between mb-3">
                     <h3 className="text-xl font-bold text-foreground group-hover:text-orange-600 transition-colors duration-300">
                       {product.name}
@@ -103,24 +104,24 @@ export function SubProductsShowcase({ title, subtitle, products }: SubProductsSh
                     )}
                   </div>
 
-                  <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{product.description}</p>
+                  <p className="text-muted-foreground text-sm mb-4 line-clamp-3 flex-1">{product.description}</p>
 
-                  <div className="flex flex-wrap gap-1 mb-4">
+                  <div className="flex flex-wrap gap-1 mb-6">
                     {product.features.map((feature, idx) => (
-                      <Badge key={idx} variant="outline" className="text-xs">
+                      <Badge key={idx} variant="outline" className="text-xs bg-white/50 backdrop-blur-sm">
                         {feature}
                       </Badge>
                     ))}
                   </div>
 
-                  <div className="flex gap-2">
-                    <Button asChild className="flex-1 bg-orange-500 hover:bg-orange-600 text-white">
+                  <div className="flex gap-2 mt-auto">
+                    <Button asChild className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg">
                       <Link href={product.href}>
                         Detayları Gör
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Link>
                     </Button>
-                    <Button asChild variant="outline" size="sm">
+                    <Button asChild variant="outline" size="sm" className="shadow-lg">
                       <Link href="/teklif-al">
                         <Zap className="w-4 h-4" />
                       </Link>

@@ -6,48 +6,50 @@
 export const contactInfo = {
   // Telefon Numaraları
   phone: {
-    primary: "+90 555 123 45 67",
-    secondary: "+90 212 123 45 67",
-    whatsapp: "+90 555 123 45 67",
+    primary: "+902422520008",
+    secondary: "+905323670635",
+    whatsapp: "+905323670635",
     display: {
-      primary: "+90 555 123 45 67",
-      secondary: "+90 212 123 45 67",
-      whatsapp: "+90 555 123 45 67"
+      primary: "+90 242 252 00 08",
+      secondary: "+90 532 367 06 35",
+      whatsapp: "+90 532 367 06 35"
     }
   },
 
   // E-posta Adresleri
   email: {
-    info: "info@idea.com",
-    export: "export@idea.com",
-    support: "destek@idea.com",
-    sales: "satis@idea.com"
+    info: "info@ideatente.com",
+    idea: "idea@ideatente.com",
+    export: "export@ideatente.com",
+    support: "destek@ideatente.com",
+    sales: "satis@ideatente.com"
   },
 
   // Sosyal Medya Linkleri
   social: {
-    instagram: "https://instagram.com/idea_pergola",
-    facebook: "https://facebook.com/ideapergola",
-    linkedin: "https://linkedin.com/company/idea-pergola",
-    youtube: "https://youtube.com/@ideapergola",
+    instagram: "https://www.instagram.com/ideapergola/",
+    facebook: "https://www.facebook.com/ideatentegiyotincam",
+    linkedin: "https://www.linkedin.com/in/idea-tente-giyotin-camsistemler-825280148/",
+    youtube: "https://www.youtube.com/channel/UCwX-TkAJ-5jN_N80o0Tta5g",
     twitter: "https://twitter.com/idea_pergola"
   },
 
   // WhatsApp Linkleri
   whatsapp: {
-    primary: "https://wa.me/905551234567",
-    sales: "https://wa.me/905551234567?text=Merhaba, ürünleriniz hakkında bilgi almak istiyorum.",
-    support: "https://wa.me/905551234567?text=Merhaba, destek almak istiyorum.",
-    quote: "https://wa.me/905551234567?text=Merhaba, teklif almak istiyorum."
+    primary: "https://wa.me/905323670635",
+    sales: "https://wa.me/905323670635?text=Merhaba, ürünleriniz hakkında bilgi almak istiyorum.",
+    support: "https://wa.me/905323670635?text=Merhaba, destek almak istiyorum.",
+    quote: "https://wa.me/905323670635?text=Merhaba, teklif almak istiyorum."
   },
 
   // Adres Bilgileri
   address: {
-    street: "Organize Sanayi Bölgesi",
-    city: "İstanbul",
+    street: "Yenigöl Mah. İzzet Uzun Filiz Sok. No:75",
+    district: "Muratpaşa",
+    city: "Antalya",
     country: "Türkiye",
-    postalCode: "34000",
-    full: "Organize Sanayi Bölgesi, İstanbul, Türkiye"
+    postalCode: "07000",
+    full: "Yenigöl Mah. İzzet Uzun Filiz Sok. No:75 Muratpaşa / ANTALYA"
   },
 
   // Çalışma Saatleri
@@ -64,9 +66,10 @@ export const contactInfo = {
 
   // Şirket Bilgileri
   company: {
-    name: "IDEA",
-    fullName: "IDEA Pergola ve Cam Sistemleri",
-    description: "Türkiye'nin önde gelen IDEA ve cam sistemleri üreticisi",
+    name: "İDEA TENTE",
+    fullName: "İdea Tente Giyotin Cam Sistemleri San. ve Tic. Ltd. Şti.",
+    shortName: "MERKEZ İDEA TENTE",
+    description: "Antalya'nın önde gelen pergola ve cam sistemleri üreticisi",
     founded: "2008",
     experience: "15+ yıl"
   }

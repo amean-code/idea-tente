@@ -2,47 +2,69 @@
 
 import { Phone, Mail, MapPin } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+import { contactInfo } from "@/lib/contact-info"
+import Image from "next/image"
 
 export function ContactHero() {
   const { t } = useLanguage()
 
   return (
-    <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary/5 to-primary/10">
-      <div className="container mx-auto px-4">
+    <section className="relative pt-32 pb-20 overflow-hidden">
+      {/* Arka plan görseli */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/company-headquarters-modern-building.jpg"
+          alt="İletişim Arka Plan"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Gradient overlay - görsel üzerine koyu bir katman ekler */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-orange-600/80" />
+      </div>
+
+      {/* İçerik */}
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance drop-shadow-lg">
             {t("contact.title")}
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 text-pretty">{t("contact.subtitle")}</p>
+          <p className="text-xl text-white/90 mb-8 text-pretty drop-shadow">{t("contact.subtitle")}</p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            <div className="flex flex-col items-center p-6 bg-background/80 backdrop-blur-sm rounded-lg border">
-              <Phone className="h-8 w-8 text-primary mb-4" />
-              <h3 className="font-semibold text-foreground mb-2">{t("contact.phone")}</h3>
-              <p className="text-muted-foreground text-center">
-                +90 212 XXX XX XX
+            <div className="flex flex-col items-center p-6 bg-white/95 backdrop-blur-sm rounded-lg shadow-xl hover:shadow-2xl transition-shadow">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <Phone className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-3 text-lg">{t("contact.phone")}</h3>
+              <p className="text-gray-700 text-center text-sm">
+                {contactInfo.phone.display.primary}
                 <br />
-                +90 532 XXX XX XX
+                {contactInfo.phone.display.secondary}
               </p>
             </div>
 
-            <div className="flex flex-col items-center p-6 bg-background/80 backdrop-blur-sm rounded-lg border">
-              <Mail className="h-8 w-8 text-primary mb-4" />
-              <h3 className="font-semibold text-foreground mb-2">{t("contact.email")}</h3>
-              <p className="text-muted-foreground text-center">
-                info@pergolasystems.com
+            <div className="flex flex-col items-center p-6 bg-white/95 backdrop-blur-sm rounded-lg shadow-xl hover:shadow-2xl transition-shadow">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <Mail className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-3 text-lg">{t("contact.email")}</h3>
+              <p className="text-gray-700 text-center text-sm">
+                {contactInfo.email.info}
                 <br />
-                export@pergolasystems.com
+                {contactInfo.email.export}
               </p>
             </div>
 
-            <div className="flex flex-col items-center p-6 bg-background/80 backdrop-blur-sm rounded-lg border">
-              <MapPin className="h-8 w-8 text-primary mb-4" />
-              <h3 className="font-semibold text-foreground mb-2">{t("contact.address")}</h3>
-              <p className="text-muted-foreground text-center">
-                Organize Sanayi Bölgesi
+            <div className="flex flex-col items-center p-6 bg-white/95 backdrop-blur-sm rounded-lg shadow-xl hover:shadow-2xl transition-shadow">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <MapPin className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-3 text-lg">{t("contact.address")}</h3>
+              <p className="text-gray-700 text-center text-sm">
+                {contactInfo.address.street}
                 <br />
-                İstanbul, Türkiye
+                {contactInfo.address.city}, {contactInfo.address.country}
               </p>
             </div>
           </div>

@@ -9,7 +9,8 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
-import { Calculator, Send } from "lucide-react"
+import { Calculator, Mail } from "lucide-react"
+import { contactInfo } from "@/lib/contact-info"
 
 export function QuoteForm() {
   const [formData, setFormData] = useState({
@@ -27,11 +28,78 @@ export function QuoteForm() {
     newsletter: false,
   })
 
+  /**
+   * Form gönderildiğinde Gmail web arayüzünde yeni sekme açar
+   */
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Quote form submitted:", formData)
-    // Here you would typically send the data to your backend
+    
+    // Ürün tipi mapping
+    const productTypeMap: { [key: string]: string } = {
+      "bioclimatic": "Biyoklimatik Pergola",
+      "fixed": "Sabit Pergola",
+      "glass": "Cam Sistemleri",
+      "winter-garden": "Kış Bahçesi",
+      "sun-breaker": "Güneş Kırıcı",
+      "zip-screen": "Zip Perde",
+      "combination": "Kombinasyon"
+    }
+    
+    const projectTypeMap: { [key: string]: string } = {
+      "residential": "Konut",
+      "commercial": "Ticari",
+      "hotel": "Otel/Restaurant",
+      "office": "Ofis",
+      "public": "Kamu"
+    }
+    
+    const budgetMap: { [key: string]: string } = {
+      "10k-25k": "€10,000 - €25,000",
+      "25k-50k": "€25,000 - €50,000",
+      "50k-100k": "€50,000 - €100,000",
+      "100k+": "€100,000+",
+      "discuss": "Görüşülür"
+    }
+    
+    const timelineMap: { [key: string]: string } = {
+      "asap": "En kısa sürede",
+      "1-3months": "1-3 ay",
+      "3-6months": "3-6 ay",
+      "6months+": "6 ay+",
+      "planning": "Planlama aşamasında"
+    }
+    
+    // Mail içeriğini oluştur
+    const subject = `Teklif Talebi: ${formData.name}`
+    const body = `
+TEKLİF TALEBİ BİLGİLERİ
+
+Kişisel Bilgiler:
+─────────────────
+Ad Soyad: ${formData.name}
+E-posta: ${formData.email}
+Telefon: ${formData.phone}
+Şirket: ${formData.company || "Belirtilmemiş"}
+Ülke: ${formData.country || "Belirtilmemiş"}
+
+Proje Detayları:
+─────────────────
+Ürün Tipi: ${productTypeMap[formData.productType] || "Belirtilmemiş"}
+Proje Tipi: ${projectTypeMap[formData.projectType] || "Belirtilmemiş"}
+Alan: ${formData.area ? formData.area + " m²" : "Belirtilmemiş"}
+Bütçe: ${budgetMap[formData.budget] || "Belirtilmemiş"}
+Zaman Çizelgesi: ${timelineMap[formData.timeline] || "Belirtilmemiş"}
+
+Proje Açıklaması:
+─────────────────
+${formData.description || "Belirtilmemiş"}
+
+Haber Bülteni: ${formData.newsletter ? "Evet" : "Hayır"}
+    `.trim()
+    
+    // Gmail web arayüzü linki oluştur ve yeni sekmede aç
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(contactInfo.email.info)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    window.open(gmailLink, '_blank')
   }
 
   const handleInputChange = (field: string, value: string | boolean) => {
@@ -218,8 +286,8 @@ export function QuoteForm() {
         </div>
 
         <Button type="submit" className="w-full" size="lg">
-          <Send className="h-4 w-4 mr-2" />
-          Teklif Talep Et
+          <Mail className="h-4 w-4 mr-2" />
+          Teklif İçin Mail At
         </Button>
       </form>
     </div>

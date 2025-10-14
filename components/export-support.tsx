@@ -1,4 +1,7 @@
-import { FileText, Truck, Headphones, GraduationCap } from "lucide-react"
+"use client"
+
+import { FileText, Truck, Headphones, GraduationCap, CheckCircle2 } from "lucide-react"
+import { motion } from "motion/react"
 
 const supportServices = [
   {
@@ -27,38 +30,61 @@ const supportServices = [
   },
 ]
 
+/**
+ * Export destek hizmetleri bölümü
+ * İş ortaklarına sunulan destek hizmetlerini gösterir
+ */
 export function ExportSupport() {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-muted/10">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance"
+          >
             Kapsamlı Destek Hizmetleri
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-            İş ortaklarımızın başarısı için sunduğumuz profesyonel destek hizmetleri
-          </p>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty"
+          >
+            İş ortaklarımızın başarısı için sunduğumuz profesyonel destek hizmetleri ile her adımda yanınızdayız
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {supportServices.map((service, index) => (
-            <div key={index} className="bg-card rounded-lg p-6 border">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-card rounded-lg p-6 border hover:shadow-md transition-all"
+            >
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
                 <service.icon className="h-6 w-6 text-primary" />
               </div>
 
-              <h3 className="text-lg font-semibold mb-3 text-foreground">{service.title}</h3>
-              <p className="text-sm text-muted-foreground mb-4 text-pretty">{service.description}</p>
+              <h3 className="text-lg font-bold mb-3 text-foreground">{service.title}</h3>
+              <p className="text-sm text-muted-foreground mb-6 text-pretty leading-relaxed">{service.description}</p>
 
-              <div className="space-y-2">
+              <div className="space-y-3">
                 {service.items.map((item, idx) => (
                   <div key={idx} className="flex items-center text-sm text-muted-foreground">
-                    <div className="w-1 h-1 bg-primary rounded-full mr-2" />
+                    <CheckCircle2 className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
                     {item}
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -7,9 +7,14 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Badge } from "@/components/ui/badge"
-import { Phone, Mail, MapPin, Clock, CheckCircle } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, CheckCircle, Award, Users, Zap, Shield, FileCheck, Headphones } from "lucide-react"
 import { contactInfo } from "@/lib/contact-info"
+import Image from "next/image"
 
+/**
+ * Teklif al sayfası
+ * Detaylı form ve işlem adımları ile teklif alma süreci
+ */
 export default function QuotePage() {
   const services = [
     "Biyoklimatik Pergola",
@@ -25,21 +30,48 @@ export default function QuotePage() {
       number: "01",
       title: "Teklif Formu",
       description: "Detaylı bilgilerinizi paylaşın",
+      icon: FileCheck,
     },
     {
       number: "02",
       title: "Ücretsiz Keşif",
       description: "Uzmanlarımız yerinde inceleme yapar",
+      icon: Users,
     },
     {
       number: "03",
       title: "Teklif Sunumu",
       description: "Size özel teklif hazırlanır",
+      icon: Award,
     },
     {
       number: "04",
       title: "Uygulama",
       description: "Profesyonel montaj gerçekleştirilir",
+      icon: Zap,
+    },
+  ]
+
+  const advantages = [
+    {
+      icon: Shield,
+      title: "15 Yıl Garanti",
+      description: "Tüm ürünlerimizde uzun süreli garanti",
+    },
+    {
+      icon: Award,
+      title: "Ücretsiz Keşif",
+      description: "Profesyonel yerinde inceleme",
+    },
+    {
+      icon: Users,
+      title: "Uzman Ekip",
+      description: "15+ yıl deneyimli montaj ekibi",
+    },
+    {
+      icon: Headphones,
+      title: "7/24 Destek",
+      description: "Her zaman yanınızdayız",
     },
   ]
 
@@ -48,31 +80,107 @@ export default function QuotePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-12 bg-gradient-to-br from-primary/10 to-orange-100">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-primary/20 text-primary hover:bg-primary/30">Ücretsiz Teklif</Badge>
-            <h1 className="text-4xl font-bold mb-6 text-balance">
-              Size Özel <span className="text-primary">Teklif Alın</span>
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        {/* Arka plan görseli */}
+        <div className="absolute inset-0">
+          <Image
+            src="/modern-bioclimatic-pergola-with-adjustable-louvers.jpg"
+            alt="Teklif Al"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/90 to-orange-600/90" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <Badge className="mb-6 bg-white/20 text-white border-white/30 hover:bg-white/30">
+              <CheckCircle className="h-4 w-4 mr-2" />
+              Ücretsiz Keşif ve Teklif
+            </Badge>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance drop-shadow-lg">
+              Size Özel Teklif Alın
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 text-pretty max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 text-pretty max-w-2xl mx-auto opacity-95">
               Uzman ekibimiz size en uygun çözümü sunmak için ücretsiz keşif yapıyor ve detaylı teklif hazırlıyor.
             </p>
+
+            {/* İstatistikler */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mt-12">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                <div className="text-3xl font-bold mb-1">5000+</div>
+                <div className="text-sm opacity-90">Tamamlanan Proje</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                <div className="text-3xl font-bold mb-1">15+</div>
+                <div className="text-sm opacity-90">Yıl Deneyim</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                <div className="text-3xl font-bold mb-1">24</div>
+                <div className="text-sm opacity-90">Saat İçinde Dönüş</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                <div className="text-3xl font-bold mb-1">%100</div>
+                <div className="text-sm opacity-90">Müşteri Memnuniyeti</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Advantages Section */}
+      <section className="py-16 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Neden Bizi Tercih Etmelisiniz?
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Sektördeki deneyimimiz ve müşteri odaklı yaklaşımımızla fark yaratıyoruz
+            </p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {advantages.map((advantage, index) => (
+              <Card key={index} className="text-center p-6 border-2 hover:border-primary/50 transition-all hover:shadow-lg">
+                <CardContent className="p-0">
+                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <advantage.icon className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="font-bold text-foreground mb-2">{advantage.title}</h3>
+                  <p className="text-sm text-muted-foreground">{advantage.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Process Steps */}
-      <section className="py-12 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Teklif Alma Süreci
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              4 basit adımda projeniz için profesyonel teklif alın
+            </p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {steps.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary text-primary-foreground rounded-full font-bold text-lg mb-4">
-                  {step.number}
+              <div key={index} className="relative">
+                <div className="text-center">
+                  <div className="relative inline-flex items-center justify-center w-16 h-16 bg-primary text-primary-foreground rounded-2xl font-bold text-xl mb-4 shadow-lg">
+                    {step.number}
+                    <step.icon className="absolute -top-2 -right-2 h-6 w-6 bg-orange-500 text-white rounded-full p-1" />
+                  </div>
+                  <h3 className="font-bold text-lg mb-2">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground">{step.description}</p>
                 </div>
-                <h3 className="font-semibold mb-2">{step.title}</h3>
-                <p className="text-sm text-muted-foreground">{step.description}</p>
+                {index < steps.length - 1 && (
+                  <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-0.5 bg-primary/20" />
+                )}
               </div>
             ))}
           </div>
@@ -107,7 +215,7 @@ export default function QuotePage() {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="phone">Telefon *</Label>
-                      <Input id="phone" type="tel" placeholder="+90 555 123 45 67" required />
+                      <Input id="phone" type="tel" placeholder={contactInfo.phone.display.primary} required />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email">E-posta</Label>
@@ -232,16 +340,51 @@ export default function QuotePage() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-primary text-primary-foreground">
+              <Card className="bg-gradient-to-br from-primary to-orange-600 text-white border-0">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <CheckCircle className="h-6 w-6" />
-                    <span className="font-semibold">Ücretsiz Keşif Garantisi</span>
+                    <span className="font-semibold text-lg">Ücretsiz Keşif Garantisi</span>
                   </div>
-                  <p className="text-sm opacity-90">
+                  <p className="text-sm opacity-95 mb-4">
                     Teklif formunuzu gönderdikten sonra 24 saat içinde size ulaşıyor ve ücretsiz keşif randevusu
                     planlıyoruz.
                   </p>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4" />
+                      <span>24 saat içinde geri dönüş</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4" />
+                      <span>Ücretsiz yerinde inceleme</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4" />
+                      <span>Detaylı fiyat teklifi</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Hızlı İletişim Kartı */}
+              <Card className="border-2 border-primary/20">
+                <CardHeader>
+                  <CardTitle className="text-lg">Hızlı İletişim</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <Button asChild className="w-full" size="lg" variant="outline">
+                    <a href={`tel:${contactInfo.phone.primary}`}>
+                      <Phone className="h-5 w-5 mr-2" />
+                      Hemen Ara
+                    </a>
+                  </Button>
+                  <Button asChild className="w-full bg-green-600 hover:bg-green-700 text-white" size="lg">
+                    <a href={contactInfo.whatsapp.quote} target="_blank" rel="noopener noreferrer">
+                      <Image src="/wp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
+                      WhatsApp
+                    </a>
+                  </Button>
                 </CardContent>
               </Card>
             </div>
@@ -249,6 +392,35 @@ export default function QuotePage() {
         </div>
       </section>
 
+      {/* Trust Badges */}
+      <section className="py-16 bg-gradient-to-br from-primary/5 to-orange-50/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Güvenle Çalışın
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Sektördeki lider konumumuz ve referanslarımızla güvence altındasınız
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white rounded-xl p-8 text-center shadow-lg">
+                <div className="text-5xl font-bold text-primary mb-2">5000+</div>
+                <p className="text-muted-foreground font-medium">Mutlu Müşteri</p>
+              </div>
+              <div className="bg-white rounded-xl p-8 text-center shadow-lg">
+                <div className="text-5xl font-bold text-primary mb-2">%98</div>
+                <p className="text-muted-foreground font-medium">Memnuniyet Oranı</p>
+              </div>
+              <div className="bg-white rounded-xl p-8 text-center shadow-lg">
+                <div className="text-5xl font-bold text-primary mb-2">15</div>
+                <p className="text-muted-foreground font-medium">Yıl Garanti</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

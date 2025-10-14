@@ -2,9 +2,14 @@ import { Header } from "@/components/header"
 import { ContactHero } from "@/components/contact-hero"
 import { ContactForm } from "@/components/contact-form"
 import { ContactInfo } from "@/components/contact-info"
+import { ContactMap } from "@/components/contact-map"
 import { QuoteForm } from "@/components/quote-form"
 import { WhatsAppCTA } from "@/components/whatsapp-cta"
 
+/**
+ * İletişim sayfası
+ * İletişim bilgileri, formlar ve Google Maps haritası
+ */
 export default function ContactPage() {
   return (
     <div className="min-h-screen">
@@ -25,6 +30,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
+        <ContactMap />
       </main>
     </div>
   )

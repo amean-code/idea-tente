@@ -11,6 +11,8 @@ const heroImages = [
   "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
   "/frameless-glass-sliding-system--modern-terrace-wit.jpg",
   "/winter-garden-conservatory-with-glass-roof--indoor.jpg",
+  "/back.jpg",
+  "/slide-1.jpg",
 ]
 
 export function HeroSection() {
@@ -45,17 +47,17 @@ export function HeroSection() {
       ))}
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-white">
-        <div className="max-w-4xl mx-auto space-y-8">
+      <div className="relative z-10 container mx-auto px-4 text-left text-white">
+        <div className="max-w-4xl space-y-8">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-balance animate-fade-in">
             {t("hero.title")}
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto text-pretty animate-fade-in-delay">
+          <p className="text-xl md:text-2xl text-gray-200 max-w-2xl text-pretty animate-fade-in-delay">
             {t("hero.subtitle")}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-delay-2">
+          <div className="flex flex-col sm:flex-row gap-4 justify-start items-start animate-fade-in-delay-2">
             <Button size="lg" asChild className="text-lg px-8 py-6 hover:scale-105 transition-transform">
               <Link href="/teklif-al">
                 <MessageCircle className="mr-2 h-5 w-5" />
@@ -77,7 +79,7 @@ export function HeroSection() {
           </div>
 
           {/* Video Play Button */}
-          <div className="pt-8 animate-fade-in-delay-3">
+          <div className="pt-8 animate-fade-in-delay-3 flex justify-start">
             <Button variant="ghost" size="lg" className="text-white hover:bg-white/10 group" asChild>
               <Link href="/ar-demo">
                 <div className="flex items-center space-x-3">
@@ -101,13 +103,6 @@ export function HeroSection() {
               }`}
             />
           ))}
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse" />
-          </div>
         </div>
       </div>
     </section>

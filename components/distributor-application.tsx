@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { MessageCircle, Send } from "lucide-react"
+import { contactInfo } from "@/lib/contact-info"
 
 export function DistributorApplication() {
   const [formData, setFormData] = useState({
@@ -31,7 +32,7 @@ export function DistributorApplication() {
   }
 
   return (
-    <section id="distributor-application" className="py-20 bg-background">
+    <section id="distributor-application" className="py-20 bg-gradient-to-b from-blue-50/30 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
@@ -55,14 +56,14 @@ export function DistributorApplication() {
                     <MessageCircle className="h-5 w-5 text-primary" />
                     <div>
                       <p className="font-medium">WhatsApp</p>
-                      <p className="text-sm text-muted-foreground">+90 555 123 45 67</p>
+                      <p className="text-sm text-muted-foreground">{contactInfo.phone.display.whatsapp}</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Send className="h-5 w-5 text-primary" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="text-sm text-muted-foreground">export@idea.com</p>
+                      <p className="text-sm text-muted-foreground">{contactInfo.email.export}</p>
                     </div>
                   </div>
                 </CardContent>

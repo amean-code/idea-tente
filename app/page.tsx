@@ -22,7 +22,6 @@ export default function HomePage() {
         <HeroSection />
         <ProductsOverview />
         <FeaturedProjects />
-        <WhyChooseUs />
         <StatsSection />
         <CTASection />
       </main>

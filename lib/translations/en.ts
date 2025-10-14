@@ -6,7 +6,7 @@
 export const enTranslations = {
   // Navigation
   nav: {
-    pergolaSystems: "IDEA Systems",
+    pergolaSystems: "Pergola Systems",
     glassSystems: "Glass Systems",
     winterGarden: "Winter Garden",
     sunBreakers: "Sun Breakers",
@@ -24,10 +24,51 @@ export const enTranslations = {
     about: "About",
     references: "References",
     blog: "Blog",
-    bioclimaticTitle: "Bioclimatic IDEA",
-    bioclimaticDesc: "Perfect climate control with smart louvered systems",
-    glassTitle: "Glass Systems",
-    glassDesc: "Seamless views with frameless glass solutions",
+    // Pergola dropdown
+    pergolaMain: "Bioclimatic Pergola",
+    pergolaMainDesc: "View all pergola models",
+    pergolaPremium: "Premium Bioclimatic",
+    pergolaPremiumDesc: "Motorized, LED lighting",
+    pergolaStandard: "Standard Bioclimatic",
+    pergolaStandardDesc: "Manual, economical solution",
+    pergolaSmart: "Smart Bioclimatic",
+    pergolaSmartDesc: "IoT technology, automatic",
+    // Glass dropdown
+    glassMain: "Glass Systems",
+    glassMainDesc: "View all glass system models",
+    glassSliding: "Sliding Glass",
+    glassSlidingDesc: "Frameless sliding system",
+    glassFolding: "Folding Glass",
+    glassFoldingDesc: "Wide opening capability",
+    glassFixed: "Fixed Glass",
+    glassFixedDesc: "Permanent protection, modern",
+    // Winter Garden dropdown
+    winterGardenMain: "Winter Garden",
+    winterGardenMainDesc: "View all winter garden models",
+    winterGardenPremium: "Premium Winter Garden",
+    winterGardenPremiumDesc: "Smart glass, automatic",
+    winterGardenStandard: "Standard Winter Garden",
+    winterGardenStandardDesc: "Double glass, economical",
+    winterGardenLux: "Luxury Winter Garden",
+    winterGardenLuxDesc: "Panoramic glass, luxury",
+    // Sun Breaker dropdown
+    sunBreakerMain: "Sun Breaker Systems",
+    sunBreakerMainDesc: "View all sun breaker models",
+    sunBreakerFixed: "Fixed Sun Breaker",
+    sunBreakerFixedDesc: "Aluminum, economical",
+    sunBreakerMotorized: "Motorized Sun Breaker",
+    sunBreakerMotorizedDesc: "Motorized, smart sensor",
+    sunBreakerVertical: "Vertical Sun Breaker",
+    sunBreakerVerticalDesc: "Facade integration",
+    // Zip Screen dropdown
+    zipScreenMain: "Zip Screen Systems",
+    zipScreenMainDesc: "View all zip screen models",
+    zipScreenMotorized: "Motorized Zip Screen",
+    zipScreenMotorizedDesc: "Remote control, silent",
+    zipScreenManual: "Manual Zip Screen",
+    zipScreenManualDesc: "Economical, durable",
+    zipScreenSmart: "Smart Zip Screen",
+    zipScreenSmartDesc: "Sensor control, automatic",
   },
   // Hero Section
   hero: {
@@ -45,8 +86,11 @@ export const enTranslations = {
     fixed: "Fixed IDEA",
     glass: "Glass Systems",
     winterGarden: "Winter Garden",
+    winterGardenDesc: "Enclosed space solutions for year-round use",
     sunBreaker: "Sun Breaker",
+    sunBreakerDesc: "Modern sun control systems for energy savings and comfort",
     zipScreen: "Zip Screen",
+    zipScreenDesc: "Wind-resistant zip screen systems for outdoor protection",
     title: "Our Premium Outdoor Solutions",
     subtitle: "Custom-designed IDEA and glass systems",
     features: {
@@ -58,12 +102,72 @@ export const enTranslations = {
       safetyGlass: "Safety Glass",
       fourSeasons: "4-Season Use",
       thermalInsulation: "Thermal Insulation",
-      naturalLighting: "Natural Lighting"
+      naturalLighting: "Natural Lighting",
+      sunControl: "Sun Control",
+      energySaving: "Energy Saving",
+      uvProtection: "UV Protection",
+      windResistance: "Wind Resistance",
+      silentOperation: "Silent Operation"
     },
     badges: {
       popular: "Popular",
       premium: "Premium",
-      new: "New"
+      new: "New",
+      efficient: "Efficient"
+    },
+    // Winter Garden Sub Products
+    winterGardenSub: {
+      premium: {
+        title: "Premium Winter Garden",
+        description: "Superior comfort with smart glass technology and automatic climate control systems",
+        badge: "Most Popular"
+      },
+      standard: {
+        title: "Standard Winter Garden",
+        description: "Economical winter garden solution with quality materials and affordable pricing",
+        badge: "Economic"
+      },
+      luxury: {
+        title: "Luxury Winter Garden",
+        description: "Top-level comfort with panoramic glass and smart home integration",
+        badge: "Luxury"
+      }
+    },
+    // Sun Breaker Sub Products
+    sunBreakerSub: {
+      fixed: {
+        title: "Fixed Sun Breaker",
+        description: "Permanent sun control with durable aluminum profile sun breaker systems",
+        badge: "Economic"
+      },
+      motorized: {
+        title: "Motorized Sun Breaker",
+        description: "Smart sun management with motorized and adjustable sun control systems",
+        badge: "Smart"
+      },
+      vertical: {
+        title: "Vertical Sun Breaker",
+        description: "Aesthetic and functional design with facade sun control solutions",
+        badge: "Modern"
+      }
+    },
+    // Zip Screen Sub Products
+    zipScreenSub: {
+      motorized: {
+        title: "Motorized Zip Screen",
+        description: "Easy operation with remote-controlled motorized zip screen systems",
+        badge: "Popular"
+      },
+      manual: {
+        title: "Manual Zip Screen",
+        description: "Affordable solution with economical manual zip screen systems",
+        badge: "Economic"
+      },
+      smart: {
+        title: "Smart Zip Screen",
+        description: "Automatic sun protection with sensor-controlled smart zip screen systems",
+        badge: "Smart"
+      }
     }
   },
   // Contact
@@ -76,6 +180,18 @@ export const enTranslations = {
     address: "Address",
     workingHours: "Working Hours",
     languageSupport: "Language Support",
+    // Map Section
+    mapBadge: "Location",
+    mapTitle: "Visit Us",
+    mapSubtitle: "We are happy to welcome you at our Antalya headquarters",
+    addressCard: "Address",
+    transportCard: "Transportation",
+    transportInfo: "15 km to Antalya Airport",
+    parkingInfo: "Free parking available",
+    showroomCard: "Showroom",
+    showroomInfo: "To view product samples",
+    appointmentInfo: "we recommend making an appointment",
+    getDirections: "Get Directions on Google Maps",
   },
   // Forms
   forms: {
@@ -128,27 +244,118 @@ export const enTranslations = {
     maintenance: "Maintenance Service",
     warranty: "Warranty"
   },
-  // Products
-  products: {
-    title: "Products",
-    subtitle: "Discover Our Product Range",
-    viewDetails: "View Details",
-    getQuote: "Get Quote",
-    features: "Features",
-    specifications: "Specifications",
-    gallery: "Gallery"
+  // Export
+  export: {
+    title: "Export & Global Reach",
+    subtitle: "Premium IDEA Systems Worldwide",
+    description: "We export our world-class IDEA and glass systems to over 50 countries",
+    markets: "Export Markets",
+    certifications: "Certifications",
+    distributorship: "Distributorship Opportunities",
+    contactUs: "Contact for Export"
   },
-  // Contact
-  contact: {
-    title: "Contact Us",
-    subtitle: "Get in touch with our expert team",
-    name: "Name",
-    email: "Email",
-    phone: "Phone",
-    message: "Message",
-    send: "Send Message",
-    address: "Address",
-    workingHours: "Working Hours",
-    quickContact: "Quick Contact"
+  // Catalog
+  catalog: {
+    title: "Product Catalog",
+    subtitle: "Discover Our Complete Product Range",
+    download: "Download Catalog",
+    viewOnline: "View Online",
+    latest: "Latest Catalog"
+  },
+
+  // Pergola specific translations
+  pergola: {
+    hero: {
+      description: "IDEA pergola systems feature durable aluminum carrier structures and offer various ceiling options ideal for different architectural designs. With options like glass, PVC fabric or aluminum panels, enhance your outdoor spaces with a unique style.",
+      subdescription: "Create a serene space surrounded by bioclimatic pergola and loungers, perfect for relaxing and soaking up the sun."
+    }
+  },
+
+  // References translations
+  references: {
+    title: "Our Reference Projects",
+    subtitle: "Successful projects we have completed with this service",
+    viewAll: "View All References",
+    projectDetails: "Project Details",
+    categories: {
+      hotel: "Hotel & Resort",
+      corporate: "Corporate", 
+      restaurant: "Restaurant",
+      residential: "Residential",
+      commercial: "Commercial",
+      entertainment: "Entertainment"
+    }
+  },
+
+  // Glass Systems translations
+  glassSystems: {
+    hero: {
+      title: "Glass Systems",
+      description: "With our sliding glass systems, protect your spaces from external factors while increasing your comfort without compromising your view. Modern and elegant appearance with frameless design.",
+      subdescription: "Frameless glass systems for uninterrupted views, easy-to-open sliding mechanism and maximum security with tempered safety glass."
+    },
+    wizard: {
+      title: "Choose Your Glass System",
+      subtitle: "We offer various options to choose the most suitable glass system for your space."
+    },
+    products: {
+      title: "Glass System Models",
+      subtitle: "Discover glass system models suitable for your needs",
+      viewDetails: "View Details"
+    }
+  },
+
+  // Winter Garden translations
+  winterGarden: {
+    hero: {
+      title: "4 Season Comfort with Winter Garden",
+      description: "Winter gardens designed with modern glass technology expand your living space and offer a comfortable environment in touch with nature.",
+      subdescription: "A living space that can be used in all seasons with thermal insulation, durability and smart control systems."
+    },
+    wizard: {
+      title: "Choose Your Winter Garden",
+      subtitle: "We offer a wide range of model and feature options for your custom winter garden solution."
+    },
+    products: {
+      title: "Winter Garden Models",
+      subtitle: "Discover winter garden solutions suitable for your needs and expand your living space",
+      viewDetails: "View Details"
+    }
+  },
+
+  // Sun Breakers translations
+  sunBreakers: {
+    hero: {
+      title: "Sun Breaker Systems",
+      description: "Protect your buildings from the harmful effects of the sun with modern sun breaker systems and save energy.",
+      subdescription: "Increase the value of your building with sun control, energy saving, UV protection and aesthetic facade solutions."
+    },
+    wizard: {
+      title: "Choose Your Sun Breaker",
+      subtitle: "We offer various options to choose the most suitable sun breaker system for your building."
+    },
+    products: {
+      title: "Sun Breaker Models",
+      subtitle: "Choose the sun breaker model that suits your needs and protect your buildings from harmful sun effects",
+      viewDetails: "View Details"
+    }
+  },
+
+  // Zip Screen translations
+  zipScreen: {
+    hero: {
+      title: "Comfortable Living with Zip Screen",
+      description: "Make your outdoor areas usable in all seasons with wind-resistant zip screen systems.",
+      subdescription: "Transform your outdoor areas with wind resistance, UV protection, silent operation and energy savings."
+    },
+    wizard: {
+      title: "Choose Your Zip Screen",
+      subtitle: "We offer a wide range of options to choose the most suitable zip screen system for your outdoor areas."
+    },
+    products: {
+      title: "Zip Screen Models",
+      subtitle: "Choose the zip screen model that suits your needs and make your outdoor areas comfortable",
+      viewDetails: "View Details"
+    }
   }
 } as const

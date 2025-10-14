@@ -8,7 +8,8 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { MessageCircle, Send } from "lucide-react"
+import { Mail } from "lucide-react"
+import { contactInfo } from "@/lib/contact-info"
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -19,11 +20,37 @@ export function ContactForm() {
     message: "",
   })
 
+  /**
+   * Form gönderildiğinde Gmail web arayüzünde yeni sekme açar
+   */
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Contact form submitted:", formData)
-    // Here you would typically send the data to your backend
+    
+    // Konu başlıkları mapping
+    const subjectMap: { [key: string]: string } = {
+      "product-info": "Ürün Bilgisi",
+      "technical": "Teknik Destek",
+      "distributor": "Distribütörlük",
+      "warranty": "Garanti",
+      "installation": "Montaj",
+      "other": "Diğer"
+    }
+    
+    // Mail içeriğini oluştur
+    const subject = `İletişim: ${subjectMap[formData.subject] || "Genel Bilgi"}`
+    const body = `
+Ad Soyad: ${formData.name}
+E-posta: ${formData.email}
+Telefon: ${formData.phone || "Belirtilmemiş"}
+Konu: ${subjectMap[formData.subject] || "Diğer"}
+
+Mesaj:
+${formData.message}
+    `.trim()
+    
+    // Gmail web arayüzü linki oluştur ve yeni sekmede aç
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(contactInfo.email.info)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    window.open(gmailLink, '_blank')
   }
 
   const handleInputChange = (field: string, value: string) => {
@@ -33,7 +60,7 @@ export function ContactForm() {
   return (
     <div className="bg-card rounded-lg p-8 border">
       <div className="flex items-center mb-6">
-        <MessageCircle className="h-6 w-6 text-primary mr-3" />
+        <Mail className="h-6 w-6 text-primary mr-3" />
         <h2 className="text-2xl font-bold text-foreground">Genel İletişim</h2>
       </div>
 
@@ -106,8 +133,8 @@ export function ContactForm() {
         </div>
 
         <Button type="submit" className="w-full" size="lg">
-          <Send className="h-4 w-4 mr-2" />
-          Mesaj Gönder
+          <Mail className="h-4 w-4 mr-2" />
+          Mail At
         </Button>
       </form>
     </div>

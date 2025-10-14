@@ -2,93 +2,64 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { ChevronLeft, ChevronRight, MapPin, Calendar, Users, Award, ArrowRight, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { useLanguage } from "@/contexts/language-context"
+import { contactInfo } from "@/lib/contact-info"
+import { getFeaturedProjects } from "@/data/projects"
 
-const featuredProjects = [
-  {
-    id: 1,
-    title: "Luxury Resort Pergola Complex",
-    location: "Antalya, Türkiye",
-    year: "2024",
-    category: "Biyoklimatik Pergola",
-    image: "/luxury-resort-pergola-installation.jpg",
-    description: "5 yıldızlı resort için özel tasarım biyoklimatik pergola sistemi",
-    features: ["Akıllı Kontrol", "LED Aydınlatma", "Yağmur Sensörü", "Rüzgar Sensörü"],
-    area: "2,500 m²",
-    client: "Luxury Resort Chain",
-  },
-  {
-    id: 2,
-    title: "Corporate Headquarters Sun Protection",
-    location: "İstanbul, Türkiye",
-    year: "2024",
-    category: "Güneş Kırıcıları",
-    image: "/corporate-building-sun-breakers.jpg",
-    description: "Modern ofis binası için enerji verimli güneş kırıcı sistemleri",
-    features: ["Otomatik Kontrol", "Enerji Tasarrufu", "Akıllı Sensörler", "Uzaktan Yönetim"],
-    area: "8,000 m²",
-    client: "Fortune 500 Company",
-  },
-  {
-    id: 3,
-    title: "Seaside Restaurant Glass Systems",
-    location: "Bodrum, Türkiye",
-    year: "2023",
-    category: "Cam Sistemleri",
-    image: "/seaside-restaurant-glass-systems.jpg",
-    description: "Deniz manzaralı restoran için panoramik cam sistemleri",
-    features: ["Panoramik Görünüm", "Rüzgar Koruması", "Kolay Temizlik", "UV Koruması"],
-    area: "800 m²",
-    client: "Premium Restaurant Group",
-  },
-  {
-    id: 4,
-    title: "Private Villa Winter Garden",
-    location: "Çeşme, Türkiye",
-    year: "2023",
-    category: "Kış Bahçesi",
-    image: "/private-villa-winter-garden.jpg",
-    description: "Özel villa için lüks kış bahçesi tasarımı",
-    features: ["Akıllı Cam", "Isı Kontrolü", "Otomatik Havalandırma", "Premium Malzeme"],
-    area: "150 m²",
-    client: "Private Villa Owner",
-  },
-]
-
-const promotionalContent = [
-  {
-    icon: Award,
-    title: "15 Yıl Garanti",
-    description: "Tüm ürünlerimizde uzun süreli garanti",
-  },
-  {
-    icon: Users,
-    title: "Uzman Ekip",
-    description: "Sertifikalı montaj ve servis ekibi",
-  },
-  {
-    icon: MapPin,
-    title: "Türkiye Geneli",
-    description: "81 ilde hizmet ağımız",
-  },
-]
-
+/**
+ * FeaturedProjects bileşeni - Öne çıkan projeleri sergiler
+ * Proje galerisi, detayları ve CTA butonları içerir
+ */
 export function FeaturedProjects() {
+  const { t, language } = useLanguage()
   const [currentProject, setCurrentProject] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
 
+  // Öne çıkan projeleri al
+  const featuredProjects = getFeaturedProjects()
+
+  // Promosyon içerikleri - çevirilerden alınır
+  const promotionalContent = [
+    {
+      icon: Award,
+      title: t("featuredProjects.promotional.warranty.title"),
+      description: t("featuredProjects.promotional.warranty.description"),
+    },
+    {
+      icon: Users,
+      title: t("featuredProjects.promotional.expertTeam.title"),
+      description: t("featuredProjects.promotional.expertTeam.description"),
+    },
+    {
+      icon: MapPin,
+      title: t("featuredProjects.promotional.nationwide.title"),
+      description: t("featuredProjects.promotional.nationwide.description"),
+    },
+  ]
+
+  /**
+   * Sonraki projeye geç
+   */
   const nextProject = () => {
     setCurrentProject((prev) => (prev + 1) % featuredProjects.length)
   }
 
+  /**
+   * Önceki projeye geç
+   */
   const prevProject = () => {
     setCurrentProject((prev) => (prev - 1 + featuredProjects.length) % featuredProjects.length)
   }
 
   const project = featuredProjects[currentProject]
+  
+  // Mevcut dil için proje çevirisini al
+  const projectTranslation = project.translations[language]
 
   return (
     <section className="py-24 bg-gradient-to-br from-background via-background to-orange-50/30 overflow-hidden">
@@ -102,15 +73,14 @@ export function FeaturedProjects() {
           className="text-center mb-16"
         >
           <Badge variant="outline" className="mb-4 text-orange-600 border-orange-200">
-            Öne Çıkan Projeler
+            {t("featuredProjects.badge")}
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Gerçekleştirdiğimiz
-            <span className="text-orange-500 block">Başarı Hikayeleri</span>
+            {t("featuredProjects.title")}
+            <span className="text-orange-500 block">{t("featuredProjects.titleHighlight")}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-            5000+ projelik deneyimimizle, Türkiye'nin dört bir yanında hayata geçirdiğimiz özel tasarım çözümlerimizi
-            keşfedin.
+            {t("featuredProjects.subtitle")}
           </p>
         </motion.div>
 
@@ -127,7 +97,7 @@ export function FeaturedProjects() {
             <div className="relative h-[500px] rounded-2xl overflow-hidden bg-gradient-to-br from-orange-100 to-orange-200">
               <Image
                 src={project.image || "/placeholder.svg"}
-                alt={project.title}
+                alt={projectTranslation.title}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -147,8 +117,10 @@ export function FeaturedProjects() {
 
               {/* Project Info Overlay */}
               <div className="absolute bottom-6 left-6 right-6">
-                <Badge className="mb-3 bg-orange-500 hover:bg-orange-600">{project.category}</Badge>
-                <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
+                <Badge className="mb-3 bg-orange-500 hover:bg-orange-600">
+                  {t(`featuredProjects.category.${project.category}`)}
+                </Badge>
+                <h3 className="text-2xl font-bold text-white mb-2">{projectTranslation.title}</h3>
                 <div className="flex items-center gap-4 text-white/80 text-sm">
                   <div className="flex items-center gap-1">
                     <MapPin className="w-4 h-4" />
@@ -187,29 +159,29 @@ export function FeaturedProjects() {
           >
             <div>
               <Badge variant="outline" className="mb-3 text-orange-600 border-orange-200">
-                {project.category}
+                {t(`featuredProjects.category.${project.category}`)}
               </Badge>
-              <h3 className="text-3xl font-bold mb-4">{project.title}</h3>
-              <p className="text-lg text-muted-foreground mb-6">{project.description}</p>
+              <h3 className="text-3xl font-bold mb-4">{projectTranslation.title}</h3>
+              <p className="text-lg text-muted-foreground mb-6">{projectTranslation.description}</p>
             </div>
 
             {/* Project Stats */}
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="p-4 bg-orange-50 rounded-lg">
                 <div className="text-2xl font-bold text-orange-600">{project.area}</div>
-                <div className="text-sm text-muted-foreground">Toplam Alan</div>
+                <div className="text-sm text-muted-foreground">{t("featuredProjects.totalArea")}</div>
               </div>
               <div className="p-4 bg-orange-50 rounded-lg">
                 <div className="text-2xl font-bold text-orange-600">{project.year}</div>
-                <div className="text-sm text-muted-foreground">Tamamlanma</div>
+                <div className="text-sm text-muted-foreground">{t("featuredProjects.completion")}</div>
               </div>
             </div>
 
             {/* Features */}
             <div>
-              <h4 className="font-semibold mb-3">Özellikler</h4>
+              <h4 className="font-semibold mb-3">{t("featuredProjects.features")}</h4>
               <div className="flex flex-wrap gap-2 mb-6">
-                {project.features.map((feature, index) => (
+                {projectTranslation.features.map((feature, index) => (
                   <Badge key={index} variant="secondary" className="bg-orange-100 text-orange-700">
                     {feature}
                   </Badge>
@@ -218,7 +190,7 @@ export function FeaturedProjects() {
             </div>
 
             <Button size="lg" className="bg-orange-500 hover:bg-orange-600 group">
-              Proje Detaylarını İncele
+              {t("featuredProjects.viewDetails")}
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
           </motion.div>
@@ -271,17 +243,34 @@ export function FeaturedProjects() {
           transition={{ duration: 0.6 }}
           className="text-center bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-12 text-white"
         >
-          <h3 className="text-3xl md:text-4xl font-bold mb-4">Hayalinizdeki Projeyi Gerçekleştirelim</h3>
+          <h3 className="text-3xl md:text-4xl font-bold mb-4">{t("featuredProjects.cta.title")}</h3>
           <p className="text-xl mb-8 text-orange-100 max-w-2xl mx-auto">
-            15 yıllık deneyimimiz ve uzman ekibimizle, size özel çözümler sunuyoruz. Ücretsiz keşif ve teklif için hemen
-            iletişime geçin.
+            {t("featuredProjects.cta.subtitle")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-orange-600 hover:bg-orange-50">
-              Ücretsiz Keşif Talep Et
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="bg-white text-orange-600 hover:bg-orange-50"
+              asChild
+            >
+              <a 
+                href={contactInfo.whatsapp.quote} 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                {t("featuredProjects.cta.freeInspection")}
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent">
-              Referans Projelerimizi İncele
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white/10 bg-transparent"
+              asChild
+            >
+              <Link href="/referanslar">
+                {t("featuredProjects.cta.viewReferences")}
+              </Link>
             </Button>
           </div>
         </motion.div>
