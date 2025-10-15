@@ -63,28 +63,28 @@ export function ARGallery() {
                   
                   {/* Kategori Badge */}
                   <div className="absolute top-5 left-5">
-                    <span className="inline-block bg-orange-500 text-white px-4 py-2 rounded-xl text-sm font-semibold shadow-lg">
+                    <span className="inline-block bg-primary text-primary-foreground px-4 py-2 rounded-xl text-sm font-semibold shadow-lg">
                       {demo.category}
                     </span>
                   </div>
 
                   {/* Play Button - Hover'da görünür */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center shadow-2xl transform scale-90 group-hover:scale-100 transition-transform">
+                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-2xl transform scale-90 group-hover:scale-100 transition-transform">
                       <Play className="h-8 w-8 text-white ml-1" />
                     </div>
                   </div>
                 </div>
 
                 <div className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
                     {demo.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">{demo.description}</p>
                   
                   {/* AR Demo Butonu */}
                   <div className="pt-2">
-                    <div className="flex items-center text-orange-600 font-semibold group-hover:gap-2 transition-all">
+                    <div className="flex items-center text-primary font-semibold group-hover:gap-2 transition-all">
                       <Eye className="h-5 w-5" />
                       <span className="ml-2">AR Demo Başlat</span>
                       <ArrowRight className="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity" />

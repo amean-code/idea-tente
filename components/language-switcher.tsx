@@ -68,7 +68,7 @@ export function LanguageSwitcher({
         className={`flex items-center gap-2 transition-colors relative z-50 ${
           theme === "dark" 
             ? "text-white hover:text-white/80 hover:bg-white/10 drop-shadow-md" 
-            : "text-gray-800 hover:text-orange-600 hover:bg-orange-50"
+            : "text-gray-800 hover:text-primary hover:bg-primary/10"
         }`}
       >
         <span className="text-lg">{currentLang.flag}</span>
@@ -96,7 +96,7 @@ export function LanguageSwitcher({
                 onClick={() => handleLanguageChange(code as Language)}
                 className={`w-full cursor-pointer flex items-center justify-between px-3 py-2.5 transition-colors mx-1 my-0.5 rounded ${
                   language === code 
-                    ? "bg-orange-50 text-orange-600 font-medium" 
+                    ? "bg-primary/10 text-primary font-medium" 
                     : "hover:bg-gray-50 text-gray-700"
                 }`}
               >
@@ -105,7 +105,7 @@ export function LanguageSwitcher({
                   <span className="text-sm font-medium">{lang.name}</span>
                 </div>
                 {language === code && (
-                  <Check className="h-4 w-4 text-orange-600 flex-shrink-0" />
+                  <Check className="h-4 w-4 text-primary flex-shrink-0" />
                 )}
               </button>
             ))}

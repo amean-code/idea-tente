@@ -77,8 +77,8 @@ export function ProductDetailFeatures({
                 className="group"
               >
                 {/* Icon */}
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
-                  <IconComponent className="h-8 w-8 text-white" />
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/40 to-primary-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                  <IconComponent className="h-8 w-8 text-primary-foreground" />
                 </div>
 
                 {/* Content */}

@@ -206,12 +206,12 @@ export default function PremiumWinterGardenPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-primary to-primary-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-3xl font-bold text-primary-foreground mb-4">
             Premium Kış Bahçenizi Hemen Planlayın
           </h2>
-          <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Uzman ekibimiz size özel tasarım ve uygulama hizmeti sunuyor. Ücretsiz keşif için hemen iletişime geçin.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

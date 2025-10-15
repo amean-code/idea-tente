@@ -90,12 +90,12 @@ export default function QuotePage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/90 to-orange-600/90" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/90 to-primary-700/90" />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <Badge className="mb-6 bg-white/20 text-white border-white/30 hover:bg-white/30">
+          <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center text-primary-foreground">
+            <Badge className="mb-6 bg-white/20 text-primary-foreground border-white/30 hover:bg-white/30">
               <CheckCircle className="h-4 w-4 mr-2" />
               Ücretsiz Keşif ve Teklif
             </Badge>
@@ -173,7 +173,7 @@ export default function QuotePage() {
                 <div className="text-center">
                   <div className="relative inline-flex items-center justify-center w-16 h-16 bg-primary text-primary-foreground rounded-2xl font-bold text-xl mb-4 shadow-lg">
                     {step.number}
-                    <step.icon className="absolute -top-2 -right-2 h-6 w-6 bg-orange-500 text-white rounded-full p-1" />
+                    <step.icon className="absolute -top-2 -right-2 h-6 w-6 bg-primary text-primary-foreground rounded-full p-1" />
                   </div>
                   <h3 className="font-bold text-lg mb-2">{step.title}</h3>
                   <p className="text-sm text-muted-foreground">{step.description}</p>
@@ -340,7 +340,7 @@ export default function QuotePage() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-primary to-orange-600 text-white border-0">
+              <Card className="bg-gradient-to-br from-primary to-primary-700 text-primary-foreground border-0">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <CheckCircle className="h-6 w-6" />
@@ -393,7 +393,7 @@ export default function QuotePage() {
       </section>
 
       {/* Trust Badges */}
-      <section className="py-16 bg-gradient-to-br from-primary/5 to-orange-50/50">
+      <section className="py-16 bg-gradient-to-br from-primary/5 to-primary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">

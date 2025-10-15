@@ -6,7 +6,7 @@ import { contactInfo } from "@/lib/contact-info"
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-white via-orange-50/30 to-primary/5 border-t border-gray-200">
+    <footer className="bg-gradient-to-br from-white via-primary/5 to-primary/10 border-t border-gray-200">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
@@ -30,34 +30,34 @@ export function Footer() {
               <Link 
                 href={contactInfo.social.facebook} 
                 target="_blank"
-                className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary hover:text-white transition-all flex items-center justify-center group"
+                className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all flex items-center justify-center group"
                 aria-label="Facebook"
               >
-                <Facebook className="h-5 w-5 text-primary group-hover:text-white" />
+                <Facebook className="h-5 w-5 text-primary group-hover:text-primary-foreground" />
               </Link>
               <Link 
                 href={contactInfo.social.instagram} 
                 target="_blank"
-                className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary hover:text-white transition-all flex items-center justify-center group"
+                className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all flex items-center justify-center group"
                 aria-label="Instagram"
               >
-                <Instagram className="h-5 w-5 text-primary group-hover:text-white" />
+                <Instagram className="h-5 w-5 text-primary group-hover:text-primary-foreground" />
               </Link>
               <Link 
                 href={contactInfo.social.linkedin} 
                 target="_blank"
-                className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary hover:text-white transition-all flex items-center justify-center group"
+                className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all flex items-center justify-center group"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="h-5 w-5 text-primary group-hover:text-white" />
+                <Linkedin className="h-5 w-5 text-primary group-hover:text-primary-foreground" />
               </Link>
               <Link 
                 href={contactInfo.social.youtube} 
                 target="_blank"
-                className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary hover:text-white transition-all flex items-center justify-center group"
+                className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all flex items-center justify-center group"
                 aria-label="YouTube"
               >
-                <Youtube className="h-5 w-5 text-primary group-hover:text-white" />
+                <Youtube className="h-5 w-5 text-primary group-hover:text-primary-foreground" />
               </Link>
             </div>
           </div>
@@ -126,19 +126,19 @@ export function Footer() {
             <div className="space-y-4">
               <div className="flex items-start space-x-3 text-sm group">
                 <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
-                  <MapPin className="h-4 w-4 text-primary group-hover:text-white" />
+                  <MapPin className="h-4 w-4 text-primary group-hover:text-primary-foreground" />
                 </div>
                 <span className="text-gray-600 leading-relaxed">{contactInfo.address.full}</span>
               </div>
               <div className="flex items-start space-x-3 text-sm group">
                 <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
-                  <Phone className="h-4 w-4 text-primary group-hover:text-white" />
+                  <Phone className="h-4 w-4 text-primary group-hover:text-primary-foreground" />
                 </div>
                 <span className="text-gray-600">{contactInfo.phone.display.primary}</span>
               </div>
               <div className="flex items-start space-x-3 text-sm group">
                 <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
-                  <Mail className="h-4 w-4 text-primary group-hover:text-white" />
+                  <Mail className="h-4 w-4 text-primary group-hover:text-primary-foreground" />
                 </div>
                 <span className="text-gray-600">{contactInfo.email.info}</span>
               </div>

@@ -83,7 +83,7 @@ export function WhyChooseUs() {
       className: "sm:col-span-2 lg:col-span-2",
       hasCustomBackground: true,
       background: (
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-orange-500">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/90">
           <div className="absolute inset-0 bg-black/10" />
           <StatsMarquee />
           <div className="absolute top-2 sm:top-3 left-2 sm:left-3 text-white/90 drop-shadow-lg">
@@ -102,7 +102,7 @@ export function WhyChooseUs() {
       className: "sm:col-span-2 lg:col-span-1",
       hasCustomBackground: true,
       background: (
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-300 to-orange-400">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-primary">
           <div className="absolute inset-0 bg-black/10" />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/20 rounded-full flex items-center justify-center">
@@ -139,7 +139,7 @@ export function WhyChooseUs() {
       className: "sm:col-span-1 lg:col-span-1",
       hasCustomBackground: true,
       background: (
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-200 to-orange-300">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/60 to-primary/80">
           <div className="absolute inset-0 bg-black/10" />
           <div className="absolute top-3 sm:top-4 right-3 sm:right-4 grid grid-cols-2 gap-1 sm:gap-2">
             {[...Array(8)].map((_, i) => (
@@ -166,7 +166,7 @@ export function WhyChooseUs() {
       className: "sm:col-span-1 lg:col-span-1",
       hasCustomBackground: true,
       background: (
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-100 to-orange-200">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-primary/60">
           <div className="absolute inset-0 bg-black/10" />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <div className="w-12 h-12 sm:w-16 sm:h-16 border-2 border-white/40 rounded-lg rotate-45 animate-spin-slow" />
@@ -187,7 +187,7 @@ export function WhyChooseUs() {
       className: "sm:col-span-2 lg:col-span-1",
       hasCustomBackground: true,
       background: (
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-orange-100">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/40">
           <div className="absolute inset-0 bg-black/10" />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <div className="w-16 h-16 sm:w-20 sm:h-20 border-4 border-white/30 rounded-full relative">
@@ -204,11 +204,11 @@ export function WhyChooseUs() {
   ]
 
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-orange-50/30 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-background to-primary/5 relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-orange-500/5 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-pulse" />
         <div
-          className="absolute -bottom-40 -left-40 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl animate-pulse"
+          className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "2s" }}
         />
       </div>
@@ -221,12 +221,12 @@ export function WhyChooseUs() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <Badge variant="outline" className="mb-4 text-orange-600 border-orange-200">
+          <Badge variant="outline" className="mb-4 text-primary border-primary/30">
             {t("whyChooseUs.badge")}
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
             {t("whyChooseUs.title")}
-            <span className="text-orange-500 block">{t("whyChooseUs.titleHighlight")}</span>
+            <span className="text-primary block">{t("whyChooseUs.titleHighlight")}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
             {t("whyChooseUs.subtitle")}

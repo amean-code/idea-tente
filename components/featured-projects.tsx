@@ -62,7 +62,7 @@ export function FeaturedProjects() {
   const projectTranslation = project.translations[language]
 
   return (
-    <section className="py-24 bg-gradient-to-br from-background via-background to-orange-50/30 overflow-hidden">
+    <section className="py-24 bg-gradient-to-br from-background via-background to-primary/10 overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -72,12 +72,12 @@ export function FeaturedProjects() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <Badge variant="outline" className="mb-4 text-orange-600 border-orange-200">
+          <Badge variant="outline" className="mb-4 text-primary border-primary">
             {t("featuredProjects.badge")}
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
             {t("featuredProjects.title")}
-            <span className="text-orange-500 block">{t("featuredProjects.titleHighlight")}</span>
+            <span className="text-primary block">{t("featuredProjects.titleHighlight")}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
             {t("featuredProjects.subtitle")}
@@ -94,7 +94,7 @@ export function FeaturedProjects() {
             transition={{ duration: 0.5 }}
             className="relative group"
           >
-            <div className="relative h-[500px] rounded-2xl overflow-hidden bg-gradient-to-br from-orange-100 to-orange-200">
+            <div className="relative h-[500px] rounded-2xl overflow-hidden bg-gradient-to-br from-primary to-primary/20">
               <Image
                 src={project.image || "/placeholder.svg"}
                 alt={projectTranslation.title}
@@ -117,7 +117,7 @@ export function FeaturedProjects() {
 
               {/* Project Info Overlay */}
               <div className="absolute bottom-6 left-6 right-6">
-                <Badge className="mb-3 bg-orange-500 hover:bg-orange-600">
+                <Badge className="mb-3 bg-primary hover:bg-primary-600">
                   {t(`featuredProjects.category.${project.category}`)}
                 </Badge>
                 <h3 className="text-2xl font-bold text-white mb-2">{projectTranslation.title}</h3>
@@ -158,7 +158,7 @@ export function FeaturedProjects() {
             className="space-y-6"
           >
             <div>
-              <Badge variant="outline" className="mb-3 text-orange-600 border-orange-200">
+              <Badge variant="outline" className="mb-3 text-primary border-primary">
                 {t(`featuredProjects.category.${project.category}`)}
               </Badge>
               <h3 className="text-3xl font-bold mb-4">{projectTranslation.title}</h3>
@@ -167,12 +167,12 @@ export function FeaturedProjects() {
 
             {/* Project Stats */}
             <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="p-4 bg-orange-50 rounded-lg">
-                <div className="text-2xl font-bold text-orange-600">{project.area}</div>
+              <div className="p-4 bg-primary rounded-lg">
+                <div className="text-2xl font-bold text-primary">{project.area}</div>
                 <div className="text-sm text-muted-foreground">{t("featuredProjects.totalArea")}</div>
               </div>
-              <div className="p-4 bg-orange-50 rounded-lg">
-                <div className="text-2xl font-bold text-orange-600">{project.year}</div>
+              <div className="p-4 bg-primary rounded-lg">
+                <div className="text-2xl font-bold text-primary">{project.year}</div>
                 <div className="text-sm text-muted-foreground">{t("featuredProjects.completion")}</div>
               </div>
             </div>
@@ -182,14 +182,14 @@ export function FeaturedProjects() {
               <h4 className="font-semibold mb-3">{t("featuredProjects.features")}</h4>
               <div className="flex flex-wrap gap-2 mb-6">
                 {projectTranslation.features.map((feature, index) => (
-                  <Badge key={index} variant="secondary" className="bg-orange-100 text-orange-700">
+                  <Badge key={index} variant="secondary" className="bg-primary text-primary">
                     {feature}
                   </Badge>
                 ))}
               </div>
             </div>
 
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 group">
+            <Button size="lg" className="bg-primary hover:bg-primary-600 group">
               {t("featuredProjects.viewDetails")}
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
@@ -203,7 +203,7 @@ export function FeaturedProjects() {
               key={index}
               onClick={() => setCurrentProject(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentProject ? "bg-orange-500 w-8" : "bg-orange-200"
+                index === currentProject ? "bg-primary w-8" : "bg-primary"
               }`}
             />
           ))}
@@ -226,7 +226,7 @@ export function FeaturedProjects() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="text-center group"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-700 rounded-2xl flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110">
                 <item.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
@@ -241,17 +241,17 @@ export function FeaturedProjects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-12 text-white"
+          className="text-center bg-gradient-to-r from-primary to-primary-700 rounded-3xl p-12 text-primary-foreground"
         >
           <h3 className="text-3xl md:text-4xl font-bold mb-4">{t("featuredProjects.cta.title")}</h3>
-          <p className="text-xl mb-8 text-orange-100 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-primary-foreground/80 max-w-2xl mx-auto">
             {t("featuredProjects.cta.subtitle")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
               variant="secondary" 
-              className="bg-white text-orange-600 hover:bg-orange-50"
+              className="bg-white text-primary hover:bg-primary/50"
               asChild
             >
               <a 

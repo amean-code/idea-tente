@@ -196,7 +196,7 @@ export default function AboutPage() {
             {milestones.map((milestone, index) => (
               <div key={index} className="relative">
                 <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary text-white rounded-lg font-bold text-lg mb-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary text-primary-foreground rounded-lg font-bold text-lg mb-4">
                     {milestone.year}
                   </div>
                   <h3 className="font-bold mb-3 text-foreground">{milestone.title}</h3>
@@ -214,8 +214,8 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Bizimle Çalışmaya Hazır mısınız?</h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto text-xl text-pretty">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">Bizimle Çalışmaya Hazır mısınız?</h2>
+          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-xl text-pretty">
             15 yıllık deneyimimiz ve uzman ekibimizle hayalinizdeki outdoor yaşam alanını birlikte tasarlayalım.
           </p>
           <Button size="lg" variant="secondary" asChild className="text-lg px-8 py-6">

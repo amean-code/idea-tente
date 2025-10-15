@@ -56,7 +56,7 @@ export function PergolaContactSection() {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary/5 to-orange-50/30">
+    <section className="py-20 bg-gradient-to-br from-primary/5 to-primary/10">
       <div className="container mx-auto px-4">
         {/* Ana Başlık */}
         <div className="text-center mb-16">

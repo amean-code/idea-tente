@@ -30,8 +30,8 @@ const SimpleDropdown: React.FC<SimpleDropdownProps> = ({ trigger, isScrolled, ch
       <button
         className={`inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors drop-shadow-md ${
           isScrolled 
-            ? 'text-gray-800 hover:bg-orange-50 hover:text-orange-600' 
-            : 'text-white hover:bg-white/10 hover:text-orange-400'
+            ? 'text-gray-800 hover:bg-primary/10 hover:text-primary' 
+            : 'text-white hover:bg-white/10 hover:text-primary'
         }`}
       >
         {trigger}
@@ -122,7 +122,7 @@ const MobileMenuContent = memo(({
                   className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{pergolaSystems}</div>
+                  <div className="font-medium text-gray-800 group-hover:text-primary">{pergolaSystems}</div>
                   <div className="text-sm text-gray-600">Biyoklimatik sistemleri</div>
                 </Link>
                 <Link
@@ -130,7 +130,7 @@ const MobileMenuContent = memo(({
                   className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{glassSystems}</div>
+                  <div className="font-medium text-gray-800 group-hover:text-primary">{glassSystems}</div>
                   <div className="text-sm text-gray-600">Frameless cam çözümleri</div>
                 </Link>
                 <Link
@@ -138,7 +138,7 @@ const MobileMenuContent = memo(({
                   className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{winterGarden}</div>
+                  <div className="font-medium text-gray-800 group-hover:text-primary">{winterGarden}</div>
                   <div className="text-sm text-gray-600">4 mevsim konfor</div>
                 </Link>
                 <Link
@@ -146,7 +146,7 @@ const MobileMenuContent = memo(({
                   className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{sunBreakers}</div>
+                  <div className="font-medium text-gray-800 group-hover:text-primary">{sunBreakers}</div>
                   <div className="text-sm text-gray-600">Güneş kontrol sistemleri</div>
                 </Link>
                 <Link
@@ -154,7 +154,7 @@ const MobileMenuContent = memo(({
                   className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{zipScreen}</div>
+                  <div className="font-medium text-gray-800 group-hover:text-primary">{zipScreen}</div>
                   <div className="text-sm text-gray-600">Rüzgar ve güneş koruması</div>
                 </Link>
               </div>
@@ -167,7 +167,7 @@ const MobileMenuContent = memo(({
                   className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{catalog}</div>
+                  <div className="font-medium text-gray-800 group-hover:text-primary">{catalog}</div>
                   <div className="text-sm text-gray-600">Ürün kataloğu indir</div>
                 </Link>
                 <Link
@@ -175,7 +175,7 @@ const MobileMenuContent = memo(({
                   className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{arDemo}</div>
+                  <div className="font-medium text-gray-800 group-hover:text-primary">{arDemo}</div>
                   <div className="text-sm text-gray-600">AR ile görselleştir</div>
                 </Link>
                 <Link
@@ -183,7 +183,7 @@ const MobileMenuContent = memo(({
                   className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{exportText}</div>
+                  <div className="font-medium text-gray-800 group-hover:text-primary">{exportText}</div>
                   <div className="text-sm text-gray-600">İhracat ve distribütörlük</div>
                 </Link>
                 <Link
@@ -191,7 +191,7 @@ const MobileMenuContent = memo(({
                   className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{getQuote}</div>
+                  <div className="font-medium text-gray-800 group-hover:text-primary">{getQuote}</div>
                   <div className="text-sm text-gray-600">Ücretsiz fiyat teklifi</div>
                 </Link>
               </div>
@@ -204,7 +204,7 @@ const MobileMenuContent = memo(({
                   className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="font-medium text-gray-800 group-hover:text-orange-600">Hakkımızda</div>
+                  <div className="font-medium text-gray-800 group-hover:text-primary">Hakkımızda</div>
                   <div className="text-sm text-gray-600">15 yıllık deneyim</div>
                 </Link>
                 <Link
@@ -212,7 +212,7 @@ const MobileMenuContent = memo(({
                   className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="font-medium text-gray-800 group-hover:text-orange-600">Referanslar</div>
+                  <div className="font-medium text-gray-800 group-hover:text-primary">Referanslar</div>
                   <div className="text-sm text-gray-600">5000+ başarılı proje</div>
                 </Link>
                 <Link
@@ -220,7 +220,7 @@ const MobileMenuContent = memo(({
                   className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="font-medium text-gray-800 group-hover:text-orange-600">Blog</div>
+                  <div className="font-medium text-gray-800 group-hover:text-primary">Blog</div>
                   <div className="text-sm text-gray-600">Outdoor yaşam rehberi</div>
                 </Link>
                 <Link
@@ -228,7 +228,7 @@ const MobileMenuContent = memo(({
                   className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="font-medium text-gray-800 group-hover:text-orange-600">{contact}</div>
+                  <div className="font-medium text-gray-800 group-hover:text-primary">{contact}</div>
                   <div className="text-sm text-gray-600">İletişim bilgileri</div>
                 </Link>
               </div>
@@ -297,7 +297,7 @@ export function Header() {
             <Link 
               href={contactInfo.social.instagram} 
               target="_blank" 
-              className="text-white hover:text-orange-400 transition-colors drop-shadow-md"
+              className="text-white hover:text-primary transition-colors drop-shadow-md"
               aria-label="Instagram"
             >
               <Instagram className="h-4 w-4" />
@@ -305,7 +305,7 @@ export function Header() {
             <Link 
               href={contactInfo.social.facebook} 
               target="_blank" 
-              className="text-white hover:text-orange-400 transition-colors drop-shadow-md"
+              className="text-white hover:text-primary transition-colors drop-shadow-md"
               aria-label="Facebook"
             >
               <Facebook className="h-4 w-4" />
@@ -313,7 +313,7 @@ export function Header() {
             <Link 
               href={contactInfo.social.linkedin} 
               target="_blank" 
-              className="text-white hover:text-orange-400 transition-colors drop-shadow-md"
+              className="text-white hover:text-primary transition-colors drop-shadow-md"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-4 w-4" />
@@ -321,7 +321,7 @@ export function Header() {
             <Link 
               href={contactInfo.social.youtube} 
               target="_blank" 
-              className="text-white hover:text-orange-400 transition-colors drop-shadow-md"
+              className="text-white hover:text-primary transition-colors drop-shadow-md"
               aria-label="YouTube"
             >
               <Youtube className="h-4 w-4" />
@@ -370,21 +370,21 @@ export function Header() {
                 <div className="w-[500px] p-6">
                   <Link
                     href="/pergola/biyoklimatik"
-                    className="block p-3 rounded-md hover:bg-orange-50 border-b mb-3"
+                    className="block p-3 rounded-md hover:bg-primary/10 border-b mb-3"
                   >
                     <div className="text-sm font-bold text-gray-800">{t("nav.pergolaMain")}</div>
                     <p className="text-sm text-gray-600">{t("nav.pergolaMainDesc")}</p>
                   </Link>
                   <div className="grid grid-cols-2 gap-3">
-                    <Link href="/pergola/biyoklimatik-sistemler" className="block p-3 rounded-md hover:bg-orange-50">
+                    <Link href="/pergola/biyoklimatik-sistemler" className="block p-3 rounded-md hover:bg-primary/10">
                       <div className="text-sm font-medium text-gray-800">{t("nav.pergolaBioclimatic")}</div>
                       <p className="text-xs text-gray-600">{t("nav.pergolaBioclimaticDesc")}</p>
                     </Link>
-                    <Link href="/pergola/motorlu-sistemler" className="block p-3 rounded-md hover:bg-orange-50">
+                    <Link href="/pergola/motorlu-sistemler" className="block p-3 rounded-md hover:bg-primary/10">
                       <div className="text-sm font-medium text-gray-800">{t("nav.pergolaMotorized")}</div>
                       <p className="text-xs text-gray-600">{t("nav.pergolaMotorizedDesc")}</p>
                     </Link>
-                    <Link href="/pergola/rolling-roof" className="block p-3 rounded-md hover:bg-orange-50">
+                    <Link href="/pergola/rolling-roof" className="block p-3 rounded-md hover:bg-primary/10">
                       <div className="text-sm font-medium text-gray-800">{t("nav.pergolaRolling")}</div>
                       <p className="text-xs text-gray-600">{t("nav.pergolaRollingDesc")}</p>
                     </Link>
@@ -396,7 +396,7 @@ export function Header() {
                     <Link
                       href="/cam-sistemleri"
                 className={`inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors drop-shadow-md ${
-                        isScrolled ? 'text-gray-800 hover:bg-orange-50 hover:text-orange-600' : 'text-white hover:bg-white/10 hover:text-orange-400'
+                        isScrolled ? 'text-gray-800 hover:bg-primary/10 hover:text-primary-600' : 'text-white hover:bg-white/10 hover:text-primary'
                       }`}
                     >
                       {navTranslations.glassSystems}
@@ -405,7 +405,7 @@ export function Header() {
                     <Link
                       href="/kis-bahcesi"
                 className={`inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors drop-shadow-md ${
-                        isScrolled ? 'text-gray-800 hover:bg-orange-50 hover:text-orange-600' : 'text-white hover:bg-white/10 hover:text-orange-400'
+                        isScrolled ? 'text-gray-800 hover:bg-primary/10 hover:text-primary-600' : 'text-white hover:bg-white/10 hover:text-primary'
                       }`}
                     >
                       {navTranslations.winterGarden}
@@ -414,7 +414,7 @@ export function Header() {
                     <Link
                       href="/gunes-kiriclari"
                 className={`inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors drop-shadow-md ${
-                        isScrolled ? 'text-gray-800 hover:bg-orange-50 hover:text-orange-600' : 'text-white hover:bg-white/10 hover:text-orange-400'
+                        isScrolled ? 'text-gray-800 hover:bg-primary/10 hover:text-primary-600' : 'text-white hover:bg-white/10 hover:text-primary'
                       }`}
                     >
                       {navTranslations.sunBreakers}
@@ -423,7 +423,7 @@ export function Header() {
                     <Link
                       href="/zip-perde"
                 className={`inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors drop-shadow-md ${
-                        isScrolled ? 'text-gray-800 hover:bg-orange-50 hover:text-orange-600' : 'text-white hover:bg-white/10 hover:text-orange-400'
+                        isScrolled ? 'text-gray-800 hover:bg-primary/10 hover:text-primary-600' : 'text-white hover:bg-white/10 hover:text-primary'
                       }`}
                     >
                       {navTranslations.zipScreen}
@@ -432,7 +432,7 @@ export function Header() {
                     <Link
                       href="/katalog"
                 className={`inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors drop-shadow-md ${
-                        isScrolled ? 'text-gray-800 hover:bg-orange-50 hover:text-orange-600' : 'text-white hover:bg-white/10 hover:text-orange-400'
+                        isScrolled ? 'text-gray-800 hover:bg-primary/10 hover:text-primary-600' : 'text-white hover:bg-white/10 hover:text-primary'
                       }`}
                     >
                       {navTranslations.catalog}
@@ -441,7 +441,7 @@ export function Header() {
                     <Link
                       href="/ar-demo"
                 className={`inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors drop-shadow-md ${
-                        isScrolled ? 'text-gray-800 hover:bg-orange-50 hover:text-orange-600' : 'text-white hover:bg-white/10 hover:text-orange-400'
+                        isScrolled ? 'text-gray-800 hover:bg-primary/10 hover:text-primary-600' : 'text-white hover:bg-white/10 hover:text-primary'
                       }`}
                     >
                       {navTranslations.arDemo}
@@ -450,7 +450,7 @@ export function Header() {
                     <Link
                       href="/export"
                 className={`inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors drop-shadow-md ${
-                        isScrolled ? 'text-gray-800 hover:bg-orange-50 hover:text-orange-600' : 'text-white hover:bg-white/10 hover:text-orange-400'
+                        isScrolled ? 'text-gray-800 hover:bg-primary/10 hover:text-primary-600' : 'text-white hover:bg-white/10 hover:text-primary'
                       }`}
                     >
                       {navTranslations.export}
@@ -459,7 +459,7 @@ export function Header() {
                     <Link
                       href="/iletisim"
                 className={`inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors drop-shadow-md ${
-                        isScrolled ? 'text-gray-800 hover:bg-orange-50 hover:text-orange-600' : 'text-white hover:bg-white/10 hover:text-orange-400'
+                        isScrolled ? 'text-gray-800 hover:bg-primary/10 hover:text-primary-600' : 'text-white hover:bg-white/10 hover:text-primary'
                       }`}
                     >
                       {navTranslations.contact}
@@ -476,7 +476,7 @@ export function Header() {
                 variant="ghost"
                 size="sm"
                 className={`drop-shadow-md transition-colors ${
-                  isScrolled ? 'text-gray-800 hover:bg-orange-50' : 'text-white hover:bg-white/10'
+                  isScrolled ? 'text-gray-800 hover:bg-primary/10' : 'text-white hover:bg-white/10'
                 }`}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >

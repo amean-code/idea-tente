@@ -81,7 +81,7 @@ export function ExportProducts() {
                   />
                   {product.exportReady && (
                     <div className="absolute top-4 right-4">
-                      <Badge className="bg-primary hover:bg-primary/90 text-white flex items-center gap-1">
+                      <Badge className="bg-primary hover:bg-primary/90 text-primary-foreground flex items-center gap-1">
                         <Truck className="h-3 w-3" />
                         Export Ready
                       </Badge>

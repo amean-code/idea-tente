@@ -1,12 +1,22 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
+import { Barlow } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { LanguageProvider } from "@/contexts/language-context"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import "./globals.css"
+
+/**
+ * Barlow yazı tipi konfigürasyonu
+ * Google Fonts'tan yüklenen Barlow yazı tipinin ağırlıkları ve ayarları
+ */
+const barlow = Barlow({
+  subsets: ["latin", "latin-ext"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-barlow",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: "Pergola & Cam Sistemleri | Premium Outdoor Solutions",
@@ -33,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" suppressHydrationWarning>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`} suppressHydrationWarning>
+      <body className={`font-sans ${barlow.variable} antialiased`} suppressHydrationWarning>
         <LanguageProvider>
           <Header />
           {children}

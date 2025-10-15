@@ -90,7 +90,7 @@ export function ReferenceProjects({
                 
                 {/* Başlık ve Açıklama */}
                 <div className="space-y-3">
-                  <h3 className="text-2xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors duration-300">
                     {project.title}
                   </h3>
                   <p className="text-gray-600 text-base line-clamp-2 leading-relaxed">
@@ -116,7 +116,7 @@ export function ReferenceProjects({
 
                   {/* Hover'da görünen ok ikonu */}
                   <div className="pt-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">
-                    <div className="flex items-center text-orange-600 text-base font-medium">
+                    <div className="flex items-center text-primary text-base font-medium">
                       <span>{useTranslations ? t("references.projectDetails") : "Detayları Görüntüle"}</span>
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </div>
@@ -131,7 +131,7 @@ export function ReferenceProjects({
           <div className="text-center">
             <Button 
               size="lg" 
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8"
+              className="bg-primary hover:bg-primary-600 text-primary-foreground px-8"
               asChild
             >
               <a href="/referanslar" className="flex items-center">

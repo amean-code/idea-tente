@@ -44,11 +44,11 @@ export default function SurmeCamClientPage() {
       <div className="bg-gray-50 py-4">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Link href="/" className="hover:text-orange-600">
+            <Link href="/" className="hover:text-primary-600">
               Ana Sayfa
             </Link>
             <span>/</span>
-            <Link href="/cam-sistemleri" className="hover:text-orange-600">
+            <Link href="/cam-sistemleri" className="hover:text-primary-600">
               Cam Sistemleri
             </Link>
             <span>/</span>
@@ -58,14 +58,14 @@ export default function SurmeCamClientPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-background to-orange-50/30">
+      <section className="relative py-20 bg-gradient-to-br from-background to-primary/10">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
               <Button asChild variant="ghost" className="mb-6 p-0 h-auto">
                 <Link
                   href="/cam-sistemleri"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-orange-600"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-primary-600"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   Cam Sistemlerine Dön
@@ -73,7 +73,7 @@ export default function SurmeCamClientPage() {
               </Button>
 
               <div className="flex items-center gap-2 mb-4">
-                <Badge className="bg-orange-500 text-white">
+                <Badge className="bg-primary text-primary-foreground">
                   <Star className="w-3 h-3 mr-1" />
                   Popüler
                 </Badge>
@@ -97,7 +97,7 @@ export default function SurmeCamClientPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary-600 text-primary-foreground">
                   <Link href="/teklif-al">
                     Teklif Al
                     <Phone className="w-5 h-5 ml-2" />
@@ -124,7 +124,7 @@ export default function SurmeCamClientPage() {
 
               <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-4 shadow-lg">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-orange-600">₺35.000</div>
+                  <div className="text-2xl font-bold text-primary">₺35.000</div>
                   <div className="text-sm text-muted-foreground">m² başlangıç</div>
                 </div>
               </div>
@@ -160,7 +160,7 @@ export default function SurmeCamClientPage() {
                   >
                     <Card className="text-center p-6 hover:shadow-lg transition-shadow">
                       <CardContent className="p-0">
-                        <div className="text-2xl font-bold text-orange-600 mb-2">{spec.value}</div>
+                        <div className="text-2xl font-bold text-primary mb-2">{spec.value}</div>
                         <div className="text-sm text-muted-foreground">{spec.label}</div>
                       </CardContent>
                     </Card>
@@ -194,7 +194,7 @@ export default function SurmeCamClientPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-50 to-background">
+      <section className="py-20 bg-gradient-to-br from-primary/50 to-background">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -209,7 +209,7 @@ export default function SurmeCamClientPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary-600 text-primary-foreground">
                 <Link href="/teklif-al">
                   <Award className="w-5 h-5 mr-2" />
                   Ücretsiz Teklif Al
@@ -225,15 +225,15 @@ export default function SurmeCamClientPage() {
 
             <div className="flex items-center justify-center gap-8 mt-12 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-orange-600" />
+                <Shield className="w-4 h-4 text-primary" />
                 15 Yıl Garanti
               </div>
               <div className="flex items-center gap-2">
-                <Zap className="w-4 h-4 text-orange-600" />
+                <Zap className="w-4 h-4 text-primary" />
                 Hızlı Montaj
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-orange-600" />
+                <MapPin className="w-4 h-4 text-primary" />
                 Türkiye Geneli
               </div>
             </div>

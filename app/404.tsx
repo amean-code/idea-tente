@@ -11,7 +11,7 @@ export default function NotFound() {
     <div className="min-h-screen">
       <Header />
       <main className="flex-1">
-        <section className="py-20 bg-gradient-to-b from-orange-50 to-white">
+        <section className="py-20 bg-gradient-to-b from-primary/50 to-white">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-2xl mx-auto">
               {/* 404 Illustration */}
@@ -25,7 +25,7 @@ export default function NotFound() {
               </div>
 
               {/* Error Message */}
-              <h1 className="text-6xl font-bold text-orange-500 mb-4">404</h1>
+              <h1 className="text-6xl font-bold text-primary mb-4">404</h1>
               <h2 className="text-3xl font-bold text-foreground mb-6">Sayfa Bulunamadı</h2>
               <p className="text-lg text-muted-foreground mb-8 max-w-md mx-auto">
                 Aradığınız sayfa mevcut değil veya taşınmış olabilir. Ana sayfaya dönebilir veya arama yapabilirsiniz.
@@ -34,7 +34,7 @@ export default function NotFound() {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/">
-                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
+                  <Button size="lg" className="bg-primary hover:bg-primary-700 text-primary-foreground">
                     <Home className="mr-2 h-5 w-5" />
                     Ana Sayfa
                   </Button>
@@ -49,16 +49,16 @@ export default function NotFound() {
               <div className="mt-12 pt-8 border-t">
                 <h3 className="text-xl font-semibold mb-6">Popüler Sayfalar</h3>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                  <Link href="/pergola/biyoklimatik" className="text-orange-500 hover:text-orange-600 font-medium">
+                  <Link href="/pergola/biyoklimatik" className="text-primary hover:text-primary-600 font-medium">
                     Biyoklimatik Pergola
                   </Link>
-                  <Link href="/kis-bahcesi" className="text-orange-500 hover:text-orange-600 font-medium">
+                  <Link href="/kis-bahcesi" className="text-primary hover:text-primary-600 font-medium">
                     Kış Bahçesi
                   </Link>
-                  <Link href="/cam-sistemleri" className="text-orange-500 hover:text-orange-600 font-medium">
+                  <Link href="/cam-sistemleri" className="text-primary hover:text-primary-600 font-medium">
                     Cam Sistemleri
                   </Link>
-                  <Link href="/teklif-al" className="text-orange-500 hover:text-orange-600 font-medium">
+                  <Link href="/teklif-al" className="text-primary hover:text-primary-600 font-medium">
                     Teklif Al
                   </Link>
                 </div>

@@ -20,7 +20,7 @@ export function ContactHero() {
           priority
         />
         {/* Gradient overlay - görsel üzerine koyu bir katman ekler */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-orange-600/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-secondary/80" />
       </div>
 
       {/* İçerik */}

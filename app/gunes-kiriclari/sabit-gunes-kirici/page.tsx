@@ -44,10 +44,10 @@ export default function FixedSunBreakerPage() {
     <div className="min-h-screen">
       <Header />
 
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-orange-50 to-amber-100">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary/50 to-amber-100">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-orange-100 text-orange-800">
+            <Badge className="mb-4 bg-primary text-primary-foreground">
               {t("products.sunBreakerSub.fixed.badge")}
             </Badge>
             <h1 className="text-5xl font-bold mb-6">
@@ -100,7 +100,7 @@ export default function FixedSunBreakerPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-r from-orange-500 to-amber-600">
+      <section className="py-20 bg-gradient-to-r from-primary to-amber-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Sabit Güneş Kırıcı ile Enerji Tasarrufu</h2>
           <p className="text-white/90 mb-8 max-w-2xl mx-auto">

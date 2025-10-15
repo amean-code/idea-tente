@@ -94,13 +94,13 @@ export default function ReferencesPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance text-white">
-              <span className="text-orange-500">5000+</span> Başarılı Proje
+              <span className="text-primary">5000+</span> Başarılı Proje
             </h1>
             <p className="text-xl text-gray-200 mb-8 text-pretty max-w-2xl mx-auto">
               Türkiye ve dünya genelinde gerçekleştirdiğimiz projelerle outdoor yaşam alanlarına değer katıyoruz.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+              <Button size="lg" className="bg-primary hover:bg-primary-600 text-primary-foreground">
                 Teklif Al
               </Button>
               <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm">
@@ -188,7 +188,7 @@ export default function ReferencesPage() {
                   
                   {/* Başlık ve Açıklama */}
                   <div className="space-y-3">
-                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors duration-300">
                       {project.title}
                     </h3>
                     <p className="text-gray-600 text-base line-clamp-2 leading-relaxed">
@@ -214,7 +214,7 @@ export default function ReferencesPage() {
 
                     {/* Hover'da görünen ok ikonu */}
                     <div className="pt-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">
-                      <div className="flex items-center text-orange-600 text-base font-medium">
+                      <div className="flex items-center text-primary text-base font-medium">
                         <span>Detayları Görüntüle</span>
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </div>
@@ -228,10 +228,10 @@ export default function ReferencesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-primary to-primary-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Siz de Referanslarımıza Katılın</h2>
-          <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-primary-foreground mb-4">Siz de Referanslarımıza Katılın</h2>
+          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Binlerce başarılı projenin ardından, sırada sizin hayalinizdeki outdoor yaşam alanı var.
           </p>
           <Button size="lg" variant="secondary" asChild>

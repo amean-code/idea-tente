@@ -86,9 +86,9 @@ export default function BlogPage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-orange-500/90 text-white border-0 hover:bg-orange-600/90">Blog</Badge>
+            <Badge className="mb-4 bg-primary/90 text-primary-foreground border-0 hover:bg-primary-700">Blog</Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance text-white">
-              Outdoor Yaşam <span className="text-orange-500">Rehberiniz</span>
+              Outdoor Yaşam <span className="text-primary">Rehberiniz</span>
             </h1>
             <p className="text-xl text-gray-200 mb-8 text-pretty max-w-2xl mx-auto">
               Pergola, cam sistemleri ve outdoor yaşam alanları hakkında uzman görüşleri, ipuçları ve trendler.
@@ -197,10 +197,10 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-primary to-primary-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Blog Güncellemelerini Kaçırmayın</h2>
-          <p className="text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-primary-foreground mb-4">Blog Güncellemelerini Kaçırmayın</h2>
+          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Outdoor yaşam alanları hakkında en güncel içerikleri e-posta ile alın.
           </p>
           <div className="max-w-md mx-auto flex gap-2">

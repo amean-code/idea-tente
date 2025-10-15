@@ -43,17 +43,17 @@ export function ARInstructions() {
           {steps.map((step, index) => (
             <div key={index} className="relative group">
               {/* Modern Step Kartı */}
-              <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-orange-200 h-full">
+              <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 h-full">
                 {/* Step Number Badge */}
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-orange-500 text-white rounded-xl flex items-center justify-center text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-primary text-primary-foreground rounded-xl flex items-center justify-center text-xl font-bold shadow-lg group-hover:scale-110 transition-transform">
                   {index + 1}
                 </div>
 
-                <div className="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-orange-100 transition-colors">
-                  <step.icon className="h-8 w-8 text-orange-500" />
+                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors">
+                  <step.icon className="h-8 w-8 text-primary" />
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center group-hover:text-orange-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center group-hover:text-primary-600 transition-colors">
                   {step.title}
                 </h3>
                 <p className="text-gray-600 text-center leading-relaxed">{step.description}</p>
@@ -62,8 +62,8 @@ export function ARInstructions() {
               {/* Arrow between steps */}
               {index < steps.length - 1 && (
                 <div className="hidden lg:flex absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
-                    <ArrowRight className="h-5 w-5 text-orange-500" />
+                  <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                    <ArrowRight className="h-5 w-5 text-primary" />
                   </div>
                 </div>
               )}

@@ -28,14 +28,14 @@ export function ARHero() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance">
-            Artırılmış Gerçeklik ile <span className="text-orange-500">Pergola Deneyimi</span>
+            Artırılmış Gerçeklik ile <span className="text-primary">Pergola Deneyimi</span>
           </h1>
           <p className="text-xl text-gray-200 mb-8 text-pretty max-w-2xl mx-auto">
             Pergola sistemlerimizi kendi mekanınızda görün. AR teknolojisi ile ürünlerimizi satın almadan önce test edin.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+            <Button size="lg" className="bg-primary hover:bg-primary-600 text-primary-foreground">
               <Camera className="h-5 w-5 mr-2" />
               AR Demo Başlat
             </Button>
@@ -47,24 +47,24 @@ export function ARHero() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Smartphone className="h-7 w-7 text-orange-400" />
+              <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Smartphone className="h-7 w-7 text-primary" />
               </div>
               <h3 className="font-semibold text-white mb-2">Mobil Uyumlu</h3>
               <p className="text-sm text-gray-300">iOS ve Android desteği</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Eye className="h-7 w-7 text-orange-400" />
+              <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Eye className="h-7 w-7 text-primary" />
               </div>
               <h3 className="font-semibold text-white mb-2">Gerçekçi Görünüm</h3>
               <p className="text-sm text-gray-300">1:1 ölçek ve detay</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Camera className="h-7 w-7 text-orange-400" />
+              <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Camera className="h-7 w-7 text-primary" />
               </div>
               <h3 className="font-semibold text-white mb-2">Kolay Kullanım</h3>
               <p className="text-sm text-gray-300">Tek tıkla başlat</p>

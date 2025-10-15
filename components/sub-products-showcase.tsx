@@ -30,7 +30,7 @@ export function SubProductsShowcase({ title, subtitle, products }: SubProductsSh
   const [hoveredProduct, setHoveredProduct] = useState<string | null>(null)
 
   return (
-    <section className="py-20 bg-gradient-to-br from-background via-background to-orange-50/30">
+    <section className="py-20 bg-gradient-to-br from-background via-background to-primary/10">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,7 +57,7 @@ export function SubProductsShowcase({ title, subtitle, products }: SubProductsSh
             >
               <Card className="group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white/90 backdrop-blur-sm h-full flex flex-col">
                 {product.badge && (
-                  <Badge className="absolute top-4 left-4 z-10 bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg">
+                  <Badge className="absolute top-4 left-4 z-10 bg-gradient-to-r from-primary to-primary-700 text-primary-foreground shadow-lg">
                     <Star className="w-3 h-3 mr-1" />
                     {product.badge}
                   </Badge>
@@ -93,12 +93,12 @@ export function SubProductsShowcase({ title, subtitle, products }: SubProductsSh
 
                 <CardContent className="p-6 flex-1 flex flex-col">
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-xl font-bold text-foreground group-hover:text-orange-600 transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary-600 transition-colors duration-300">
                       {product.name}
                     </h3>
                     {product.price && (
                       <div className="text-right">
-                        <div className="text-lg font-bold text-orange-600">{product.price}</div>
+                        <div className="text-lg font-bold text-primary">{product.price}</div>
                         <div className="text-xs text-muted-foreground">başlangıç</div>
                       </div>
                     )}
@@ -115,7 +115,7 @@ export function SubProductsShowcase({ title, subtitle, products }: SubProductsSh
                   </div>
 
                   <div className="flex gap-2 mt-auto">
-                    <Button asChild className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg">
+                    <Button asChild className="flex-1 bg-gradient-to-r from-primary to-primary-700 hover:from-primary-600 hover:to-primary-700 text-primary-foreground shadow-lg">
                       <Link href={product.href}>
                         Detayları Gör
                         <ArrowRight className="w-4 h-4 ml-2" />
@@ -133,7 +133,7 @@ export function SubProductsShowcase({ title, subtitle, products }: SubProductsSh
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: hoveredProduct === product.id ? 1 : 0 }}
                   transition={{ duration: 0.3 }}
-                  className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 to-orange-600 origin-left"
+                  className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary-700 origin-left"
                 />
               </Card>
             </motion.div>
@@ -147,7 +147,7 @@ export function SubProductsShowcase({ title, subtitle, products }: SubProductsSh
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-12"
         >
-          <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary-600 text-primary-foreground">
             <Link href="/teklif-al">
               Tüm Ürünler İçin Teklif Al
               <Award className="w-5 h-5 ml-2" />

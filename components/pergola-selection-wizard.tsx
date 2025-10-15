@@ -121,16 +121,16 @@ export function PergolaSelectionWizard() {
                   {/* Step Circle */}
                   <div className={`w-12 h-12 rounded-full flex items-center justify-center font-semibold text-lg transition-all duration-300 ${
                     index < currentStep 
-                      ? 'bg-orange-500 text-white' 
+                      ? 'bg-primary text-primary-foreground' 
                       : index === currentStep 
-                      ? 'bg-orange-500 text-white ring-4 ring-orange-200' 
+                      ? 'bg-primary text-primary-foreground ring-4 ring-primary' 
                       : 'bg-gray-200 text-gray-500'
                   }`}>
                     {index < currentStep ? <Check className="h-6 w-6" /> : index + 1}
                   </div>
                   {/* Step Label */}
                   <p className={`mt-2 text-sm font-medium text-center ${
-                    index === currentStep ? 'text-orange-600' : 'text-gray-500'
+                    index === currentStep ? 'text-primary' : 'text-gray-500'
                   }`}>
                     {step.title}
                   </p>
@@ -138,7 +138,7 @@ export function PergolaSelectionWizard() {
                 {/* Connector Line */}
                 {index < steps.length - 1 && (
                   <div className={`h-1 flex-1 mx-2 transition-all duration-300 ${
-                    index < currentStep ? 'bg-orange-500' : 'bg-gray-200'
+                    index < currentStep ? 'bg-primary' : 'bg-gray-200'
                   }`} />
                 )}
               </div>
@@ -185,7 +185,7 @@ export function PergolaSelectionWizard() {
                       onClick={() => handleSelection(option.id)}
                       className={`relative group p-8 rounded-2xl transition-all duration-300 ${
                         getCurrentSelection() === option.id
-                          ? 'bg-gradient-to-br from-orange-500 to-orange-600 text-white shadow-2xl scale-105'
+                          ? 'bg-gradient-to-br from-primary to-primary-700 text-primary-foreground shadow-2xl scale-105'
                           : 'bg-white text-gray-900 shadow-md hover:shadow-xl hover:scale-105'
                       }`}
                       whileHover={{ y: -5 }}
@@ -198,7 +198,7 @@ export function PergolaSelectionWizard() {
                           animate={{ scale: 1 }}
                           className="absolute -top-3 -right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg"
                         >
-                          <Check className="h-5 w-5 text-orange-500" />
+                          <Check className="h-5 w-5 text-primary" />
                         </motion.div>
                       )}
                       
@@ -207,13 +207,13 @@ export function PergolaSelectionWizard() {
                         className={`w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center ${
                           getCurrentSelection() === option.id
                             ? 'bg-white/20'
-                            : 'bg-orange-100'
+                            : 'bg-primary'
                         }`}
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
                         <IconComponent className={`h-8 w-8 ${
-                          getCurrentSelection() === option.id ? 'text-white' : 'text-orange-600'
+                          getCurrentSelection() === option.id ? 'text-white' : 'text-primary'
                         }`} />
                       </motion.div>
                       
@@ -232,8 +232,8 @@ export function PergolaSelectionWizard() {
                       {/* Hover Effect Border */}
                       <div className={`absolute inset-0 rounded-2xl transition-all duration-300 ${
                         getCurrentSelection() === option.id
-                          ? 'ring-2 ring-orange-300 ring-offset-2'
-                          : 'group-hover:ring-2 group-hover:ring-orange-200'
+                          ? 'ring-2 ring-primary ring-offset-2'
+                          : 'group-hover:ring-2 group-hover:ring-primary'
                       }`} />
                     </motion.button>
                   )
@@ -265,7 +265,7 @@ export function PergolaSelectionWizard() {
                     className={`${
                       !getCurrentSelection()
                         ? 'opacity-50 cursor-not-allowed bg-gray-300'
-                        : 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white'
+                        : 'bg-gradient-to-r from-primary to-primary-700 hover:from-primary-600 hover:to-primary-700 text-primary-foreground'
                     }`}
                   >
                     İleri
@@ -278,7 +278,7 @@ export function PergolaSelectionWizard() {
                     className={`${
                       !getCurrentSelection()
                         ? 'opacity-50 cursor-not-allowed bg-gray-300'
-                        : 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white'
+                        : 'bg-gradient-to-r from-primary to-primary-700 hover:from-primary-600 hover:to-primary-700 text-primary-foreground'
                     }`}
                   >
                     <Phone className="mr-2 h-5 w-5" />
@@ -294,10 +294,10 @@ export function PergolaSelectionWizard() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mt-8 bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-6 border-2 border-orange-200"
+              className="mt-8 bg-gradient-to-r from-primary/50 to-primary rounded-2xl p-6 border-2 border-primary"
             >
               <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                <Check className="h-5 w-5 text-orange-600 mr-2" />
+                <Check className="h-5 w-5 text-primary mr-2" />
                 Seçimleriniz
               </h4>
               <div className="flex flex-wrap gap-3">
@@ -305,9 +305,9 @@ export function PergolaSelectionWizard() {
                   <motion.span
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
-                    className="px-4 py-2.5 bg-white rounded-xl text-gray-700 font-medium border-2 border-orange-300 shadow-sm flex items-center gap-2"
+                    className="px-4 py-2.5 bg-white rounded-xl text-gray-700 font-medium border-2 border-primary shadow-sm flex items-center gap-2"
                   >
-                    <Check className="h-4 w-4 text-orange-600" />
+                    <Check className="h-4 w-4 text-primary" />
                     {steps[0].options.find(o => o.id === selectedMaterial)?.label}
                   </motion.span>
                 )}
@@ -316,9 +316,9 @@ export function PergolaSelectionWizard() {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.1 }}
-                    className="px-4 py-2.5 bg-white rounded-xl text-gray-700 font-medium border-2 border-orange-300 shadow-sm flex items-center gap-2"
+                    className="px-4 py-2.5 bg-white rounded-xl text-gray-700 font-medium border-2 border-primary shadow-sm flex items-center gap-2"
                   >
-                    <Check className="h-4 w-4 text-orange-600" />
+                    <Check className="h-4 w-4 text-primary" />
                     {steps[1].options.find(o => o.id === selectedType)?.label}
                   </motion.span>
                 )}
@@ -327,9 +327,9 @@ export function PergolaSelectionWizard() {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.2 }}
-                    className="px-4 py-2.5 bg-white rounded-xl text-gray-700 font-medium border-2 border-orange-300 shadow-sm flex items-center gap-2"
+                    className="px-4 py-2.5 bg-white rounded-xl text-gray-700 font-medium border-2 border-primary shadow-sm flex items-center gap-2"
                   >
-                    <Check className="h-4 w-4 text-orange-600" />
+                    <Check className="h-4 w-4 text-primary" />
                     {steps[2].options.find(o => o.id === selectedForm)?.label}
                   </motion.span>
                 )}
