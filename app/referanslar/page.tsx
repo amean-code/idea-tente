@@ -20,8 +20,8 @@ export default function ReferencesPage() {
       year: "2023",
       category: "Otel & Resort",
       image: "/luxury-resort-pergola-installation.jpg",
-      description: "200 m² biyoklimatik pergola sistemi ile resort alanı modernizasyonu",
-      features: ["Biyoklimatik Pergola", "LED Aydınlatma", "Akıllı Kontrol"],
+      description: "200 m² bioklimatik pergola sistemi ile resort alanı modernizasyonu",
+      features: ["Bioklimatik Pergola", "LED Aydınlatma", "Akıllı Kontrol"],
     },
     {
       title: "Corporate Headquarters",

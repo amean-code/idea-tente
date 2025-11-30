@@ -10,9 +10,9 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 
 /**
- * Biyoklimatik Pergola Sistemleri Sayfası
+ * Bioklimatik Pergola Sistemleri Sayfası
  */
-export default function BiyoklimatikSistemlerPage() {
+export default function BioklimatikSistemlerPage() {
   // Galeri görselleri
   const galleryImages = [
     "/pergola/pergola-kafe-aktif-2.jpg",
@@ -70,7 +70,7 @@ export default function BiyoklimatikSistemlerPage() {
     },
     {
       title: "Akıllı İklim Kontrolü",
-      description: "Biyoklimatik sistem ile mekanınızın havasını, ışığını ve sıcaklığını optimal seviyede tutun.",
+      description: "Bioklimatik sistem ile mekanınızın havasını, ışığını ve sıcaklığını optimal seviyede tutun.",
       icon: "thermometer" as const,
     },
     {
@@ -104,7 +104,7 @@ export default function BiyoklimatikSistemlerPage() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/pergola/pergola-dıs-gunes-2.jpeg"
-              alt="Biyoklimatik Pergola Sistemleri"
+              alt="Bioklimatik Pergola Sistemleri"
               fill
               className="object-cover"
               priority
@@ -114,7 +114,7 @@ export default function BiyoklimatikSistemlerPage() {
 
           <div className="relative z-10 container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 text-balance leading-tight drop-shadow-lg">
-              Biyoklimatik Pergola Sistemleri
+              Bioklimatik Pergola Sistemleri
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 text-pretty leading-relaxed drop-shadow-md max-w-3xl mx-auto">
               Doğa ile uyumlu, akıllı iklim kontrolü ile konforlu yaşam alanları
@@ -125,7 +125,7 @@ export default function BiyoklimatikSistemlerPage() {
         {/* Galeri */}
         <ProductDetailGallery
           images={galleryImages}
-          productName="Biyoklimatik Sistemler"
+          productName="Bioklimatik Sistemler"
         />
         
         {/* Teknik Özellikler */}
@@ -133,7 +133,7 @@ export default function BiyoklimatikSistemlerPage() {
         
         {/* Özellikler */}
         <ProductDetailFeatures
-          title="Biyoklimatik Teknoloji"
+          title="Bioklimatik Teknoloji"
           subtitle="Doğal havalandırma ve iklim kontrolü ile enerji verimliliği"
           features={features}
         />

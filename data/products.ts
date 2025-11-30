@@ -26,7 +26,7 @@ export const getProducts = (t: any): Product[] => [
     title: t("products.bioclimatic"),
     description: t("products.bioclimaticDesc"),
     image: "/pergola/pergola-kapak.jpeg",
-    href: "/pergola/biyoklimatik",
+    href: "/pergola/bioklimatik",
     features: [
       t("products.features.smartLouver"), 
       t("products.features.climateControl"), 

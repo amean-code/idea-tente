@@ -18,9 +18,9 @@ const mainCategories = [
   {
     id: "pergola",
     title: "Pergola Sistemleri",
-    description: "Biyoklimatik, motorlu ve rolling roof pergola çözümleri",
+    description: "Bioklimatik, motorlu ve rolling roof pergola çözümleri",
     image: "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
-    href: "/pergola/biyoklimatik",
+    href: "/pergola/bioklimatik",
     icon: Zap,
     subCategories: getPergolaSubCategories(),
   },

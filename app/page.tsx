@@ -3,6 +3,7 @@ import { ProductsOverview } from "@/components/products-overview"
 import { StatsSection } from "@/components/stats-section"
 import { CTASection } from "@/components/cta-section"
 import { FeaturedProjects } from "@/components/featured-projects"
+import { CertificatesSection } from "@/components/certificates-section"
 
 export default function HomePage() {
   return (
@@ -21,6 +22,7 @@ export default function HomePage() {
         <HeroSection />
         <ProductsOverview />
         <FeaturedProjects />
+        <CertificatesSection />
         <StatsSection />
         <CTASection />
       </main>

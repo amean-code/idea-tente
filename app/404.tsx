@@ -49,8 +49,8 @@ export default function NotFound() {
               <div className="mt-12 pt-8 border-t">
                 <h3 className="text-xl font-semibold mb-6">Popüler Sayfalar</h3>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                  <Link href="/pergola/biyoklimatik" className="text-primary hover:text-primary-600 font-medium">
-                    Biyoklimatik Pergola
+                  <Link href="/pergola/bioklimatik" className="text-primary hover:text-primary-600 font-medium">
+                    Bioklimatik Pergola
                   </Link>
                   <Link href="/kis-bahcesi" className="text-primary hover:text-primary-600 font-medium">
                     Kış Bahçesi

@@ -30,8 +30,8 @@ export const getAllReferences = (): Reference[] => [
     category: "Otel & Resort",
     service: ["bioclimatic-pergola"],
     image: "/luxury-resort-pergola-installation.jpg",
-    description: "200 m² biyoklimatik pergola sistemi ile resort alanı modernizasyonu",
-    features: ["Biyoklimatik Pergola", "LED Aydınlatma", "Akıllı Kontrol"],
+    description: "200 m² bioklimatik pergola sistemi ile resort alanı modernizasyonu",
+    features: ["Bioklimatik Pergola", "LED Aydınlatma", "Akıllı Kontrol"],
     rating: 4.9,
     client: "Antalya Resort Group"
   },

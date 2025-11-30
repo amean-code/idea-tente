@@ -123,7 +123,7 @@ const MobileMenuContent = memo(({
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-medium text-gray-800 group-hover:text-primary">{pergolaSystems}</div>
-                  <div className="text-sm text-gray-600">Biyoklimatik sistemleri</div>
+                  <div className="text-sm text-gray-600">Bioklimatik sistemleri</div>
                 </Link>
                 <Link
                   href="/cam-sistemleri"
@@ -369,14 +369,14 @@ export function Header() {
               <SimpleDropdown trigger={navTranslations.pergolaSystems} isScrolled={isScrolled}>
                 <div className="w-[500px] p-6">
                   <Link
-                    href="/pergola/biyoklimatik"
+                    href="/pergola/bioklimatik"
                     className="block p-3 rounded-md hover:bg-primary/10 border-b mb-3"
                   >
                     <div className="text-sm font-bold text-gray-800">{t("nav.pergolaMain")}</div>
                     <p className="text-sm text-gray-600">{t("nav.pergolaMainDesc")}</p>
                   </Link>
                   <div className="grid grid-cols-2 gap-3">
-                    <Link href="/pergola/biyoklimatik-sistemler" className="block p-3 rounded-md hover:bg-primary/10">
+                    <Link href="/pergola/bioklimatik-sistemler" className="block p-3 rounded-md hover:bg-primary/10">
                       <div className="text-sm font-medium text-gray-800">{t("nav.pergolaBioclimatic")}</div>
                       <p className="text-xs text-gray-600">{t("nav.pergolaBioclimaticDesc")}</p>
                     </Link>

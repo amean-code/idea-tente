@@ -13,11 +13,11 @@ export function PergolaProductCards() {
   const pergolaCategories = [
     {
       id: "bioclimatic",
-      title: "Biyoklimatik Sistemler",
+      title: "Bioklimatik Sistemler",
       subtitle: "Akıllı İklim Kontrolü",
       description: "105° dönebilen lameller ile güneş, havalandırma ve yağmur kontrolü",
       image: "/pergola/pergola-dıs-gunes.jpeg",
-      href: "/pergola/biyoklimatik-sistemler",
+      href: "/pergola/bioklimatik-sistemler",
       features: ["105° Dönebilen Lameller", "%100 Su Geçirmez", "Enerji Tasarrufu", "Tüm Mevsim"]
     },
     {

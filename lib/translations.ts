@@ -23,7 +23,7 @@ export const translations = {
       // Pergola dropdown
       pergolaMain: "Pergola Sistemleri",
       pergolaMainDesc: "Tüm pergola modellerini görüntüle",
-      pergolaBioclimatic: "Biyoklimatik Sistemler",
+      pergolaBioclimatic: "Bioklimatik Sistemler",
       pergolaBioclimaticDesc: "105° dönebilen lameller",
       pergolaMotorized: "Motorlu Sistemler",
       pergolaMotorizedDesc: "Sensör teknolojisi, otomasyon",
@@ -77,7 +77,7 @@ export const translations = {
     },
     // Products
     products: {
-      bioclimatic: "Biyoklimatik Pergola",
+      bioclimatic: "Bioklimatik Pergola",
       bioclimaticDesc: "Akıllı lamelli sistemler",
       fixed: "Sabit IDEA",
       glass: "Cam Sistemleri",
@@ -250,7 +250,7 @@ export const translations = {
       features: "Özellikler",
       viewDetails: "Proje Detaylarını İncele",
       category: {
-        bioclimatic: "Biyoklimatik Pergola",
+        bioclimatic: "Bioklimatik Pergola",
         sunBreakers: "Güneş Kırıcıları",
         glassSystems: "Cam Sistemleri",
         winterGarden: "Kış Bahçesi"
@@ -281,7 +281,7 @@ export const translations = {
     pergola: {
       hero: {
         description: "IDEA pergola sistemleri, dayanıklı alüminyum taşıyıcı yapıya sahiptir ve çeşitli tavan seçenekleri sunarak farklı mimari tasarımlar için idealdir. Cam, PVC kumaş veya alüminyum panel gibi seçeneklerle, dış mekanlarınızı özgün bir tarzla güçlendirir.",
-        subdescription: "Biyoklimatik pergola ve şezlonglarla çevrili, dinlenmek ve güneşi içinize çekmek için mükemmel olan sakin bir alan yaratın."
+        subdescription: "Bioklimatik pergola ve şezlonglarla çevrili, dinlenmek ve güneşi içinize çekmek için mükemmel olan sakin bir alan yaratın."
       }
     },
 

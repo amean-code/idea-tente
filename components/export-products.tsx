@@ -8,7 +8,7 @@ import { motion } from "motion/react"
 
 const exportProducts = [
   {
-    title: "Biyoklimatik Pergola",
+    title: "Bioklimatik Pergola",
     description: "Akıllı lamel sistemli premium pergolalar",
     image: "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
     features: ["CE Sertifikalı", "10 Yıl Garanti", "Özel Ambalaj"],

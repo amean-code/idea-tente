@@ -5,11 +5,11 @@ import { ArrowRight } from "lucide-react"
 
 const allProducts = [
   {
-    id: "biyoklimatik",
-    title: "Biyoklimatik Pergola",
+    id: "bioklimatik",
+    title: "Bioklimatik Pergola",
     description: "Akıllı lamelli sistemler",
     image: "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
-    href: "/pergola/biyoklimatik",
+    href: "/pergola/bioklimatik",
   },
   {
     id: "cam-sistemleri",

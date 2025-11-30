@@ -11,7 +11,7 @@ import { ContactSection } from "@/components/contact-section"
  * Pergola Sistemleri ana sayfası
  * Palmiye Global referans alınarak tasarlanmıştır
  */
-export default function BiyoklimatikPergolaPage() {
+export default function BioklimatikPergolaPage() {
   // Galeri görselleri
   const galleryImages = [
     "/pergola/pergola-kafe-aktif.jpeg",
@@ -106,7 +106,7 @@ export default function BiyoklimatikPergolaPage() {
         {/* Galeri */}
         <ProductDetailGallery
           images={galleryImages}
-          productName="Biyoklimatik Pergola"
+          productName="Bioklimatik Pergola"
         />
         
         {/* Teknik Özellikler */}
@@ -115,7 +115,7 @@ export default function BiyoklimatikPergolaPage() {
         {/* Özellikler ve Avantajlar */}
         <ProductDetailFeatures
           title="Akıllı Pergola Teknolojisi"
-          subtitle="Modern yaşam için tasarlanmış biyoklimatik pergola sistemlerimizin sunduğu üstün özellikler"
+          subtitle="Modern yaşam için tasarlanmış bioklimatik pergola sistemlerimizin sunduğu üstün özellikler"
           features={features}
         />
         

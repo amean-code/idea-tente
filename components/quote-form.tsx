@@ -36,7 +36,7 @@ export function QuoteForm() {
     
     // Ürün tipi mapping
     const productTypeMap: { [key: string]: string } = {
-      "bioclimatic": "Biyoklimatik Pergola",
+      "bioclimatic": "Bioklimatik Pergola",
       "fixed": "Sabit Pergola",
       "glass": "Cam Sistemleri",
       "winter-garden": "Kış Bahçesi",
@@ -189,7 +189,7 @@ Haber Bülteni: ${formData.newsletter ? "Evet" : "Hayır"}
                 <SelectValue placeholder="Ürün seçin" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="bioclimatic">Biyoklimatik Pergola</SelectItem>
+                <SelectItem value="bioclimatic">Bioklimatik Pergola</SelectItem>
                 <SelectItem value="fixed">Sabit Pergola</SelectItem>
                 <SelectItem value="glass">Cam Sistemleri</SelectItem>
                 <SelectItem value="winter-garden">Kış Bahçesi</SelectItem>

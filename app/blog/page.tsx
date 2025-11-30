@@ -17,7 +17,7 @@ export default function BlogPage() {
       readTime: "5 dk",
     },
     {
-      title: "Biyoklimatik Pergola ile Enerji Tasarrufu",
+      title: "Bioklimatik Pergola ile Enerji Tasarrufu",
       excerpt: "Akıllı lamel sistemleri sayesinde enerji maliyetlerinizi nasıl %40'a kadar azaltabileceğinizi öğrenin.",
       image: "/bioclimatic-pergola-energy-saving.jpg",
       category: "Teknoloji",

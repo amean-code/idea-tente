@@ -48,7 +48,7 @@ export const projects: Project[] = [
     translations: {
       tr: {
         title: "Luxury Resort Pergola Complex",
-        description: "5 yıldızlı resort için özel tasarım biyoklimatik pergola sistemi",
+        description: "5 yıldızlı resort için özel tasarım bioklimatik pergola sistemi",
         features: ["Akıllı Kontrol", "LED Aydınlatma", "Yağmur Sensörü", "Rüzgar Sensörü"],
       },
       en: {
@@ -200,7 +200,7 @@ export const projects: Project[] = [
     translations: {
       tr: {
         title: "AVM Açık Hava Alanı Pergola",
-        description: "Alışveriş merkezi açık hava alanı için modern biyoklimatik pergola",
+        description: "Alışveriş merkezi açık hava alanı için modern bioklimatik pergola",
         features: ["Geniş Alan Kaplaması", "Otomatik Lamel", "LED Sistem", "Dayanıklı Yapı"],
       },
       en: {

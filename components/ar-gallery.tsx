@@ -3,7 +3,7 @@ import { Play, Eye, ArrowRight } from "lucide-react"
 
 const arDemos = [
   {
-    title: "Biyoklimatik Pergola",
+    title: "Bioklimatik Pergola",
     description: "Akıllı lamelli sistem AR demosu",
     image: "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
     category: "Pergola",

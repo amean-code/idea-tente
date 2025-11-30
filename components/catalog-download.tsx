@@ -18,7 +18,7 @@ const catalogs = [
   },
   {
     title: "Pergola Sistemleri",
-    description: "Biyoklimatik pergola çözümleri",
+    description: "Bioklimatik pergola çözümleri",
     size: "8.7 MB",
     pages: "32 sayfa",
     languages: ["TR", "EN", "AR"],

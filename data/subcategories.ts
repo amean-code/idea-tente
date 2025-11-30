@@ -20,13 +20,13 @@ export interface SubCategory {
  */
 export const getPergolaSubCategories = (): SubCategory[] => [
   {
-    id: "biyoklimatik-sistemler",
-    name: "Biyoklimatik Sistemler",
+    id: "bioklimatik-sistemler",
+    name: "Bioklimatik Sistemler",
     description: "105° dönebilen lameller ile akıllı iklim kontrolü ve %100 su geçirmezlik",
     image: "/pergola/pergola-dıs-gunes.jpeg",
     features: ["105° Dönebilen Lamel", "Akıllı İklim", "Su Geçirmez", "Enerji Tasarrufu"],
     badge: "Popüler",
-    href: "/pergola/biyoklimatik-sistemler",
+    href: "/pergola/bioklimatik-sistemler",
     parentProduct: "bioclimatic-pergola"
   },
   {

@@ -17,7 +17,7 @@ import Image from "next/image"
  */
 export default function QuotePage() {
   const services = [
-    "Biyoklimatik Pergola",
+    "Bioklimatik Pergola",
     "Cam Sistemleri",
     "Kış Bahçesi",
     "Güneş Kırıcı",

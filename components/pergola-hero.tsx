@@ -64,7 +64,7 @@ export function PergolaHero() {
           className="max-w-6xl mx-auto"
         >
           <p className="text-base md:text-lg text-white/80 text-pretty drop-shadow-md">
-            {t("pergola.hero.subdescription") || "Biyoklimatik pergola ve şezlonglarla çevrili, dinlenmek ve güneşi içinize çekmek için mükemmel olan sakin bir alan yaratın."}
+            {t("pergola.hero.subdescription") || "Bioklimatik pergola ve şezlonglarla çevrili, dinlenmek ve güneşi içinize çekmek için mükemmel olan sakin bir alan yaratın."}
           </p>
         </motion.div>
       </div>
