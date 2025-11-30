@@ -62,7 +62,7 @@ export default function SabitCamPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-background to-blue-50/30">
+      <section className="relative py-20 bg-gradient-to-br from-[#3D4247]/95 via-[#3D4247]/85 to-primary/20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>

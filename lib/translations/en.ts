@@ -186,11 +186,10 @@ export const enTranslations = {
     mapSubtitle: "We are happy to welcome you at our Antalya headquarters",
     addressCard: "Address",
     transportCard: "Transportation",
-    transportInfo: "15 km to Antalya Airport",
+    transportInfo: "5 km to Antalya Airport",
     parkingInfo: "Free parking available",
     showroomCard: "Showroom",
-    showroomInfo: "To view product samples",
-    appointmentInfo: "we recommend making an appointment",
+    showroomInfo: "You can visit us to see product samples",
     getDirections: "Get Directions on Google Maps",
   },
   // Forms
@@ -273,17 +272,48 @@ export const enTranslations = {
 
   // References translations
   references: {
+    // General
     title: "Our Reference Projects",
     subtitle: "Successful projects we have completed with this service",
     viewAll: "View All References",
-    projectDetails: "Project Details",
-    categories: {
+    projectDetails: "View Details",
+    // Hero section
+    hero: {
+      badge: "References",
+      title: "Successful Projects",
+      subtitle: "We add value to outdoor living spaces with projects we have completed in Turkey and around the world.",
+      getQuote: "Get Quote",
+      contact: "Get in Touch"
+    },
+    // Stats section
+    stats: {
+      completedProjects: "Completed Projects",
+      exportCountries: "Export Countries",
+      customerSatisfaction: "Customer Satisfaction",
+      yearsExperience: "Years Experience"
+    },
+    // Filter section
+    filters: {
+      all: "All",
       hotel: "Hotel & Resort",
-      corporate: "Corporate", 
+      corporate: "Corporate",
       restaurant: "Restaurant",
       residential: "Residential",
       commercial: "Commercial",
       entertainment: "Entertainment"
+    },
+    // Project card
+    project: {
+      viewDetails: "View Details",
+      location: "Location",
+      year: "Year",
+      category: "Category"
+    },
+    // CTA section
+    cta: {
+      title: "Join Our References",
+      subtitle: "After thousands of successful projects, it's time for your dream outdoor living space.",
+      startProject: "Start Your Project"
     }
   },
 

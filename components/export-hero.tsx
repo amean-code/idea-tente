@@ -1,90 +1,110 @@
 "use client"
 
-import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Globe, MessageCircle, Download } from "lucide-react"
+import { ArrowRight, Globe, Truck } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
 import { motion } from "motion/react"
 
-/**
- * Export sayfası hero bölümü
- * Global ihracat ve distribütörlük için ana giriş bölümü
- */
 export function ExportHero() {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-      {/* Arka plan görseli */}
+    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-[#3D4247]">
+      {/* Arka Plan Görseli */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/global-business-world-map-with-modern-pergola-sys.jpg"
-          alt="Global Export"
+          src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop"
+          alt="Global Export Logistics"
           fill
-          className="object-cover"
+          className="object-cover opacity-20 mix-blend-overlay"
           priority
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#3D4247] via-[#3D4247]/90 to-transparent" />
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="max-w-6xl mx-auto">
-          {/* Ana başlık */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 text-balance leading-tight drop-shadow-lg"
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary mb-6 backdrop-blur-sm"
           >
-            Global İhracat & Distribütörlük
+            <Globe className="w-4 h-4" />
+            <span className="text-sm font-medium">Global Çözüm Ortağınız</span>
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+          >
+            Sınırları Aşan <br />
+            <span className="text-primary">Kalite ve Güven</span>
           </motion.h1>
 
-          {/* Açıklama */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="max-w-4xl mx-auto mb-8"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto"
           >
-            <p className="text-lg md:text-xl text-white/90 mb-6 text-pretty leading-relaxed drop-shadow-md">
-              Türkiye'den dünyaya uzanan kaliteli pergola ve cam sistemleri. 50+ ülkede güvenilir iş ortaklarımızla birlikte premium IDEA sistemlerini dünya çapında sunuyoruz.
-            </p>
-          </motion.div>
+            IDEA Pergola olarak, modern üretim tesislerimizden dünyanın dört bir
+            yanına premium pergola ve cam sistemleri ihraç ediyoruz. Uluslararası
+            standartlarda paketleme ve lojistik çözümlerimizle projelerinizi
+            güvenle teslim ediyoruz.
+          </motion.p>
 
-          {/* Alt açıklama */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="max-w-5xl mx-auto mb-8"
-          >
-            <p className="text-base md:text-lg text-white/80 text-pretty drop-shadow-md">
-              Global distribütör ağımıza katılın, CE sertifikalı ürünlerimiz ve kapsamlı destek hizmetlerimizle başarı hikayemizin bir parçası olun.
-            </p>
-          </motion.div>
-
-          {/* Butonlar */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button size="lg" asChild className="text-lg px-8 py-6">
-              <Link href="#distributor-application">
-                <MessageCircle className="h-5 w-5 mr-2" />
-                Distribütör Başvurusu
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary-600 text-primary-foreground"
+              asChild
+            >
+              <Link href="#contact">
+                İhracat Talebi Oluştur
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
+              className="bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm"
               asChild
-              className="text-lg px-8 py-6 bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur"
             >
-              <Link href="/katalog">
-                <Download className="h-5 w-5 mr-2" />
-                Export Katalog
-              </Link>
+              <Link href="#process">Süreç Nasıl İşler?</Link>
             </Button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-12 flex flex-col md:flex-row items-center justify-center gap-8 text-gray-400 border-t border-gray-700/50 pt-8 w-full"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Truck className="w-5 h-5 text-primary" />
+              </div>
+              <div className="text-sm text-left">
+                <div className="text-white font-semibold">Güvenli Lojistik</div>
+                <div>Uluslararası Taşıma</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Globe className="w-5 h-5 text-primary" />
+              </div>
+              <div className="text-sm text-left">
+                <div className="text-white font-semibold">50+ Ülke</div>
+                <div>Aktif İhracat</div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

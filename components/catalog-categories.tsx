@@ -73,8 +73,8 @@ export function CatalogCategories() {
         {/* Başlık */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
-            <FileText className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Kategori Bazlı Kataloglar</span>
+            <FileText className="h-4 w-4 text-black" />
+            <span className="text-sm font-medium text-black">Kategori Bazlı Kataloglar</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
             Ürün Katalogları
@@ -113,8 +113,8 @@ export function CatalogCategories() {
                   {/* İçerik Tarafı */}
                   <div className={`p-8 md:p-12 flex flex-col justify-center bg-card ${index % 2 === 0 ? 'order-2' : 'order-1'}`}>
                     <div className="inline-flex w-fit items-center gap-2 px-4 py-2 bg-primary/10 rounded-lg mb-6">
-                      <category.icon className="h-5 w-5 text-primary" />
-                      <span className="text-sm font-semibold text-primary">Ana Kategori</span>
+                      <category.icon className="h-5 w-5 text-black" />
+                      <span className="text-sm font-semibold text-black">Ana Kategori</span>
                     </div>
 
                     <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">

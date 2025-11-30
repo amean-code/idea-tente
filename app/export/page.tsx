@@ -1,5 +1,4 @@
 import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { ExportHero } from "@/components/export-hero"
 import { GlobalReach } from "@/components/global-reach"
 import { DistributorBenefits } from "@/components/distributor-benefits"
@@ -14,15 +13,15 @@ import { ExportShippingProcess } from "@/components/export-shipping-process"
  */
 export default function ExportPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-slate-50">
       <Header />
       <main>
         <ExportHero />
         <ExportGlobe />
-        <ExportShippingProcess />
         <GlobalReach />
-        <DistributorBenefits />
+        <ExportShippingProcess />
         <ExportProducts />
+        <DistributorBenefits />
         <DistributorApplication />
       </main>
     </div>

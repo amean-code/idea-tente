@@ -22,12 +22,15 @@ export function ProductHero({ title, subtitle, description, heroImage }: Product
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#3D4247]/90 via-[#3D4247]/70 to-[#3D4247]/40" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center text-white space-y-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary mb-6 backdrop-blur-sm">
+            <span className="text-sm font-medium">Premium Ürün</span>
+          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance">{title}</h1>
 
           <p className="text-xl md:text-2xl text-gray-200 text-pretty">{subtitle}</p>

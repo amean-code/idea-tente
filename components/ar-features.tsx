@@ -46,7 +46,7 @@ export function ARFeatures() {
               className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20"
             >
               <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors">
-                <feature.icon className="h-8 w-8 text-primary" />
+                <feature.icon className="h-8 w-8 text-black" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center group-hover:text-primary-600 transition-colors">
                 {feature.title}

@@ -42,7 +42,7 @@ export function HeroSection() {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#3D4247]/80 via-[#3D4247]/50 to-[#3D4247]/30" />
         </div>
       ))}
 
@@ -58,7 +58,7 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-start items-start animate-fade-in-delay-2">
-            <Button size="lg" asChild className="text-lg px-8 py-6 hover:scale-105 transition-transform">
+            <Button size="lg" asChild className="bg-primary hover:bg-primary-600 text-primary-foreground">
               <Link href="/teklif-al">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 {t("hero.getQuote")}
@@ -69,7 +69,7 @@ export function HeroSection() {
               size="lg"
               variant="outline"
               asChild
-              className="text-lg px-8 py-6 bg-black/30 border-white/60 text-white hover:bg-black/40 backdrop-blur-sm hover:scale-105 transition-all"
+              className="bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm"
             >
               <Link href="#products">
                 {t("hero.viewProducts")}

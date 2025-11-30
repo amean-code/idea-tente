@@ -109,7 +109,7 @@ export default function MotorlupergolaPage() {
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#3D4247]/90 via-[#3D4247]/70 to-[#3D4247]/40" />
           </div>
 
           <div className="relative z-10 container mx-auto px-4 text-center">

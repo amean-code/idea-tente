@@ -189,8 +189,7 @@ export const arTranslations = {
     transportInfo: "15 كم إلى مطار أنطاليا",
     parkingInfo: "موقف سيارات مجاني متاح",
     showroomCard: "صالة العرض",
-    showroomInfo: "لمشاهدة عينات المنتجات",
-    appointmentInfo: "نوصي بحجز موعد",
+    showroomInfo: "يمكنك زيارتنا لمشاهدة عينات المنتجات",
     getDirections: "احصل على الاتجاهات على خرائط جوجل",
   },
   // Forms
@@ -224,17 +223,48 @@ export const arTranslations = {
 
   // References translations
   references: {
+    // General
     title: "مشاريعنا المرجعية",
     subtitle: "المشاريع الناجحة التي أنجزناها بهذه الخدمة",
     viewAll: "عرض جميع المراجع",
-    projectDetails: "تفاصيل المشروع",
-    categories: {
+    projectDetails: "عرض التفاصيل",
+    // Hero section
+    hero: {
+      badge: "المراجع",
+      title: "مشاريع ناجحة",
+      subtitle: "نضيف قيمة إلى مساحات المعيشة الخارجية مع المشاريع التي أنجزناها في تركيا وحول العالم.",
+      getQuote: "احصل على عرض سعر",
+      contact: "تواصل معنا"
+    },
+    // Stats section
+    stats: {
+      completedProjects: "المشاريع المكتملة",
+      exportCountries: "دول التصدير",
+      customerSatisfaction: "رضا العملاء",
+      yearsExperience: "سنوات الخبرة"
+    },
+    // Filter section
+    filters: {
+      all: "الكل",
       hotel: "فندق ومنتجع",
-      corporate: "شركات", 
+      corporate: "شركات",
       restaurant: "مطعم",
       residential: "سكني",
       commercial: "تجاري",
       entertainment: "ترفيه"
+    },
+    // Project card
+    project: {
+      viewDetails: "عرض التفاصيل",
+      location: "الموقع",
+      year: "السنة",
+      category: "الفئة"
+    },
+    // CTA section
+    cta: {
+      title: "انضم إلى مراجعنا",
+      subtitle: "بعد آلاف المشاريع الناجحة، حان الوقت لمساحة معيشتك الخارجية التي تحلم بها.",
+      startProject: "ابدأ مشروعك"
     }
   },
 

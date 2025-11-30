@@ -22,10 +22,18 @@ export function PergolaHero() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#3D4247]/90 via-[#3D4247]/70 to-[#3D4247]/40" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary mb-6 backdrop-blur-sm"
+        >
+          <span className="text-sm font-medium">Premium Pergola Çözümleri</span>
+        </motion.div>
         {/* Ana Başlık */}
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}
@@ -33,7 +41,7 @@ export function PergolaHero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 text-balance leading-tight drop-shadow-lg"
         >
-          Pergola Sistemleri
+          <span className="text-primary">Pergola</span> Sistemleri
         </motion.h1>
         
         {/* Açıklama Metni */}

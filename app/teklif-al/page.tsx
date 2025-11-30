@@ -90,39 +90,39 @@ export default function QuotePage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/90 to-primary-700/90" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#3D4247]/95 via-[#3D4247]/85 to-primary/30" />
         </div>
 
           <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center text-primary-foreground">
-            <Badge className="mb-6 bg-white/20 text-primary-foreground border-white/30 hover:bg-white/30">
-              <CheckCircle className="h-4 w-4 mr-2" />
-              Ücretsiz Keşif ve Teklif
-            </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance drop-shadow-lg">
-              Size Özel Teklif Alın
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary mb-6 backdrop-blur-sm">
+              <CheckCircle className="h-4 w-4" />
+              <span className="text-sm font-medium">Ücretsiz Keşif ve Teklif</span>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance text-white drop-shadow-lg">
+              Size Özel <span className="text-primary">Teklif</span> Alın
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-pretty max-w-2xl mx-auto opacity-95">
+            <p className="text-xl md:text-2xl mb-8 text-pretty max-w-2xl mx-auto text-gray-200">
               Uzman ekibimiz size en uygun çözümü sunmak için ücretsiz keşif yapıyor ve detaylı teklif hazırlıyor.
             </p>
 
             {/* İstatistikler */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mt-12">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                <div className="text-3xl font-bold mb-1">5000+</div>
-                <div className="text-sm opacity-90">Tamamlanan Proje</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-colors">
+                <div className="text-3xl font-bold mb-1 text-primary">5000+</div>
+                <div className="text-sm text-gray-300">Tamamlanan Proje</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                <div className="text-3xl font-bold mb-1">15+</div>
-                <div className="text-sm opacity-90">Yıl Deneyim</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-colors">
+                <div className="text-3xl font-bold mb-1 text-primary">15+</div>
+                <div className="text-sm text-gray-300">Yıl Deneyim</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                <div className="text-3xl font-bold mb-1">24</div>
-                <div className="text-sm opacity-90">Saat İçinde Dönüş</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-colors">
+                <div className="text-3xl font-bold mb-1 text-primary">24</div>
+                <div className="text-sm text-gray-300">Saat İçinde Dönüş</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                <div className="text-3xl font-bold mb-1">%100</div>
-                <div className="text-sm opacity-90">Müşteri Memnuniyeti</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-colors">
+                <div className="text-3xl font-bold mb-1 text-primary">%100</div>
+                <div className="text-sm text-gray-300">Müşteri Memnuniyeti</div>
               </div>
             </div>
           </div>

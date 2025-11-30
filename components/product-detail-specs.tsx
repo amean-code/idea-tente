@@ -50,7 +50,7 @@ export function ProductDetailSpecs({ categories }: ProductDetailSpecsProps) {
                 {/* Category Header */}
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center mr-3">
-                    <IconComponent className="h-5 w-5 text-primary" />
+                    <IconComponent className="h-5 w-5 text-black" />
                   </div>
                   <h3 className="font-semibold text-gray-900">{category.title}</h3>
                 </div>

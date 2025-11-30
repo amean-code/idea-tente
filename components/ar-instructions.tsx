@@ -50,7 +50,7 @@ export function ARInstructions() {
                 </div>
 
                 <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors">
-                  <step.icon className="h-8 w-8 text-primary" />
+                  <step.icon className="h-8 w-8 text-black" />
                 </div>
                 
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center group-hover:text-primary-600 transition-colors">
@@ -63,7 +63,7 @@ export function ARInstructions() {
               {index < steps.length - 1 && (
                 <div className="hidden lg:flex absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                    <ArrowRight className="h-5 w-5 text-primary" />
+                    <ArrowRight className="h-5 w-5 text-black" />
                   </div>
                 </div>
               )}

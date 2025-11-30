@@ -38,7 +38,7 @@ export function ProductFeatures({ features }: ProductFeaturesProps) {
             return (
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
-                  <IconComponent className="h-8 w-8 text-primary" />
+                  <IconComponent className="h-8 w-8 text-black" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">{feature.title}</h3>
                 <p className="text-muted-foreground text-pretty">{feature.description}</p>

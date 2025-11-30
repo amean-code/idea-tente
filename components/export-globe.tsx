@@ -1,135 +1,198 @@
 "use client"
-
-import WorldMapReal from "@/components/ui/world-map-real"
 import { motion } from "motion/react"
+import dynamic from "next/dynamic"
 
-/**
- * Export Globe bileşeni
- * Türkiye'den dünyaya ihracat haritasını gösterir
- */
+const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
+  ssr: false,
+})
+
 export function ExportGlobe() {
-  // Türkiye'den ihracat yapılan ülkelere bağlantılar
-  // Koordinatlar: { lat, lng } formatında
-  const exportConnections = [
-    // Türkiye (Ankara) → Avrupa
+  const globeConfig = {
+    pointSize: 4,
+    globeColor: "#3D4247", // IDEA Antrasit
+    showAtmosphere: true,
+    atmosphereColor: "#FFD100", // IDEA Sarı (Atmosfer)
+    atmosphereAltitude: 0.1,
+    emissive: "#3D4247",
+    emissiveIntensity: 0.1,
+    shininess: 0.9,
+    polygonColor: "rgba(255,255,255,0.7)",
+    ambientLight: "#FFD100", // Sarı ambiyans
+    directionalLeftLight: "#ffffff",
+    directionalTopLight: "#ffffff",
+    pointLight: "#ffffff",
+    arcTime: 1000,
+    arcLength: 0.9,
+    rings: 1,
+    maxRings: 3,
+    initialPosition: { lat: 39.9334, lng: 32.8597 }, // Ankara
+    autoRotate: true,
+    autoRotateSpeed: 0.5,
+  }
+
+  const colors = ["#FFD100", "#FFFFFF", "#FFC000"] // Sarı ve Beyaz tonları
+
+  // Türkiye'den (Ankara) dünyaya ihracat rotaları
+  const exportArcs = [
     {
-      start: { lat: 39.9334, lng: 32.8597 }, // Türkiye - Ankara
-      end: { lat: 52.5200, lng: 13.4050 }, // Almanya - Berlin
-    },
+      order: 1,
+      startLat: 39.9334,
+      startLng: 32.8597,
+      endLat: 52.52,
+      endLng: 13.405,
+      arcAlt: 0.1,
+      color: colors[0],
+    }, // Almanya
     {
-      start: { lat: 39.9334, lng: 32.8597 }, // Türkiye - Ankara
-      end: { lat: 48.8566, lng: 2.3522 }, // Fransa - Paris
-    },
+      order: 1,
+      startLat: 39.9334,
+      startLng: 32.8597,
+      endLat: 48.8566,
+      endLng: 2.3522,
+      arcAlt: 0.2,
+      color: colors[1],
+    }, // Fransa
     {
-      start: { lat: 39.9334, lng: 32.8597 }, // Türkiye - Ankara
-      end: { lat: 41.9028, lng: 12.4964 }, // İtalya - Roma
-    },
+      order: 1,
+      startLat: 39.9334,
+      startLng: 32.8597,
+      endLat: 51.5074,
+      endLng: -0.1278,
+      arcAlt: 0.3,
+      color: colors[2],
+    }, // İngiltere
     {
-      start: { lat: 39.9334, lng: 32.8597 }, // Türkiye - Ankara
-      end: { lat: 40.4168, lng: -3.7038 }, // İspanya - Madrid
-    },
+      order: 2,
+      startLat: 39.9334,
+      startLng: 32.8597,
+      endLat: 41.9028,
+      endLng: 12.4964,
+      arcAlt: 0.1,
+      color: colors[0],
+    }, // İtalya
     {
-      start: { lat: 39.9334, lng: 32.8597 }, // Türkiye - Ankara
-      end: { lat: 51.5074, lng: -0.1278 }, // İngiltere - Londra
-    },
+      order: 2,
+      startLat: 39.9334,
+      startLng: 32.8597,
+      endLat: 40.4168,
+      endLng: -3.7038,
+      arcAlt: 0.2,
+      color: colors[1],
+    }, // İspanya
     {
-      start: { lat: 39.9334, lng: 32.8597 }, // Türkiye - Ankara
-      end: { lat: 52.3676, lng: 4.9041 }, // Hollanda - Amsterdam
-    },
-    // Türkiye → Orta Doğu
+      order: 3,
+      startLat: 39.9334,
+      startLng: 32.8597,
+      endLat: 25.2048,
+      endLng: 55.2708,
+      arcAlt: 0.1,
+      color: colors[2],
+    }, // Dubai
     {
-      start: { lat: 39.9334, lng: 32.8597 }, // Türkiye - Ankara
-      end: { lat: 25.2048, lng: 55.2708 }, // BAE - Dubai
-    },
+      order: 3,
+      startLat: 39.9334,
+      startLng: 32.8597,
+      endLat: 24.7136,
+      endLng: 46.6753,
+      arcAlt: 0.2,
+      color: colors[0],
+    }, // Riyad
     {
-      start: { lat: 39.9334, lng: 32.8597 }, // Türkiye - Ankara
-      end: { lat: 24.7136, lng: 46.6753 }, // Suudi Arabistan - Riyad
-    },
-    // Türkiye → Afrika
+      order: 4,
+      startLat: 39.9334,
+      startLng: 32.8597,
+      endLat: 30.0444,
+      endLng: 31.2357,
+      arcAlt: 0.3,
+      color: colors[1],
+    }, // Kahire
     {
-      start: { lat: 39.9334, lng: 32.8597 }, // Türkiye - Ankara
-      end: { lat: 30.0444, lng: 31.2357 }, // Mısır - Kahire
-    },
+      order: 4,
+      startLat: 39.9334,
+      startLng: 32.8597,
+      endLat: -33.9249,
+      endLng: 18.4241,
+      arcAlt: 0.5,
+      color: colors[2],
+    }, // Cape Town
     {
-      start: { lat: 39.9334, lng: 32.8597 }, // Türkiye - Ankara
-      end: { lat: -33.9249, lng: 18.4241 }, // Güney Afrika - Cape Town
-    },
-    // Türkiye → Asya-Pasifik
+      order: 5,
+      startLat: 39.9334,
+      startLng: 32.8597,
+      endLat: 35.6762,
+      endLng: 139.6503,
+      arcAlt: 0.4,
+      color: colors[0],
+    }, // Tokyo
     {
-      start: { lat: 39.9334, lng: 32.8597 }, // Türkiye - Ankara
-      end: { lat: 35.6762, lng: 139.6503 }, // Japonya - Tokyo
-    },
+      order: 6,
+      startLat: 39.9334,
+      startLng: 32.8597,
+      endLat: 40.7128,
+      endLng: -74.006,
+      arcAlt: 0.6,
+      color: colors[1],
+    }, // New York
     {
-      start: { lat: 39.9334, lng: 32.8597 }, // Türkiye - Ankara
-      end: { lat: -33.8688, lng: 151.2093 }, // Avustralya - Sydney
-    },
+      order: 7,
+      startLat: 39.9334,
+      startLng: 32.8597,
+      endLat: -33.8688,
+      endLng: 151.2093,
+      arcAlt: 0.5,
+      color: colors[2],
+    }, // Sydney
   ]
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center justify-center relative w-full">
-          <div className="max-w-7xl mx-auto w-full">
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                duration: 0.8,
-              }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">Dünya Çapında İhracat Ağımız</h2>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-                Türkiye'den 50+ ülkeye ihracat yapıyor, kaliteli IDEA pergola ve cam sistemlerimizi dünya genelinde müşterilerimizle
-                buluşturuyoruz.
-              </p>
-            </motion.div>
+    <section className="py-20 bg-[#2D3237] overflow-hidden relative">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,209,0,0.05),transparent_50%)]" />
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            Dünya Çapında İhracat Ağı
+          </h2>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            Türkiye&apos;den 50&apos;den fazla ülkeye uzanan ihracat ağımızla,
+            kaliteli IDEA pergola sistemlerini dünya ile buluşturuyoruz.
+          </p>
+        </motion.div>
 
-            {/* World Map - Gerçek dünya haritası */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="my-8"
-            >
-              <WorldMapReal dots={exportConnections} lineColor="#0ea5e9" />
-            </motion.div>
-          </div>
-
-          {/* Stats overlay */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 w-full max-w-4xl"
-          >
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">50+</div>
-              <div className="text-muted-foreground">İhracat Ülkesi</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">200+</div>
-              <div className="text-muted-foreground">Distribütör</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">5000+</div>
-              <div className="text-muted-foreground">İhracat Projesi</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">20+</div>
-              <div className="text-muted-foreground">Yıllık Deneyim</div>
-            </div>
-          </motion.div>
+        <div className="h-[600px] w-full relative flex items-center justify-center">
+          <World data={exportArcs} globeConfig={globeConfig} />
         </div>
+
+        {/* İstatistikler */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 max-w-4xl mx-auto text-white"
+        >
+          <div className="text-center p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+            <div className="text-4xl font-bold text-primary mb-2">50+</div>
+            <div className="text-gray-300 text-sm">İhracat Ülkesi</div>
+          </div>
+          <div className="text-center p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+            <div className="text-4xl font-bold text-primary mb-2">200+</div>
+            <div className="text-gray-300 text-sm">Global Distribütör</div>
+          </div>
+          <div className="text-center p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+            <div className="text-4xl font-bold text-primary mb-2">5000+</div>
+            <div className="text-gray-300 text-sm">Tamamlanan Proje</div>
+          </div>
+          <div className="text-center p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+            <div className="text-4xl font-bold text-primary mb-2">%100</div>
+            <div className="text-gray-300 text-sm">Müşteri Memnuniyeti</div>
+          </div>
+        </motion.div>
       </div>
     </section>
   )

@@ -1,10 +1,18 @@
+"use client"
+
 import { Header } from "@/components/header"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { MapPin, Calendar, ArrowRight, Star } from "lucide-react"
 import Link from "next/link"
+import { useLanguage } from "@/contexts/language-context"
 
+/**
+ * Referanslar sayfası bileşeni
+ * Tamamlanmış projeleri ve referansları gösterir
+ */
 export default function ReferencesPage() {
+  const { t } = useLanguage()
   const projects = [
     {
       title: "Luxury Resort Antalya",
@@ -62,14 +70,18 @@ export default function ReferencesPage() {
     },
   ]
 
+  /**
+   * Kategori filtreleri
+   * Proje türlerine göre filtreleme için kullanılır
+   */
   const categories = [
-    { name: "Tümü", count: projects.length },
-    { name: "Otel & Resort", count: 1 },
-    { name: "Kurumsal", count: 1 },
-    { name: "Restoran", count: 1 },
-    { name: "Konut", count: 1 },
-    { name: "Ticari", count: 1 },
-    { name: "Eğlence", count: 1 },
+    { name: t("references.filters.all"), count: projects.length },
+    { name: t("references.filters.hotel"), count: 1 },
+    { name: t("references.filters.corporate"), count: 1 },
+    { name: t("references.filters.restaurant"), count: 1 },
+    { name: t("references.filters.residential"), count: 1 },
+    { name: t("references.filters.commercial"), count: 1 },
+    { name: t("references.filters.entertainment"), count: 1 },
   ]
 
   return (
@@ -86,7 +98,7 @@ export default function ReferencesPage() {
             className="w-full h-full object-cover"
           />
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#3D4247]/90 via-[#3D4247]/80 to-[#3D4247]/60" />
           {/* Pattern Overlay */}
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjAzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-40" />
         </div>
@@ -94,17 +106,17 @@ export default function ReferencesPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance text-white">
-              <span className="text-primary">5000+</span> Başarılı Proje
+              <span className="text-primary">5000+</span> {t("references.hero.title")}
             </h1>
             <p className="text-xl text-gray-200 mb-8 text-pretty max-w-2xl mx-auto">
-              Türkiye ve dünya genelinde gerçekleştirdiğimiz projelerle outdoor yaşam alanlarına değer katıyoruz.
+              {t("references.hero.subtitle")}
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" className="bg-primary hover:bg-primary-600 text-primary-foreground">
-                Teklif Al
+                {t("references.hero.getQuote")}
               </Button>
               <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm">
-                İletişime Geç
+                {t("references.hero.contact")}
               </Button>
             </div>
           </div>
@@ -117,19 +129,19 @@ export default function ReferencesPage() {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl font-bold text-primary mb-2">5000+</div>
-              <div className="text-sm text-muted-foreground">Tamamlanan Proje</div>
+              <div className="text-sm text-muted-foreground">{t("references.stats.completedProjects")}</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-primary mb-2">50+</div>
-              <div className="text-sm text-muted-foreground">İhracat Ülkesi</div>
+              <div className="text-sm text-muted-foreground">{t("references.stats.exportCountries")}</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-primary mb-2">%98</div>
-              <div className="text-sm text-muted-foreground">Müşteri Memnuniyeti</div>
+              <div className="text-sm text-muted-foreground">{t("references.stats.customerSatisfaction")}</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-primary mb-2">15</div>
-              <div className="text-sm text-muted-foreground">Yıl Deneyim</div>
+              <div className="text-sm text-muted-foreground">{t("references.stats.yearsExperience")}</div>
             </div>
           </div>
         </div>
@@ -215,7 +227,7 @@ export default function ReferencesPage() {
                     {/* Hover'da görünen ok ikonu */}
                     <div className="pt-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">
                       <div className="flex items-center text-primary text-base font-medium">
-                        <span>Detayları Görüntüle</span>
+                        <span>{t("references.project.viewDetails")}</span>
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </div>
                     </div>
@@ -230,13 +242,13 @@ export default function ReferencesPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-primary-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-primary-foreground mb-4">Siz de Referanslarımıza Katılın</h2>
+          <h2 className="text-3xl font-bold text-primary-foreground mb-4">{t("references.cta.title")}</h2>
           <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Binlerce başarılı projenin ardından, sırada sizin hayalinizdeki outdoor yaşam alanı var.
+            {t("references.cta.subtitle")}
           </p>
           <Button size="lg" variant="secondary" asChild>
             <Link href="/teklif-al">
-              Projenizi Başlatın <ArrowRight className="ml-2 h-5 w-5" />
+              {t("references.cta.startProject")} <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
         </div>

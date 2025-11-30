@@ -84,8 +84,8 @@ export function CatalogDownload() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
-            <Download className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Hızlı İndirme Merkezi</span>
+            <Download className="h-4 w-4 text-black" />
+            <span className="text-sm font-medium text-black">Hızlı İndirme Merkezi</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
             Dijital Kataloglar
@@ -112,7 +112,7 @@ export function CatalogDownload() {
 
               {/* Icon */}
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <catalog.icon className="h-6 w-6 text-primary" />
+                <catalog.icon className="h-6 w-6 text-black" />
               </div>
 
               <h3 className="text-xl font-bold text-foreground mb-2">{catalog.title}</h3>
@@ -143,7 +143,7 @@ export function CatalogDownload() {
                     {catalog.languages.map((lang) => (
                       <span
                         key={lang}
-                        className="bg-primary/10 text-primary px-2 py-0.5 rounded-md text-xs font-medium"
+                        className="bg-primary/10 text-black px-2 py-0.5 rounded-md text-xs font-medium"
                       >
                         {lang}
                       </span>

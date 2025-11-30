@@ -20,12 +20,15 @@ export function ContactHero() {
           priority
         />
         {/* Gradient overlay - görsel üzerine koyu bir katman ekler */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-secondary/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#3D4247]/95 via-[#3D4247]/85 to-primary/20" />
       </div>
 
       {/* İçerik */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary mb-6 backdrop-blur-sm">
+            <span className="text-sm font-medium">İletişime Geçin</span>
+          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance drop-shadow-lg">
             {t("contact.title")}
           </h1>

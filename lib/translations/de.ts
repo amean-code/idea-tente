@@ -186,11 +186,10 @@ export const deTranslations = {
     mapSubtitle: "Wir freuen uns, Sie in unserer Zentrale in Antalya willkommen zu heißen",
     addressCard: "Adresse",
     transportCard: "Anfahrt",
-    transportInfo: "15 km zum Flughafen Antalya",
+    transportInfo: "5 km zum Flughafen Antalya",
     parkingInfo: "Kostenlose Parkplätze verfügbar",
     showroomCard: "Showroom",
-    showroomInfo: "Um Produktmuster zu sehen",
-    appointmentInfo: "empfehlen wir eine Terminvereinbarung",
+    showroomInfo: "Sie können uns besuchen, um Produktmuster zu sehen",
     getDirections: "Wegbeschreibung bei Google Maps abrufen",
   },
   // Forms
@@ -273,17 +272,48 @@ export const deTranslations = {
 
   // References translations
   references: {
+    // General
     title: "Unsere Referenzprojekte",
     subtitle: "Erfolgreiche Projekte, die wir mit diesem Service abgeschlossen haben",
     viewAll: "Alle Referenzen anzeigen",
-    projectDetails: "Projektdetails",
-    categories: {
+    projectDetails: "Details anzeigen",
+    // Hero section
+    hero: {
+      badge: "Referenzen",
+      title: "Erfolgreiche Projekte",
+      subtitle: "Wir schaffen Mehrwert für Outdoor-Wohnräume mit Projekten, die wir in der Türkei und weltweit abgeschlossen haben.",
+      getQuote: "Angebot erhalten",
+      contact: "Kontakt aufnehmen"
+    },
+    // Stats section
+    stats: {
+      completedProjects: "Abgeschlossene Projekte",
+      exportCountries: "Exportländer",
+      customerSatisfaction: "Kundenzufriedenheit",
+      yearsExperience: "Jahre Erfahrung"
+    },
+    // Filter section
+    filters: {
+      all: "Alle",
       hotel: "Hotel & Resort",
-      corporate: "Unternehmen", 
+      corporate: "Unternehmen",
       restaurant: "Restaurant",
       residential: "Wohnen",
       commercial: "Kommerziell",
       entertainment: "Unterhaltung"
+    },
+    // Project card
+    project: {
+      viewDetails: "Details anzeigen",
+      location: "Standort",
+      year: "Jahr",
+      category: "Kategorie"
+    },
+    // CTA section
+    cta: {
+      title: "Werden Sie Teil unserer Referenzen",
+      subtitle: "Nach Tausenden erfolgreichen Projekten ist es Zeit für Ihren Traum-Außenwohnbereich.",
+      startProject: "Starten Sie Ihr Projekt"
     }
   },
 

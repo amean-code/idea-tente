@@ -168,12 +168,12 @@ export function FeaturedProjects() {
             {/* Project Stats */}
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="p-4 bg-primary rounded-lg">
-                <div className="text-2xl font-bold text-primary">{project.area}</div>
-                <div className="text-sm text-muted-foreground">{t("featuredProjects.totalArea")}</div>
+                <div className="text-2xl font-bold text-primary-foreground">{project.area}</div>
+                <div className="text-sm text-primary-foreground/80">{t("featuredProjects.totalArea")}</div>
               </div>
               <div className="p-4 bg-primary rounded-lg">
-                <div className="text-2xl font-bold text-primary">{project.year}</div>
-                <div className="text-sm text-muted-foreground">{t("featuredProjects.completion")}</div>
+                <div className="text-2xl font-bold text-primary-foreground">{project.year}</div>
+                <div className="text-sm text-primary-foreground/80">{t("featuredProjects.completion")}</div>
               </div>
             </div>
 
@@ -182,14 +182,14 @@ export function FeaturedProjects() {
               <h4 className="font-semibold mb-3">{t("featuredProjects.features")}</h4>
               <div className="flex flex-wrap gap-2 mb-6">
                 {projectTranslation.features.map((feature, index) => (
-                  <Badge key={index} variant="secondary" className="bg-primary text-primary">
+                  <Badge key={index} variant="secondary" className="bg-primary/10 text-primary border-primary/20">
                     {feature}
                   </Badge>
                 ))}
               </div>
             </div>
 
-            <Button size="lg" className="bg-primary hover:bg-primary-600 group">
+            <Button size="lg" className="bg-primary hover:bg-primary-600 text-primary-foreground group">
               {t("featuredProjects.viewDetails")}
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </Button>

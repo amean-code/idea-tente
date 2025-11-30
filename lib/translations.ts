@@ -182,11 +182,10 @@ export const translations = {
       mapSubtitle: "Antalya merkezimizde sizleri ağırlamaktan mutluluk duyarız",
       addressCard: "Adres",
       transportCard: "Ulaşım",
-      transportInfo: "Antalya Havalimanı'na 15 km",
+      transportInfo: "Antalya Havalimanı'na 5 km",
       parkingInfo: "Ücretsiz otopark mevcut",
       showroomCard: "Showroom",
-      showroomInfo: "Ürün örneklerini görmek için",
-      appointmentInfo: "randevu almanızı öneririz",
+      showroomInfo: "Ürün örneklerini görmek için gelip ziyaret edebilirsiniz",
       getDirections: "Google Maps'te Yol Tarifi Al",
     },
     // Forms
@@ -288,17 +287,48 @@ export const translations = {
 
     // References translations
     references: {
+      // General
       title: "Referans Projelerimiz",
       subtitle: "Bu hizmetimizle gerçekleştirdiğimiz başarılı projeler",
       viewAll: "Tüm Referansları Görüntüle",
-      projectDetails: "Proje Detayları",
-      categories: {
+      projectDetails: "Detayları Görüntüle",
+      // Hero section
+      hero: {
+        badge: "Referanslar",
+        title: "Başarılı Proje",
+        subtitle: "Türkiye ve dünya genelinde gerçekleştirdiğimiz projelerle outdoor yaşam alanlarına değer katıyoruz.",
+        getQuote: "Teklif Al",
+        contact: "İletişime Geç"
+      },
+      // Stats section
+      stats: {
+        completedProjects: "Tamamlanan Proje",
+        exportCountries: "İhracat Ülkesi",
+        customerSatisfaction: "Müşteri Memnuniyeti",
+        yearsExperience: "Yıl Deneyim"
+      },
+      // Filter section
+      filters: {
+        all: "Tümü",
         hotel: "Otel & Resort",
-        corporate: "Kurumsal", 
+        corporate: "Kurumsal",
         restaurant: "Restoran",
         residential: "Konut",
         commercial: "Ticari",
         entertainment: "Eğlence"
+      },
+      // Project card
+      project: {
+        viewDetails: "Detayları Görüntüle",
+        location: "Konum",
+        year: "Yıl",
+        category: "Kategori"
+      },
+      // CTA section
+      cta: {
+        title: "Siz de Referanslarımıza Katılın",
+        subtitle: "Binlerce başarılı projenin ardından, sırada sizin hayalinizdeki outdoor yaşam alanı var.",
+        startProject: "Projenizi Başlatın"
       }
     },
 
@@ -571,7 +601,7 @@ export const translations = {
       mapSubtitle: "We are happy to welcome you at our Antalya headquarters",
       addressCard: "Address",
       transportCard: "Transportation",
-      transportInfo: "15 km to Antalya Airport",
+      transportInfo: "5 km to Antalya Airport",
       parkingInfo: "Free parking available",
       showroomCard: "Showroom",
       showroomInfo: "To view product samples",
@@ -1094,7 +1124,7 @@ export const translations = {
       mapSubtitle: "Wir freuen uns, Sie in unserer Zentrale in Antalya willkommen zu heißen",
       addressCard: "Adresse",
       transportCard: "Anfahrt",
-      transportInfo: "15 km zum Flughafen Antalya",
+      transportInfo: "5 km zum Flughafen Antalya",
       parkingInfo: "Kostenlose Parkplätze verfügbar",
       showroomCard: "Showroom",
       showroomInfo: "Um Produktmuster zu sehen",
@@ -1479,6 +1509,53 @@ export const translations = {
         antalya: "Анталья",
         izmir: "Измир",
         ankara: "Анкара"
+      }
+    },
+
+    // References translations
+    references: {
+      // General
+      title: "Наши Референсные Проекты",
+      subtitle: "Успешные проекты, которые мы завершили с этой услугой",
+      viewAll: "Посмотреть Все Референции",
+      projectDetails: "Посмотреть Детали",
+      // Hero section
+      hero: {
+        badge: "Референции",
+        title: "Успешные Проекты",
+        subtitle: "Мы добавляем ценность в открытые жилые пространства с проектами, которые мы завершили в Турции и по всему миру.",
+        getQuote: "Получить предложение",
+        contact: "Связаться"
+      },
+      // Stats section
+      stats: {
+        completedProjects: "Завершенные Проекты",
+        exportCountries: "Страны Экспорта",
+        customerSatisfaction: "Удовлетворенность Клиентов",
+        yearsExperience: "Лет Опыта"
+      },
+      // Filter section
+      filters: {
+        all: "Все",
+        hotel: "Отель и Курорт",
+        corporate: "Корпоративный",
+        restaurant: "Ресторан",
+        residential: "Жилой",
+        commercial: "Коммерческий",
+        entertainment: "Развлечения"
+      },
+      // Project card
+      project: {
+        viewDetails: "Посмотреть Детали",
+        location: "Местоположение",
+        year: "Год",
+        category: "Категория"
+      },
+      // CTA section
+      cta: {
+        title: "Присоединяйтесь к Нашим Референциям",
+        subtitle: "После тысяч успешных проектов настало время для вашего идеального открытого жилого пространства.",
+        startProject: "Начать Проект"
       }
     }
   },

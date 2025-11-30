@@ -50,7 +50,7 @@ export default function AboutPage() {
             alt="IDEA Merkez Ofis"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#3D4247]/90 via-[#3D4247]/70 to-[#3D4247]/50" />
         </div>
         
         {/* Background Pattern */}
