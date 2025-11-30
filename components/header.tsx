@@ -369,7 +369,7 @@ export function Header() {
               <SimpleDropdown trigger={navTranslations.pergolaSystems} isScrolled={isScrolled}>
                 <div className="w-[500px] p-6">
                   <Link
-                    href="/pergola/bioklimatik"
+                    href="/pergola"
                     className="block p-3 rounded-md hover:bg-primary/10 border-b mb-3"
                   >
                     <div className="text-sm font-bold text-gray-800">{t("nav.pergolaMain")}</div>

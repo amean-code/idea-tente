@@ -77,25 +77,27 @@ export function ProductDetailGallery({ images, productName }: ProductDetailGalle
 
         {/* Thumbnails */}
         {images.length > 1 && (
-          <div className="flex gap-4 justify-center flex-wrap max-w-4xl mx-auto">
-            {images.map((image, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`relative w-24 h-24 rounded-lg overflow-hidden transition-all ${
-                  currentIndex === index
-                    ? "ring-4 ring-yellow-400 scale-110"
-                    : "ring-2 ring-gray-200 hover:ring-gray-300"
-                }`}
-              >
-                <Image
-                  src={image}
-                  alt={`Thumbnail ${index + 1}`}
-                  fill
-                  className="object-cover"
-                />
-              </button>
-            ))}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12 gap-3 justify-center">
+              {images.map((image, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`relative aspect-square rounded-lg overflow-hidden transition-all ${
+                    currentIndex === index
+                      ? "ring-4 ring-primary scale-110 z-10"
+                      : "ring-2 ring-gray-200 hover:ring-gray-300 hover:scale-105"
+                  }`}
+                >
+                  <Image
+                    src={image}
+                    alt={`Thumbnail ${index + 1}`}
+                    fill
+                    className="object-cover"
+                  />
+                </button>
+              ))}
+            </div>
           </div>
         )}
       </div>
