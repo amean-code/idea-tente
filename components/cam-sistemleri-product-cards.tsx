@@ -17,30 +17,45 @@ export function CamSistemleriProductCards() {
   const products = [
     {
       id: "surme-cam",
-      title: "Sürme Cam Sistemleri",
-      description: "Frameless sürme cam sistemleri ile kesintisiz manzara ve maksimum konfor",
+      title: t("glassSystems.products.surmeCam.title"),
+      description: t("glassSystems.products.surmeCam.description"),
       image: "/frameless-sliding-glass-system-terrace.jpg",
-      badge: "Popüler",
+      badge: t("glassSystems.products.surmeCam.badge"),
       href: "/cam-sistemleri/surme-cam",
-      features: ["Frameless Tasarım", "Sürme Mekanizma", "Temperli Cam", "Su Geçirmez"]
+      features: [
+        t("glassSystems.products.surmeCam.features.frameless"),
+        t("glassSystems.products.surmeCam.features.sliding"),
+        t("glassSystems.products.surmeCam.features.tempered"),
+        t("glassSystems.products.surmeCam.features.waterproof")
+      ]
     },
     {
       id: "katlanir-cam",
-      title: "Katlanır Cam Sistemleri",
-      description: "Accordion tarzı katlanır cam sistemleri ile geniş açılım imkanı",
+      title: t("glassSystems.products.katlanirCam.title"),
+      description: t("glassSystems.products.katlanirCam.description"),
       image: "/folding-glass-system-restaurant.jpg",
-      badge: "Esnek",
+      badge: t("glassSystems.products.katlanirCam.badge"),
       href: "/cam-sistemleri/katlanir-cam",
-      features: ["Katlanır Sistem", "Geniş Açılım", "Premium Cam", "Özel Ölçü"]
+      features: [
+        t("glassSystems.products.katlanirCam.features.folding"),
+        t("glassSystems.products.katlanirCam.features.wideOpening"),
+        t("glassSystems.products.katlanirCam.features.premium"),
+        t("glassSystems.products.katlanirCam.features.customSize")
+      ]
     },
     {
       id: "sabit-cam",
-      title: "Sabit Cam Sistemleri",
-      description: "Sabit cam panelleri ile kalıcı koruma ve modern görünüm",
+      title: t("glassSystems.products.sabitCam.title"),
+      description: t("glassSystems.products.sabitCam.description"),
       image: "/fixed-glass-panels-modern-building.jpg",
-      badge: "Ekonomik",
+      badge: t("glassSystems.products.sabitCam.badge"),
       href: "/cam-sistemleri/sabit-cam",
-      features: ["Sabit Panel", "Yüksek Yalıtım", "UV Koruma", "Düşük Bakım"]
+      features: [
+        t("glassSystems.products.sabitCam.features.fixed"),
+        t("glassSystems.products.sabitCam.features.insulation"),
+        t("glassSystems.products.sabitCam.features.uvProtection"),
+        t("glassSystems.products.sabitCam.features.lowMaintenance")
+      ]
     }
   ]
 

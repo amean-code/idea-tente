@@ -17,6 +17,13 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const translationCache = new Map<string, string>()
 
 /**
+ * Cache'i temizle - development sırasında çeviriler güncellendiğinde kullanılır
+ */
+export function clearTranslationCache() {
+  translationCache.clear()
+}
+
+/**
  * Çeviri fonksiyonu - nested key desteği ile optimize edilmiş
  * @param key - Çeviri anahtarı (örn: "nav.pergolaSystems")
  * @param currentLanguage - Mevcut dil
@@ -31,24 +38,53 @@ const getTranslation = (key: string, currentLanguage: Language): string => {
   }
 
   const keys = key.split(".")
-  let value: any = translations[currentLanguage]
+  
+  // Translations objesine güvenli erişim
+  const translationsObj = translations as any
+  
+  // Mevcut dil objesini kontrol et
+  if (!translationsObj[currentLanguage]) {
+    console.warn(`[Translation] Language "${currentLanguage}" not found in translations object. Available languages:`, Object.keys(translationsObj))
+  }
+  
+  let value: any = translationsObj[currentLanguage]
 
+  // Eğer dil objesi yoksa, default language'e fallback yap
+  if (!value) {
+    console.warn(`[Translation] Falling back to default language "${defaultLanguage}" for key "${key}"`)
+    value = translationsObj[defaultLanguage]
+  }
+
+  // Nested key'leri takip et
   for (const k of keys) {
-    value = value?.[k]
-    if (value === undefined) break
+    if (value && typeof value === 'object' && k in value) {
+      value = value[k]
+    } else {
+      value = undefined
+      break
+    }
   }
 
   // Fallback to default language if translation not found
   if (value === undefined) {
-    let fallbackValue: any = translations[defaultLanguage]
+    let fallbackValue: any = translationsObj[defaultLanguage]
     for (const k of keys) {
-      fallbackValue = fallbackValue?.[k]
-      if (fallbackValue === undefined) break
+      if (fallbackValue && typeof fallbackValue === 'object' && k in fallbackValue) {
+        fallbackValue = fallbackValue[k]
+      } else {
+        fallbackValue = undefined
+        break
+      }
     }
     value = fallbackValue
   }
 
   const result: string = typeof value === 'string' ? value : key
+  
+  // Debug: Eğer çeviri bulunamadıysa uyarı ver
+  if (result === key && process.env.NODE_ENV === 'development') {
+    console.warn(`[Translation] Translation not found for key "${key}" in language "${currentLanguage}"`)
+  }
   
   // Cache'e kaydet (maksimum 1000 çeviri cache'de tut)
   if (translationCache.size > 1000) {
@@ -74,6 +110,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     setMounted(true)
     
+    // Development modunda cache'i temizle (hot reload için)
+    if (process.env.NODE_ENV === 'development') {
+      clearTranslationCache()
+    }
+    
     // Cookie ve localStorage'dan dil yükle
     if (typeof window !== 'undefined') {
       // Önce cookie'den deneyelim (middleware ile senkron)
@@ -97,6 +138,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   // Save language to localStorage and cookie when it changes
   const setLanguage = useCallback((lang: Language) => {
+    // Dil değiştiğinde cache'i temizle
+    clearTranslationCache()
     setLanguageState(lang)
     
     if (typeof window !== 'undefined') {
@@ -114,9 +157,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }
   }, [])
 
-  // Translation function
+  // Translation function - language değiştiğinde yeniden oluşturulmalı
   const t = useCallback((key: string): string => {
-    return getTranslation(key, language)
+    // Cache temizlendiğinden emin ol
+    const result = getTranslation(key, language)
+    return result
   }, [language])
 
   // RTL kontrolü

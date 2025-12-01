@@ -243,30 +243,90 @@ export const deTranslations = {
     maintenance: "Wartungsservice",
     warranty: "Garantie"
   },
-  // Export
-  export: {
-    title: "Export & Globale Reichweite",
-    subtitle: "Premium IDEA-Systeme Weltweit",
-    description: "Wir exportieren unsere erstklassigen IDEA- und Glassysteme in über 50 Länder",
-    markets: "Exportmärkte",
-    certifications: "Zertifizierungen",
-    distributorship: "Vertriebsmöglichkeiten",
-    contactUs: "Kontakt für Export"
-  },
-  // Catalog
-  catalog: {
-    title: "Produktkatalog",
-    subtitle: "Entdecken Sie unser komplettes Produktsortiment",
-    download: "Katalog herunterladen",
-    viewOnline: "Online ansehen",
-    latest: "Neuester Katalog"
-  },
 
   // Pergola specific translations
   pergola: {
     hero: {
       description: "IDEA Pergola-Systeme verfügen über dauerhafte Aluminiumträgerstrukturen und bieten verschiedene Dachoptionen, die ideal für verschiedene architektonische Designs sind. Mit Optionen wie Glas, PVC-Gewebe oder Aluminiumpaneelen verbessern Sie Ihre Außenbereiche mit einem einzigartigen Stil.",
       subdescription: "Schaffen Sie einen ruhigen Raum, umgeben von bioklimatischen Pergolen und Liegen, perfekt zum Entspannen und Sonnenbaden."
+    },
+    bioclimatic: {
+      hero: {
+        title: "Bioklimatische Pergola-Systeme",
+        subtitle: "Komfortable Wohnräume mit naturverträglicher, intelligenter Klimasteuerung"
+      },
+      features: {
+        title: "Bioklimatische Technologie",
+        subtitle: "Energieeffizienz durch natürliche Belüftung und Klimasteuerung"
+      },
+      specs: {
+        dimensions: "Abmessungen",
+        materials: "Materialien & Struktur",
+        performance: "Leistung",
+        warranty: "Garantie & Funktionen",
+        maxWidth: "Maximale Breite",
+        maxDepth: "Maximale Tiefe",
+        maxArea: "Maximale Fläche",
+        verticalProfile: "Vertikales Trägerprofil",
+        horizontalProfile: "Horizontales Trägerprofil",
+        profileMaterial: "Profilmaterial",
+        louverAngle: "Lamellenwinkel",
+        gasketMaterial: "Dichtungsmaterial",
+        surfaceTreatment: "Oberflächenbehandlung",
+        accessoryCoating: "Zubehörbeschichtung",
+        waterproof: "Wasserdicht",
+        distributedLoad: "Verteilte Lastkapazität",
+        windLoad: "Windlast",
+        motorSystem: "Motorsystem",
+        control: "Steuerung",
+        motorWarranty: "Motor-Garantie",
+        mechanicalWarranty: "Mechanische Garantie",
+        slope: "Neigung",
+        rainMode: "Regenmodus",
+        ledLighting: "LED-Beleuchtung"
+      },
+      featureList: {
+        rotatableLouvers: {
+          title: "105° Drehbare Lamellen",
+          description: "Kontrollieren Sie Sonnenlicht und Belüftung gleichzeitig mit Lamellen, die sich axial um 105° öffnen lassen."
+        },
+        climateControl: {
+          title: "Intelligente Klimasteuerung",
+          description: "Halten Sie die Luft, das Licht und die Temperatur Ihres Raums mit dem bioklimatischen System auf optimalem Niveau."
+        },
+        waterproof: {
+          title: "100% Wasserdicht",
+          description: "Dank der Rillen in den Lamellen fließt Regenwasser zu den Seitenguttern und wird von den Trägerfüßen abgeleitet."
+        },
+        energySaving: {
+          title: "Energieeinsparung",
+          description: "Reduzieren Sie den Energieverbrauch durch natürliche Belüftung und Beschattung."
+        },
+        quietOperation: {
+          title: "Leiser Betrieb",
+          description: "Das System mit Riemenantrieb arbeitet leise und reibungslos."
+        },
+        allSeasons: {
+          title: "Alle Jahreszeiten",
+          description: "Komfortable Nutzung in Sommer- und Wintermonaten. Ideale Lösung für jede Jahreszeit."
+        }
+      },
+      documents: {
+        badge: "Technische Dokumentation",
+        title: "Detaillierte Informationen und",
+        titleHighlight: "Dokumentation",
+        description: "Sie können detaillierte technische Informationen und Katalogdateien zu unserem Produkt herunterladen",
+        technicalFile: {
+          title: "Technische Spezifikationen",
+          description: "Detaillierte technische Spezifikationen und technische Zeichnungen von bioklimatischen Pergola-Systemen",
+          download: "Technische Datei herunterladen"
+        },
+        catalog: {
+          title: "E-Katalog",
+          description: "Umfassende E-Katalogdatei mit unserem gesamten Produktsortiment",
+          download: "E-Katalog herunterladen"
+        }
+      }
     }
   },
 
@@ -331,7 +391,40 @@ export const deTranslations = {
     products: {
       title: "Glassystem-Modelle",
       subtitle: "Entdecken Sie Glassystem-Modelle, die Ihren Bedürfnissen entsprechen",
-      viewDetails: "Details anzeigen"
+      viewDetails: "Details anzeigen",
+      surmeCam: {
+        title: "Schiebe-Glassysteme",
+        description: "Ununterbrochene Aussicht und maximaler Komfort mit rahmenlosen Schiebe-Glassystemen",
+        badge: "Beliebt",
+        features: {
+          frameless: "Rahmenloses Design",
+          sliding: "Schiebemechanismus",
+          tempered: "Gehärtetes Glas",
+          waterproof: "Wasserdicht"
+        }
+      },
+      katlanirCam: {
+        title: "Faltglas-Systeme",
+        description: "Große Öffnungsmöglichkeit mit Akkordeon-Stil-Faltglas-Systemen",
+        badge: "Flexibel",
+        features: {
+          folding: "Faltsystem",
+          wideOpening: "Große Öffnung",
+          premium: "Premium-Glas",
+          customSize: "Individuelle Größe"
+        }
+      },
+      sabitCam: {
+        title: "Festglas-Systeme",
+        description: "Dauerhafter Schutz und modernes Erscheinungsbild mit festen Glasplatten",
+        badge: "Wirtschaftlich",
+        features: {
+          fixed: "Feste Platte",
+          insulation: "Hohe Isolierung",
+          uvProtection: "UV-Schutz",
+          lowMaintenance: "Geringe Wartung"
+        }
+      }
     }
   },
 
@@ -349,7 +442,40 @@ export const deTranslations = {
     products: {
       title: "Wintergarten-Modelle",
       subtitle: "Entdecken Sie Wintergartenlösungen, die Ihren Bedürfnissen entsprechen und erweitern Sie Ihren Wohnraum",
-      viewDetails: "Details anzeigen"
+      viewDetails: "Details anzeigen",
+      standart: {
+        title: "Standard Wintergarten",
+        description: "Wirtschaftliche und qualitativ hochwertige Wintergartenlösung. Doppelglas-System und manuelle Belüftung.",
+        badge: "Wirtschaftlich",
+        features: {
+          doubleGlass: "Doppelglas",
+          thermal: "Thermischer Schnitt",
+          manual: "Manuelle Belüftung",
+          warranty: "10 Jahre Garantie"
+        }
+      },
+      premium: {
+        title: "Premium Wintergarten",
+        description: "Komfort mit intelligenter Glastechnologie und automatischem Klimasteuerungssystem.",
+        badge: "Beliebt",
+        features: {
+          smartGlass: "Intelligentes Glas",
+          autoControl: "Automatische Wärmesteuerung",
+          remote: "Fernbedienung",
+          warranty: "15 Jahre Garantie"
+        }
+      },
+      lux: {
+        title: "Luxus Wintergarten",
+        description: "Luxuriöses Wohnen mit Panoramaglas, Smart-Home-Integration und Fußbodenheizung.",
+        badge: "Premium",
+        features: {
+          panoramic: "Panoramaglas",
+          smartHome: "Smart Home",
+          floorHeating: "Fußbodenheizung",
+          warranty: "20 Jahre Garantie"
+        }
+      }
     }
   },
 
@@ -367,7 +493,40 @@ export const deTranslations = {
     products: {
       title: "Sonnenschutz-Modelle",
       subtitle: "Wählen Sie das Sonnenschutz-Modell, das Ihren Bedürfnissen entspricht und schützen Sie Ihre Gebäude vor schädlichen Sonneneinflüssen",
-      viewDetails: "Details anzeigen"
+      viewDetails: "Details anzeigen",
+      sabit: {
+        title: "Fester Sonnenschutz",
+        description: "Wirtschaftliche und langlebige Lösung. 24/7 Sonnenschutz mit langlebigem Aluminiumprofil.",
+        badge: "Wirtschaftlich",
+        features: {
+          aluminum: "Aluminiumprofil",
+          easyInstall: "Einfache Installation",
+          lowMaintenance: "Geringe Wartung",
+          warranty: "10 Jahre Garantie"
+        }
+      },
+      dikey: {
+        title: "Vertikaler Sonnenschutz",
+        description: "Fassadenintegration und ästhetisches Design. Passt sich dem architektonischen Design an.",
+        badge: "Ästhetisch",
+        features: {
+          facade: "Fassadensystem",
+          aesthetic: "Ästhetisches Design",
+          ralColor: "RAL-Farbe",
+          warranty: "10 Jahre Garantie"
+        }
+      },
+      hareketli: {
+        title: "Motorisierter Sonnenschutz",
+        description: "Automatisches Öffnen und Schließen mit motorisiertem System. Intelligente Steuerung und maximaler Komfort.",
+        badge: "Premium",
+        features: {
+          motorized: "Motorisiertes System",
+          remote: "Fernbedienung",
+          sensor: "Sensorsteuerung",
+          warranty: "10 Jahre Garantie"
+        }
+      }
     }
   },
 
@@ -385,7 +544,40 @@ export const deTranslations = {
     products: {
       title: "Zip-Screen-Modelle",
       subtitle: "Wählen Sie das Zip-Screen-Modell, das Ihren Bedürfnissen entspricht und machen Sie Ihre Außenbereiche komfortabel",
-      viewDetails: "Details anzeigen"
+      viewDetails: "Details anzeigen",
+      manuel: {
+        title: "Manueller Zip-Screen",
+        description: "Wirtschaftlicher Preisvorteil. Einfache Verwendung mit Kette/Kurbel und 95% UV-Schutz.",
+        badge: "Wirtschaftlich",
+        features: {
+          manual: "Manuelle Verwendung",
+          uvProtection: "95% UV-Schutz",
+          easyInstall: "Einfache Installation",
+          warranty: "10 Jahre Garantie"
+        }
+      },
+      motorlu: {
+        title: "Motorisierter Zip-Screen",
+        description: "Fernbedienbares motorisiertes System. Leiser Betrieb und 120 km/h Windbeständigkeit.",
+        badge: "Beliebt",
+        features: {
+          motorized: "Motorisiertes System",
+          quiet: "Leiser Betrieb",
+          remote: "Fernbedienung",
+          warranty: "10 Jahre Garantie"
+        }
+      },
+      akilli: {
+        title: "Intelligenter Zip-Screen",
+        description: "Vollautomatisches sensorgesteuertes System. Sonnennachführung und automatische Wetterkontrolle.",
+        badge: "Premium",
+        features: {
+          sensor: "Intelligenter Sensor",
+          sunTracking: "Automatische Sonnennachführung",
+          weather: "Wetterkontrolle",
+          warranty: "10 Jahre Garantie"
+        }
+      }
     }
   },
 
@@ -463,6 +655,358 @@ export const deTranslations = {
       antalya: "Antalya",
       izmir: "Izmir",
       ankara: "Ankara"
+    }
+  },
+
+  // Footer translations
+  footer: {
+    companyDescription: "Türkei's führender Hersteller von Pergola- und Glassystemen. Wir erweitern Ihre Wohnräume mit Premium-Outdoor-Lösungen.",
+    products: "Unsere Produkte",
+    services: "Unsere Dienstleistungen",
+    contact: "Kontakt",
+    whatsappContact: "WhatsApp Kontakt",
+    copyright: "© 2025 {company}. Alle Rechte vorbehalten.",
+    company: "IDEA"
+  },
+
+  // Contact Section translations
+  contactSection: {
+    badge: "Kontakt",
+    title: "Lassen Sie uns Ihr Traumprojekt gemeinsam verwirklichen",
+    subtitle: "Mit unserer 15-jährigen Erfahrung und unserem Expertenteam bieten wir maßgeschneiderte Lösungen. Kontaktieren Sie uns sofort für kostenlose Inspektion und detailliertes Angebot.",
+    methods: {
+      phone: {
+        title: "Telefon",
+        description: "Jetzt anrufen",
+        action: "Anrufen"
+      },
+      whatsapp: {
+        title: "WhatsApp",
+        description: "Sofortnachricht",
+        action: "Nachricht senden"
+      },
+      email: {
+        title: "E-Mail",
+        description: "Detaillierte Informationen",
+        action: "E-Mail senden"
+      },
+      appointment: {
+        title: "Termin",
+        description: "Kostenlose Inspektion",
+        action: "Termin vereinbaren"
+      }
+    },
+    stats: {
+      happyCustomers: "Zufriedene Kunden",
+      yearsExperience: "Jahre Erfahrung",
+      satisfaction: "Zufriedenheit",
+      provinces: "Provinz-Service"
+    },
+    info: {
+      title: "Kontaktinformationen",
+      phoneLabel: "Haupttelefon",
+      emailLabel: "E-Mail",
+      locationLabel: "Landesweit",
+      provincesLabel: "81 Provinz-Service"
+    },
+    hours: {
+      title: "Arbeitszeiten",
+      weekdays: "Montag - Freitag",
+      saturday: "Samstag",
+      sunday: "Sonntag",
+      closed: "Geschlossen"
+    },
+    quickAccess: {
+      title: "Schnellzugriff",
+      freeQuote: "Kostenloses Angebot erhalten",
+      referenceProjects: "Referenzprojekte",
+      downloadCatalog: "Katalog herunterladen"
+    }
+  },
+
+  // Product Detail translations
+  productDetail: {
+    specs: {
+      title: "Technische Spezifikationen",
+      subtitle: "Detaillierte technische Spezifikationen und Abmessungen unseres Produkts"
+    },
+    features: {
+      defaultTitle: "Steuerung und Automatisierung",
+      defaultSubtitle: "Entworfen, damit Sie Ihr Produkt von überall auf der Welt einfach steuern können"
+    },
+    hero: {
+      premiumBadge: "Premium-Produkt",
+      getQuote: "Angebot erhalten",
+      downloadCatalog: "Katalog herunterladen"
+    }
+  },
+
+  // Product Gallery translations
+  productGallery: {
+    title: "Projektgalerie",
+    subtitle: "Beispiele aus den Projekten, die wir abgeschlossen haben"
+  },
+
+  // Product Specs translations
+  productSpecs: {
+    title: "Technische Spezifikationen",
+    subtitle: "Detaillierte technische Spezifikationen und Spezifikationen unseres Produkts"
+  },
+
+  // Catalog translations
+  catalog: {
+    categories: {
+      badge: "Kategoriebasierte Kataloge",
+      title: "Produktkataloge",
+      subtitle: "Durchsuchen Sie unsere detaillierten Kataloge, die speziell für jede Kategorie vorbereitet wurden",
+      mainCategory: "Hauptkategorie",
+      subCategories: "Unterkategorien",
+      viewProducts: "Produkte anzeigen",
+      downloadCatalog: "Katalog herunterladen",
+      details: "Details"
+    },
+    download: {
+      badge: "Schnelles Download-Zentrum",
+      title: "Digitale Kataloge",
+      subtitle: "Wählen Sie das Katalogformat, das Ihren Bedürfnissen entspricht, und laden Sie es sofort herunter",
+      size: "Größe:",
+      pages: "Seiten:",
+      languages: "Sprachen:",
+      download: "Herunterladen",
+      popular: "Beliebt"
+    }
+  },
+
+  // Export translations
+  export: {
+    hero: {
+      badge: "Ihr globaler Lösungspartner",
+      title: "Grenzen überschreitend",
+      titleHighlight: "Qualität und Vertrauen",
+      subtitle: "Als IDEA Pergola exportieren wir Premium-Pergola- und Glassysteme von unseren modernen Produktionsstätten in alle Ecken der Welt. Wir liefern Ihre Projekte sicher mit internationalen Standard-Verpackungs- und Logistiklösungen.",
+      createRequest: "Exportanfrage erstellen",
+      howItWorks: "Wie funktioniert es?",
+      secureLogistics: "Sichere Logistik",
+      internationalShipping: "Internationaler Versand",
+      countries: "50+ Länder",
+      activeExport: "Aktiver Export"
+    },
+    products: {
+      title: "Unsere Exportprodukte",
+      subtitle: "Unsere Premium-Produkte, die nach internationalen Standards hergestellt und CE-zertifiziert sind, werden weltweit sicher verwendet"
+    },
+    shipping: {
+      title: "Unser Versandprozess",
+      subtitle: "Wir sind bei jedem Schritt von Ihrer Bestellung bis zur Unterstützung nach der Lieferung an Ihrer Seite",
+      steps: {
+        order: {
+          title: "Bestellung & Dokumente",
+          description: "Bestellbestätigung und alle Dokumente werden vorbereitet",
+          duration: "1-2 Tage"
+        },
+        production: {
+          title: "Produktion & Verpackung",
+          description: "Produkte werden hergestellt und spezielle Exportverpackung wird durchgeführt",
+          duration: "7-14 Tage"
+        },
+        customs: {
+          title: "Zollverfahren",
+          description: "Alle Zollverfahren werden abgeschlossen",
+          duration: "1-3 Tage"
+        },
+        shipping: {
+          title: "Internationale Fracht",
+          description: "Sicherer Versand per See oder Luft",
+          duration: "5-30 Tage"
+        },
+        delivery: {
+          title: "Lieferung",
+          description: "Lieferung mit lokaler Fracht im Zielland",
+          duration: "2-5 Tage"
+        }
+      },
+      features: {
+        insured: "Versicherte Fracht",
+        tracking: "Verfolgungssystem",
+        customs: "Zollunterstützung",
+        packaging: "Spezielle Verpackung"
+      }
+    },
+    support: {
+      title: "Umfassende Support-Services",
+      subtitle: "Wir sind bei jedem Schritt mit professionellen Support-Services an Ihrer Seite, die wir für den Erfolg unserer Geschäftspartner anbieten",
+      documentation: {
+        title: "Dokumentation",
+        description: "CE-Zertifikate, technische Zeichnungen, Installationsanleitungen",
+        items: ["CE-Zertifikate", "Technische Zeichnungen", "Installationsanleitungen", "Garantieunterlagen"]
+      },
+      logistics: {
+        title: "Logistik",
+        description: "Sichere Verpackung, schnelle Fracht, Zollverfahren",
+        items: ["Spezielle Verpackung", "Versicherte Fracht", "Zollunterstützung", "Verfolgungssystem"]
+      },
+      technical: {
+        title: "Technischer Support",
+        description: "24/7 technischer Support, Fernunterstützung, Problemlösung",
+        items: ["24/7 Support", "Fernunterstützung", "Videokonferenz", "Schnelle Lösung"]
+      },
+      training: {
+        title: "Schulung",
+        description: "Produktschulungen, Verkaufstechniken, Marketingunterstützung",
+        items: ["Produktschulung", "Verkaufstechniken", "Marketingunterstützung", "Online-Seminare"]
+      }
+    }
+  },
+
+  // AR Demo translations
+  arDemo: {
+    features: {
+      title: "AR-Demo-Funktionen",
+      subtitle: "Erleben Sie unsere IDEA-Systeme mit fortschrittlicher Augmented-Reality-Technologie",
+      visualization: {
+        title: "3D-Visualisierung",
+        description: "Sehen Sie Pergola-Systeme in 3D in Ihrem Raum und untersuchen Sie sie aus verschiedenen Blickwinkeln."
+      },
+      colors: {
+        title: "Farboptionen",
+        description: "Ändern und vergleichen Sie sofort verschiedene Farb- und Materialoptionen."
+      },
+      measurement: {
+        title: "Messsteuerung",
+        description: "Überprüfen Sie die Eignung für Ihren Raum mit Echtgrößenanzeige."
+      },
+      share: {
+        title: "Teilen",
+        description: "Speichern Sie Ihre AR-Bilder und teilen Sie sie mit Ihrer Familie oder Ihrem Architekten."
+      }
+    },
+    instructions: {
+      title: "Wie verwendet man die AR-Demo?",
+      subtitle: "Folgen Sie diesen einfachen Schritten, um die Augmented-Reality-Erfahrung zu starten",
+      prepare: {
+        title: "Bereiten Sie Ihr mobiles Gerät vor",
+        description: "Öffnen Sie die AR-Demo-Seite mit Ihrem Gerät mit iOS 12+ oder Android 7+."
+      },
+      camera: {
+        title: "Kameraerlaubnis erteilen",
+        description: "Genehmigen Sie die Kamera-Zugriffsberechtigung von Ihrem Browser und aktivieren Sie Ihre Kamera."
+      },
+      scan: {
+        title: "Oberfläche scannen",
+        description: "Scannen Sie die flache Oberfläche, auf der Sie die Pergola platzieren möchten, mit Ihrer Kamera."
+      },
+      place: {
+        title: "Pergola platzieren",
+        description: "Platzieren Sie die Pergola, die auf dem Bildschirm erscheint, durch Berühren an Ihrem gewünschten Ort."
+      }
+    }
+  },
+
+  // Related Products translations
+  relatedProducts: {
+    title: "Verwandte Produkte",
+    subtitle: "Entdecken Sie andere Outdoor-Lösungen, die zu Ihnen passen",
+    viewDetails: "Details anzeigen"
+  },
+
+  // Pergola Product Cards translations
+  pergolaProducts: {
+    bioclimatic: {
+      title: "Bioklimatische Systeme",
+      subtitle: "Intelligente Klimasteuerung",
+      description: "Sonnen-, Belüftungs- und Regenkontrolle mit 105° drehbaren Lamellen",
+      features: {
+        rotatable: "105° Drehbare Lamellen",
+        waterproof: "100% Wasserdicht",
+        energySaving: "Energieeinsparung",
+        allSeasons: "Alle Jahreszeiten"
+      },
+      explore: "Erkunden"
+    },
+    motorized: {
+      title: "Motorisierte Systeme",
+      subtitle: "Vollautomatische Steuerung",
+      description: "Intelligentes Wohnen mit Sensortechnologie und Fernbedienung",
+      features: {
+        sunSensor: "Sonnensensor",
+        windSensor: "Windsensor",
+        remoteControl: "Fernbedienung",
+        quietOperation: "Leiser Betrieb"
+      },
+      explore: "Erkunden"
+    },
+    rolling: {
+      title: "Rolling Roof",
+      subtitle: "Ausfahrbare Markise",
+      description: "Flexible Pergola-Lösung, die sich auf Schienensystem bewegt",
+      features: {
+        openClose: "Öffnen & Schließen",
+        durableFabric: "Langlebiger Stoff",
+        motorized: "Motorisiert",
+        modernDesign: "Modernes Design"
+      },
+      explore: "Erkunden"
+    }
+  },
+
+  // Distributor translations
+  distributor: {
+    application: {
+      title: "Händler-Bewerbungsformular",
+      subtitle: "Füllen Sie das Bewerbungsformular aus, um unserem globalen Netzwerk beizutreten. Wir werden uns so schnell wie möglich bei Ihnen melden.",
+      contactInfo: "Kontaktinformationen",
+      applicationProcess: "Bewerbungsprozess",
+      form: {
+        title: "Bewerbungsformular",
+        companyName: "Firmenname",
+        contactPerson: "Ansprechpartner",
+        email: "E-Mail",
+        phone: "Telefon",
+        country: "Land",
+        city: "Stadt",
+        experience: "Branchenerfahrung",
+        marketSize: "Marktgröße",
+        message: "Ihre Nachricht",
+        submit: "Bewerbung absenden",
+        selectCountry: "Land auswählen",
+        selectExperience: "Erfahrungsdauer",
+        selectMarket: "Zielmarkt",
+        messagePlaceholder: "Erzählen Sie uns von Ihrem Unternehmen und Ihren Zielen..."
+      },
+      process: {
+        step1: "Bewerbungsformular",
+        step2: "Bewertung",
+        step3: "Interview",
+        step4: "Vereinbarung"
+      }
+    },
+    benefits: {
+      title: "Händler-Vorteile",
+      subtitle: "Wachsen Sie gemeinsam mit der umfassenden Unterstützung und den Vorteilen, die wir unseren Geschäftspartnern bieten",
+      strongPartnership: {
+        title: "Starke Partnerschaft",
+        description: "Langfristige, für beide Seiten vorteilhafte Geschäftspartnerschaft"
+      },
+      highMargin: {
+        title: "Hohe Gewinnspanne",
+        description: "Wettbewerbsfähige Preise und attraktive Gewinnspannen"
+      },
+      territoryProtection: {
+        title: "Gebietsschutz",
+        description: "Exklusive Gebietsrechte und Wettbewerbsschutz"
+      },
+      technicalSupport: {
+        title: "Technischer Support",
+        description: "24/7 technischer Support und Schulungsprogramme"
+      },
+      logistics: {
+        title: "Logistiklösungen",
+        description: "Schnelle und sichere Versandlösungen"
+      },
+      marketing: {
+        title: "Marketing-Unterstützung",
+        description: "Katalog, Broschüre und Marketingmaterialien"
+      }
     }
   }
 } as const

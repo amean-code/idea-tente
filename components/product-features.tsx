@@ -1,4 +1,7 @@
+"use client"
+
 import { Settings, Smartphone, Lightbulb, Shield, Wind, Award } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 const iconMap = {
   settings: Settings,
@@ -20,15 +23,17 @@ interface ProductFeaturesProps {
 }
 
 export function ProductFeatures({ features }: ProductFeaturesProps) {
+  const { t } = useLanguage()
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-            Özellikler ve Avantajlar
+            {t("productFeatures.title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-            Modern teknoloji ile donatılmış IDEA sistemlerimizin sunduğu üstün özellikler
+            {t("productFeatures.subtitle")}
           </p>
         </div>
 

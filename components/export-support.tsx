@@ -35,6 +35,9 @@ const supportServices = [
  * İş ortaklarına sunulan destek hizmetlerini gösterir
  */
 export function ExportSupport() {
+  const { t } = useLanguage()
+  const supportServices = getSupportServices(t)
+  
   return (
     <section className="py-20 bg-muted/10">
       <div className="container mx-auto px-4">
@@ -46,7 +49,7 @@ export function ExportSupport() {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance"
           >
-            Kapsamlı Destek Hizmetleri
+            {t("export.support.title")}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -55,7 +58,7 @@ export function ExportSupport() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty"
           >
-            İş ortaklarımızın başarısı için sunduğumuz profesyonel destek hizmetleri ile her adımda yanınızdayız
+            {t("export.support.subtitle")}
           </motion.p>
         </div>
 

@@ -1,6 +1,7 @@
 "use client"
 
 import { Ruler, Settings, Palette, Layers } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 interface SpecCategory {
   title: string
@@ -27,15 +28,17 @@ const iconMap = {
  * Kategorilere ayrılmış spesifikasyonlar
  */
 export function ProductDetailSpecs({ categories }: ProductDetailSpecsProps) {
+  const { t } = useLanguage()
+  
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Teknik Özellikler
+            {t("productDetail.specs.title")}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Ürünümüzün detaylı teknik özellikleri ve boyutları
+            {t("productDetail.specs.subtitle")}
           </p>
         </div>
 

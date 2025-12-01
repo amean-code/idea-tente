@@ -14,6 +14,7 @@ import {
   Lock,
   CheckCircle
 } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 interface Feature {
   title: string
@@ -50,20 +51,24 @@ const iconMap = {
  * Kontrol ve Otomasyon bölümü gibi
  */
 export function ProductDetailFeatures({ 
-  title = "Kontrol ve Otomasyon",
-  subtitle = "Ürününüzü dünyanın neresinde olursanız olun kolayca kontrol edebilmeniz için tasarlandı",
+  title,
+  subtitle,
   features 
 }: ProductDetailFeaturesProps) {
+  const { t } = useLanguage()
+  const displayTitle = title || t("productDetail.features.defaultTitle")
+  const displaySubtitle = subtitle || t("productDetail.features.defaultSubtitle")
+  
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {title}
+            {displayTitle}
           </h2>
           <p className="text-lg text-gray-600">
-            {subtitle}
+            {displaySubtitle}
           </p>
         </div>
 

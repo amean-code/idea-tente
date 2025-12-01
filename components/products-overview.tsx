@@ -208,7 +208,7 @@ export function ProductsOverview() {
                       href={product.href} 
                       className="flex items-center justify-center"
                     >
-                      <span>Detayları İncele</span>
+                      <span>{t("productsOverview.viewDetails")}</span>
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </Button>
@@ -227,7 +227,7 @@ export function ProductsOverview() {
                 </p>
                 
                 <div className="flex items-center text-white/80 text-sm">
-                  <span>Detayları görmek için üzerine gelin</span>
+                  <span>{t("productsOverview.hoverHint")}</span>
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </div>
               </div>

@@ -65,6 +65,28 @@ export const translations = {
       zipScreenManualDesc: "Ekonomik, dayanıklı",
       zipScreenSmart: "Akıllı Zip Perde",
       zipScreenSmartDesc: "Sensör kontrol, otomatik",
+      // Header specific
+      menu: "Menü",
+      bioclimaticTitle: "Bioklimatik Sistemler",
+      bioclimaticDesc: "105° dönebilen lameller",
+      glassTitle: "Cam Sistemleri",
+      glassDesc: "Frameless sürme sistem",
+      languageSelection: "Dil Seçimi",
+      menuDescriptions: {
+        pergola: "Tüm pergola modellerini görüntüle",
+        glass: "Tüm cam sistem modellerini görüntüle",
+        winterGarden: "4 mevsim kullanım için kapalı alan çözümleri",
+        sunBreaker: "Modern güneş kontrol sistemleri ile enerji tasarrufu ve konfor",
+        zipScreen: "Rüzgara dayanıklı zip perde sistemleri ile açık alan koruması",
+        catalog: "İhtiyacınıza uygun katalog formatını seçin ve anında indirin",
+        arDemo: "Pergola sistemlerimizi kendi mekanınızda görün",
+        export: "Dünyanın dört bir yanına premium pergola ve cam sistemleri ihraç ediyoruz",
+        getQuote: "Size özel teklif hazırlamak için formu doldurun",
+        about: "2008 yılından bu yana outdoor yaşam alanları konusunda uzmanlaşmış ekibiz",
+        references: "Türkiye ve dünya genelinde gerçekleştirdiğimiz projelerle outdoor yaşam alanlarına değer katıyoruz",
+        blog: "Sektör haberleri, trendler ve özel içerikler",
+        contact: "15 yıllık deneyimimiz ve uzman ekibimizle, size özel çözümler sunuyoruz"
+      }
     },
     // Hero Section
     hero: {
@@ -203,6 +225,7 @@ export const translations = {
     common: {
       learnMore: "Daha Fazla",
       viewAll: "Tümünü Gör",
+      viewDetails: "Detayları İncele",
       projects: "Proje",
       years: "Yıl",
       countries: "Ülke",
@@ -280,8 +303,783 @@ export const translations = {
     // Pergola specific translations
     pergola: {
       hero: {
+        badge: "Premium Pergola Çözümleri",
         description: "IDEA pergola sistemleri, dayanıklı alüminyum taşıyıcı yapıya sahiptir ve çeşitli tavan seçenekleri sunarak farklı mimari tasarımlar için idealdir. Cam, PVC kumaş veya alüminyum panel gibi seçeneklerle, dış mekanlarınızı özgün bir tarzla güçlendirir.",
         subdescription: "Bioklimatik pergola ve şezlonglarla çevrili, dinlenmek ve güneşi içinize çekmek için mükemmel olan sakin bir alan yaratın."
+      },
+      wizard: {
+        title: "Pergolanızı Özelleştirin",
+        subtitle: "3 adımda size özel pergola tasarımını oluşturun",
+        steps: {
+          material: {
+            title: "Malzeme Seçimi",
+            description: "Pergolanız için ideal malzemeyi seçin"
+          },
+          system: {
+            title: "Sistem Tipi",
+            description: "Tavan hareket sistemini belirleyin"
+          },
+          form: {
+            title: "Tavan Formu",
+            description: "Mimari yapınıza uygun formu seçin"
+          }
+        },
+        materials: {
+          aluminum: {
+            label: "Alüminyum Tavan",
+            description: "Dayanıklı ve modern"
+          },
+          fabric: {
+            label: "Kumaş Tavan",
+            description: "Esnek ve estetik"
+          },
+          glass: {
+            label: "Cam Tavan",
+            description: "Şeffaf ve aydınlık"
+          }
+        },
+        systems: {
+          rotating: {
+            label: "Döner Panelli",
+            description: "0-135° ayarlanabilir"
+          },
+          folding: {
+            label: "Katlanır Panelli",
+            description: "Tam açılır kapanır"
+          },
+          fixed: {
+            label: "Sabit Sistem",
+            description: "Bakım gerektirmez"
+          }
+        },
+        forms: {
+          flat: {
+            label: "Düz Tavan",
+            description: "Minimalist tasarım"
+          },
+          sloped: {
+            label: "Eğimli Tavan",
+            description: "Su akışı optimum"
+          },
+          curved: {
+            label: "Kavisli Tavan",
+            description: "Modern estetik"
+          }
+        },
+        buttons: {
+          back: "Geri",
+          next: "İleri",
+          getQuote: "Teklif Al"
+        },
+        summary: {
+          title: "Seçimleriniz"
+        }
+      },
+      bioclimatic: {
+        hero: {
+          title: "Bioklimatik Pergola Sistemleri",
+          subtitle: "Doğa ile uyumlu, akıllı iklim kontrolü ile konforlu yaşam alanları"
+        },
+        features: {
+          title: "Bioklimatik Teknoloji",
+          subtitle: "Doğal havalandırma ve iklim kontrolü ile enerji verimliliği"
+        },
+        specs: {
+          dimensions: "Boyutlar",
+          materials: "Malzeme & Yapı",
+          performance: "Performans",
+          warranty: "Garanti & Özellikler",
+          maxWidth: "Maksimum Genişlik",
+          maxDepth: "Maksimum Derinlik",
+          maxArea: "Maksimum Alan",
+          verticalProfile: "Dikey Taşıyıcı Profil",
+          horizontalProfile: "Yatay Taşıyıcı Profil",
+          profileMaterial: "Profil Malzeme",
+          louverAngle: "Lamel Açısı",
+          gasketMaterial: "Fitil Malzemesi",
+          surfaceTreatment: "Yüzey İşlemi",
+          accessoryCoating: "Aksesuar Kaplama",
+          waterproof: "Su Geçirmezlik",
+          distributedLoad: "Yayılı Yük Kapasitesi",
+          windLoad: "Rüzgar Yükü",
+          motorSystem: "Motor Sistemi",
+          control: "Kontrol",
+          motorWarranty: "Motor Garantisi",
+          mechanicalWarranty: "Mekanik Garanti",
+          slope: "Eğim",
+          rainMode: "Yağmur Modu",
+          ledLighting: "LED Aydınlatma"
+        },
+        featureList: {
+          rotatableLouvers: {
+            title: "105° Dönebilen Lameller",
+            description: "Eksenel olarak 105° açıda açılabilen lameller ile güneş ışığını ve havalandırmayı aynı anda kontrol edin."
+          },
+          climateControl: {
+            title: "Akıllı İklim Kontrolü",
+            description: "Bioklimatik sistem ile mekanınızın havasını, ışığını ve sıcaklığını optimal seviyede tutun."
+          },
+          waterproof: {
+            title: "%100 Su Geçirmezlik",
+            description: "Lamellerdeki oluklar sayesinde yağmur suları yan oluklara akarak taşıyıcı ayaklardan dışarı atılır."
+          },
+          energySaving: {
+            title: "Enerji Tasarrufu",
+            description: "Doğal havalandırma ve gölgeleme ile enerji tüketimini azaltın."
+          },
+          quietOperation: {
+            title: "Sessiz Çalışma",
+            description: "Triger kayışı ile güç aktarımı sağlanan sistem sessiz ve pürüzsüz çalışır."
+          },
+          allSeasons: {
+            title: "Tüm Mevsim",
+            description: "Yaz ve kış aylarında konforlu kullanım. Her mevsim için ideal çözüm."
+          }
+        },
+        documents: {
+          badge: "Teknik Dokümantasyon",
+          title: "Detaylı Bilgi ve",
+          titleHighlight: "Dokümantasyon",
+          description: "Ürünümüz hakkında detaylı teknik bilgiler ve katalog dosyalarını indirebilirsiniz",
+          technicalFile: {
+            title: "Teknik Özellikler",
+            description: "Bioklimatik pergola sistemlerinin detaylı teknik özellikleri ve teknik çizimler",
+            download: "Teknik Dosyayı İndir"
+          },
+          catalog: {
+            title: "E-Katalog",
+            description: "Tüm ürün gamımızı içeren kapsamlı e-katalog dosyası",
+            download: "E-Kataloğu İndir"
+          }
+        }
+      }
+    },
+
+    // Footer translations
+    footer: {
+      companyDescription: "Türkiye'nin önde gelen pergola ve cam sistemleri üreticisi. Premium outdoor çözümler ile yaşam alanlarınızı genişletiyoruz.",
+      products: "Ürünlerimiz",
+      services: "Hizmetlerimiz",
+      contact: "İletişim",
+      whatsappContact: "WhatsApp İletişim",
+      copyright: "© 2025 {company}. Tüm hakları saklıdır.",
+      company: "IDEA"
+    },
+
+    // Contact Section translations
+    contactSection: {
+      badge: "İletişim",
+      title: "Hayalinizdeki Projeyi Birlikte Gerçekleştirelim",
+      subtitle: "15 yıllık deneyimimiz ve uzman ekibimizle, size özel çözümler sunuyoruz. Ücretsiz keşif ve detaylı teklif için hemen iletişime geçin.",
+      methods: {
+        phone: {
+          title: "Telefon",
+          description: "Hemen arayın",
+          action: "Ara"
+        },
+        whatsapp: {
+          title: "WhatsApp",
+          description: "Anında mesaj",
+          action: "Mesaj Gönder"
+        },
+        email: {
+          title: "E-posta",
+          description: "Detaylı bilgi",
+          action: "E-posta Gönder"
+        },
+        appointment: {
+          title: "Randevu",
+          description: "Ücretsiz keşif",
+          action: "Randevu Al"
+        }
+      },
+      stats: {
+        happyCustomers: "Mutlu Müşteri",
+        yearsExperience: "Yıl Deneyim",
+        satisfaction: "Memnuniyet",
+        provinces: "İl Hizmeti"
+      },
+      info: {
+        title: "İletişim Bilgileri",
+        phoneLabel: "Ana Telefon",
+        emailLabel: "E-posta",
+        locationLabel: "Türkiye Geneli",
+        provincesLabel: "81 İl Hizmeti"
+      },
+      hours: {
+        title: "Çalışma Saatleri",
+        weekdays: "Pazartesi - Cuma",
+        saturday: "Cumartesi",
+        sunday: "Pazar",
+        closed: "Kapalı"
+      },
+      quickAccess: {
+        title: "Hızlı Erişim",
+        freeQuote: "Ücretsiz Teklif Al",
+        referenceProjects: "Referans Projeler",
+        downloadCatalog: "Katalog İndir"
+      }
+    },
+
+    // Contact Form translations
+    contactForm: {
+      title: "Genel İletişim",
+      subtitle: "Sorularınız, önerileriniz veya genel bilgi talepleriniz için aşağıdaki formu kullanabilirsiniz.",
+      name: "Ad Soyad",
+      email: "E-posta",
+      phone: "Telefon",
+      subject: "Konu",
+      subjectPlaceholder: "Konu seçin",
+      message: "Mesajınız",
+      messagePlaceholder: "Mesajınızı buraya yazın...",
+      submit: "Mail At",
+      subjects: {
+        productInfo: "Ürün Bilgisi",
+        technical: "Teknik Destek",
+        distributor: "Distribütörlük",
+        warranty: "Garanti",
+        installation: "Montaj",
+        other: "Diğer"
+      }
+    },
+
+    // Contact Info translations
+    contactInfo: {
+      title: "İletişim Bilgileri",
+      subtitle: "Uzman ekibimiz size en iyi hizmeti sunmak için hazır. Projeleriniz için profesyonel destek alın.",
+      phone: "Telefon",
+      email: "E-posta",
+      address: "Adres",
+      workingHours: "Çalışma Saatleri",
+      languageSupport: "Dil Desteği",
+      languages: "Türkçe, English, العربية, Deutsch, Français"
+    },
+
+    // Global Reach translations
+    globalReach: {
+      title: "Global Erişimimiz",
+      subtitle: "Dünya çapında güçlü distribütör ağımız ile premium IDEA sistemlerini her kıtaya ulaştırıyoruz",
+      stats: {
+        countries: "Ülke",
+        countriesDesc: "Dünya çapında distribütör ağı",
+        distributors: "Distribütör",
+        distributorsDesc: "Güvenilir iş ortakları",
+        projects: "Proje",
+        projectsDesc: "Başarıyla tamamlanan projeler",
+        growth: "Büyüme",
+        growthDesc: "Yıllık ihracat artışı"
+      },
+      regions: {
+        europe: "Avrupa",
+        middleEast: "Orta Doğu",
+        africa: "Afrika",
+        asiaPacific: "Asya-Pasifik"
+      },
+      projectLabel: "proje"
+    },
+
+    // Product CTA translations
+    productCTA: {
+      title: "için Teklif Alın",
+      subtitle: "Uzman ekibimizle ücretsiz keşif yapın ve size özel teklif alın. Hemen iletişime geçin!",
+      whatsapp: "WhatsApp İletişim",
+      call: "Hemen Ara",
+      quoteForm: "Teklif Formu"
+    },
+
+    // Quote Form translations
+    quoteForm: {
+      title: "Teklif Formu",
+      subtitle: "Size özel teklif hazırlamak için lütfen formu doldurun",
+      name: "Ad Soyad",
+      email: "E-posta",
+      phone: "Telefon",
+      company: "Şirket",
+      country: "Ülke",
+      countryPlaceholder: "Ülke seçin",
+      productType: "Ürün Tipi",
+      productTypePlaceholder: "Ürün tipi seçin",
+      projectType: "Proje Tipi",
+      projectTypePlaceholder: "Proje tipi seçin",
+      area: "Alan (m²)",
+      areaPlaceholder: "Yaklaşık metrekare",
+      budget: "Bütçe",
+      budgetPlaceholder: "Bütçe seçin",
+      timeline: "Zaman Çizelgesi",
+      timelinePlaceholder: "Zaman çizelgesi seçin",
+      description: "Açıklama",
+      descriptionPlaceholder: "Projeniz hakkında detayları paylaşın...",
+      newsletter: "Haber bültenine abone olmak istiyorum",
+      submit: "Teklif Gönder",
+      productTypes: {
+        bioclimatic: "Bioklimatik Pergola",
+        fixed: "Sabit Pergola",
+        glass: "Cam Sistemleri",
+        winterGarden: "Kış Bahçesi",
+        sunBreaker: "Güneş Kırıcı",
+        zipScreen: "Zip Perde",
+        combination: "Kombinasyon"
+      },
+      projectTypes: {
+        residential: "Konut",
+        commercial: "Ticari",
+        hotel: "Otel",
+        office: "Ofis",
+        public: "Kamu"
+      },
+      budgets: {
+        "10k-25k": "10.000 - 25.000 TL",
+        "25k-50k": "25.000 - 50.000 TL",
+        "50k-100k": "50.000 - 100.000 TL",
+        "100k+": "100.000 TL+",
+        discuss: "Görüşelim"
+      },
+      timelines: {
+        asap: "Mümkün olan en kısa sürede",
+        "1-3months": "1-3 ay içinde",
+        "3-6months": "3-6 ay içinde",
+        "6months+": "6 ay ve üzeri",
+        planning: "Planlama aşamasında"
+      },
+      countries: {
+        tr: "Türkiye",
+        de: "Almanya",
+        fr: "Fransa",
+        it: "İtalya",
+        es: "İspanya",
+        ae: "Birleşik Arap Emirlikleri",
+        sa: "Suudi Arabistan",
+        other: "Diğer"
+      },
+      emailSubject: "Yeni Teklif Talebi -",
+      emailBody: {
+        title: "Yeni Teklif Talebi",
+        personalInfo: "Kişisel Bilgiler:",
+        projectDetails: "Proje Detayları:",
+        projectDescription: "Proje Açıklaması:",
+        newsletterLabel: "Haber Bülteni:",
+        yes: "Evet",
+        no: "Hayır",
+        notSpecified: "Belirtilmedi"
+      }
+    },
+
+    // WhatsApp CTA translations
+    whatsappCTA: {
+      title: "Hızlı İletişim",
+      subtitle: "Anında yanıt almak için WhatsApp üzerinden bizimle iletişime geçin. Uzman ekibimiz size yardımcı olmaya hazır!",
+      turkiye: "Türkiye WhatsApp",
+      international: "International WhatsApp",
+      workingHours: "Çalışma saatleri:"
+    },
+
+    // Certificates translations
+    certificates: {
+      badge: "Sertifikalar ve Belgeler",
+      title: "Kalite ve",
+      titleHighlight: "Güvenilirlik",
+      subtitle: "Uluslararası standartlarda üretim ve kalite yönetim sistemleri ile sertifikalı ürünlerimiz",
+      categories: {
+        quality: "Kalite",
+        ce: "CE Sertifikası",
+        conformity: "Uygunluk",
+        design: "Tasarım",
+        membership: "Üyelik"
+      },
+      items: {
+        iso9001: "ISO 9001 Kalite Yönetim Sistemi",
+        cePergola: "CE Belgesi - Motorlu Pergola Sistemi",
+        ceGlass: "CE Belgesi - Motorlu Giyotin Cam Sistemi",
+        conformityPergola: "Uygunluk Beyanı - Motorlu Pergola Sistemi",
+        conformityGlass: "Uygunluk Beyanı - Motorlu Giyotin Cam Sistemi",
+        designRegistration: "Tasarım Tescil Belgesi",
+        designRegistrationGlass: "Tasarım Tescil Belgesi - Giyotin",
+        baibMembership: "BAİB Üyelik Belgesi"
+      }
+    },
+
+    // Product Detail translations
+    productDetail: {
+      specs: {
+        title: "Teknik Özellikler",
+        subtitle: "Ürünümüzün detaylı teknik özellikleri ve boyutları"
+      },
+      features: {
+        defaultTitle: "Kontrol ve Otomasyon",
+        defaultSubtitle: "Ürününüzü dünyanın neresinde olursanız olun kolayca kontrol edebilmeniz için tasarlandı"
+      },
+      hero: {
+        premiumBadge: "Premium Ürün",
+        getQuote: "Teklif Al",
+        downloadCatalog: "Katalog İndir"
+      }
+    },
+
+    // Product Gallery translations
+    productGallery: {
+      title: "Proje Galerisi",
+      subtitle: "Gerçekleştirdiğimiz projelerden örnekler"
+    },
+
+    // Product Specs translations
+    productSpecs: {
+      title: "Teknik Özellikler",
+      subtitle: "Ürünümüzün detaylı teknik özellikleri ve spesifikasyonları"
+    },
+
+    // Product Features translations
+    productFeatures: {
+      title: "Özellikler ve Avantajlar",
+      subtitle: "Modern teknoloji ile donatılmış IDEA sistemlerimizin sunduğu üstün özellikler"
+    },
+
+    // Products Overview translations
+    productsOverview: {
+      viewDetails: "Detayları İncele",
+      hoverHint: "Detayları görmek için üzerine gelin"
+    },
+
+    // Quote Page translations
+    quotePage: {
+      hero: {
+        badge: "Ücretsiz Keşif ve Teklif",
+        title: "Size Özel",
+        titleHighlight: "Teklif",
+        titleSuffix: "Alın",
+        subtitle: "Uzman ekibimiz size en uygun çözümü sunmak için ücretsiz keşif yapıyor ve detaylı teklif hazırlıyor.",
+        stats: {
+          completedProjects: "Tamamlanan Proje",
+          yearsExperience: "Yıl Deneyim",
+          responseTime: "Saat İçinde Dönüş",
+          satisfaction: "Müşteri Memnuniyeti"
+        }
+      },
+      advantages: {
+        title: "Neden Bizi Tercih Etmelisiniz?",
+        subtitle: "Sektördeki deneyimimiz ve müşteri odaklı yaklaşımımızla fark yaratıyoruz",
+        warranty: {
+          title: "15 Yıl Garanti",
+          description: "Tüm ürünlerimizde uzun süreli garanti"
+        },
+        freeInspection: {
+          title: "Ücretsiz Keşif",
+          description: "Profesyonel yerinde inceleme"
+        },
+        expertTeam: {
+          title: "Uzman Ekip",
+          description: "15+ yıl deneyimli montaj ekibi"
+        },
+        support: {
+          title: "7/24 Destek",
+          description: "Her zaman yanınızdayız"
+        }
+      },
+      process: {
+        title: "Teklif Alma Süreci",
+        subtitle: "4 basit adımda projeniz için profesyonel teklif alın",
+        steps: {
+          form: {
+            title: "Teklif Formu",
+            description: "Detaylı bilgilerinizi paylaşın"
+          },
+          inspection: {
+            title: "Ücretsiz Keşif",
+            description: "Uzmanlarımız yerinde inceleme yapar"
+          },
+          presentation: {
+            title: "Teklif Sunumu",
+            description: "Size özel teklif hazırlanır"
+          },
+          implementation: {
+            title: "Uygulama",
+            description: "Profesyonel montaj gerçekleştirilir"
+          }
+        }
+      },
+      form: {
+        title: "Teklif Formu",
+        subtitle: "Lütfen aşağıdaki formu doldurun, size en kısa sürede dönüş yapalım.",
+        firstName: "Ad",
+        lastName: "Soyad",
+        firstNamePlaceholder: "Adınız",
+        lastNamePlaceholder: "Soyadınız",
+        phone: "Telefon",
+        email: "E-posta",
+        city: "Şehir",
+        cityPlaceholder: "Şehir seçin",
+        interestedProducts: "İlgilendiğiniz Ürünler",
+        applicationArea: "Uygulama Alanı (m²)",
+        areaPlaceholder: "Yaklaşık metrekare",
+        budget: "Bütçe Aralığı",
+        budgetPlaceholder: "Bütçe aralığı seçin",
+        additionalInfo: "Ek Bilgiler",
+        additionalInfoPlaceholder: "Projeniz hakkında detayları paylaşın...",
+        privacy: "KVKK Aydınlatma Metni'ni okudum ve kabul ediyorum.",
+        submit: "Teklif Talebimi Gönder",
+        cities: {
+          istanbul: "İstanbul",
+          ankara: "Ankara",
+          izmir: "İzmir",
+          bursa: "Bursa",
+          antalya: "Antalya",
+          other: "Diğer"
+        },
+        budgets: {
+          "0-25000": "0 - 25.000 TL",
+          "25000-50000": "25.000 - 50.000 TL",
+          "50000-100000": "50.000 - 100.000 TL",
+          "100000+": "100.000 TL+"
+        }
+      },
+      contactInfo: {
+        title: "İletişim Bilgileri",
+        phone: "Telefon",
+        email: "E-posta",
+        address: "Adres",
+        workingHours: "Çalışma Saatleri"
+      },
+      guarantee: {
+        title: "Ücretsiz Keşif Garantisi",
+        description: "Teklif formunuzu gönderdikten sonra 24 saat içinde size ulaşıyor ve ücretsiz keşif randevusu planlıyoruz.",
+        response: "24 saat içinde geri dönüş",
+        inspection: "Ücretsiz yerinde inceleme",
+        quote: "Detaylı fiyat teklifi"
+      },
+      quickContact: {
+        title: "Hızlı İletişim",
+        call: "Hemen Ara",
+        whatsapp: "WhatsApp"
+      },
+      trust: {
+        title: "Güvenle Çalışın",
+        subtitle: "Sektördeki lider konumumuz ve referanslarımızla güvence altındasınız",
+        happyCustomers: "Mutlu Müşteri",
+        satisfactionRate: "Memnuniyet Oranı",
+        warranty: "Yıl Garanti"
+      }
+    },
+
+    // AR Hero translations
+    arHero: {
+      badge: "AR Teknolojisi",
+      title: "Artırılmış Gerçeklik ile",
+      titleHighlight: "Pergola Deneyimi",
+      subtitle: "Pergola sistemlerimizi kendi mekanınızda görün. AR teknolojisi ile ürünlerimizi satın almadan önce test edin.",
+      startDemo: "AR Demo Başlat",
+      downloadApp: "Mobil Uygulama İndir",
+      features: {
+        mobile: {
+          title: "Mobil Uyumlu",
+          description: "iOS ve Android desteği"
+        },
+        realistic: {
+          title: "Gerçekçi Görünüm",
+          description: "1:1 ölçek ve detay"
+        },
+        easy: {
+          title: "Kolay Kullanım",
+          description: "Tek tıkla başlat"
+        }
+      }
+    },
+
+    // Export Products translations
+    exportProducts: {
+      exportReady: "İhracata Hazır",
+      features: "Özellikler",
+      targetMarkets: "Hedef Pazarlar",
+      infoCards: {
+        ceCertified: {
+          title: "CE Sertifikalı",
+          description: "Tüm ürünlerimiz Avrupa standartlarında CE sertifikalıdır"
+        },
+        secureShipping: {
+          title: "Güvenli Kargo",
+          description: "Özel ihracat ambalajı ile hasar riski minimumda"
+        },
+        worldwide: {
+          title: "Dünya Çapında",
+          description: "50+ ülkeye başarıyla gönderilmiş binlerce ürün"
+        }
+      }
+    },
+
+
+    // Catalog translations
+    catalog: {
+      categories: {
+        badge: "Kategori Bazlı Kataloglar",
+        title: "Ürün Katalogları",
+        subtitle: "Her kategori için özel hazırlanmış detaylı kataloglarımızı inceleyin",
+        mainCategory: "Ana Kategori",
+        subCategories: "Alt Kategori",
+        viewProducts: "Ürünleri Görüntüle",
+        downloadCatalog: "Katalog İndir",
+        details: "Detaylar"
+      },
+      download: {
+        badge: "Hızlı İndirme Merkezi",
+        title: "Dijital Kataloglar",
+        subtitle: "İhtiyacınıza uygun katalog formatını seçin ve anında indirin",
+        size: "Boyut:",
+        pages: "Sayfa:",
+        languages: "Diller:",
+        download: "İndir",
+        popular: "Popüler"
+      }
+    },
+
+    // Export translations
+    export: {
+      hero: {
+        badge: "Global Çözüm Ortağınız",
+        title: "Sınırları Aşan",
+        titleHighlight: "Kalite ve Güven",
+        subtitle: "IDEA Pergola olarak, modern üretim tesislerimizden dünyanın dört bir yanına premium pergola ve cam sistemleri ihraç ediyoruz. Uluslararası standartlarda paketleme ve lojistik çözümlerimizle projelerinizi güvenle teslim ediyoruz.",
+        createRequest: "İhracat Talebi Oluştur",
+        howItWorks: "Süreç Nasıl İşler?",
+        secureLogistics: "Güvenli Lojistik",
+        internationalShipping: "Uluslararası Taşıma",
+        countries: "50+ Ülke",
+        activeExport: "Aktif İhracat"
+      },
+      products: {
+        title: "İhracat Ürünlerimiz",
+        subtitle: "Uluslararası standartlarda üretilen, CE sertifikalı premium ürünlerimiz dünya çapında güvenle kullanılmaktadır"
+      },
+      support: {
+        title: "Kapsamlı Destek Hizmetleri",
+        subtitle: "İş ortaklarımızın başarısı için sunduğumuz profesyonel destek hizmetleri ile her adımda yanınızdayız",
+        documentation: {
+          title: "Dokümantasyon",
+          description: "CE sertifikaları, teknik çizimler, montaj kılavuzları",
+          items: ["CE Sertifikaları", "Teknik Çizimler", "Montaj Kılavuzları", "Garanti Belgeleri"]
+        },
+        logistics: {
+          title: "Lojistik",
+          description: "Güvenli ambalaj, hızlı kargo, gümrük işlemleri",
+          items: ["Özel Ambalaj", "Sigortalı Kargo", "Gümrük Desteği", "Takip Sistemi"]
+        },
+        technical: {
+          title: "Teknik Destek",
+          description: "7/24 teknik destek, uzaktan yardım, problem çözme",
+          items: ["7/24 Destek", "Uzaktan Yardım", "Video Konferans", "Hızlı Çözüm"]
+        },
+        training: {
+          title: "Eğitim",
+          description: "Ürün eğitimleri, satış teknikleri, pazarlama desteği",
+          items: ["Ürün Eğitimi", "Satış Teknikleri", "Pazarlama Desteği", "Online Seminerler"]
+        }
+      },
+      shipping: {
+        title: "Gönderim Sürecimiz",
+        subtitle: "Siparişinizden teslimat sonrası desteğe kadar her adımda yanınızdayız",
+        steps: {
+          order: {
+            title: "Sipariş & Doküman",
+            description: "Sipariş onayı ve tüm belgeler hazırlanır",
+            duration: "1-2 gün"
+          },
+          production: {
+            title: "Üretim & Paketleme",
+            description: "Ürünler üretilir ve özel ihracat ambalajı yapılır",
+            duration: "7-14 gün"
+          },
+          customs: {
+            title: "Gümrük İşlemleri",
+            description: "Tüm gümrük işlemleri tamamlanır",
+            duration: "1-3 gün"
+          },
+          shipping: {
+            title: "Uluslararası Kargo",
+            description: "Deniz veya hava yolu ile güvenli gönderim",
+            duration: "5-30 gün"
+          },
+          delivery: {
+            title: "Teslimat",
+            description: "Hedef ülkede yerel kargo ile teslimat",
+            duration: "2-5 gün"
+          }
+        },
+        features: {
+          insured: "Sigortalı Kargo",
+          tracking: "Takip Sistemi",
+          customs: "Gümrük Desteği",
+          packaging: "Özel Ambalaj"
+        }
+      }
+    },
+
+    // AR Demo translations
+    arDemo: {
+      features: {
+        title: "AR Demo Özellikleri",
+        subtitle: "Gelişmiş artırılmış gerçeklik teknolojisi ile IDEA sistemlerimizi deneyimleyin",
+        visualization: {
+          title: "3D Görselleştirme",
+          description: "Pergola sistemlerini 3 boyutlu olarak mekanınızda görün ve farklı açılardan inceleyin."
+        },
+        colors: {
+          title: "Renk Seçenekleri",
+          description: "Farklı renk ve malzeme seçeneklerini anında değiştirin ve karşılaştırın."
+        },
+        measurement: {
+          title: "Ölçü Kontrolü",
+          description: "Gerçek ölçülerde görüntüleme ile mekanınıza uygunluğunu kontrol edin."
+        },
+        share: {
+          title: "Paylaşım",
+          description: "AR görüntülerinizi kaydedin ve aileniz veya mimarınızla paylaşın."
+        }
+      },
+      instructions: {
+        title: "AR Demo Nasıl Kullanılır?",
+        subtitle: "Artırılmış gerçeklik deneyimini başlatmak için bu basit adımları takip edin",
+        prepare: {
+          title: "Mobil Cihazınızı Hazırlayın",
+          description: "iOS 12+ veya Android 7+ işletim sistemli cihazınızla AR demo sayfasını açın."
+        },
+        camera: {
+          title: "Kamera İzni Verin",
+          description: "Tarayıcınızdan kamera erişim iznini onaylayın ve kameranızı etkinleştirin."
+        },
+        scan: {
+          title: "Yüzeyi Tarayın",
+          description: "Pergola yerleştirmek istediğiniz düz yüzeyi kameranızla tarayın."
+        },
+        place: {
+          title: "Pergolayı Yerleştirin",
+          description: "Ekranda beliren pergolayı dokunarak istediğiniz konuma yerleştirin."
+        }
+      },
+      gallery: {
+        title: "AR Demo Galerisi",
+        subtitle: "Farklı ürün kategorilerimizi artırılmış gerçeklik ile keşfedin",
+        startDemo: "AR Demo Başlat",
+        categories: {
+          pergola: "Pergola",
+          glass: "Cam",
+          winterGarden: "Kış Bahçesi",
+          sunBreaker: "Güneş Kırıcı"
+        },
+        demos: {
+          bioclimatic: {
+            title: "Bioklimatik Pergola",
+            description: "Akıllı lamelli sistem AR demosu"
+          },
+          glass: {
+            title: "Cam Sistemleri",
+            description: "Frameless cam çözümleri AR demosu"
+          },
+          winterGarden: {
+            title: "Kış Bahçesi",
+            description: "Kapalı alan çözümleri AR demosu"
+          },
+          sunBreaker: {
+            title: "Güneş Kırıcı",
+            description: "Güneş koruma sistemleri AR demosu"
+          }
+        }
       }
     },
 
@@ -311,7 +1109,7 @@ export const translations = {
       filters: {
         all: "Tümü",
         hotel: "Otel & Resort",
-        corporate: "Kurumsal",
+        corporate: "Kurumsal", 
         restaurant: "Restoran",
         residential: "Konut",
         commercial: "Ticari",
@@ -346,13 +1144,47 @@ export const translations = {
       products: {
         title: "Cam Sistemi Modelleri",
         subtitle: "İhtiyaçlarınıza uygun cam sistemi modellerini keşfedin",
-        viewDetails: "Detayları Gör"
+        viewDetails: "Detayları Gör",
+        surmeCam: {
+          title: "Sürme Cam Sistemleri",
+          description: "Frameless sürme cam sistemleri ile kesintisiz manzara ve maksimum konfor",
+          badge: "Popüler",
+          features: {
+            frameless: "Frameless Tasarım",
+            sliding: "Sürme Mekanizma",
+            tempered: "Temperli Cam",
+            waterproof: "Su Geçirmez"
+          }
+        },
+        katlanirCam: {
+          title: "Katlanır Cam Sistemleri",
+          description: "Accordion tarzı katlanır cam sistemleri ile geniş açılım imkanı",
+          badge: "Esnek",
+          features: {
+            folding: "Katlanır Sistem",
+            wideOpening: "Geniş Açılım",
+            premium: "Premium Cam",
+            customSize: "Özel Ölçü"
+          }
+        },
+        sabitCam: {
+          title: "Sabit Cam Sistemleri",
+          description: "Sabit cam panelleri ile kalıcı koruma ve modern görünüm",
+          badge: "Ekonomik",
+          features: {
+            fixed: "Sabit Panel",
+            insulation: "Yüksek Yalıtım",
+            uvProtection: "UV Koruma",
+            lowMaintenance: "Düşük Bakım"
+          }
+        }
       }
     },
 
     // Winter Garden translations
     winterGarden: {
       hero: {
+        badge: "4 Mevsim Konfor",
         title: "Kış Bahçesi ile 4 Mevsim Konfor",
         description: "Modern cam teknolojisi ile tasarlanan kış bahçeleri, yaşam alanınızı genişletir ve doğayla iç içe konforlu bir ortam sunar.",
         subdescription: "Termal izolasyon, dayanıklılık ve akıllı kontrol sistemleri ile her mevsim kullanılabilir yaşam alanı."
@@ -364,13 +1196,47 @@ export const translations = {
       products: {
         title: "Kış Bahçesi Modelleri",
         subtitle: "İhtiyaçlarınıza uygun kış bahçesi çözümlerini keşfedin ve yaşam alanınızı genişletin",
-        viewDetails: "Detayları Gör"
+        viewDetails: "Detayları Gör",
+        standart: {
+          title: "Standart Kış Bahçesi",
+          description: "Ekonomik ve kaliteli kış bahçesi çözümü. Çift cam sistemi ve manuel havalandırma.",
+          badge: "Ekonomik",
+          features: {
+            doubleGlass: "Çift Cam",
+            thermal: "Termal Kesim",
+            manual: "Manuel Havalandırma",
+            warranty: "10 Yıl Garanti"
+          }
+        },
+        premium: {
+          title: "Premium Kış Bahçesi",
+          description: "Akıllı cam teknolojisi ve otomatik iklim kontrol sistemi ile konfor.",
+          badge: "Popüler",
+          features: {
+            smartGlass: "Akıllı Cam",
+            autoControl: "Oto Isı Kontrol",
+            remote: "Uzaktan Kontrol",
+            warranty: "15 Yıl Garanti"
+          }
+        },
+        lux: {
+          title: "Lüks Kış Bahçesi",
+          description: "Panoramik cam, akıllı ev entegrasyonu ve zemin ısıtma ile lüks yaşam.",
+          badge: "Premium",
+          features: {
+            panoramic: "Panoramik Cam",
+            smartHome: "Akıllı Ev",
+            floorHeating: "Zemin Isıtma",
+            warranty: "20 Yıl Garanti"
+          }
+        }
       }
     },
 
     // Sun Breakers translations
     sunBreakers: {
       hero: {
+        badge: "Enerji Verimli Çözümler",
         title: "Güneş Kırıcı Sistemleri",
         description: "Modern güneş kırıcı sistemleri ile binalarınızı güneşin zararlı etkilerinden koruyun ve enerji tasarrufu sağlayın.",
         subdescription: "Güneş kontrolü, enerji tasarrufu, UV koruma ve estetik cephe çözümleri ile binanızın değerini artırın."
@@ -382,7 +1248,40 @@ export const translations = {
       products: {
         title: "Güneş Kırıcı Modelleri",
         subtitle: "İhtiyacınıza uygun güneş kırıcı modelini seçin ve binalarınızı güneşin zararlı etkilerinden koruyun",
-        viewDetails: "Detayları Gör"
+        viewDetails: "Detayları Gör",
+        sabit: {
+          title: "Sabit Güneş Kırıcı",
+          description: "Ekonomik ve dayanıklı çözüm. Uzun ömürlü alüminyum profil ile 7/24 güneş kontrolü.",
+          badge: "Ekonomik",
+          features: {
+            aluminum: "Alüminyum Profil",
+            easyInstall: "Kolay Montaj",
+            lowMaintenance: "Düşük Bakım",
+            warranty: "10 Yıl Garanti"
+          }
+        },
+        dikey: {
+          title: "Dikey Güneş Kırıcı",
+          description: "Cephe entegrasyonu ve estetik tasarım. Mimari tasarıma uyum sağlar.",
+          badge: "Estetik",
+          features: {
+            facade: "Cephe Sistemi",
+            aesthetic: "Estetik Tasarım",
+            ralColor: "RAL Renk",
+            warranty: "10 Yıl Garanti"
+          }
+        },
+        hareketli: {
+          title: "Hareketli Güneş Kırıcı",
+          description: "Motorlu sistem ile otomatik açılır-kapanır. Akıllı kontrol ve maksimum konfor.",
+          badge: "Premium",
+          features: {
+            motorized: "Motorlu Sistem",
+            remote: "Uzaktan Kumanda",
+            sensor: "Sensör Kontrol",
+            warranty: "10 Yıl Garanti"
+          }
+        }
       }
     },
 
@@ -400,7 +1299,40 @@ export const translations = {
       products: {
         title: "Zip Perde Modelleri",
         subtitle: "İhtiyaçlarınıza uygun zip perde modelini seçin ve açık alanlarınızı konforlu hale getirin",
-        viewDetails: "Detayları Gör"
+        viewDetails: "Detayları Gör",
+        manuel: {
+          title: "Manuel Zip Perde",
+          description: "Ekonomik fiyat avantajı. Zincir/krank ile kolay kullanım ve %95 UV koruma.",
+          badge: "Ekonomik",
+          features: {
+            manual: "Manuel Kullanım",
+            uvProtection: "%95 UV Koruma",
+            easyInstall: "Kolay Montaj",
+            warranty: "10 Yıl Garanti"
+          }
+        },
+        motorlu: {
+          title: "Motorlu Zip Perde",
+          description: "Uzaktan kumandalı motorlu sistem. Sessiz çalışma ve 120 km/h rüzgar dayanımı.",
+          badge: "Popüler",
+          features: {
+            motorized: "Motorlu Sistem",
+            quiet: "Sessiz Çalışma",
+            remote: "Uzaktan Kumanda",
+            warranty: "10 Yıl Garanti"
+          }
+        },
+        akilli: {
+          title: "Akıllı Zip Perde",
+          description: "Sensör kontrollü tam otomatik sistem. Güneş takibi ve otomatik hava durumu kontrolü.",
+          badge: "Premium",
+          features: {
+            sensor: "Akıllı Sensör",
+            sunTracking: "Oto Güneş Takibi",
+            weather: "Hava Durumu",
+            warranty: "10 Yıl Garanti"
+          }
+        }
       }
     },
 
@@ -479,6 +1411,114 @@ export const translations = {
         izmir: "İzmir",
         ankara: "Ankara"
       }
+    },
+
+    // Related Products translations
+    relatedProducts: {
+      title: "İlgili Ürünler",
+      subtitle: "Size uygun diğer outdoor çözümlerimizi keşfedin",
+      viewDetails: "Detayları İncele"
+    },
+
+    // Pergola Product Cards translations
+    pergolaProducts: {
+      bioclimatic: {
+        title: "Bioklimatik Sistemler",
+        subtitle: "Akıllı İklim Kontrolü",
+        description: "105° dönebilen lameller ile güneş, havalandırma ve yağmur kontrolü",
+        features: {
+          rotatable: "105° Dönebilen Lameller",
+          waterproof: "%100 Su Geçirmez",
+          energySaving: "Enerji Tasarrufu",
+          allSeasons: "Tüm Mevsim"
+        },
+        explore: "Keşfet"
+      },
+      motorized: {
+        title: "Motorlu Sistemler",
+        subtitle: "Tam Otomatik Kontrol",
+        description: "Sensör teknolojisi ve uzaktan kumanda ile akıllı yaşam",
+        features: {
+          sunSensor: "Güneş Sensörü",
+          windSensor: "Rüzgar Sensörü",
+          remoteControl: "Uzaktan Kumanda",
+          quietOperation: "Sessiz Çalışma"
+        },
+        explore: "Keşfet"
+      },
+      rolling: {
+        title: "Rolling Roof",
+        subtitle: "Açılır Kapanır Tente",
+        description: "Ray sistemi üzerinde hareket eden esnek pergola çözümü",
+        features: {
+          openClose: "Açılır Kapanır",
+          durableFabric: "Dayanıklı Kumaş",
+          motorized: "Motorlu",
+          modernDesign: "Modern Tasarım"
+        },
+        explore: "Keşfet"
+      }
+    },
+
+    // Distributor translations
+    distributor: {
+      application: {
+        title: "Distribütör Başvuru Formu",
+        subtitle: "Global ağımıza katılmak için başvuru formunu doldurun. En kısa sürede sizinle iletişime geçeceğiz.",
+        contactInfo: "İletişim Bilgileri",
+        applicationProcess: "Başvuru Süreci",
+        form: {
+          title: "Başvuru Formu",
+          companyName: "Şirket Adı",
+          contactPerson: "İletişim Kişisi",
+          email: "E-posta",
+          phone: "Telefon",
+          country: "Ülke",
+          city: "Şehir",
+          experience: "Sektör Deneyimi",
+          marketSize: "Pazar Büyüklüğü",
+          message: "Mesajınız",
+          submit: "Başvuru Gönder",
+          selectCountry: "Ülke seçin",
+          selectExperience: "Deneyim süresi",
+          selectMarket: "Hedef pazar",
+          messagePlaceholder: "Şirketiniz ve hedefleriniz hakkında bilgi verin..."
+        },
+        process: {
+          step1: "Başvuru formu",
+          step2: "Değerlendirme",
+          step3: "Görüşme",
+          step4: "Anlaşma"
+        }
+      },
+      benefits: {
+        title: "Distribütör Avantajları",
+        subtitle: "İş ortaklarımıza sunduğumuz kapsamlı destek ve avantajlar ile birlikte büyüyün",
+        strongPartnership: {
+          title: "Güçlü Ortaklık",
+          description: "Uzun vadeli, karşılıklı kazançlı iş ortaklığı"
+        },
+        highMargin: {
+          title: "Yüksek Kar Marjı",
+          description: "Rekabetçi fiyatlar ve cazip kar marjları"
+        },
+        territoryProtection: {
+          title: "Bölge Koruması",
+          description: "Özel bölge hakları ve rekabet koruması"
+        },
+        technicalSupport: {
+          title: "Teknik Destek",
+          description: "7/24 teknik destek ve eğitim programları"
+        },
+        logistics: {
+          title: "Lojistik Çözümler",
+          description: "Hızlı ve güvenli kargo çözümleri"
+        },
+        marketing: {
+          title: "Pazarlama Desteği",
+          description: "Katalog, broşür ve pazarlama materyalleri"
+        }
+      }
     }
   },
   en: {
@@ -547,6 +1587,28 @@ export const translations = {
       zipScreenManualDesc: "Economical, durable",
       zipScreenSmart: "Smart Zip Screen",
       zipScreenSmartDesc: "Sensor control, automatic",
+      // Header specific
+      menu: "Menu",
+      languageSelection: "Language Selection",
+      bioclimaticTitle: "Bioclimatic Systems",
+      bioclimaticDesc: "105° rotating louvers",
+      glassTitle: "Glass Systems",
+      glassDesc: "Frameless sliding system",
+      menuDescriptions: {
+        pergola: "View all pergola models",
+        glass: "View all glass system models",
+        winterGarden: "Closed space solutions for year-round use",
+        sunBreaker: "Modern sun control systems for energy saving and comfort",
+        zipScreen: "Wind-resistant zip screen systems for outdoor protection",
+        catalog: "Choose the catalog format that suits your needs and download instantly",
+        arDemo: "See our pergola systems in your own space",
+        export: "We export premium pergola and glass systems to all corners of the world",
+        getQuote: "Fill out the form to prepare a custom quote for you",
+        about: "Since 2008, we have been specializing in outdoor living spaces",
+        references: "We add value to outdoor living spaces with projects we have completed in Turkey and around the world",
+        blog: "Industry news, trends and special content",
+        contact: "With our 15 years of experience and expert team, we offer customized solutions"
+      }
     },
     // Hero Section
     hero: {
@@ -585,6 +1647,8 @@ export const translations = {
         new: "New"
       }
     },
+
+    
     // Contact
     contact: {
       title: "Get In Touch",
@@ -772,6 +1836,246 @@ export const translations = {
         izmir: "Izmir",
         ankara: "Ankara"
       }
+    },
+
+    // Pergola specific translations
+    pergola: {
+      hero: {
+        description: "IDEA pergola systems feature durable aluminum carrier structures and offer various ceiling options ideal for different architectural designs. With options like glass, PVC fabric or aluminum panels, enhance your outdoor spaces with a unique style.",
+        subdescription: "Create a serene space surrounded by bioclimatic pergola and loungers, perfect for relaxing and soaking up the sun."
+      },
+      bioclimatic: {
+        hero: {
+          title: "Bioclimatic Pergola Systems",
+          subtitle: "Comfortable living spaces with nature-compatible, smart climate control"
+        },
+        features: {
+          title: "Bioclimatic Technology",
+          subtitle: "Energy efficiency with natural ventilation and climate control"
+        },
+        specs: {
+          dimensions: "Dimensions",
+          materials: "Materials & Structure",
+          performance: "Performance",
+          warranty: "Warranty & Features",
+          maxWidth: "Maximum Width",
+          maxDepth: "Maximum Depth",
+          maxArea: "Maximum Area",
+          verticalProfile: "Vertical Carrier Profile",
+          horizontalProfile: "Horizontal Carrier Profile",
+          profileMaterial: "Profile Material",
+          louverAngle: "Louver Angle",
+          gasketMaterial: "Gasket Material",
+          surfaceTreatment: "Surface Treatment",
+          accessoryCoating: "Accessory Coating",
+          waterproof: "Waterproof",
+          distributedLoad: "Distributed Load Capacity",
+          windLoad: "Wind Load",
+          motorSystem: "Motor System",
+          control: "Control",
+          motorWarranty: "Motor Warranty",
+          mechanicalWarranty: "Mechanical Warranty",
+          slope: "Slope",
+          rainMode: "Rain Mode",
+          ledLighting: "LED Lighting"
+        },
+        featureList: {
+          rotatableLouvers: {
+            title: "105° Rotatable Louvers",
+            description: "Control sunlight and ventilation simultaneously with louvers that can open axially at 105° angle."
+          },
+          climateControl: {
+            title: "Smart Climate Control",
+            description: "Keep your space's air, light and temperature at optimal levels with the bioclimatic system."
+          },
+          waterproof: {
+            title: "100% Waterproof",
+            description: "Thanks to the grooves in the louvers, rainwater flows to the side gutters and is discharged from the carrier feet."
+          },
+          energySaving: {
+            title: "Energy Saving",
+            description: "Reduce energy consumption with natural ventilation and shading."
+          },
+          quietOperation: {
+            title: "Quiet Operation",
+            description: "The system powered by trigger belt transmission operates quietly and smoothly."
+          },
+          allSeasons: {
+            title: "All Seasons",
+            description: "Comfortable use in summer and winter months. Ideal solution for every season."
+          }
+        },
+        documents: {
+          badge: "Technical Documentation",
+          title: "Detailed Information and",
+          titleHighlight: "Documentation",
+          description: "You can download detailed technical information and catalog files about our product",
+          technicalFile: {
+            title: "Technical Specifications",
+            description: "Detailed technical specifications and technical drawings of bioclimatic pergola systems",
+            download: "Download Technical File"
+          },
+          catalog: {
+            title: "E-Catalog",
+            description: "Comprehensive e-catalog file containing our entire product range",
+            download: "Download E-Catalog"
+          }
+        }
+      },
+
+      // Product Detail translations
+      productDetail: {
+        specs: {
+          title: "Technical Specifications",
+          subtitle: "Detailed technical specifications and dimensions of our product"
+        },
+        features: {
+          defaultTitle: "Control and Automation",
+          defaultSubtitle: "Designed so you can easily control your product from anywhere in the world"
+        },
+        hero: {
+          premiumBadge: "Premium Product",
+          getQuote: "Get Quote",
+          downloadCatalog: "Download Catalog"
+        }
+      },
+
+      // Product Gallery translations
+      productGallery: {
+        title: "Project Gallery",
+        subtitle: "Examples from the projects we have completed"
+      },
+
+      // Product Specs translations
+      productSpecs: {
+        title: "Technical Specifications",
+        subtitle: "Detailed technical specifications and specifications of our product"
+      },
+
+      // Product Features translations
+      productFeatures: {
+        title: "Features and Advantages",
+        subtitle: "Superior features offered by our IDEA systems equipped with modern technology"
+      },
+
+      // Products Overview translations
+      productsOverview: {
+        viewDetails: "View Details",
+        hoverHint: "Hover to see details"
+      },
+
+      // References translations
+      references: {
+        // General
+        title: "Our Reference Projects",
+        subtitle: "Successful projects we have completed with this service",
+        viewAll: "View All References",
+        projectDetails: "View Details",
+        // Hero section
+        hero: {
+          badge: "References",
+          title: "Successful Projects",
+          subtitle: "We add value to outdoor living spaces with projects we have completed in Turkey and around the world.",
+          getQuote: "Get Quote",
+          contact: "Get in Touch"
+        },
+        // Stats section
+        stats: {
+          completedProjects: "Completed Projects",
+          exportCountries: "Export Countries",
+          customerSatisfaction: "Customer Satisfaction",
+          yearsExperience: "Years Experience"
+        },
+        // Filter section
+        filters: {
+          all: "All",
+          hotel: "Hotel & Resort",
+          corporate: "Corporate",
+          restaurant: "Restaurant",
+          residential: "Residential",
+          commercial: "Commercial",
+          entertainment: "Entertainment"
+        },
+        // Project card
+        project: {
+          viewDetails: "View Details",
+          location: "Location",
+          year: "Year",
+          category: "Category"
+        },
+        // CTA section
+        cta: {
+          title: "Join Our References",
+          subtitle: "After thousands of successful projects, it's time for your dream outdoor living space.",
+          startProject: "Start Your Project"
+        }
+      },
+
+      // Footer translations
+      footer: {
+        companyDescription: "Turkey's leading pergola and glass systems manufacturer. We expand your living spaces with premium outdoor solutions.",
+        products: "Our Products",
+        services: "Our Services",
+        contact: "Contact",
+        whatsappContact: "WhatsApp Contact",
+        copyright: "© 2025 {company}. All rights reserved.",
+        company: "IDEA"
+      },
+
+      // Contact Section translations
+      contactSection: {
+        badge: "Contact",
+        title: "Let's Realize Your Dream Project Together",
+        subtitle: "With our 15 years of experience and expert team, we offer customized solutions. Contact us immediately for free inspection and detailed quote.",
+        methods: {
+          phone: {
+            title: "Phone",
+            description: "Call now",
+            action: "Call"
+          },
+          whatsapp: {
+            title: "WhatsApp",
+            description: "Instant message",
+            action: "Send Message"
+          },
+          email: {
+            title: "Email",
+            description: "Detailed information",
+            action: "Send Email"
+          },
+          appointment: {
+            title: "Appointment",
+            description: "Free inspection",
+            action: "Book Appointment"
+          }
+        },
+        stats: {
+          happyCustomers: "Happy Customers",
+          yearsExperience: "Years Experience",
+          satisfaction: "Satisfaction",
+          provinces: "Province Service"
+        },
+        info: {
+          title: "Contact Information",
+          phoneLabel: "Main Phone",
+          emailLabel: "Email",
+          locationLabel: "Nationwide",
+          provincesLabel: "81 Province Service"
+        },
+        hours: {
+          title: "Working Hours",
+          weekdays: "Monday - Friday",
+          saturday: "Saturday",
+          sunday: "Sunday",
+          closed: "Closed"
+        },
+        quickAccess: {
+          title: "Quick Access",
+          freeQuote: "Get Free Quote",
+          referenceProjects: "Reference Projects",
+          downloadCatalog: "Download Catalog"
+        }
+      }
     }
   },
   ar: {
@@ -840,6 +2144,28 @@ export const translations = {
       zipScreenManualDesc: "اقتصادي، متين",
       zipScreenSmart: "ستارة زيب ذكية",
       zipScreenSmartDesc: "تحكم بالمستشعر، تلقائي",
+      // Header specific
+      menu: "القائمة",
+      languageSelection: "اختيار اللغة",
+      bioclimaticTitle: "الأنظمة البيوكليماتية",
+      bioclimaticDesc: "شرائح دوارة 105°",
+      glassTitle: "الأنظمة الزجاجية",
+      glassDesc: "نظام منزلق بدون إطار",
+      menuDescriptions: {
+        pergola: "عرض جميع نماذج البرجولا",
+        glass: "عرض جميع نماذج الأنظمة الزجاجية",
+        winterGarden: "حلول المساحات المغلقة للاستخدام على مدار السنة",
+        sunBreaker: "أنظمة التحكم في الشمس الحديثة لتوفير الطاقة والراحة",
+        zipScreen: "أنظمة ستارة زيب مقاومة للرياح للحماية الخارجية",
+        catalog: "اختر تنسيق الكتالوج الذي يناسب احتياجاتك وقم بالتنزيل على الفور",
+        arDemo: "شاهد أنظمة البرجولا الخاصة بنا في مساحتك الخاصة",
+        export: "نصدر أنظمة البرجولا والزجاج المتميزة إلى جميع أنحاء العالم",
+        getQuote: "املأ النموذج لإعداد عرض سعر مخصص لك",
+        about: "منذ عام 2008، تخصصنا في مساحات المعيشة الخارجية",
+        references: "نضيف قيمة إلى مساحات المعيشة الخارجية مع المشاريع التي أكملناها في تركيا وحول العالم",
+        blog: "أخبار الصناعة والاتجاهات والمحتوى الخاص",
+        contact: "مع خبرتنا البالغة 15 عاماً وفريقنا من الخبراء، نقدم حلولاً مخصصة"
+      }
     },
     // Hero Section
     hero: {
@@ -1018,7 +2344,363 @@ export const translations = {
         izmir: "إزمير",
         ankara: "أنقرة"
       }
-    }
+    },
+
+    // Quote Page translations
+    quotePage: {
+      hero: {
+        badge: "فحص مجاني وعرض سعر",
+        title: "احصل على",
+        titleHighlight: "عرض سعر",
+        titleSuffix: "مخصص",
+        subtitle: "يقوم فريقنا الخبير بإجراء فحص مجاني وإعداد عرض سعر مفصل لتقديم الحل الأنسب لك.",
+        stats: {
+          completedProjects: "المشاريع المكتملة",
+          yearsExperience: "سنوات الخبرة",
+          responseTime: "ساعات وقت الاستجابة",
+          satisfaction: "رضا العملاء"
+        }
+      },
+      advantages: {
+        title: "لماذا يجب أن تختارنا؟",
+        subtitle: "نصنع الفرق بخبرتنا في الصناعة ونهجنا المرتكز على العملاء",
+        warranty: {
+          title: "ضمان 15 سنة",
+          description: "ضمان طويل الأمد على جميع منتجاتنا"
+        },
+        freeInspection: {
+          title: "فحص مجاني",
+          description: "فحص احترافي في الموقع"
+        },
+        expertTeam: {
+          title: "فريق خبراء",
+          description: "فريق تركيب بخبرة 15+ سنة"
+        },
+        support: {
+          title: "دعم 24/7",
+          description: "نحن دائماً معك"
+        }
+      },
+      process: {
+        title: "عملية طلب عرض السعر",
+        subtitle: "احصل على عرض سعر احترافي لمشروعك في 4 خطوات بسيطة",
+        steps: {
+          form: {
+            title: "نموذج عرض السعر",
+            description: "شارك معلوماتك التفصيلية"
+          },
+          inspection: {
+            title: "فحص مجاني",
+            description: "يقوم خبراؤنا بإجراء فحص في الموقع"
+          },
+          presentation: {
+            title: "عرض عرض السعر",
+            description: "يتم إعداد عرض سعر مخصص لك"
+          },
+          implementation: {
+            title: "التنفيذ",
+            description: "يتم تنفيذ التركيب الاحترافي"
+          }
+        }
+      },
+      form: {
+        title: "نموذج عرض السعر",
+        subtitle: "يرجى ملء النموذج أدناه، سنعود إليك في أقرب وقت ممكن.",
+        firstName: "الاسم الأول",
+        lastName: "اسم العائلة",
+        firstNamePlaceholder: "اسمك الأول",
+        lastNamePlaceholder: "اسم عائلتك",
+        phone: "الهاتف",
+        email: "البريد الإلكتروني",
+        city: "المدينة",
+        cityPlaceholder: "اختر المدينة",
+        interestedProducts: "المنتجات التي تهتم بها",
+        applicationArea: "منطقة التطبيق (م²)",
+        areaPlaceholder: "متر مربع تقريبي",
+        budget: "نطاق الميزانية",
+        budgetPlaceholder: "اختر نطاق الميزانية",
+        additionalInfo: "معلومات إضافية",
+        additionalInfoPlaceholder: "شارك تفاصيل حول مشروعك...",
+        privacy: "لقد قرأت وأوافق على نص إفصاح KVKK.",
+        submit: "إرسال طلب عرض السعر",
+        cities: {
+          istanbul: "إسطنبول",
+          ankara: "أنقرة",
+          izmir: "إزمير",
+          bursa: "بورصة",
+          antalya: "أنطاليا",
+          other: "أخرى"
+        },
+        budgets: {
+          "0-25000": "0 - 25,000 TL",
+          "25000-50000": "25,000 - 50,000 TL",
+          "50000-100000": "50,000 - 100,000 TL",
+          "100000+": "100,000 TL+"
+        }
+      },
+      contactInfo: {
+        title: "معلومات الاتصال",
+        phone: "الهاتف",
+        email: "البريد الإلكتروني",
+        address: "العنوان",
+        workingHours: "ساعات العمل"
+      },
+      guarantee: {
+        title: "ضمان الفحص المجاني",
+        description: "بعد إرسال نموذج عرض السعر الخاص بك، نتصل بك خلال 24 ساعة ونحدد موعد فحص مجاني.",
+        response: "رد خلال 24 ساعة",
+        inspection: "فحص مجاني في الموقع",
+        quote: "عرض سعر مفصل"
+      },
+      quickContact: {
+        title: "اتصال سريع",
+        call: "اتصل الآن",
+        whatsapp: "واتساب"
+      },
+      trust: {
+        title: "اعمل بثقة",
+        subtitle: "أنت مضمون بموقعنا الرائد في الصناعة ومراجعنا",
+        happyCustomers: "عملاء سعداء",
+        satisfactionRate: "معدل الرضا",
+        warranty: "سنة ضمان"
+      }
+    },
+
+    // Footer translations
+    footer: {
+      companyDescription: "الشركة الرائدة في تركيا لتصنيع أنظمة البرجولا والزجاج. نوسع مساحات معيشتك بحلول خارجية متميزة.",
+      products: "منتجاتنا",
+      services: "خدماتنا",
+      contact: "اتصل بنا",
+      whatsappContact: "واتساب",
+      copyright: "© 2025 {company}. جميع الحقوق محفوظة.",
+      company: "IDEA"
+    },
+
+    // References translations
+    references: {
+      // General
+      title: "مشاريعنا المرجعية",
+      subtitle: "المشاريع الناجحة التي أنجزناها بهذه الخدمة",
+      viewAll: "عرض جميع المراجع",
+      projectDetails: "عرض التفاصيل",
+      // Hero section
+      hero: {
+        badge: "المراجع",
+        title: "مشاريع ناجحة",
+        subtitle: "نضيف قيمة إلى مساحات المعيشة الخارجية مع المشاريع التي أنجزناها في تركيا وحول العالم.",
+        getQuote: "احصل على عرض سعر",
+        contact: "تواصل معنا"
+      },
+      // Stats section
+      stats: {
+        completedProjects: "المشاريع المكتملة",
+        exportCountries: "دول التصدير",
+        customerSatisfaction: "رضا العملاء",
+        yearsExperience: "سنوات الخبرة"
+      },
+      // Filter section
+      filters: {
+        all: "الكل",
+        hotel: "فندق ومنتجع",
+        corporate: "شركات",
+        restaurant: "مطعم",
+        residential: "سكني",
+        commercial: "تجاري",
+        entertainment: "ترفيه"
+      },
+      // Project card
+      project: {
+        viewDetails: "عرض التفاصيل",
+        location: "الموقع",
+        year: "السنة",
+        category: "الفئة"
+      },
+      // CTA section
+      cta: {
+        title: "انضم إلى مراجعنا",
+        subtitle: "بعد آلاف المشاريع الناجحة، حان الوقت لمساحة معيشتك الخارجية التي تحلم بها.",
+        startProject: "ابدأ مشروعك"
+      }
+    },
+
+    // Contact Section translations
+    contactSection: {
+      badge: "اتصل بنا",
+      title: "دعنا نحقق مشروع أحلامك معاً",
+      subtitle: "مع 15 عاماً من الخبرة وفريق الخبراء لدينا، نقدم حلولاً مخصصة. اتصل بنا فوراً للفحص المجاني وعرض السعر التفصيلي.",
+      methods: {
+        phone: {
+          title: "الهاتف",
+          description: "اتصل الآن",
+          action: "اتصل"
+        },
+        whatsapp: {
+          title: "واتساب",
+          description: "رسالة فورية",
+          action: "إرسال رسالة"
+        },
+        email: {
+          title: "البريد الإلكتروني",
+          description: "معلومات مفصلة",
+          action: "إرسال بريد إلكتروني"
+        },
+        appointment: {
+          title: "موعد",
+          description: "فحص مجاني",
+          action: "حجز موعد"
+        }
+      },
+      stats: {
+        happyCustomers: "عملاء سعداء",
+        yearsExperience: "سنوات الخبرة",
+        satisfaction: "الرضا",
+        provinces: "خدمة المحافظة"
+      },
+      info: {
+        title: "معلومات الاتصال",
+        phoneLabel: "الهاتف الرئيسي",
+        emailLabel: "البريد الإلكتروني",
+        locationLabel: "على مستوى البلاد",
+        provincesLabel: "خدمة 81 محافظة"
+      },
+      hours: {
+        title: "ساعات العمل",
+        weekdays: "الاثنين - الجمعة",
+        saturday: "السبت",
+        sunday: "الأحد",
+        closed: "مغلق"
+      },
+      quickAccess: {
+        title: "وصول سريع",
+        freeQuote: "احصل على عرض سعر مجاني",
+        referenceProjects: "مشاريع مرجعية",
+        downloadCatalog: "تحميل الكتالوج"
+      }
+    },
+
+    // AR Hero translations
+    arHero: {
+      badge: "تقنية الواقع المعزز",
+      title: "تجربة البرجولا مع",
+      titleHighlight: "الواقع المعزز",
+      subtitle: "شاهد أنظمة البرجولا الخاصة بنا في مساحتك الخاصة. اختبر منتجاتنا بتقنية AR قبل الشراء.",
+      startDemo: "بدء عرض AR",
+      downloadApp: "تحميل التطبيق المحمول",
+      features: {
+        mobile: {
+          title: "متوافق مع الجوال",
+          description: "دعم iOS و Android"
+        },
+        realistic: {
+          title: "عرض واقعي",
+          description: "مقياس وتفاصيل 1:1"
+        },
+        easy: {
+          title: "سهل الاستخدام",
+          description: "ابدأ بنقرة واحدة"
+        }
+      }
+    },
+
+    // Export Products translations
+    exportProducts: {
+      exportReady: "جاهز للتصدير",
+      features: "الميزات",
+      targetMarkets: "الأسواق المستهدفة",
+      infoCards: {
+        ceCertified: {
+          title: "معتمد CE",
+          description: "جميع منتجاتنا معتمدة CE وفقاً للمعايير الأوروبية"
+        },
+        secureShipping: {
+          title: "شحن آمن",
+          description: "يتم تقليل مخاطر التلف مع تغليف التصدير الخاص"
+        },
+        worldwide: {
+          title: "عالمي",
+          description: "آلاف المنتجات التي تم شحنها بنجاح إلى أكثر من 50 دولة"
+        }
+      }
+    },
+
+    // Quote Form translations
+    quoteForm: {
+      title: "نموذج عرض السعر",
+      subtitle: "يرجى ملء النموذج لإعداد عرض سعر مخصص لك",
+      name: "الاسم الكامل",
+      email: "البريد الإلكتروني",
+      phone: "الهاتف",
+      company: "الشركة",
+      country: "البلد",
+      countryPlaceholder: "اختر البلد",
+      productType: "نوع المنتج",
+      productTypePlaceholder: "اختر نوع المنتج",
+      projectType: "نوع المشروع",
+      projectTypePlaceholder: "اختر نوع المشروع",
+      area: "المساحة (م²)",
+      areaPlaceholder: "متر مربع تقريبي",
+      budget: "الميزانية",
+      budgetPlaceholder: "اختر الميزانية",
+      timeline: "الجدول الزمني",
+      timelinePlaceholder: "اختر الجدول الزمني",
+      description: "الوصف",
+      descriptionPlaceholder: "شارك تفاصيل حول مشروعك...",
+      newsletter: "أريد الاشتراك في النشرة الإخبارية",
+      submit: "إرسال عرض السعر",
+      productTypes: {
+        bioclimatic: "برجولا بيوكليماتيك",
+        fixed: "برجولا ثابتة",
+        glass: "الأنظمة الزجاجية",
+        winterGarden: "الحديقة الشتوية",
+        sunBreaker: "كاسر الشمس",
+        zipScreen: "ستارة زيب",
+        combination: "مزيج"
+      },
+      projectTypes: {
+        residential: "سكني",
+        commercial: "تجاري",
+        hotel: "فندق",
+        office: "مكتب",
+        public: "عام"
+      },
+      budgets: {
+        "10k-25k": "10,000 - 25,000 TL",
+        "25k-50k": "25,000 - 50,000 TL",
+        "50k-100k": "50,000 - 100,000 TL",
+        "100k+": "100,000 TL+",
+        discuss: "دعنا نناقش"
+      },
+      timelines: {
+        asap: "في أقرب وقت ممكن",
+        "1-3months": "خلال 1-3 أشهر",
+        "3-6months": "خلال 3-6 أشهر",
+        "6months+": "6 أشهر وأكثر",
+        planning: "في مرحلة التخطيط"
+      },
+      countries: {
+        tr: "تركيا",
+        de: "ألمانيا",
+        fr: "فرنسا",
+        it: "إيطاليا",
+        es: "إسبانيا",
+        ae: "الإمارات العربية المتحدة",
+        sa: "المملكة العربية السعودية",
+        other: "أخرى"
+      },
+      emailSubject: "طلب عرض سعر جديد -",
+      emailBody: {
+        title: "طلب عرض سعر جديد",
+        personalInfo: "المعلومات الشخصية:",
+        projectDetails: "تفاصيل المشروع:",
+        projectDescription: "وصف المشروع:",
+        newsletterLabel: "النشرة الإخبارية:",
+        yes: "نعم",
+        no: "لا",
+        notSpecified: "غير محدد"
+      }
+    },
+
   },
   de: {
     // Navigation
@@ -1086,6 +2768,28 @@ export const translations = {
       zipScreenManualDesc: "Wirtschaftlich, langlebig",
       zipScreenSmart: "Intelligenter Zip-Screen",
       zipScreenSmartDesc: "Sensorsteuerung, automatisch",
+      // Header specific
+      menu: "Menü",
+      languageSelection: "Sprachauswahl",
+      bioclimaticTitle: "Bioklimatische Systeme",
+      bioclimaticDesc: "105° drehbare Lamellen",
+      glassTitle: "Glassysteme",
+      glassDesc: "Rahmenloses Schiebesystem",
+      menuDescriptions: {
+        pergola: "Alle Pergola-Modelle ansehen",
+        glass: "Alle Glassystem-Modelle ansehen",
+        winterGarden: "Geschlossene Raumlösungen für ganzjährige Nutzung",
+        sunBreaker: "Moderne Sonnenschutzsysteme für Energieeinsparung und Komfort",
+        zipScreen: "Windbeständige Zip-Screen-Systeme für Außenschutz",
+        catalog: "Wählen Sie das Katalogformat, das Ihren Bedürfnissen entspricht, und laden Sie es sofort herunter",
+        arDemo: "Sehen Sie unsere Pergola-Systeme in Ihrem eigenen Raum",
+        export: "Wir exportieren Premium-Pergola- und Glassysteme in alle Ecken der Welt",
+        getQuote: "Füllen Sie das Formular aus, um ein individuelles Angebot für Sie zu erstellen",
+        about: "Seit 2008 spezialisieren wir uns auf Außenwohnräume",
+        references: "Wir fügen Außenwohnräumen Wert hinzu mit Projekten, die wir in der Türkei und auf der ganzen Welt abgeschlossen haben",
+        blog: "Branchennachrichten, Trends und spezielle Inhalte",
+        contact: "Mit unserer 15-jährigen Erfahrung und unserem Expertenteam bieten wir maßgeschneiderte Lösungen"
+      }
     },
     // Hero Section
     hero: {
@@ -1264,7 +2968,363 @@ export const translations = {
         izmir: "Izmir",
         ankara: "Ankara"
       }
-    }
+    },
+
+    // Quote Page translations
+    quotePage: {
+      hero: {
+        badge: "Kostenlose Inspektion und Angebot",
+        title: "Erhalten Sie Ihr",
+        titleHighlight: "Individuelles Angebot",
+        titleSuffix: "",
+        subtitle: "Unser Expertenteam führt kostenlose Inspektionen durch und erstellt detaillierte Angebote, um Ihnen die beste Lösung anzubieten.",
+        stats: {
+          completedProjects: "Abgeschlossene Projekte",
+          yearsExperience: "Jahre Erfahrung",
+          responseTime: "Stunden Antwortzeit",
+          satisfaction: "Kundenzufriedenheit"
+        }
+      },
+      advantages: {
+        title: "Warum sollten Sie uns wählen?",
+        subtitle: "Wir machen den Unterschied mit unserer Erfahrung in der Branche und unserem kundenorientierten Ansatz",
+        warranty: {
+          title: "15 Jahre Garantie",
+          description: "Langfristige Garantie auf alle unsere Produkte"
+        },
+        freeInspection: {
+          title: "Kostenlose Inspektion",
+          description: "Professionelle Vor-Ort-Inspektion"
+        },
+        expertTeam: {
+          title: "Expertenteam",
+          description: "15+ Jahre erfahrenes Montageteam"
+        },
+        support: {
+          title: "24/7 Support",
+          description: "Wir sind immer für Sie da"
+        }
+      },
+      process: {
+        title: "Angebotsanfrageprozess",
+        subtitle: "Erhalten Sie ein professionelles Angebot für Ihr Projekt in 4 einfachen Schritten",
+        steps: {
+          form: {
+            title: "Angebotsformular",
+            description: "Teilen Sie Ihre detaillierten Informationen"
+          },
+          inspection: {
+            title: "Kostenlose Inspektion",
+            description: "Unsere Experten führen eine Vor-Ort-Inspektion durch"
+          },
+          presentation: {
+            title: "Angebotspräsentation",
+            description: "Individuelles Angebot wird für Sie erstellt"
+          },
+          implementation: {
+            title: "Umsetzung",
+            description: "Professionelle Installation wird durchgeführt"
+          }
+        }
+      },
+      form: {
+        title: "Angebotsformular",
+        subtitle: "Bitte füllen Sie das untenstehende Formular aus, wir werden uns so schnell wie möglich bei Ihnen melden.",
+        firstName: "Vorname",
+        lastName: "Nachname",
+        firstNamePlaceholder: "Ihr Vorname",
+        lastNamePlaceholder: "Ihr Nachname",
+        phone: "Telefon",
+        email: "E-Mail",
+        city: "Stadt",
+        cityPlaceholder: "Stadt auswählen",
+        interestedProducts: "Produkte, für die Sie sich interessieren",
+        applicationArea: "Anwendungsbereich (m²)",
+        areaPlaceholder: "Ungefähre Quadratmeter",
+        budget: "Budgetbereich",
+        budgetPlaceholder: "Budgetbereich auswählen",
+        additionalInfo: "Zusätzliche Informationen",
+        additionalInfoPlaceholder: "Teilen Sie Details über Ihr Projekt...",
+        privacy: "Ich habe den KVKK-Offenlegungstext gelesen und akzeptiert.",
+        submit: "Angebotsanfrage senden",
+        cities: {
+          istanbul: "Istanbul",
+          ankara: "Ankara",
+          izmir: "Izmir",
+          bursa: "Bursa",
+          antalya: "Antalya",
+          other: "Andere"
+        },
+        budgets: {
+          "0-25000": "0 - 25.000 TL",
+          "25000-50000": "25.000 - 50.000 TL",
+          "50000-100000": "50.000 - 100.000 TL",
+          "100000+": "100.000 TL+"
+        }
+      },
+      contactInfo: {
+        title: "Kontaktinformationen",
+        phone: "Telefon",
+        email: "E-Mail",
+        address: "Adresse",
+        workingHours: "Arbeitszeiten"
+      },
+      guarantee: {
+        title: "Kostenlose Inspektionsgarantie",
+        description: "Nachdem Sie Ihr Angebotsformular eingereicht haben, kontaktieren wir Sie innerhalb von 24 Stunden und vereinbaren einen kostenlosen Inspektionstermin.",
+        response: "Antwort innerhalb von 24 Stunden",
+        inspection: "Kostenlose Vor-Ort-Inspektion",
+        quote: "Detailliertes Preisangebot"
+      },
+      quickContact: {
+        title: "Schneller Kontakt",
+        call: "Jetzt anrufen",
+        whatsapp: "WhatsApp"
+      },
+      trust: {
+        title: "Arbeiten Sie mit Vertrauen",
+        subtitle: "Sie sind mit unserer führenden Position in der Branche und unseren Referenzen abgesichert",
+        happyCustomers: "Zufriedene Kunden",
+        satisfactionRate: "Zufriedenheitsrate",
+        warranty: "Jahre Garantie"
+      }
+    },
+
+    // Footer translations
+    footer: {
+      companyDescription: "Türkei's führender Hersteller von Pergola- und Glassystemen. Wir erweitern Ihre Wohnräume mit Premium-Outdoor-Lösungen.",
+      products: "Unsere Produkte",
+      services: "Unsere Dienstleistungen",
+      contact: "Kontakt",
+      whatsappContact: "WhatsApp Kontakt",
+      copyright: "© 2025 {company}. Alle Rechte vorbehalten.",
+      company: "IDEA"
+    },
+
+    // References translations
+    references: {
+      // General
+      title: "Unsere Referenzprojekte",
+      subtitle: "Erfolgreiche Projekte, die wir mit diesem Service abgeschlossen haben",
+      viewAll: "Alle Referenzen anzeigen",
+      projectDetails: "Details anzeigen",
+      // Hero section
+      hero: {
+        badge: "Referenzen",
+        title: "Erfolgreiche Projekte",
+        subtitle: "Wir schaffen Mehrwert für Outdoor-Wohnräume mit Projekten, die wir in der Türkei und weltweit abgeschlossen haben.",
+        getQuote: "Angebot erhalten",
+        contact: "Kontakt aufnehmen"
+      },
+      // Stats section
+      stats: {
+        completedProjects: "Abgeschlossene Projekte",
+        exportCountries: "Exportländer",
+        customerSatisfaction: "Kundenzufriedenheit",
+        yearsExperience: "Jahre Erfahrung"
+      },
+      // Filter section
+      filters: {
+        all: "Alle",
+        hotel: "Hotel & Resort",
+        corporate: "Unternehmen",
+        restaurant: "Restaurant",
+        residential: "Wohnen",
+        commercial: "Kommerziell",
+        entertainment: "Unterhaltung"
+      },
+      // Project card
+      project: {
+        viewDetails: "Details anzeigen",
+        location: "Standort",
+        year: "Jahr",
+        category: "Kategorie"
+      },
+      // CTA section
+      cta: {
+        title: "Werden Sie Teil unserer Referenzen",
+        subtitle: "Nach Tausenden erfolgreichen Projekten ist es Zeit für Ihren Traum-Außenwohnbereich.",
+        startProject: "Starten Sie Ihr Projekt"
+      }
+    },
+
+    // Contact Section translations
+    contactSection: {
+      badge: "Kontakt",
+      title: "Lassen Sie uns Ihr Traumprojekt gemeinsam verwirklichen",
+      subtitle: "Mit unserer 15-jährigen Erfahrung und unserem Expertenteam bieten wir maßgeschneiderte Lösungen. Kontaktieren Sie uns sofort für kostenlose Inspektion und detailliertes Angebot.",
+      methods: {
+        phone: {
+          title: "Telefon",
+          description: "Jetzt anrufen",
+          action: "Anrufen"
+        },
+        whatsapp: {
+          title: "WhatsApp",
+          description: "Sofortnachricht",
+          action: "Nachricht senden"
+        },
+        email: {
+          title: "E-Mail",
+          description: "Detaillierte Informationen",
+          action: "E-Mail senden"
+        },
+        appointment: {
+          title: "Termin",
+          description: "Kostenlose Inspektion",
+          action: "Termin vereinbaren"
+        }
+      },
+      stats: {
+        happyCustomers: "Zufriedene Kunden",
+        yearsExperience: "Jahre Erfahrung",
+        satisfaction: "Zufriedenheit",
+        provinces: "Provinz-Service"
+      },
+      info: {
+        title: "Kontaktinformationen",
+        phoneLabel: "Haupttelefon",
+        emailLabel: "E-Mail",
+        locationLabel: "Landesweit",
+        provincesLabel: "81 Provinz-Service"
+      },
+      hours: {
+        title: "Arbeitszeiten",
+        weekdays: "Montag - Freitag",
+        saturday: "Samstag",
+        sunday: "Sonntag",
+        closed: "Geschlossen"
+      },
+      quickAccess: {
+        title: "Schnellzugriff",
+        freeQuote: "Kostenloses Angebot erhalten",
+        referenceProjects: "Referenzprojekte",
+        downloadCatalog: "Katalog herunterladen"
+      }
+    },
+
+    // AR Hero translations
+    arHero: {
+      badge: "AR-Technologie",
+      title: "Pergola-Erlebnis mit",
+      titleHighlight: "Erweiterte Realität",
+      subtitle: "Sehen Sie unsere Pergola-Systeme in Ihrem eigenen Raum. Testen Sie unsere Produkte mit AR-Technologie vor dem Kauf.",
+      startDemo: "AR-Demo starten",
+      downloadApp: "Mobile App herunterladen",
+      features: {
+        mobile: {
+          title: "Mobil kompatibel",
+          description: "iOS- und Android-Unterstützung"
+        },
+        realistic: {
+          title: "Realistische Ansicht",
+          description: "1:1 Maßstab und Details"
+        },
+        easy: {
+          title: "Einfach zu bedienen",
+          description: "Mit einem Klick starten"
+        }
+      }
+    },
+
+    // Export Products translations
+    exportProducts: {
+      exportReady: "Exportbereit",
+      features: "Merkmale",
+      targetMarkets: "Zielmärkte",
+      infoCards: {
+        ceCertified: {
+          title: "CE-zertifiziert",
+          description: "Alle unsere Produkte sind nach europäischen Standards CE-zertifiziert"
+        },
+        secureShipping: {
+          title: "Sicherer Versand",
+          description: "Das Schadensrisiko wird durch spezielle Exportverpackung minimiert"
+        },
+        worldwide: {
+          title: "Weltweit",
+          description: "Tausende von Produkten erfolgreich in über 50 Länder versendet"
+        }
+      }
+    },
+
+    // Quote Form translations
+    quoteForm: {
+      title: "Angebotsformular",
+      subtitle: "Bitte füllen Sie das Formular aus, um ein individuelles Angebot für Sie zu erstellen",
+      name: "Vollständiger Name",
+      email: "E-Mail",
+      phone: "Telefon",
+      company: "Unternehmen",
+      country: "Land",
+      countryPlaceholder: "Land auswählen",
+      productType: "Produkttyp",
+      productTypePlaceholder: "Produkttyp auswählen",
+      projectType: "Projekttyp",
+      projectTypePlaceholder: "Projekttyp auswählen",
+      area: "Fläche (m²)",
+      areaPlaceholder: "Ungefähre Quadratmeter",
+      budget: "Budget",
+      budgetPlaceholder: "Budget auswählen",
+      timeline: "Zeitplan",
+      timelinePlaceholder: "Zeitplan auswählen",
+      description: "Beschreibung",
+      descriptionPlaceholder: "Teilen Sie Details über Ihr Projekt...",
+      newsletter: "Ich möchte den Newsletter abonnieren",
+      submit: "Angebot senden",
+      productTypes: {
+        bioclimatic: "Bioklimatische Pergola",
+        fixed: "Feste Pergola",
+        glass: "Glassysteme",
+        winterGarden: "Wintergarten",
+        sunBreaker: "Sonnenschutz",
+        zipScreen: "Zip-Screen",
+        combination: "Kombination"
+      },
+      projectTypes: {
+        residential: "Wohngebäude",
+        commercial: "Gewerblich",
+        hotel: "Hotel",
+        office: "Büro",
+        public: "Öffentlich"
+      },
+      budgets: {
+        "10k-25k": "10.000 - 25.000 TL",
+        "25k-50k": "25.000 - 50.000 TL",
+        "50k-100k": "50.000 - 100.000 TL",
+        "100k+": "100.000 TL+",
+        discuss: "Lassen Sie uns besprechen"
+      },
+      timelines: {
+        asap: "So schnell wie möglich",
+        "1-3months": "Innerhalb von 1-3 Monaten",
+        "3-6months": "Innerhalb von 3-6 Monaten",
+        "6months+": "6 Monate und mehr",
+        planning: "In der Planungsphase"
+      },
+      countries: {
+        tr: "Türkei",
+        de: "Deutschland",
+        fr: "Frankreich",
+        it: "Italien",
+        es: "Spanien",
+        ae: "Vereinigte Arabische Emirate",
+        sa: "Saudi-Arabien",
+        other: "Andere"
+      },
+      emailSubject: "Neue Angebotsanfrage -",
+      emailBody: {
+        title: "Neue Angebotsanfrage",
+        personalInfo: "Persönliche Informationen:",
+        projectDetails: "Projektdetails:",
+        projectDescription: "Projektbeschreibung:",
+        newsletterLabel: "Newsletter:",
+        yes: "Ja",
+        no: "Nein",
+        notSpecified: "Nicht angegeben"
+      }
+    },
+
   },
   ru: {
     // Navigation
@@ -1332,6 +3392,28 @@ export const translations = {
       zipScreenManualDesc: "Экономичный, прочный",
       zipScreenSmart: "Умный Zip-Экран",
       zipScreenSmartDesc: "Управление датчиком, автоматический",
+      // Header specific
+      menu: "Меню",
+      bioclimaticTitle: "Биоклиматические Системы",
+      bioclimaticDesc: "Вращающиеся ламели 105°",
+      glassTitle: "Стеклянные Системы",
+      glassDesc: "Безрамная раздвижная система",
+      languageSelection: "Выбор языка",
+      menuDescriptions: {
+        pergola: "Посмотреть все модели пергол",
+        glass: "Посмотреть все модели стеклянных систем",
+        winterGarden: "Решения для закрытых пространств для круглогодичного использования",
+        sunBreaker: "Современные системы защиты от солнца для экономии энергии и комфорта",
+        zipScreen: "Ветроустойчивые системы zip-экранов для наружной защиты",
+        catalog: "Выберите формат каталога, который подходит вашим потребностям, и загрузите мгновенно",
+        arDemo: "Посмотрите наши системы пергол в вашем собственном пространстве",
+        export: "Мы экспортируем премиальные системы пергол и стекла во все уголки мира",
+        getQuote: "Заполните форму, чтобы подготовить индивидуальное предложение для вас",
+        about: "С 2008 года мы специализируемся на открытых жилых пространствах",
+        references: "Мы добавляем ценность открытым жилым пространствам с проектами, которые мы завершили в Турции и по всему миру",
+        blog: "Отраслевые новости, тенденции и специальный контент",
+        contact: "С нашим 15-летним опытом и командой экспертов мы предлагаем индивидуальные решения"
+      }
     },
     // Hero Section
     hero: {
@@ -1512,6 +3594,315 @@ export const translations = {
       }
     },
 
+    // Quote Page translations
+    quotePage: {
+      hero: {
+        badge: "Бесплатная инспекция и предложение",
+        title: "Получите ваше",
+        titleHighlight: "Индивидуальное предложение",
+        titleSuffix: "",
+        subtitle: "Наша команда экспертов проводит бесплатные инспекции и готовит детальные предложения, чтобы предложить вам наиболее подходящее решение.",
+        stats: {
+          completedProjects: "Завершенные проекты",
+          yearsExperience: "Лет опыта",
+          responseTime: "Часов время ответа",
+          satisfaction: "Удовлетворенность клиентов"
+        }
+      },
+      advantages: {
+        title: "Почему вы должны выбрать нас?",
+        subtitle: "Мы делаем разницу с нашим опытом в отрасли и нашим клиентоориентированным подходом",
+        warranty: {
+          title: "15 лет гарантии",
+          description: "Долгосрочная гарантия на всю нашу продукцию"
+        },
+        freeInspection: {
+          title: "Бесплатная инспекция",
+          description: "Профессиональная инспекция на месте"
+        },
+        expertTeam: {
+          title: "Команда экспертов",
+          description: "Команда установки с опытом 15+ лет"
+        },
+        support: {
+          title: "Поддержка 24/7",
+          description: "Мы всегда с вами"
+        }
+      },
+      process: {
+        title: "Процесс запроса предложения",
+        subtitle: "Получите профессиональное предложение для вашего проекта в 4 простых шага",
+        steps: {
+          form: {
+            title: "Форма предложения",
+            description: "Поделитесь вашей детальной информацией"
+          },
+          inspection: {
+            title: "Бесплатная инспекция",
+            description: "Наши эксперты проводят инспекцию на месте"
+          },
+          presentation: {
+            title: "Презентация предложения",
+            description: "Индивидуальное предложение готовится для вас"
+          },
+          implementation: {
+            title: "Реализация",
+            description: "Профессиональная установка выполняется"
+          }
+        }
+      },
+      form: {
+        title: "Форма предложения",
+        subtitle: "Пожалуйста, заполните форму ниже, мы свяжемся с вами как можно скорее.",
+        firstName: "Имя",
+        lastName: "Фамилия",
+        firstNamePlaceholder: "Ваше имя",
+        lastNamePlaceholder: "Ваша фамилия",
+        phone: "Телефон",
+        email: "Электронная почта",
+        city: "Город",
+        cityPlaceholder: "Выберите город",
+        interestedProducts: "Продукты, которые вас интересуют",
+        applicationArea: "Область применения (м²)",
+        areaPlaceholder: "Приблизительные квадратные метры",
+        budget: "Диапазон бюджета",
+        budgetPlaceholder: "Выберите диапазон бюджета",
+        additionalInfo: "Дополнительная информация",
+        additionalInfoPlaceholder: "Поделитесь деталями о вашем проекте...",
+        privacy: "Я прочитал и принимаю текст раскрытия информации KVKK.",
+        submit: "Отправить запрос предложения",
+        cities: {
+          istanbul: "Стамбул",
+          ankara: "Анкара",
+          izmir: "Измир",
+          bursa: "Бурса",
+          antalya: "Анталья",
+          other: "Другое"
+        },
+        budgets: {
+          "0-25000": "0 - 25,000 TL",
+          "25000-50000": "25,000 - 50,000 TL",
+          "50000-100000": "50,000 - 100,000 TL",
+          "100000+": "100,000 TL+"
+        }
+      },
+      contactInfo: {
+        title: "Контактная информация",
+        phone: "Телефон",
+        email: "Электронная почта",
+        address: "Адрес",
+        workingHours: "Рабочие часы"
+      },
+      guarantee: {
+        title: "Гарантия бесплатной инспекции",
+        description: "После того, как вы отправите форму предложения, мы свяжемся с вами в течение 24 часов и назначим бесплатную инспекцию.",
+        response: "Ответ в течение 24 часов",
+        inspection: "Бесплатная инспекция на месте",
+        quote: "Детальное ценовое предложение"
+      },
+      quickContact: {
+        title: "Быстрый контакт",
+        call: "Позвонить сейчас",
+        whatsapp: "WhatsApp"
+      },
+      trust: {
+        title: "Работайте с уверенностью",
+        subtitle: "Вы гарантированы нашим лидирующим положением в отрасли и нашими ссылками",
+        happyCustomers: "Счастливые клиенты",
+        satisfactionRate: "Уровень удовлетворенности",
+        warranty: "Лет гарантии"
+      }
+    },
+
+    // Footer translations
+    footer: {
+      companyDescription: "Ведущий производитель систем пергол и стекла в Турции. Мы расширяем ваши жилые пространства с премиальными наружными решениями.",
+      products: "Наши Продукты",
+      services: "Наши Услуги",
+      contact: "Контакты",
+      whatsappContact: "WhatsApp Контакт",
+      copyright: "© 2025 {company}. Все права защищены.",
+      company: "IDEA"
+    },
+
+    // Contact Section translations
+    contactSection: {
+      badge: "Контакты",
+      title: "Давайте Вместе Реализуем Ваш Проект Мечты",
+      subtitle: "С нашим 15-летним опытом и командой экспертов мы предлагаем индивидуальные решения. Свяжитесь с нами немедленно для бесплатной инспекции и детального предложения.",
+      methods: {
+        phone: {
+          title: "Телефон",
+          description: "Позвонить сейчас",
+          action: "Позвонить"
+        },
+        whatsapp: {
+          title: "WhatsApp",
+          description: "Мгновенное сообщение",
+          action: "Отправить сообщение"
+        },
+        email: {
+          title: "Электронная почта",
+          description: "Подробная информация",
+          action: "Отправить письмо"
+        },
+        appointment: {
+          title: "Назначение",
+          description: "Бесплатная инспекция",
+          action: "Забронировать встречу"
+        }
+      },
+      stats: {
+        happyCustomers: "Счастливые клиенты",
+        yearsExperience: "Лет опыта",
+        satisfaction: "Удовлетворенность",
+        provinces: "Провинциальный сервис"
+      },
+      info: {
+        title: "Контактная информация",
+        phoneLabel: "Основной телефон",
+        emailLabel: "Электронная почта",
+        locationLabel: "По всей стране",
+        provincesLabel: "Сервис в 81 провинции"
+      },
+      hours: {
+        title: "Рабочие часы",
+        weekdays: "Понедельник - Пятница",
+        saturday: "Суббота",
+        sunday: "Воскресенье",
+        closed: "Закрыто"
+      },
+      quickAccess: {
+        title: "Быстрый доступ",
+        freeQuote: "Получить бесплатное предложение",
+        referenceProjects: "Референсные проекты",
+        downloadCatalog: "Скачать каталог"
+      }
+    },
+
+
+    // AR Hero translations
+    arHero: {
+      badge: "AR-технология",
+      title: "Опыт перголы с",
+      titleHighlight: "Дополненной реальностью",
+      subtitle: "Посмотрите наши системы пергол в вашем собственном пространстве. Протестируйте наши продукты с AR-технологией перед покупкой.",
+      startDemo: "Запустить AR-демо",
+      downloadApp: "Скачать мобильное приложение",
+      features: {
+        mobile: {
+          title: "Мобильная совместимость",
+          description: "Поддержка iOS и Android"
+        },
+        realistic: {
+          title: "Реалистичный вид",
+          description: "Масштаб и детали 1:1"
+        },
+        easy: {
+          title: "Легко использовать",
+          description: "Начать одним кликом"
+        }
+      }
+    },
+
+    // Export Products translations
+    exportProducts: {
+      exportReady: "Готов к экспорту",
+      features: "Особенности",
+      targetMarkets: "Целевые рынки",
+      infoCards: {
+        ceCertified: {
+          title: "CE-сертифицировано",
+          description: "Вся наша продукция сертифицирована CE согласно европейским стандартам"
+        },
+        secureShipping: {
+          title: "Безопасная доставка",
+          description: "Риск повреждения минимизирован специальной экспортной упаковкой"
+        },
+        worldwide: {
+          title: "По всему миру",
+          description: "Тысячи продуктов успешно отправлены в более чем 50 стран"
+        }
+      }
+    },
+
+    // Quote Form translations
+    quoteForm: {
+      title: "Форма предложения",
+      subtitle: "Пожалуйста, заполните форму, чтобы подготовить индивидуальное предложение для вас",
+      name: "Полное имя",
+      email: "Электронная почта",
+      phone: "Телефон",
+      company: "Компания",
+      country: "Страна",
+      countryPlaceholder: "Выберите страну",
+      productType: "Тип продукта",
+      productTypePlaceholder: "Выберите тип продукта",
+      projectType: "Тип проекта",
+      projectTypePlaceholder: "Выберите тип проекта",
+      area: "Площадь (м²)",
+      areaPlaceholder: "Приблизительные квадратные метры",
+      budget: "Бюджет",
+      budgetPlaceholder: "Выберите бюджет",
+      timeline: "Временная шкала",
+      timelinePlaceholder: "Выберите временную шкалу",
+      description: "Описание",
+      descriptionPlaceholder: "Поделитесь деталями о вашем проекте...",
+      newsletter: "Я хочу подписаться на рассылку",
+      submit: "Отправить предложение",
+      productTypes: {
+        bioclimatic: "Биоклиматическая пергола",
+        fixed: "Фиксированная пергола",
+        glass: "Стеклянные системы",
+        winterGarden: "Зимний сад",
+        sunBreaker: "Солнцезащита",
+        zipScreen: "Zip-экран",
+        combination: "Комбинация"
+      },
+      projectTypes: {
+        residential: "Жилой",
+        commercial: "Коммерческий",
+        hotel: "Отель",
+        office: "Офис",
+        public: "Общественный"
+      },
+      budgets: {
+        "10k-25k": "10,000 - 25,000 TL",
+        "25k-50k": "25,000 - 50,000 TL",
+        "50k-100k": "50,000 - 100,000 TL",
+        "100k+": "100,000 TL+",
+        discuss: "Давайте обсудим"
+      },
+      timelines: {
+        asap: "Как можно скорее",
+        "1-3months": "В течение 1-3 месяцев",
+        "3-6months": "В течение 3-6 месяцев",
+        "6months+": "6 месяцев и более",
+        planning: "На стадии планирования"
+      },
+      countries: {
+        tr: "Турция",
+        de: "Германия",
+        fr: "Франция",
+        it: "Италия",
+        es: "Испания",
+        ae: "Объединенные Арабские Эмираты",
+        sa: "Саудовская Аравия",
+        other: "Другое"
+      },
+      emailSubject: "Новый запрос предложения -",
+      emailBody: {
+        title: "Новый запрос предложения",
+        personalInfo: "Личная информация:",
+        projectDetails: "Детали проекта:",
+        projectDescription: "Описание проекта:",
+        newsletterLabel: "Рассылка:",
+        yes: "Да",
+        no: "Нет",
+        notSpecified: "Не указано"
+      }
+    },
+
     // References translations
     references: {
       // General
@@ -1557,9 +3948,26 @@ export const translations = {
         subtitle: "После тысяч успешных проектов настало время для вашего идеального открытого жилого пространства.",
         startProject: "Начать Проект"
       }
+    },
+
+    // Product Detail translations
+    productDetail: {
+      specs: {
+        title: "Технические Характеристики",
+        subtitle: "Подробные технические характеристики и размеры нашего продукта"
+      },
+      features: {
+        defaultTitle: "Управление и Автоматизация",
+        defaultSubtitle: "Разработано так, чтобы вы могли легко управлять своим продуктом из любой точки мира"
+      },
+      hero: {
+        premiumBadge: "Премиум Продукт",
+        getQuote: "Получить предложение",
+        downloadCatalog: "Скачать каталог"
+      }
     }
-  },
-} as const
+  }
+}
 
 export type TranslationKey = keyof typeof translations.tr
 export type NestedTranslationKey<T> = T extends object

@@ -36,21 +36,21 @@ export function CatalogHero() {
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance">
-              Ürün Katalogları
+              {t("catalog.categories.title")}
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 text-pretty">
-              Tüm ürün gamımızı detaylı teknik özellikler, görseller ve bilgiler ile inceleyin
+              {t("catalog.categories.subtitle")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button size="lg" className="bg-primary hover:bg-primary-600 text-primary-foreground">
                 <Download className="h-5 w-5 mr-2" />
-                Genel Katalog İndir
+                {t("catalog.categories.downloadCatalog")}
               </Button>
               <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm">
                 <BookOpen className="h-5 w-5 mr-2" />
-                Online Görüntüle
+                {t("catalog.categories.viewProducts")}
               </Button>
             </div>
           </div>
@@ -59,19 +59,19 @@ export function CatalogHero() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center p-6 bg-white/5 backdrop-blur rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
               <div className="text-4xl font-bold text-primary mb-2">15+</div>
-              <p className="text-sm text-gray-300 font-medium">Ürün Kategorisi</p>
+              <p className="text-sm text-gray-300 font-medium">{t("catalog.categories.mainCategory")}</p>
             </div>
             <div className="text-center p-6 bg-white/5 backdrop-blur rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
               <div className="text-4xl font-bold text-primary mb-2">200+</div>
-              <p className="text-sm text-gray-300 font-medium">Ürün Modeli</p>
+              <p className="text-sm text-gray-300 font-medium">{t("catalog.categories.subCategories")}</p>
             </div>
             <div className="text-center p-6 bg-white/5 backdrop-blur rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
               <div className="text-4xl font-bold text-primary mb-2">5</div>
-              <p className="text-sm text-gray-300 font-medium">Dil Seçeneği</p>
+              <p className="text-sm text-gray-300 font-medium">{t("catalog.categories.languages")}</p>
             </div>
             <div className="text-center p-6 bg-white/5 backdrop-blur rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
               <div className="text-4xl font-bold text-primary mb-2">24/7</div>
-              <p className="text-sm text-gray-300 font-medium">Online Erişim</p>
+              <p className="text-sm text-gray-300 font-medium">{t("catalog.categories.onlineAccess")}</p>
             </div>
           </div>
 

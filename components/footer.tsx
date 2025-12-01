@@ -1,10 +1,14 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { MessageCircle, Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Youtube } from "lucide-react"
 import { contactInfo } from "@/lib/contact-info"
+import { useLanguage } from "@/contexts/language-context"
 
 export function Footer() {
+  const { t } = useLanguage()
   return (
     <footer className="bg-gradient-to-br from-white via-primary/5 to-primary/10 border-t border-gray-200">
       <div className="container mx-auto px-4 py-16">
@@ -23,8 +27,7 @@ export function Footer() {
               <span className="font-bold text-3xl text-gray-900 group-hover:text-primary transition-colors">IDEA</span>
             </Link>
             <p className="text-sm text-gray-600 leading-relaxed">
-              Türkiye'nin önde gelen pergola ve cam sistemleri üreticisi. Premium outdoor çözümler ile yaşam
-              alanlarınızı genişletiyoruz.
+              {t("footer.companyDescription")}
             </p>
             <div className="flex space-x-2">
               <Link 
@@ -64,65 +67,65 @@ export function Footer() {
 
           {/* Products */}
           <div className="space-y-5">
-            <h3 className="font-bold text-xl text-gray-900">Ürünlerimiz</h3>
+            <h3 className="font-bold text-xl text-gray-900">{t("footer.products")}</h3>
             <nav className="flex flex-col space-y-3">
               <Link href="/pergola" className="text-sm text-gray-600 hover:text-primary hover:translate-x-1 transition-all duration-200 flex items-center group">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary mr-2"></span>
-                Pergola Sistemleri
+                {t("nav.pergolaSystems")}
               </Link>
               <Link href="/cam-sistemleri" className="text-sm text-gray-600 hover:text-primary hover:translate-x-1 transition-all duration-200 flex items-center group">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary mr-2"></span>
-                Cam Sistemleri
+                {t("nav.glassSystems")}
               </Link>
               <Link href="/kis-bahcesi" className="text-sm text-gray-600 hover:text-primary hover:translate-x-1 transition-all duration-200 flex items-center group">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary mr-2"></span>
-                Kış Bahçesi
+                {t("nav.winterGarden")}
               </Link>
               <Link href="/gunes-kiriclari" className="text-sm text-gray-600 hover:text-primary hover:translate-x-1 transition-all duration-200 flex items-center group">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary mr-2"></span>
-                Güneş Kırıcılar
+                {t("nav.sunBreakers")}
               </Link>
               <Link href="/zip-perde" className="text-sm text-gray-600 hover:text-primary hover:translate-x-1 transition-all duration-200 flex items-center group">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary mr-2"></span>
-                Zip Perde
+                {t("nav.zipScreen")}
               </Link>
             </nav>
           </div>
 
           {/* Services */}
           <div className="space-y-5">
-            <h3 className="font-bold text-xl text-gray-900">Hizmetlerimiz</h3>
+            <h3 className="font-bold text-xl text-gray-900">{t("footer.services")}</h3>
             <nav className="flex flex-col space-y-3">
               <Link href="/katalog" className="text-sm text-gray-600 hover:text-primary hover:translate-x-1 transition-all duration-200 flex items-center group">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary mr-2"></span>
-                Katalog İndir
+                {t("nav.catalog")}
               </Link>
               <Link href="/ar-demo" className="text-sm text-gray-600 hover:text-primary hover:translate-x-1 transition-all duration-200 flex items-center group">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary mr-2"></span>
-                AR Demo
+                {t("nav.arDemo")}
               </Link>
               <Link href="/export" className="text-sm text-gray-600 hover:text-primary hover:translate-x-1 transition-all duration-200 flex items-center group">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary mr-2"></span>
-                Export & Distribütörlük
+                {t("nav.export")}
               </Link>
               <Link href="/teklif-al" className="text-sm text-gray-600 hover:text-primary hover:translate-x-1 transition-all duration-200 flex items-center group">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary mr-2"></span>
-                Teklif Al
+                {t("nav.getQuote")}
               </Link>
               <Link href="/referanslar" className="text-sm text-gray-600 hover:text-primary hover:translate-x-1 transition-all duration-200 flex items-center group">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary mr-2"></span>
-                Referanslar
+                {t("nav.references")}
               </Link>
               <Link href="/iletisim" className="text-sm text-gray-600 hover:text-primary hover:translate-x-1 transition-all duration-200 flex items-center group">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary mr-2"></span>
-                İletişim
+                {t("nav.contact")}
               </Link>
             </nav>
           </div>
 
           {/* Contact */}
           <div className="space-y-5">
-            <h3 className="font-bold text-xl text-gray-900">İletişim</h3>
+            <h3 className="font-bold text-xl text-gray-900">{t("footer.contact")}</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3 text-sm group">
                 <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
@@ -148,14 +151,16 @@ export function Footer() {
                 className="flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-200"
               >
                 <MessageCircle className="h-5 w-5 mr-2" />
-                WhatsApp İletişim
+                {t("footer.whatsappContact")}
               </Link>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-300 mt-12 pt-8 text-center">
-          <p className="text-sm text-gray-600">© 2025 <span className="font-semibold text-gray-900">IDEA</span>. Tüm hakları saklıdır.</p>
+          <p className="text-sm text-gray-600">
+            {t("footer.copyright").replace("{company}", t("footer.company"))}
+          </p>
         </div>
       </div>
     </footer>

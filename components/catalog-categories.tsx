@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Download, ArrowRight, FileText, Zap, Layers } from "lucide-react"
 import Link from "next/link"
+import { useLanguage } from "@/contexts/language-context"
 import {
   getPergolaSubCategories,
   getGlassSystemsSubCategories,
@@ -20,7 +21,7 @@ const mainCategories = [
     title: "Pergola Sistemleri",
     description: "Bioklimatik, motorlu ve rolling roof pergola çözümleri",
     image: "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
-    href: "/pergola/bioklimatik",
+    href: "/pergola/bioklimatik-sistemler",
     icon: Zap,
     subCategories: getPergolaSubCategories(),
   },
@@ -67,6 +68,8 @@ const mainCategories = [
  * Ana kategoriler ve alt kategorilerin kataloglarını gösterir
  */
 export function CatalogCategories() {
+  const { t } = useLanguage()
+  
   return (
     <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -74,13 +77,13 @@ export function CatalogCategories() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
             <FileText className="h-4 w-4 text-black" />
-            <span className="text-sm font-medium text-black">Kategori Bazlı Kataloglar</span>
+            <span className="text-sm font-medium text-black">{t("catalog.categories.badge")}</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-            Ürün Katalogları
+            {t("catalog.categories.title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-            Her kategori için özel hazırlanmış detaylı kataloglarımızı inceleyin
+            {t("catalog.categories.subtitle")}
           </p>
         </div>
 
@@ -104,7 +107,7 @@ export function CatalogCategories() {
                     <div className="absolute top-6 right-6">
                       <div className="bg-white/95 backdrop-blur px-4 py-2 rounded-full shadow-lg">
                         <span className="text-sm font-bold text-foreground">
-                          {category.subCategories.length} Alt Kategori
+                          {category.subCategories.length} {t("catalog.categories.subCategories")}
                         </span>
                       </div>
                     </div>
@@ -114,7 +117,7 @@ export function CatalogCategories() {
                   <div className={`p-8 md:p-12 flex flex-col justify-center bg-card ${index % 2 === 0 ? 'order-2' : 'order-1'}`}>
                     <div className="inline-flex w-fit items-center gap-2 px-4 py-2 bg-primary/10 rounded-lg mb-6">
                       <category.icon className="h-5 w-5 text-black" />
-                      <span className="text-sm font-semibold text-black">Ana Kategori</span>
+                      <span className="text-sm font-semibold text-black">{t("catalog.categories.mainCategory")}</span>
                     </div>
 
                     <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -128,12 +131,12 @@ export function CatalogCategories() {
                       <Button size="lg" asChild>
                         <Link href={category.href}>
                           <ArrowRight className="h-5 w-5 mr-2" />
-                          Ürünleri Görüntüle
+                          {t("catalog.categories.viewProducts")}
                         </Link>
                       </Button>
                       <Button size="lg" variant="outline">
                         <Download className="h-5 w-5 mr-2" />
-                        Katalog İndir
+                        {t("catalog.categories.downloadCatalog")}
                       </Button>
                     </div>
                   </div>
@@ -190,7 +193,7 @@ export function CatalogCategories() {
                         </Button>
                         <Button size="sm" className="flex-1" asChild>
                           <Link href={subCat.href}>
-                            Detaylar
+                            {t("catalog.categories.details")}
                             <ArrowRight className="h-4 w-4 ml-2" />
                           </Link>
                         </Button>

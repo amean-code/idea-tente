@@ -1,25 +1,28 @@
-import { Cable as Cube, Palette, Ruler, Share2 } from "lucide-react"
+"use client"
 
-const features = [
+import { Cable as Cube, Palette, Ruler, Share2 } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
+
+const getFeatures = (t: (key: string) => string) => [
   {
     icon: Cube,
-    title: "3D Görselleştirme",
-    description: "Pergola sistemlerini 3 boyutlu olarak mekanınızda görün ve farklı açılardan inceleyin.",
+    title: t("arDemo.features.visualization.title"),
+    description: t("arDemo.features.visualization.description"),
   },
   {
     icon: Palette,
-    title: "Renk Seçenekleri",
-    description: "Farklı renk ve malzeme seçeneklerini anında değiştirin ve karşılaştırın.",
+    title: t("arDemo.features.colors.title"),
+    description: t("arDemo.features.colors.description"),
   },
   {
     icon: Ruler,
-    title: "Ölçü Kontrolü",
-    description: "Gerçek ölçülerde görüntüleme ile mekanınıza uygunluğunu kontrol edin.",
+    title: t("arDemo.features.measurement.title"),
+    description: t("arDemo.features.measurement.description"),
   },
   {
     icon: Share2,
-    title: "Paylaşım",
-    description: "AR görüntülerinizi kaydedin ve aileniz veya mimarınızla paylaşın.",
+    title: t("arDemo.features.share.title"),
+    description: t("arDemo.features.share.description"),
   },
 ]
 
@@ -27,15 +30,18 @@ const features = [
  * AR Demo özellikleri bölümü - modern kart tasarımı
  */
 export function ARFeatures() {
+  const { t } = useLanguage()
+  const features = getFeatures(t)
+  
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 text-balance">
-            AR Demo Özellikleri
+            {t("arDemo.features.title")}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">
-            Gelişmiş artırılmış gerçeklik teknolojisi ile IDEA sistemlerimizi deneyimleyin
+            {t("arDemo.features.subtitle")}
           </p>
         </div>
 

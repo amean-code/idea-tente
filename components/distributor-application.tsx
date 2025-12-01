@@ -11,8 +11,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { MessageCircle, Send } from "lucide-react"
 import { contactInfo } from "@/lib/contact-info"
+import { useLanguage } from "@/contexts/language-context"
 
 export function DistributorApplication() {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     companyName: "",
     contactPerson: "",
@@ -36,10 +38,10 @@ export function DistributorApplication() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-            Distribütör Başvuru Formu
+            {t("distributor.application.title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-            Global ağımıza katılmak için başvuru formunu doldurun. En kısa sürede sizinle iletişime geçeceğiz.
+            {t("distributor.application.subtitle")}
           </p>
         </div>
 
@@ -49,7 +51,7 @@ export function DistributorApplication() {
             <div className="space-y-6">
               <Card>
                 <CardHeader>
-                  <CardTitle>İletişim Bilgileri</CardTitle>
+                  <CardTitle>{t("distributor.application.contactInfo")}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-center space-x-3">
@@ -71,7 +73,7 @@ export function DistributorApplication() {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Başvuru Süreci</CardTitle>
+                  <CardTitle>{t("distributor.application.applicationProcess")}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
@@ -79,25 +81,25 @@ export function DistributorApplication() {
                       <div className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold">
                         1
                       </div>
-                      <span className="text-sm">Başvuru formu</span>
+                      <span className="text-sm">{t("distributor.application.process.step1")}</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <div className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold">
                         2
                       </div>
-                      <span className="text-sm">Değerlendirme</span>
+                      <span className="text-sm">{t("distributor.application.process.step2")}</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <div className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold">
                         3
                       </div>
-                      <span className="text-sm">Görüşme</span>
+                      <span className="text-sm">{t("distributor.application.process.step3")}</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <div className="w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-bold">
                         4
                       </div>
-                      <span className="text-sm">Anlaşma</span>
+                      <span className="text-sm">{t("distributor.application.process.step4")}</span>
                     </div>
                   </div>
                 </CardContent>
@@ -108,13 +110,13 @@ export function DistributorApplication() {
             <div className="lg:col-span-2">
               <Card>
                 <CardHeader>
-                  <CardTitle>Başvuru Formu</CardTitle>
+                  <CardTitle>{t("distributor.application.form.title")}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="companyName">Şirket Adı *</Label>
+                        <Label htmlFor="companyName">{t("distributor.application.form.companyName")} *</Label>
                         <Input
                           id="companyName"
                           value={formData.companyName}
@@ -124,7 +126,7 @@ export function DistributorApplication() {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="contactPerson">İletişim Kişisi *</Label>
+                        <Label htmlFor="contactPerson">{t("distributor.application.form.contactPerson")} *</Label>
                         <Input
                           id="contactPerson"
                           value={formData.contactPerson}
@@ -136,7 +138,7 @@ export function DistributorApplication() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="email">E-posta *</Label>
+                        <Label htmlFor="email">{t("distributor.application.form.email")} *</Label>
                         <Input
                           id="email"
                           type="email"
@@ -147,7 +149,7 @@ export function DistributorApplication() {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="phone">Telefon *</Label>
+                        <Label htmlFor="phone">{t("distributor.application.form.phone")} *</Label>
                         <Input
                           id="phone"
                           value={formData.phone}
@@ -159,10 +161,10 @@ export function DistributorApplication() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="country">Ülke *</Label>
+                        <Label htmlFor="country">{t("distributor.application.form.country")} *</Label>
                         <Select onValueChange={(value) => setFormData({ ...formData, country: value })}>
                           <SelectTrigger>
-                            <SelectValue placeholder="Ülke seçin" />
+                            <SelectValue placeholder={t("distributor.application.form.selectCountry")} />
                           </SelectTrigger>
                           <SelectContent>
                             <SelectItem value="germany">Almanya</SelectItem>
@@ -177,7 +179,7 @@ export function DistributorApplication() {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="city">Şehir *</Label>
+                        <Label htmlFor="city">{t("distributor.application.form.city")} *</Label>
                         <Input
                           id="city"
                           value={formData.city}
@@ -189,10 +191,10 @@ export function DistributorApplication() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="experience">Sektör Deneyimi</Label>
+                        <Label htmlFor="experience">{t("distributor.application.form.experience")}</Label>
                         <Select onValueChange={(value) => setFormData({ ...formData, experience: value })}>
                           <SelectTrigger>
-                            <SelectValue placeholder="Deneyim süresi" />
+                            <SelectValue placeholder={t("distributor.application.form.selectExperience")} />
                           </SelectTrigger>
                           <SelectContent>
                             <SelectItem value="0-2">0-2 yıl</SelectItem>
@@ -204,10 +206,10 @@ export function DistributorApplication() {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="marketSize">Pazar Büyüklüğü</Label>
+                        <Label htmlFor="marketSize">{t("distributor.application.form.marketSize")}</Label>
                         <Select onValueChange={(value) => setFormData({ ...formData, marketSize: value })}>
                           <SelectTrigger>
-                            <SelectValue placeholder="Hedef pazar" />
+                            <SelectValue placeholder={t("distributor.application.form.selectMarket")} />
                           </SelectTrigger>
                           <SelectContent>
                             <SelectItem value="local">Yerel</SelectItem>
@@ -220,11 +222,11 @@ export function DistributorApplication() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="message">Mesajınız</Label>
+                      <Label htmlFor="message">{t("distributor.application.form.message")}</Label>
                       <Textarea
                         id="message"
                         rows={4}
-                        placeholder="Şirketiniz ve hedefleriniz hakkında bilgi verin..."
+                        placeholder={t("distributor.application.form.messagePlaceholder")}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       />
@@ -232,7 +234,7 @@ export function DistributorApplication() {
 
                     <Button type="submit" size="lg" className="w-full">
                       <Send className="mr-2 h-5 w-5" />
-                      Başvuru Gönder
+                      {t("distributor.application.form.submit")}
                     </Button>
                   </form>
                 </CardContent>

@@ -52,6 +52,8 @@ const SimpleDropdown: React.FC<SimpleDropdownProps> = ({ trigger, isScrolled, ch
 // Memoized mobile menu content - sadece çeviriler değiştiğinde güncellenir
 const MobileMenuContent = memo(({ 
   translations,
+  menuDescriptions,
+  t,
   isMenuOpen, 
   setIsMenuOpen 
 }: { 
@@ -70,6 +72,22 @@ const MobileMenuContent = memo(({
     getQuote: string
     contact: string
   }
+  menuDescriptions: {
+    pergola: string
+    glass: string
+    winterGarden: string
+    sunBreaker: string
+    zipScreen: string
+    catalog: string
+    arDemo: string
+    export: string
+    getQuote: string
+    about: string
+    references: string
+    blog: string
+    contact: string
+  }
+  t: (key: string) => string
   isMenuOpen: boolean
   setIsMenuOpen: (open: boolean) => void
 }) => {
@@ -101,7 +119,7 @@ const MobileMenuContent = memo(({
           <div className="p-8">
             {/* Menu Header */}
             <div className="flex items-center justify-between mb-8">
-              <h2 className="text-2xl font-bold text-gray-800">Menü</h2>
+              <h2 className="text-2xl font-bold text-gray-800">{t("nav.menu")}</h2>
               <Button
                 variant="ghost"
                 size="sm"
@@ -123,7 +141,7 @@ const MobileMenuContent = memo(({
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-medium text-gray-800 group-hover:text-primary">{pergolaSystems}</div>
-                  <div className="text-sm text-gray-600">Bioklimatik sistemleri</div>
+                  <div className="text-sm text-gray-600">{menuDescriptions.pergola}</div>
                 </Link>
                 <Link
                   href="/cam-sistemleri"
@@ -131,7 +149,7 @@ const MobileMenuContent = memo(({
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-medium text-gray-800 group-hover:text-primary">{glassSystems}</div>
-                  <div className="text-sm text-gray-600">Frameless cam çözümleri</div>
+                  <div className="text-sm text-gray-600">{menuDescriptions.glass}</div>
                 </Link>
                 <Link
                   href="/kis-bahcesi"
@@ -139,7 +157,7 @@ const MobileMenuContent = memo(({
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-medium text-gray-800 group-hover:text-primary">{winterGarden}</div>
-                  <div className="text-sm text-gray-600">4 mevsim konfor</div>
+                  <div className="text-sm text-gray-600">{menuDescriptions.winterGarden}</div>
                 </Link>
                 <Link
                   href="/gunes-kiriclari"
@@ -147,7 +165,7 @@ const MobileMenuContent = memo(({
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-medium text-gray-800 group-hover:text-primary">{sunBreakers}</div>
-                  <div className="text-sm text-gray-600">Güneş kontrol sistemleri</div>
+                  <div className="text-sm text-gray-600">{menuDescriptions.sunBreaker}</div>
                 </Link>
                 <Link
                   href="/zip-perde"
@@ -155,7 +173,7 @@ const MobileMenuContent = memo(({
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-medium text-gray-800 group-hover:text-primary">{zipScreen}</div>
-                  <div className="text-sm text-gray-600">Rüzgar ve güneş koruması</div>
+                  <div className="text-sm text-gray-600">{menuDescriptions.zipScreen}</div>
                 </Link>
               </div>
 
@@ -168,7 +186,7 @@ const MobileMenuContent = memo(({
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-medium text-gray-800 group-hover:text-primary">{catalog}</div>
-                  <div className="text-sm text-gray-600">Ürün kataloğu indir</div>
+                  <div className="text-sm text-gray-600">{menuDescriptions.catalog}</div>
                 </Link>
                 <Link
                   href="/ar-demo"
@@ -176,7 +194,7 @@ const MobileMenuContent = memo(({
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-medium text-gray-800 group-hover:text-primary">{arDemo}</div>
-                  <div className="text-sm text-gray-600">AR ile görselleştir</div>
+                  <div className="text-sm text-gray-600">{menuDescriptions.arDemo}</div>
                 </Link>
                 <Link
                   href="/export"
@@ -184,7 +202,7 @@ const MobileMenuContent = memo(({
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-medium text-gray-800 group-hover:text-primary">{exportText}</div>
-                  <div className="text-sm text-gray-600">İhracat ve distribütörlük</div>
+                  <div className="text-sm text-gray-600">{menuDescriptions.export}</div>
                 </Link>
                 <Link
                   href="/teklif-al"
@@ -192,7 +210,7 @@ const MobileMenuContent = memo(({
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-medium text-gray-800 group-hover:text-primary">{getQuote}</div>
-                  <div className="text-sm text-gray-600">Ücretsiz fiyat teklifi</div>
+                  <div className="text-sm text-gray-600">{menuDescriptions.getQuote}</div>
                 </Link>
               </div>
 
@@ -204,24 +222,24 @@ const MobileMenuContent = memo(({
                   className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="font-medium text-gray-800 group-hover:text-primary">Hakkımızda</div>
-                  <div className="text-sm text-gray-600">15 yıllık deneyim</div>
+                  <div className="font-medium text-gray-800 group-hover:text-primary">{t("nav.about")}</div>
+                  <div className="text-sm text-gray-600">{menuDescriptions.about}</div>
                 </Link>
                 <Link
                   href="/referanslar"
                   className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="font-medium text-gray-800 group-hover:text-primary">Referanslar</div>
-                  <div className="text-sm text-gray-600">5000+ başarılı proje</div>
+                  <div className="font-medium text-gray-800 group-hover:text-primary">{t("nav.references")}</div>
+                  <div className="text-sm text-gray-600">{menuDescriptions.references}</div>
                 </Link>
                 <Link
                   href="/blog"
                   className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="font-medium text-gray-800 group-hover:text-primary">Blog</div>
-                  <div className="text-sm text-gray-600">Outdoor yaşam rehberi</div>
+                  <div className="font-medium text-gray-800 group-hover:text-primary">{t("nav.blog")}</div>
+                  <div className="text-sm text-gray-600">{menuDescriptions.blog}</div>
                 </Link>
                 <Link
                   href="/iletisim"
@@ -229,7 +247,7 @@ const MobileMenuContent = memo(({
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-medium text-gray-800 group-hover:text-primary">{contact}</div>
-                  <div className="text-sm text-gray-600">İletişim bilgileri</div>
+                  <div className="text-sm text-gray-600">{menuDescriptions.contact}</div>
                 </Link>
               </div>
             </div>
@@ -237,7 +255,7 @@ const MobileMenuContent = memo(({
             {/* Language Switcher */}
             <div className="mt-8 pt-6 border-t border-gray-200">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">Dil Seçimi</span>
+                <span className="text-sm text-gray-600">{t("nav.languageSelection")}</span>
                 <LanguageSwitcher theme="light" position="top" />
               </div>
             </div>
@@ -502,6 +520,22 @@ export function Header() {
               getQuote: navTranslations.getQuote,
               contact: navTranslations.contact,
             }}
+            menuDescriptions={{
+              pergola: t("nav.menuDescriptions.pergola"),
+              glass: t("nav.menuDescriptions.glass"),
+              winterGarden: t("nav.menuDescriptions.winterGarden"),
+              sunBreaker: t("nav.menuDescriptions.sunBreaker"),
+              zipScreen: t("nav.menuDescriptions.zipScreen"),
+              catalog: t("nav.menuDescriptions.catalog"),
+              arDemo: t("nav.menuDescriptions.arDemo"),
+              export: t("nav.menuDescriptions.export"),
+              getQuote: t("nav.menuDescriptions.getQuote"),
+              about: t("nav.menuDescriptions.about"),
+              references: t("nav.menuDescriptions.references"),
+              blog: t("nav.menuDescriptions.blog"),
+              contact: t("nav.menuDescriptions.contact")
+            }}
+            t={t}
             isMenuOpen={isMenuOpen} 
             setIsMenuOpen={setIsMenuOpen} 
           />

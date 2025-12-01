@@ -2,66 +2,69 @@
 
 import { MapPin, Users, Award, TrendingUp } from "lucide-react"
 import { motion } from "motion/react"
-
-const regions = [
-  {
-    name: "Avrupa",
-    countries: ["Almanya", "Fransa", "İtalya", "İspanya", "Hollanda", "Belçika"],
-    projects: "2000+",
-    color: "bg-primary",
-  },
-  {
-    name: "Orta Doğu",
-    countries: ["BAE", "Suudi Arabistan", "Katar", "Kuveyt", "Lübnan"],
-    projects: "1500+",
-    color: "bg-primary",
-  },
-  {
-    name: "Afrika",
-    countries: ["Güney Afrika", "Mısır", "Fas", "Tunus", "Cezayir"],
-    projects: "800+",
-    color: "bg-primary",
-  },
-  {
-    name: "Asya-Pasifik",
-    countries: ["Avustralya", "Japonya", "Singapur", "Malezya"],
-    projects: "700+",
-    color: "bg-primary",
-  },
-]
-
-const stats = [
-  {
-    icon: MapPin,
-    number: "50+",
-    label: "Ülke",
-    description: "Dünya çapında distribütör ağı",
-  },
-  {
-    icon: Users,
-    number: "200+",
-    label: "Distribütör",
-    description: "Güvenilir iş ortakları",
-  },
-  {
-    icon: Award,
-    number: "5000+",
-    label: "Proje",
-    description: "Başarıyla tamamlanan projeler",
-  },
-  {
-    icon: TrendingUp,
-    number: "%40",
-    label: "Büyüme",
-    description: "Yıllık ihracat artışı",
-  },
-]
+import { useLanguage } from "@/contexts/language-context"
 
 /**
  * Global erişim bölümü
  * İhracat istatistikleri ve bölgesel dağılımı gösterir
  */
 export function GlobalReach() {
+  const { t } = useLanguage()
+
+  const regions = [
+    {
+      name: t("globalReach.regions.europe"),
+      countries: ["Almanya", "Fransa", "İtalya", "İspanya", "Hollanda", "Belçika"],
+      projects: "2000+",
+      color: "bg-primary",
+    },
+    {
+      name: t("globalReach.regions.middleEast"),
+      countries: ["BAE", "Suudi Arabistan", "Katar", "Kuveyt", "Lübnan"],
+      projects: "1500+",
+      color: "bg-primary",
+    },
+    {
+      name: t("globalReach.regions.africa"),
+      countries: ["Güney Afrika", "Mısır", "Fas", "Tunus", "Cezayir"],
+      projects: "800+",
+      color: "bg-primary",
+    },
+    {
+      name: t("globalReach.regions.asiaPacific"),
+      countries: ["Avustralya", "Japonya", "Singapur", "Malezya"],
+      projects: "700+",
+      color: "bg-primary",
+    },
+  ]
+
+  const stats = [
+    {
+      icon: MapPin,
+      number: "50+",
+      label: t("globalReach.stats.countries"),
+      description: t("globalReach.stats.countriesDesc"),
+    },
+    {
+      icon: Users,
+      number: "200+",
+      label: t("globalReach.stats.distributors"),
+      description: t("globalReach.stats.distributorsDesc"),
+    },
+    {
+      icon: Award,
+      number: "5000+",
+      label: t("globalReach.stats.projects"),
+      description: t("globalReach.stats.projectsDesc"),
+    },
+    {
+      icon: TrendingUp,
+      number: "%40",
+      label: t("globalReach.stats.growth"),
+      description: t("globalReach.stats.growthDesc"),
+    },
+  ]
+
   return (
     <section className="py-20 bg-muted/10">
       <div className="container mx-auto px-4">
@@ -73,7 +76,7 @@ export function GlobalReach() {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance"
           >
-            Global Erişimimiz
+            {t("globalReach.title")}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -82,7 +85,7 @@ export function GlobalReach() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty"
           >
-            Dünya çapında güçlü distribütör ağımız ile premium IDEA sistemlerini her kıtaya ulaştırıyoruz
+            {t("globalReach.subtitle")}
           </motion.p>
         </div>
 
@@ -126,7 +129,7 @@ export function GlobalReach() {
               <div className="mb-6">
                 <div className="inline-block px-4 py-2 bg-primary rounded-lg">
                   <span className="text-2xl font-bold text-white">{region.projects}</span>
-                  <span className="text-sm text-white/90 ml-2">proje</span>
+                  <span className="text-sm text-white/90 ml-2">{t("globalReach.projectLabel")}</span>
                 </div>
               </div>
 

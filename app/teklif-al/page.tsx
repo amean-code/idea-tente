@@ -1,3 +1,5 @@
+"use client"
+
 import { Header } from "@/components/header"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -10,44 +12,47 @@ import { Badge } from "@/components/ui/badge"
 import { Phone, Mail, MapPin, Clock, CheckCircle, Award, Users, Zap, Shield, FileCheck, Headphones } from "lucide-react"
 import { contactInfo } from "@/lib/contact-info"
 import Image from "next/image"
+import { useLanguage } from "@/contexts/language-context"
 
 /**
  * Teklif al sayfası
  * Detaylı form ve işlem adımları ile teklif alma süreci
  */
 export default function QuotePage() {
+  const { t } = useLanguage()
+
   const services = [
-    "Bioklimatik Pergola",
-    "Cam Sistemleri",
-    "Kış Bahçesi",
-    "Güneş Kırıcı",
-    "Zip Perde",
-    "Tente Sistemleri",
+    t("quoteForm.productTypes.bioclimatic"),
+    t("quoteForm.productTypes.glass"),
+    t("quoteForm.productTypes.winterGarden"),
+    t("quoteForm.productTypes.sunBreaker"),
+    t("quoteForm.productTypes.zipScreen"),
+    t("quoteForm.productTypes.combination"),
   ]
 
   const steps = [
     {
       number: "01",
-      title: "Teklif Formu",
-      description: "Detaylı bilgilerinizi paylaşın",
+      title: t("quotePage.process.steps.form.title"),
+      description: t("quotePage.process.steps.form.description"),
       icon: FileCheck,
     },
     {
       number: "02",
-      title: "Ücretsiz Keşif",
-      description: "Uzmanlarımız yerinde inceleme yapar",
+      title: t("quotePage.process.steps.inspection.title"),
+      description: t("quotePage.process.steps.inspection.description"),
       icon: Users,
     },
     {
       number: "03",
-      title: "Teklif Sunumu",
-      description: "Size özel teklif hazırlanır",
+      title: t("quotePage.process.steps.presentation.title"),
+      description: t("quotePage.process.steps.presentation.description"),
       icon: Award,
     },
     {
       number: "04",
-      title: "Uygulama",
-      description: "Profesyonel montaj gerçekleştirilir",
+      title: t("quotePage.process.steps.implementation.title"),
+      description: t("quotePage.process.steps.implementation.description"),
       icon: Zap,
     },
   ]
@@ -55,23 +60,23 @@ export default function QuotePage() {
   const advantages = [
     {
       icon: Shield,
-      title: "15 Yıl Garanti",
-      description: "Tüm ürünlerimizde uzun süreli garanti",
+      title: t("quotePage.advantages.warranty.title"),
+      description: t("quotePage.advantages.warranty.description"),
     },
     {
       icon: Award,
-      title: "Ücretsiz Keşif",
-      description: "Profesyonel yerinde inceleme",
+      title: t("quotePage.advantages.freeInspection.title"),
+      description: t("quotePage.advantages.freeInspection.description"),
     },
     {
       icon: Users,
-      title: "Uzman Ekip",
-      description: "15+ yıl deneyimli montaj ekibi",
+      title: t("quotePage.advantages.expertTeam.title"),
+      description: t("quotePage.advantages.expertTeam.description"),
     },
     {
       icon: Headphones,
-      title: "7/24 Destek",
-      description: "Her zaman yanınızdayız",
+      title: t("quotePage.advantages.support.title"),
+      description: t("quotePage.advantages.support.description"),
     },
   ]
 
@@ -97,32 +102,32 @@ export default function QuotePage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary mb-6 backdrop-blur-sm">
               <CheckCircle className="h-4 w-4" />
-              <span className="text-sm font-medium">Ücretsiz Keşif ve Teklif</span>
+              <span className="text-sm font-medium">{t("quotePage.hero.badge")}</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance text-white drop-shadow-lg">
-              Size Özel <span className="text-primary">Teklif</span> Alın
+              {t("quotePage.hero.title")} <span className="text-primary">{t("quotePage.hero.titleHighlight")}</span> {t("quotePage.hero.titleSuffix")}
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-pretty max-w-2xl mx-auto text-gray-200">
-              Uzman ekibimiz size en uygun çözümü sunmak için ücretsiz keşif yapıyor ve detaylı teklif hazırlıyor.
+              {t("quotePage.hero.subtitle")}
             </p>
 
             {/* İstatistikler */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mt-12">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-colors">
                 <div className="text-3xl font-bold mb-1 text-primary">5000+</div>
-                <div className="text-sm text-gray-300">Tamamlanan Proje</div>
+                <div className="text-sm text-gray-300">{t("quotePage.hero.stats.completedProjects")}</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-colors">
                 <div className="text-3xl font-bold mb-1 text-primary">15+</div>
-                <div className="text-sm text-gray-300">Yıl Deneyim</div>
+                <div className="text-sm text-gray-300">{t("quotePage.hero.stats.yearsExperience")}</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-colors">
                 <div className="text-3xl font-bold mb-1 text-primary">24</div>
-                <div className="text-sm text-gray-300">Saat İçinde Dönüş</div>
+                <div className="text-sm text-gray-300">{t("quotePage.hero.stats.responseTime")}</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-colors">
                 <div className="text-3xl font-bold mb-1 text-primary">%100</div>
-                <div className="text-sm text-gray-300">Müşteri Memnuniyeti</div>
+                <div className="text-sm text-gray-300">{t("quotePage.hero.stats.satisfaction")}</div>
               </div>
             </div>
           </div>
@@ -134,10 +139,10 @@ export default function QuotePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Neden Bizi Tercih Etmelisiniz?
+              {t("quotePage.advantages.title")}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Sektördeki deneyimimiz ve müşteri odaklı yaklaşımımızla fark yaratıyoruz
+              {t("quotePage.advantages.subtitle")}
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
@@ -161,10 +166,10 @@ export default function QuotePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Teklif Alma Süreci
+              {t("quotePage.process.title")}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              4 basit adımda projeniz için profesyonel teklif alın
+              {t("quotePage.process.subtitle")}
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
@@ -195,53 +200,53 @@ export default function QuotePage() {
             <div className="lg:col-span-2">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-2xl">Teklif Formu</CardTitle>
+                  <CardTitle className="text-2xl">{t("quotePage.form.title")}</CardTitle>
                   <p className="text-muted-foreground">
-                    Lütfen aşağıdaki formu doldurun, size en kısa sürede dönüş yapalım.
+                    {t("quotePage.form.subtitle")}
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="firstName">Ad *</Label>
-                      <Input id="firstName" placeholder="Adınız" required />
+                      <Label htmlFor="firstName">{t("quotePage.form.firstName")} *</Label>
+                      <Input id="firstName" placeholder={t("quotePage.form.firstNamePlaceholder")} required />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="lastName">Soyad *</Label>
-                      <Input id="lastName" placeholder="Soyadınız" required />
+                      <Label htmlFor="lastName">{t("quotePage.form.lastName")} *</Label>
+                      <Input id="lastName" placeholder={t("quotePage.form.lastNamePlaceholder")} required />
                     </div>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Telefon *</Label>
+                      <Label htmlFor="phone">{t("quotePage.form.phone")} *</Label>
                       <Input id="phone" type="tel" placeholder={contactInfo.phone.display.primary} required />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">E-posta</Label>
+                      <Label htmlFor="email">{t("quotePage.form.email")}</Label>
                       <Input id="email" type="email" placeholder="ornek@email.com" />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="city">Şehir *</Label>
+                    <Label htmlFor="city">{t("quotePage.form.city")} *</Label>
                     <Select>
                       <SelectTrigger>
-                        <SelectValue placeholder="Şehir seçin" />
+                        <SelectValue placeholder={t("quotePage.form.cityPlaceholder")} />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="istanbul">İstanbul</SelectItem>
-                        <SelectItem value="ankara">Ankara</SelectItem>
-                        <SelectItem value="izmir">İzmir</SelectItem>
-                        <SelectItem value="bursa">Bursa</SelectItem>
-                        <SelectItem value="antalya">Antalya</SelectItem>
-                        <SelectItem value="other">Diğer</SelectItem>
+                        <SelectItem value="istanbul">{t("quotePage.form.cities.istanbul")}</SelectItem>
+                        <SelectItem value="ankara">{t("quotePage.form.cities.ankara")}</SelectItem>
+                        <SelectItem value="izmir">{t("quotePage.form.cities.izmir")}</SelectItem>
+                        <SelectItem value="bursa">{t("quotePage.form.cities.bursa")}</SelectItem>
+                        <SelectItem value="antalya">{t("quotePage.form.cities.antalya")}</SelectItem>
+                        <SelectItem value="other">{t("quotePage.form.cities.other")}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
 
                   <div className="space-y-2">
-                    <Label>İlgilendiğiniz Ürünler *</Label>
+                    <Label>{t("quotePage.form.interestedProducts")} *</Label>
                     <div className="grid md:grid-cols-2 gap-3">
                       {services.map((service, index) => (
                         <div key={index} className="flex items-center space-x-2">
@@ -255,28 +260,28 @@ export default function QuotePage() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="area">Uygulama Alanı (m²)</Label>
-                    <Input id="area" type="number" placeholder="Yaklaşık metrekare" />
+                    <Label htmlFor="area">{t("quotePage.form.applicationArea")}</Label>
+                    <Input id="area" type="number" placeholder={t("quotePage.form.areaPlaceholder")} />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="budget">Bütçe Aralığı</Label>
+                    <Label htmlFor="budget">{t("quotePage.form.budget")}</Label>
                     <Select>
                       <SelectTrigger>
-                        <SelectValue placeholder="Bütçe aralığı seçin" />
+                        <SelectValue placeholder={t("quotePage.form.budgetPlaceholder")} />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="0-25000">0 - 25.000 TL</SelectItem>
-                        <SelectItem value="25000-50000">25.000 - 50.000 TL</SelectItem>
-                        <SelectItem value="50000-100000">50.000 - 100.000 TL</SelectItem>
-                        <SelectItem value="100000+">100.000 TL+</SelectItem>
+                        <SelectItem value="0-25000">{t("quotePage.form.budgets.0-25000")}</SelectItem>
+                        <SelectItem value="25000-50000">{t("quotePage.form.budgets.25000-50000")}</SelectItem>
+                        <SelectItem value="50000-100000">{t("quotePage.form.budgets.50000-100000")}</SelectItem>
+                        <SelectItem value="100000+">{t("quotePage.form.budgets.100000+")}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Ek Bilgiler</Label>
-                    <Textarea id="message" placeholder="Projeniz hakkında detayları paylaşın..." rows={4} />
+                    <Label htmlFor="message">{t("quotePage.form.additionalInfo")}</Label>
+                    <Textarea id="message" placeholder={t("quotePage.form.additionalInfoPlaceholder")} rows={4} />
                   </div>
 
                   <div className="flex items-center space-x-2">
@@ -285,12 +290,12 @@ export default function QuotePage() {
                       <a href="/kvkk" className="text-primary hover:underline">
                         KVKK Aydınlatma Metni
                       </a>
-                      'ni okudum ve kabul ediyorum.
+                      {' '}{t("quotePage.form.privacy")}
                     </Label>
                   </div>
 
                   <Button size="lg" className="w-full">
-                    Teklif Talebimi Gönder
+                    {t("quotePage.form.submit")}
                   </Button>
                 </CardContent>
               </Card>
@@ -300,27 +305,27 @@ export default function QuotePage() {
             <div className="space-y-6">
               <Card>
                 <CardHeader>
-                  <CardTitle>İletişim Bilgileri</CardTitle>
+                  <CardTitle>{t("quotePage.contactInfo.title")}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Phone className="h-5 w-5 text-primary" />
                     <div>
-                      <div className="font-medium">Telefon</div>
+                      <div className="font-medium">{t("quotePage.contactInfo.phone")}</div>
                       <div className="text-sm text-muted-foreground">{contactInfo.phone.display.primary}</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-primary" />
                     <div>
-                      <div className="font-medium">E-posta</div>
+                      <div className="font-medium">{t("quotePage.contactInfo.email")}</div>
                       <div className="text-sm text-muted-foreground">{contactInfo.email.info}</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <MapPin className="h-5 w-5 text-primary" />
                     <div>
-                      <div className="font-medium">Adres</div>
+                      <div className="font-medium">{t("quotePage.contactInfo.address")}</div>
                       <div className="text-sm text-muted-foreground">
                         {contactInfo.address.full}
                       </div>
@@ -329,7 +334,7 @@ export default function QuotePage() {
                   <div className="flex items-center gap-3">
                     <Clock className="h-5 w-5 text-primary" />
                     <div>
-                      <div className="font-medium">Çalışma Saatleri</div>
+                      <div className="font-medium">{t("quotePage.contactInfo.workingHours")}</div>
                       <div className="text-sm text-muted-foreground">
                         {contactInfo.workingHours.display.weekdays}
                         <br />
@@ -344,24 +349,23 @@ export default function QuotePage() {
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <CheckCircle className="h-6 w-6" />
-                    <span className="font-semibold text-lg">Ücretsiz Keşif Garantisi</span>
+                    <span className="font-semibold text-lg">{t("quotePage.guarantee.title")}</span>
                   </div>
                   <p className="text-sm opacity-95 mb-4">
-                    Teklif formunuzu gönderdikten sonra 24 saat içinde size ulaşıyor ve ücretsiz keşif randevusu
-                    planlıyoruz.
+                    {t("quotePage.guarantee.description")}
                   </p>
                   <div className="space-y-2 text-sm">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4" />
-                      <span>24 saat içinde geri dönüş</span>
+                      <span>{t("quotePage.guarantee.response")}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4" />
-                      <span>Ücretsiz yerinde inceleme</span>
+                      <span>{t("quotePage.guarantee.inspection")}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4" />
-                      <span>Detaylı fiyat teklifi</span>
+                      <span>{t("quotePage.guarantee.quote")}</span>
                     </div>
                   </div>
                 </CardContent>
@@ -370,19 +374,19 @@ export default function QuotePage() {
               {/* Hızlı İletişim Kartı */}
               <Card className="border-2 border-primary/20">
                 <CardHeader>
-                  <CardTitle className="text-lg">Hızlı İletişim</CardTitle>
+                  <CardTitle className="text-lg">{t("quotePage.quickContact.title")}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <Button asChild className="w-full" size="lg" variant="outline">
                     <a href={`tel:${contactInfo.phone.primary}`}>
                       <Phone className="h-5 w-5 mr-2" />
-                      Hemen Ara
+                      {t("quotePage.quickContact.call")}
                     </a>
                   </Button>
                   <Button asChild className="w-full bg-green-600 hover:bg-green-700 text-white" size="lg">
                     <a href={contactInfo.whatsapp.quote} target="_blank" rel="noopener noreferrer">
                       <Image src="/wp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
-                      WhatsApp
+                      {t("quotePage.quickContact.whatsapp")}
                     </a>
                   </Button>
                 </CardContent>
@@ -398,24 +402,24 @@ export default function QuotePage() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Güvenle Çalışın
+                {t("quotePage.trust.title")}
               </h2>
               <p className="text-lg text-muted-foreground">
-                Sektördeki lider konumumuz ve referanslarımızla güvence altındasınız
+                {t("quotePage.trust.subtitle")}
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white rounded-xl p-8 text-center shadow-lg">
                 <div className="text-5xl font-bold text-primary mb-2">5000+</div>
-                <p className="text-muted-foreground font-medium">Mutlu Müşteri</p>
+                <p className="text-muted-foreground font-medium">{t("quotePage.trust.happyCustomers")}</p>
               </div>
               <div className="bg-white rounded-xl p-8 text-center shadow-lg">
                 <div className="text-5xl font-bold text-primary mb-2">%98</div>
-                <p className="text-muted-foreground font-medium">Memnuniyet Oranı</p>
+                <p className="text-muted-foreground font-medium">{t("quotePage.trust.satisfactionRate")}</p>
               </div>
               <div className="bg-white rounded-xl p-8 text-center shadow-lg">
                 <div className="text-5xl font-bold text-primary mb-2">15</div>
-                <p className="text-muted-foreground font-medium">Yıl Garanti</p>
+                <p className="text-muted-foreground font-medium">{t("quotePage.trust.warranty")}</p>
               </div>
             </div>
           </div>

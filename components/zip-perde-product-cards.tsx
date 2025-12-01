@@ -17,30 +17,45 @@ export function ZipPerdeProductCards() {
   const products = [
     {
       id: "manuel",
-      title: "Manuel Zip Perde",
-      description: "Ekonomik fiyat avantajı. Zincir/krank ile kolay kullanım ve %95 UV koruma.",
+      title: t("zipScreen.products.manuel.title"),
+      description: t("zipScreen.products.manuel.description"),
       image: "/manual-zip-screen-system-terrace.jpg",
-      badge: "Ekonomik",
+      badge: t("zipScreen.products.manuel.badge"),
       href: "/zip-perde/manuel-zip-perde",
-      features: ["Manuel Kullanım", "%95 UV Koruma", "Kolay Montaj", "10 Yıl Garanti"]
+      features: [
+        t("zipScreen.products.manuel.features.manual"),
+        t("zipScreen.products.manuel.features.uvProtection"),
+        t("zipScreen.products.manuel.features.easyInstall"),
+        t("zipScreen.products.manuel.features.warranty")
+      ]
     },
     {
       id: "motorlu",
-      title: "Motorlu Zip Perde",
-      description: "Uzaktan kumandalı motorlu sistem. Sessiz çalışma ve 120 km/h rüzgar dayanımı.",
+      title: t("zipScreen.products.motorlu.title"),
+      description: t("zipScreen.products.motorlu.description"),
       image: "/motorized-zip-screen-remote-control.jpg",
-      badge: "Popüler",
+      badge: t("zipScreen.products.motorlu.badge"),
       href: "/zip-perde/motorlu-zip-perde",
-      features: ["Motorlu Sistem", "Sessiz Çalışma", "Uzaktan Kumanda", "10 Yıl Garanti"]
+      features: [
+        t("zipScreen.products.motorlu.features.motorized"),
+        t("zipScreen.products.motorlu.features.quiet"),
+        t("zipScreen.products.motorlu.features.remote"),
+        t("zipScreen.products.motorlu.features.warranty")
+      ]
     },
     {
       id: "akilli",
-      title: "Akıllı Zip Perde",
-      description: "Sensör kontrollü tam otomatik sistem. Güneş takibi ve otomatik hava durumu kontrolü.",
+      title: t("zipScreen.products.akilli.title"),
+      description: t("zipScreen.products.akilli.description"),
       image: "/smart-zip-screen-sensor-control.jpg",
-      badge: "Premium",
+      badge: t("zipScreen.products.akilli.badge"),
       href: "/zip-perde/akilli-zip-perde",
-      features: ["Akıllı Sensör", "Oto Güneş Takibi", "Hava Durumu", "10 Yıl Garanti"]
+      features: [
+        t("zipScreen.products.akilli.features.sensor"),
+        t("zipScreen.products.akilli.features.sunTracking"),
+        t("zipScreen.products.akilli.features.weather"),
+        t("zipScreen.products.akilli.features.warranty")
+      ]
     }
   ]
 

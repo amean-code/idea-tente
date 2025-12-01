@@ -4,39 +4,59 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useLanguage } from "@/contexts/language-context"
 
 /**
  * Pergola ürün kartları bölümü
  * Palmiye Global'in 3 ana kategori kartlarını taklit eder
  */
 export function PergolaProductCards() {
+  const { t } = useLanguage()
   const pergolaCategories = [
     {
       id: "bioclimatic",
-      title: "Bioklimatik Sistemler",
-      subtitle: "Akıllı İklim Kontrolü",
-      description: "105° dönebilen lameller ile güneş, havalandırma ve yağmur kontrolü",
+      title: t("pergolaProducts.bioclimatic.title"),
+      subtitle: t("pergolaProducts.bioclimatic.subtitle"),
+      description: t("pergolaProducts.bioclimatic.description"),
       image: "/pergola/pergola-dıs-gunes.jpeg",
       href: "/pergola/bioklimatik-sistemler",
-      features: ["105° Dönebilen Lameller", "%100 Su Geçirmez", "Enerji Tasarrufu", "Tüm Mevsim"]
+      features: [
+        t("pergolaProducts.bioclimatic.features.rotatable"),
+        t("pergolaProducts.bioclimatic.features.waterproof"),
+        t("pergolaProducts.bioclimatic.features.energySaving"),
+        t("pergolaProducts.bioclimatic.features.allSeasons")
+      ],
+      explore: t("pergolaProducts.bioclimatic.explore")
     },
     {
       id: "motorized",
-      title: "Motorlu Sistemler", 
-      subtitle: "Tam Otomatik Kontrol",
-      description: "Sensör teknolojisi ve uzaktan kumanda ile akıllı yaşam",
+      title: t("pergolaProducts.motorized.title"),
+      subtitle: t("pergolaProducts.motorized.subtitle"),
+      description: t("pergolaProducts.motorized.description"),
       image: "/pergola/pergola-kafe-aktif.jpeg",
       href: "/pergola/motorlu-sistemler",
-      features: ["Güneş Sensörü", "Rüzgar Sensörü", "Uzaktan Kumanda", "Sessiz Çalışma"]
+      features: [
+        t("pergolaProducts.motorized.features.sunSensor"),
+        t("pergolaProducts.motorized.features.windSensor"),
+        t("pergolaProducts.motorized.features.remoteControl"),
+        t("pergolaProducts.motorized.features.quietOperation")
+      ],
+      explore: t("pergolaProducts.motorized.explore")
     },
     {
       id: "rolling",
-      title: "Rolling Roof",
-      subtitle: "Açılır Kapanır Tente", 
-      description: "Ray sistemi üzerinde hareket eden esnek pergola çözümü",
+      title: t("pergolaProducts.rolling.title"),
+      subtitle: t("pergolaProducts.rolling.subtitle"),
+      description: t("pergolaProducts.rolling.description"),
       image: "/pergola/pergola-render-siyah.jpg",
       href: "/pergola/rolling-roof",
-      features: ["Açılır Kapanır", "Dayanıklı Kumaş", "Motorlu", "Modern Tasarım"]
+      features: [
+        t("pergolaProducts.rolling.features.openClose"),
+        t("pergolaProducts.rolling.features.durableFabric"),
+        t("pergolaProducts.rolling.features.motorized"),
+        t("pergolaProducts.rolling.features.modernDesign")
+      ],
+      explore: t("pergolaProducts.rolling.explore")
     }
   ]
 
@@ -95,7 +115,7 @@ export function PergolaProductCards() {
                         href={category.href} 
                         className="flex items-center justify-center"
                       >
-                        <span>Keşfet</span>
+                        <span>{category.explore}</span>
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                       </Link>
                     </Button>

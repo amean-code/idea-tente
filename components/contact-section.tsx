@@ -17,43 +17,43 @@ export function ContactSection() {
   const contactMethods = [
     {
       icon: Phone,
-      title: "Telefon",
-      description: "Hemen arayın",
-      action: "Ara",
+      title: t("contactSection.methods.phone.title"),
+      description: t("contactSection.methods.phone.description"),
+      action: t("contactSection.methods.phone.action"),
       href: `tel:${contactInfo.phone.primary}`,
       primary: true
     },
     {
       icon: MessageCircle,
-      title: "WhatsApp",
-      description: "Anında mesaj",
-      action: "Mesaj Gönder",
+      title: t("contactSection.methods.whatsapp.title"),
+      description: t("contactSection.methods.whatsapp.description"),
+      action: t("contactSection.methods.whatsapp.action"),
       href: contactInfo.whatsapp.primary,
       primary: true
     },
     {
       icon: Mail,
-      title: "E-posta",
-      description: "Detaylı bilgi",
-      action: "E-posta Gönder",
+      title: t("contactSection.methods.email.title"),
+      description: t("contactSection.methods.email.description"),
+      action: t("contactSection.methods.email.action"),
       href: `mailto:${contactInfo.email.info}`,
       primary: false
     },
     {
       icon: Calendar,
-      title: "Randevu",
-      description: "Ücretsiz keşif",
-      action: "Randevu Al",
+      title: t("contactSection.methods.appointment.title"),
+      description: t("contactSection.methods.appointment.description"),
+      action: t("contactSection.methods.appointment.action"),
       href: "/teklif-al",
       primary: false
     }
   ]
 
   const stats = [
-    { icon: Users, value: "5000+", label: "Mutlu Müşteri" },
-    { icon: Award, value: "15", label: "Yıl Deneyim" },
-    { icon: Shield, value: "%98", label: "Memnuniyet" },
-    { icon: MapPin, value: "81", label: "İl Hizmeti" }
+    { icon: Users, value: "5000+", label: t("contactSection.stats.happyCustomers") },
+    { icon: Award, value: "15", label: t("contactSection.stats.yearsExperience") },
+    { icon: Shield, value: "%98", label: t("contactSection.stats.satisfaction") },
+    { icon: MapPin, value: "81", label: t("contactSection.stats.provinces") }
   ]
 
   return (
@@ -62,14 +62,13 @@ export function ContactSection() {
         {/* Ana Başlık */}
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
-            İletişim
+            {t("contactSection.badge")}
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-            Hayalinizdeki Projeyi Birlikte Gerçekleştirelim
+            {t("contactSection.title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-            15 yıllık deneyimimiz ve uzman ekibimizle, size özel çözümler sunuyoruz. 
-            Ücretsiz keşif ve detaylı teklif için hemen iletişime geçin.
+            {t("contactSection.subtitle")}
           </p>
         </div>
 
@@ -148,27 +147,27 @@ export function ContactSection() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* İletişim Bilgileri */}
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-4">İletişim Bilgileri</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-4">{t("contactSection.info.title")}</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-primary" />
                   <div>
                     <div className="font-medium text-foreground">{contactInfo.phone.primary}</div>
-                    <div className="text-sm text-muted-foreground">Ana Telefon</div>
+                    <div className="text-sm text-muted-foreground">{t("contactSection.info.phoneLabel")}</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-primary" />
                   <div>
                     <div className="font-medium text-foreground">{contactInfo.email.info}</div>
-                    <div className="text-sm text-muted-foreground">E-posta</div>
+                    <div className="text-sm text-muted-foreground">{t("contactSection.info.emailLabel")}</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-primary" />
                   <div>
-                    <div className="font-medium text-foreground">Türkiye Geneli</div>
-                    <div className="text-sm text-muted-foreground">81 İl Hizmeti</div>
+                    <div className="font-medium text-foreground">{t("contactSection.info.locationLabel")}</div>
+                    <div className="text-sm text-muted-foreground">{t("contactSection.info.provincesLabel")}</div>
                   </div>
                 </div>
               </div>
@@ -176,27 +175,27 @@ export function ContactSection() {
 
             {/* Çalışma Saatleri */}
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-4">Çalışma Saatleri</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-4">{t("contactSection.hours.title")}</h3>
               <div className="space-y-2">
                 <div className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-primary" />
                   <div>
-                    <div className="font-medium text-foreground">Pazartesi - Cuma</div>
+                    <div className="font-medium text-foreground">{t("contactSection.hours.weekdays")}</div>
                     <div className="text-sm text-muted-foreground">08:00 - 18:00</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-primary" />
                   <div>
-                    <div className="font-medium text-foreground">Cumartesi</div>
+                    <div className="font-medium text-foreground">{t("contactSection.hours.saturday")}</div>
                     <div className="text-sm text-muted-foreground">09:00 - 16:00</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock className="h-5 w-5 text-primary" />
                   <div>
-                    <div className="font-medium text-foreground">Pazar</div>
-                    <div className="text-sm text-muted-foreground">Kapalı</div>
+                    <div className="font-medium text-foreground">{t("contactSection.hours.sunday")}</div>
+                    <div className="text-sm text-muted-foreground">{t("contactSection.hours.closed")}</div>
                   </div>
                 </div>
               </div>
@@ -204,24 +203,24 @@ export function ContactSection() {
 
             {/* Hızlı Erişim */}
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-4">Hızlı Erişim</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-4">{t("contactSection.quickAccess.title")}</h3>
               <div className="space-y-3">
                 <Button asChild variant="outline" className="w-full justify-start">
                   <a href="/teklif-al">
                     <Award className="mr-2 h-4 w-4" />
-                    Ücretsiz Teklif Al
+                    {t("contactSection.quickAccess.freeQuote")}
                   </a>
                 </Button>
                 <Button asChild variant="outline" className="w-full justify-start">
                   <a href="/referanslar">
                     <Users className="mr-2 h-4 w-4" />
-                    Referans Projeler
+                    {t("contactSection.quickAccess.referenceProjects")}
                   </a>
                 </Button>
                 <Button asChild variant="outline" className="w-full justify-start">
                   <a href="/katalog">
                     <Shield className="mr-2 h-4 w-4" />
-                    Katalog İndir
+                    {t("contactSection.quickAccess.downloadCatalog")}
                   </a>
                 </Button>
               </div>

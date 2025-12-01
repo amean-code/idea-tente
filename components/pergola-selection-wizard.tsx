@@ -18,12 +18,14 @@ import {
   TrendingUp,
   Circle
 } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 /**
  * Modern step-by-step pergola seçim sihirbazı
  * Progress bar ve animasyonlu geçişler ile özgün tasarım
  */
 export function PergolaSelectionWizard() {
+  const { t } = useLanguage()
   const [currentStep, setCurrentStep] = useState(0)
   const [selectedMaterial, setSelectedMaterial] = useState<string | null>(null)
   const [selectedType, setSelectedType] = useState<string | null>(null)
@@ -32,32 +34,32 @@ export function PergolaSelectionWizard() {
   const steps = [
     {
       id: 0,
-      title: "Malzeme Seçimi",
-      description: "Pergolanız için ideal malzemeyi seçin",
+      title: t("pergola.wizard.steps.material.title"),
+      description: t("pergola.wizard.steps.material.description"),
       options: [
-        { id: "aluminum", label: "Alüminyum Tavan", description: "Dayanıklı ve modern", icon: Box },
-        { id: "fabric", label: "Kumaş Tavan", description: "Esnek ve estetik", icon: Blocks },
-        { id: "glass", label: "Cam Tavan", description: "Şeffaf ve aydınlık", icon: Square }
+        { id: "aluminum", label: t("pergola.wizard.materials.aluminum.label"), description: t("pergola.wizard.materials.aluminum.description"), icon: Box },
+        { id: "fabric", label: t("pergola.wizard.materials.fabric.label"), description: t("pergola.wizard.materials.fabric.description"), icon: Blocks },
+        { id: "glass", label: t("pergola.wizard.materials.glass.label"), description: t("pergola.wizard.materials.glass.description"), icon: Square }
       ]
     },
     {
       id: 1,
-      title: "Sistem Tipi",
-      description: "Tavan hareket sistemini belirleyin",
+      title: t("pergola.wizard.steps.system.title"),
+      description: t("pergola.wizard.steps.system.description"),
       options: [
-        { id: "rotating-panel", label: "Döner Panelli", description: "0-135° ayarlanabilir", icon: RotateCw },
-        { id: "folding-panel", label: "Katlanır Panelli", description: "Tam açılır kapanır", icon: FoldVertical },
-        { id: "fixed-aluminum", label: "Sabit Sistem", description: "Bakım gerektirmez", icon: Lock }
+        { id: "rotating-panel", label: t("pergola.wizard.systems.rotating.label"), description: t("pergola.wizard.systems.rotating.description"), icon: RotateCw },
+        { id: "folding-panel", label: t("pergola.wizard.systems.folding.label"), description: t("pergola.wizard.systems.folding.description"), icon: FoldVertical },
+        { id: "fixed-aluminum", label: t("pergola.wizard.systems.fixed.label"), description: t("pergola.wizard.systems.fixed.description"), icon: Lock }
       ]
     },
     {
       id: 2,
-      title: "Tavan Formu",
-      description: "Mimari yapınıza uygun formu seçin",
+      title: t("pergola.wizard.steps.form.title"),
+      description: t("pergola.wizard.steps.form.description"),
       options: [
-        { id: "flat", label: "Düz Tavan", description: "Minimalist tasarım", icon: Minus },
-        { id: "sloped", label: "Eğimli Tavan", description: "Su akışı optimum", icon: TrendingUp },
-        { id: "curved", label: "Kavisli Tavan", description: "Modern estetik", icon: Circle }
+        { id: "flat", label: t("pergola.wizard.forms.flat.label"), description: t("pergola.wizard.forms.flat.description"), icon: Minus },
+        { id: "sloped", label: t("pergola.wizard.forms.sloped.label"), description: t("pergola.wizard.forms.sloped.description"), icon: TrendingUp },
+        { id: "curved", label: t("pergola.wizard.forms.curved.label"), description: t("pergola.wizard.forms.curved.description"), icon: Circle }
       ]
     }
   ]
@@ -105,10 +107,10 @@ export function PergolaSelectionWizard() {
         {/* Başlık */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Pergolanızı Özelleştirin
+            {t("pergola.wizard.title")}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            3 adımda size özel pergola tasarımını oluşturun
+            {t("pergola.wizard.subtitle")}
           </p>
         </div>
 
@@ -254,7 +256,7 @@ export function PergolaSelectionWizard() {
                   }`}
                 >
                   <ArrowLeft className="mr-2 h-5 w-5" />
-                  Geri
+                  {t("pergola.wizard.buttons.back")}
                 </Button>
 
                 {currentStep < steps.length - 1 ? (
@@ -268,7 +270,7 @@ export function PergolaSelectionWizard() {
                         : 'bg-gradient-to-r from-primary to-primary-700 hover:from-primary-600 hover:to-primary-700 text-primary-foreground'
                     }`}
                   >
-                    İleri
+                    {t("pergola.wizard.buttons.next")}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 ) : (
@@ -282,7 +284,7 @@ export function PergolaSelectionWizard() {
                     }`}
                   >
                     <Phone className="mr-2 h-5 w-5" />
-                    Teklif Al
+                    {t("pergola.wizard.buttons.getQuote")}
                   </Button>
                 )}
               </div>
@@ -298,7 +300,7 @@ export function PergolaSelectionWizard() {
             >
               <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                 <Check className="h-5 w-5 text-primary mr-2" />
-                Seçimleriniz
+                {t("pergola.wizard.summary.title")}
               </h4>
               <div className="flex flex-wrap gap-3">
                 {selectedMaterial && (

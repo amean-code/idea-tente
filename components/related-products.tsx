@@ -1,7 +1,10 @@
+"use client"
+
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 const allProducts = [
   {
@@ -9,7 +12,7 @@ const allProducts = [
     title: "Bioklimatik Pergola",
     description: "Akıllı lamelli sistemler",
     image: "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
-    href: "/pergola/bioklimatik",
+    href: "/pergola/bioklimatik-sistemler",
   },
   {
     id: "cam-sistemleri",
@@ -39,6 +42,7 @@ interface RelatedProductsProps {
 }
 
 export function RelatedProducts({ currentProduct }: RelatedProductsProps) {
+  const { t } = useLanguage()
   const relatedProducts = allProducts.filter((product) => product.id !== currentProduct).slice(0, 3)
 
   return (
@@ -46,10 +50,10 @@ export function RelatedProducts({ currentProduct }: RelatedProductsProps) {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-            İlgili Ürünler
+            {t("relatedProducts.title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-            Size uygun diğer outdoor çözümlerimizi keşfedin
+            {t("relatedProducts.subtitle")}
           </p>
         </div>
 
@@ -73,7 +77,7 @@ export function RelatedProducts({ currentProduct }: RelatedProductsProps) {
                   className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
                 >
                   <Link href={product.href}>
-                    Detayları İncele
+                    {t("relatedProducts.viewDetails")}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>

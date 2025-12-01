@@ -1,13 +1,18 @@
+"use client"
+
 import { Clock, Phone, Mail, MapPin, Globe } from "lucide-react"
 import { contactInfo } from "@/lib/contact-info"
+import { useLanguage } from "@/contexts/language-context"
 
 export function ContactInfo() {
+  const { t } = useLanguage()
+
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-3xl font-bold text-foreground mb-6">İletişim Bilgileri</h2>
+        <h2 className="text-3xl font-bold text-foreground mb-6">{t("contactInfo.title")}</h2>
         <p className="text-muted-foreground text-lg">
-          Uzman ekibimiz size en iyi hizmeti sunmak için hazır. Projeleriniz için profesyonel destek alın.
+          {t("contactInfo.subtitle")}
         </p>
       </div>
 
@@ -17,7 +22,7 @@ export function ContactInfo() {
             <Phone className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h3 className="font-semibold text-foreground mb-1">Telefon</h3>
+            <h3 className="font-semibold text-foreground mb-1">{t("contactInfo.phone")}</h3>
             <p className="text-muted-foreground">
               Türkiye: {contactInfo.phone.display.primary}
               <br />
@@ -31,7 +36,7 @@ export function ContactInfo() {
             <Mail className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h3 className="font-semibold text-foreground mb-1">E-posta</h3>
+            <h3 className="font-semibold text-foreground mb-1">{t("contactInfo.email")}</h3>
             <p className="text-muted-foreground">
               Genel: {contactInfo.email.info}
               <br />
@@ -47,7 +52,7 @@ export function ContactInfo() {
             <MapPin className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h3 className="font-semibold text-foreground mb-1">Adres</h3>
+            <h3 className="font-semibold text-foreground mb-1">{t("contactInfo.address")}</h3>
             <p className="text-muted-foreground">
               {contactInfo.company.fullName}
               <br />
@@ -61,7 +66,7 @@ export function ContactInfo() {
             <Clock className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h3 className="font-semibold text-foreground mb-1">Çalışma Saatleri</h3>
+            <h3 className="font-semibold text-foreground mb-1">{t("contactInfo.workingHours")}</h3>
             <p className="text-muted-foreground">
               {contactInfo.workingHours.display.weekdays}
               <br />
@@ -77,11 +82,9 @@ export function ContactInfo() {
             <Globe className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h3 className="font-semibold text-foreground mb-1">Dil Desteği</h3>
+            <h3 className="font-semibold text-foreground mb-1">{t("contactInfo.languageSupport")}</h3>
             <p className="text-muted-foreground">
-              Türkçe, English, العربية
-              <br />
-              Deutsch, Français
+              {t("contactInfo.languages")}
             </p>
           </div>
         </div>

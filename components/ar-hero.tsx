@@ -34,23 +34,23 @@ export function ARHero() {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary mb-6 backdrop-blur-sm"
           >
-            <span className="text-sm font-medium">AR Teknolojisi</span>
+            <span className="text-sm font-medium">{t("arHero.badge")}</span>
           </motion.div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance">
-            Artırılmış Gerçeklik ile <span className="text-primary">Pergola Deneyimi</span>
+            {t("arHero.title")} <span className="text-primary">{t("arHero.titleHighlight")}</span>
           </h1>
           <p className="text-xl text-gray-200 mb-8 text-pretty max-w-2xl mx-auto">
-            Pergola sistemlerimizi kendi mekanınızda görün. AR teknolojisi ile ürünlerimizi satın almadan önce test edin.
+            {t("arHero.subtitle")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
             <Button size="lg" className="bg-primary hover:bg-primary-600 text-primary-foreground">
               <Camera className="h-5 w-5 mr-2" />
-              AR Demo Başlat
+              {t("arHero.startDemo")}
             </Button>
             <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm">
               <Download className="h-5 w-5 mr-2" />
-              Mobil Uygulama İndir
+              {t("arHero.downloadApp")}
             </Button>
           </div>
 
@@ -59,24 +59,24 @@ export function ARHero() {
               <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Smartphone className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="font-semibold text-white mb-2">Mobil Uyumlu</h3>
-              <p className="text-sm text-gray-300">iOS ve Android desteği</p>
+              <h3 className="font-semibold text-white mb-2">{t("arHero.features.mobile.title")}</h3>
+              <p className="text-sm text-gray-300">{t("arHero.features.mobile.description")}</p>
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-colors">
               <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Eye className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="font-semibold text-white mb-2">Gerçekçi Görünüm</h3>
-              <p className="text-sm text-gray-300">1:1 ölçek ve detay</p>
+              <h3 className="font-semibold text-white mb-2">{t("arHero.features.realistic.title")}</h3>
+              <p className="text-sm text-gray-300">{t("arHero.features.realistic.description")}</p>
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-colors">
               <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Camera className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="font-semibold text-white mb-2">Kolay Kullanım</h3>
-              <p className="text-sm text-gray-300">Tek tıkla başlat</p>
+              <h3 className="font-semibold text-white mb-2">{t("arHero.features.easy.title")}</h3>
+              <p className="text-sm text-gray-300">{t("arHero.features.easy.description")}</p>
             </div>
           </div>
         </div>

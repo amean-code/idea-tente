@@ -10,8 +10,10 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Mail } from "lucide-react"
 import { contactInfo } from "@/lib/contact-info"
+import { useLanguage } from "@/contexts/language-context"
 
 export function ContactForm() {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,12 +30,12 @@ export function ContactForm() {
     
     // Konu başlıkları mapping
     const subjectMap: { [key: string]: string } = {
-      "product-info": "Ürün Bilgisi",
-      "technical": "Teknik Destek",
-      "distributor": "Distribütörlük",
-      "warranty": "Garanti",
-      "installation": "Montaj",
-      "other": "Diğer"
+      "product-info": t("contactForm.subjects.productInfo"),
+      "technical": t("contactForm.subjects.technical"),
+      "distributor": t("contactForm.subjects.distributor"),
+      "warranty": t("contactForm.subjects.warranty"),
+      "installation": t("contactForm.subjects.installation"),
+      "other": t("contactForm.subjects.other")
     }
     
     // Mail içeriğini oluştur
@@ -61,17 +63,17 @@ ${formData.message}
     <div className="bg-card rounded-lg p-8 border">
       <div className="flex items-center mb-6">
         <Mail className="h-6 w-6 text-primary mr-3" />
-        <h2 className="text-2xl font-bold text-foreground">Genel İletişim</h2>
+        <h2 className="text-2xl font-bold text-foreground">{t("contactForm.title")}</h2>
       </div>
 
       <p className="text-muted-foreground mb-8">
-        Sorularınız, önerileriniz veya genel bilgi talepleriniz için aşağıdaki formu kullanabilirsiniz.
+        {t("contactForm.subtitle")}
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <Label htmlFor="contact-name">Ad Soyad *</Label>
+            <Label htmlFor="contact-name">{t("contactForm.name")} *</Label>
             <Input
               id="contact-name"
               value={formData.name}
@@ -81,7 +83,7 @@ ${formData.message}
           </div>
 
           <div>
-            <Label htmlFor="contact-email">E-posta *</Label>
+            <Label htmlFor="contact-email">{t("contactForm.email")} *</Label>
             <Input
               id="contact-email"
               type="email"
@@ -94,7 +96,7 @@ ${formData.message}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <Label htmlFor="contact-phone">Telefon</Label>
+            <Label htmlFor="contact-phone">{t("contactForm.phone")}</Label>
             <Input
               id="contact-phone"
               value={formData.phone}
@@ -103,30 +105,30 @@ ${formData.message}
           </div>
 
           <div>
-            <Label htmlFor="subject">Konu *</Label>
+            <Label htmlFor="subject">{t("contactForm.subject")} *</Label>
             <Select onValueChange={(value) => handleInputChange("subject", value)}>
               <SelectTrigger>
-                <SelectValue placeholder="Konu seçin" />
+                <SelectValue placeholder={t("contactForm.subjectPlaceholder")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="product-info">Ürün Bilgisi</SelectItem>
-                <SelectItem value="technical">Teknik Destek</SelectItem>
-                <SelectItem value="distributor">Distribütörlük</SelectItem>
-                <SelectItem value="warranty">Garanti</SelectItem>
-                <SelectItem value="installation">Montaj</SelectItem>
-                <SelectItem value="other">Diğer</SelectItem>
+                <SelectItem value="product-info">{t("contactForm.subjects.productInfo")}</SelectItem>
+                <SelectItem value="technical">{t("contactForm.subjects.technical")}</SelectItem>
+                <SelectItem value="distributor">{t("contactForm.subjects.distributor")}</SelectItem>
+                <SelectItem value="warranty">{t("contactForm.subjects.warranty")}</SelectItem>
+                <SelectItem value="installation">{t("contactForm.subjects.installation")}</SelectItem>
+                <SelectItem value="other">{t("contactForm.subjects.other")}</SelectItem>
               </SelectContent>
             </Select>
           </div>
         </div>
 
         <div>
-          <Label htmlFor="message">Mesajınız *</Label>
+          <Label htmlFor="message">{t("contactForm.message")} *</Label>
           <Textarea
             id="message"
             value={formData.message}
             onChange={(e) => handleInputChange("message", e.target.value)}
-            placeholder="Mesajınızı buraya yazın..."
+            placeholder={t("contactForm.messagePlaceholder")}
             rows={5}
             required
           />
@@ -134,7 +136,7 @@ ${formData.message}
 
         <Button type="submit" className="w-full" size="lg">
           <Mail className="h-4 w-4 mr-2" />
-          Mail At
+          {t("contactForm.submit")}
         </Button>
       </form>
     </div>

@@ -6,6 +6,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Check } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 interface SubProduct {
   id: string
@@ -29,6 +30,8 @@ interface ModernSubProductsProps {
  * Daha şık ve profesyonel tasarım
  */
 export function ModernSubProducts({ title, subtitle, products }: ModernSubProductsProps) {
+  const { t } = useLanguage()
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -109,7 +112,7 @@ export function ModernSubProducts({ title, subtitle, products }: ModernSubProduc
 
                     {/* Buton */}
                     <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                      Detayları İncele
+                      {t("common.viewDetails")}
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </div>

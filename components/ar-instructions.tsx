@@ -1,25 +1,28 @@
-import { Smartphone, Camera, Hand, CheckCircle, ArrowRight } from "lucide-react"
+"use client"
 
-const steps = [
+import { Smartphone, Camera, Hand, CheckCircle, ArrowRight } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
+
+const getSteps = (t: (key: string) => string) => [
   {
     icon: Smartphone,
-    title: "Mobil Cihazınızı Hazırlayın",
-    description: "iOS 12+ veya Android 7+ işletim sistemli cihazınızla AR demo sayfasını açın.",
+    title: t("arDemo.instructions.prepare.title"),
+    description: t("arDemo.instructions.prepare.description"),
   },
   {
     icon: Camera,
-    title: "Kamera İzni Verin",
-    description: "Tarayıcınızdan kamera erişim iznini onaylayın ve kameranızı etkinleştirin.",
+    title: t("arDemo.instructions.camera.title"),
+    description: t("arDemo.instructions.camera.description"),
   },
   {
     icon: Hand,
-    title: "Yüzeyi Tarayın",
-    description: "Pergola yerleştirmek istediğiniz düz yüzeyi kameranızla tarayın.",
+    title: t("arDemo.instructions.scan.title"),
+    description: t("arDemo.instructions.scan.description"),
   },
   {
     icon: CheckCircle,
-    title: "Pergolayı Yerleştirin",
-    description: "Ekranda beliren pergolayı dokunarak istediğiniz konuma yerleştirin.",
+    title: t("arDemo.instructions.place.title"),
+    description: t("arDemo.instructions.place.description"),
   },
 ]
 
@@ -27,15 +30,18 @@ const steps = [
  * AR kullanım talimatları - modern step by step tasarım
  */
 export function ARInstructions() {
+  const { t } = useLanguage()
+  const steps = getSteps(t)
+  
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 text-balance">
-            AR Demo Nasıl Kullanılır?
+            {t("arDemo.instructions.title")}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">
-            Artırılmış gerçeklik deneyimini başlatmak için bu basit adımları takip edin
+            {t("arDemo.instructions.subtitle")}
           </p>
         </div>
 

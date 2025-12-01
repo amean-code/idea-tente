@@ -10,11 +10,13 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Download, FileText, BookOpen } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 /**
  * Bioklimatik Pergola Sistemleri Sayfası
  */
 export default function BioklimatikSistemlerPage() {
+  const { t } = useLanguage()
   // Galeri görselleri
   const galleryImages = [
     "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-kapalı.jpeg",
@@ -45,39 +47,47 @@ export default function BioklimatikSistemlerPage() {
   // Teknik özellikler
   const specs = [
     {
-      title: "Boyutlar",
+      title: t("pergola.bioclimatic.specs.dimensions"),
       icon: "ruler" as const,
       items: [
-        { label: "Maksimum Genişlik", value: "8,30 m" },
-        { label: "Maksimum Derinlik", value: "10 m" },
-        { label: "Maksimum Alan", value: "43 m²" },
+        { label: t("pergola.bioclimatic.specs.maxWidth"), value: "8,30 m" },
+        { label: t("pergola.bioclimatic.specs.maxDepth"), value: "10 m" },
+        { label: t("pergola.bioclimatic.specs.maxArea"), value: "43 m²" },
+        { label: t("pergola.bioclimatic.specs.verticalProfile"), value: "16 cm x 14 cm" },
+        { label: t("pergola.bioclimatic.specs.horizontalProfile"), value: "12 cm x 18 cm" },
       ]
     },
     {
-      title: "Malzeme & Yapı",
+      title: t("pergola.bioclimatic.specs.materials"),
       icon: "settings" as const,
       items: [
-        { label: "Profil Malzeme", value: "Alüminyum 6063-T6 F25" },
-        { label: "Lamel Açısı", value: "105° Dönebilir" },
-        { label: "Fitil Malzemesi", value: "EPDM" },
+        { label: t("pergola.bioclimatic.specs.profileMaterial"), value: "Alüminyum 6063-T6 F25" },
+        { label: t("pergola.bioclimatic.specs.louverAngle"), value: "105° Dönebilir (Eksenel)" },
+        { label: t("pergola.bioclimatic.specs.gasketMaterial"), value: "EPDM" },
+        { label: t("pergola.bioclimatic.specs.surfaceTreatment"), value: "Elektrostatik Fırın Boyası" },
+        { label: t("pergola.bioclimatic.specs.accessoryCoating"), value: "Galvaniz + Elektrostatik Boya" },
       ]
     },
     {
-      title: "Performans",
+      title: t("pergola.bioclimatic.specs.performance"),
       icon: "palette" as const,
       items: [
-        { label: "Su Geçirmezlik", value: "%100" },
-        { label: "Yayılı Yük Kapasitesi", value: "50kg+25kg/m²" },
-        { label: "Rüzgar Yükü", value: "50 kg/m²" },
+        { label: t("pergola.bioclimatic.specs.waterproof"), value: "%100" },
+        { label: t("pergola.bioclimatic.specs.distributedLoad"), value: "50kg+25kg/m²" },
+        { label: t("pergola.bioclimatic.specs.windLoad"), value: "50 kg/m²" },
+        { label: t("pergola.bioclimatic.specs.motorSystem"), value: "2-4 Linear Motor" },
+        { label: t("pergola.bioclimatic.specs.control"), value: "Uzaktan Kumanda + Otomasyon" },
       ]
     },
     {
-      title: "Garanti",
+      title: t("pergola.bioclimatic.specs.warranty"),
       icon: "layers" as const,
       items: [
-        { label: "Motor Garantisi", value: "2 Yıl" },
-        { label: "Mekanik Garanti", value: "2 Yıl" },
-        { label: "Eğim", value: "Düz veya %5 Eğimli" },
+        { label: t("pergola.bioclimatic.specs.motorWarranty"), value: "2 Yıl" },
+        { label: t("pergola.bioclimatic.specs.mechanicalWarranty"), value: "2 Yıl" },
+        { label: t("pergola.bioclimatic.specs.slope"), value: "Düz veya %5 Eğimli" },
+        { label: t("pergola.bioclimatic.specs.rainMode"), value: "Kontrollü Havalandırma" },
+        { label: t("pergola.bioclimatic.specs.ledLighting"), value: "Opsiyonel" },
       ]
     },
   ]
@@ -85,33 +95,33 @@ export default function BioklimatikSistemlerPage() {
   // Özellikler
   const features = [
     {
-      title: "105° Dönebilen Lameller",
-      description: "Eksenel olarak 105° açıda açılabilen lameller ile güneş ışığını ve havalandırmayı aynı anda kontrol edin.",
+      title: t("pergola.bioclimatic.featureList.rotatableLouvers.title"),
+      description: t("pergola.bioclimatic.featureList.rotatableLouvers.description"),
       icon: "sun" as const,
     },
     {
-      title: "Akıllı İklim Kontrolü",
-      description: "Bioklimatik sistem ile mekanınızın havasını, ışığını ve sıcaklığını optimal seviyede tutun.",
+      title: t("pergola.bioclimatic.featureList.climateControl.title"),
+      description: t("pergola.bioclimatic.featureList.climateControl.description"),
       icon: "thermometer" as const,
     },
     {
-      title: "%100 Su Geçirmezlik",
-      description: "Lamellerdeki oluklar sayesinde yağmur suları yan oluklara akarak taşıyıcı ayaklardan dışarı atılır.",
+      title: t("pergola.bioclimatic.featureList.waterproof.title"),
+      description: t("pergola.bioclimatic.featureList.waterproof.description"),
       icon: "rain" as const,
     },
     {
-      title: "Enerji Tasarrufu",
-      description: "Doğal havalandırma ve gölgeleme ile enerji tüketimini azaltın.",
+      title: t("pergola.bioclimatic.featureList.energySaving.title"),
+      description: t("pergola.bioclimatic.featureList.energySaving.description"),
       icon: "battery" as const,
     },
     {
-      title: "Sessiz Çalışma",
-      description: "Triger kayışı ile güç aktarımı sağlanan sistem sessiz ve pürüzsüz çalışır.",
+      title: t("pergola.bioclimatic.featureList.quietOperation.title"),
+      description: t("pergola.bioclimatic.featureList.quietOperation.description"),
       icon: "volume" as const,
     },
     {
-      title: "Tüm Mevsim",
-      description: "Yaz ve kış aylarında konforlu kullanım. Her mevsim için ideal çözüm.",
+      title: t("pergola.bioclimatic.featureList.allSeasons.title"),
+      description: t("pergola.bioclimatic.featureList.allSeasons.description"),
       icon: "shield" as const,
     },
   ]
@@ -125,7 +135,7 @@ export default function BioklimatikSistemlerPage() {
           <div className="absolute inset-0 z-0">
             <Image
               src="/pergola/pergola-dıs-gunes-2.jpeg"
-              alt="Bioklimatik Pergola Sistemleri"
+              alt={t("pergola.bioclimatic.hero.title")}
               fill
               className="object-cover"
               priority
@@ -135,10 +145,10 @@ export default function BioklimatikSistemlerPage() {
 
           <div className="relative z-10 container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 text-balance leading-tight drop-shadow-lg">
-              Bioklimatik Pergola Sistemleri
+              {t("pergola.bioclimatic.hero.title")}
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 text-pretty leading-relaxed drop-shadow-md max-w-3xl mx-auto">
-              Doğa ile uyumlu, akıllı iklim kontrolü ile konforlu yaşam alanları
+              {t("pergola.bioclimatic.hero.subtitle")}
             </p>
           </div>
         </section>
@@ -146,7 +156,7 @@ export default function BioklimatikSistemlerPage() {
         {/* Galeri */}
         <ProductDetailGallery
           images={galleryImages}
-          productName="Bioklimatik Sistemler"
+          productName={t("pergola.bioclimatic.hero.title")}
         />
         
         {/* Teknik Özellikler */}
@@ -154,8 +164,8 @@ export default function BioklimatikSistemlerPage() {
         
         {/* Özellikler */}
         <ProductDetailFeatures
-          title="Bioklimatik Teknoloji"
-          subtitle="Doğal havalandırma ve iklim kontrolü ile enerji verimliliği"
+          title={t("pergola.bioclimatic.features.title")}
+          subtitle={t("pergola.bioclimatic.features.subtitle")}
           features={features}
         />
         
@@ -171,13 +181,13 @@ export default function BioklimatikSistemlerPage() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary mb-6 backdrop-blur-sm">
                 <FileText className="h-4 w-4" />
-                <span className="text-sm font-medium">Teknik Dokümantasyon</span>
+                <span className="text-sm font-medium">{t("pergola.bioclimatic.documents.badge")}</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
-                Detaylı Bilgi ve <span className="text-primary">Dokümantasyon</span>
+                {t("pergola.bioclimatic.documents.title")} <span className="text-primary">{t("pergola.bioclimatic.documents.titleHighlight")}</span>
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Ürünümüz hakkında detaylı teknik bilgiler ve katalog dosyalarını indirebilirsiniz
+                {t("pergola.bioclimatic.documents.description")}
               </p>
             </motion.div>
 
@@ -195,9 +205,9 @@ export default function BioklimatikSistemlerPage() {
                     <FileText className="h-6 w-6 text-primary" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Teknik Özellikler</h3>
+                    <h3 className="text-xl font-bold mb-2">{t("pergola.bioclimatic.documents.technicalFile.title")}</h3>
                     <p className="text-muted-foreground text-sm">
-                      Bioklimatik pergola sistemlerinin detaylı teknik özellikleri ve teknik çizimler
+                      {t("pergola.bioclimatic.documents.technicalFile.description")}
                     </p>
                   </div>
                 </div>
@@ -212,7 +222,7 @@ export default function BioklimatikSistemlerPage() {
                     rel="noopener noreferrer"
                   >
                     <Download className="h-4 w-4 mr-2" />
-                    Teknik Dosyayı İndir
+                    {t("pergola.bioclimatic.documents.technicalFile.download")}
                   </a>
                 </Button>
               </motion.div>
@@ -230,9 +240,9 @@ export default function BioklimatikSistemlerPage() {
                     <BookOpen className="h-6 w-6 text-primary" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">E-Katalog</h3>
+                    <h3 className="text-xl font-bold mb-2">{t("pergola.bioclimatic.documents.catalog.title")}</h3>
                     <p className="text-muted-foreground text-sm">
-                      Tüm ürün gamımızı içeren kapsamlı e-katalog dosyası
+                      {t("pergola.bioclimatic.documents.catalog.description")}
                     </p>
                   </div>
                 </div>
@@ -247,7 +257,7 @@ export default function BioklimatikSistemlerPage() {
                     rel="noopener noreferrer"
                   >
                     <Download className="h-4 w-4 mr-2" />
-                    E-Kataloğu İndir
+                    {t("pergola.bioclimatic.documents.catalog.download")}
                   </a>
                 </Button>
               </motion.div>

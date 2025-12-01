@@ -17,30 +17,45 @@ export function KisBahcesiProductCards() {
   const products = [
     {
       id: "standart",
-      title: "Standart Kış Bahçesi",
-      description: "Ekonomik ve kaliteli kış bahçesi çözümü. Çift cam sistemi ve manuel havalandırma.",
+      title: t("winterGarden.products.standart.title"),
+      description: t("winterGarden.products.standart.description"),
       image: "/standard-winter-garden-double-glass.jpg",
-      badge: "Ekonomik",
+      badge: t("winterGarden.products.standart.badge"),
       href: "/kis-bahcesi/standart-kis-bahcesi",
-      features: ["Çift Cam", "Termal Kesim", "Manuel Havalandırma", "10 Yıl Garanti"]
+      features: [
+        t("winterGarden.products.standart.features.doubleGlass"),
+        t("winterGarden.products.standart.features.thermal"),
+        t("winterGarden.products.standart.features.manual"),
+        t("winterGarden.products.standart.features.warranty")
+      ]
     },
     {
       id: "premium",
-      title: "Premium Kış Bahçesi",
-      description: "Akıllı cam teknolojisi ve otomatik iklim kontrol sistemi ile konfor.",
+      title: t("winterGarden.products.premium.title"),
+      description: t("winterGarden.products.premium.description"),
       image: "/premium-winter-garden-smart-glass.jpg",
-      badge: "Popüler",
+      badge: t("winterGarden.products.premium.badge"),
       href: "/kis-bahcesi/premium-kis-bahcesi",
-      features: ["Akıllı Cam", "Oto Isı Kontrol", "Uzaktan Kontrol", "15 Yıl Garanti"]
+      features: [
+        t("winterGarden.products.premium.features.smartGlass"),
+        t("winterGarden.products.premium.features.autoControl"),
+        t("winterGarden.products.premium.features.remote"),
+        t("winterGarden.products.premium.features.warranty")
+      ]
     },
     {
       id: "lux",
-      title: "Lüks Kış Bahçesi",
-      description: "Panoramik cam, akıllı ev entegrasyonu ve zemin ısıtma ile lüks yaşam.",
+      title: t("winterGarden.products.lux.title"),
+      description: t("winterGarden.products.lux.description"),
       image: "/luxury-winter-garden-panoramic-view.jpg",
-      badge: "Premium",
+      badge: t("winterGarden.products.lux.badge"),
       href: "/kis-bahcesi/lux-kis-bahcesi",
-      features: ["Panoramik Cam", "Akıllı Ev", "Zemin Isıtma", "20 Yıl Garanti"]
+      features: [
+        t("winterGarden.products.lux.features.panoramic"),
+        t("winterGarden.products.lux.features.smartHome"),
+        t("winterGarden.products.lux.features.floorHeating"),
+        t("winterGarden.products.lux.features.warranty")
+      ]
     }
   ]
 

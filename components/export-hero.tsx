@@ -5,8 +5,10 @@ import { ArrowRight, Globe, Truck } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "motion/react"
+import { useLanguage } from "@/contexts/language-context"
 
 export function ExportHero() {
+  const { t } = useLanguage()
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-[#3D4247]">
       {/* Arka Plan Görseli */}
@@ -30,7 +32,7 @@ export function ExportHero() {
             className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary mb-6 backdrop-blur-sm"
           >
             <Globe className="w-4 h-4" />
-            <span className="text-sm font-medium">Global Çözüm Ortağınız</span>
+            <span className="text-sm font-medium">{t("export.hero.badge")}</span>
           </motion.div>
 
           <motion.h1
@@ -39,8 +41,8 @@ export function ExportHero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
           >
-            Sınırları Aşan <br />
-            <span className="text-primary">Kalite ve Güven</span>
+            {t("export.hero.title")} <br />
+            <span className="text-primary">{t("export.hero.titleHighlight")}</span>
           </motion.h1>
 
           <motion.p
@@ -49,10 +51,7 @@ export function ExportHero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto"
           >
-            IDEA Pergola olarak, modern üretim tesislerimizden dünyanın dört bir
-            yanına premium pergola ve cam sistemleri ihraç ediyoruz. Uluslararası
-            standartlarda paketleme ve lojistik çözümlerimizle projelerinizi
-            güvenle teslim ediyoruz.
+            {t("export.hero.subtitle")}
           </motion.p>
 
           <motion.div
@@ -67,7 +66,7 @@ export function ExportHero() {
               asChild
             >
               <Link href="#contact">
-                İhracat Talebi Oluştur
+                {t("export.hero.createRequest")}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -77,7 +76,7 @@ export function ExportHero() {
               className="bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm"
               asChild
             >
-              <Link href="#process">Süreç Nasıl İşler?</Link>
+              <Link href="#process">{t("export.hero.howItWorks")}</Link>
             </Button>
           </motion.div>
 
@@ -92,8 +91,8 @@ export function ExportHero() {
                 <Truck className="w-5 h-5 text-primary" />
               </div>
               <div className="text-sm text-left">
-                <div className="text-white font-semibold">Güvenli Lojistik</div>
-                <div>Uluslararası Taşıma</div>
+                <div className="text-white font-semibold">{t("export.hero.secureLogistics")}</div>
+                <div>{t("export.hero.internationalShipping")}</div>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -101,8 +100,8 @@ export function ExportHero() {
                 <Globe className="w-5 h-5 text-primary" />
               </div>
               <div className="text-sm text-left">
-                <div className="text-white font-semibold">50+ Ülke</div>
-                <div>Aktif İhracat</div>
+                <div className="text-white font-semibold">{t("export.hero.countries")}</div>
+                <div>{t("export.hero.activeExport")}</div>
               </div>
             </div>
           </motion.div>

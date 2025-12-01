@@ -2,37 +2,38 @@
 
 import { Handshake, TrendingUp, Shield, Headphones, Truck, Award } from "lucide-react"
 import { motion } from "motion/react"
+import { useLanguage } from "@/contexts/language-context"
 
-const benefits = [
+const getBenefits = (t: (key: string) => string) => [
   {
     icon: Handshake,
-    title: "Güçlü Ortaklık",
-    description: "Uzun vadeli, karşılıklı kazançlı iş ortaklığı",
+    title: t("distributor.benefits.strongPartnership.title"),
+    description: t("distributor.benefits.strongPartnership.description"),
   },
   {
     icon: TrendingUp,
-    title: "Yüksek Kar Marjı",
-    description: "Rekabetçi fiyatlar ve cazip kar marjları",
+    title: t("distributor.benefits.highMargin.title"),
+    description: t("distributor.benefits.highMargin.description"),
   },
   {
     icon: Shield,
-    title: "Bölge Koruması",
-    description: "Özel bölge hakları ve rekabet koruması",
+    title: t("distributor.benefits.territoryProtection.title"),
+    description: t("distributor.benefits.territoryProtection.description"),
   },
   {
     icon: Headphones,
-    title: "Teknik Destek",
-    description: "7/24 teknik destek ve eğitim programları",
+    title: t("distributor.benefits.technicalSupport.title"),
+    description: t("distributor.benefits.technicalSupport.description"),
   },
   {
     icon: Truck,
-    title: "Lojistik Çözümler",
-    description: "Hızlı ve güvenli kargo çözümleri",
+    title: t("distributor.benefits.logistics.title"),
+    description: t("distributor.benefits.logistics.description"),
   },
   {
     icon: Award,
-    title: "Pazarlama Desteği",
-    description: "Katalog, broşür ve pazarlama materyalleri",
+    title: t("distributor.benefits.marketing.title"),
+    description: t("distributor.benefits.marketing.description"),
   },
 ]
 
@@ -41,6 +42,9 @@ const benefits = [
  * İş ortaklarına sunulan avantajları modern kartlarla gösterir
  */
 export function DistributorBenefits() {
+  const { t } = useLanguage()
+  const benefits = getBenefits(t)
+  
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -52,7 +56,7 @@ export function DistributorBenefits() {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance"
           >
-            Distribütör Avantajları
+            {t("distributor.benefits.title")}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -61,7 +65,7 @@ export function DistributorBenefits() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty"
           >
-            İş ortaklarımıza sunduğumuz kapsamlı destek ve avantajlar ile birlikte büyüyün
+            {t("distributor.benefits.subtitle")}
           </motion.p>
         </div>
 

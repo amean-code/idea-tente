@@ -17,30 +17,45 @@ export function GunesKiriclariProductCards() {
   const products = [
     {
       id: "sabit",
-      title: "Sabit Güneş Kırıcı",
-      description: "Ekonomik ve dayanıklı çözüm. Uzun ömürlü alüminyum profil ile 7/24 güneş kontrolü.",
+      title: t("sunBreakers.products.sabit.title"),
+      description: t("sunBreakers.products.sabit.description"),
       image: "/fixed-sun-breakers-building-facade.jpg",
-      badge: "Ekonomik",
+      badge: t("sunBreakers.products.sabit.badge"),
       href: "/gunes-kiriclari/sabit-gunes-kirici",
-      features: ["Alüminyum Profil", "Kolay Montaj", "Düşük Bakım", "10 Yıl Garanti"]
+      features: [
+        t("sunBreakers.products.sabit.features.aluminum"),
+        t("sunBreakers.products.sabit.features.easyInstall"),
+        t("sunBreakers.products.sabit.features.lowMaintenance"),
+        t("sunBreakers.products.sabit.features.warranty")
+      ]
     },
     {
       id: "dikey",
-      title: "Dikey Güneş Kırıcı",
-      description: "Cephe entegrasyonu ve estetik tasarım. Mimari tasarıma uyum sağlar.",
+      title: t("sunBreakers.products.dikey.title"),
+      description: t("sunBreakers.products.dikey.description"),
       image: "/vertical-sun-breakers-modern-facade.jpg",
-      badge: "Estetik",
+      badge: t("sunBreakers.products.dikey.badge"),
       href: "/gunes-kiriclari/dikey-gunes-kirici",
-      features: ["Cephe Sistemi", "Estetik Tasarım", "RAL Renk", "10 Yıl Garanti"]
+      features: [
+        t("sunBreakers.products.dikey.features.facade"),
+        t("sunBreakers.products.dikey.features.aesthetic"),
+        t("sunBreakers.products.dikey.features.ralColor"),
+        t("sunBreakers.products.dikey.features.warranty")
+      ]
     },
     {
       id: "hareketli",
-      title: "Hareketli Güneş Kırıcı",
-      description: "Motorlu sistem ile otomatik açılır-kapanır. Akıllı kontrol ve maksimum konfor.",
+      title: t("sunBreakers.products.hareketli.title"),
+      description: t("sunBreakers.products.hareketli.description"),
       image: "/motorized-sun-breakers-automatic.jpg",
-      badge: "Premium",
+      badge: t("sunBreakers.products.hareketli.badge"),
       href: "/gunes-kiriclari/hareketli-gunes-kirici",
-      features: ["Motorlu Sistem", "Uzaktan Kumanda", "Sensör Kontrol", "10 Yıl Garanti"]
+      features: [
+        t("sunBreakers.products.hareketli.features.motorized"),
+        t("sunBreakers.products.hareketli.features.remote"),
+        t("sunBreakers.products.hareketli.features.sensor"),
+        t("sunBreakers.products.hareketli.features.warranty")
+      ]
     }
   ]
 

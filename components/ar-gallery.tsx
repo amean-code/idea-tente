@@ -1,46 +1,51 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Play, Eye, ArrowRight } from "lucide-react"
-
-const arDemos = [
-  {
-    title: "Bioklimatik Pergola",
-    description: "Akıllı lamelli sistem AR demosu",
-    image: "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
-    category: "Pergola",
-  },
-  {
-    title: "Cam Sistemleri",
-    description: "Frameless cam çözümleri AR demosu",
-    image: "/frameless-glass-sliding-system--modern-terrace-wit.jpg",
-    category: "Cam",
-  },
-  {
-    title: "Kış Bahçesi",
-    description: "Kapalı alan çözümleri AR demosu",
-    image: "/winter-garden-conservatory-with-glass-roof--indoor.jpg",
-    category: "Kış Bahçesi",
-  },
-  {
-    title: "Güneş Kırıcı",
-    description: "Güneş koruma sistemleri AR demosu",
-    image: "/modern-sun-breaker-louver-system-on-building-facad.jpg",
-    category: "Güneş Kırıcı",
-  },
-]
+import { useLanguage } from "@/contexts/language-context"
 
 /**
  * AR Demo galerisi - modern ve çerçevesiz kart tasarımı
  */
 export function ARGallery() {
+  const { t } = useLanguage()
+
+  const arDemos = [
+    {
+      title: t("arDemo.gallery.demos.bioclimatic.title"),
+      description: t("arDemo.gallery.demos.bioclimatic.description"),
+      image: "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
+      category: t("arDemo.gallery.categories.pergola"),
+    },
+    {
+      title: t("arDemo.gallery.demos.glass.title"),
+      description: t("arDemo.gallery.demos.glass.description"),
+      image: "/frameless-glass-sliding-system--modern-terrace-wit.jpg",
+      category: t("arDemo.gallery.categories.glass"),
+    },
+    {
+      title: t("arDemo.gallery.demos.winterGarden.title"),
+      description: t("arDemo.gallery.demos.winterGarden.description"),
+      image: "/winter-garden-conservatory-with-glass-roof--indoor.jpg",
+      category: t("arDemo.gallery.categories.winterGarden"),
+    },
+    {
+      title: t("arDemo.gallery.demos.sunBreaker.title"),
+      description: t("arDemo.gallery.demos.sunBreaker.description"),
+      image: "/modern-sun-breaker-louver-system-on-building-facad.jpg",
+      category: t("arDemo.gallery.categories.sunBreaker"),
+    },
+  ]
+
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 text-balance">
-            AR Demo Galerisi
+            {t("arDemo.gallery.title")}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto text-pretty">
-            Farklı ürün kategorilerimizi artırılmış gerçeklik ile keşfedin
+            {t("arDemo.gallery.subtitle")}
           </p>
         </div>
 
@@ -86,7 +91,7 @@ export function ARGallery() {
                   <div className="pt-2">
                     <div className="flex items-center text-primary font-semibold group-hover:gap-2 transition-all">
                       <Eye className="h-5 w-5" />
-                      <span className="ml-2">AR Demo Başlat</span>
+                      <span className="ml-2">{t("arDemo.gallery.startDemo")}</span>
                       <ArrowRight className="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </div>
                   </div>

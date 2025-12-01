@@ -2,56 +2,57 @@
 
 import { Package, FileCheck, Plane, Ship, Truck, MapPin, CheckCircle2 } from "lucide-react"
 import { motion } from "motion/react"
+import { useLanguage } from "@/contexts/language-context"
 
-const shippingSteps = [
+const getShippingSteps = (t: (key: string) => string) => [
   {
     icon: FileCheck,
-    title: "Sipariş & Doküman",
-    description: "Sipariş onayı ve tüm belgeler hazırlanır",
-    duration: "1-2 gün",
+    title: t("export.shipping.steps.order.title"),
+    description: t("export.shipping.steps.order.description"),
+    duration: t("export.shipping.steps.order.duration"),
   },
   {
     icon: Package,
-    title: "Üretim & Paketleme",
-    description: "Ürünler üretilir ve özel ihracat ambalajı yapılır",
-    duration: "7-14 gün",
+    title: t("export.shipping.steps.production.title"),
+    description: t("export.shipping.steps.production.description"),
+    duration: t("export.shipping.steps.production.duration"),
   },
   {
     icon: Truck,
-    title: "Gümrük İşlemleri",
-    description: "Tüm gümrük işlemleri tamamlanır",
-    duration: "1-3 gün",
+    title: t("export.shipping.steps.customs.title"),
+    description: t("export.shipping.steps.customs.description"),
+    duration: t("export.shipping.steps.customs.duration"),
   },
   {
     icon: Ship,
-    title: "Uluslararası Kargo",
-    description: "Deniz veya hava yolu ile güvenli gönderim",
-    duration: "5-30 gün",
+    title: t("export.shipping.steps.shipping.title"),
+    description: t("export.shipping.steps.shipping.description"),
+    duration: t("export.shipping.steps.shipping.duration"),
   },
   {
     icon: MapPin,
-    title: "Teslimat",
-    description: "Hedef ülkede yerel kargo ile teslimat",
-    duration: "2-5 gün",
+    title: t("export.shipping.steps.delivery.title"),
+    description: t("export.shipping.steps.delivery.description"),
+    duration: t("export.shipping.steps.delivery.duration"),
   },
 ]
 
-const features = [
+const getFeatures = (t: (key: string) => string) => [
   {
     icon: CheckCircle2,
-    text: "Sigortalı Kargo",
+    text: t("export.shipping.features.insured"),
   },
   {
     icon: CheckCircle2,
-    text: "Takip Sistemi",
+    text: t("export.shipping.features.tracking"),
   },
   {
     icon: CheckCircle2,
-    text: "Gümrük Desteği",
+    text: t("export.shipping.features.customs"),
   },
   {
     icon: CheckCircle2,
-    text: "Özel Ambalaj",
+    text: t("export.shipping.features.packaging"),
   },
 ]
 
@@ -60,6 +61,10 @@ const features = [
  * Global kargo sürecini timeline şeklinde gösterir
  */
 export function ExportShippingProcess() {
+  const { t } = useLanguage()
+  const shippingSteps = getShippingSteps(t)
+  const features = getFeatures(t)
+  
   return (
     <section className="py-20 bg-muted/10 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
@@ -71,7 +76,7 @@ export function ExportShippingProcess() {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance"
           >
-            Gönderim Sürecimiz
+            {t("export.shipping.title")}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -80,7 +85,7 @@ export function ExportShippingProcess() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty"
           >
-            Siparişinizden teslimat sonrası desteğe kadar her adımda yanınızdayız
+            {t("export.shipping.subtitle")}
           </motion.p>
         </div>
 

@@ -30,7 +30,7 @@ export function GunesKiriclariHero() {
           transition={{ duration: 0.6 }}
           className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary mb-6 backdrop-blur-sm"
         >
-          <span className="text-sm font-medium">Enerji Verimli Çözümler</span>
+          <span className="text-sm font-medium">{t("sunBreakers.hero.badge")}</span>
         </motion.div>
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}

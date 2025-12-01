@@ -4,63 +4,65 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { Award, ZoomIn } from "lucide-react"
 import { useState } from "react"
-
-const certificates = [
-  {
-    id: 1,
-    title: "ISO 9001 Kalite Yönetim Sistemi",
-    image: "/SERTİFİKALAR/İDEA TENTE ISO9001 copy.jpg",
-    category: "Kalite",
-  },
-  {
-    id: 2,
-    title: "CE Belgesi - Motorlu Pergola Sistemi",
-    image: "/SERTİFİKALAR/İDEA TENTE CE BELGESİ (MOTORIZED PERGOLA SYSTEM) copy.jpg",
-    category: "CE Sertifikası",
-  },
-  {
-    id: 3,
-    title: "CE Belgesi - Motorlu Giyotin Cam Sistemi",
-    image: "/SERTİFİKALAR/İDEA TENTE CE BELGESİ (MOTORIZED GUILLOTINE GLASS SYSTEM) copy.jpg",
-    category: "CE Sertifikası",
-  },
-  {
-    id: 4,
-    title: "Uygunluk Beyanı - Motorlu Pergola Sistemi",
-    image: "/SERTİFİKALAR/DECLERATION OF CONFORMITY (MOTORIZED PERGOLA SYSTEM).jpg",
-    category: "Uygunluk",
-  },
-  {
-    id: 5,
-    title: "Uygunluk Beyanı - Motorlu Giyotin Cam Sistemi",
-    image: "/SERTİFİKALAR/DECLERATION OF CONFORMITY (MOTORIZED GUILLOTINE GLASS SYSTEM).jpg",
-    category: "Uygunluk",
-  },
-  {
-    id: 6,
-    title: "Tasarım Tescil Belgesi",
-    image: "/SERTİFİKALAR/TASARIM TESCİL.jpg",
-    category: "Tasarım",
-  },
-  {
-    id: 7,
-    title: "Tasarım Tescil Belgesi - Giyotin",
-    image: "/SERTİFİKALAR/TASARIM TESCİL BELGESİ GİYOTİN.jpg",
-    category: "Tasarım",
-  },
-  {
-    id: 8,
-    title: "BAİB Üyelik Belgesi",
-    image: "/SERTİFİKALAR/BAİB ÜYELİK BELGESİ.jpg",
-    category: "Üyelik",
-  },
-]
+import { useLanguage } from "@/contexts/language-context"
 
 /**
  * Sertifikalar bölümü - Ana sayfada gösterilen sertifika galerisi
  */
 export function CertificatesSection() {
+  const { t } = useLanguage()
   const [selectedCertificate, setSelectedCertificate] = useState<number | null>(null)
+
+  const certificates = [
+    {
+      id: 1,
+      title: t("certificates.items.iso9001"),
+      image: "/SERTİFİKALAR/İDEA TENTE ISO9001 copy.jpg",
+      category: t("certificates.categories.quality"),
+    },
+    {
+      id: 2,
+      title: t("certificates.items.cePergola"),
+      image: "/SERTİFİKALAR/İDEA TENTE CE BELGESİ (MOTORIZED PERGOLA SYSTEM) copy.jpg",
+      category: t("certificates.categories.ce"),
+    },
+    {
+      id: 3,
+      title: t("certificates.items.ceGlass"),
+      image: "/SERTİFİKALAR/İDEA TENTE CE BELGESİ (MOTORIZED GUILLOTINE GLASS SYSTEM) copy.jpg",
+      category: t("certificates.categories.ce"),
+    },
+    {
+      id: 4,
+      title: t("certificates.items.conformityPergola"),
+      image: "/SERTİFİKALAR/DECLERATION OF CONFORMITY (MOTORIZED PERGOLA SYSTEM).jpg",
+      category: t("certificates.categories.conformity"),
+    },
+    {
+      id: 5,
+      title: t("certificates.items.conformityGlass"),
+      image: "/SERTİFİKALAR/DECLERATION OF CONFORMITY (MOTORIZED GUILLOTINE GLASS SYSTEM).jpg",
+      category: t("certificates.categories.conformity"),
+    },
+    {
+      id: 6,
+      title: t("certificates.items.designRegistration"),
+      image: "/SERTİFİKALAR/TASARIM TESCİL.jpg",
+      category: t("certificates.categories.design"),
+    },
+    {
+      id: 7,
+      title: t("certificates.items.designRegistrationGlass"),
+      image: "/SERTİFİKALAR/TASARIM TESCİL BELGESİ GİYOTİN.jpg",
+      category: t("certificates.categories.design"),
+    },
+    {
+      id: 8,
+      title: t("certificates.items.baibMembership"),
+      image: "/SERTİFİKALAR/BAİB ÜYELİK BELGESİ.jpg",
+      category: t("certificates.categories.membership"),
+    },
+  ]
 
   return (
     <>
@@ -75,13 +77,13 @@ export function CertificatesSection() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary mb-6 backdrop-blur-sm">
               <Award className="h-4 w-4" />
-              <span className="text-sm font-medium">Sertifikalar ve Belgeler</span>
+              <span className="text-sm font-medium">{t("certificates.badge")}</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-              Kalite ve <span className="text-primary">Güvenilirlik</span>
+              {t("certificates.title")} <span className="text-primary">{t("certificates.titleHighlight")}</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-              Uluslararası standartlarda üretim ve kalite yönetim sistemleri ile sertifikalı ürünlerimiz
+              {t("certificates.subtitle")}
             </p>
           </motion.div>
 

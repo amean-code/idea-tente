@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, Globe2, Award, Truck } from "lucide-react"
 import Image from "next/image"
 import { motion } from "motion/react"
+import { useLanguage } from "@/contexts/language-context"
 
 const exportProducts = [
   {
@@ -38,6 +39,8 @@ const exportProducts = [
  * İhracat için hazır ürünleri modern kartlarla gösterir
  */
 export function ExportProducts() {
+  const { t } = useLanguage()
+  
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -49,7 +52,7 @@ export function ExportProducts() {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance"
           >
-            İhracat Ürünlerimiz
+            {t("export.products.title")}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -58,7 +61,7 @@ export function ExportProducts() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty"
           >
-            Uluslararası standartlarda üretilen, CE sertifikalı premium ürünlerimiz dünya çapında güvenle kullanılmaktadır
+            {t("export.products.subtitle")}
           </motion.p>
         </div>
 
@@ -83,7 +86,7 @@ export function ExportProducts() {
                     <div className="absolute top-4 right-4">
                       <Badge className="bg-primary hover:bg-primary/90 text-primary-foreground flex items-center gap-1">
                         <Truck className="h-3 w-3" />
-                        Export Ready
+                        {t("exportProducts.exportReady")}
                       </Badge>
                     </div>
                   )}
@@ -99,7 +102,7 @@ export function ExportProducts() {
                     <div>
                       <div className="flex items-center gap-2 mb-3">
                         <Award className="h-4 w-4 text-primary" />
-                        <h4 className="font-semibold text-foreground text-sm">Özellikler</h4>
+                        <h4 className="font-semibold text-foreground text-sm">{t("exportProducts.features")}</h4>
                       </div>
                       <div className="space-y-2">
                         {product.features.map((feature, idx) => (
@@ -114,7 +117,7 @@ export function ExportProducts() {
                     <div>
                       <div className="flex items-center gap-2 mb-3">
                         <Globe2 className="h-4 w-4 text-primary" />
-                        <h4 className="font-semibold text-foreground text-sm">Hedef Pazarlar</h4>
+                        <h4 className="font-semibold text-foreground text-sm">{t("exportProducts.targetMarkets")}</h4>
                       </div>
                       <div className="flex flex-wrap gap-2">
                         {product.markets.map((market, idx) => (
@@ -143,9 +146,9 @@ export function ExportProducts() {
             <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
               <Award className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-bold text-lg mb-2 text-foreground">CE Sertifikalı</h3>
+            <h3 className="font-bold text-lg mb-2 text-foreground">{t("exportProducts.infoCards.ceCertified.title")}</h3>
             <p className="text-sm text-muted-foreground">
-              Tüm ürünlerimiz Avrupa standartlarında CE sertifikalıdır
+              {t("exportProducts.infoCards.ceCertified.description")}
             </p>
           </div>
 
@@ -153,9 +156,9 @@ export function ExportProducts() {
             <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
               <Truck className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-bold text-lg mb-2 text-foreground">Güvenli Kargo</h3>
+            <h3 className="font-bold text-lg mb-2 text-foreground">{t("exportProducts.infoCards.secureShipping.title")}</h3>
             <p className="text-sm text-muted-foreground">
-              Özel ihracat ambalajı ile hasar riski minimumda
+              {t("exportProducts.infoCards.secureShipping.description")}
             </p>
           </div>
 
@@ -163,9 +166,9 @@ export function ExportProducts() {
             <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
               <Globe2 className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-bold text-lg mb-2 text-foreground">Dünya Çapında</h3>
+            <h3 className="font-bold text-lg mb-2 text-foreground">{t("exportProducts.infoCards.worldwide.title")}</h3>
             <p className="text-sm text-muted-foreground">
-              50+ ülkeye başarıyla gönderilmiş binlerce ürün
+              {t("exportProducts.infoCards.worldwide.description")}
             </p>
           </div>
         </motion.div>

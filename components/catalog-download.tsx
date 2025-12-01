@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Download, FileText, Smartphone, Globe2, BookOpen } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 /**
  * İndirilebilir katalog verisi
@@ -79,19 +80,21 @@ const catalogs = [
  * Kullanıcıların farklı formatlarda katalogları indirmesini sağlar
  */
 export function CatalogDownload() {
+  const { t } = useLanguage()
+  
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
             <Download className="h-4 w-4 text-black" />
-            <span className="text-sm font-medium text-black">Hızlı İndirme Merkezi</span>
+            <span className="text-sm font-medium text-black">{t("catalog.download.badge")}</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-            Dijital Kataloglar
+            {t("catalog.download.title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-            İhtiyacınıza uygun katalog formatını seçin ve anında indirin
+            {t("catalog.download.subtitle")}
           </p>
         </div>
 
@@ -105,7 +108,7 @@ export function CatalogDownload() {
               {catalog.featured && (
                 <div className="absolute -top-2 -right-2">
                   <div className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold shadow-md">
-                    Popüler
+                    {t("catalog.download.popular")}
                   </div>
                 </div>
               )}
@@ -123,21 +126,21 @@ export function CatalogDownload() {
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-muted-foreground flex items-center gap-2">
                     <FileText className="h-4 w-4" />
-                    Boyut:
+                    {t("catalog.download.size")}
                   </span>
                   <span className="font-semibold text-foreground">{catalog.size}</span>
                 </div>
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-muted-foreground flex items-center gap-2">
                     <BookOpen className="h-4 w-4" />
-                    Sayfa:
+                    {t("catalog.download.pages")}
                   </span>
                   <span className="font-semibold text-foreground">{catalog.pages}</span>
                 </div>
                 <div className="flex justify-between items-start text-sm">
                   <span className="text-muted-foreground flex items-center gap-2">
                     <Globe2 className="h-4 w-4" />
-                    Diller:
+                    {t("catalog.download.languages")}
                   </span>
                   <div className="flex flex-wrap gap-1 justify-end max-w-[60%]">
                     {catalog.languages.map((lang) => (
@@ -155,7 +158,7 @@ export function CatalogDownload() {
               {/* İndirme Butonu */}
               <Button className="w-full">
                 <Download className="h-4 w-4 mr-2" />
-                İndir
+                {t("catalog.download.download")}
               </Button>
             </div>
           ))}

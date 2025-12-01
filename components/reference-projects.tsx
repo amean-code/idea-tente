@@ -30,8 +30,9 @@ export function ReferenceProjects({
   const references = getReferencesByService(serviceType).slice(0, limit)
 
   // Çeviri kullanılıyorsa varsayılan metinleri al
-  const displayTitle = useTranslations ? (title || t("references.title")) : title || "Referans Projelerimiz"
-  const displaySubtitle = useTranslations ? (subtitle || t("references.subtitle")) : subtitle || "Bu hizmetimizle gerçekleştirdiğimiz başarılı projeler"
+  // useTranslations kontrolü kaldırıldı - her zaman çeviri kullan
+  const displayTitle = title || t("references.title")
+  const displaySubtitle = subtitle || t("references.subtitle")
 
   if (references.length === 0) {
     return null
@@ -117,7 +118,7 @@ export function ReferenceProjects({
                   {/* Hover'da görünen ok ikonu */}
                   <div className="pt-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">
                     <div className="flex items-center text-primary text-base font-medium">
-                      <span>{useTranslations ? t("references.projectDetails") : "Detayları Görüntüle"}</span>
+                      <span>{t("references.projectDetails")}</span>
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </div>
                   </div>
@@ -135,7 +136,7 @@ export function ReferenceProjects({
               asChild
             >
               <a href="/referanslar" className="flex items-center">
-                {useTranslations ? t("references.viewAll") : "Tüm Referansları Görüntüle"}
+                {t("references.viewAll")}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
