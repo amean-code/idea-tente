@@ -380,17 +380,28 @@ export function Header() {
           : 'top-8 bg-white/10 backdrop-blur-md'
       }`} style={{ overflow: 'visible' }}>
         <div className="container mx-auto px-4" style={{ overflow: 'visible' }}>
-          <div className="flex h-16 items-center justify-between" style={{ overflow: 'visible' }}>
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
-              <Image 
-                src="/idea-logo.jpg" 
-                alt="IDEA Logo" 
-                width={120}
-                height={48}
-                className="h-12 w-auto object-contain"
-                priority
-              />
+          <div className="flex h-16 items-center justify-between relative" style={{ overflow: 'visible' }}>
+            {/* Logo - Header'ın dışına taşabilir, büyütülmüş */}
+            <Link 
+              href="/" 
+              className="flex items-center space-x-2 relative z-10"
+              style={{ overflow: 'visible', height: '100%', display: 'flex', alignItems: 'center' }}
+            >
+              <div className="relative" style={{ overflow: 'visible' }}>
+                <Image 
+                  src="/idea-logo.jpg" 
+                  alt="IDEA Logo" 
+                  width={200}
+                  height={80}
+                  className="w-auto object-contain"
+                  style={{ 
+                    height: '80px',
+                    transform: 'translateY(8px)',
+                    maxWidth: 'none'
+                  }}
+                  priority
+                />
+              </div>
             </Link>
 
             {/* Desktop Navigation */}

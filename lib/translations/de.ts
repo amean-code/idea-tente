@@ -1023,7 +1023,7 @@ export const deTranslations = {
       title: "Grenzen überschreitend",
       titleHighlight: "Qualität und Vertrauen",
       subtitle: "Als IDEA Pergola exportieren wir Premium-Pergola- und Glassysteme von unseren modernen Produktionsstätten in alle Ecken der Welt. Wir liefern Ihre Projekte sicher mit internationalen Standard-Verpackungs- und Logistiklösungen.",
-      createRequest: "Exportanfrage erstellen",
+      createRequest: "Importanfrage erstellen",
       howItWorks: "Wie funktioniert es?",
       secureLogistics: "Sichere Logistik",
       internationalShipping: "Internationaler Versand",
@@ -1069,6 +1069,30 @@ export const deTranslations = {
         tracking: "Verfolgungssystem",
         customs: "Zollunterstützung",
         packaging: "Spezielle Verpackung"
+      }
+    },
+    globe: {
+      title: "Weltweites Exportnetzwerk",
+      subtitle: "Mit unserem Exportnetzwerk, das sich von der Türkei auf mehr als 50 Länder erstreckt, bringen wir qualitativ hochwertige IDEA-Pergola-Systeme mit der Welt zusammen.",
+      stats: {
+        countries: "Exportländer",
+        distributors: "Globale Vertriebspartner",
+        projects: "Abgeschlossene Projekte",
+        satisfaction: "Kundenzufriedenheit"
+      },
+      countries: {
+        germany: "Deutschland",
+        france: "Frankreich",
+        england: "England",
+        italy: "Italien",
+        spain: "Spanien",
+        dubai: "Dubai",
+        riyadh: "Riad",
+        cairo: "Kairo",
+        capeTown: "Kapstadt",
+        tokyo: "Tokio",
+        newYork: "New York",
+        sydney: "Sydney"
       }
     },
     support: {
@@ -1185,6 +1209,47 @@ export const deTranslations = {
         modernDesign: "Modernes Design"
       },
       explore: "Erkunden"
+    }
+  },
+
+  // Export Products translations
+  exportProducts: {
+    exportReady: "Exportbereit",
+    features: "Funktionen",
+    targetMarkets: "Zielmärkte",
+    products: {
+      bioclimatic: {
+        title: "Bioklimatische Pergola",
+        description: "Premium-Pergolen mit intelligentem Lamellensystem",
+        features: ["CE-zertifiziert", "10 Jahre Garantie", "Spezielle Verpackung"],
+        markets: ["Europa", "Naher Osten", "Afrika"]
+      },
+      glassSystems: {
+        title: "Glassysteme",
+        description: "Rahmenlose Guillotine-Glassysteme",
+        features: ["Verglastes Glas", "Aluminiumprofil", "Schnelle Installation"],
+        markets: ["Europa", "Asien-Pazifik"]
+      },
+      winterGarden: {
+        title: "Wintergarten",
+        description: "Geschlossene Systeme für die Nutzung in 4 Jahreszeiten",
+        features: ["Wärmedämmung", "Luftdichtheit", "Individuelles Design"],
+        markets: ["Europa", "Nordamerika"]
+      }
+    },
+    infoCards: {
+      ceCertified: {
+        title: "CE-zertifiziert",
+        description: "Alle unsere Produkte sind nach europäischen Standards CE-zertifiziert"
+      },
+      secureShipping: {
+        title: "Sicherer Versand",
+        description: "Das Schadensrisiko wird durch spezielle Exportverpackung minimiert"
+      },
+      worldwide: {
+        title: "Weltweit",
+        description: "Tausende von Produkten erfolgreich in über 50 Länder versandt"
+      }
     }
   },
 

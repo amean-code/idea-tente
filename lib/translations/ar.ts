@@ -992,7 +992,7 @@ export const arTranslations = {
       title: "تجاوز الحدود",
       titleHighlight: "الجودة والثقة",
       subtitle: "كـ IDEA Pergola، نصدر أنظمة البرجولا والزجاج المتميزة من منشآتنا الإنتاجية الحديثة إلى جميع أنحاء العالم. نحن نسلم مشاريعك بأمان مع حلول التعبئة والتغليف واللوجستيات وفق المعايير الدولية.",
-      createRequest: "إنشاء طلب تصدير",
+      createRequest: "إنشاء طلب استيراد",
       howItWorks: "كيف يعمل؟",
       secureLogistics: "اللوجستيات الآمنة",
       internationalShipping: "الشحن الدولي",
@@ -1038,6 +1038,30 @@ export const arTranslations = {
         tracking: "نظام التتبع",
         customs: "دعم الجمارك",
         packaging: "تعبئة خاصة"
+      }
+    },
+    globe: {
+      title: "شبكة التصدير العالمية",
+      subtitle: "مع شبكة التصدير لدينا التي تمتد إلى أكثر من 50 دولة من تركيا، نجمع أنظمة البرجولا عالية الجودة من IDEA مع العالم.",
+      stats: {
+        countries: "دول التصدير",
+        distributors: "موزعون عالميون",
+        projects: "المشاريع المكتملة",
+        satisfaction: "رضا العملاء"
+      },
+      countries: {
+        germany: "ألمانيا",
+        france: "فرنسا",
+        england: "إنجلترا",
+        italy: "إيطاليا",
+        spain: "إسبانيا",
+        dubai: "دبي",
+        riyadh: "الرياض",
+        cairo: "القاهرة",
+        capeTown: "كيب تاون",
+        tokyo: "طوكيو",
+        newYork: "نيويورك",
+        sydney: "سيدني"
       }
     },
     support: {
@@ -1154,6 +1178,47 @@ export const arTranslations = {
         modernDesign: "تصميم حديث"
       },
       explore: "استكشف"
+    }
+  },
+
+  // Export Products translations
+  exportProducts: {
+    exportReady: "جاهز للتصدير",
+    features: "الميزات",
+    targetMarkets: "الأسواق المستهدفة",
+    products: {
+      bioclimatic: {
+        title: "البرجولا البيوكليماتية",
+        description: "برجولات متميزة بنظام لوحات ذكي",
+        features: ["معتمد CE", "ضمان 10 سنوات", "تعبئة خاصة"],
+        markets: ["أوروبا", "الشرق الأوسط", "أفريقيا"]
+      },
+      glassSystems: {
+        title: "أنظمة الزجاج",
+        description: "أنظمة زجاج منزلق بدون إطار",
+        features: ["زجاج مقسى", "بروفيل ألومنيوم", "تركيب سريع"],
+        markets: ["أوروبا", "آسيا والمحيط الهادئ"]
+      },
+      winterGarden: {
+        title: "حديقة الشتاء",
+        description: "أنظمة مغلقة للاستخدام في 4 فصول",
+        features: ["عزل حراري", "إحكام الهواء", "تصميم مخصص"],
+        markets: ["أوروبا", "أمريكا الشمالية"]
+      }
+    },
+    infoCards: {
+      ceCertified: {
+        title: "معتمد CE",
+        description: "جميع منتجاتنا معتمدة CE وفقًا للمعايير الأوروبية"
+      },
+      secureShipping: {
+        title: "شحن آمن",
+        description: "يتم تقليل مخاطر التلف مع التعبئة الخاصة بالتصدير"
+      },
+      worldwide: {
+        title: "عالميًا",
+        description: "آلاف المنتجات التي تم شحنها بنجاح إلى أكثر من 50 دولة"
+      }
     }
   },
 

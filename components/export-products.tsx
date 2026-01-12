@@ -7,39 +7,213 @@ import Image from "next/image"
 import { motion } from "motion/react"
 import { useLanguage } from "@/contexts/language-context"
 
-const exportProducts = [
-  {
-    title: "Bioklimatik Pergola",
-    description: "Akıllı lamel sistemli premium pergolalar",
-    image: "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
-    features: ["CE Sertifikalı", "10 Yıl Garanti", "Özel Ambalaj"],
-    markets: ["Avrupa", "Orta Doğu", "Afrika"],
-    exportReady: true,
+// Çeviriler - sayfa içinde tanımlı
+const translations = {
+  tr: {
+    title: "İhracat Ürünlerimiz",
+    subtitle: "Uluslararası standartlarda üretilen, CE sertifikalı premium ürünlerimiz dünya çapında güvenle kullanılmaktadır",
+    products: {
+      bioclimatic: {
+        title: "Bioklimatik Pergola",
+        description: "Akıllı lamel sistemli premium pergolalar",
+        features: ["CE Sertifikalı", "10 Yıl Garanti", "Özel Ambalaj"],
+        markets: ["Avrupa", "Orta Doğu", "Afrika"]
+      },
+      glassSystems: {
+        title: "Cam Sistemleri",
+        description: "Frameless giyotin cam sistemleri",
+        features: ["Temperli Cam", "Alüminyum Profil", "Hızlı Montaj"],
+        markets: ["Avrupa", "Asya-Pasifik"]
+      },
+      winterGarden: {
+        title: "Kış Bahçesi",
+        description: "4 mevsim kullanım için kapalı sistemler",
+        features: ["Isı Yalıtımı", "Hava Geçirmezlik", "Özel Tasarım"],
+        markets: ["Avrupa", "Kuzey Amerika"]
+      }
+    },
+    exportReady: "İhracata Hazır",
+    features: "Özellikler",
+    targetMarkets: "Hedef Pazarlar",
+    infoCards: {
+      ceCertified: {
+        title: "CE Sertifikalı",
+        description: "Tüm ürünlerimiz Avrupa standartlarında CE sertifikalıdır"
+      },
+      secureShipping: {
+        title: "Güvenli Kargo",
+        description: "Özel ihracat ambalajı ile hasar riski minimumda"
+      },
+      worldwide: {
+        title: "Dünya Çapında",
+        description: "50+ ülkeye başarıyla gönderilmiş binlerce ürün"
+      }
+    }
   },
-  {
-    title: "Cam Sistemleri",
-    description: "Frameless giyotin cam sistemleri",
-    image: "/frameless-glass-sliding-system--modern-terrace-wit.jpg",
-    features: ["Temperli Cam", "Alüminyum Profil", "Hızlı Montaj"],
-    markets: ["Avrupa", "Asya-Pasifik"],
-    exportReady: true,
+  en: {
+    title: "Our Export Products",
+    subtitle: "Our premium products manufactured to international standards and CE certified are safely used worldwide",
+    products: {
+      bioclimatic: {
+        title: "Bioclimatic Pergola",
+        description: "Premium pergolas with smart louver system",
+        features: ["CE Certified", "10 Year Warranty", "Special Packaging"],
+        markets: ["Europe", "Middle East", "Africa"]
+      },
+      glassSystems: {
+        title: "Glass Systems",
+        description: "Frameless guillotine glass systems",
+        features: ["Tempered Glass", "Aluminum Profile", "Quick Installation"],
+        markets: ["Europe", "Asia-Pacific"]
+      },
+      winterGarden: {
+        title: "Winter Garden",
+        description: "Enclosed systems for 4-season use",
+        features: ["Thermal Insulation", "Airtightness", "Custom Design"],
+        markets: ["Europe", "North America"]
+      }
+    },
+    exportReady: "Export Ready",
+    features: "Features",
+    targetMarkets: "Target Markets",
+    infoCards: {
+      ceCertified: {
+        title: "CE Certified",
+        description: "All our products are CE certified according to European standards"
+      },
+      secureShipping: {
+        title: "Secure Shipping",
+        description: "Damage risk is minimized with special export packaging"
+      },
+      worldwide: {
+        title: "Worldwide",
+        description: "Thousands of products successfully shipped to 50+ countries"
+      }
+    }
   },
-  {
-    title: "Kış Bahçesi",
-    description: "4 mevsim kullanım için kapalı sistemler",
-    image: "/winter-garden-conservatory-with-glass-roof--indoor.jpg",
-    features: ["Isı Yalıtımı", "Hava Geçirmezlik", "Özel Tasarım"],
-    markets: ["Avrupa", "Kuzey Amerika"],
-    exportReady: true,
+  de: {
+    title: "Unsere Exportprodukte",
+    subtitle: "Unsere Premium-Produkte, die nach internationalen Standards hergestellt und CE-zertifiziert sind, werden weltweit sicher verwendet",
+    products: {
+      bioclimatic: {
+        title: "Bioklimatische Pergola",
+        description: "Premium-Pergolen mit intelligentem Lamellensystem",
+        features: ["CE-zertifiziert", "10 Jahre Garantie", "Spezielle Verpackung"],
+        markets: ["Europa", "Naher Osten", "Afrika"]
+      },
+      glassSystems: {
+        title: "Glassysteme",
+        description: "Rahmenlose Guillotine-Glassysteme",
+        features: ["Verglastes Glas", "Aluminiumprofil", "Schnelle Installation"],
+        markets: ["Europa", "Asien-Pazifik"]
+      },
+      winterGarden: {
+        title: "Wintergarten",
+        description: "Geschlossene Systeme für die Nutzung in 4 Jahreszeiten",
+        features: ["Wärmedämmung", "Luftdichtheit", "Individuelles Design"],
+        markets: ["Europa", "Nordamerika"]
+      }
+    },
+    exportReady: "Exportbereit",
+    features: "Funktionen",
+    targetMarkets: "Zielmärkte",
+    infoCards: {
+      ceCertified: {
+        title: "CE-zertifiziert",
+        description: "Alle unsere Produkte sind nach europäischen Standards CE-zertifiziert"
+      },
+      secureShipping: {
+        title: "Sicherer Versand",
+        description: "Das Schadensrisiko wird durch spezielle Exportverpackung minimiert"
+      },
+      worldwide: {
+        title: "Weltweit",
+        description: "Tausende von Produkten erfolgreich in über 50 Länder versandt"
+      }
+    }
   },
-]
+  ar: {
+    title: "منتجات التصدير لدينا",
+    subtitle: "منتجاتنا المتميزة المصنعة وفق المعايير الدولية والمعتمدة CE تُستخدم بأمان في جميع أنحاء العالم",
+    products: {
+      bioclimatic: {
+        title: "البرجولا البيوكليماتية",
+        description: "برجولات متميزة بنظام لوحات ذكي",
+        features: ["معتمد CE", "ضمان 10 سنوات", "تعبئة خاصة"],
+        markets: ["أوروبا", "الشرق الأوسط", "أفريقيا"]
+      },
+      glassSystems: {
+        title: "أنظمة الزجاج",
+        description: "أنظمة زجاج منزلق بدون إطار",
+        features: ["زجاج مقسى", "بروفيل ألومنيوم", "تركيب سريع"],
+        markets: ["أوروبا", "آسيا والمحيط الهادئ"]
+      },
+      winterGarden: {
+        title: "حديقة الشتاء",
+        description: "أنظمة مغلقة للاستخدام في 4 فصول",
+        features: ["عزل حراري", "إحكام الهواء", "تصميم مخصص"],
+        markets: ["أوروبا", "أمريكا الشمالية"]
+      }
+    },
+    exportReady: "جاهز للتصدير",
+    features: "الميزات",
+    targetMarkets: "الأسواق المستهدفة",
+    infoCards: {
+      ceCertified: {
+        title: "معتمد CE",
+        description: "جميع منتجاتنا معتمدة CE وفقًا للمعايير الأوروبية"
+      },
+      secureShipping: {
+        title: "شحن آمن",
+        description: "يتم تقليل مخاطر التلف مع التعبئة الخاصة بالتصدير"
+      },
+      worldwide: {
+        title: "عالميًا",
+        description: "آلاف المنتجات التي تم شحنها بنجاح إلى أكثر من 50 دولة"
+      }
+    }
+  }
+}
+
+const getExportProducts = (lang: string) => {
+  const t = translations[lang as keyof typeof translations] || translations.tr
+  
+  return [
+    {
+      title: t.products.bioclimatic.title,
+      description: t.products.bioclimatic.description,
+      image: "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
+      features: t.products.bioclimatic.features,
+      markets: t.products.bioclimatic.markets,
+      exportReady: true,
+    },
+    {
+      title: t.products.glassSystems.title,
+      description: t.products.glassSystems.description,
+      image: "/frameless-glass-sliding-system--modern-terrace-wit.jpg",
+      features: t.products.glassSystems.features,
+      markets: t.products.glassSystems.markets,
+      exportReady: true,
+    },
+    {
+      title: t.products.winterGarden.title,
+      description: t.products.winterGarden.description,
+      image: "/winter-garden-conservatory-with-glass-roof--indoor.jpg",
+      features: t.products.winterGarden.features,
+      markets: t.products.winterGarden.markets,
+      exportReady: true,
+    },
+  ]
+}
 
 /**
  * Export ürünleri bölümü
  * İhracat için hazır ürünleri modern kartlarla gösterir
  */
 export function ExportProducts() {
-  const { t } = useLanguage()
+  const { language } = useLanguage()
+  const t = translations[language as keyof typeof translations] || translations.tr
+  const exportProducts = getExportProducts(language)
   
   return (
     <section className="py-20 bg-white">
@@ -52,7 +226,7 @@ export function ExportProducts() {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance"
           >
-            {t("export.products.title")}
+            {t.title}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -61,7 +235,7 @@ export function ExportProducts() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty"
           >
-            {t("export.products.subtitle")}
+            {t.subtitle}
           </motion.p>
         </div>
 
@@ -86,7 +260,7 @@ export function ExportProducts() {
                     <div className="absolute top-4 right-4">
                       <Badge className="bg-primary hover:bg-primary/90 text-primary-foreground flex items-center gap-1">
                         <Truck className="h-3 w-3" />
-                        {t("exportProducts.exportReady")}
+{t.exportReady}
                       </Badge>
                     </div>
                   )}
@@ -102,7 +276,7 @@ export function ExportProducts() {
                     <div>
                       <div className="flex items-center gap-2 mb-3">
                         <Award className="h-4 w-4 text-primary" />
-                        <h4 className="font-semibold text-foreground text-sm">{t("exportProducts.features")}</h4>
+                        <h4 className="font-semibold text-foreground text-sm">{t.features}</h4>
                       </div>
                       <div className="space-y-2">
                         {product.features.map((feature, idx) => (
@@ -117,7 +291,7 @@ export function ExportProducts() {
                     <div>
                       <div className="flex items-center gap-2 mb-3">
                         <Globe2 className="h-4 w-4 text-primary" />
-                        <h4 className="font-semibold text-foreground text-sm">{t("exportProducts.targetMarkets")}</h4>
+                        <h4 className="font-semibold text-foreground text-sm">{t.targetMarkets}</h4>
                       </div>
                       <div className="flex flex-wrap gap-2">
                         {product.markets.map((market, idx) => (
@@ -146,9 +320,9 @@ export function ExportProducts() {
             <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
               <Award className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-bold text-lg mb-2 text-foreground">{t("exportProducts.infoCards.ceCertified.title")}</h3>
+            <h3 className="font-bold text-lg mb-2 text-foreground">{t.infoCards.ceCertified.title}</h3>
             <p className="text-sm text-muted-foreground">
-              {t("exportProducts.infoCards.ceCertified.description")}
+              {t.infoCards.ceCertified.description}
             </p>
           </div>
 
@@ -156,9 +330,9 @@ export function ExportProducts() {
             <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
               <Truck className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-bold text-lg mb-2 text-foreground">{t("exportProducts.infoCards.secureShipping.title")}</h3>
+            <h3 className="font-bold text-lg mb-2 text-foreground">{t.infoCards.secureShipping.title}</h3>
             <p className="text-sm text-muted-foreground">
-              {t("exportProducts.infoCards.secureShipping.description")}
+              {t.infoCards.secureShipping.description}
             </p>
           </div>
 
@@ -166,9 +340,9 @@ export function ExportProducts() {
             <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
               <Globe2 className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="font-bold text-lg mb-2 text-foreground">{t("exportProducts.infoCards.worldwide.title")}</h3>
+            <h3 className="font-bold text-lg mb-2 text-foreground">{t.infoCards.worldwide.title}</h3>
             <p className="text-sm text-muted-foreground">
-              {t("exportProducts.infoCards.worldwide.description")}
+              {t.infoCards.worldwide.description}
             </p>
           </div>
         </motion.div>

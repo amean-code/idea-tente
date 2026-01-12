@@ -992,6 +992,26 @@ export const translations = {
       exportReady: "İhracata Hazır",
       features: "Özellikler",
       targetMarkets: "Hedef Pazarlar",
+      products: {
+        bioclimatic: {
+          title: "Bioklimatik Pergola",
+          description: "Akıllı lamel sistemli premium pergolalar",
+          features: ["CE Sertifikalı", "10 Yıl Garanti", "Özel Ambalaj"],
+          markets: ["Avrupa", "Orta Doğu", "Afrika"]
+        },
+        glassSystems: {
+          title: "Cam Sistemleri",
+          description: "Frameless giyotin cam sistemleri",
+          features: ["Temperli Cam", "Alüminyum Profil", "Hızlı Montaj"],
+          markets: ["Avrupa", "Asya-Pasifik"]
+        },
+        winterGarden: {
+          title: "Kış Bahçesi",
+          description: "4 mevsim kullanım için kapalı sistemler",
+          features: ["Isı Yalıtımı", "Hava Geçirmezlik", "Özel Tasarım"],
+          markets: ["Avrupa", "Kuzey Amerika"]
+        }
+      },
       infoCards: {
         ceCertified: {
           title: "CE Sertifikalı",
@@ -1042,7 +1062,7 @@ export const translations = {
         title: "Sınırları Aşan",
         titleHighlight: "Kalite ve Güven",
         subtitle: "IDEA Pergola olarak, modern üretim tesislerimizden dünyanın dört bir yanına premium pergola ve cam sistemleri ihraç ediyoruz. Uluslararası standartlarda paketleme ve lojistik çözümlerimizle projelerinizi güvenle teslim ediyoruz.",
-        createRequest: "İhracat Talebi Oluştur",
+        createRequest: "İthalat Talebi Oluştur",
         howItWorks: "Süreç Nasıl İşler?",
         secureLogistics: "Güvenli Lojistik",
         internationalShipping: "Uluslararası Taşıma",
@@ -1112,6 +1132,30 @@ export const translations = {
           tracking: "Takip Sistemi",
           customs: "Gümrük Desteği",
           packaging: "Özel Ambalaj"
+        }
+      },
+      globe: {
+        title: "Dünya Çapında İhracat Ağı",
+        subtitle: "Türkiye'den 50'den fazla ülkeye uzanan ihracat ağımızla, kaliteli IDEA pergola sistemlerini dünya ile buluşturuyoruz.",
+        stats: {
+          countries: "İhracat Ülkesi",
+          distributors: "Global Distribütör",
+          projects: "Tamamlanan Proje",
+          satisfaction: "Müşteri Memnuniyeti"
+        },
+        countries: {
+          germany: "Almanya",
+          france: "Fransa",
+          england: "İngiltere",
+          italy: "İtalya",
+          spain: "İspanya",
+          dubai: "Dubai",
+          riyadh: "Riyad",
+          cairo: "Kahire",
+          capeTown: "Cape Town",
+          tokyo: "Tokyo",
+          newYork: "New York",
+          sydney: "Sydney"
         }
       }
     },

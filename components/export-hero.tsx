@@ -7,8 +7,61 @@ import Link from "next/link"
 import { motion } from "motion/react"
 import { useLanguage } from "@/contexts/language-context"
 
+// Çeviriler - sayfa içinde tanımlı
+const translations = {
+  tr: {
+    badge: "Global Çözüm Ortağınız",
+    title: "Sınırları Aşan",
+    titleHighlight: "Kalite ve Güven",
+    subtitle: "IDEA Pergola olarak, modern üretim tesislerimizden dünyanın dört bir yanına premium pergola ve cam sistemleri ihraç ediyoruz. Uluslararası standartlarda paketleme ve lojistik çözümlerimizle projelerinizi güvenle teslim ediyoruz.",
+    createRequest: "İthalat Talebi Oluştur",
+    howItWorks: "Süreç Nasıl İşler?",
+    secureLogistics: "Güvenli Lojistik",
+    internationalShipping: "Uluslararası Taşıma",
+    countries: "50+ Ülke",
+    activeExport: "Aktif İhracat"
+  },
+  en: {
+    badge: "Your Global Solution Partner",
+    title: "Transcending Boundaries",
+    titleHighlight: "Quality and Trust",
+    subtitle: "As IDEA Pergola, we export premium pergola and glass systems from our modern production facilities to all corners of the world. We safely deliver your projects with international standard packaging and logistics solutions.",
+    createRequest: "Create Import Request",
+    howItWorks: "How Does It Work?",
+    secureLogistics: "Secure Logistics",
+    internationalShipping: "International Shipping",
+    countries: "50+ Countries",
+    activeExport: "Active Export"
+  },
+  de: {
+    badge: "Ihr globaler Lösungspartner",
+    title: "Grenzen überschreitend",
+    titleHighlight: "Qualität und Vertrauen",
+    subtitle: "Als IDEA Pergola exportieren wir Premium-Pergola- und Glassysteme von unseren modernen Produktionsstätten in alle Ecken der Welt. Wir liefern Ihre Projekte sicher mit internationalen Standard-Verpackungs- und Logistiklösungen.",
+    createRequest: "Importanfrage erstellen",
+    howItWorks: "Wie funktioniert es?",
+    secureLogistics: "Sichere Logistik",
+    internationalShipping: "Internationaler Versand",
+    countries: "50+ Länder",
+    activeExport: "Aktiver Export"
+  },
+  ar: {
+    badge: "شريك الحلول العالمي الخاص بك",
+    title: "تجاوز الحدود",
+    titleHighlight: "الجودة والثقة",
+    subtitle: "كـ IDEA Pergola، نصدر أنظمة البرجولا والزجاج المتميزة من منشآتنا الإنتاجية الحديثة إلى جميع أنحاء العالم. نحن نسلم مشاريعك بأمان مع حلول التعبئة والتغليف واللوجستيات وفق المعايير الدولية.",
+    createRequest: "إنشاء طلب استيراد",
+    howItWorks: "كيف يعمل؟",
+    secureLogistics: "اللوجستيات الآمنة",
+    internationalShipping: "الشحن الدولي",
+    countries: "50+ دولة",
+    activeExport: "التصدير النشط"
+  }
+}
+
 export function ExportHero() {
-  const { t } = useLanguage()
+  const { language } = useLanguage()
+  const t = translations[language as keyof typeof translations] || translations.tr
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-[#3D4247]">
       {/* Arka Plan Görseli */}
@@ -32,7 +85,7 @@ export function ExportHero() {
             className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary mb-6 backdrop-blur-sm"
           >
             <Globe className="w-4 h-4" />
-            <span className="text-sm font-medium">{t("export.hero.badge")}</span>
+            <span className="text-sm font-medium">{t.badge}</span>
           </motion.div>
 
           <motion.h1
@@ -41,8 +94,8 @@ export function ExportHero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
           >
-            {t("export.hero.title")} <br />
-            <span className="text-primary">{t("export.hero.titleHighlight")}</span>
+            {t.title} <br />
+            <span className="text-primary">{t.titleHighlight}</span>
           </motion.h1>
 
           <motion.p
@@ -51,7 +104,7 @@ export function ExportHero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto"
           >
-            {t("export.hero.subtitle")}
+            {t.subtitle}
           </motion.p>
 
           <motion.div
@@ -65,8 +118,8 @@ export function ExportHero() {
               className="bg-primary hover:bg-primary-600 text-primary-foreground"
               asChild
             >
-              <Link href="#contact">
-                {t("export.hero.createRequest")}
+              <Link href="/iletisim">
+                {t.createRequest}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -76,7 +129,18 @@ export function ExportHero() {
               className="bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm"
               asChild
             >
-              <Link href="#process">{t("export.hero.howItWorks")}</Link>
+              <Link 
+                href="#shipping-process"
+                onClick={(e) => {
+                  e.preventDefault()
+                  const element = document.getElementById('shipping-process')
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }
+                }}
+              >
+                {t.howItWorks}
+              </Link>
             </Button>
           </motion.div>
 
@@ -91,8 +155,8 @@ export function ExportHero() {
                 <Truck className="w-5 h-5 text-primary" />
               </div>
               <div className="text-sm text-left">
-                <div className="text-white font-semibold">{t("export.hero.secureLogistics")}</div>
-                <div>{t("export.hero.internationalShipping")}</div>
+                <div className="text-white font-semibold">{t.secureLogistics}</div>
+                <div>{t.internationalShipping}</div>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -100,8 +164,8 @@ export function ExportHero() {
                 <Globe className="w-5 h-5 text-primary" />
               </div>
               <div className="text-sm text-left">
-                <div className="text-white font-semibold">{t("export.hero.countries")}</div>
-                <div>{t("export.hero.activeExport")}</div>
+                <div className="text-white font-semibold">{t.countries}</div>
+                <div>{t.activeExport}</div>
               </div>
             </div>
           </motion.div>

@@ -4,69 +4,230 @@ import { Package, FileCheck, Plane, Ship, Truck, MapPin, CheckCircle2 } from "lu
 import { motion } from "motion/react"
 import { useLanguage } from "@/contexts/language-context"
 
-const getShippingSteps = (t: (key: string) => string) => [
-  {
-    icon: FileCheck,
-    title: t("export.shipping.steps.order.title"),
-    description: t("export.shipping.steps.order.description"),
-    duration: t("export.shipping.steps.order.duration"),
+// Çeviriler - sayfa içinde tanımlı
+const translations = {
+  tr: {
+    title: "Gönderim Sürecimiz",
+    subtitle: "Siparişinizden teslimat sonrası desteğe kadar her adımda yanınızdayız",
+    steps: {
+      order: {
+        title: "Sipariş & Doküman",
+        description: "Sipariş onayı ve tüm belgeler hazırlanır",
+        duration: "1-2 gün"
+      },
+      production: {
+        title: "Üretim & Paketleme",
+        description: "Ürünler üretilir ve özel ihracat ambalajı yapılır",
+        duration: "7-14 gün"
+      },
+      customs: {
+        title: "Gümrük İşlemleri",
+        description: "Tüm gümrük işlemleri tamamlanır",
+        duration: "1-3 gün"
+      },
+      shipping: {
+        title: "Uluslararası Kargo",
+        description: "Deniz veya hava yolu ile güvenli gönderim",
+        duration: "5-30 gün"
+      },
+      delivery: {
+        title: "Teslimat",
+        description: "Hedef ülkede yerel kargo ile teslimat",
+        duration: "2-5 gün"
+      }
+    },
+    features: {
+      insured: "Sigortalı Kargo",
+      tracking: "Takip Sistemi",
+      customs: "Gümrük Desteği",
+      packaging: "Özel Ambalaj"
+    }
   },
-  {
-    icon: Package,
-    title: t("export.shipping.steps.production.title"),
-    description: t("export.shipping.steps.production.description"),
-    duration: t("export.shipping.steps.production.duration"),
+  en: {
+    title: "Our Shipping Process",
+    subtitle: "We are with you at every step from your order to post-delivery support",
+    steps: {
+      order: {
+        title: "Order & Documents",
+        description: "Order confirmation and all documents are prepared",
+        duration: "1-2 days"
+      },
+      production: {
+        title: "Production & Packaging",
+        description: "Products are manufactured and special export packaging is done",
+        duration: "7-14 days"
+      },
+      customs: {
+        title: "Customs Procedures",
+        description: "All customs procedures are completed",
+        duration: "1-3 days"
+      },
+      shipping: {
+        title: "International Cargo",
+        description: "Safe shipping by sea or air",
+        duration: "5-30 days"
+      },
+      delivery: {
+        title: "Delivery",
+        description: "Delivery with local cargo in the target country",
+        duration: "2-5 days"
+      }
+    },
+    features: {
+      insured: "Insured Cargo",
+      tracking: "Tracking System",
+      customs: "Customs Support",
+      packaging: "Special Packaging"
+    }
   },
-  {
-    icon: Truck,
-    title: t("export.shipping.steps.customs.title"),
-    description: t("export.shipping.steps.customs.description"),
-    duration: t("export.shipping.steps.customs.duration"),
+  de: {
+    title: "Unser Versandprozess",
+    subtitle: "Wir sind bei jedem Schritt von Ihrer Bestellung bis zur Unterstützung nach der Lieferung an Ihrer Seite",
+    steps: {
+      order: {
+        title: "Bestellung & Dokumente",
+        description: "Bestellbestätigung und alle Dokumente werden vorbereitet",
+        duration: "1-2 Tage"
+      },
+      production: {
+        title: "Produktion & Verpackung",
+        description: "Produkte werden hergestellt und spezielle Exportverpackung wird durchgeführt",
+        duration: "7-14 Tage"
+      },
+      customs: {
+        title: "Zollverfahren",
+        description: "Alle Zollverfahren werden abgeschlossen",
+        duration: "1-3 Tage"
+      },
+      shipping: {
+        title: "Internationale Fracht",
+        description: "Sicherer Versand per See oder Luft",
+        duration: "5-30 Tage"
+      },
+      delivery: {
+        title: "Lieferung",
+        description: "Lieferung mit lokaler Fracht im Zielland",
+        duration: "2-5 Tage"
+      }
+    },
+    features: {
+      insured: "Versicherte Fracht",
+      tracking: "Verfolgungssystem",
+      customs: "Zollunterstützung",
+      packaging: "Spezielle Verpackung"
+    }
   },
-  {
-    icon: Ship,
-    title: t("export.shipping.steps.shipping.title"),
-    description: t("export.shipping.steps.shipping.description"),
-    duration: t("export.shipping.steps.shipping.duration"),
-  },
-  {
-    icon: MapPin,
-    title: t("export.shipping.steps.delivery.title"),
-    description: t("export.shipping.steps.delivery.description"),
-    duration: t("export.shipping.steps.delivery.duration"),
-  },
-]
+  ar: {
+    title: "عملية الشحن لدينا",
+    subtitle: "نحن معك في كل خطوة من طلبك إلى الدعم بعد التسليم",
+    steps: {
+      order: {
+        title: "الطلب والمستندات",
+        description: "يتم إعداد تأكيد الطلب وجميع المستندات",
+        duration: "1-2 يوم"
+      },
+      production: {
+        title: "الإنتاج والتعبئة",
+        description: "يتم تصنيع المنتجات وتنفيذ التعبئة الخاصة بالتصدير",
+        duration: "7-14 يوم"
+      },
+      customs: {
+        title: "إجراءات الجمارك",
+        description: "يتم إكمال جميع إجراءات الجمارك",
+        duration: "1-3 يوم"
+      },
+      shipping: {
+        title: "الشحن الدولي",
+        description: "الشحن الآمن عن طريق البحر أو الجو",
+        duration: "5-30 يوم"
+      },
+      delivery: {
+        title: "التسليم",
+        description: "التسليم مع الشحن المحلي في البلد المستهدف",
+        duration: "2-5 يوم"
+      }
+    },
+    features: {
+      insured: "شحن مؤمن",
+      tracking: "نظام التتبع",
+      customs: "دعم الجمارك",
+      packaging: "تعبئة خاصة"
+    }
+  }
+}
 
-const getFeatures = (t: (key: string) => string) => [
-  {
-    icon: CheckCircle2,
-    text: t("export.shipping.features.insured"),
-  },
-  {
-    icon: CheckCircle2,
-    text: t("export.shipping.features.tracking"),
-  },
-  {
-    icon: CheckCircle2,
-    text: t("export.shipping.features.customs"),
-  },
-  {
-    icon: CheckCircle2,
-    text: t("export.shipping.features.packaging"),
-  },
-]
+const getShippingSteps = (lang: string) => {
+  const t = translations[lang as keyof typeof translations] || translations.tr
+  
+  return [
+    {
+      icon: FileCheck,
+      title: t.steps.order.title,
+      description: t.steps.order.description,
+      duration: t.steps.order.duration,
+    },
+    {
+      icon: Package,
+      title: t.steps.production.title,
+      description: t.steps.production.description,
+      duration: t.steps.production.duration,
+    },
+    {
+      icon: Truck,
+      title: t.steps.customs.title,
+      description: t.steps.customs.description,
+      duration: t.steps.customs.duration,
+    },
+    {
+      icon: Ship,
+      title: t.steps.shipping.title,
+      description: t.steps.shipping.description,
+      duration: t.steps.shipping.duration,
+    },
+    {
+      icon: MapPin,
+      title: t.steps.delivery.title,
+      description: t.steps.delivery.description,
+      duration: t.steps.delivery.duration,
+    },
+  ]
+}
+
+const getFeatures = (lang: string) => {
+  const t = translations[lang as keyof typeof translations] || translations.tr
+  
+  return [
+    {
+      icon: CheckCircle2,
+      text: t.features.insured,
+    },
+    {
+      icon: CheckCircle2,
+      text: t.features.tracking,
+    },
+    {
+      icon: CheckCircle2,
+      text: t.features.customs,
+    },
+    {
+      icon: CheckCircle2,
+      text: t.features.packaging,
+    },
+  ]
+}
 
 /**
  * Export gönderim süreci bileşeni
  * Global kargo sürecini timeline şeklinde gösterir
  */
 export function ExportShippingProcess() {
-  const { t } = useLanguage()
-  const shippingSteps = getShippingSteps(t)
-  const features = getFeatures(t)
+  const { language } = useLanguage()
+  const t = translations[language as keyof typeof translations] || translations.tr
+  const shippingSteps = getShippingSteps(language)
+  const features = getFeatures(language)
   
   return (
-    <section className="py-20 bg-muted/10 relative overflow-hidden">
+    <section id="shipping-process" className="py-20 bg-muted/10 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <motion.h2
@@ -76,7 +237,7 @@ export function ExportShippingProcess() {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance"
           >
-            {t("export.shipping.title")}
+            {t.title}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -85,7 +246,7 @@ export function ExportShippingProcess() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty"
           >
-            {t("export.shipping.subtitle")}
+            {t.subtitle}
           </motion.p>
         </div>
 

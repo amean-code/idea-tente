@@ -1207,7 +1207,7 @@ export const enTranslations = {
       title: "Transcending Boundaries",
       titleHighlight: "Quality and Trust",
       subtitle: "As IDEA Pergola, we export premium pergola and glass systems from our modern production facilities to all corners of the world. We safely deliver your projects with international standard packaging and logistics solutions.",
-      createRequest: "Create Export Request",
+      createRequest: "Create Import Request",
       howItWorks: "How Does It Work?",
       secureLogistics: "Secure Logistics",
       internationalShipping: "International Shipping",
@@ -1253,6 +1253,30 @@ export const enTranslations = {
         tracking: "Tracking System",
         customs: "Customs Support",
         packaging: "Special Packaging"
+      }
+    },
+    globe: {
+      title: "Worldwide Export Network",
+      subtitle: "With our export network extending to more than 50 countries from Turkey, we bring quality IDEA pergola systems together with the world.",
+      stats: {
+        countries: "Export Countries",
+        distributors: "Global Distributors",
+        projects: "Completed Projects",
+        satisfaction: "Customer Satisfaction"
+      },
+      countries: {
+        germany: "Germany",
+        france: "France",
+        england: "England",
+        italy: "Italy",
+        spain: "Spain",
+        dubai: "Dubai",
+        riyadh: "Riyadh",
+        cairo: "Cairo",
+        capeTown: "Cape Town",
+        tokyo: "Tokyo",
+        newYork: "New York",
+        sydney: "Sydney"
       }
     },
     support: {
@@ -1610,6 +1634,26 @@ export const enTranslations = {
       exportReady: "Export Ready",
       features: "Features",
       targetMarkets: "Target Markets",
+      products: {
+        bioclimatic: {
+          title: "Bioclimatic Pergola",
+          description: "Premium pergolas with smart louver system",
+          features: ["CE Certified", "10 Year Warranty", "Special Packaging"],
+          markets: ["Europe", "Middle East", "Africa"]
+        },
+        glassSystems: {
+          title: "Glass Systems",
+          description: "Frameless guillotine glass systems",
+          features: ["Tempered Glass", "Aluminum Profile", "Quick Installation"],
+          markets: ["Europe", "Asia-Pacific"]
+        },
+        winterGarden: {
+          title: "Winter Garden",
+          description: "Enclosed systems for 4-season use",
+          features: ["Thermal Insulation", "Airtightness", "Custom Design"],
+          markets: ["Europe", "North America"]
+        }
+      },
       infoCards: {
         ceCertified: {
           title: "CE Certified",
