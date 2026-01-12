@@ -13,7 +13,8 @@ import {
   Volume2,
   Battery,
   Lock,
-  CheckCircle
+  CheckCircle,
+  Maximize
 } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 
@@ -45,6 +46,7 @@ const iconMap = {
   battery: Battery,
   lock: Lock,
   check: CheckCircle,
+  maximize: Maximize,
 }
 
 /**

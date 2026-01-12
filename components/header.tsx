@@ -143,14 +143,26 @@ const MobileMenuContent = memo(({
                   <div className="font-medium text-gray-800 group-hover:text-primary">{pergolaSystems}</div>
                   <div className="text-sm text-gray-600">{menuDescriptions.pergola}</div>
                 </Link>
-                <Link
-                  href="/cam-sistemleri"
-                  className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <div className="font-medium text-gray-800 group-hover:text-primary">{glassSystems}</div>
-                  <div className="text-sm text-gray-600">{menuDescriptions.glass}</div>
-                </Link>
+                {/* Cam Sistemleri - Ana kategori */}
+                <div className="space-y-2">
+                  <div className="font-medium text-gray-800 mb-2">{glassSystems}</div>
+                  <Link
+                    href="/cam-sistemleri/giyotin-cam-sistemleri"
+                    className="block p-3 ml-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <div className="font-medium text-gray-800 group-hover:text-primary text-sm">{t("glassSystems.products.surmeCam.title")}</div>
+                    <div className="text-xs text-gray-600">Kolay açılır kapanır mekanizma</div>
+                  </Link>
+                  <Link
+                    href="/cam-sistemleri/surme-cam"
+                    className="block p-3 ml-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <div className="font-medium text-gray-800 group-hover:text-primary text-sm">{t("glassSystems.slidingGlass.hero.title")}</div>
+                    <div className="text-xs text-gray-600">Panoramik manzara, kolay sürme</div>
+                  </Link>
+                </div>
                 <Link
                   href="/kis-bahcesi"
                   className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
@@ -410,15 +422,28 @@ export function Header() {
                 </div>
               </SimpleDropdown>
 
-              {/* Direkt Linkler */}
-                    <Link
-                      href="/cam-sistemleri"
-                className={`inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors drop-shadow-md ${
-                        isScrolled ? 'text-gray-800 hover:bg-primary/10 hover:text-primary-600' : 'text-white hover:bg-white/10 hover:text-primary'
-                      }`}
-                    >
-                      {navTranslations.glassSystems}
+              {/* Cam Sistemleri - Dropdown Menu */}
+              <SimpleDropdown trigger={navTranslations.glassSystems} isScrolled={isScrolled}>
+                <div className="w-[500px] p-6">
+                  <Link
+                    href="/cam-sistemleri"
+                    className="block p-3 rounded-md hover:bg-primary/10 border-b mb-3"
+                  >
+                    <div className="text-sm font-bold text-gray-800">{t("nav.glassSystems")}</div>
+                    <p className="text-sm text-gray-600">{t("nav.menuDescriptions.glass")}</p>
+                  </Link>
+                  <div className="grid grid-cols-2 gap-3">
+                    <Link href="/cam-sistemleri/giyotin-cam-sistemleri" className="block p-3 rounded-md hover:bg-primary/10">
+                      <div className="text-sm font-medium text-gray-800">{t("glassSystems.products.surmeCam.title")}</div>
+                      <p className="text-xs text-gray-600">Kolay açılır kapanır mekanizma</p>
                     </Link>
+                    <Link href="/cam-sistemleri/surme-cam" className="block p-3 rounded-md hover:bg-primary/10">
+                      <div className="text-sm font-medium text-gray-800">{t("glassSystems.slidingGlass.hero.title")}</div>
+                      <p className="text-xs text-gray-600">Panoramik manzara, kolay sürme</p>
+                    </Link>
+                  </div>
+                </div>
+              </SimpleDropdown>
 
                     <Link
                       href="/kis-bahcesi"

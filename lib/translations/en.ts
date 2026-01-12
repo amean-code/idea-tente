@@ -525,6 +525,46 @@ export const enTranslations = {
       },
       gallery: {
         productName: "Glass Systems"
+      },
+      // Sliding Glass Systems
+      slidingGlass: {
+        hero: {
+          badge: "Modern Glass Technology",
+          title: "Sliding Glass Systems",
+          description: "With our sliding glass systems, protect your spaces from external factors while increasing your comfort without compromising your view. Transform your living spaces with modern and elegant design.",
+          subdescription: "Sliding glass systems for uninterrupted views, easy-to-open sliding mechanism and maximum security with tempered safety glass."
+        },
+        features: {
+          title: "Modern Glass Technology",
+          subtitle: "Sliding glass systems that combine security, aesthetics and functionality",
+          framelessDesign: {
+            title: "Panoramic Design",
+            description: "Panoramic view and maximum light transmittance with modern minimalist design."
+          },
+          slidingMechanism: {
+            title: "Sliding Mechanism",
+            description: "Wide opening capability and practical use with easy-to-open sliding system."
+          },
+          easyUse: {
+            title: "Easy to Use",
+            description: "Opens and closes easily with light and quiet sliding mechanism. Comfortable living with silent operation."
+          },
+          weatherResistant: {
+            title: "Weather Resistant",
+            description: "High resistance against weather conditions such as wind, rain and snow."
+          },
+          safetyGlass: {
+            title: "Safety Glass",
+            description: "Provides maximum security with tempered or laminated glass options."
+          },
+          energyEfficiency: {
+            title: "Energy Efficiency",
+            description: "Heat insulation and energy saving with special glass coating technology."
+          }
+        },
+        gallery: {
+          productName: "Sliding Glass Systems"
+        }
       }
     },
 
@@ -1144,7 +1184,9 @@ export const enTranslations = {
       subCategories: "Sub Categories",
       viewProducts: "View Products",
       downloadCatalog: "Download Catalog",
-      details: "Details"
+      details: "Details",
+      languages: "Language Support",
+      onlineAccess: "24/7 Access"
     },
     download: {
       badge: "Quick Download Center",

@@ -8,20 +8,41 @@ import { useLanguage } from "@/contexts/language-context"
 /**
  * Cam Sistemleri Hero Section
  */
-export function CamSistemleriHero() {
+interface CamSistemleriHeroProps {
+  badge?: string
+  title?: string
+  description?: string
+  subdescription?: string
+  imageSrc?: string
+}
+
+export function CamSistemleriHero(props?: CamSistemleriHeroProps) {
   const { t, language } = useLanguage()
 
-  // Dil değiştiğinde tüm çevirileri yeniden hesapla
-  const badge = useMemo(() => t("glassSystems.hero.badge"), [t, language])
-  const title = useMemo(() => t("glassSystems.hero.title"), [t, language])
-  const description = useMemo(() => t("glassSystems.hero.description"), [t, language])
-  const subdescription = useMemo(() => t("glassSystems.hero.subdescription"), [t, language])
+  // Props varsa onları kullan, yoksa çevirilerden al
+  const badge = useMemo(() => 
+    props?.badge || t("glassSystems.hero.badge"), 
+    [props?.badge, t, language]
+  )
+  const title = useMemo(() => 
+    props?.title || t("glassSystems.hero.title"), 
+    [props?.title, t, language]
+  )
+  const description = useMemo(() => 
+    props?.description || t("glassSystems.hero.description"), 
+    [props?.description, t, language]
+  )
+  const subdescription = useMemo(() => 
+    props?.subdescription || t("glassSystems.hero.subdescription"), 
+    [props?.subdescription, t, language]
+  )
+  const imageSrc = props?.imageSrc || "/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-3.jpeg"
 
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/frameless-glass-sliding-system--modern-terrace-wit.jpg"
+          src={imageSrc}
           alt={title}
           fill
           className="object-cover"

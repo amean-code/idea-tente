@@ -4,70 +4,58 @@ import { Button } from "@/components/ui/button"
 import { Download, ArrowRight, FileText, Zap, Layers } from "lucide-react"
 import Link from "next/link"
 import { useLanguage } from "@/contexts/language-context"
-import {
-  getPergolaSubCategories,
-  getGlassSystemsSubCategories,
-  getWinterGardenSubCategories,
-  getSunBreakerSubCategories,
-  getZipScreenSubCategories,
-} from "@/data/subcategories"
 
 /**
  * Katalog kategorileri bileşeni
- * Ana kategoriler ve alt kategorilerin kataloglarını gösterir
+ * Sadece ana ürün kategorilerinin kataloglarını gösterir
  */
 export function CatalogCategories() {
   const { t } = useLanguage()
   
   /**
    * Ana kategori katalog verisi
-   * t fonksiyonu component içinde kullanılabilir hale getirildi
+   * Sadece ana ürünler için katalog gösterilir
    */
   const mainCategories = [
     {
       id: "pergola",
-      title: "Pergola Sistemleri",
-      description: "Bioklimatik, motorlu ve rolling roof pergola çözümleri",
+      title: t("nav.pergolaSystems"),
+      description: t("nav.menuDescriptions.pergola"),
       image: "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
-      href: "/pergola/bioklimatik-sistemler",
+      href: "/pergola",
       icon: Zap,
-      subCategories: getPergolaSubCategories(t),
     },
     {
       id: "glass",
-      title: "Cam Sistemleri",
-      description: "Giyotin cam ve frameless sistem çözümleri",
-      image: "/giyotin-cam/villa-giyotin2.jpg",
+      title: t("nav.glassSystems"),
+      description: t("nav.menuDescriptions.glass"),
+      image: "/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-3.jpeg",
       href: "/cam-sistemleri",
       icon: Layers,
-      subCategories: getGlassSystemsSubCategories(t),
     },
     {
       id: "winter-garden",
-      title: "Kış Bahçesi",
-      description: "4 mevsim kullanım için kapalı alan çözümleri",
+      title: t("nav.winterGarden"),
+      description: t("nav.menuDescriptions.winterGarden"),
       image: "/pergola/pergola-kapak.jpeg",
       href: "/kis-bahcesi",
       icon: FileText,
-      subCategories: getWinterGardenSubCategories(t),
     },
     {
       id: "sun-breaker",
-      title: "Güneş Kırıcı",
-      description: "Bina cephesi güneş koruma ve gölgeleme sistemleri",
+      title: t("nav.sunBreakers"),
+      description: t("nav.menuDescriptions.sunBreaker"),
       image: "/pergola/pergola-dıs-gunes.jpeg",
       href: "/gunes-kiriclari",
       icon: FileText,
-      subCategories: getSunBreakerSubCategories(t),
     },
     {
       id: "zip-screen",
-      title: "Zip Perde",
-      description: "Motorlu ve manuel zip screen sistemleri",
+      title: t("nav.zipScreen"),
+      description: t("nav.menuDescriptions.zipScreen"),
       image: "/zip-perde/zip-perde-2.jpeg",
       href: "/zip-perde",
       icon: FileText,
-      subCategories: getZipScreenSubCategories(t),
     },
   ]
   
@@ -89,119 +77,63 @@ export function CatalogCategories() {
         </div>
 
         {/* Ana Kategoriler */}
-        <div className="space-y-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {mainCategories.map((category, index) => (
-            <div key={category.id} className="space-y-8">
-              {/* Ana Kategori Kartı */}
-              <div className="relative group overflow-hidden rounded-2xl border shadow-lg hover:shadow-xl transition-all">
-                <div className="grid md:grid-cols-2 gap-0">
-                  {/* Görsel Tarafı */}
-                  <div className={`relative aspect-[4/3] md:aspect-auto overflow-hidden ${index % 2 === 0 ? 'order-1' : 'order-2'}`}>
-                    <img
-                      src={category.image}
-                      alt={category.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-black/20" />
-                    
-                    {/* Floating badge */}
-                    <div className="absolute top-6 right-6">
-                      <div className="bg-white/95 backdrop-blur px-4 py-2 rounded-full shadow-lg">
-                        <span className="text-sm font-bold text-foreground">
-                          {category.subCategories.length} {t("catalog.categories.subCategories")}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* İçerik Tarafı */}
-                  <div className={`p-8 md:p-12 flex flex-col justify-center bg-card ${index % 2 === 0 ? 'order-2' : 'order-1'}`}>
-                    <div className="inline-flex w-fit items-center gap-2 px-4 py-2 bg-primary/10 rounded-lg mb-6">
-                      <category.icon className="h-5 w-5 text-black" />
-                      <span className="text-sm font-semibold text-black">{t("catalog.categories.mainCategory")}</span>
-                    </div>
-
-                    <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                      {category.title}
-                    </h3>
-                    <p className="text-lg text-muted-foreground mb-8">
-                      {category.description}
-                    </p>
-
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <Button size="lg" asChild>
-                        <Link href={category.href}>
-                          <ArrowRight className="h-5 w-5 mr-2" />
-                          {t("catalog.categories.viewProducts")}
-                        </Link>
-                      </Button>
-                      <Button size="lg" variant="outline">
-                        <Download className="h-5 w-5 mr-2" />
-                        {t("catalog.categories.downloadCatalog")}
-                      </Button>
-                    </div>
+            <div
+              key={category.id}
+              className="group bg-card rounded-2xl border overflow-hidden hover:shadow-xl transition-all hover:-translate-y-2"
+            >
+              {/* Görsel */}
+              <div className="relative aspect-video overflow-hidden">
+                <img
+                  src={category.image}
+                  alt={category.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                
+                {/* Icon Badge */}
+                <div className="absolute top-4 left-4">
+                  <div className="bg-white/95 backdrop-blur px-3 py-2 rounded-lg shadow-lg">
+                    <category.icon className="h-6 w-6 text-primary" />
                   </div>
                 </div>
               </div>
 
-              {/* Alt Kategoriler */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
-                {category.subCategories.map((subCat) => (
-                  <div
-                    key={subCat.id}
-                    className="group bg-card rounded-xl border overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1"
+              {/* İçerik */}
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-foreground mb-3">
+                  {category.title}
+                </h3>
+                <p className="text-muted-foreground mb-6 line-clamp-2">
+                  {category.description}
+                </p>
+
+                {/* Butonlar */}
+                <div className="flex flex-col gap-3">
+                  <Button size="lg" asChild className="w-full">
+                    <Link href={category.href}>
+                      <ArrowRight className="h-5 w-5 mr-2" />
+                      {t("catalog.categories.viewProducts")}
+                    </Link>
+                  </Button>
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="w-full"
+                    onClick={() => {
+                      const link = document.createElement('a')
+                      link.href = '/E-KATALOG/IDEA-E-CATALOG-1.pdf'
+                      link.download = 'IDEA-E-KATALOG.pdf'
+                      document.body.appendChild(link)
+                      link.click()
+                      document.body.removeChild(link)
+                    }}
                   >
-                    {/* Alt Kategori Görseli */}
-                    <div className="relative aspect-video overflow-hidden">
-                      <img
-                        src={subCat.image}
-                        alt={subCat.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                      <div className="absolute top-3 right-3">
-                        <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold">
-                          {subCat.badge}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Alt Kategori İçerik */}
-                    <div className="p-6">
-                      <h4 className="text-xl font-bold text-foreground mb-2 line-clamp-1">
-                        {subCat.name}
-                      </h4>
-                      <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
-                        {subCat.description}
-                      </p>
-
-                      {/* Özellikler */}
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {subCat.features.slice(0, 2).map((feature, idx) => (
-                          <span
-                            key={idx}
-                            className="text-xs bg-muted px-2 py-1 rounded-md text-muted-foreground"
-                          >
-                            {feature}
-                          </span>
-                        ))}
-                      </div>
-
-                      {/* Butonlar */}
-                      <div className="flex items-center gap-2 pt-4 border-t">
-                        <Button size="sm" variant="outline" className="h-9 w-9 p-0">
-                          <Download className="h-4 w-4" />
-                        </Button>
-                        <Button size="sm" className="flex-1" asChild>
-                          <Link href={subCat.href}>
-                            {t("catalog.categories.details")}
-                            <ArrowRight className="h-4 w-4 ml-2" />
-                          </Link>
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                    <Download className="h-5 w-5 mr-2" />
+                    {t("catalog.categories.downloadCatalog")}
+                  </Button>
+                </div>
               </div>
             </div>
           ))}

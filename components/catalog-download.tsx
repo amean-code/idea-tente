@@ -156,7 +156,17 @@ export function CatalogDownload() {
               </div>
 
               {/* İndirme Butonu */}
-              <Button className="w-full">
+              <Button 
+                className="w-full"
+                onClick={() => {
+                  const link = document.createElement('a')
+                  link.href = '/E-KATALOG/IDEA-E-CATALOG-1.pdf'
+                  link.download = 'IDEA-E-KATALOG.pdf'
+                  document.body.appendChild(link)
+                  link.click()
+                  document.body.removeChild(link)
+                }}
+              >
                 <Download className="h-4 w-4 mr-2" />
                 {t("catalog.download.download")}
               </Button>

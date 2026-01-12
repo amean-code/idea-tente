@@ -1019,7 +1019,9 @@ export const translations = {
         subCategories: "Alt Kategori",
         viewProducts: "Ürünleri Görüntüle",
         downloadCatalog: "Katalog İndir",
-        details: "Detaylar"
+        details: "Detaylar",
+        languages: "Dil Desteği",
+        onlineAccess: "7/24 Erişim"
       },
       download: {
         badge: "Hızlı İndirme Merkezi",
@@ -1335,6 +1337,46 @@ export const translations = {
       },
       gallery: {
         productName: "Cam Sistemleri"
+      },
+      // Sliding Glass Systems (Sürme Cam Sistemleri)
+      slidingGlass: {
+        hero: {
+          badge: "Modern Cam Teknolojisi",
+          title: "Sürme Cam Sistemleri",
+          description: "Sürme cam sistemlerimiz ile mekanlarınızı dış etkenlere karşı korurken, manzaranızdan ödün vermeden konforunuzu artırın. Modern ve şık tasarım ile yaşam alanlarınızı dönüştürün.",
+          subdescription: "Kesintisiz manzara için sürme cam sistemleri, kolay açılır kapanır sürme mekanizması ve temperli güvenlik camı ile maksimum güvenlik."
+        },
+        features: {
+          title: "Modern Cam Teknolojisi",
+          subtitle: "Güvenlik, estetik ve fonksiyonelliği bir arada sunan sürme cam sistemleri",
+          framelessDesign: {
+            title: "Panoramik Tasarım",
+            description: "Panoramik manzara ve maksimum ışık geçirgenliği ile modern minimalist tasarım."
+          },
+          slidingMechanism: {
+            title: "Sürme Mekanizması",
+            description: "Kolay açılır kapanır sürme sistemi ile geniş açılım imkanı ve pratik kullanım."
+          },
+          easyUse: {
+            title: "Kolay Kullanım",
+            description: "Hafif ve sessiz sürme mekanizması ile kolayca açılıp kapanır. Sessiz çalışma ile konforlu yaşam."
+          },
+          weatherResistant: {
+            title: "Hava Koşullarına Dayanıklı",
+            description: "Rüzgar, yağmur ve kar gibi hava koşullarına karşı yüksek dayanım."
+          },
+          safetyGlass: {
+            title: "Güvenlik Camı",
+            description: "Temperli veya lamine cam seçenekleri ile maksimum güvenlik sağlar."
+          },
+          energyEfficiency: {
+            title: "Enerji Verimliliği",
+            description: "Özel cam kaplama teknolojisi ile ısı yalıtımı ve enerji tasarrufu."
+          }
+        },
+        gallery: {
+          productName: "Sürme Cam Sistemleri"
+        }
       }
     },
 

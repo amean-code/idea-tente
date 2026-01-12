@@ -44,13 +44,20 @@ export function CatalogHero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="bg-primary hover:bg-primary-600 text-primary-foreground">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary-600 text-primary-foreground"
+                onClick={() => {
+                  const link = document.createElement('a')
+                  link.href = '/E-KATALOG/IDEA-E-CATALOG-1.pdf'
+                  link.download = 'IDEA-E-KATALOG.pdf'
+                  document.body.appendChild(link)
+                  link.click()
+                  document.body.removeChild(link)
+                }}
+              >
                 <Download className="h-5 w-5 mr-2" />
                 {t("catalog.categories.downloadCatalog")}
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm">
-                <BookOpen className="h-5 w-5 mr-2" />
-                {t("catalog.categories.viewProducts")}
               </Button>
             </div>
           </div>
@@ -83,7 +90,7 @@ export function CatalogHero() {
               </div>
               <div>
                 <h3 className="font-semibold text-white">Güncel İçerik</h3>
-                <p className="text-sm text-gray-400">2024 Ürün Koleksiyonu</p>
+                <p className="text-sm text-gray-400">2026 Ürün Koleksiyonu</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-4 bg-white/5 backdrop-blur rounded-xl border border-white/10">

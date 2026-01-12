@@ -524,6 +524,46 @@ export const deTranslations = {
     },
     gallery: {
       productName: "Glassysteme"
+    },
+    // Sliding Glass Systems (Schiebe-Glassysteme)
+    slidingGlass: {
+      hero: {
+        badge: "Moderne Glastechnologie",
+        title: "Schiebe-Glassysteme",
+        description: "Mit unseren Schiebe-Glassystemen schützen Sie Ihre Räume vor äußeren Einflüssen und erhöhen Ihren Komfort, ohne auf die Aussicht zu verzichten. Transformieren Sie Ihre Wohnräume mit modernem und elegantem Design.",
+        subdescription: "Schiebe-Glassysteme für ununterbrochene Aussicht, leicht zu öffnender Schiebemechanismus und maximale Sicherheit mit gehärtetem Sicherheitsglas."
+      },
+      features: {
+        title: "Moderne Glastechnologie",
+        subtitle: "Schiebe-Glassysteme, die Sicherheit, Ästhetik und Funktionalität kombinieren",
+          framelessDesign: {
+            title: "Panoramadesign",
+            description: "Panoramablick und maximale Lichtdurchlässigkeit mit modernem minimalistischen Design."
+          },
+        slidingMechanism: {
+          title: "Schiebemechanismus",
+          description: "Große Öffnungsmöglichkeit und praktische Nutzung mit leicht zu öffnendem Schiebesystem."
+        },
+        easyUse: {
+          title: "Einfach zu bedienen",
+          description: "Öffnet und schließt leicht mit leichtem und geräuschlosem Schiebemechanismus. Komfortables Wohnen mit leisem Betrieb."
+        },
+        weatherResistant: {
+          title: "Wetterbeständig",
+          description: "Hohe Widerstandsfähigkeit gegen Wetterbedingungen wie Wind, Regen und Schnee."
+        },
+        safetyGlass: {
+          title: "Sicherheitsglas",
+          description: "Bietet maximale Sicherheit mit gehärteten oder laminierten Glasoptionen."
+        },
+        energyEfficiency: {
+          title: "Energieeffizienz",
+          description: "Wärmedämmung und Energieeinsparung mit spezieller Glasbeschichtungstechnologie."
+        }
+      },
+      gallery: {
+        productName: "Schiebe-Glassysteme"
+      }
     }
   },
 
@@ -960,7 +1000,9 @@ export const deTranslations = {
       subCategories: "Unterkategorien",
       viewProducts: "Produkte anzeigen",
       downloadCatalog: "Katalog herunterladen",
-      details: "Details"
+      details: "Details",
+      languages: "Sprachunterstützung",
+      onlineAccess: "24/7 Zugriff"
     },
     download: {
       badge: "Schnelles Download-Zentrum",
