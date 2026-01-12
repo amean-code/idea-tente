@@ -18,7 +18,7 @@ const exportProducts = [
   },
   {
     title: "Cam Sistemleri",
-    description: "Frameless sürme cam sistemleri",
+    description: "Frameless giyotin cam sistemleri",
     image: "/frameless-glass-sliding-system--modern-terrace-wit.jpg",
     features: ["Temperli Cam", "Alüminyum Profil", "Hızlı Montaj"],
     markets: ["Avrupa", "Asya-Pasifik"],

@@ -32,8 +32,8 @@ export const translations = {
       // Glass dropdown
       glassMain: "Cam Sistemleri",
       glassMainDesc: "Tüm cam sistem modellerini görüntüle",
-      glassSliding: "Sürme Cam",
-      glassSlidingDesc: "Frameless sürme sistem",
+      glassSliding: "Giyotin Cam" ,
+      glassSlidingDesc: "Frameless giyotin sistem",
       glassFolding: "Katlanır Cam",
       glassFoldingDesc: "Geniş açılım imkanı",
       glassFixed: "Sabit Cam",
@@ -138,17 +138,20 @@ export const translations = {
         premium: {
           title: "Premium Kış Bahçesi",
           description: "Akıllı cam teknolojisi ve otomatik iklim kontrol sistemleri ile üstün konfor",
-          badge: "En Popüler"
+          badge: "En Popüler",
+          features: ["Akıllı Cam", "Otomatik Havalandırma", "Isı Pompası", "Uzaktan Kontrol"]
         },
         standard: {
           title: "Standart Kış Bahçesi",
           description: "Kaliteli malzeme ve uygun fiyat ile ekonomik kış bahçesi çözümü",
-          badge: "Ekonomik"
+          badge: "Ekonomik",
+          features: ["Çift Cam", "Manuel Havalandırma", "Termal Kesim", "10 Yıl Garanti"]
         },
         luxury: {
           title: "Lüks Kış Bahçesi",
           description: "Panoramik cam ve akıllı ev entegrasyonu ile en üst seviye konfor",
-          badge: "Lüks"
+          badge: "Lüks",
+          features: ["Panoramik Cam", "Akıllı Ev Entegrasyonu", "Gömme Isıtma", "Premium Malzeme"]
         }
       },
       // Sun Breaker Sub Products
@@ -156,17 +159,20 @@ export const translations = {
         fixed: {
           title: "Sabit Güneş Kırıcı",
           description: "Dayanıklı alüminyum profil güneş kırıcı sistemleri ile kalıcı güneş kontrolü",
-          badge: "Ekonomik"
+          badge: "Ekonomik",
+          features: ["Alüminyum Profil", "Özel Renk", "Kolay Montaj", "Uzun Ömür"]
         },
         motorized: {
           title: "Hareketli Güneş Kırıcı",
           description: "Motorlu ve ayarlanabilir güneş kontrol sistemleri ile akıllı güneş yönetimi",
-          badge: "Akıllı"
+          badge: "Akıllı",
+          features: ["Motorlu Kontrol", "Akıllı Sensör", "Uzaktan Kumanda", "Otomatik"]
         },
         vertical: {
           title: "Dikey Güneş Kırıcı",
           description: "Cephe güneş kontrol çözümleri ile estetik ve fonksiyonel tasarım",
-          badge: "Modern"
+          badge: "Modern",
+          features: ["Cephe Entegrasyonu", "Estetik Tasarım", "Enerji Tasarrufu", "Modern Görünüm"]
         }
       },
       // Zip Screen Sub Products
@@ -174,19 +180,61 @@ export const translations = {
         motorized: {
           title: "Motorlu Zip Perde",
           description: "Uzaktan kumandalı motorlu zip perde sistemleri ile kolay kullanım",
-          badge: "Popüler"
+          badge: "Popüler",
+          features: ["Motorlu Sistem", "Uzaktan Kumanda", "Sessiz Çalışma", "Otomatik Durdurma"]
         },
         manual: {
           title: "Manuel Zip Perde",
           description: "Ekonomik manuel zip perde sistemleri ile uygun fiyatlı çözüm",
-          badge: "Ekonomik"
+          badge: "Ekonomik",
+          features: ["Manuel Kullanım", "Ekonomik", "Dayanıklı Kumaş", "Kolay Montaj"]
         },
         smart: {
           title: "Akıllı Zip Perde",
           description: "Sensör kontrollü akıllı zip perde sistemleri ile otomatik güneş koruması",
-          badge: "Akıllı"
+          badge: "Akıllı",
+          features: ["Akıllı Sensör", "Otomatik Kontrol", "Rüzgar Sensörü", "Güneş Sensörü"]
         }
-      }
+      },
+      // Product features and benefits
+      winterGardenFeatures: [
+        { title: "Termal İzolasyon", description: "Üstün yalıtım özellikleri ile enerji tasarrufu" },
+        { title: "Dayanıklılık", description: "Hava koşullarına karşı maksimum direnç" },
+        { title: "Akıllı Kontrol", description: "Otomatik iklim kontrol sistemleri" }
+      ],
+      winterGardenBenefits: [
+        "4 mevsim kullanım imkanı",
+        "Enerji tasarrufu sağlar",
+        "Yaşam alanınızı genişletir",
+        "Mülk değerinizi artırır",
+        "Doğal ışık alımı",
+        "Sessiz ve konforlu ortam"
+      ],
+      sunBreakerBenefits: [
+        { title: "Güneş Kontrolü", description: "İstenmeyen güneş ışınlarını engeller" },
+        { title: "Enerji Tasarrufu", description: "Klima maliyetlerini %40'a kadar azaltır" },
+        { title: "UV Koruması", description: "Zararlı UV ışınlarından koruma" },
+        { title: "Ayarlanabilir", description: "İhtiyaca göre açı ayarlaması" }
+      ],
+      zipScreenFeatures: [
+        { title: "Rüzgar Dayanımı", description: "120 km/h rüzgar hızına kadar dayanıklılık" },
+        { title: "UV Koruması", description: "%95 UV koruma sağlar" },
+        { title: "Sessiz Çalışma", description: "Gürültüsüz motor teknolojisi" },
+        { title: "Akıllı Kontrol", description: "Uzaktan kumanda ve sensör kontrolü" }
+      ],
+      zipScreenApplications: [
+        { title: "Restoran Terasları", description: "Açık hava yemek alanları için ideal çözüm" },
+        { title: "Otel Balkonları", description: "Misafir konforunu artıran perde sistemleri" },
+        { title: "Konut Bahçeleri", description: "Ev bahçeleri için şık ve fonksiyonel çözümler" }
+      ],
+      zipScreenAdvantages: [
+        "Kolay kullanım ve kontrol",
+        "Dayanıklı kumaş teknolojisi",
+        "Hızlı montaj imkanı",
+        "Minimal bakım gereksinimi",
+        "Geniş renk ve desen seçenekleri",
+        "10 yıl garanti"
+      ]
     },
     // Contact
     contact: {
@@ -375,6 +423,52 @@ export const translations = {
           title: "Seçimleriniz"
         }
       },
+      mainPage: {
+        specs: {
+          dimensions: "Boyutlar",
+          materials: "Malzeme & Yapı",
+          performance: "Performans",
+          warranty: "Garanti & Özellikler",
+          maxWidth: "Maksimum Genişlik",
+          maxDepth: "Maksimum Derinlik",
+          maxArea: "Maksimum Alan",
+          profileMaterial: "Profil Malzeme",
+          louverAngle: "Lamel Açısı",
+          gasketMaterial: "Fitil Malzemesi",
+          waterproof: "Su Geçirmezlik",
+          distributedLoad: "Yayılı Yük Kapasitesi",
+          windLoad: "Rüzgar Yükü",
+          motorWarranty: "Motor Garantisi",
+          mechanicalWarranty: "Mekanik Garanti",
+          slope: "Eğim"
+        },
+        features: {
+          rotatableLouvers: {
+            title: "105° Dönebilen Lameller",
+            description: "Eksenel olarak 105° açıda açılabilen lameller ile güneş ışığını ve havalandırmayı aynı anda kontrol edin."
+          },
+          waterproof: {
+            title: "%100 Su Geçirmezlik",
+            description: "Lamellerdeki oluklar sayesinde yağmur suları yan oluklara akarak taşıyıcı ayaklardan dışarı atılır."
+          },
+          quietOperation: {
+            title: "Sessiz Çalışma",
+            description: "Triger kayışı ile güç aktarımı sağlanan sistem sessiz ve pürüzsüz çalışır."
+          },
+          thermalInsulation: {
+            title: "Isı ve Ses Yalıtımı",
+            description: "Lamellere dolgu malzemesi eklenerek üstün ısı ve ses izolasyonu sağlanabilir."
+          },
+          remoteControl: {
+            title: "Uzaktan Kumanda Kontrolü",
+            description: "Açılma-kapanma ve yağmur modu uzaktan kumanda ile kontrol edilir. Otomatik hata önleme sistemi entegre."
+          },
+          allSeasons: {
+            title: "Tüm Mevsim Uyumlu",
+            description: "Teras, kafe, restoran, kış bahçesi ve salon çatılarında rahatlıkla kullanılabilir. Düz ve eğimli çalışma imkanı."
+          }
+        }
+      },
       bioclimatic: {
         hero: {
           title: "Bioklimatik Pergola Sistemleri",
@@ -382,7 +476,9 @@ export const translations = {
         },
         features: {
           title: "Bioklimatik Teknoloji",
-          subtitle: "Doğal havalandırma ve iklim kontrolü ile enerji verimliliği"
+          subtitle: "Doğal havalandırma ve iklim kontrolü ile enerji verimliliği",
+          pageTitle: "Akıllı Pergola Teknolojisi",
+          pageSubtitle: "Modern yaşam için tasarlanmış bioklimatik pergola sistemlerimizin sunduğu üstün özellikler"
         },
         specs: {
           dimensions: "Boyutlar",
@@ -432,8 +528,16 @@ export const translations = {
             description: "Triger kayışı ile güç aktarımı sağlanan sistem sessiz ve pürüzsüz çalışır."
           },
           allSeasons: {
-            title: "Tüm Mevsim",
-            description: "Yaz ve kış aylarında konforlu kullanım. Her mevsim için ideal çözüm."
+            title: "Tüm Mevsim Uyumlu",
+            description: "Teras, kafe, restoran, kış bahçesi ve salon çatılarında rahatlıkla kullanılabilir. Düz ve eğimli çalışma imkanı."
+          },
+          thermalInsulation: {
+            title: "Isı ve Ses Yalıtımı",
+            description: "Lamellere dolgu malzemesi eklenerek üstün ısı ve ses izolasyonu sağlanabilir."
+          },
+          remoteControl: {
+            title: "Uzaktan Kumanda Kontrolü",
+            description: "Açılma-kapanma ve yağmur modu uzaktan kumanda ile kontrol edilir. Otomatik hata önleme sistemi entegre."
           }
         },
         documents: {
@@ -1133,9 +1237,10 @@ export const translations = {
     // Glass Systems translations
     glassSystems: {
       hero: {
+        badge: "Modern Cam Teknolojisi",
         title: "Cam Sistemleri",
-        description: "Sürme cam sistemlerimiz ile mekanlarınızı dış etkenlere karşı korurken, manzaranızdan ödün vermeden konforunuzu artırın. Frameless tasarım ile modern ve şık görünüm.",
-        subdescription: "Kesintisiz manzara için çerçevesiz cam sistemleri, kolay açılır kapanır sürme mekanizması ve temperli güvenlik camı ile maksimum güvenlik."
+        description: "Giyotin cam sistemlerimiz ile mekanlarınızı dış etkenlere karşı korurken, manzaranızdan ödün vermeden konforunuzu artırın. Modern ve şık tasarım ile yaşam alanlarınızı dönüştürün.",
+        subdescription: "Kolay açılır kapanır mekanizması, temperli güvenlik camı ve dayanıklı yapısı ile giyotin cam sistemleri. Geniş açılım imkanı ve sessiz çalışma ile maksimum konfor."
       },
       wizard: {
         title: "Cam Sisteminizi Seçin",
@@ -1146,13 +1251,13 @@ export const translations = {
         subtitle: "İhtiyaçlarınıza uygun cam sistemi modellerini keşfedin",
         viewDetails: "Detayları Gör",
         surmeCam: {
-          title: "Sürme Cam Sistemleri",
-          description: "Frameless sürme cam sistemleri ile kesintisiz manzara ve maksimum konfor",
+          title: "Giyotin Cam Sistemleri",
+          description: "Kolay açılır kapanır mekanizması ve temperli güvenlik camı ile giyotin cam sistemleri",
           badge: "Popüler",
           features: {
-            frameless: "Frameless Tasarım",
-            sliding: "Sürme Mekanizma",
+            sliding: "Giyotin Mekanizma",
             tempered: "Temperli Cam",
+            easyUse: "Kolay Kullanım",
             waterproof: "Su Geçirmez"
           }
         },
@@ -1178,6 +1283,58 @@ export const translations = {
             lowMaintenance: "Düşük Bakım"
           }
         }
+      },
+      specs: {
+        dimensions: "Boyutlar",
+        productStandards: "Ürün Standartları",
+        colorOptions: "Renk Seçenekleri",
+        additionalFeatures: "Ek Özellikler",
+        maxWidth: "Genişlik (maks.)",
+        maxHeight: "Yükseklik (maks.)",
+        glassType: "Cam Tipi",
+        glassThickness: "Cam Kalınlığı",
+        system: "Sistem",
+        profileColor: "Profil Rengi",
+        glass: "Cam",
+        soundInsulation: "Ses Yalıtımı",
+        security: "Güvenlik",
+        // Values
+        glassTypeValue: "Temperli / Lamine",
+        systemValue: "Sürme / Katlanır",
+        profileColorValue: "RAL Renk Seçenekleri",
+        glassValue: "Şeffaf / Tonlu / Mat",
+        securityValue: "Temperli Cam"
+      },
+      features: {
+        title: "Modern Cam Teknolojisi",
+        subtitle: "Güvenlik, estetik ve fonksiyonelliği bir arada sunan cam sistemleri",
+        slidingMechanism: {
+          title: "Giyotin Sürme Mekanizması",
+          description: "Kolay açılır kapanır sistemi ile geniş açılım imkanı ve pratik kullanım."
+        },
+        easyUse: {
+          title: "Kolay Kullanım",
+          description: "Hafif ve sessiz mekanizması ile kolayca açılıp kapanır. Sessiz çalışma ile konforlu yaşam."
+        },
+        weatherResistant: {
+          title: "Hava Koşullarına Dayanıklı",
+          description: "Rüzgar, yağmur ve kar gibi hava koşullarına karşı yüksek dayanım."
+        },
+        safetyGlass: {
+          title: "Güvenlik Camı",
+          description: "Temperli veya lamine cam seçenekleri ile maksimum güvenlik sağlar."
+        },
+        energyEfficiency: {
+          title: "Enerji Verimliliği",
+          description: "Özel cam kaplama teknolojisi ile ısı yalıtımı ve enerji tasarrufu."
+        },
+        soundInsulation: {
+          title: "Ses Yalıtımı",
+          description: "Kalın cam yapısı ile dış gürültüleri minimize eder."
+        }
+      },
+      gallery: {
+        productName: "Cam Sistemleri"
       }
     },
 
@@ -1229,6 +1386,55 @@ export const translations = {
             floorHeating: "Zemin Isıtma",
             warranty: "20 Yıl Garanti"
           }
+        }
+      },
+      specs: {
+        dimensions: "Boyutlar",
+        productStandards: "Ürün Standartları",
+        colorOptions: "Renk Seçenekleri",
+        additionalFeatures: "Ek Özellikler",
+        areaRange: "Alan (min. - maks.)",
+        maxHeight: "Yükseklik (maks.)",
+        glassType: "Cam Tipi",
+        glassTypeValue: "Çift Cam / Low-E",
+        profile: "Profil",
+        profileValue: "Alüminyum",
+        thermalInsulation: "Isı Yalıtımı",
+        thermalInsulationValue: "Yüksek Performans",
+        profileColor: "Profil Rengi",
+        profileColorValue: "RAL Renk Seçenekleri",
+        glass: "Cam",
+        glassValue: "Şeffaf / Tonlu",
+        soundInsulation: "Ses Yalıtımı",
+        energySaving: "Enerji Tasarrufu",
+        energySavingValue: "%40'a kadar"
+      },
+      features: {
+        title: "Konfor ve Teknoloji",
+        subtitle: "Modern kış bahçesi sistemlerimiz, maksimum konfor ve enerji verimliliği için tasarlandı",
+        fourSeasons: {
+          title: "4 Mevsim Kullanım",
+          description: "Üstün yalıtım özellikleri ile yaz ve kış mevsimlerinde konforlu kullanım sağlar."
+        },
+        energySaving: {
+          title: "Enerji Tasarrufu",
+          description: "Çift cam ve özel profil yapısı ile enerji tüketiminizi %40'a kadar azaltır."
+        },
+        soundInsulation: {
+          title: "Ses Yalıtımı",
+          description: "Özel cam ve profil sistemi ile dış gürültüleri minimize eder."
+        },
+        security: {
+          title: "Güvenlik",
+          description: "Temperli cam ve sağlam alüminyum profil ile maksimum güvenlik sağlar."
+        },
+        automaticVentilation: {
+          title: "Otomatik Havalandırma",
+          description: "Akıllı havalandırma sistemi ile taze hava sirkülasyonu sağlar."
+        },
+        smartControl: {
+          title: "Akıllı Kontrol",
+          description: "Mobil uygulama ile ısıtma, havalandırma ve aydınlatmayı kontrol edin."
         }
       }
     },
@@ -1333,6 +1539,55 @@ export const translations = {
             warranty: "10 Yıl Garanti"
           }
         }
+      },
+      specs: {
+        dimensions: "Boyutlar",
+        productStandards: "Ürün Standartları",
+        colorOptions: "Renk Seçenekleri",
+        additionalFeatures: "Ek Özellikler",
+        widthRange: "Genişlik (min. - maks.)",
+        maxHeight: "Yükseklik (maks.)",
+        controlType: "Kontrol Tipi",
+        controlTypeValue: "Manuel / Motorlu",
+        fabric: "Kumaş",
+        fabricValue: "Screen / Blackout",
+        profile: "Profil",
+        profileValue: "Alüminyum",
+        profileColor: "Profil Rengi",
+        profileColorValue: "RAL Renk Seçenekleri",
+        fabricColor: "Kumaş Rengi",
+        fabricColorValue: "Geniş Renk Paleti",
+        windResistance: "Rüzgar Dayanımı",
+        windResistanceValue: "80 km/saat'e kadar",
+        uvProtection: "UV Koruma"
+      },
+      features: {
+        title: "Kontrol ve Otomasyon",
+        subtitle: "Modern teknoloji ile donatılmış zip perde sistemlerimiz, konforunuz için tasarlandı",
+        windResistance: {
+          title: "Rüzgar Dayanımı",
+          description: "Fermuarlı sistem sayesinde yüksek rüzgar hızlarına karşı maksimum dayanım sağlar."
+        },
+        uvProtection: {
+          title: "UV Koruma",
+          description: "UPF 50+ koruma ile zararlı güneş ışınlarını engeller, mekanınızı serinletir."
+        },
+        waterproof: {
+          title: "Su Geçirmezlik",
+          description: "Özel kumaş ve profil yapısı ile yağmura karşı tam koruma sağlar."
+        },
+        smartControl: {
+          title: "Akıllı Kontrol",
+          description: "İOS ve Android uyumlu akıllı telefon kontrolü ile uzaktan yönetim imkanı."
+        },
+        sunSensor: {
+          title: "Güneş Sensörü",
+          description: "Güneşli havalarda otomatik olarak devreye girerek enerji tasarrufu sağlar."
+        },
+        windSensor: {
+          title: "Rüzgar Sensörü",
+          description: "Yüksek rüzgar hızı algılandığında ürününüzü otomatik olarak korur."
+        }
       }
     },
 
@@ -1357,16 +1612,29 @@ export const translations = {
       years: "Yıl",
       satisfaction: "Memnuniyet"
     },
+    // Company Video Section
+    companyVideo: {
+      title: "IDEA Hakkında",
+      subtitle: "15 Yıllık Deneyim ve Güven",
+      description: "2008 yılından bu yana outdoor yaşam alanları konusunda uzmanlaşmış, binlerce projeye imza atmış bir ekibiz. Premium IDEA ve cam sistemleri ile yaşam alanlarınızı dönüştürüyoruz.",
+      videoTitle: "Firmamızı Tanıyın",
+      stats: {
+        projects: "Tamamlanan Proje",
+        countries: "İhracat Ülkesi",
+        experience: "Yıl Deneyim",
+        satisfaction: "Müşteri Memnuniyeti"
+      }
+    },
 
     // Why Choose Us Section translations
     whyChooseUs: {
       badge: "Neden IDEA?",
       title: "Türkiye'nin Önde Gelen",
       titleHighlight: "Pergola Üreticisi",
-      subtitle: "20+ yıllık deneyimimiz ve 5000+ başarılı projemizle, kalite ve güvenin adresi olarak hizmet veriyoruz.",
+      subtitle: "15+ yıllık deneyimimiz ve 4000+ başarılı projemizle, kalite ve güvenin adresi olarak hizmet veriyoruz.",
       features: {
         experience: {
-          title: "20+ Yıl Deneyim",
+          title: "15+ Yıl Deneyim",
           description: "Sektörde uzun yıllara dayanan deneyim ve uzmanlık ile müşterilerimize en iyi hizmeti sunuyoruz.",
           cta: "Daha Fazla",
           founded: "Kuruluş"
@@ -1626,10 +1894,13 @@ export const translations = {
       fixed: "Fixed IDEA",
       glass: "Glass Systems",
       winterGarden: "Winter Garden",
+      winterGardenDesc: "Enclosed space solutions for year-round use",
       sunBreaker: "Sun Breaker",
+      sunBreakerDesc: "Modern sun control systems for energy savings and comfort",
       zipScreen: "Zip Screen",
-      title: "Our Products",
-      subtitle: "Custom-designed IDEA products",
+      zipScreenDesc: "Wind-resistant zip screen systems for outdoor protection",
+      title: "Our Premium Outdoor Solutions",
+      subtitle: "Custom-designed IDEA and glass systems",
       features: {
         smartLouver: "Smart Louver System",
         climateControl: "Climate Control",
@@ -1639,13 +1910,121 @@ export const translations = {
         safetyGlass: "Safety Glass",
         fourSeasons: "4-Season Use",
         thermalInsulation: "Thermal Insulation",
-        naturalLighting: "Natural Lighting"
+        naturalLighting: "Natural Lighting",
+        sunControl: "Sun Control",
+        energySaving: "Energy Saving",
+        uvProtection: "UV Protection",
+        windResistance: "Wind Resistance",
+        silentOperation: "Silent Operation"
       },
       badges: {
         popular: "Popular",
         premium: "Premium",
-        new: "New"
-      }
+        new: "New",
+        efficient: "Efficient"
+      },
+      // Winter Garden Sub Products
+      winterGardenSub: {
+        premium: {
+          title: "Premium Winter Garden",
+          description: "Superior comfort with smart glass technology and automatic climate control systems",
+          badge: "Most Popular",
+          features: ["Smart Glass", "Automatic Ventilation", "Heat Pump", "Remote Control"]
+        },
+        standard: {
+          title: "Standard Winter Garden",
+          description: "Economical winter garden solution with quality materials and affordable pricing",
+          badge: "Economic",
+          features: ["Double Glass", "Manual Ventilation", "Thermal Break", "10 Year Warranty"]
+        },
+        luxury: {
+          title: "Luxury Winter Garden",
+          description: "Top-level comfort with panoramic glass and smart home integration",
+          badge: "Luxury",
+          features: ["Panoramic Glass", "Smart Home Integration", "Underfloor Heating", "Premium Materials"]
+        }
+      },
+      // Sun Breaker Sub Products
+      sunBreakerSub: {
+        fixed: {
+          title: "Fixed Sun Breaker",
+          description: "Permanent sun control with durable aluminum profile sun breaker systems",
+          badge: "Economic",
+          features: ["Aluminum Profile", "Custom Color", "Easy Installation", "Long Lifespan"]
+        },
+        motorized: {
+          title: "Motorized Sun Breaker",
+          description: "Smart sun management with motorized and adjustable sun control systems",
+          badge: "Smart",
+          features: ["Motorized Control", "Smart Sensor", "Remote Control", "Automatic"]
+        },
+        vertical: {
+          title: "Vertical Sun Breaker",
+          description: "Aesthetic and functional design with facade sun control solutions",
+          badge: "Modern",
+          features: ["Facade Integration", "Aesthetic Design", "Energy Saving", "Modern Appearance"]
+        }
+      },
+      // Zip Screen Sub Products
+      zipScreenSub: {
+        motorized: {
+          title: "Motorized Zip Screen",
+          description: "Easy operation with remote-controlled motorized zip screen systems",
+          badge: "Popular",
+          features: ["Motorized System", "Remote Control", "Silent Operation", "Auto Stop"]
+        },
+        manual: {
+          title: "Manual Zip Screen",
+          description: "Affordable solution with economical manual zip screen systems",
+          badge: "Economic",
+          features: ["Manual Operation", "Economic", "Durable Fabric", "Easy Installation"]
+        },
+        smart: {
+          title: "Smart Zip Screen",
+          description: "Automatic sun protection with sensor-controlled smart zip screen systems",
+          badge: "Smart",
+          features: ["Smart Sensor", "Automatic Control", "Wind Sensor", "Sun Sensor"]
+        }
+      },
+      // Product features and benefits
+      winterGardenFeatures: [
+        { title: "Thermal Insulation", description: "Energy savings with superior insulation properties" },
+        { title: "Durability", description: "Maximum resistance to weather conditions" },
+        { title: "Smart Control", description: "Automatic climate control systems" }
+      ],
+      winterGardenBenefits: [
+        "Year-round use",
+        "Energy savings",
+        "Expands your living space",
+        "Increases property value",
+        "Natural light intake",
+        "Quiet and comfortable environment"
+      ],
+      sunBreakerBenefits: [
+        { title: "Sun Control", description: "Blocks unwanted sun rays" },
+        { title: "Energy Saving", description: "Reduces air conditioning costs by up to 40%" },
+        { title: "UV Protection", description: "Protection from harmful UV rays" },
+        { title: "Adjustable", description: "Angle adjustment according to needs" }
+      ],
+      zipScreenFeatures: [
+        { title: "Wind Resistance", description: "Resistance up to 120 km/h wind speed" },
+        { title: "UV Protection", description: "Provides 95% UV protection" },
+        { title: "Silent Operation", description: "Noiseless motor technology" },
+        { title: "Smart Control", description: "Remote control and sensor control" }
+      ],
+      zipScreenApplications: [
+        { title: "Restaurant Terraces", description: "Ideal solution for outdoor dining areas" },
+        { title: "Hotel Balconies", description: "Curtain systems that enhance guest comfort" },
+        { title: "Residential Gardens", description: "Elegant and functional solutions for home gardens" }
+      ],
+      zipScreenAdvantages: [
+        "Easy use and control",
+        "Durable fabric technology",
+        "Quick installation",
+        "Minimal maintenance requirement",
+        "Wide color and pattern options",
+        "10 year warranty"
+      ]
     },
 
     
@@ -1782,6 +2161,19 @@ export const translations = {
       years: "Years",
       satisfaction: "Satisfaction"
     },
+    // Company Video Section
+    companyVideo: {
+      title: "About IDEA",
+      subtitle: "15 Years of Experience and Trust",
+      description: "Since 2008, we have been specializing in outdoor living spaces, having completed thousands of projects. We transform your living spaces with premium IDEA and glass systems.",
+      videoTitle: "Get to Know Our Company",
+      stats: {
+        projects: "Completed Projects",
+        countries: "Export Countries",
+        experience: "Years Experience",
+        satisfaction: "Customer Satisfaction"
+      }
+    },
 
     // Why Choose Us Section translations
     whyChooseUs: {
@@ -1851,7 +2243,9 @@ export const translations = {
         },
         features: {
           title: "Bioclimatic Technology",
-          subtitle: "Energy efficiency with natural ventilation and climate control"
+          subtitle: "Energy efficiency with natural ventilation and climate control",
+          pageTitle: "Smart Pergola Technology",
+          pageSubtitle: "Superior features offered by our bioclimatic pergola systems designed for modern living"
         },
         specs: {
           dimensions: "Dimensions",
@@ -1901,8 +2295,16 @@ export const translations = {
             description: "The system powered by trigger belt transmission operates quietly and smoothly."
           },
           allSeasons: {
-            title: "All Seasons",
-            description: "Comfortable use in summer and winter months. Ideal solution for every season."
+            title: "All Seasons Compatible",
+            description: "Can be used comfortably on terraces, cafes, restaurants, winter gardens and living room roofs. Can work flat and sloped."
+          },
+          thermalInsulation: {
+            title: "Thermal and Sound Insulation",
+            description: "Superior thermal and sound insulation can be provided by adding filling material to the louvers."
+          },
+          remoteControl: {
+            title: "Remote Control",
+            description: "Opening-closing and rain mode are controlled by remote control. Automatic error prevention system integrated."
           }
         },
         documents: {
@@ -2076,6 +2478,40 @@ export const translations = {
           downloadCatalog: "Download Catalog"
         }
       }
+    },
+
+    // WhatsApp CTA translations
+    whatsappCTA: {
+      title: "Quick Contact",
+      subtitle: "Contact us via WhatsApp for instant response. Our expert team is ready to help you!",
+      turkiye: "Turkey WhatsApp",
+      international: "International WhatsApp",
+      workingHours: "Working hours:"
+    },
+
+    // Certificates translations
+    certificates: {
+      badge: "Certificates and Documents",
+      title: "Quality and",
+      titleHighlight: "Reliability",
+      subtitle: "Our certified products with international standard production and quality management systems",
+      categories: {
+        quality: "Quality",
+        ce: "CE Certificate",
+        conformity: "Conformity",
+        design: "Design",
+        membership: "Membership"
+      },
+      items: {
+        iso9001: "ISO 9001 Quality Management System",
+        cePergola: "CE Certificate - Motorized Pergola System",
+        ceGlass: "CE Certificate - Motorized Guillotine Glass System",
+        conformityPergola: "Declaration of Conformity - Motorized Pergola System",
+        conformityGlass: "Declaration of Conformity - Motorized Guillotine Glass System",
+        designRegistration: "Design Registration Certificate",
+        designRegistrationGlass: "Design Registration Certificate - Guillotine",
+        baibMembership: "BAİB Membership Certificate"
+      }
     }
   },
   ar: {
@@ -2183,10 +2619,137 @@ export const translations = {
       fixed: "برجولا ثابتة",
       glass: "الأنظمة الزجاجية",
       winterGarden: "الحديقة الشتوية",
+      winterGardenDesc: "حلول المساحات المغلقة للاستخدام على مدار العام",
       sunBreaker: "كاسر الشمس",
+      sunBreakerDesc: "أنظمة التحكم الشمسي الحديثة لتوفير الطاقة والراحة",
       zipScreen: "ستارة زيب",
-      title: "منتجاتنا",
-      subtitle: "منتجات البرجولا المصممة خصيصاً",
+      zipScreenDesc: "أنظمة ستائر زيب المقاومة للرياح للحماية الخارجية",
+      title: "منتجاتنا المتميزة",
+      subtitle: "أنظمة برجولا وزجاج مصممة خصيصًا",
+      features: {
+        smartLouver: "نظام الشرائح الذكي",
+        climateControl: "التحكم في المناخ",
+        ledLighting: "إضاءة LED",
+        framelessDesign: "تصميم بدون إطار",
+        slidingSystem: "نظام منزلق",
+        safetyGlass: "زجاج أمان",
+        fourSeasons: "استخدام 4 مواسم",
+        thermalInsulation: "عزل حراري",
+        naturalLighting: "إضاءة طبيعية",
+        sunControl: "التحكم في الشمس",
+        energySaving: "توفير الطاقة",
+        uvProtection: "حماية من الأشعة فوق البنفسجية",
+        windResistance: "مقاومة الرياح",
+        silentOperation: "تشغيل صامت"
+      },
+      badges: {
+        popular: "شائع",
+        premium: "ممتاز",
+        new: "جديد",
+        efficient: "فعال"
+      },
+      // Winter Garden Sub Products
+      winterGardenSub: {
+        premium: {
+          title: "حديقة شتوية ممتازة",
+          description: "راحة فائقة مع تقنية الزجاج الذكي وأنظمة التحكم في المناخ الأوتوماتيكية",
+          badge: "الأكثر شعبية",
+          features: ["زجاج ذكي", "تهوية أوتوماتيكية", "مضخة حرارية", "تحكم عن بعد"]
+        },
+        standard: {
+          title: "حديقة شتوية قياسية",
+          description: "حل اقتصادي للحديقة الشتوية بمواد عالية الجودة وأسعار معقولة",
+          badge: "اقتصادي",
+          features: ["زجاج مزدوج", "تهوية يدوية", "قطع حراري", "ضمان 10 سنوات"]
+        },
+        luxury: {
+          title: "حديقة شتوية فاخرة",
+          description: "راحة من أعلى مستوى مع الزجاج البانورامي والتكامل مع المنزل الذكي",
+          badge: "فاخر",
+          features: ["زجاج بانورامي", "تكامل المنزل الذكي", "تدفئة أرضية", "مواد ممتازة"]
+        }
+      },
+      // Sun Breaker Sub Products
+      sunBreakerSub: {
+        fixed: {
+          title: "كاسر شمس ثابت",
+          description: "التحكم الدائم في أشعة الشمس مع أنظمة كاسرات الشمس من الألومنيوم المتينة",
+          badge: "اقتصادي",
+          features: ["ملف ألومنيوم", "لون مخصص", "تركيب سهل", "عمر طويل"]
+        },
+        motorized: {
+          title: "كاسر شمس محرك",
+          description: "إدارة شمسية ذكية مع أنظمة التحكم الشمسي الآلية والقابلة للتعديل",
+          badge: "ذكي",
+          features: ["تحكم محرك", "مستشعر ذكي", "تحكم عن بعد", "أوتوماتيكي"]
+        },
+        vertical: {
+          title: "كاسر شمس عمودي",
+          description: "تصميم جمالي ووظيفي مع حلول التحكم الشمسي للواجهة",
+          badge: "عصري",
+          features: ["تكامل الواجهة", "تصميم جمالي", "توفير الطاقة", "مظهر عصري"]
+        }
+      },
+      // Zip Screen Sub Products
+      zipScreenSub: {
+        motorized: {
+          title: "ستارة زيب محركة",
+          description: "تشغيل سهل مع أنظمة ستائر زيب الآلية بالتحكم عن بعد",
+          badge: "شائع",
+          features: ["نظام محرك", "تحكم عن بعد", "تشغيل صامت", "إيقاف تلقائي"]
+        },
+        manual: {
+          title: "ستارة زيب يدوية",
+          description: "حل ميسور التكلفة مع أنظمة ستائر زيب اليدوية الاقتصادية",
+          badge: "اقتصادي",
+          features: ["تشغيل يدوي", "اقتصادي", "قماش متين", "تركيب سهل"]
+        },
+        smart: {
+          title: "ستارة زيب ذكية",
+          description: "حماية شمسية أوتوماتيكية مع أنظمة ستائر زيب الذكية المتحكمة بالمستشعرات",
+          badge: "ذكي",
+          features: ["مستشعر ذكي", "تحكم أوتوماتيكي", "مستشعر الرياح", "مستشعر الشمس"]
+        }
+      },
+      // Product features and benefits
+      winterGardenFeatures: [
+        { title: "عزل حراري", description: "توفير الطاقة مع خصائص عزل فائقة" },
+        { title: "المتانة", description: "مقاومة قصوى للظروف الجوية" },
+        { title: "تحكم ذكي", description: "أنظمة التحكم في المناخ الأوتوماتيكية" }
+      ],
+      winterGardenBenefits: [
+        "إمكانية الاستخدام على مدار العام",
+        "يوفر توفير الطاقة",
+        "يوسع مساحة معيشتك",
+        "يزيد من قيمة ممتلكاتك",
+        "استقبال الضوء الطبيعي",
+        "بيئة هادئة ومريحة"
+      ],
+      sunBreakerBenefits: [
+        { title: "التحكم في الشمس", description: "يمنع أشعة الشمس غير المرغوب فيها" },
+        { title: "توفير الطاقة", description: "يقلل تكاليف التكييف بنسبة تصل إلى 40٪" },
+        { title: "حماية من الأشعة فوق البنفسجية", description: "الحماية من الأشعة فوق البنفسجية الضارة" },
+        { title: "قابل للتعديل", description: "تعديل الزاوية حسب الحاجة" }
+      ],
+      zipScreenFeatures: [
+        { title: "مقاومة الرياح", description: "مقاومة تصل إلى سرعة رياح 120 كم/ساعة" },
+        { title: "حماية من الأشعة فوق البنفسجية", description: "يوفر حماية من الأشعة فوق البنفسجية بنسبة 95٪" },
+        { title: "تشغيل صامت", description: "تقنية محرك صامتة" },
+        { title: "تحكم ذكي", description: "تحكم عن بعد وتحكم بالمستشعر" }
+      ],
+      zipScreenApplications: [
+        { title: "شرفات المطاعم", description: "حل مثالي لمناطق تناول الطعام في الهواء الطلق" },
+        { title: "شرفات الفنادق", description: "أنظمة ستائر تعزز راحة الضيوف" },
+        { title: "حدائق السكن", description: "حلول أنيقة ووظيفية لحدائق المنازل" }
+      ],
+      zipScreenAdvantages: [
+        "استخدام وتحكم سهل",
+        "تقنية القماش المتينة",
+        "إمكانية التركيب السريع",
+        "متطلبات صيانة قليلة",
+        "خيارات واسعة من الألوان والأنماط",
+        "ضمان 10 سنوات"
+      ]
     },
     // Contact
     contact: {
@@ -2289,6 +2852,19 @@ export const translations = {
       countries: "البلدان",
       years: "سنوات",
       satisfaction: "الرضا"
+    },
+    // Company Video Section
+    companyVideo: {
+      title: "حول IDEA",
+      subtitle: "15 عامًا من الخبرة والثقة",
+      description: "منذ عام 2008، تخصصنا في مساحات المعيشة الخارجية، حيث أكملنا آلاف المشاريع. نحول مساحات معيشتك باستخدام أنظمة IDEA والزجاج المتميزة.",
+      videoTitle: "تعرف على شركتنا",
+      stats: {
+        projects: "المشاريع المكتملة",
+        countries: "دول التصدير",
+        experience: "سنوات الخبرة",
+        satisfaction: "رضا العملاء"
+      }
     },
 
     // Why Choose Us Section translations
@@ -2579,6 +3155,12 @@ export const translations = {
       }
     },
 
+    // Products Overview translations
+    productsOverview: {
+      viewDetails: "عرض التفاصيل",
+      hoverHint: "مرر الماوس لرؤية التفاصيل"
+    },
+
     // AR Hero translations
     arHero: {
       badge: "تقنية الواقع المعزز",
@@ -2802,15 +3384,142 @@ export const translations = {
     },
     // Products
     products: {
-      bioclimatic: "Bioklimatische Pergola",
+      bioclimatic: "Bioklimatische IDEA",
       bioclimaticDesc: "Intelligente Lamellensysteme",
-      fixed: "Feste Pergola",
+      fixed: "Feste IDEA",
       glass: "Glassysteme",
       winterGarden: "Wintergarten",
+      winterGardenDesc: "Geschlossene Raumlösungen für ganzjährige Nutzung",
       sunBreaker: "Sonnenschutz",
+      sunBreakerDesc: "Moderne Sonnenschutzsysteme für Energieeinsparung und Komfort",
       zipScreen: "Zip-Screen",
-      title: "Unsere Produkte",
-      subtitle: "Maßgeschneiderte IDEA-Produkte",
+      zipScreenDesc: "Windbeständige Zip-Screen-Systeme für Außenschutz",
+      title: "Unsere Premium-Outdoor-Lösungen",
+      subtitle: "Maßgeschneiderte IDEA- und Glassysteme",
+      features: {
+        smartLouver: "Intelligentes Lamellensystem",
+        climateControl: "Klimakontrolle",
+        ledLighting: "LED-Beleuchtung",
+        framelessDesign: "Rahmenloses Design",
+        slidingSystem: "Schiebesystem",
+        safetyGlass: "Sicherheitsglas",
+        fourSeasons: "4-Jahreszeiten-Nutzung",
+        thermalInsulation: "Wärmedämmung",
+        naturalLighting: "Natürliche Beleuchtung",
+        sunControl: "Sonnenkontrolle",
+        energySaving: "Energieeinsparung",
+        uvProtection: "UV-Schutz",
+        windResistance: "Windbeständigkeit",
+        silentOperation: "Leiser Betrieb"
+      },
+      badges: {
+        popular: "Beliebt",
+        premium: "Premium",
+        new: "Neu",
+        efficient: "Effizient"
+      },
+      // Winter Garden Sub Products
+      winterGardenSub: {
+        premium: {
+          title: "Premium Wintergarten",
+          description: "Überlegener Komfort mit intelligenter Glastechnologie und automatischen Klimakontrollsystemen",
+          badge: "Am Beliebtesten",
+          features: ["Intelligentes Glas", "Automatische Belüftung", "Wärmepumpe", "Fernsteuerung"]
+        },
+        standard: {
+          title: "Standard Wintergarten",
+          description: "Wirtschaftliche Wintergartenlösung mit hochwertigen Materialien und erschwinglichen Preisen",
+          badge: "Wirtschaftlich",
+          features: ["Doppelglas", "Manuelle Belüftung", "Thermische Trennung", "10 Jahre Garantie"]
+        },
+        luxury: {
+          title: "Luxus Wintergarten",
+          description: "Höchster Komfort mit Panoramaglas und Smart-Home-Integration",
+          badge: "Luxus",
+          features: ["Panoramaglas", "Smart-Home-Integration", "Fußbodenheizung", "Premium-Materialien"]
+        }
+      },
+      // Sun Breaker Sub Products
+      sunBreakerSub: {
+        fixed: {
+          title: "Fester Sonnenschutz",
+          description: "Dauerhafte Sonnenkontrolle mit robusten Aluminiumprofil-Sonnenschutzsystemen",
+          badge: "Wirtschaftlich",
+          features: ["Aluminiumprofil", "Individuelle Farbe", "Einfache Installation", "Lange Lebensdauer"]
+        },
+        motorized: {
+          title: "Motorisierter Sonnenschutz",
+          description: "Intelligentes Sonnenmanagement mit motorisierten und verstellbaren Sonnenschutzsystemen",
+          badge: "Intelligent",
+          features: ["Motorisierte Steuerung", "Intelligenter Sensor", "Fernsteuerung", "Automatisch"]
+        },
+        vertical: {
+          title: "Vertikaler Sonnenschutz",
+          description: "Ästhetisches und funktionales Design mit Fassaden-Sonnenschutzlösungen",
+          badge: "Modern",
+          features: ["Fassadenintegration", "Ästhetisches Design", "Energieeinsparung", "Modernes Erscheinungsbild"]
+        }
+      },
+      // Zip Screen Sub Products
+      zipScreenSub: {
+        motorized: {
+          title: "Motorisierter Zip-Screen",
+          description: "Einfache Bedienung mit ferngesteuerten motorisierten Zip-Screen-Systemen",
+          badge: "Beliebt",
+          features: ["Motorisiertes System", "Fernsteuerung", "Leiser Betrieb", "Automatischer Stopp"]
+        },
+        manual: {
+          title: "Manueller Zip-Screen",
+          description: "Erschwingliche Lösung mit wirtschaftlichen manuellen Zip-Screen-Systemen",
+          badge: "Wirtschaftlich",
+          features: ["Manuelle Bedienung", "Wirtschaftlich", "Langlebiger Stoff", "Einfache Installation"]
+        },
+        smart: {
+          title: "Intelligenter Zip-Screen",
+          description: "Automatischer Sonnenschutz mit sensorgesteuerten intelligenten Zip-Screen-Systemen",
+          badge: "Intelligent",
+          features: ["Intelligenter Sensor", "Automatische Steuerung", "Windsensor", "Sonnensensor"]
+        }
+      },
+      // Product features and benefits
+      winterGardenFeatures: [
+        { title: "Wärmedämmung", description: "Energieeinsparung mit überlegenen Dämmeigenschaften" },
+        { title: "Haltbarkeit", description: "Maximaler Widerstand gegen Wetterbedingungen" },
+        { title: "Intelligente Steuerung", description: "Automatische Klimakontrollsysteme" }
+      ],
+      winterGardenBenefits: [
+        "Ganzjährige Nutzung",
+        "Energieeinsparung",
+        "Erweitert Ihren Wohnraum",
+        "Erhöht den Immobilienwert",
+        "Natürliche Lichteinwirkung",
+        "Ruhige und komfortable Umgebung"
+      ],
+      sunBreakerBenefits: [
+        { title: "Sonnenkontrolle", description: "Blockiert unerwünschte Sonnenstrahlen" },
+        { title: "Energieeinsparung", description: "Reduziert die Klimakosten um bis zu 40%" },
+        { title: "UV-Schutz", description: "Schutz vor schädlichen UV-Strahlen" },
+        { title: "Einstellbar", description: "Winkeleinstellung je nach Bedarf" }
+      ],
+      zipScreenFeatures: [
+        { title: "Windbeständigkeit", description: "Widerstandsfähigkeit bis zu 120 km/h Windgeschwindigkeit" },
+        { title: "UV-Schutz", description: "Bietet 95% UV-Schutz" },
+        { title: "Leiser Betrieb", description: "Geräuschlose Motortechnologie" },
+        { title: "Intelligente Steuerung", description: "Fernsteuerung und Sensorsteuerung" }
+      ],
+      zipScreenApplications: [
+        { title: "Restaurant-Terrassen", description: "Ideale Lösung für Außenbereiche zum Essen" },
+        { title: "Hotel-Balkone", description: "Vorhangsysteme, die den Gästekomfort erhöhen" },
+        { title: "Wohngärten", description: "Elegante und funktionale Lösungen für Hausgärten" }
+      ],
+      zipScreenAdvantages: [
+        "Einfache Bedienung und Steuerung",
+        "Langlebige Stofftechnologie",
+        "Schnelle Installationsmöglichkeit",
+        "Minimaler Wartungsbedarf",
+        "Breite Farb- und Designauswahl",
+        "10 Jahre Garantie"
+      ]
     },
     // Contact
     contact: {
@@ -2913,6 +3622,19 @@ export const translations = {
       countries: "Länder",
       years: "Jahre",
       satisfaction: "Zufriedenheit"
+    },
+    // Company Video Section
+    companyVideo: {
+      title: "Über IDEA",
+      subtitle: "15 Jahre Erfahrung und Vertrauen",
+      description: "Seit 2008 spezialisieren wir uns auf Außenwohnräume und haben Tausende von Projekten abgeschlossen. Wir verwandeln Ihre Wohnräume mit Premium-IDEA- und Glassystemen.",
+      videoTitle: "Lernen Sie unser Unternehmen kennen",
+      stats: {
+        projects: "Abgeschlossene Projekte",
+        countries: "Exportländer",
+        experience: "Jahre Erfahrung",
+        satisfaction: "Kundenzufriedenheit"
+      }
     },
 
     // Why Choose Us Section translations
@@ -3201,6 +3923,12 @@ export const translations = {
         referenceProjects: "Referenzprojekte",
         downloadCatalog: "Katalog herunterladen"
       }
+    },
+
+    // Products Overview translations
+    productsOverview: {
+      viewDetails: "Details anzeigen",
+      hoverHint: "Bewegen Sie die Maus, um Details zu sehen"
     },
 
     // AR Hero translations
@@ -3537,6 +4265,19 @@ export const translations = {
       countries: "Страны",
       years: "Лет",
       satisfaction: "Удовлетворенность"
+    },
+    // Company Video Section
+    companyVideo: {
+      title: "О IDEA",
+      subtitle: "15 лет опыта и доверия",
+      description: "С 2008 года мы специализируемся на открытых жилых пространствах и завершили тысячи проектов. Мы преобразуем ваши жилые пространства с помощью премиальных систем IDEA и стекла.",
+      videoTitle: "Узнайте о нашей компании",
+      stats: {
+        projects: "Завершенные проекты",
+        countries: "Страны экспорта",
+        experience: "Лет опыта",
+        satisfaction: "Удовлетворенность клиентов"
+      }
     },
 
     // Why Choose Us Section translations
@@ -3948,6 +4689,12 @@ export const translations = {
         subtitle: "После тысяч успешных проектов настало время для вашего идеального открытого жилого пространства.",
         startProject: "Начать Проект"
       }
+    },
+
+    // Products Overview translations
+    productsOverview: {
+      viewDetails: "Посмотреть Детали",
+      hoverHint: "Наведите курсор, чтобы увидеть детали"
     },
 
     // Product Detail translations

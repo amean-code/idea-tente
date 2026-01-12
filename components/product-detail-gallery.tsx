@@ -36,12 +36,13 @@ export function ProductDetailGallery({ images, productName }: ProductDetailGalle
       <div className="container mx-auto px-4">
         {/* Main Image */}
         <div className="relative mb-8 max-w-5xl mx-auto">
-          <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden bg-gray-100">
+          <div className="relative w-full rounded-2xl overflow-hidden bg-gray-100 flex items-center justify-center">
             <Image
               src={images[currentIndex]}
               alt={`${productName} - ${currentIndex + 1}`}
-              fill
-              className="object-cover"
+              width={1920}
+              height={1080}
+              className="object-contain w-full h-auto max-h-[80vh]"
               priority={currentIndex === 0}
             />
           </div>
@@ -52,19 +53,19 @@ export function ProductDetailGallery({ images, productName }: ProductDetailGalle
               <Button
                 variant="secondary"
                 size="icon"
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg"
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white border-2 border-gray-200 hover:border-gray-300 shadow-xl backdrop-blur-sm z-10"
                 onClick={handlePrev}
               >
-                <ChevronLeft className="h-6 w-6" />
+                <ChevronLeft className="h-6 w-6 text-gray-900" />
               </Button>
 
               <Button
                 variant="secondary"
                 size="icon"
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg"
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white border-2 border-gray-200 hover:border-gray-300 shadow-xl backdrop-blur-sm z-10"
                 onClick={handleNext}
               >
-                <ChevronRight className="h-6 w-6" />
+                <ChevronRight className="h-6 w-6 text-gray-900" />
               </Button>
             </>
           )}
@@ -83,7 +84,7 @@ export function ProductDetailGallery({ images, productName }: ProductDetailGalle
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                  className={`relative aspect-square rounded-lg overflow-hidden transition-all ${
+                  className={`relative aspect-square rounded-lg overflow-hidden transition-all bg-gray-100 flex items-center justify-center ${
                   currentIndex === index
                       ? "ring-4 ring-primary scale-110 z-10"
                       : "ring-2 ring-gray-200 hover:ring-gray-300 hover:scale-105"
@@ -92,8 +93,9 @@ export function ProductDetailGallery({ images, productName }: ProductDetailGalle
                 <Image
                   src={image}
                   alt={`${productName} - ${index + 1}`}
-                  fill
-                  className="object-cover"
+                  width={200}
+                  height={200}
+                  className="object-contain w-full h-full"
                 />
               </button>
             ))}

@@ -1,5 +1,6 @@
 "use client"
 
+import { useMemo } from "react"
 import { Ruler, Settings, Palette, Layers } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 
@@ -28,17 +29,21 @@ const iconMap = {
  * Kategorilere ayrılmış spesifikasyonlar
  */
 export function ProductDetailSpecs({ categories }: ProductDetailSpecsProps) {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+  
+  // Dil değiştiğinde başlık ve alt başlığı yeniden hesapla
+  const title = useMemo(() => t("productDetail.specs.title"), [t, language])
+  const subtitle = useMemo(() => t("productDetail.specs.subtitle"), [t, language])
   
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {t("productDetail.specs.title")}
+            {title}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {t("productDetail.specs.subtitle")}
+            {subtitle}
           </p>
         </div>
 

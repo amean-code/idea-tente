@@ -1,3 +1,6 @@
+"use client"
+
+import { useMemo } from "react"
 import { Header } from "@/components/header"
 import { PergolaHero } from "@/components/pergola-hero"
 import { ProductDetailGallery } from "@/components/product-detail-gallery"
@@ -6,12 +9,15 @@ import { ProductDetailFeatures } from "@/components/product-detail-features"
 import { PergolaProductCards } from "@/components/pergola-product-cards"
 import { ReferenceProjects } from "@/components/reference-projects"
 import { ContactSection } from "@/components/contact-section"
+import { useLanguage } from "@/contexts/language-context"
 
 /**
  * Pergola Sistemleri ana sayfası
  * Palmiye Global referans alınarak tasarlanmıştır
  */
 export default function BioklimatikPergolaPage() {
+  const { t, language } = useLanguage()
+
   // Galeri görselleri
   const galleryImages = [
     "/pergola/pergola-kafe-aktif.jpeg",
@@ -22,100 +28,107 @@ export default function BioklimatikPergolaPage() {
     "/pergola/pergola-beyaz.jpg",
   ]
 
-  // Teknik özellikler
-  const specs = [
+  // Teknik özellikler - dil değiştiğinde yeniden hesaplanır
+  const specs = useMemo(() => [
     {
-      title: "Boyutlar",
+      title: t("pergola.mainPage.specs.dimensions"),
       icon: "ruler" as const,
       items: [
-        { label: "Maksimum Genişlik", value: "8,30 m" },
-        { label: "Maksimum Derinlik", value: "10 m" },
-        { label: "Maksimum Alan", value: "43 m²" },
+        { label: t("pergola.mainPage.specs.maxWidth"), value: "8,30 m" },
+        { label: t("pergola.mainPage.specs.maxDepth"), value: "10 m" },
+        { label: t("pergola.mainPage.specs.maxArea"), value: "43 m²" },
       ]
     },
     {
-      title: "Malzeme & Yapı",
+      title: t("pergola.mainPage.specs.materials"),
       icon: "settings" as const,
       items: [
-        { label: "Profil Malzeme", value: "Alüminyum 6063-T6 F25" },
-        { label: "Lamel Açısı", value: "105° Dönebilir" },
-        { label: "Fitil Malzemesi", value: "EPDM" },
+        { label: t("pergola.mainPage.specs.profileMaterial"), value: "Alüminyum 6063-T6 F25" },
+        { label: t("pergola.mainPage.specs.louverAngle"), value: "105° Dönebilir" },
+        { label: t("pergola.mainPage.specs.gasketMaterial"), value: "EPDM" },
       ]
     },
     {
-      title: "Performans",
+      title: t("pergola.mainPage.specs.performance"),
       icon: "palette" as const,
       items: [
-        { label: "Su Geçirmezlik", value: "%100" },
-        { label: "Yayılı Yük Kapasitesi", value: "50kg+25kg/m²" },
-        { label: "Rüzgar Yükü", value: "50 kg/m²" },
+        { label: t("pergola.mainPage.specs.waterproof"), value: "%100" },
+        { label: t("pergola.mainPage.specs.distributedLoad"), value: "50kg+25kg/m²" },
+        { label: t("pergola.mainPage.specs.windLoad"), value: "50 kg/m²" },
       ]
     },
     {
-      title: "Garanti & Özellikler",
+      title: t("pergola.mainPage.specs.warranty"),
       icon: "layers" as const,
       items: [
-        { label: "Motor Garantisi", value: "2 Yıl" },
-        { label: "Mekanik Garanti", value: "2 Yıl" },
-        { label: "Eğim", value: "Düz veya %5 Eğimli" },
+        { label: t("pergola.mainPage.specs.motorWarranty"), value: "2 Yıl" },
+        { label: t("pergola.mainPage.specs.mechanicalWarranty"), value: "2 Yıl" },
+        { label: t("pergola.mainPage.specs.slope"), value: "Düz veya %5 Eğimli" },
       ]
     },
-  ]
+  ], [t, language])
 
-  // Özellikler ve avantajlar
-  const features = [
+  // Özellikler ve avantajlar - dil değiştiğinde yeniden hesaplanır
+  const features = useMemo(() => [
     {
-      title: "105° Dönebilen Lameller",
-      description: "Eksenel olarak 105° açıda açılabilen lameller ile güneş ışığını ve havalandırmayı aynı anda kontrol edin.",
+      title: t("pergola.mainPage.features.rotatableLouvers.title"),
+      description: t("pergola.mainPage.features.rotatableLouvers.description"),
       icon: "sun" as const,
     },
     {
-      title: "%100 Su Geçirmezlik",
-      description: "Lamellerdeki oluklar sayesinde yağmur suları yan oluklara akarak taşıyıcı ayaklardan dışarı atılır.",
+      title: t("pergola.mainPage.features.waterproof.title"),
+      description: t("pergola.mainPage.features.waterproof.description"),
       icon: "rain" as const,
     },
     {
-      title: "Sessiz Çalışma",
-      description: "Triger kayışı ile güç aktarımı sağlanan sistem sessiz ve pürüzsüz çalışır.",
+      title: t("pergola.mainPage.features.quietOperation.title"),
+      description: t("pergola.mainPage.features.quietOperation.description"),
       icon: "volume" as const,
     },
     {
-      title: "Isı ve Ses Yalıtımı",
-      description: "Lamellere dolgu malzemesi eklenerek üstün ısı ve ses izolasyonu sağlanabilir.",
+      title: t("pergola.mainPage.features.thermalInsulation.title"),
+      description: t("pergola.mainPage.features.thermalInsulation.description"),
       icon: "thermometer" as const,
     },
     {
-      title: "Uzaktan Kumanda Kontrolü",
-      description: "Açılma-kapanma ve yağmur modu uzaktan kumanda ile kontrol edilir. Otomatik hata önleme sistemi entegre.",
+      title: t("pergola.mainPage.features.remoteControl.title"),
+      description: t("pergola.mainPage.features.remoteControl.description"),
       icon: "smartphone" as const,
     },
     {
-      title: "Tüm Mevsim Uyumlu",
-      description: "Teras, kafe, restoran, kış bahçesi ve salon çatılarında rahatlıkla kullanılabilir. Düz ve eğimli çalışma imkanı.",
+      title: t("pergola.mainPage.features.allSeasons.title"),
+      description: t("pergola.mainPage.features.allSeasons.description"),
       icon: "shield" as const,
     },
-  ]
+  ], [t, language])
+
+  // Başlık ve alt başlıklar - dil değiştiğinde yeniden hesaplanır
+  const featuresTitle = useMemo(() => t("pergola.bioclimatic.features.pageTitle"), [t, language])
+  const featuresSubtitle = useMemo(() => t("pergola.bioclimatic.features.pageSubtitle"), [t, language])
+  const galleryProductName = useMemo(() => t("pergola.bioclimatic.hero.title"), [t, language])
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
       <main>
         {/* Hero Section - Palmiye tarzı */}
-        <PergolaHero />
+        <PergolaHero key={`hero-${language}`} />
         
         {/* Galeri */}
         <ProductDetailGallery
+          key={`gallery-${language}`}
           images={galleryImages}
-          productName="Bioklimatik Pergola"
+          productName={galleryProductName}
         />
         
         {/* Teknik Özellikler */}
-        <ProductDetailSpecs categories={specs} />
+        <ProductDetailSpecs key={`specs-${language}`} categories={specs} />
         
         {/* Özellikler ve Avantajlar */}
         <ProductDetailFeatures
-          title="Akıllı Pergola Teknolojisi"
-          subtitle="Modern yaşam için tasarlanmış bioklimatik pergola sistemlerimizin sunduğu üstün özellikler"
+          key={`features-${language}`}
+          title={featuresTitle}
+          subtitle={featuresSubtitle}
           features={features}
         />
         

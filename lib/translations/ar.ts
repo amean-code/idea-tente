@@ -295,6 +295,52 @@ export const arTranslations = {
           description: "ملف كتالوج إلكتروني شامل يحتوي على مجموعة منتجاتنا بالكامل",
           download: "تنزيل الكتالوج الإلكتروني"
         }
+      },
+      mainPage: {
+        specs: {
+          dimensions: "الأبعاد",
+          materials: "المواد والهيكل",
+          performance: "الأداء",
+          warranty: "الضمان والميزات",
+          maxWidth: "الحد الأقصى للعرض",
+          maxDepth: "الحد الأقصى للعمق",
+          maxArea: "الحد الأقصى للمساحة",
+          profileMaterial: "مادة الملف",
+          louverAngle: "زاوية اللاميل",
+          gasketMaterial: "مادة الحشية",
+          waterproof: "مقاوم للماء",
+          distributedLoad: "سعة الحمل الموزع",
+          windLoad: "حمل الرياح",
+          motorWarranty: "ضمان المحرك",
+          mechanicalWarranty: "الضمان الميكانيكي",
+          slope: "الميل"
+        },
+        features: {
+          rotatableLouvers: {
+            title: "لاميل قابلة للدوران 105°",
+            description: "تحكم في ضوء الشمس والتهوية في نفس الوقت مع اللاميل التي يمكن فتحها محورياً بزاوية 105°."
+          },
+          waterproof: {
+            title: "مقاوم للماء 100%",
+            description: "بفضل الأخاديد في اللاميل، يتدفق ماء المطر إلى المزاريب الجانبية ويتم تصريفه من الأقدام الحاملة."
+          },
+          quietOperation: {
+            title: "تشغيل هادئ",
+            description: "يعمل النظام الذي يعمل بنقل الحزام بشكل هادئ وسلس."
+          },
+          thermalInsulation: {
+            title: "العزل الحراري والصوتي",
+            description: "يمكن توفير عزل حراري وصوتي فائق بإضافة مادة الحشو إلى اللاميل."
+          },
+          remoteControl: {
+            title: "التحكم عن بُعد",
+            description: "يتم التحكم في الفتح والإغلاق ووضع المطر عن طريق التحكم عن بُعد. نظام منع الأخطاء التلقائي مدمج."
+          },
+          allSeasons: {
+            title: "متوافق مع جميع الفصول",
+            description: "يمكن استخدامه بشكل مريح على التراسات والمقاهي والمطاعم والحدائق الشتوية وأسقف الصالون. يمكن العمل بشكل مسطح ومائل."
+          }
+        }
       }
     }
   },
@@ -349,9 +395,10 @@ export const arTranslations = {
   // Glass Systems translations
   glassSystems: {
     hero: {
+      badge: "تقنية الزجاج الحديثة",
       title: "أنظمة الزجاج",
-      description: "مع أنظمة الزجاج المنزلق الخاصة بنا، احمِ مساحاتك من العوامل الخارجية مع زيادة راحتك دون التنازل عن إطلالتك. مظهر حديث وأنيق بتصميم بدون إطار.",
-      subdescription: "أنظمة زجاجية بدون إطار لإطلالات غير منقطعة، آلية انزلاق سهلة الفتح وأقصى قدر من الأمان مع الزجاج الأمني المقسى."
+      description: "مع أنظمة الزجاج الجيوتين الخاصة بنا، احمِ مساحاتك من العوامل الخارجية مع زيادة راحتك دون التنازل عن إطلالتك. حوّل مساحات معيشتك بتصميم حديث وأنيق.",
+      subdescription: "أنظمة الزجاج الجيوتين مع آلية انزلاق سهلة الفتح، الزجاج الأمني المقسى وبنية متينة. أقصى راحة مع إمكانية فتح واسعة وتشغيل صامت."
     },
     wizard: {
       title: "اختر نظام الزجاج الخاص بك",
@@ -362,13 +409,13 @@ export const arTranslations = {
       subtitle: "اكتشف نماذج أنظمة الزجاج المناسبة لاحتياجاتك",
       viewDetails: "عرض التفاصيل",
       surmeCam: {
-        title: "أنظمة الزجاج المنزلق",
-        description: "إطلالة غير منقطعة وراحة قصوى مع أنظمة الزجاج المنزلق بدون إطار",
+        title: "أنظمة الزجاج الجيوتين",
+        description: "أنظمة الزجاج الجيوتين مع آلية انزلاق سهلة الفتح والزجاج الأمني المقسى",
         badge: "شائع",
         features: {
-          frameless: "تصميم بدون إطار",
-          sliding: "آلية الانزلاق",
+          sliding: "آلية الجيوتين",
           tempered: "زجاج مقسى",
+          easyUse: "سهولة الاستخدام",
           waterproof: "مقاوم للماء"
         }
       },
@@ -394,6 +441,58 @@ export const arTranslations = {
           lowMaintenance: "صيانة منخفضة"
         }
       }
+    },
+    specs: {
+      dimensions: "الأبعاد",
+      productStandards: "معايير المنتج",
+      colorOptions: "خيارات الألوان",
+      additionalFeatures: "ميزات إضافية",
+      maxWidth: "العرض (الحد الأقصى)",
+      maxHeight: "الارتفاع (الحد الأقصى)",
+      glassType: "نوع الزجاج",
+      glassThickness: "سمك الزجاج",
+      system: "النظام",
+      profileColor: "لون الملف الشخصي",
+      glass: "الزجاج",
+      soundInsulation: "عزل الصوت",
+      security: "الأمان",
+      // Values
+      glassTypeValue: "مقسى / مصفح",
+      systemValue: "منزلق / قابل للطي",
+      profileColorValue: "خيارات ألوان RAL",
+      glassValue: "شفاف / ملون / معتم",
+      securityValue: "زجاج مقسى"
+    },
+    features: {
+      title: "تقنية الزجاج الحديثة",
+      subtitle: "أنظمة الزجاج التي تجمع بين الأمان والجمال والوظيفية",
+      slidingMechanism: {
+        title: "آلية الانزلاق الجيوتين",
+        description: "إمكانية فتح واسعة واستخدام عملي مع نظام انزلاق سهل الفتح."
+      },
+      easyUse: {
+        title: "سهل الاستخدام",
+        description: "يفتح ويغلق بسهولة مع آلية انزلاق خفيفة وهادئة. معيشة مريحة مع تشغيل صامت."
+      },
+      weatherResistant: {
+        title: "مقاوم للطقس",
+        description: "مقاومة عالية ضد الظروف الجوية مثل الرياح والأمطار والثلوج."
+      },
+      safetyGlass: {
+        title: "زجاج أمان",
+        description: "يوفر أقصى درجات الأمان مع خيارات الزجاج المقسى أو المطلي."
+      },
+      energyEfficiency: {
+        title: "كفاءة الطاقة",
+        description: "عزل حراري وتوفير الطاقة مع تقنية طلاء الزجاج الخاصة."
+      },
+      soundInsulation: {
+        title: "عزل الصوت",
+        description: "يقلل الضوضاء الخارجية مع هيكل زجاجي سميك."
+      }
+    },
+    gallery: {
+      productName: "أنظمة الزجاج"
     }
   },
 
@@ -443,6 +542,55 @@ export const arTranslations = {
           smartHome: "منزل ذكي",
           floorHeating: "تدفئة الأرضية",
           warranty: "ضمان 20 سنة"
+        }
+      },
+      specs: {
+        dimensions: "الأبعاد",
+        productStandards: "معايير المنتج",
+        colorOptions: "خيارات الألوان",
+        additionalFeatures: "ميزات إضافية",
+        areaRange: "المساحة (الحد الأدنى - الحد الأقصى)",
+        maxHeight: "الارتفاع (الحد الأقصى)",
+        glassType: "نوع الزجاج",
+        glassTypeValue: "زجاج مزدوج / Low-E",
+        profile: "الملف",
+        profileValue: "الألمنيوم",
+        thermalInsulation: "العزل الحراري",
+        thermalInsulationValue: "أداء عالي",
+        profileColor: "لون الملف",
+        profileColorValue: "خيارات ألوان RAL",
+        glass: "الزجاج",
+        glassValue: "شفاف / ملون",
+        soundInsulation: "عزل الصوت",
+        energySaving: "توفير الطاقة",
+        energySavingValue: "حتى 40%"
+      },
+      features: {
+        title: "الراحة والتكنولوجيا",
+        subtitle: "تم تصميم أنظمة الحديقة الشتوية الحديثة لدينا للراحة القصوى وكفاءة الطاقة",
+        fourSeasons: {
+          title: "استخدام 4 مواسم",
+          description: "يوفر استخداماً مريحاً في فصلي الصيف والشتاء مع خصائص عزل فائقة."
+        },
+        energySaving: {
+          title: "توفير الطاقة",
+          description: "يقلل استهلاك الطاقة بنسبة تصل إلى 40% مع الزجاج المزدوج وهيكل الملف الخاص."
+        },
+        soundInsulation: {
+          title: "عزل الصوت",
+          description: "يقلل الضوضاء الخارجية مع نظام الزجاج والملف الخاص."
+        },
+        security: {
+          title: "الأمان",
+          description: "يوفر أقصى درجات الأمان مع الزجاج المقسى وملف الألمنيوم القوي."
+        },
+        automaticVentilation: {
+          title: "التهوية التلقائية",
+          description: "يوفر دوران الهواء النقي مع نظام التهوية الذكي."
+        },
+        smartControl: {
+          title: "التحكم الذكي",
+          description: "تحكم في التدفئة والتهوية والإضاءة باستخدام التطبيق المحمول."
         }
       }
     }
@@ -545,6 +693,55 @@ export const arTranslations = {
           sunTracking: "تتبع تلقائي للشمس",
           weather: "التحكم في الطقس",
           warranty: "ضمان 10 سنوات"
+        }
+      },
+      specs: {
+        dimensions: "الأبعاد",
+        productStandards: "معايير المنتج",
+        colorOptions: "خيارات الألوان",
+        additionalFeatures: "ميزات إضافية",
+        widthRange: "العرض (الحد الأدنى - الحد الأقصى)",
+        maxHeight: "الارتفاع (الحد الأقصى)",
+        controlType: "نوع التحكم",
+        controlTypeValue: "يدوي / محرك",
+        fabric: "النسيج",
+        fabricValue: "شاشة / حجب كامل",
+        profile: "الملف",
+        profileValue: "الألمنيوم",
+        profileColor: "لون الملف",
+        profileColorValue: "خيارات ألوان RAL",
+        fabricColor: "لون النسيج",
+        fabricColorValue: "لوحة ألوان واسعة",
+        windResistance: "مقاومة الرياح",
+        windResistanceValue: "حتى 80 كم/ساعة",
+        uvProtection: "حماية من الأشعة فوق البنفسجية"
+      },
+      features: {
+        title: "التحكم والأتمتة",
+        subtitle: "تم تصميم أنظمة ستارة زيب الخاصة بنا المزودة بالتكنولوجيا الحديثة لراحتك",
+        windResistance: {
+          title: "مقاومة الرياح",
+          description: "يوفر مقاومة قصوى لسرعات الرياح العالية بفضل نظام السحاب."
+        },
+        uvProtection: {
+          title: "حماية من الأشعة فوق البنفسجية",
+          description: "يمنع أشعة الشمس الضارة مع حماية UPF 50+، مما يبقي مساحتك باردة."
+        },
+        waterproof: {
+          title: "مقاوم للماء",
+          description: "يوفر حماية كاملة ضد المطر مع نسيج خاص وهيكل ملف."
+        },
+        smartControl: {
+          title: "التحكم الذكي",
+          description: "إمكانية الإدارة عن بُعد مع التحكم في الهاتف الذكي المتوافق مع iOS و Android."
+        },
+        sunSensor: {
+          title: "مستشعر الشمس",
+          description: "ينشط تلقائياً في الأيام المشمسة لتوفير الطاقة."
+        },
+        windSensor: {
+          title: "مستشعر الرياح",
+          description: "يحمي منتجك تلقائياً عند اكتشاف سرعة رياح عالية."
         }
       }
     }

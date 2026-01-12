@@ -48,10 +48,6 @@ export function ARHero() {
               <Camera className="h-5 w-5 mr-2" />
               {t("arHero.startDemo")}
             </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm">
-              <Download className="h-5 w-5 mr-2" />
-              {t("arHero.downloadApp")}
-            </Button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">

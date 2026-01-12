@@ -327,6 +327,52 @@ export const enTranslations = {
           description: "Comprehensive e-catalog file containing our entire product range",
           download: "Download E-Catalog"
         }
+      },
+      mainPage: {
+        specs: {
+          dimensions: "Dimensions",
+          materials: "Materials & Structure",
+          performance: "Performance",
+          warranty: "Warranty & Features",
+          maxWidth: "Maximum Width",
+          maxDepth: "Maximum Depth",
+          maxArea: "Maximum Area",
+          profileMaterial: "Profile Material",
+          louverAngle: "Louver Angle",
+          gasketMaterial: "Gasket Material",
+          waterproof: "Waterproof",
+          distributedLoad: "Distributed Load Capacity",
+          windLoad: "Wind Load",
+          motorWarranty: "Motor Warranty",
+          mechanicalWarranty: "Mechanical Warranty",
+          slope: "Slope"
+        },
+        features: {
+          rotatableLouvers: {
+            title: "105° Rotatable Louvers",
+            description: "Control sunlight and ventilation simultaneously with louvers that can open axially at 105° angle."
+          },
+          waterproof: {
+            title: "100% Waterproof",
+            description: "Thanks to the grooves in the louvers, rainwater flows to the side gutters and is discharged from the carrier feet."
+          },
+          quietOperation: {
+            title: "Quiet Operation",
+            description: "The system powered by trigger belt transmission operates quietly and smoothly."
+          },
+          thermalInsulation: {
+            title: "Thermal and Sound Insulation",
+            description: "Superior thermal and sound insulation can be provided by adding filling material to the louvers."
+          },
+          remoteControl: {
+            title: "Remote Control",
+            description: "Opening-closing and rain mode are controlled by remote control. Automatic error prevention system integrated."
+          },
+          allSeasons: {
+            title: "All Seasons Compatible",
+            description: "Can be used comfortably on terraces, cafes, restaurants, winter gardens and living room roofs. Can work flat and sloped."
+          }
+        }
       }
     }
   },
@@ -381,9 +427,10 @@ export const enTranslations = {
   // Glass Systems translations
   glassSystems: {
     hero: {
+      badge: "Modern Glass Technology",
       title: "Glass Systems",
-      description: "With our sliding glass systems, protect your spaces from external factors while increasing your comfort without compromising your view. Modern and elegant appearance with frameless design.",
-      subdescription: "Frameless glass systems for uninterrupted views, easy-to-open sliding mechanism and maximum security with tempered safety glass."
+      description: "With our guillotine glass systems, protect your spaces from external factors while increasing your comfort without compromising your view. Transform your living spaces with modern and elegant design.",
+      subdescription: "Guillotine glass systems with easy-to-open sliding mechanism, tempered safety glass and durable structure. Maximum comfort with wide opening capability and silent operation."
     },
     wizard: {
       title: "Choose Your Glass System",
@@ -394,13 +441,13 @@ export const enTranslations = {
         subtitle: "Discover glass system models suitable for your needs",
         viewDetails: "View Details",
         surmeCam: {
-          title: "Sliding Glass Systems",
-          description: "Seamless view and maximum comfort with frameless sliding glass systems",
+          title: "Guillotine Glass Systems",
+          description: "Guillotine glass systems with easy-to-open sliding mechanism and tempered safety glass",
           badge: "Popular",
           features: {
-            frameless: "Frameless Design",
-            sliding: "Sliding Mechanism",
+            sliding: "Guillotine Mechanism",
             tempered: "Tempered Glass",
+            easyUse: "Easy Use",
             waterproof: "Waterproof"
           }
         },
@@ -426,6 +473,58 @@ export const enTranslations = {
             lowMaintenance: "Low Maintenance"
           }
         }
+      },
+      specs: {
+        dimensions: "Dimensions",
+        productStandards: "Product Standards",
+        colorOptions: "Color Options",
+        additionalFeatures: "Additional Features",
+        maxWidth: "Width (max.)",
+        maxHeight: "Height (max.)",
+        glassType: "Glass Type",
+        glassThickness: "Glass Thickness",
+        system: "System",
+        profileColor: "Profile Color",
+        glass: "Glass",
+        soundInsulation: "Sound Insulation",
+        security: "Security",
+        // Values
+        glassTypeValue: "Tempered / Laminated",
+        systemValue: "Sliding / Folding",
+        profileColorValue: "RAL Color Options",
+        glassValue: "Transparent / Tinted / Frosted",
+        securityValue: "Tempered Glass"
+      },
+      features: {
+        title: "Modern Glass Technology",
+        subtitle: "Glass systems that combine security, aesthetics and functionality",
+        slidingMechanism: {
+          title: "Guillotine Sliding Mechanism",
+          description: "Wide opening capability and practical use with easy-to-open sliding system."
+        },
+        easyUse: {
+          title: "Easy to Use",
+          description: "Opens and closes easily with light and quiet sliding mechanism. Comfortable living with silent operation."
+        },
+        weatherResistant: {
+          title: "Weather Resistant",
+          description: "High resistance against weather conditions such as wind, rain and snow."
+        },
+        safetyGlass: {
+          title: "Safety Glass",
+          description: "Provides maximum security with tempered or laminated glass options."
+        },
+        energyEfficiency: {
+          title: "Energy Efficiency",
+          description: "Heat insulation and energy saving with special glass coating technology."
+        },
+        soundInsulation: {
+          title: "Sound Insulation",
+          description: "Minimizes external noise with thick glass structure."
+        }
+      },
+      gallery: {
+        productName: "Glass Systems"
       }
     },
 
@@ -476,6 +575,55 @@ export const enTranslations = {
             floorHeating: "Floor Heating",
             warranty: "20 Year Warranty"
           }
+        }
+      },
+      specs: {
+        dimensions: "Dimensions",
+        productStandards: "Product Standards",
+        colorOptions: "Color Options",
+        additionalFeatures: "Additional Features",
+        areaRange: "Area (min. - max.)",
+        maxHeight: "Height (max.)",
+        glassType: "Glass Type",
+        glassTypeValue: "Double Glass / Low-E",
+        profile: "Profile",
+        profileValue: "Aluminum",
+        thermalInsulation: "Thermal Insulation",
+        thermalInsulationValue: "High Performance",
+        profileColor: "Profile Color",
+        profileColorValue: "RAL Color Options",
+        glass: "Glass",
+        glassValue: "Transparent / Tinted",
+        soundInsulation: "Sound Insulation",
+        energySaving: "Energy Saving",
+        energySavingValue: "Up to 40%"
+      },
+      features: {
+        title: "Comfort and Technology",
+        subtitle: "Our modern winter garden systems are designed for maximum comfort and energy efficiency",
+        fourSeasons: {
+          title: "4 Season Use",
+          description: "Provides comfortable use in summer and winter seasons with superior insulation properties."
+        },
+        energySaving: {
+          title: "Energy Saving",
+          description: "Reduces your energy consumption by up to 40% with double glass and special profile structure."
+        },
+        soundInsulation: {
+          title: "Sound Insulation",
+          description: "Minimizes external noise with special glass and profile system."
+        },
+        security: {
+          title: "Security",
+          description: "Provides maximum security with tempered glass and sturdy aluminum profile."
+        },
+        automaticVentilation: {
+          title: "Automatic Ventilation",
+          description: "Provides fresh air circulation with smart ventilation system."
+        },
+        smartControl: {
+          title: "Smart Control",
+          description: "Control heating, ventilation and lighting with mobile application."
         }
       }
     },
@@ -578,6 +726,55 @@ export const enTranslations = {
             weather: "Weather Control",
             warranty: "10 Year Warranty"
           }
+        }
+      },
+      specs: {
+        dimensions: "Dimensions",
+        productStandards: "Product Standards",
+        colorOptions: "Color Options",
+        additionalFeatures: "Additional Features",
+        widthRange: "Width (min. - max.)",
+        maxHeight: "Height (max.)",
+        controlType: "Control Type",
+        controlTypeValue: "Manual / Motorized",
+        fabric: "Fabric",
+        fabricValue: "Screen / Blackout",
+        profile: "Profile",
+        profileValue: "Aluminum",
+        profileColor: "Profile Color",
+        profileColorValue: "RAL Color Options",
+        fabricColor: "Fabric Color",
+        fabricColorValue: "Wide Color Palette",
+        windResistance: "Wind Resistance",
+        windResistanceValue: "Up to 80 km/h",
+        uvProtection: "UV Protection"
+      },
+      features: {
+        title: "Control and Automation",
+        subtitle: "Our zip screen systems equipped with modern technology are designed for your comfort",
+        windResistance: {
+          title: "Wind Resistance",
+          description: "Provides maximum resistance to high wind speeds thanks to the zipper system."
+        },
+        uvProtection: {
+          title: "UV Protection",
+          description: "Blocks harmful sun rays with UPF 50+ protection, keeping your space cool."
+        },
+        waterproof: {
+          title: "Waterproof",
+          description: "Provides complete protection against rain with special fabric and profile structure."
+        },
+        smartControl: {
+          title: "Smart Control",
+          description: "Remote management capability with iOS and Android compatible smartphone control."
+        },
+        sunSensor: {
+          title: "Sun Sensor",
+          description: "Automatically activates on sunny days to save energy."
+        },
+        windSensor: {
+          title: "Wind Sensor",
+          description: "Automatically protects your product when high wind speed is detected."
         }
       }
     },
@@ -929,6 +1126,12 @@ export const enTranslations = {
   productSpecs: {
     title: "Technical Specifications",
     subtitle: "Detailed technical specifications and specifications of our product"
+  },
+
+  // Products Overview translations
+  productsOverview: {
+    viewDetails: "View Details",
+    hoverHint: "Hover to see details"
   },
 
   // Catalog translations

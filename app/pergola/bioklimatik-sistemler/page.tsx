@@ -1,5 +1,6 @@
 "use client"
 
+import { useMemo } from "react"
 import { Header } from "@/components/header"
 import { ProductDetailGallery } from "@/components/product-detail-gallery"
 import { ProductDetailSpecs } from "@/components/product-detail-specs"
@@ -16,36 +17,39 @@ import { useLanguage } from "@/contexts/language-context"
  * Bioklimatik Pergola Sistemleri Sayfası
  */
 export default function BioklimatikSistemlerPage() {
-  const { t } = useLanguage()
-  // Galeri görselleri
+  const { t, language } = useLanguage()
+  /**
+   * Galeri görselleri - public/bioklimatik-pergola/ klasöründeki görseller
+   * Her görsel bioklimatik-pergola ön ekiyle ve anlamlı açıklayıcı isimlerle tanımlanmıştır
+   */
   const galleryImages = [
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-kapalı.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-kapalı-iç.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-kapalı-havuz.jpeg",
-    "/bioklimatik-pergola/bioklimatik-açık-üst-görünüm.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-geniş-havuz-üstü.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-açılır-kapanır-dış-mekan-havuz-başı-cephe.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-açılır-kapanır-dış-mekan-havuz-başı-yan.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-açılır-kapanır-dış-mekan-havuz-başı.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-açılır-kapanır.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-büyük-cephe.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-büyük-yan.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-büyük.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-görünüm.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-kare.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-iç.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-kafe-açık-geniş.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-kafe-açık.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-kafe-güneş-alan-iç-mekan-yan.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-kafe-güneş-alan-iç-mekan.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-kafe-iç.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-kafe-kapalı-iç-mekan-2.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-kafe-kapalı-iç-mekan.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola.jpeg",
+    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-mekan-acik.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-cephe.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-dis-alan-acik.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-idea-ic-mekan.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-ic-ofis-acik.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-cephe-detay.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-ic-mekan-acik.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-dis-cephe-genis.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-idea-bahce-acik.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-dis-cephe-idea-10.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-cephe-11.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-dis-bahce-cephe-12.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-ic-mekan-kapali.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-dis-mekan-kapali.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-idea-kapali-cephe.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-dis-cephe-kapali.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-kapali.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-dis-bahce-kapali.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-ic-mekan-kapali-detay.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-dis-cephe-kapali-20.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-idea-kapali-detay.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-dis-mekan-genis.png",
+    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-cephe-final.png",
   ]
 
-  // Teknik özellikler
-  const specs = [
+  // Teknik özellikler - dil değiştiğinde yeniden hesaplanır
+  const specs = useMemo(() => [
     {
       title: t("pergola.bioclimatic.specs.dimensions"),
       icon: "ruler" as const,
@@ -90,10 +94,10 @@ export default function BioklimatikSistemlerPage() {
         { label: t("pergola.bioclimatic.specs.ledLighting"), value: "Opsiyonel" },
       ]
     },
-  ]
+  ], [t, language])
 
-  // Özellikler
-  const features = [
+  // Özellikler - dil değiştiğinde yeniden hesaplanır
+  const features = useMemo(() => [
     {
       title: t("pergola.bioclimatic.featureList.rotatableLouvers.title"),
       description: t("pergola.bioclimatic.featureList.rotatableLouvers.description"),
@@ -124,18 +128,25 @@ export default function BioklimatikSistemlerPage() {
       description: t("pergola.bioclimatic.featureList.allSeasons.description"),
       icon: "shield" as const,
     },
-  ]
+  ], [t, language])
+
+  // Başlık ve alt başlıklar - dil değiştiğinde yeniden hesaplanır
+  const featuresTitle = useMemo(() => t("pergola.bioclimatic.features.title"), [t, language])
+  const featuresSubtitle = useMemo(() => t("pergola.bioclimatic.features.subtitle"), [t, language])
+  const galleryProductName = useMemo(() => t("pergola.bioclimatic.hero.title"), [t, language])
+  const heroTitle = useMemo(() => t("pergola.bioclimatic.hero.title"), [t, language])
+  const heroSubtitle = useMemo(() => t("pergola.bioclimatic.hero.subtitle"), [t, language])
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        <section key={`hero-${language}`} className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
               src="/pergola/pergola-dıs-gunes-2.jpeg"
-              alt={t("pergola.bioclimatic.hero.title")}
+              alt={heroTitle}
               fill
               className="object-cover"
               priority
@@ -145,27 +156,29 @@ export default function BioklimatikSistemlerPage() {
 
           <div className="relative z-10 container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 text-balance leading-tight drop-shadow-lg">
-              {t("pergola.bioclimatic.hero.title")}
+              {heroTitle}
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 text-pretty leading-relaxed drop-shadow-md max-w-3xl mx-auto">
-              {t("pergola.bioclimatic.hero.subtitle")}
+              {heroSubtitle}
             </p>
           </div>
         </section>
         
         {/* Galeri */}
         <ProductDetailGallery
+          key={`gallery-${language}`}
           images={galleryImages}
-          productName={t("pergola.bioclimatic.hero.title")}
+          productName={galleryProductName}
         />
         
         {/* Teknik Özellikler */}
-        <ProductDetailSpecs categories={specs} />
+        <ProductDetailSpecs key={`specs-${language}`} categories={specs} />
         
         {/* Özellikler */}
         <ProductDetailFeatures
-          title={t("pergola.bioclimatic.features.title")}
-          subtitle={t("pergola.bioclimatic.features.subtitle")}
+          key={`features-${language}`}
+          title={featuresTitle}
+          subtitle={featuresSubtitle}
           features={features}
         />
         

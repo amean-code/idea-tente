@@ -13,12 +13,36 @@ import { motion } from "framer-motion"
  * Motorlu Pergola Sistemleri Sayfası
  */
 export default function MotorlupergolaPage() {
-  // Galeri görselleri
+  /**
+   * Galeri görselleri - public/motorlu-pergola/ klasöründeki görseller
+   * Her görsel motorlu-pergolar ön ekiyle ve anlamlı açıklayıcı isimlerle tanımlanmıştır
+   */
   const galleryImages = [
-    "/pergola/pergola-ev-dıs.jpg",
-    "/pergola/pergola-kafe-1.jpg",
-    "/pergola/pergola-kafe-aktif.jpeg",
-    "/pergola/pergola-beyaz.jpg",
+    "/motorlu-pergola/motorlu-pergolar-idea-dis-cekim-1.png",
+    "/motorlu-pergola/motorlu-pergolar-idea-ic-gorunum-1.png",
+    "/motorlu-pergola/motorlu-pergolar-idea-dis-cekim-2.png",
+    "/motorlu-pergola/motorlu-pergolar-idea-ic-gorunum-2.png",
+    "/motorlu-pergola/motorlu-pergolar-kafe-dis-cekim-1.png",
+    "/motorlu-pergola/motorlu-pergolar-kafe-ic-gorunum-1.png",
+    "/motorlu-pergola/motorlu-pergolar-restorant-dis-cekim-1.png",
+    "/motorlu-pergola/motorlu-pergolar-restorant-ic-gorunum-1.png",
+    "/motorlu-pergola/motorlu-pergolar-ev-dis-cekim-1.png",
+    "/motorlu-pergola/motorlu-pergolar-ev-ic-gorunum-1.png",
+    "/motorlu-pergola/motorlu-pergolar-idea-dis-cekim-3.jpeg",
+    "/motorlu-pergola/motorlu-pergolar-idea-ic-gorunum-3.jpeg",
+    "/motorlu-pergola/motorlu-pergolar-kafe-dis-cekim-2.jpeg",
+    "/motorlu-pergola/motorlu-pergolar-kafe-ic-gorunum-2.jpg",
+    "/motorlu-pergola/motorlu-pergolar-restorant-dis-cekim-2.jpg",
+    "/motorlu-pergola/motorlu-pergolar-restorant-ic-gorunum-2.jpg",
+    "/motorlu-pergola/motorlu-pergolar-ev-dis-cekim-2.jpg",
+    "/motorlu-pergola/motorlu-pergolar-ev-ic-gorunum-2.jpg",
+    "/motorlu-pergola/motorlu-pergolar-idea-dis-cekim-4.jpg",
+    "/motorlu-pergola/motorlu-pergolar-idea-ic-gorunum-4.jpg",
+    "/motorlu-pergola/motorlu-pergolar-kafe-dis-cekim-3.jpeg",
+    "/motorlu-pergola/motorlu-pergolar-kafe-ic-gorunum-3.jpeg",
+    "/motorlu-pergola/motorlu-pergolar-restorant-dis-cekim-3.jpeg",
+    "/motorlu-pergola/motorlu-pergolar-restorant-ic-gorunum-3.jpeg",
+    "/motorlu-pergola/motorlu-pergolar-ev-dis-cekim-3.jpg",
   ]
 
   // Teknik özellikler

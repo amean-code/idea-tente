@@ -19,15 +19,32 @@ export interface Reference {
 
 /**
  * Tüm referans projelerini döndüren fonksiyon
+ * @param t - Çeviri fonksiyonu (opsiyonel)
+ * @returns Referans projeleri listesi
  */
-export const getAllReferences = (): Reference[] => [
+export const getAllReferences = (t?: any): Reference[] => {
+  // Category mapping için çeviri fonksiyonu
+  const getCategory = (categoryKey: string): string => {
+    if (!t) return categoryKey
+    const categoryMap: Record<string, string> = {
+      "Otel & Resort": t("references.filters.hotel"),
+      "Konut": t("references.filters.residential"),
+      "Ticari": t("references.filters.commercial"),
+      "Eğlence": t("references.filters.entertainment"),
+      "Kurumsal": t("references.filters.corporate"),
+      "Restoran": t("references.filters.restaurant"),
+    }
+    return categoryMap[categoryKey] || categoryKey
+  }
+
+  return [
   // Pergola Projeleri
   {
     id: "luxury-resort-pergola",
     title: "Luxury Resort Antalya",
     location: "Antalya, Türkiye",
     year: "2023",
-    category: "Otel & Resort",
+    category: getCategory("Otel & Resort"),
     service: ["bioclimatic-pergola"],
     image: "/luxury-resort-pergola-installation.jpg",
     description: "200 m² bioklimatik pergola sistemi ile resort alanı modernizasyonu",
@@ -40,7 +57,7 @@ export const getAllReferences = (): Reference[] => [
     title: "Private Villa Complex",
     location: "Bodrum, Türkiye", 
     year: "2022",
-    category: "Konut",
+    category: getCategory("Konut"),
     service: ["bioclimatic-pergola", "winter-garden"],
     image: "/private-villa-pergola-complex.jpg",
     description: "Özel villa kompleksi pergola ve kış bahçesi projeleri",
@@ -53,7 +70,7 @@ export const getAllReferences = (): Reference[] => [
     title: "Shopping Mall Terrace",
     location: "Ankara, Türkiye",
     year: "2021", 
-    category: "Ticari",
+    category: getCategory("Ticari"),
     service: ["bioclimatic-pergola"],
     image: "/shopping-mall-terrace-pergola.jpg",
     description: "AVM teras alanı pergola ve gölgelendirme sistemleri",
@@ -66,7 +83,7 @@ export const getAllReferences = (): Reference[] => [
     title: "Beach Club Project",
     location: "Çeşme, Türkiye",
     year: "2021",
-    category: "Eğlence", 
+    category: getCategory("Eğlence"), 
     service: ["bioclimatic-pergola", "zip-screen"],
     image: "/beach-club-pergola-systems.jpg",
     description: "Beach club alanı pergola ve zip perde sistemleri",
@@ -81,7 +98,7 @@ export const getAllReferences = (): Reference[] => [
     title: "Corporate Headquarters",
     location: "İstanbul, Türkiye",
     year: "2023",
-    category: "Kurumsal",
+    category: getCategory("Kurumsal"),
     service: ["glass-systems", "sun-breakers"],
     image: "/corporate-building-glass-systems.jpg", 
     description: "Ofis binası cam sistemleri ve güneş kırıcı uygulaması",
@@ -94,7 +111,7 @@ export const getAllReferences = (): Reference[] => [
     title: "Seaside Restaurant",
     location: "İzmir, Türkiye",
     year: "2022",
-    category: "Restoran",
+    category: getCategory("Restoran"),
     service: ["glass-systems", "zip-screen"],
     image: "/seaside-restaurant-glass-systems.jpg",
     description: "Deniz manzaralı restoran cam sistemleri uygulaması",
@@ -109,7 +126,7 @@ export const getAllReferences = (): Reference[] => [
     title: "Luxury Winter Garden Villa",
     location: "Bursa, Türkiye",
     year: "2023",
-    category: "Konut",
+    category: getCategory("Konut"),
     service: ["winter-garden"],
     image: "/luxury-winter-garden-villa.jpg",
     description: "Lüks villa kış bahçesi ve akıllı iklim kontrolü",
@@ -124,7 +141,7 @@ export const getAllReferences = (): Reference[] => [
     title: "Modern Office Building",
     location: "İzmir, Türkiye",
     year: "2022",
-    category: "Kurumsal",
+    category: getCategory("Kurumsal"),
     service: ["sun-breakers"],
     image: "/modern-office-sun-breakers.jpg",
     description: "Modern ofis binası güneş kırıcı sistemleri",
@@ -139,7 +156,7 @@ export const getAllReferences = (): Reference[] => [
     title: "Hotel Terrace Project",
     location: "Antalya, Türkiye",
     year: "2023",
-    category: "Otel & Resort",
+    category: getCategory("Otel & Resort"),
     service: ["zip-screen"],
     image: "/hotel-terrace-zip-screen.jpg",
     description: "Otel teras alanı zip perde sistemleri",
@@ -154,7 +171,7 @@ export const getAllReferences = (): Reference[] => [
     title: "Complete Outdoor Solution",
     location: "Marmaris, Türkiye",
     year: "2023",
-    category: "Konut",
+    category: getCategory("Konut"),
     service: ["bioclimatic-pergola", "glass-systems", "zip-screen"],
     image: "/complete-outdoor-solution.jpg",
     description: "Kapsamlı dış mekan çözümü: pergola, cam sistemleri ve zip perde",
@@ -163,6 +180,7 @@ export const getAllReferences = (): Reference[] => [
     client: "Marmaris Luxury Resort"
   }
 ]
+}
 
 /**
  * Belirli bir hizmet türüne göre referansları filtrele

@@ -2,8 +2,9 @@ import { HeroSection } from "@/components/hero-section"
 import { ProductsOverview } from "@/components/products-overview"
 import { StatsSection } from "@/components/stats-section"
 import { CTASection } from "@/components/cta-section"
-import { FeaturedProjects } from "@/components/featured-projects"
+// import { FeaturedProjects } from "@/components/featured-projects"
 import { CertificatesSection } from "@/components/certificates-section"
+import { CompanyVideoSection } from "@/components/company-video-section"
 
 export default function HomePage() {
   return (
@@ -21,7 +22,8 @@ export default function HomePage() {
       <main className="relative z-10">
         <HeroSection />
         <ProductsOverview />
-        <FeaturedProjects />
+        <CompanyVideoSection />
+        {/* <FeaturedProjects /> */}
         <CertificatesSection />
         <StatsSection />
         <CTASection />

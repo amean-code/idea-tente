@@ -13,62 +13,63 @@ import {
 } from "@/data/subcategories"
 
 /**
- * Ana kategori katalog verisi
- */
-const mainCategories = [
-  {
-    id: "pergola",
-    title: "Pergola Sistemleri",
-    description: "Bioklimatik, motorlu ve rolling roof pergola çözümleri",
-    image: "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
-    href: "/pergola/bioklimatik-sistemler",
-    icon: Zap,
-    subCategories: getPergolaSubCategories(),
-  },
-  {
-    id: "glass",
-    title: "Cam Sistemleri",
-    description: "Giyotin cam ve frameless sistem çözümleri",
-    image: "/giyotin-cam/villa-giyotin2.jpg",
-    href: "/cam-sistemleri",
-    icon: Layers,
-    subCategories: getGlassSystemsSubCategories(),
-  },
-  {
-    id: "winter-garden",
-    title: "Kış Bahçesi",
-    description: "4 mevsim kullanım için kapalı alan çözümleri",
-    image: "/pergola/pergola-kapak.jpeg",
-    href: "/kis-bahcesi",
-    icon: FileText,
-    subCategories: getWinterGardenSubCategories(),
-  },
-  {
-    id: "sun-breaker",
-    title: "Güneş Kırıcı",
-    description: "Bina cephesi güneş koruma ve gölgeleme sistemleri",
-    image: "/pergola/pergola-dıs-gunes.jpeg",
-    href: "/gunes-kiriclari",
-    icon: FileText,
-    subCategories: getSunBreakerSubCategories(),
-  },
-  {
-    id: "zip-screen",
-    title: "Zip Perde",
-    description: "Motorlu ve manuel zip screen sistemleri",
-    image: "/zip-perde/zip-perde-2.jpeg",
-    href: "/zip-perde",
-    icon: FileText,
-    subCategories: getZipScreenSubCategories(),
-  },
-]
-
-/**
  * Katalog kategorileri bileşeni
  * Ana kategoriler ve alt kategorilerin kataloglarını gösterir
  */
 export function CatalogCategories() {
   const { t } = useLanguage()
+  
+  /**
+   * Ana kategori katalog verisi
+   * t fonksiyonu component içinde kullanılabilir hale getirildi
+   */
+  const mainCategories = [
+    {
+      id: "pergola",
+      title: "Pergola Sistemleri",
+      description: "Bioklimatik, motorlu ve rolling roof pergola çözümleri",
+      image: "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
+      href: "/pergola/bioklimatik-sistemler",
+      icon: Zap,
+      subCategories: getPergolaSubCategories(t),
+    },
+    {
+      id: "glass",
+      title: "Cam Sistemleri",
+      description: "Giyotin cam ve frameless sistem çözümleri",
+      image: "/giyotin-cam/villa-giyotin2.jpg",
+      href: "/cam-sistemleri",
+      icon: Layers,
+      subCategories: getGlassSystemsSubCategories(t),
+    },
+    {
+      id: "winter-garden",
+      title: "Kış Bahçesi",
+      description: "4 mevsim kullanım için kapalı alan çözümleri",
+      image: "/pergola/pergola-kapak.jpeg",
+      href: "/kis-bahcesi",
+      icon: FileText,
+      subCategories: getWinterGardenSubCategories(t),
+    },
+    {
+      id: "sun-breaker",
+      title: "Güneş Kırıcı",
+      description: "Bina cephesi güneş koruma ve gölgeleme sistemleri",
+      image: "/pergola/pergola-dıs-gunes.jpeg",
+      href: "/gunes-kiriclari",
+      icon: FileText,
+      subCategories: getSunBreakerSubCategories(t),
+    },
+    {
+      id: "zip-screen",
+      title: "Zip Perde",
+      description: "Motorlu ve manuel zip screen sistemleri",
+      image: "/zip-perde/zip-perde-2.jpeg",
+      href: "/zip-perde",
+      icon: FileText,
+      subCategories: getZipScreenSubCategories(t),
+    },
+  ]
   
   return (
     <section className="py-24 bg-muted/30">

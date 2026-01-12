@@ -1,3 +1,6 @@
+"use client"
+
+import { useMemo } from "react"
 import { Header } from "@/components/header"
 import { CamSistemleriHero } from "@/components/cam-sistemleri-hero"
 import { ProductDetailGallery } from "@/components/product-detail-gallery"
@@ -6,113 +9,150 @@ import { ProductDetailFeatures } from "@/components/product-detail-features"
 import { CamSistemleriProductCards } from "@/components/cam-sistemleri-product-cards"
 import { ReferenceProjects } from "@/components/reference-projects"
 import { ContactSection } from "@/components/contact-section"
+import { useLanguage } from "@/contexts/language-context"
 
 /**
  * Cam Sistemleri ana sayfası
  * Palmiye Global Platinum ürün sayfası konseptinde tasarlanmıştır
  */
 export default function CamSistemleriPage() {
-  // Galeri görselleri
+  const { t, language } = useLanguage()
+
+  /**
+   * Galeri görselleri - public/giyotin-cam/ klasöründeki görseller
+   * Her görsel giyotin-cam-sistemleri ön ekiyle ve anlamlı açıklayıcı isimlerle tanımlanmıştır
+   */
   const galleryImages = [
-    "/giyotin-cam/ev-giyotin.jpeg",
-    "/giyotin-cam/kafe-giyotin-cam.jpeg",
-    "/giyotin-cam/villa-giyotin2.jpg",
-    "/giyotin-cam/kafe-giyotin-2.png",
-    "/giyotin-cam/giyotin-kose.png",
-    "/giyotin-cam/giyotin-cam.png",
+    "/giyotin-cam/giyotin-cam-sistemleri-idea-dis-acik-1.jpeg",
+    "/giyotin-cam/giyotin-cam-sistemleri-kafe-dis-acik-1.jpeg",
+    "/giyotin-cam/giyotin-cam-sistemleri-ev-ic-acik-1.jpg",
+    "/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-1.jpeg",
+    "/giyotin-cam/giyotin-cam-sistemleri-idea-ic-acik-1.JPG",
+    "/giyotin-cam/giyotin-cam-sistemleri-kafe-ic-acik-1.JPG",
+    "/giyotin-cam/giyotin-cam-sistemleri-idea-tasarim.png",
+    "/giyotin-cam/giyotin-cam-sistemleri-ev-dis-acik-1.jpeg",
+    "/giyotin-cam/giyotin-cam-sistemleri-restorant-ic-acik-1.jpeg",
+    "/giyotin-cam/giyotin-cam-sistemleri-kafe-dis-acik-2.jpeg",
+    "/giyotin-cam/giyotin-cam-sistemleri-ev-dis-acik-2.jpeg",
+    "/giyotin-cam/giyotin-cam-sistemleri-idea-dis-acik-2.png",
+    "/giyotin-cam/giyotin-cam-sistemleri-kafe-dis-acik-3.png",
+    "/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-2.png",
+    "/giyotin-cam/giyotin-cam-sistemleri-ev-ic-acik-2.png",
+    "/giyotin-cam/giyotin-cam-sistemleri-idea-ic-acik-2.png",
+    "/giyotin-cam/giyotin-cam-sistemleri-kafe-ic-acik-2.png",
+    "/giyotin-cam/giyotin-cam-sistemleri-restorant-ic-acik-2.png",
+    "/giyotin-cam/giyotin-cam-sistemleri-ev-dis-acik-3.png",
+    "/giyotin-cam/giyotin-cam-sistemleri-idea-dis-acik-3.jpeg",
+    "/giyotin-cam/giyotin-cam-sistemleri-kafe-dis-acik-4.JPG",
+    "/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-3.jpeg",
+    "/giyotin-cam/giyotin-cam-sistemleri-ev-dis-acik-4.jpeg",
+    "/giyotin-cam/giyotin-cam-sistemleri-kafe-ic-acik-3.jpeg",
+    "/giyotin-cam/giyotin-cam-sistemleri-idea-dis-acik-4.jpeg",
+    "/giyotin-cam/giyotin-cam-sistemleri-kose-detay.png",
   ]
 
-  // Teknik özellikler
-  const specs = [
+  /**
+   * Teknik özellikler - dil değiştiğinde yeniden hesaplanır
+   */
+  const specs = useMemo(() => [
     {
-      title: "Boyutlar",
+      title: t("glassSystems.specs.dimensions"),
       icon: "ruler" as const,
       items: [
-        { label: "Genişlik (maks.)", value: "600 cm" },
-        { label: "Yükseklik (maks.)", value: "300 cm" },
+        { label: t("glassSystems.specs.maxWidth"), value: "600 cm" },
+        { label: t("glassSystems.specs.maxHeight"), value: "300 cm" },
       ]
     },
     {
-      title: "Ürün Standartları",
+      title: t("glassSystems.specs.productStandards"),
       icon: "settings" as const,
       items: [
-        { label: "Cam Tipi", value: "Temperli / Lamine" },
-        { label: "Cam Kalınlığı", value: "8-10 mm" },
-        { label: "Sistem", value: "Sürme / Katlanır" },
+        { label: t("glassSystems.specs.glassType"), value: t("glassSystems.specs.glassTypeValue") },
+        { label: t("glassSystems.specs.glassThickness"), value: "8-10 mm" },
+        { label: t("glassSystems.specs.system"), value: t("glassSystems.specs.systemValue") },
       ]
     },
     {
-      title: "Renk Seçenekleri",
+      title: t("glassSystems.specs.colorOptions"),
       icon: "palette" as const,
       items: [
-        { label: "Profil Rengi", value: "RAL Renk Seçenekleri" },
-        { label: "Cam", value: "Şeffaf / Tonlu / Mat" },
+        { label: t("glassSystems.specs.profileColor"), value: t("glassSystems.specs.profileColorValue") },
+        { label: t("glassSystems.specs.glass"), value: t("glassSystems.specs.glassValue") },
       ]
     },
     {
-      title: "Ek Özellikler",
+      title: t("glassSystems.specs.additionalFeatures"),
       icon: "layers" as const,
       items: [
-        { label: "Ses Yalıtımı", value: "30-35 dB" },
-        { label: "Güvenlik", value: "Temperli Cam" },
+        { label: t("glassSystems.specs.soundInsulation"), value: "30-35 dB" },
+        { label: t("glassSystems.specs.security"), value: t("glassSystems.specs.securityValue") },
       ]
     },
-  ]
+  ], [t, language])
 
-  // Özellikler ve avantajlar
-  const features = [
+  /**
+   * Özellikler ve avantajlar - dil değiştiğinde yeniden hesaplanır
+   */
+  const features = useMemo(() => [
     {
-      title: "Frameless Tasarım",
-      description: "Çerçevesiz minimalist tasarım ile panoramik manzara ve maksimum ışık geçirgenliği.",
+      title: t("glassSystems.features.slidingMechanism.title"),
+      description: t("glassSystems.features.slidingMechanism.description"),
       icon: "check" as const,
     },
     {
-      title: "Kolay Kullanım",
-      description: "Hafif ve sessiz sürme mekanizması ile kolayca açılıp kapanır.",
+      title: t("glassSystems.features.easyUse.title"),
+      description: t("glassSystems.features.easyUse.description"),
       icon: "settings" as const,
     },
     {
-      title: "Hava Koşullarına Dayanıklı",
-      description: "Rüzgar, yağmur ve kar gibi hava koşullarına karşı yüksek dayanım.",
+      title: t("glassSystems.features.weatherResistant.title"),
+      description: t("glassSystems.features.weatherResistant.description"),
       icon: "shield" as const,
     },
     {
-      title: "Güvenlik Camı",
-      description: "Temperli veya lamine cam seçenekleri ile maksimum güvenlik sağlar.",
+      title: t("glassSystems.features.safetyGlass.title"),
+      description: t("glassSystems.features.safetyGlass.description"),
       icon: "lock" as const,
     },
     {
-      title: "Enerji Verimliliği",
-      description: "Özel cam kaplama teknolojisi ile ısı yalıtımı ve enerji tasarrufu.",
+      title: t("glassSystems.features.energyEfficiency.title"),
+      description: t("glassSystems.features.energyEfficiency.description"),
       icon: "battery" as const,
     },
     {
-      title: "Ses Yalıtımı",
-      description: "Kalın cam yapısı ile dış gürültüleri minimize eder.",
+      title: t("glassSystems.features.soundInsulation.title"),
+      description: t("glassSystems.features.soundInsulation.description"),
       icon: "volume" as const,
     },
-  ]
+  ], [t, language])
+
+  // Başlık ve alt başlıklar - dil değiştiğinde yeniden hesaplanır
+  const featuresTitle = useMemo(() => t("glassSystems.features.title"), [t, language])
+  const featuresSubtitle = useMemo(() => t("glassSystems.features.subtitle"), [t, language])
+  const galleryProductName = useMemo(() => t("glassSystems.gallery.productName"), [t, language])
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
       <main>
         {/* Hero Section */}
-        <CamSistemleriHero />
+        <CamSistemleriHero key={`hero-${language}`} />
         
         {/* Galeri */}
         <ProductDetailGallery
+          key={`gallery-${language}`}
           images={galleryImages}
-          productName="Cam Sistemleri"
+          productName={galleryProductName}
         />
         
         {/* Teknik Özellikler */}
-        <ProductDetailSpecs categories={specs} />
+        <ProductDetailSpecs key={`specs-${language}`} categories={specs} />
         
         {/* Özellikler ve Avantajlar */}
         <ProductDetailFeatures
-          title="Modern Cam Teknolojisi"
-          subtitle="Güvenlik, estetik ve fonksiyonelliği bir arada sunan cam sistemleri"
+          key={`features-${language}`}
+          title={featuresTitle}
+          subtitle={featuresSubtitle}
           features={features}
         />
         

@@ -326,6 +326,52 @@ export const deTranslations = {
           description: "Umfassende E-Katalogdatei mit unserem gesamten Produktsortiment",
           download: "E-Katalog herunterladen"
         }
+      },
+      mainPage: {
+        specs: {
+          dimensions: "Abmessungen",
+          materials: "Materialien & Struktur",
+          performance: "Leistung",
+          warranty: "Garantie & Funktionen",
+          maxWidth: "Maximale Breite",
+          maxDepth: "Maximale Tiefe",
+          maxArea: "Maximale Fläche",
+          profileMaterial: "Profilmaterial",
+          louverAngle: "Lamellenwinkel",
+          gasketMaterial: "Dichtungsmaterial",
+          waterproof: "Wasserdicht",
+          distributedLoad: "Verteilte Lastkapazität",
+          windLoad: "Windlast",
+          motorWarranty: "Motor-Garantie",
+          mechanicalWarranty: "Mechanische Garantie",
+          slope: "Neigung"
+        },
+        features: {
+          rotatableLouvers: {
+            title: "105° Drehbare Lamellen",
+            description: "Kontrollieren Sie Sonnenlicht und Belüftung gleichzeitig mit Lamellen, die sich axial um 105° öffnen lassen."
+          },
+          waterproof: {
+            title: "100% Wasserdicht",
+            description: "Dank der Rillen in den Lamellen fließt Regenwasser zu den Seitenguttern und wird von den Trägerfüßen abgeleitet."
+          },
+          quietOperation: {
+            title: "Leiser Betrieb",
+            description: "Das System mit Riemenantrieb arbeitet leise und reibungslos."
+          },
+          thermalInsulation: {
+            title: "Wärme- und Schalldämmung",
+            description: "Durch Hinzufügen von Füllmaterial zu den Lamellen kann eine überlegene Wärme- und Schalldämmung erreicht werden."
+          },
+          remoteControl: {
+            title: "Fernbedienung",
+            description: "Öffnen-Schließen und Regenmodus werden per Fernbedienung gesteuert. Automatisches Fehlervermeidungssystem integriert."
+          },
+          allSeasons: {
+            title: "Alle Jahreszeiten kompatibel",
+            description: "Kann bequem auf Terrassen, Cafés, Restaurants, Wintergärten und Wohnzimmerdächern verwendet werden. Kann flach und geneigt arbeiten."
+          }
+        }
       }
     }
   },
@@ -380,9 +426,10 @@ export const deTranslations = {
   // Glass Systems translations
   glassSystems: {
     hero: {
+      badge: "Moderne Glastechnologie",
       title: "Glassysteme",
-      description: "Mit unseren Schiebe-Glassystemen schützen Sie Ihre Räume vor äußeren Einflüssen und erhöhen Ihren Komfort, ohne auf die Aussicht zu verzichten. Modernes und elegantes Erscheinungsbild mit rahmenlosem Design.",
-      subdescription: "Rahmenlose Glassysteme für ununterbrochene Aussicht, leicht zu öffnender Schiebemechanismus und maximale Sicherheit mit gehärtetem Sicherheitsglas."
+      description: "Mit unseren Giyotin-Glassystemen schützen Sie Ihre Räume vor äußeren Einflüssen und erhöhen Ihren Komfort, ohne auf die Aussicht zu verzichten. Verwandeln Sie Ihre Wohnräume mit modernem und elegantem Design.",
+      subdescription: "Giyotin-Glassysteme mit leicht zu öffnendem Schiebemechanismus, gehärtetem Sicherheitsglas und langlebiger Struktur. Maximaler Komfort mit großer Öffnungsmöglichkeit und leisem Betrieb."
     },
     wizard: {
       title: "Wählen Sie Ihr Glassystem",
@@ -393,13 +440,13 @@ export const deTranslations = {
       subtitle: "Entdecken Sie Glassystem-Modelle, die Ihren Bedürfnissen entsprechen",
       viewDetails: "Details anzeigen",
       surmeCam: {
-        title: "Schiebe-Glassysteme",
-        description: "Ununterbrochene Aussicht und maximaler Komfort mit rahmenlosen Schiebe-Glassystemen",
+        title: "Giyotin-Glassysteme",
+        description: "Giyotin-Glassysteme mit leicht zu öffnendem Schiebemechanismus und gehärtetem Sicherheitsglas",
         badge: "Beliebt",
         features: {
-          frameless: "Rahmenloses Design",
-          sliding: "Schiebemechanismus",
+          sliding: "Giyotin-Mechanismus",
           tempered: "Gehärtetes Glas",
+          easyUse: "Einfache Bedienung",
           waterproof: "Wasserdicht"
         }
       },
@@ -425,6 +472,58 @@ export const deTranslations = {
           lowMaintenance: "Geringe Wartung"
         }
       }
+    },
+    specs: {
+      dimensions: "Abmessungen",
+      productStandards: "Produktstandards",
+      colorOptions: "Farboptionen",
+      additionalFeatures: "Zusätzliche Funktionen",
+      maxWidth: "Breite (max.)",
+      maxHeight: "Höhe (max.)",
+      glassType: "Glastyp",
+      glassThickness: "Glasdicke",
+      system: "System",
+      profileColor: "Profilfarbe",
+      glass: "Glas",
+      soundInsulation: "Schalldämmung",
+      security: "Sicherheit",
+      // Values
+      glassTypeValue: "Gehärtet / Laminat",
+      systemValue: "Schieben / Falten",
+      profileColorValue: "RAL Farboptionen",
+      glassValue: "Transparent / Getönt / Mattiert",
+      securityValue: "Gehärtetes Glas"
+    },
+    features: {
+      title: "Moderne Glastechnologie",
+      subtitle: "Glassysteme, die Sicherheit, Ästhetik und Funktionalität kombinieren",
+      slidingMechanism: {
+        title: "Giyotin-Schiebemechanismus",
+        description: "Große Öffnungsmöglichkeit und praktische Nutzung mit leicht zu öffnendem Schiebesystem."
+      },
+      easyUse: {
+        title: "Einfach zu bedienen",
+        description: "Öffnet und schließt leicht mit leichtem und geräuschlosem Schiebemechanismus. Komfortables Wohnen mit leisem Betrieb."
+      },
+      weatherResistant: {
+        title: "Wetterbeständig",
+        description: "Hohe Beständigkeit gegen Wetterbedingungen wie Wind, Regen und Schnee."
+      },
+      safetyGlass: {
+        title: "Sicherheitsglas",
+        description: "Bietet maximale Sicherheit mit gehärteten oder laminierten Glasoptionen."
+      },
+      energyEfficiency: {
+        title: "Energieeffizienz",
+        description: "Wärmedämmung und Energieeinsparung mit spezieller Glasbeschichtungstechnologie."
+      },
+      soundInsulation: {
+        title: "Schalldämmung",
+        description: "Minimiert externe Geräusche mit dicker Glasstruktur."
+      }
+    },
+    gallery: {
+      productName: "Glassysteme"
     }
   },
 
@@ -474,6 +573,55 @@ export const deTranslations = {
           smartHome: "Smart Home",
           floorHeating: "Fußbodenheizung",
           warranty: "20 Jahre Garantie"
+        }
+      },
+      specs: {
+        dimensions: "Abmessungen",
+        productStandards: "Produktstandards",
+        colorOptions: "Farboptionen",
+        additionalFeatures: "Zusätzliche Funktionen",
+        areaRange: "Fläche (min. - max.)",
+        maxHeight: "Höhe (max.)",
+        glassType: "Glastyp",
+        glassTypeValue: "Doppelglas / Low-E",
+        profile: "Profil",
+        profileValue: "Aluminium",
+        thermalInsulation: "Wärmedämmung",
+        thermalInsulationValue: "Hohe Leistung",
+        profileColor: "Profilfarbe",
+        profileColorValue: "RAL Farboptionen",
+        glass: "Glas",
+        glassValue: "Transparent / Getönt",
+        soundInsulation: "Schalldämmung",
+        energySaving: "Energieeinsparung",
+        energySavingValue: "Bis zu 40%"
+      },
+      features: {
+        title: "Komfort und Technologie",
+        subtitle: "Unsere modernen Wintergarten-Systeme sind für maximalen Komfort und Energieeffizienz konzipiert",
+        fourSeasons: {
+          title: "4-Jahreszeiten-Nutzung",
+          description: "Bietet komfortable Nutzung in Sommer- und Wintermonaten mit überlegenen Dämmeigenschaften."
+        },
+        energySaving: {
+          title: "Energieeinsparung",
+          description: "Reduziert Ihren Energieverbrauch um bis zu 40% mit Doppelglas und spezieller Profilstruktur."
+        },
+        soundInsulation: {
+          title: "Schalldämmung",
+          description: "Minimiert externe Geräusche mit speziellem Glas- und Profilsystem."
+        },
+        security: {
+          title: "Sicherheit",
+          description: "Bietet maximale Sicherheit mit gehärtetem Glas und robustem Aluminiumprofil."
+        },
+        automaticVentilation: {
+          title: "Automatische Belüftung",
+          description: "Bietet frische Luftzirkulation mit intelligentem Belüftungssystem."
+        },
+        smartControl: {
+          title: "Intelligente Steuerung",
+          description: "Steuern Sie Heizung, Belüftung und Beleuchtung mit mobilen Anwendungen."
         }
       }
     }
@@ -576,6 +724,55 @@ export const deTranslations = {
           sunTracking: "Automatische Sonnennachführung",
           weather: "Wetterkontrolle",
           warranty: "10 Jahre Garantie"
+        }
+      },
+      specs: {
+        dimensions: "Abmessungen",
+        productStandards: "Produktstandards",
+        colorOptions: "Farboptionen",
+        additionalFeatures: "Zusätzliche Funktionen",
+        widthRange: "Breite (min. - max.)",
+        maxHeight: "Höhe (max.)",
+        controlType: "Steuerungstyp",
+        controlTypeValue: "Manuell / Motorisiert",
+        fabric: "Stoff",
+        fabricValue: "Screen / Blackout",
+        profile: "Profil",
+        profileValue: "Aluminium",
+        profileColor: "Profilfarbe",
+        profileColorValue: "RAL Farboptionen",
+        fabricColor: "Stofffarbe",
+        fabricColorValue: "Breite Farbpalette",
+        windResistance: "Windbeständigkeit",
+        windResistanceValue: "Bis zu 80 km/h",
+        uvProtection: "UV-Schutz"
+      },
+      features: {
+        title: "Steuerung und Automatisierung",
+        subtitle: "Unsere Zip-Screen-Systeme mit moderner Technologie sind für Ihren Komfort konzipiert",
+        windResistance: {
+          title: "Windbeständigkeit",
+          description: "Bietet maximale Beständigkeit gegen hohe Windgeschwindigkeiten dank des Reißverschlusssystems."
+        },
+        uvProtection: {
+          title: "UV-Schutz",
+          description: "Blockiert schädliche Sonnenstrahlen mit UPF 50+ Schutz und hält Ihren Raum kühl."
+        },
+        waterproof: {
+          title: "Wasserdicht",
+          description: "Bietet vollständigen Schutz vor Regen mit speziellem Stoff und Profilstruktur."
+        },
+        smartControl: {
+          title: "Intelligente Steuerung",
+          description: "Fernverwaltungsmöglichkeit mit iOS- und Android-kompatibler Smartphone-Steuerung."
+        },
+        sunSensor: {
+          title: "Sonnensensor",
+          description: "Aktiviert sich automatisch an sonnigen Tagen, um Energie zu sparen."
+        },
+        windSensor: {
+          title: "Windsensor",
+          description: "Schützt Ihr Produkt automatisch, wenn hohe Windgeschwindigkeit erkannt wird."
         }
       }
     }

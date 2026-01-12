@@ -1,3 +1,6 @@
+"use client"
+
+import { useMemo } from "react"
 import { Header } from "@/components/header"
 import { ZipPerdeHero } from "@/components/zip-perde-hero"
 import { ProductDetailGallery } from "@/components/product-detail-gallery"
@@ -6,12 +9,15 @@ import { ProductDetailFeatures } from "@/components/product-detail-features"
 import { ZipPerdeProductCards } from "@/components/zip-perde-product-cards"
 import { ReferenceProjects } from "@/components/reference-projects"
 import { ContactSection } from "@/components/contact-section"
+import { useLanguage } from "@/contexts/language-context"
 
 /**
  * Zip Perde ana sayfası
  * Palmiye Global Platinum ürün sayfası konseptinde tasarlanmıştır
  */
 export default function ZipScreenPage() {
+  const { t, language } = useLanguage()
+
   // Galeri görselleri
   const galleryImages = [
     "/zip-perde/zip-perde-2.jpeg",
@@ -22,97 +28,104 @@ export default function ZipScreenPage() {
     "/zip-perde/zip-perde-9.jpeg",
   ]
 
-  // Teknik özellikler
-  const specs = [
+  // Teknik özellikler - dil değiştiğinde yeniden hesaplanır
+  const specs = useMemo(() => [
     {
-      title: "Boyutlar",
+      title: t("zipScreen.specs.dimensions"),
       icon: "ruler" as const,
       items: [
-        { label: "Genişlik (min. - maks.)", value: "150 - 600 cm" },
-        { label: "Yükseklik (maks.)", value: "300 cm" },
+        { label: t("zipScreen.specs.widthRange"), value: "150 - 600 cm" },
+        { label: t("zipScreen.specs.maxHeight"), value: "300 cm" },
       ]
     },
     {
-      title: "Ürün Standartları",
+      title: t("zipScreen.specs.productStandards"),
       icon: "settings" as const,
       items: [
-        { label: "Kontrol Tipi", value: "Manuel / Motorlu" },
-        { label: "Kumaş", value: "Screen / Blackout" },
-        { label: "Profil", value: "Alüminyum" },
+        { label: t("zipScreen.specs.controlType"), value: t("zipScreen.specs.controlTypeValue") },
+        { label: t("zipScreen.specs.fabric"), value: t("zipScreen.specs.fabricValue") },
+        { label: t("zipScreen.specs.profile"), value: t("zipScreen.specs.profileValue") },
       ]
     },
     {
-      title: "Renk Seçenekleri",
+      title: t("zipScreen.specs.colorOptions"),
       icon: "palette" as const,
       items: [
-        { label: "Profil Rengi", value: "RAL Renk Seçenekleri" },
-        { label: "Kumaş Rengi", value: "Geniş Renk Paleti" },
+        { label: t("zipScreen.specs.profileColor"), value: t("zipScreen.specs.profileColorValue") },
+        { label: t("zipScreen.specs.fabricColor"), value: t("zipScreen.specs.fabricColorValue") },
       ]
     },
     {
-      title: "Ek Özellikler",
+      title: t("zipScreen.specs.additionalFeatures"),
       icon: "layers" as const,
       items: [
-        { label: "Rüzgar Dayanımı", value: "80 km/saat'e kadar" },
-        { label: "UV Koruma", value: "UPF 50+" },
+        { label: t("zipScreen.specs.windResistance"), value: t("zipScreen.specs.windResistanceValue") },
+        { label: t("zipScreen.specs.uvProtection"), value: "UPF 50+" },
       ]
     },
-  ]
+  ], [t, language])
 
-  // Özellikler ve avantajlar
-  const features = [
+  // Özellikler ve avantajlar - dil değiştiğinde yeniden hesaplanır
+  const features = useMemo(() => [
     {
-      title: "Rüzgar Dayanımı",
-      description: "Fermuarlı sistem sayesinde yüksek rüzgar hızlarına karşı maksimum dayanım sağlar.",
+      title: t("zipScreen.features.windResistance.title"),
+      description: t("zipScreen.features.windResistance.description"),
       icon: "wind" as const,
     },
     {
-      title: "UV Koruma",
-      description: "UPF 50+ koruma ile zararlı güneş ışınlarını engeller, mekanınızı serinletir.",
+      title: t("zipScreen.features.uvProtection.title"),
+      description: t("zipScreen.features.uvProtection.description"),
       icon: "sun" as const,
     },
     {
-      title: "Su Geçirmezlik",
-      description: "Özel kumaş ve profil yapısı ile yağmura karşı tam koruma sağlar.",
+      title: t("zipScreen.features.waterproof.title"),
+      description: t("zipScreen.features.waterproof.description"),
       icon: "rain" as const,
     },
     {
-      title: "Akıllı Kontrol",
-      description: "İOS ve Android uyumlu akıllı telefon kontrolü ile uzaktan yönetim imkanı.",
+      title: t("zipScreen.features.smartControl.title"),
+      description: t("zipScreen.features.smartControl.description"),
       icon: "smartphone" as const,
     },
     {
-      title: "Güneş Sensörü",
-      description: "Güneşli havalarda otomatik olarak devreye girerek enerji tasarrufu sağlar.",
+      title: t("zipScreen.features.sunSensor.title"),
+      description: t("zipScreen.features.sunSensor.description"),
       icon: "sun" as const,
     },
     {
-      title: "Rüzgar Sensörü",
-      description: "Yüksek rüzgar hızı algılandığında ürününüzü otomatik olarak korur.",
+      title: t("zipScreen.features.windSensor.title"),
+      description: t("zipScreen.features.windSensor.description"),
       icon: "shield" as const,
     },
-  ]
+  ], [t, language])
+
+  // Başlık ve alt başlıklar - dil değiştiğinde yeniden hesaplanır
+  const featuresTitle = useMemo(() => t("zipScreen.features.title"), [t, language])
+  const featuresSubtitle = useMemo(() => t("zipScreen.features.subtitle"), [t, language])
+  const galleryProductName = useMemo(() => t("zipScreen.hero.title"), [t, language])
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
       <main>
         {/* Hero Section */}
-        <ZipPerdeHero />
+        <ZipPerdeHero key={`hero-${language}`} />
         
         {/* Galeri */}
         <ProductDetailGallery
+          key={`gallery-${language}`}
           images={galleryImages}
-          productName="Zip Perde"
+          productName={galleryProductName}
         />
         
         {/* Teknik Özellikler */}
-        <ProductDetailSpecs categories={specs} />
+        <ProductDetailSpecs key={`specs-${language}`} categories={specs} />
         
         {/* Özellikler ve Avantajlar */}
         <ProductDetailFeatures
-          title="Kontrol ve Otomasyon"
-          subtitle="Modern teknoloji ile donatılmış zip perde sistemlerimiz, konforunuz için tasarlandı"
+          key={`features-${language}`}
+          title={featuresTitle}
+          subtitle={featuresSubtitle}
           features={features}
         />
         

@@ -1,5 +1,6 @@
 "use client"
 
+import { useMemo } from "react"
 import { 
   Settings, 
   Smartphone, 
@@ -55,9 +56,17 @@ export function ProductDetailFeatures({
   subtitle,
   features 
 }: ProductDetailFeaturesProps) {
-  const { t } = useLanguage()
-  const displayTitle = title || t("productDetail.features.defaultTitle")
-  const displaySubtitle = subtitle || t("productDetail.features.defaultSubtitle")
+  const { t, language } = useLanguage()
+  
+  // Dil değiştiğinde başlık ve alt başlığı yeniden hesapla
+  const displayTitle = useMemo(
+    () => title || t("productDetail.features.defaultTitle"),
+    [title, t, language]
+  )
+  const displaySubtitle = useMemo(
+    () => subtitle || t("productDetail.features.defaultSubtitle"),
+    [subtitle, t, language]
+  )
   
   return (
     <section className="py-16 bg-white">
