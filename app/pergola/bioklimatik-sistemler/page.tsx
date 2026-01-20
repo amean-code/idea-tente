@@ -158,7 +158,7 @@ export default function BioklimatikSistemlerPage() {
         <section key={`hero-${language}`} className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/pergola/pergola-dıs-gunes-2.jpeg"
+              src={galleryImages[6]}
               alt={heroTitle}
               fill
               className="object-cover"
