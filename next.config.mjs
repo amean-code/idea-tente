@@ -11,6 +11,11 @@ const nextConfig = {
   },
   compress: true,
   poweredByHeader: false,
+  experimental: {
+    optimizeCss: true,
+  },
+  // CSS optimizasyonu için
+  swcMinify: true,
 }
 
 export default nextConfig

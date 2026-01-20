@@ -171,6 +171,7 @@ export default function BioklimatikSistemlerPage() {
               fill
               className="object-cover"
               priority
+              fetchPriority="high"
               sizes="100vw"
               quality={85}
             />
