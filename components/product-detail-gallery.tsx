@@ -73,6 +73,8 @@ export function ProductDetailGallery({ images, productName }: ProductDetailGalle
               height={1080}
               className="object-contain w-full h-auto max-h-[80vh]"
               priority={currentIndex === 0}
+              loading={currentIndex === 0 ? "eager" : "lazy"}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1280px"
             />
           </div>
 
@@ -125,6 +127,8 @@ export function ProductDetailGallery({ images, productName }: ProductDetailGalle
                   width={200}
                   height={200}
                   className="object-contain w-full h-full"
+                  loading="lazy"
+                  sizes="(max-width: 640px) 25vw, (max-width: 768px) 16vw, (max-width: 1024px) 12vw, 8vw"
                 />
               </button>
             ))}

@@ -5,13 +5,21 @@ import { Header } from "@/components/header"
 import { ProductDetailGallery } from "@/components/product-detail-gallery"
 import { ProductDetailSpecs } from "@/components/product-detail-specs"
 import { ProductDetailFeatures } from "@/components/product-detail-features"
-import { ReferenceProjects } from "@/components/reference-projects"
-import { ContactSection } from "@/components/contact-section"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import dynamic from "next/dynamic"
 import { Download, FileText, BookOpen } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+
+// Alt bileşenleri lazy loading ile yükle - sayfa performansını artırır
+const ReferenceProjects = dynamic(() => import("@/components/reference-projects").then(mod => ({ default: mod.ReferenceProjects })), {
+  ssr: true,
+})
+
+const ContactSection = dynamic(() => import("@/components/contact-section").then(mod => ({ default: mod.ContactSection })), {
+  ssr: true,
+})
 
 /**
  * Bioklimatik Pergola Sistemleri Sayfası
@@ -163,6 +171,8 @@ export default function BioklimatikSistemlerPage() {
               fill
               className="object-cover"
               priority
+              sizes="100vw"
+              quality={85}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#3D4247]/90 via-[#3D4247]/70 to-[#3D4247]/40" />
           </div>
