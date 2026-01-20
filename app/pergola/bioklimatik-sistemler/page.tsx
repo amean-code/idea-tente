@@ -43,23 +43,22 @@ export default function BioklimatikSistemlerPage() {
     "/bioklimatik-pergola/bioklimatik-pergola-idea-kapali-detay.webp",
     "/bioklimatik-pergola/bioklimatik-pergola-kafe-kapalı-iç-mekan-2.webp",
     "/bioklimatik-pergola/bioklimatik-pergola-kafe-açık.webp",
-    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (10).webp",
+    "/bioklimatik-pergola/bioklimatik-pergola-dis-mekan-genis.webp",
     "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.44.55 (2).webp",
     "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-açılır-kapanır.webp",
-    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.45.29 (3).webp",
     "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-büyük-cephe.webp",
     "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-büyük.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dis-mekan-genis.webp",
     "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.45.16 (2).webp",
-    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.45.16.webp",
-    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.45.34 (2).webp",
-    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (13).webp",
-    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (98).webp",
     "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-görünüm.webp",
     "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-kare.webp",
     "/bioklimatik-pergola/bioklimatik-pergola-geniş-havuz-üstü.webp",
     "/bioklimatik-pergola/bioklimatik-açık-üst-görünüm.webp",
-
+    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.45.16.webp",
+    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.45.29 (3).webp",
+    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.45.34 (2).webp",
+    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (10).webp",
+    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (13).webp",
+    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (98).webp",
   ]
 
   // Teknik özellikler - dil değiştiğinde yeniden hesaplanır
@@ -159,7 +158,7 @@ export default function BioklimatikSistemlerPage() {
         <section key={`hero-${language}`} className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/pergola/pergola-dıs-gunes-2.webp"
+              src="/pergola/pergola-dıs-gunes-2.jpeg"
               alt={heroTitle}
               fill
               className="object-cover"

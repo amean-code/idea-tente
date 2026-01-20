@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -30,6 +30,35 @@ export function ProductDetailGallery({ images, productName }: ProductDetailGalle
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
   }
+
+  /**
+   * Klavye ile navigasyon - sağ/sol ok tuşları ile resimler arasında geçiş
+   */
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Input alanlarında yazı yazılırken klavye navigasyonunu devre dışı bırak
+      if (
+        event.target instanceof HTMLInputElement ||
+        event.target instanceof HTMLTextAreaElement ||
+        (event.target instanceof HTMLElement && event.target.isContentEditable)
+      ) {
+        return
+      }
+
+      if (event.key === "ArrowLeft") {
+        event.preventDefault()
+        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault()
+        setCurrentIndex((prev) => (prev + 1) % images.length)
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown)
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [images.length])
 
   return (
     <section className="py-16 bg-white">
