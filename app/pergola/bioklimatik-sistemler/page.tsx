@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo } from "react"
+import { useMemo, useEffect } from "react"
 import { Header } from "@/components/header"
 import { ProductDetailGallery } from "@/components/product-detail-gallery"
 import { ProductDetailSpecs } from "@/components/product-detail-specs"
@@ -158,6 +158,21 @@ export default function BioklimatikSistemlerPage() {
   const heroTitle = useMemo(() => t("pergola.bioclimatic.hero.title"), [t, language])
   const heroSubtitle = useMemo(() => t("pergola.bioclimatic.hero.subtitle"), [t, language])
 
+  // Hero görselini preload et - LCP optimizasyonu için
+  useEffect(() => {
+    const heroImageSrc = galleryImages[6]
+    const link = document.createElement('link')
+    link.rel = 'preload'
+    link.as = 'image'
+    link.href = heroImageSrc
+    link.setAttribute('fetchpriority', 'high')
+    document.head.appendChild(link)
+
+    return () => {
+      document.head.removeChild(link)
+    }
+  }, [galleryImages])
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
@@ -173,7 +188,7 @@ export default function BioklimatikSistemlerPage() {
               priority
               fetchPriority="high"
               sizes="100vw"
-              quality={85}
+              quality={70}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#3D4247]/90 via-[#3D4247]/70 to-[#3D4247]/40" />
           </div>

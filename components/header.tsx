@@ -135,14 +135,41 @@ const MobileMenuContent = memo(({
               {/* Ana Kategoriler */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-gray-800 mb-4">{products}</h3>
-                <Link
-                  href="/pergola"
-                  className="block p-4 rounded-lg hover:bg-gray-100 transition-colors group"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <div className="font-medium text-gray-800 group-hover:text-primary">{pergolaSystems}</div>
-                  <div className="text-sm text-gray-600">{menuDescriptions.pergola}</div>
-                </Link>
+                {/* Pergola - Ana kategori */}
+                <div className="space-y-2">
+                  <Link
+                    href="/pergola"
+                    className="block p-3 rounded-lg hover:bg-gray-100 transition-colors group"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <div className="font-medium text-gray-800 group-hover:text-primary">{pergolaSystems}</div>
+                    <div className="text-xs text-gray-600">{menuDescriptions.pergola}</div>
+                  </Link>
+                  <Link
+                    href="/pergola/bioklimatik-sistemler"
+                    className="block p-3 ml-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <div className="font-medium text-gray-800 group-hover:text-primary text-sm">{t("nav.pergolaBioclimatic")}</div>
+                    <div className="text-xs text-gray-600">{t("nav.pergolaBioclimaticDesc")}</div>
+                  </Link>
+                  <Link
+                    href="/pergola/motorlu-sistemler"
+                    className="block p-3 ml-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <div className="font-medium text-gray-800 group-hover:text-primary text-sm">{t("nav.pergolaMotorized")}</div>
+                    <div className="text-xs text-gray-600">{t("nav.pergolaMotorizedDesc")}</div>
+                  </Link>
+                  <Link
+                    href="/pergola/rolling-roof"
+                    className="block p-3 ml-4 rounded-lg hover:bg-gray-100 transition-colors group"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <div className="font-medium text-gray-800 group-hover:text-primary text-sm">{t("nav.pergolaRolling")}</div>
+                    <div className="text-xs text-gray-600">{t("nav.pergolaRollingDesc")}</div>
+                  </Link>
+                </div>
                 {/* Cam Sistemleri - Ana kategori */}
                 <div className="space-y-2">
                   <div className="font-medium text-gray-800 mb-2">{glassSystems}</div>
