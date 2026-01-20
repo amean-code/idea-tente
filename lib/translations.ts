@@ -3369,6 +3369,40 @@ export const translations = {
       }
     },
 
+    // WhatsApp CTA translations
+    whatsappCTA: {
+      title: "اتصال سريع",
+      subtitle: "اتصل بنا عبر واتساب للحصول على رد فوري. فريق الخبراء لدينا جاهز لمساعدتك!",
+      turkiye: "واتساب تركيا",
+      international: "واتساب الدولي",
+      workingHours: "ساعات العمل:"
+    },
+
+    // Certificates translations
+    certificates: {
+      badge: "الشهادات والوثائق",
+      title: "الجودة و",
+      titleHighlight: "الموثوقية",
+      subtitle: "منتجاتنا المعتمدة مع أنظمة الإنتاج وإدارة الجودة وفق المعايير الدولية",
+      categories: {
+        quality: "الجودة",
+        ce: "شهادة CE",
+        conformity: "الامتثال",
+        design: "التصميم",
+        membership: "العضوية"
+      },
+      items: {
+        iso9001: "نظام إدارة الجودة ISO 9001",
+        cePergola: "شهادة CE - نظام البرجولا الآلي",
+        ceGlass: "شهادة CE - نظام الزجاج الجيوتيني الآلي",
+        conformityPergola: "إعلان الامتثال - نظام البرجولا الآلي",
+        conformityGlass: "إعلان الامتثال - نظام الزجاج الجيوتيني الآلي",
+        designRegistration: "شهادة تسجيل التصميم",
+        designRegistrationGlass: "شهادة تسجيل التصميم - الجيوتيني",
+        baibMembership: "شهادة عضوية BAİB"
+      }
+    }
+
   },
   de: {
     // Navigation
@@ -4139,6 +4173,40 @@ export const translations = {
       }
     },
 
+    // WhatsApp CTA translations
+    whatsappCTA: {
+      title: "Schneller Kontakt",
+      subtitle: "Kontaktieren Sie uns über WhatsApp für sofortige Antwort. Unser Expertenteam ist bereit, Ihnen zu helfen!",
+      turkiye: "Türkei WhatsApp",
+      international: "Internationales WhatsApp",
+      workingHours: "Arbeitszeiten:"
+    },
+
+    // Certificates translations
+    certificates: {
+      badge: "Zertifikate und Dokumente",
+      title: "Qualität und",
+      titleHighlight: "Zuverlässigkeit",
+      subtitle: "Unsere zertifizierten Produkte mit internationalen Standardproduktions- und Qualitätsmanagementsystemen",
+      categories: {
+        quality: "Qualität",
+        ce: "CE-Zertifikat",
+        conformity: "Konformität",
+        design: "Design",
+        membership: "Mitgliedschaft"
+      },
+      items: {
+        iso9001: "ISO 9001 Qualitätsmanagementsystem",
+        cePergola: "CE-Zertifikat - Motorisiertes Pergola-System",
+        ceGlass: "CE-Zertifikat - Motorisiertes Guillotine-Glassystem",
+        conformityPergola: "Konformitätserklärung - Motorisiertes Pergola-System",
+        conformityGlass: "Konformitätserklärung - Motorisiertes Guillotine-Glassystem",
+        designRegistration: "Design-Registrierungszertifikat",
+        designRegistrationGlass: "Design-Registrierungszertifikat - Guillotine",
+        baibMembership: "BAİB-Mitgliedschaftszertifikat"
+      }
+    }
+
   },
   ru: {
     // Navigation
@@ -4797,6 +4865,40 @@ export const translations = {
         premiumBadge: "Премиум Продукт",
         getQuote: "Получить предложение",
         downloadCatalog: "Скачать каталог"
+      }
+    },
+
+    // WhatsApp CTA translations
+    whatsappCTA: {
+      title: "Быстрый Контакт",
+      subtitle: "Свяжитесь с нами через WhatsApp для мгновенного ответа. Наша команда экспертов готова помочь вам!",
+      turkiye: "WhatsApp Турции",
+      international: "Международный WhatsApp",
+      workingHours: "Рабочие часы:"
+    },
+
+    // Certificates translations
+    certificates: {
+      badge: "Сертификаты и Документы",
+      title: "Качество и",
+      titleHighlight: "Надежность",
+      subtitle: "Наша сертифицированная продукция с международными стандартами производства и системами управления качеством",
+      categories: {
+        quality: "Качество",
+        ce: "CE Сертификат",
+        conformity: "Соответствие",
+        design: "Дизайн",
+        membership: "Членство"
+      },
+      items: {
+        iso9001: "Система управления качеством ISO 9001",
+        cePergola: "CE Сертификат - Моторизованная система перголы",
+        ceGlass: "CE Сертификат - Моторизованная система гильотинного стекла",
+        conformityPergola: "Декларация соответствия - Моторизованная система перголы",
+        conformityGlass: "Декларация соответствия - Моторизованная система гильотинного стекла",
+        designRegistration: "Сертификат регистрации дизайна",
+        designRegistrationGlass: "Сертификат регистрации дизайна - Гильотина",
+        baibMembership: "Сертификат членства BAİB"
       }
     }
   }

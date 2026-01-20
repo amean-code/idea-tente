@@ -5,21 +5,13 @@ import { Header } from "@/components/header"
 import { ProductDetailGallery } from "@/components/product-detail-gallery"
 import { ProductDetailSpecs } from "@/components/product-detail-specs"
 import { ProductDetailFeatures } from "@/components/product-detail-features"
+import { ReferenceProjects } from "@/components/reference-projects"
+import { ContactSection } from "@/components/contact-section"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import dynamic from "next/dynamic"
 import { Download, FileText, BookOpen } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
-
-// Alt bileşenleri lazy loading ile yükle - sayfa performansını artırır
-const ReferenceProjects = dynamic(() => import("@/components/reference-projects").then(mod => ({ default: mod.ReferenceProjects })), {
-  ssr: true,
-})
-
-const ContactSection = dynamic(() => import("@/components/contact-section").then(mod => ({ default: mod.ContactSection })), {
-  ssr: true,
-})
 
 /**
  * Bioklimatik Pergola Sistemleri Sayfası
@@ -31,42 +23,57 @@ export default function BioklimatikSistemlerPage() {
    * Her görsel bioklimatik-pergola ön ekiyle ve anlamlı açıklayıcı isimlerle tanımlanmıştır
    */
   const galleryImages = [
-    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-mekan-acik.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-cephe.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-idea-ic-mekan.webp",
-    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.44.54 (2).webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-ic-ofis-acik.webp",
+    "/bioklimatik-pergola/bioklimatik-pergola-idea-kapali-detay.webp",
+    "/bioklimatik-pergola/bioklimatik-pergola-dis-cephe-kapali-20.webp",
+    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (75).jpeg",
+    "/bioklimatik-pergola/bioklimatik-pergola-kafe-kapalı-iç-mekan-2.webp",
+    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.45.34 (2).webp",
+    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (74).jpeg",
+    "/bioklimatik-pergola/bioklimatik-pergola-kafe-kapalı-iç-mekan.webp",
+    "/bioklimatik-pergola/bioklimatik-pergola-kafe-açık.webp",
+    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-kapali.webp",
+    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (60).jpeg",
+    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-büyük-cephe.webp",
+    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-büyük.webp",
+    "/bioklimatik-pergola/WhatsApp Image 2026-01-fasd20 at 14.24.49.jpeg",
+    "/bioklimatik-pergola/bioklimatik-pergola-dis-mekan-genis.webp",
+    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.44.54 (9).webp",
     "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-cephe-detay.webp",
+    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-cephe.webp",
     "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.44.58 (1).webp",
     "/bioklimatik-pergola/bioklimatik-pergola-idea-kapali-cephe.webp",
     "/bioklimatik-pergola/bioklimatik-pergola-dis-mekan-kapali.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dis-cephe-genis.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-idea-bahce-acik.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dis-cephe-idea-10.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-cephe-11.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-kapali.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-ic-mekan-kapali-detay.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dis-bahce-kapali.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dis-cephe-kapali-20.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-idea-kapali-detay.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-kafe-kapalı-iç-mekan-2.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-kafe-açık.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dis-mekan-genis.webp",
-    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.44.55 (2).webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-açılır-kapanır.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-büyük-cephe.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-büyük.webp",
+    "/bioklimatik-pergola/bioklimatik-pergola-ic-mekan-kapali.webp",
     "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.45.16 (2).webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-görünüm.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-kare.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-geniş-havuz-üstü.webp",
-    "/bioklimatik-pergola/bioklimatik-açık-üst-görünüm.webp",
     "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.45.16.webp",
+    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.44.54 (2).webp",
+    "/bioklimatik-pergola/bioklimatik-pergola-idea-ic-mekan.webp",
+    "/bioklimatik-pergola/bioklimatik-pergola-dis-bahce-kapali.webp",
+    "/bioklimatik-pergola/bioklimatik-pergola-ic-ofis-acik.webp",
+    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-açılır-kapanır.webp",
     "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.45.29 (3).webp",
-    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.45.34 (2).webp",
+    "/bioklimatik-pergola/havuz-yan-kapalı.jpeg",
+    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.44.55 (2).webp",
     "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (10).webp",
+    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.44.55 (13).jpeg",
     "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (13).webp",
     "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (98).webp",
+    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (1).jpeg",
+    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (4).jpeg",
+    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (38).jpeg",
+    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-görünüm.jpeg",
+    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-kare.jpeg",
+    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-cephe-final.webp",
+    "/bioklimatik-pergola/dış.jpeg",
+    "/bioklimatik-pergola/WhatsApp Image 2026-01-20 at 14.21.33.jpeg",
+    "/bioklimatik-pergola/WhatsApp Image 202dsad6-01-20 at 14.22.52.jpeg",
+    "/bioklimatik-pergola/bahçe.jpeg",
+    "/bioklimatik-pergola/bioklimatik-pergola-dis-cephe-genis.webp",
+    "/bioklimatik-pergola/bioklimatik-pergola-dis-cephe-idea-10.webp",
+    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-cephe-11.webp",
+    "/bioklimatik-pergola/bioklimatik-pergola-dis-bahce-cephe-12.webp",
+    "/bioklimatik-pergola/bioklimatik-pergola-geniş-havuz-üstü.webp",
+    "/bioklimatik-pergola/bioklimatik-açık-üst-görünüm.webp",
   ]
 
   // Teknik özellikler - dil değiştiğinde yeniden hesaplanır
@@ -158,18 +165,30 @@ export default function BioklimatikSistemlerPage() {
   const heroTitle = useMemo(() => t("pergola.bioclimatic.hero.title"), [t, language])
   const heroSubtitle = useMemo(() => t("pergola.bioclimatic.hero.subtitle"), [t, language])
 
-  // Hero görselini preload et - LCP optimizasyonu için
+  /**
+   * Galeri görsellerini önceden yükle - geçiş hızını artırır
+   * Tüm görselleri preload ederek anında geçiş sağlanır
+   */
   useEffect(() => {
-    const heroImageSrc = galleryImages[6]
-    const link = document.createElement('link')
-    link.rel = 'preload'
-    link.as = 'image'
-    link.href = heroImageSrc
-    link.setAttribute('fetchpriority', 'high')
-    document.head.appendChild(link)
+    galleryImages.forEach((imageSrc, index) => {
+      // İlk görsel zaten priority ile yükleniyor, diğerlerini preload et
+      if (index > 0) {
+        const link = document.createElement('link')
+        link.rel = 'preload'
+        link.as = 'image'
+        link.href = imageSrc
+        document.head.appendChild(link)
+      }
+    })
 
     return () => {
-      document.head.removeChild(link)
+      // Cleanup - preload link'lerini kaldır
+      const preloadLinks = document.head.querySelectorAll('link[rel="preload"][as="image"]')
+      preloadLinks.forEach(link => {
+        if (galleryImages.some(img => link.getAttribute('href') === img)) {
+          document.head.removeChild(link)
+        }
+      })
     }
   }, [galleryImages])
 
@@ -188,7 +207,7 @@ export default function BioklimatikSistemlerPage() {
               priority
               fetchPriority="high"
               sizes="100vw"
-              quality={70}
+              quality={85}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#3D4247]/90 via-[#3D4247]/70 to-[#3D4247]/40" />
           </div>
