@@ -18,7 +18,7 @@ export function Footer() {
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative h-14 w-14 rounded-xl overflow-hidden bg-white shadow-md">
                 <Image
-                  src="/idea-logo.jpg"
+                  src="/idea-logo.webp"
                   alt="IDEA Logo"
                   fill
                   className="object-contain p-1"

@@ -14,7 +14,7 @@ export function KisBahcesiHero() {
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/pergola/pergola-kapak.jpeg"
+          src="/pergola/pergola-kapak.webp"
           alt="Kış Bahçesi Sistemleri"
           fill
           className="object-cover"

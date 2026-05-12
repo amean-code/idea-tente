@@ -25,7 +25,7 @@ export const getProducts = (t: any): Product[] => [
     id: "bioclimatic-pergola",
     title: t("products.bioclimatic"),
     description: t("products.bioclimaticDesc"),
-    image: "/pergola/pergola-kapak.jpeg",
+    image: "/pergola/pergola-kapak.webp",
     href: "/pergola/bioklimatik-sistemler",
     features: [
       t("products.features.smartLouver"), 
@@ -39,7 +39,7 @@ export const getProducts = (t: any): Product[] => [
     id: "glass-systems",
     title: t("products.glass"),
     description: t("nav.glassDesc"),
-    image: "/giyotin-cam/giyotin-cam.png",
+      image: "/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-3.webp",
     href: "/cam-sistemleri",
     features: [
       t("products.features.framelessDesign"), 
@@ -53,7 +53,7 @@ export const getProducts = (t: any): Product[] => [
     id: "winter-garden",
     title: t("products.winterGarden"),
     description: t("products.winterGardenDesc"),
-    image: "/winter-garden-conservatory-with-glass-roof--indoor.jpg",
+    image: "/winter-garden-conservatory-with-glass-roof--indoor.webp",
     href: "/kis-bahcesi",
     features: [
       t("products.features.fourSeasons"), 
@@ -67,7 +67,7 @@ export const getProducts = (t: any): Product[] => [
     id: "sun-breakers",
     title: t("products.sunBreaker"),
     description: t("products.sunBreakerDesc"),
-    image: "/pergola/pergola-dıs-gunes.jpeg",
+    image: "/pergola/pergola-dıs-gunes.webp",
     href: "/gunes-kiriclari",
     features: [
       t("products.features.sunControl"),
@@ -81,7 +81,7 @@ export const getProducts = (t: any): Product[] => [
     id: "zip-screen",
     title: t("products.zipScreen"),
     description: t("products.zipScreenDesc"),
-    image: "/zip-perde/zip-perde-2.jpeg",
+    image: "/zip-perde/zip-perde-2.webp",
     href: "/zip-perde",
     features: [
       t("products.features.windResistance"),
@@ -108,7 +108,7 @@ export const getWinterGardenSubProducts = (t: any) => [
     id: "premium-kis-bahcesi",
     name: t("products.winterGardenSub.premium.title"),
     description: t("products.winterGardenSub.premium.description"),
-    image: "/premium-winter-garden-smart-glass.jpg",
+    image: "/premium-winter-garden-smart-glass.webp",
     features: t("products.winterGardenSub.premium.features"),
     badge: t("products.winterGardenSub.premium.badge"),
     href: "/kis-bahcesi/premium-kis-bahcesi",
@@ -117,7 +117,7 @@ export const getWinterGardenSubProducts = (t: any) => [
     id: "standart-kis-bahcesi",
     name: t("products.winterGardenSub.standard.title"),
     description: t("products.winterGardenSub.standard.description"),
-    image: "/standard-winter-garden-double-glass.jpg",
+    image: "/standard-winter-garden-double-glass.webp",
     features: t("products.winterGardenSub.standard.features"),
     badge: t("products.winterGardenSub.standard.badge"),
     href: "/kis-bahcesi/standart-kis-bahcesi",
@@ -126,7 +126,7 @@ export const getWinterGardenSubProducts = (t: any) => [
     id: "lux-kis-bahcesi",
     name: t("products.winterGardenSub.luxury.title"),
     description: t("products.winterGardenSub.luxury.description"),
-    image: "/luxury-winter-garden-panoramic-view.jpg",
+    image: "/luxury-winter-garden-panoramic-view.webp",
     features: t("products.winterGardenSub.luxury.features"),
     badge: t("products.winterGardenSub.luxury.badge"),
     href: "/kis-bahcesi/lux-kis-bahcesi",
@@ -148,7 +148,7 @@ export const getSunBreakerSubProducts = (t: any) => [
     id: "sabit-gunes-kirici",
     name: t("products.sunBreakerSub.fixed.title"),
     description: t("products.sunBreakerSub.fixed.description"),
-    image: "/pergola/pergola-dıs-gunes-2.jpeg",
+    image: "/pergola/pergola-dıs-gunes-2.webp",
     features: t("products.sunBreakerSub.fixed.features"),
     badge: t("products.sunBreakerSub.fixed.badge"),
     price: "₺15.000",
@@ -158,7 +158,7 @@ export const getSunBreakerSubProducts = (t: any) => [
     id: "hareketli-gunes-kirici",
     name: t("products.sunBreakerSub.motorized.title"),
     description: t("products.sunBreakerSub.motorized.description"),
-    image: "/pergola/pergola-render-siyah.jpg",
+    image: "/pergola/pergola-render-siyah.webp",
     features: t("products.sunBreakerSub.motorized.features"),
     badge: t("products.sunBreakerSub.motorized.badge"),
     price: "₺35.000",
@@ -168,7 +168,7 @@ export const getSunBreakerSubProducts = (t: any) => [
     id: "dikey-gunes-kirici",
     name: t("products.sunBreakerSub.vertical.title"),
     description: t("products.sunBreakerSub.vertical.description"),
-    image: "/pergola/pergola-render-siyah-gece.jpg",
+    image: "/pergola/pergola-render-siyah-gece.webp",
     features: t("products.sunBreakerSub.vertical.features"),
     badge: t("products.sunBreakerSub.vertical.badge"),
     price: "₺25.000",
@@ -191,7 +191,7 @@ export const getZipScreenSubProducts = (t: any) => [
     id: "motorlu-zip-perde",
     name: t("products.zipScreenSub.motorized.title"),
     description: t("products.zipScreenSub.motorized.description"),
-    image: "/zip-perde/zip-perde-3.jpeg",
+    image: "/zip-perde/zip-perde-3.webp",
     features: t("products.zipScreenSub.motorized.features"),
     price: "₺4.500",
     badge: t("products.zipScreenSub.motorized.badge"),
@@ -201,7 +201,7 @@ export const getZipScreenSubProducts = (t: any) => [
     id: "manuel-zip-perde",
     name: t("products.zipScreenSub.manual.title"),
     description: t("products.zipScreenSub.manual.description"),
-    image: "/zip-perde/zip-perde-4.jpeg",
+    image: "/zip-perde/zip-perde-4.webp",
     features: t("products.zipScreenSub.manual.features"),
     price: "₺2.800",
     badge: t("products.zipScreenSub.manual.badge"),
@@ -211,7 +211,7 @@ export const getZipScreenSubProducts = (t: any) => [
     id: "akilli-zip-perde",
     name: t("products.zipScreenSub.smart.title"),
     description: t("products.zipScreenSub.smart.description"),
-    image: "/zip-perde/zip-perde-5.jpeg",
+    image: "/zip-perde/zip-perde-5.webp",
     features: t("products.zipScreenSub.smart.features"),
     price: "₺7.200",
     badge: t("products.zipScreenSub.smart.badge"),
@@ -256,7 +256,7 @@ export const getZipScreenApplications = (t: any) => {
   const apps = t("products.zipScreenApplications")
   return apps.map((app: any, index: number) => ({
     ...app,
-    image: ["/zip-perde/zip-perde-8.jpeg", "/zip-perde/zip-perde-9.jpeg", "/zip-perde/zip-perde-2.jpeg"][index]
+    image: ["/zip-perde/zip-perde-8.webp", "/zip-perde/zip-perde-9.webp", "/zip-perde/zip-perde-2.webp"][index]
   }))
 }
 

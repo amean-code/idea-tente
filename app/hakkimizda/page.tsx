@@ -46,7 +46,7 @@ export default function AboutPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/company-headquarters-modern-building.jpg"
+            src="/company-headquarters-modern-building.webp"
             alt="IDEA Merkez Ofis"
             className="w-full h-full object-cover"
           />
@@ -146,7 +146,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-video bg-card rounded-lg overflow-hidden border">
                 <img
-                  src="/company-headquarters-modern-building.jpg"
+                  src="/company-headquarters-modern-building.webp"
                   alt="IDEA Merkez Ofis"
                   className="w-full h-full object-cover"
                 />

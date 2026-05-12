@@ -16,7 +16,7 @@ export function PergolaHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/pergola/pergola-beyaz.jpg"
+          src="/pergola/pergola-beyaz.webp"
           alt="Pergola Sistemleri"
           fill
           className="object-cover"

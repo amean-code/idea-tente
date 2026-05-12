@@ -17,7 +17,7 @@ export default function NotFound() {
               {/* 404 Illustration */}
               <div className="relative w-64 h-64 mx-auto mb-8">
                 <Image
-                  src="/404-pergola-illustration.jpg"
+                  src="/404-pergola-illustration.webp"
                   alt="404 - Sayfa Bulunamadı"
                   fill
                   className="object-contain"

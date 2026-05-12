@@ -10,6 +10,12 @@ import { KisBahcesiProductCards } from "@/components/kis-bahcesi-product-cards"
 import { ReferenceProjects } from "@/components/reference-projects"
 import { ContactSection } from "@/components/contact-section"
 import { useLanguage } from "@/contexts/language-context"
+import { getGalleryImages } from "@/lib/gallery-config"
+
+/**
+ * Kış bahçesi galerisini ortak manifest dosyasından okur.
+ */
+const galleryImages = getGalleryImages("kis-bahcesi")
 
 /**
  * Kış Bahçesi ana sayfası
@@ -17,16 +23,6 @@ import { useLanguage } from "@/contexts/language-context"
  */
 export default function WinterGardenPage() {
   const { t, language } = useLanguage()
-
-  // Galeri görselleri
-  const galleryImages = [
-    "/pergola/pergola-kapak.jpeg",
-    "/pergola/pergola-render-siyah-gece.jpg",
-    "/pergola/pergola-render-siyah.jpg",
-    "/pergola/pergola-ic-mekan.jpeg",
-    "/pergola/pergola-kafe-aktif-2.jpg",
-    "/pergola/pergola-beyaz.jpg",
-  ]
 
   // Teknik özellikler - dil değiştiğinde yeniden hesaplanır
   const specs = useMemo(() => [

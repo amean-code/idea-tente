@@ -14,25 +14,25 @@ export function ARGallery() {
     {
       title: t("arDemo.gallery.demos.bioclimatic.title"),
       description: t("arDemo.gallery.demos.bioclimatic.description"),
-      image: "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
+      image: "/modern-bioclimatic-pergola-with-adjustable-louvers.webp",
       category: t("arDemo.gallery.categories.pergola"),
     },
     {
       title: t("arDemo.gallery.demos.glass.title"),
       description: t("arDemo.gallery.demos.glass.description"),
-      image: "/frameless-glass-sliding-system--modern-terrace-wit.jpg",
+      image: "/frameless-glass-sliding-system--modern-terrace-wit.webp",
       category: t("arDemo.gallery.categories.glass"),
     },
     {
       title: t("arDemo.gallery.demos.winterGarden.title"),
       description: t("arDemo.gallery.demos.winterGarden.description"),
-      image: "/winter-garden-conservatory-with-glass-roof--indoor.jpg",
+      image: "/winter-garden-conservatory-with-glass-roof--indoor.webp",
       category: t("arDemo.gallery.categories.winterGarden"),
     },
     {
       title: t("arDemo.gallery.demos.sunBreaker.title"),
       description: t("arDemo.gallery.demos.sunBreaker.description"),
-      image: "/modern-sun-breaker-louver-system-on-building-facad.jpg",
+      image: "/architectural-sun-shades-on-modern-building-facade.webp",
       category: t("arDemo.gallery.categories.sunBreaker"),
     },
   ]

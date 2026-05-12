@@ -17,49 +17,55 @@ export function CertificatesSection() {
     {
       id: 1,
       title: t("certificates.items.iso9001"),
-      image: "/SERTİFİKALAR/İDEA TENTE ISO9001 copy.jpg",
+      image:
+        "/SERTİFİKALAR/İDEA TENTE ISO9001 copy.webp",
       category: t("certificates.categories.quality"),
     },
     {
       id: 2,
       title: t("certificates.items.cePergola"),
-      image: "/SERTİFİKALAR/İDEA TENTE CE BELGESİ (MOTORIZED PERGOLA SYSTEM) copy.jpg",
+      image:
+        "/SERTİFİKALAR/İDEA TENTE CE BELGESİ (MOTORIZED PERGOLA SYSTEM) copy.webp",
       category: t("certificates.categories.ce"),
     },
     {
       id: 3,
       title: t("certificates.items.ceGlass"),
-      image: "/SERTİFİKALAR/İDEA TENTE CE BELGESİ (MOTORIZED GUILLOTINE GLASS SYSTEM) copy.jpg",
+      image:
+        "/SERTİFİKALAR/İDEA TENTE CE BELGESİ (MOTORIZED GUILLOTINE GLASS SYSTEM) copy.webp",
       category: t("certificates.categories.ce"),
     },
     {
       id: 4,
       title: t("certificates.items.conformityPergola"),
-      image: "/SERTİFİKALAR/DECLERATION OF CONFORMITY (MOTORIZED PERGOLA SYSTEM).jpg",
+      image:
+        "/SERTİFİKALAR/DECLERATION OF CONFORMITY (MOTORIZED PERGOLA SYSTEM).webp",
       category: t("certificates.categories.conformity"),
     },
     {
       id: 5,
       title: t("certificates.items.conformityGlass"),
-      image: "/SERTİFİKALAR/DECLERATION OF CONFORMITY (MOTORIZED GUILLOTINE GLASS SYSTEM).jpg",
+      image:
+        "/SERTİFİKALAR/DECLERATION OF CONFORMITY (MOTORIZED GUILLOTINE GLASS SYSTEM).webp",
       category: t("certificates.categories.conformity"),
     },
     {
       id: 6,
       title: t("certificates.items.designRegistration"),
-      image: "/SERTİFİKALAR/TASARIM TESCİL.jpg",
+      image: "/SERTİFİKALAR/TASARIM TESCİL.webp",
       category: t("certificates.categories.design"),
     },
     {
       id: 7,
       title: t("certificates.items.designRegistrationGlass"),
-      image: "/SERTİFİKALAR/TASARIM TESCİL BELGESİ GİYOTİN.jpg",
+      image:
+        "/SERTİFİKALAR/TASARIM TESCİL BELGESİ GİYOTİN.webp",
       category: t("certificates.categories.design"),
     },
     {
       id: 8,
       title: t("certificates.items.baibMembership"),
-      image: "/SERTİFİKALAR/BAİB ÜYELİK BELGESİ.jpg",
+      image: "/SERTİFİKALAR/BAİB ÜYELİK BELGESİ.webp",
       category: t("certificates.categories.membership"),
     },
   ]

@@ -83,7 +83,7 @@ export default function StandardWinterGardenPage() {
         <div 
           className="w-full h-full bg-cover bg-center bg-no-repeat opacity-5"
           style={{
-            backgroundImage: "url('/standard-winter-garden-double-glass.jpg')"
+            backgroundImage: "url('/standard-winter-garden-double-glass.webp')"
           }}
         />
       </div>
@@ -92,7 +92,7 @@ export default function StandardWinterGardenPage() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-green-50 to-emerald-100">
-        <div className="absolute inset-0 bg-[url('/standard-winter-garden-double-glass.jpg')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('/standard-winter-garden-double-glass.webp')] bg-cover bg-center opacity-20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-green-100 text-green-800 hover:bg-green-200">
@@ -188,7 +188,7 @@ export default function StandardWinterGardenPage() {
             <div className="relative">
               <div className="aspect-video bg-gradient-to-br from-green-100 to-emerald-200 rounded-2xl overflow-hidden">
                 <img
-                  src="/standard-winter-garden-double-glass.jpg"
+                  src="/standard-winter-garden-double-glass.webp"
                   alt="Standart Kış Bahçesi"
                   className="w-full h-full object-cover"
                 />

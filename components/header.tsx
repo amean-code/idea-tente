@@ -388,7 +388,7 @@ export function Header() {
             <Button size="sm" variant="default" asChild className="bg-green-500 hover:bg-green-600 text-white">
               <Link href={contactInfo.whatsapp.primary} target="_blank" className="flex items-center">
                 <Image 
-                  src="/wp-icon.png" 
+                  src="/wp-icon.webp" 
                   alt="WhatsApp" 
                   width={16}
                   height={16}
@@ -416,7 +416,7 @@ export function Header() {
             >
               <div className="relative" style={{ overflow: 'visible' }}>
                 <Image 
-                  src="/idea-logo.jpg" 
+                  src="/idea-logo.webp" 
                   alt="IDEA Logo" 
                   width={200}
                   height={80}

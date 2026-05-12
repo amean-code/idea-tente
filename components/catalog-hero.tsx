@@ -17,7 +17,7 @@ export function CatalogHero() {
       {/* Arka plan görseli */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/pergola/pergola-kapak.jpeg"
+          src="/pergola/pergola-kapak.webp"
           alt="Katalog"
           fill
           className="object-cover opacity-20 mix-blend-overlay"

@@ -84,7 +84,7 @@ export default function PremiumWinterGardenPage() {
         <div 
           className="w-full h-full bg-cover bg-center bg-no-repeat opacity-5"
           style={{
-            backgroundImage: "url('/premium-winter-garden-smart-glass.jpg')"
+            backgroundImage: "url('/premium-winter-garden-smart-glass.webp')"
           }}
         />
       </div>
@@ -93,7 +93,7 @@ export default function PremiumWinterGardenPage() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="absolute inset-0 bg-[url('/premium-winter-garden-smart-glass.jpg')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('/premium-winter-garden-smart-glass.webp')] bg-cover bg-center opacity-20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-blue-100 text-blue-800 hover:bg-blue-200">
@@ -189,7 +189,7 @@ export default function PremiumWinterGardenPage() {
             <div className="relative">
               <div className="aspect-video bg-gradient-to-br from-blue-100 to-indigo-200 rounded-2xl overflow-hidden">
                 <img
-                  src="/premium-winter-garden-smart-glass.jpg"
+                  src="/premium-winter-garden-smart-glass.webp"
                   alt="Premium Kış Bahçesi"
                   className="w-full h-full object-cover"
                 />

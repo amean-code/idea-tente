@@ -9,6 +9,12 @@ import { ProductDetailFeatures } from "@/components/product-detail-features"
 import { ReferenceProjects } from "@/components/reference-projects"
 import { ContactSection } from "@/components/contact-section"
 import { useLanguage } from "@/contexts/language-context"
+import { getGalleryImages } from "@/lib/gallery-config"
+
+/**
+ * Sürme cam galerisini ortak manifest dosyasından okur.
+ */
+const galleryImages = getGalleryImages("surme-cam")
 
 /**
  * Sürme Cam Sistemleri sayfası
@@ -16,19 +22,6 @@ import { useLanguage } from "@/contexts/language-context"
  */
 export default function SurmeCamPage() {
   const { t, language } = useLanguage()
-
-  /**
-   * Galeri görselleri - public/SürmeCam/ klasöründeki görseller
-   * SEO odaklı isimlerle tanımlanmıştır
-   */
-  const galleryImages = [
-    "/SürmeCam/sürme-cam-sistemleri-dis-gorunum-1.jpeg",
-    "/SürmeCam/sürme-cam-sistemleri-dis-gorunum-2.jpeg",
-    "/SürmeCam/sürme-cam-sistemleri-dis-gorunum-3.jpeg",
-    "/SürmeCam/sürme-cam-sistemleri-dis-gorunum-4.jpeg",
-    "/SürmeCam/sürme-cam-sistemleri-ic-gorunum-1.jpeg",
-    "/SürmeCam/sürme-cam-sistemleri-ic-gorunum-2.jpeg",
-  ]
 
   /**
    * Teknik özellikler - dil değiştiğinde yeniden hesaplanır
@@ -165,7 +158,7 @@ function SlidingGlassHero() {
       title={title}
       description={description}
       subdescription={subdescription}
-      imageSrc="/SürmeCam/sürme-cam-sistemleri-dis-gorunum-1.jpeg"
+      imageSrc="/SürmeCam/sürme-cam-sistemleri-dis-gorunum-1.webp"
     />
   )
 }

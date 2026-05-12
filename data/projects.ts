@@ -44,7 +44,7 @@ export const projects: Project[] = [
     location: "Antalya, Türkiye",
     year: "2024",
     area: "2,500 m²",
-    image: "/luxury-resort-pergola-installation.jpg",
+    image: "/luxury-resort-pergola-installation.webp",
     translations: {
       tr: {
         title: "Luxury Resort Pergola Complex",
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     location: "İstanbul, Türkiye",
     year: "2024",
     area: "8,000 m²",
-    image: "/corporate-building-sun-breakers.jpg",
+    image: "/corporate-building-sun-breakers.webp",
     translations: {
       tr: {
         title: "Corporate Headquarters Sun Protection",
@@ -120,7 +120,7 @@ export const projects: Project[] = [
     location: "Bodrum, Türkiye",
     year: "2023",
     area: "800 m²",
-    image: "/seaside-restaurant-glass-systems.jpg",
+    image: "/seaside-restaurant-glass-systems.webp",
     translations: {
       tr: {
         title: "Seaside Restaurant Glass Systems",
@@ -158,7 +158,7 @@ export const projects: Project[] = [
     location: "Çeşme, Türkiye",
     year: "2023",
     area: "150 m²",
-    image: "/private-villa-winter-garden.jpg",
+    image: "/private-villa-winter-garden.webp",
     translations: {
       tr: {
         title: "Private Villa Winter Garden",
@@ -196,7 +196,7 @@ export const projects: Project[] = [
     location: "İzmir, Türkiye",
     year: "2023",
     area: "1,200 m²",
-    image: "/shopping-mall-pergola.jpg",
+    image: "/shopping-mall-terrace-pergola.webp",
     translations: {
       tr: {
         title: "AVM Açık Hava Alanı Pergola",
@@ -234,7 +234,7 @@ export const projects: Project[] = [
     location: "Marmaris, Türkiye",
     year: "2023",
     area: "600 m²",
-    image: "/hotel-pool-zip-screen.jpg",
+    image: "/motorized-zip-screen-remote-control.webp",
     translations: {
       tr: {
         title: "Otel Havuz Alanı Zip Perde",
@@ -272,7 +272,7 @@ export const projects: Project[] = [
     location: "Ankara, Türkiye",
     year: "2022",
     area: "300 m²",
-    image: "/cafe-glass-folding-system.jpg",
+    image: "/folding-glass-hero.webp",
     translations: {
       tr: {
         title: "Kafe Terası Katlanır Cam Sistem",
@@ -310,7 +310,7 @@ export const projects: Project[] = [
     location: "Bursa, Türkiye",
     year: "2022",
     area: "3,500 m²",
-    image: "/office-sun-breakers.jpg",
+    image: "/fixed-aluminum-sun-breaker-system.webp",
     translations: {
       tr: {
         title: "Ofis Binası Güneş Kırıcı Sistemleri",

@@ -16,7 +16,7 @@ export function ARHero() {
       {/* Arka Plan Görseli */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/modern-bioclimatic-pergola-with-adjustable-louvers.jpg"
+          src="/modern-bioclimatic-pergola-with-adjustable-louvers.webp"
           alt="AR Demo"
           className="w-full h-full object-cover"
         />

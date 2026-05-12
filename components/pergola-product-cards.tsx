@@ -18,7 +18,7 @@ export function PergolaProductCards() {
       title: t("pergolaProducts.bioclimatic.title"),
       subtitle: t("pergolaProducts.bioclimatic.subtitle"),
       description: t("pergolaProducts.bioclimatic.description"),
-      image: "/pergola/pergola-dıs-gunes.jpeg",
+      image: "/pergola/pergola-dıs-gunes.webp",
       href: "/pergola/bioklimatik-sistemler",
       features: [
         t("pergolaProducts.bioclimatic.features.rotatable"),
@@ -33,7 +33,7 @@ export function PergolaProductCards() {
       title: t("pergolaProducts.motorized.title"),
       subtitle: t("pergolaProducts.motorized.subtitle"),
       description: t("pergolaProducts.motorized.description"),
-      image: "/pergola/pergola-kafe-aktif.jpeg",
+      image: "/pergola/pergola-kafe-aktif.webp",
       href: "/pergola/motorlu-sistemler",
       features: [
         t("pergolaProducts.motorized.features.sunSensor"),
@@ -48,7 +48,7 @@ export function PergolaProductCards() {
       title: t("pergolaProducts.rolling.title"),
       subtitle: t("pergolaProducts.rolling.subtitle"),
       description: t("pergolaProducts.rolling.description"),
-      image: "/pergola/pergola-render-siyah.jpg",
+      image: "/pergola/pergola-render-siyah.webp",
       href: "/pergola/rolling-roof",
       features: [
         t("pergolaProducts.rolling.features.openClose"),

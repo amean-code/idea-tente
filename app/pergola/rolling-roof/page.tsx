@@ -8,19 +8,17 @@ import { ReferenceProjects } from "@/components/reference-projects"
 import { ContactSection } from "@/components/contact-section"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { getGalleryImages } from "@/lib/gallery-config"
+
+/**
+ * Rolling roof galerisini ortak manifest dosyasından okur.
+ */
+const galleryImages = getGalleryImages("rolling-roof")
 
 /**
  * Rolling Roof Pergola Sayfası
  */
 export default function RollingRoofPage() {
-  // Galeri görselleri
-  const galleryImages = [
-    "/pergola/pergola-kafe-aktif.jpeg",
-    "/pergola/pergola-dıs-mekan.jpeg",
-    "/pergola/pergola-render-siyah.jpg",
-    "/pergola/pergola-beyaz.jpg",
-  ]
-
   // Teknik özellikler
   const specs = [
     {
@@ -103,7 +101,7 @@ export default function RollingRoofPage() {
         <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/pergola/pergola-render-siyah-gece.jpg"
+              src="/pergola/pergola-render-siyah-gece.webp"
               alt="Rolling Roof Pergola"
               fill
               className="object-cover"

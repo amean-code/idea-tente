@@ -10,6 +10,12 @@ import { ZipPerdeProductCards } from "@/components/zip-perde-product-cards"
 import { ReferenceProjects } from "@/components/reference-projects"
 import { ContactSection } from "@/components/contact-section"
 import { useLanguage } from "@/contexts/language-context"
+import { getGalleryImages } from "@/lib/gallery-config"
+
+/**
+ * Zip perde galerisini ortak manifest dosyasından okur.
+ */
+const galleryImages = getGalleryImages("zip-perde")
 
 /**
  * Zip Perde ana sayfası
@@ -17,16 +23,6 @@ import { useLanguage } from "@/contexts/language-context"
  */
 export default function ZipScreenPage() {
   const { t, language } = useLanguage()
-
-  // Galeri görselleri
-  const galleryImages = [
-    "/zip-perde/zip-perde-2.jpeg",
-    "/zip-perde/zip-perde-3.jpeg",
-    "/zip-perde/zip-perde-4.jpeg",
-    "/zip-perde/zip-perde-5.jpeg",
-    "/zip-perde/zip-perde-8.jpeg",
-    "/zip-perde/zip-perde-9.jpeg",
-  ]
 
   // Teknik özellikler - dil değiştiğinde yeniden hesaplanır
   const specs = useMemo(() => [

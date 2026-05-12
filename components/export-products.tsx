@@ -182,7 +182,7 @@ const getExportProducts = (lang: string) => {
     {
       title: t.products.bioclimatic.title,
       description: t.products.bioclimatic.description,
-      image: "/modern-bioclimatic-pergola-with-adjustable-louvers.jpg",
+      image: "/modern-bioclimatic-pergola-with-adjustable-louvers.webp",
       features: t.products.bioclimatic.features,
       markets: t.products.bioclimatic.markets,
       exportReady: true,
@@ -190,7 +190,7 @@ const getExportProducts = (lang: string) => {
     {
       title: t.products.glassSystems.title,
       description: t.products.glassSystems.description,
-      image: "/frameless-glass-sliding-system--modern-terrace-wit.jpg",
+      image: "/frameless-glass-sliding-system--modern-terrace-wit.webp",
       features: t.products.glassSystems.features,
       markets: t.products.glassSystems.markets,
       exportReady: true,
@@ -198,7 +198,7 @@ const getExportProducts = (lang: string) => {
     {
       title: t.products.winterGarden.title,
       description: t.products.winterGarden.description,
-      image: "/winter-garden-conservatory-with-glass-roof--indoor.jpg",
+      image: "/winter-garden-conservatory-with-glass-roof--indoor.webp",
       features: t.products.winterGarden.features,
       markets: t.products.winterGarden.markets,
       exportReady: true,

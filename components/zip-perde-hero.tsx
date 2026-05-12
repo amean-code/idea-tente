@@ -14,7 +14,7 @@ export function ZipPerdeHero() {
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/zip-perde/zip-perde-9.jpeg"
+          src="/zip-perde/zip-perde-9.webp"
           alt="Zip Perde Sistemleri"
           fill
           className="object-cover"

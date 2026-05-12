@@ -10,6 +10,12 @@ import { PergolaProductCards } from "@/components/pergola-product-cards"
 import { ReferenceProjects } from "@/components/reference-projects"
 import { ContactSection } from "@/components/contact-section"
 import { useLanguage } from "@/contexts/language-context"
+import { getGalleryImages } from "@/lib/gallery-config"
+
+/**
+ * Pergola ana sayfa galerisini ortak manifest dosyasından okur.
+ */
+const galleryImages = getGalleryImages("pergola")
 
 /**
  * Pergola Sistemleri ana sayfası
@@ -17,16 +23,6 @@ import { useLanguage } from "@/contexts/language-context"
  */
 export default function BioklimatikPergolaPage() {
   const { t, language } = useLanguage()
-
-  // Galeri görselleri
-  const galleryImages = [
-    "/pergola/pergola-kafe-aktif.jpeg",
-    "/pergola/pergola-dıs-mekan.jpeg",
-    "/pergola/pergola-ic-mekan.jpeg",
-    "/pergola/pergola-kafe-1.jpg",
-    "/pergola/pergola-dıs-gunes.jpeg",
-    "/pergola/pergola-beyaz.jpg",
-  ]
 
   // Teknik özellikler - dil değiştiğinde yeniden hesaplanır
   const specs = useMemo(() => [

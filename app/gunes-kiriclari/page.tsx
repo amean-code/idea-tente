@@ -6,22 +6,18 @@ import { ProductDetailFeatures } from "@/components/product-detail-features"
 import { GunesKiriclariProductCards } from "@/components/gunes-kiriclari-product-cards"
 import { ReferenceProjects } from "@/components/reference-projects"
 import { ContactSection } from "@/components/contact-section"
+import { getGalleryImages } from "@/lib/gallery-config"
+
+/**
+ * Güneş kırıcıları galerisini ortak manifest dosyasından okur.
+ */
+const galleryImages = getGalleryImages("gunes-kiriclari")
 
 /**
  * Güneş Kırıcıları ana sayfası
  * Palmiye Global Platinum ürün sayfası konseptinde tasarlanmıştır
  */
 export default function SunBreakersPage() {
-  // Galeri görselleri
-  const galleryImages = [
-    "/pergola/pergola-dıs-gunes.jpeg",
-    "/pergola/pergola-dıs-gunes-2.jpeg",
-    "/pergola/pergola-kafe-aktif.jpeg",
-    "/pergola/pergola-dıs-mekan.jpeg",
-    "/pergola/pergola-beyaz.jpg",
-    "/pergola/pergola-ic-mekan.jpeg",
-  ]
-
   // Teknik özellikler
   const specs = [
     {

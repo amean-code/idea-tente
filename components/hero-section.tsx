@@ -7,12 +7,12 @@ import { MessageCircle, Play, ArrowRight } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 
 const heroImages = [
-  "/pergola/pergola-kapak.jpeg",
-  "/pergola/pergola-kafe-gorsel.jpg",
-  "/giyotin-cam/giyotin-cam.png",
-  "/pergola/pergola-dıs-mekan.jpeg",
-  "/pergola/pergola-render-siyah-gece.jpg",
-  "/slide-1.jpg",
+  "/pergola/pergola-kapak.webp",
+  "/pergola/pergola-kafe-gorsel.webp",
+  "/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-3.webp",
+  "/pergola/pergola-dıs-mekan.webp",
+  "/pergola/pergola-render-siyah-gece.webp",
+  "/slide-1.webp",
 ]
 
 export function HeroSection() {

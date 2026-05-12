@@ -86,7 +86,7 @@ export default function LuxuryWinterGardenPage() {
         <div 
           className="w-full h-full bg-cover bg-center bg-no-repeat opacity-5"
           style={{
-            backgroundImage: "url('/luxury-winter-garden-panoramic-view.jpg')"
+            backgroundImage: "url('/luxury-winter-garden-panoramic-view.webp')"
           }}
         />
       </div>
@@ -95,7 +95,7 @@ export default function LuxuryWinterGardenPage() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-purple-50 to-pink-100">
-        <div className="absolute inset-0 bg-[url('/luxury-winter-garden-panoramic-view.jpg')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('/luxury-winter-garden-panoramic-view.webp')] bg-cover bg-center opacity-20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-purple-100 text-purple-800 hover:bg-purple-200">
@@ -191,7 +191,7 @@ export default function LuxuryWinterGardenPage() {
             <div className="relative">
               <div className="aspect-video bg-gradient-to-br from-purple-100 to-pink-200 rounded-2xl overflow-hidden">
                 <img
-                  src="/luxury-winter-garden-panoramic-view.jpg"
+                  src="/luxury-winter-garden-panoramic-view.webp"
                   alt="Lüks Kış Bahçesi"
                   className="w-full h-full object-cover"
                 />

@@ -19,7 +19,7 @@ export function CamSistemleriProductCards() {
       id: "surme-cam",
       title: t("glassSystems.products.surmeCam.title"),
       description: t("glassSystems.products.surmeCam.description"),
-      image: "/frameless-sliding-glass-system-terrace.jpg",
+      image: "/frameless-glass-sliding-system--modern-terrace-wit.webp",
       badge: t("glassSystems.products.surmeCam.badge"),
       href: "/cam-sistemleri/surme-cam",
       features: [
@@ -33,7 +33,7 @@ export function CamSistemleriProductCards() {
       id: "katlanir-cam",
       title: t("glassSystems.products.katlanirCam.title"),
       description: t("glassSystems.products.katlanirCam.description"),
-      image: "/folding-glass-system-restaurant.jpg",
+      image: "/folding-glass-gallery-1.webp",
       badge: t("glassSystems.products.katlanirCam.badge"),
       href: "/cam-sistemleri/katlanir-cam",
       features: [
@@ -47,7 +47,7 @@ export function CamSistemleriProductCards() {
       id: "sabit-cam",
       title: t("glassSystems.products.sabitCam.title"),
       description: t("glassSystems.products.sabitCam.description"),
-      image: "/fixed-glass-panels-modern-building.jpg",
+      image: "/folding-glass-gallery-2.webp",
       badge: t("glassSystems.products.sabitCam.badge"),
       href: "/cam-sistemleri/sabit-cam",
       features: [

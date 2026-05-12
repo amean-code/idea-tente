@@ -13,7 +13,7 @@ export function ContactHero() {
       {/* Arka plan görseli */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/company-headquarters-modern-building.jpg"
+          src="/company-headquarters-modern-building.webp"
           alt="İletişim Arka Plan"
           fill
           className="object-cover"

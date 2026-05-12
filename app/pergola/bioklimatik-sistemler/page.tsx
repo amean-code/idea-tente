@@ -12,69 +12,18 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { Download, FileText, BookOpen } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+import { getGalleryImages } from "@/lib/gallery-config"
+
+/**
+ * Bioklimatik sistemler galerisini ortak manifest dosyasından okur.
+ */
+const galleryImages = getGalleryImages("bioklimatik-sistemler")
 
 /**
  * Bioklimatik Pergola Sistemleri Sayfası
  */
 export default function BioklimatikSistemlerPage() {
   const { t, language } = useLanguage()
-  /**
-   * Galeri görselleri - public/bioklimatik-pergola/ klasöründeki görseller
-   * Her görsel bioklimatik-pergola ön ekiyle ve anlamlı açıklayıcı isimlerle tanımlanmıştır
-   */
-  const galleryImages = [
-    "/bioklimatik-pergola/bioklimatik-pergola-idea-kapali-detay.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dis-cephe-kapali-20.webp",
-    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (75).jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-kafe-kapalı-iç-mekan-2.webp",
-    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.45.34 (2).webp",
-    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (74).jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-kafe-kapalı-iç-mekan.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-kafe-açık.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-kapali.webp",
-    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (60).jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-büyük-cephe.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-büyük.webp",
-    "/bioklimatik-pergola/WhatsApp Image 2026-01-fasd20 at 14.24.49.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-dis-mekan-genis.webp",
-    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.44.54 (9).webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-cephe-detay.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-cephe.webp",
-    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.44.58 (1).webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-idea-kapali-cephe.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dis-mekan-kapali.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-ic-mekan-kapali.webp",
-    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.45.16 (2).webp",
-    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.45.16.webp",
-    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.44.54 (2).webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-idea-ic-mekan.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dis-bahce-kapali.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-ic-ofis-acik.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-açılır-kapanır.webp",
-    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.45.29 (3).webp",
-    "/bioklimatik-pergola/havuz-yan-kapalı.jpeg",
-    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.44.55 (2).webp",
-    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (10).webp",
-    "/bioklimatik-pergola/WhatsApp Image 2025-10-18 at 13.44.55 (13).jpeg",
-    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (13).webp",
-    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (98).webp",
-    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (1).jpeg",
-    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (4).jpeg",
-    "/bioklimatik-pergola/BIOCLIMATIC PERGOLA PHOTO (38).jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-görünüm.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-dış-mekan-kare.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-cephe-final.webp",
-    "/bioklimatik-pergola/dış.jpeg",
-    "/bioklimatik-pergola/WhatsApp Image 2026-01-20 at 14.21.33.jpeg",
-    "/bioklimatik-pergola/WhatsApp Image 202dsad6-01-20 at 14.22.52.jpeg",
-    "/bioklimatik-pergola/bahçe.jpeg",
-    "/bioklimatik-pergola/bioklimatik-pergola-dis-cephe-genis.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dis-cephe-idea-10.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-idea-dis-cephe-11.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-dis-bahce-cephe-12.webp",
-    "/bioklimatik-pergola/bioklimatik-pergola-geniş-havuz-üstü.webp",
-    "/bioklimatik-pergola/bioklimatik-açık-üst-görünüm.webp",
-  ]
 
   // Teknik özellikler - dil değiştiğinde yeniden hesaplanır
   const specs = useMemo(() => [

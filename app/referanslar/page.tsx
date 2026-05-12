@@ -19,7 +19,7 @@ export default function ReferencesPage() {
       location: "Antalya, Türkiye",
       year: "2023",
       category: "Otel & Resort",
-      image: "/luxury-resort-pergola-installation.jpg",
+      image: "/luxury-resort-pergola-installation.webp",
       description: "200 m² bioklimatik pergola sistemi ile resort alanı modernizasyonu",
       features: ["Bioklimatik Pergola", "LED Aydınlatma", "Akıllı Kontrol"],
     },
@@ -28,7 +28,7 @@ export default function ReferencesPage() {
       location: "İstanbul, Türkiye",
       year: "2023",
       category: "Kurumsal",
-      image: "/corporate-building-sun-breakers.jpg",
+      image: "/corporate-building-sun-breakers.webp",
       description: "Ofis binası cephe güneş kırıcı sistemleri uygulaması",
       features: ["Güneş Kırıcı", "Enerji Tasarrufu", "Modern Tasarım"],
     },
@@ -37,7 +37,7 @@ export default function ReferencesPage() {
       location: "İzmir, Türkiye",
       year: "2022",
       category: "Restoran",
-      image: "/seaside-restaurant-glass-systems.jpg",
+      image: "/seaside-restaurant-glass-systems.webp",
       description: "Deniz manzaralı restoran cam sistemleri ve pergola uygulaması",
       features: ["Cam Sistemleri", "Zip Perde", "Rüzgar Dayanımı"],
     },
@@ -46,7 +46,7 @@ export default function ReferencesPage() {
       location: "Bodrum, Türkiye",
       year: "2022",
       category: "Konut",
-      image: "/private-villa-winter-garden.jpg",
+      image: "/private-villa-winter-garden.webp",
       description: "Özel villa kompleksi kış bahçesi ve pergola projeleri",
       features: ["Kış Bahçesi", "Premium Malzeme", "Özel Tasarım"],
     },
@@ -55,7 +55,7 @@ export default function ReferencesPage() {
       location: "Ankara, Türkiye",
       year: "2021",
       category: "Ticari",
-      image: "/shopping-mall-terrace-pergola.jpg",
+      image: "/shopping-mall-terrace-pergola.webp",
       description: "AVM teras alanı pergola ve gölgelendirme sistemleri",
       features: ["Büyük Açıklık", "Dayanıklı Yapı", "Estetik Tasarım"],
     },
@@ -64,7 +64,7 @@ export default function ReferencesPage() {
       location: "Çeşme, Türkiye",
       year: "2021",
       category: "Eğlence",
-      image: "/beach-club-pergola-systems.jpg",
+      image: "/beach-club-pergola-systems.webp",
       description: "Beach club alanı pergola ve zip perde sistemleri",
       features: ["Deniz Dayanımı", "Büyük Boyut", "Hızlı Montaj"],
     },
@@ -93,7 +93,7 @@ export default function ReferencesPage() {
         {/* Arka Plan Görseli */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/luxury-resort-pergola-installation.jpg"
+            src="/luxury-resort-pergola-installation.webp"
             alt="Referans Projelerimiz"
             className="w-full h-full object-cover"
           />

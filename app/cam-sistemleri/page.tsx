@@ -22,7 +22,7 @@ export default function CamSistemleriPage() {
       id: "giyotin",
       title: t("glassSystems.products.surmeCam.title"),
       description: t("glassSystems.products.surmeCam.description"),
-      image: "/giyotin-cam/giyotin-cam-sistemleri-ev-dis-acik-1.jpeg",
+      image: "/giyotin-cam/giyotin-cam-sistemleri-ev-dis-acik-1.webp",
       badge: t("glassSystems.products.surmeCam.badge"),
       href: "/cam-sistemleri/giyotin-cam-sistemleri",
       icon: Move,
@@ -37,7 +37,7 @@ export default function CamSistemleriPage() {
       id: "surme",
       title: t("glassSystems.slidingGlass.hero.title"),
       description: t("glassSystems.slidingGlass.hero.description"),
-      image: "/SürmeCam/sürme-cam-sistemleri-dis-gorunum-1.jpeg",
+      image: "/SürmeCam/sürme-cam-sistemleri-dis-gorunum-1.webp",
       badge: "Modern",
       href: "/cam-sistemleri/surme-cam",
       icon: Maximize,
@@ -61,7 +61,7 @@ export default function CamSistemleriPage() {
         <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
           <div className="absolute inset-0 z-0 opacity-20">
             <Image
-              src="/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-3.jpeg"
+              src="/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-3.webp"
               alt="Cam Sistemleri"
               fill
               className="object-cover"

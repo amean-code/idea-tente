@@ -19,7 +19,7 @@ export function GunesKiriclariProductCards() {
       id: "sabit",
       title: t("sunBreakers.products.sabit.title"),
       description: t("sunBreakers.products.sabit.description"),
-      image: "/fixed-sun-breakers-building-facade.jpg",
+      image: "/fixed-aluminum-sun-breaker-system.webp",
       badge: t("sunBreakers.products.sabit.badge"),
       href: "/gunes-kiriclari/sabit-gunes-kirici",
       features: [
@@ -33,7 +33,7 @@ export function GunesKiriclariProductCards() {
       id: "dikey",
       title: t("sunBreakers.products.dikey.title"),
       description: t("sunBreakers.products.dikey.description"),
-      image: "/vertical-sun-breakers-modern-facade.jpg",
+      image: "/vertical-facade-sun-control-system.webp",
       badge: t("sunBreakers.products.dikey.badge"),
       href: "/gunes-kiriclari/dikey-gunes-kirici",
       features: [
@@ -47,7 +47,7 @@ export function GunesKiriclariProductCards() {
       id: "hareketli",
       title: t("sunBreakers.products.hareketli.title"),
       description: t("sunBreakers.products.hareketli.description"),
-      image: "/motorized-sun-breakers-automatic.jpg",
+      image: "/motorized-adjustable-sun-breaker.webp",
       badge: t("sunBreakers.products.hareketli.badge"),
       href: "/gunes-kiriclari/hareketli-gunes-kirici",
       features: [

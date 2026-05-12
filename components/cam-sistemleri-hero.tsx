@@ -36,7 +36,7 @@ export function CamSistemleriHero(props?: CamSistemleriHeroProps) {
     props?.subdescription || t("glassSystems.hero.subdescription"), 
     [props?.subdescription, t, language]
   )
-  const imageSrc = props?.imageSrc || "/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-3.jpeg"
+  const imageSrc = props?.imageSrc || "/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-3.webp"
 
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">

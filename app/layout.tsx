@@ -27,11 +27,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/idea-logo.jpg", sizes: "167x161", type: "image/jpeg" },
-      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+      { url: "/idea-logo.webp", sizes: "167x161", type: "image/webp" },
+      { url: "/icon-192.webp", sizes: "192x192", type: "image/webp" },
+      { url: "/icon-512.webp", sizes: "512x512", type: "image/webp" },
     ],
-    apple: "/idea-logo.jpg",
+    apple: "/idea-logo.webp",
     shortcut: "/favicon.ico",
   },
 }

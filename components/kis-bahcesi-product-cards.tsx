@@ -19,7 +19,7 @@ export function KisBahcesiProductCards() {
       id: "standart",
       title: t("winterGarden.products.standart.title"),
       description: t("winterGarden.products.standart.description"),
-      image: "/standard-winter-garden-double-glass.jpg",
+      image: "/standard-winter-garden-double-glass.webp",
       badge: t("winterGarden.products.standart.badge"),
       href: "/kis-bahcesi/standart-kis-bahcesi",
       features: [
@@ -33,7 +33,7 @@ export function KisBahcesiProductCards() {
       id: "premium",
       title: t("winterGarden.products.premium.title"),
       description: t("winterGarden.products.premium.description"),
-      image: "/premium-winter-garden-smart-glass.jpg",
+      image: "/premium-winter-garden-smart-glass.webp",
       badge: t("winterGarden.products.premium.badge"),
       href: "/kis-bahcesi/premium-kis-bahcesi",
       features: [
@@ -47,7 +47,7 @@ export function KisBahcesiProductCards() {
       id: "lux",
       title: t("winterGarden.products.lux.title"),
       description: t("winterGarden.products.lux.description"),
-      image: "/luxury-winter-garden-panoramic-view.jpg",
+      image: "/luxury-winter-garden-panoramic-view.webp",
       badge: t("winterGarden.products.lux.badge"),
       href: "/kis-bahcesi/lux-kis-bahcesi",
       features: [

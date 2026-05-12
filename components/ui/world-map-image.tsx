@@ -44,7 +44,7 @@ export default function WorldMapImage({
       {/* Dünya haritası arka planı */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/maps/world-map-blue.png"
+          src="/images/maps/world-map-blue.webp"
           alt="Dünya Haritası"
           width={mapWidth}
           height={mapHeight}

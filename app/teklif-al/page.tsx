@@ -89,7 +89,7 @@ export default function QuotePage() {
         {/* Arka plan görseli */}
         <div className="absolute inset-0">
           <Image
-            src="/modern-bioclimatic-pergola-with-adjustable-louvers.jpg"
+            src="/modern-bioclimatic-pergola-with-adjustable-louvers.webp"
             alt="Teklif Al"
             fill
             className="object-cover"
@@ -385,7 +385,7 @@ export default function QuotePage() {
                   </Button>
                   <Button asChild className="w-full bg-green-600 hover:bg-green-700 text-white" size="lg">
                     <a href={contactInfo.whatsapp.quote} target="_blank" rel="noopener noreferrer">
-                      <Image src="/wp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
+                      <Image src="/wp-icon.webp" alt="WhatsApp" width={20} height={20} className="mr-2" />
                       {t("quotePage.quickContact.whatsapp")}
                     </a>
                   </Button>

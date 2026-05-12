@@ -8,43 +8,17 @@ import { ReferenceProjects } from "@/components/reference-projects"
 import { ContactSection } from "@/components/contact-section"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { getGalleryImages } from "@/lib/gallery-config"
+
+/**
+ * Motorlu sistemler galerisini ortak manifest dosyasından okur.
+ */
+const galleryImages = getGalleryImages("motorlu-sistemler")
 
 /**
  * Motorlu Pergola Sistemleri Sayfası
  */
 export default function MotorlupergolaPage() {
-  /**
-   * Galeri görselleri - public/motorlu-pergola/ klasöründeki görseller
-   * Her görsel motorlu-pergolar ön ekiyle ve anlamlı açıklayıcı isimlerle tanımlanmıştır
-   */
-  const galleryImages = [
-    "/motorlu-pergola/motorlu-pergolar-idea-dis-cekim-1.png",
-    "/motorlu-pergola/motorlu-pergolar-idea-ic-gorunum-1.png",
-    "/motorlu-pergola/motorlu-pergolar-idea-dis-cekim-2.png",
-    "/motorlu-pergola/motorlu-pergolar-idea-ic-gorunum-2.png",
-    "/motorlu-pergola/motorlu-pergolar-kafe-dis-cekim-1.png",
-    "/motorlu-pergola/motorlu-pergolar-kafe-ic-gorunum-1.png",
-    "/motorlu-pergola/motorlu-pergolar-restorant-dis-cekim-1.png",
-    "/motorlu-pergola/motorlu-pergolar-restorant-ic-gorunum-1.png",
-    "/motorlu-pergola/motorlu-pergolar-ev-dis-cekim-1.png",
-    "/motorlu-pergola/motorlu-pergolar-ev-ic-gorunum-1.png",
-    "/motorlu-pergola/motorlu-pergolar-idea-dis-cekim-3.jpeg",
-    "/motorlu-pergola/motorlu-pergolar-idea-ic-gorunum-3.jpeg",
-    "/motorlu-pergola/motorlu-pergolar-kafe-dis-cekim-2.jpeg",
-    "/motorlu-pergola/motorlu-pergolar-kafe-ic-gorunum-2.jpg",
-    "/motorlu-pergola/motorlu-pergolar-restorant-dis-cekim-2.jpg",
-    "/motorlu-pergola/motorlu-pergolar-restorant-ic-gorunum-2.jpg",
-    "/motorlu-pergola/motorlu-pergolar-ev-dis-cekim-2.jpg",
-    "/motorlu-pergola/motorlu-pergolar-ev-ic-gorunum-2.jpg",
-    "/motorlu-pergola/motorlu-pergolar-idea-dis-cekim-4.jpg",
-    "/motorlu-pergola/motorlu-pergolar-idea-ic-gorunum-4.jpg",
-    "/motorlu-pergola/motorlu-pergolar-kafe-dis-cekim-3.jpeg",
-    "/motorlu-pergola/motorlu-pergolar-kafe-ic-gorunum-3.jpeg",
-    "/motorlu-pergola/motorlu-pergolar-restorant-dis-cekim-3.jpeg",
-    "/motorlu-pergola/motorlu-pergolar-restorant-ic-gorunum-3.jpeg",
-    "/motorlu-pergola/motorlu-pergolar-ev-dis-cekim-3.jpg",
-  ]
-
   // Teknik özellikler
   const specs = [
     {
@@ -127,7 +101,7 @@ export default function MotorlupergolaPage() {
         <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/pergola/pergola-render-siyah-gece.jpg"
+              src="/pergola/pergola-render-siyah-gece.webp"
               alt="Motorlu Pergola Sistemleri"
               fill
               className="object-cover"

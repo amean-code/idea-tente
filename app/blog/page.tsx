@@ -10,7 +10,7 @@ export default function BlogPage() {
     {
       title: "2024 Pergola Trendleri: Modern Outdoor Yaşam",
       excerpt: "Bu yıl outdoor yaşam alanlarında öne çıkan pergola trendlerini ve tasarım yeniliklerini keşfedin.",
-      image: "/modern-pergola-trends-2024.jpg",
+      image: "/modern-pergola-trends-2024.webp",
       category: "Trendler",
       author: "Ahmet Yılmaz",
       date: "15 Mart 2024",
@@ -19,7 +19,7 @@ export default function BlogPage() {
     {
       title: "Bioklimatik Pergola ile Enerji Tasarrufu",
       excerpt: "Akıllı lamel sistemleri sayesinde enerji maliyetlerinizi nasıl %40'a kadar azaltabileceğinizi öğrenin.",
-      image: "/bioclimatic-pergola-energy-saving.jpg",
+      image: "/bioclimatic-pergola-energy-saving.webp",
       category: "Teknoloji",
       author: "Elif Kaya",
       date: "10 Mart 2024",
@@ -28,7 +28,7 @@ export default function BlogPage() {
     {
       title: "Kış Bahçesi Bakım Rehberi",
       excerpt: "Kış bahçenizin uzun ömürlü olması için gerekli bakım adımları ve önemli ipuçları.",
-      image: "/winter-garden-maintenance-guide.jpg",
+      image: "/winter-garden-maintenance-guide.webp",
       category: "Bakım",
       author: "Mehmet Demir",
       date: "5 Mart 2024",
@@ -37,7 +37,7 @@ export default function BlogPage() {
     {
       title: "Cam Sistemleri: Frameless vs Çerçeveli",
       excerpt: "Cam sistemlerinde frameless ve çerçeveli seçeneklerin avantajlarını karşılaştırıyoruz.",
-      image: "/glass-systems-comparison.jpg",
+      image: "/glass-systems-comparison.webp",
       category: "Karşılaştırma",
       author: "Ayşe Özkan",
       date: "28 Şubat 2024",
@@ -46,7 +46,7 @@ export default function BlogPage() {
     {
       title: "Zip Perde Seçim Rehberi",
       excerpt: "İhtiyacınıza en uygun zip perde sistemini seçmek için bilmeniz gereken tüm detaylar.",
-      image: "/zip-screen-selection-guide.jpg",
+      image: "/zip-screen-selection-guide.webp",
       category: "Rehber",
       author: "Can Arslan",
       date: "20 Şubat 2024",
@@ -55,7 +55,7 @@ export default function BlogPage() {
     {
       title: "Outdoor Alanlar için Aydınlatma İpuçları",
       excerpt: "Pergola ve outdoor alanlarınızı doğru aydınlatma ile nasıl daha etkileyici hale getirebilirsiniz.",
-      image: "/outdoor-lighting-tips.jpg",
+      image: "/outdoor-lighting-tips.webp",
       category: "Tasarım",
       author: "Zeynep Yıldız",
       date: "15 Şubat 2024",
@@ -74,7 +74,7 @@ export default function BlogPage() {
         {/* Arka Plan Görseli */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/pergola/pergola-beyaz.jpg"
+            src="/pergola/pergola-beyaz.webp"
             alt="Blog"
             className="w-full h-full object-cover"
           />

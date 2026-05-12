@@ -19,7 +19,7 @@ export function ZipPerdeProductCards() {
       id: "manuel",
       title: t("zipScreen.products.manuel.title"),
       description: t("zipScreen.products.manuel.description"),
-      image: "/manual-zip-screen-system-terrace.jpg",
+      image: "/manual-zip-screen-system.webp",
       badge: t("zipScreen.products.manuel.badge"),
       href: "/zip-perde/manuel-zip-perde",
       features: [
@@ -33,7 +33,7 @@ export function ZipPerdeProductCards() {
       id: "motorlu",
       title: t("zipScreen.products.motorlu.title"),
       description: t("zipScreen.products.motorlu.description"),
-      image: "/motorized-zip-screen-remote-control.jpg",
+      image: "/motorized-zip-screen-remote-control.webp",
       badge: t("zipScreen.products.motorlu.badge"),
       href: "/zip-perde/motorlu-zip-perde",
       features: [
@@ -47,7 +47,7 @@ export function ZipPerdeProductCards() {
       id: "akilli",
       title: t("zipScreen.products.akilli.title"),
       description: t("zipScreen.products.akilli.description"),
-      image: "/smart-zip-screen-sensor-control.jpg",
+      image: "/smart-zip-screen-sensor-control.webp",
       badge: t("zipScreen.products.akilli.badge"),
       href: "/zip-perde/akilli-zip-perde",
       features: [

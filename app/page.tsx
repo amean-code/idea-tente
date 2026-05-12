@@ -14,7 +14,7 @@ export default function HomePage() {
         <div 
           className="w-full h-full bg-cover bg-center bg-no-repeat opacity-5"
           style={{
-            backgroundImage: "url('/luxury-modern-pergola-with-glass-panels-by-pool-at.jpg')"
+            backgroundImage: "url('/luxury-modern-pergola-with-glass-panels-by-pool-at.webp')"
           }}
         />
       </div>

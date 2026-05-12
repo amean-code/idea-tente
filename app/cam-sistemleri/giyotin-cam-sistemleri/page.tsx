@@ -10,6 +10,12 @@ import { CamSistemleriProductCards } from "@/components/cam-sistemleri-product-c
 import { ReferenceProjects } from "@/components/reference-projects"
 import { ContactSection } from "@/components/contact-section"
 import { useLanguage } from "@/contexts/language-context"
+import { getGalleryImages } from "@/lib/gallery-config"
+
+/**
+ * Giyotin cam galerisini ortak manifest dosyasından okur.
+ */
+const galleryImages = getGalleryImages("giyotin-cam-sistemleri")
 
 /**
  * Giyotin Cam Sistemleri sayfası
@@ -17,39 +23,6 @@ import { useLanguage } from "@/contexts/language-context"
  */
 export default function GiyotinCamSistemleriPage() {
   const { t, language } = useLanguage()
-
-  /**
-   * Galeri görselleri - public/giyotin-cam/ klasöründeki görseller
-   * Her görsel giyotin-cam-sistemleri ön ekiyle ve anlamlı açıklayıcı isimlerle tanımlanmıştır
-   */
-  const galleryImages = [
-    "/giyotin-cam/giyotin-cam-sistemleri-ev-dis-acik-4.jpeg",
-    "/giyotin-cam/giyotin-cam-sistemleri-idea-dis-acik-1.jpeg",
-    "/giyotin-cam/giyotin-cam-sistemleri-kafe-dis-acik-1.jpeg",
-    "/giyotin-cam/giyotin-cam-sistemleri-ev-ic-acik-1.jpg",
-    "/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-1.jpeg",
-    "/giyotin-cam/giyotin-cam-sistemleri-idea-ic-acik-1.JPG",
-    "/giyotin-cam/giyotin-cam-sistemleri-kafe-ic-acik-1.JPG",
-    "/giyotin-cam/giyotin-cam-sistemleri-idea-tasarim.png",
-    "/giyotin-cam/giyotin-cam-sistemleri-ev-dis-acik-1.jpeg",
-    "/giyotin-cam/giyotin-cam-sistemleri-restorant-ic-acik-1.jpeg",
-    "/giyotin-cam/giyotin-cam-sistemleri-kafe-dis-acik-2.jpeg",
-    "/giyotin-cam/giyotin-cam-sistemleri-ev-dis-acik-2.jpeg",
-    "/giyotin-cam/giyotin-cam-sistemleri-idea-dis-acik-2.png",
-    "/giyotin-cam/giyotin-cam-sistemleri-kafe-dis-acik-3.png",
-    "/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-2.png",
-    "/giyotin-cam/giyotin-cam-sistemleri-ev-ic-acik-2.png",
-    "/giyotin-cam/giyotin-cam-sistemleri-idea-ic-acik-2.png",
-    "/giyotin-cam/giyotin-cam-sistemleri-kafe-ic-acik-2.png",
-    "/giyotin-cam/giyotin-cam-sistemleri-restorant-ic-acik-2.png",
-    "/giyotin-cam/giyotin-cam-sistemleri-ev-dis-acik-3.png",
-    "/giyotin-cam/giyotin-cam-sistemleri-idea-dis-acik-3.jpeg",
-    "/giyotin-cam/giyotin-cam-sistemleri-kafe-dis-acik-4.JPG",
-    "/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-3.jpeg",
-    "/giyotin-cam/giyotin-cam-sistemleri-kafe-ic-acik-3.jpeg",
-    "/giyotin-cam/giyotin-cam-sistemleri-idea-dis-acik-4.jpeg",
-    "/giyotin-cam/giyotin-cam-sistemleri-kose-detay.png",
-  ]
 
   /**
    * Teknik özellikler - dil değiştiğinde yeniden hesaplanır
