@@ -29,8 +29,8 @@ export default function BioklimatikPergolaPage() {
       title: t("pergola.mainPage.specs.dimensions"),
       icon: "ruler" as const,
       items: [
-        { label: t("pergola.mainPage.specs.maxWidth"), value: "8 m" },
-        { label: t("pergola.mainPage.specs.maxDepth"), value: "9 m" },
+        { label: t("pergola.mainPage.specs.maxWidth"), value: "800 cm" },
+        { label: t("pergola.mainPage.specs.maxDepth"), value: "900 cm" },
         { label: t("pergola.mainPage.specs.maxArea"), value: "43 m²" },
       ]
     },

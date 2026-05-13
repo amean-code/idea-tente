@@ -30,8 +30,8 @@ export default function WinterGardenPage() {
       title: t("winterGarden.specs.dimensions"),
       icon: "ruler" as const,
       items: [
-        { label: t("winterGarden.specs.areaRange"), value: "10 - 100 m²" },
-        { label: t("winterGarden.specs.maxHeight"), value: "350 cm" },
+        { label: t("winterGarden.specs.areaRange"), value: "100 cm - 1300 cm" },
+        { label: t("winterGarden.specs.maxLength"), value: "400 cm" },
       ]
     },
     {
@@ -55,8 +55,9 @@ export default function WinterGardenPage() {
       title: t("winterGarden.specs.additionalFeatures"),
       icon: "layers" as const,
       items: [
-        { label: t("winterGarden.specs.soundInsulation"), value: "35-40 dB" },
+        { label: t("winterGarden.specs.soundInsulation"), value: "32-40 dB (Isıcam + lamine cam) / 40-45 dB+ (Özel akustik lamine cam)" },
         { label: t("winterGarden.specs.energySaving"), value: t("winterGarden.specs.energySavingValue") },
+        { label: t("winterGarden.specs.ceilingClosureOption"), value: t("winterGarden.specs.ceilingClosureOptionValue") },
       ]
     },
   ], [t, language])
@@ -89,9 +90,9 @@ export default function WinterGardenPage() {
       icon: "wind" as const,
     },
     {
-      title: t("winterGarden.features.smartControl.title"),
-      description: t("winterGarden.features.smartControl.description"),
-      icon: "smartphone" as const,
+      title: t("winterGarden.features.ledLighting.title"),
+      description: t("winterGarden.features.ledLighting.description"),
+      icon: "zap" as const,
     },
   ], [t, language])
 

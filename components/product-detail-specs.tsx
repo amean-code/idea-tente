@@ -25,7 +25,7 @@ const iconMap = {
 }
 
 /**
- * Ürün teknik özellikleri - Palmiye Global stilinde
+ * Ürün teknik özellikleri -
  * Kategorilere ayrılmış spesifikasyonlar
  */
 export function ProductDetailSpecs({ categories }: ProductDetailSpecsProps) {

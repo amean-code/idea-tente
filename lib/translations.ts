@@ -812,7 +812,7 @@ export const translations = {
     productDetail: {
       specs: {
         title: "Teknik Özellikler",
-        subtitle: "Ürünümüzün detaylı teknik özellikleri ve boyutları"
+        subtitle: "Ürünümüzün detaylı teknik özellikleri"
       },
       features: {
         defaultTitle: "Kontrol ve Otomasyon",
@@ -1384,7 +1384,7 @@ export const translations = {
         },
         energyEfficiency: {
           title: "Enerji Verimliliği",
-          description: "Özel üretim konfor/sinerji cam seçenekleri ile normal ısı cama göre daha fazla ısı yalıtımı ve enerji tasarrufu sağlar."
+          description: "Özel üretim konfor/sinerji cam seçenekleri ile normal ısı cama göre %50 daha fazla ısı yalıtımı ve enerji tasarrufu sağlar."
         },
         soundInsulation: {
           title: "Ses Yalıtımı",
@@ -1426,7 +1426,7 @@ export const translations = {
           },
           energyEfficiency: {
             title: "Enerji Verimliliği",
-            description: "Özel üretim konfor/sinerji cam seçenekleri ile normal ısı cama göre daha fazla ısı yalıtımı ve enerji tasarrufu sağlar."
+            description: "Özel üretim konfor/sinerji cam seçenekleri ile normal ısı cama göre %50 daha fazla ısı yalıtımı ve enerji tasarrufu sağlar."
           }
         },
         gallery: {
@@ -1444,9 +1444,8 @@ export const translations = {
     winterGarden: {
       hero: {
         badge: "4 Mevsim Konfor",
-        title: "Kış Bahçesi ile 4 Mevsim Konfor",
-        description: "Modern cam teknolojisi ile tasarlanan kış bahçeleri, yaşam alanınızı genişletir ve doğayla iç içe konforlu bir ortam sunar.",
-        subdescription: "Termal izolasyon, dayanıklılık ve akıllı kontrol sistemleri ile her mevsim kullanılabilir yaşam alanı."
+        title: "Kış Bahçesi Cam Tavan Sistemleri",
+        description: "Yalıtımlı ve güvenlikli cam teknolojisi ile tasarlanan cam tavan kış bahçeleri yaşam alanınızda ferah bir kullanım olanağı sunar.",
       },
       wizard: {
         title: "Kış Bahçenizi Seçin",
@@ -1495,21 +1494,23 @@ export const translations = {
         productStandards: "Ürün Standartları",
         colorOptions: "Renk Seçenekleri",
         additionalFeatures: "Ek Özellikler",
-        areaRange: "Alan (min. - maks.)",
-        maxHeight: "Yükseklik (maks.)",
+        areaRange: "Genişlik (min. - maks.)",
+        maxLength: "Uzunluk (maks.)",
         glassType: "Cam Tipi",
-        glassTypeValue: "Çift Cam / Low-E",
+        glassTypeValue: "5 + 5 + 12 + 5 mm = 27 mm Lamine Temperli cam",
         profile: "Profil",
-        profileValue: "Alüminyum",
-        thermalInsulation: "Isı Yalıtımı",
-        thermalInsulationValue: "Yüksek Performans",
+        profileValue: "Alüminyum 6063-T6 F25",
+        thermalInsulation: "Isı ve Hava Yalıtımı",
+        thermalInsulationValue: "Dual - EPDM conta sistemi",
         profileColor: "Profil Rengi",
         profileColorValue: "RAL Renk Seçenekleri",
         glass: "Cam",
-        glassValue: "Şeffaf / Tonlu",
+        glassValue: "Şeffaf / Füme / Reflekte / Satine / Mavi / Yeşil / Bronz",
         soundInsulation: "Ses Yalıtımı",
         energySaving: "Enerji Tasarrufu",
-        energySavingValue: "%40'a kadar"
+        energySavingValue: "Low-E Konfor/Sinerji cam seçenekleri",
+        ceilingClosureOption: "Tavan kapatma seçeneği",
+        ceilingClosureOptionValue: "Polikarbon (10mm - 16mm)",
       },
       features: {
         title: "Konfor ve Teknoloji",
@@ -1520,23 +1521,23 @@ export const translations = {
         },
         energySaving: {
           title: "Enerji Tasarrufu",
-          description: "Çift cam ve özel profil yapısı ile enerji tüketiminizi %40'a kadar azaltır."
+          description: "Özel üretim konfor/sinerji cam seçenekleri ile normal ısı cama göre %50 daha fazla ısı yalıtımı ve enerji tasarrufu sağlar."
         },
         soundInsulation: {
           title: "Ses Yalıtımı",
-          description: "Özel cam ve profil sistemi ile dış gürültüleri minimize eder."
+          description: "Yalıtım contalı alüminyum profil sistemi ile dış gürültüleri minimize eder."
         },
         security: {
           title: "Güvenlik",
-          description: "Temperli cam ve sağlam alüminyum profil ile maksimum güvenlik sağlar."
+          description: "Temperli ve lamine cam, yüksek dayanımlı alüminyum profil ile maksimum güvenlik sağlar."
         },
         automaticVentilation: {
-          title: "Otomatik Havalandırma",
-          description: "Akıllı havalandırma sistemi ile taze hava sirkülasyonu sağlar."
+          title: "%100 Su Geçirmezlik",
+          description: "Monoblok tasarımlı, drenaj sistemli oluk profili ve özel conta sistemi ile %100 su geçirmezlik sağlar."
         },
-        smartControl: {
-          title: "Akıllı Kontrol",
-          description: "Mobil uygulama ile ısıtma, havalandırma ve aydınlatmayı kontrol edin."
+        ledLighting: {
+          title: "LED Aydınlatma",
+          description: "Üst yatay alüminyum taşıyıcı profillere entegre edilmiş, dimlenebilir, kumanda kontrollü LED ışık sistemi"
         }
       }
     },
@@ -1987,6 +1988,19 @@ export const translations = {
         profileMaterialValue: "Aluminum 6063-T6 F25",
         lockType: "Lock System",
         lockTypeValue: "Espagnolette / Clip Lock System",
+      },
+    },
+    winterGarden: {
+      specs: {
+        ceilingClosureOption: "Ceiling closure option",
+        ceilingClosureOptionValue: "Polycarbonate (10mm - 16mm)",
+      },
+      features: {
+        ledLighting: {
+          title: "LED Lighting",
+          description:
+            "The space is illuminated with linear LEDs mounted on the fabric profiles.",
+        },
       },
     },
     // Hero Section
@@ -2791,6 +2805,18 @@ export const translations = {
         profileMaterialValue: "ألومنيوم 6063-T6 F25",
         lockType: "نظام القفل",
         lockTypeValue: "إسبانيوليت / نظام قفل كليبس",
+      },
+    },
+    winterGarden: {
+      specs: {
+        ceilingClosureOption: "خيار إغلاق السقف",
+        ceilingClosureOptionValue: "بولي كربونات (10مم - 16مم)",
+      },
+      features: {
+        ledLighting: {
+          title: "إضاءة LED",
+          description: "يُضاء المكان بمصابيح LED خطية مثبتة على ملفات القماش.",
+        },
       },
     },
     // Hero Section
@@ -3687,6 +3713,19 @@ export const translations = {
         lockTypeValue: "Espagnolette / Klipp-Schließsystem",
       },
     },
+    winterGarden: {
+      specs: {
+        ceilingClosureOption: "Dachabschluss-Option",
+        ceilingClosureOptionValue: "Polycarbonat (10mm - 16mm)",
+      },
+      features: {
+        ledLighting: {
+          title: "LED-Beleuchtung",
+          description:
+            "Der Raum wird mit linearen LEDs beleuchtet, die auf den Stoffprofilen montiert sind.",
+        },
+      },
+    },
     // Hero Section
     hero: {
       title: "Premium Bioclimatic Pergola & Glass Systems",
@@ -4581,6 +4620,19 @@ export const translations = {
         profileMaterialValue: "Алюминий 6063-T6 F25",
         lockType: "Система запирания",
         lockTypeValue: "Эспаньолета / клипсовый замок",
+      },
+    },
+    winterGarden: {
+      specs: {
+        ceilingClosureOption: "Вариант перекрытия крыши",
+        ceilingClosureOptionValue: "Поликарбонат (10мм - 16мм)",
+      },
+      features: {
+        ledLighting: {
+          title: "Светодиодное освещение",
+          description:
+            "Помещение освещается линейными светодиодами, устанавливаемыми на профилях с полотном.",
+        },
       },
     },
     // Hero Section

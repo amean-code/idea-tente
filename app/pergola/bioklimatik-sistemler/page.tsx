@@ -31,8 +31,8 @@ export default function BioklimatikSistemlerPage() {
       title: t("pergola.bioclimatic.specs.dimensions"),
       icon: "ruler" as const,
       items: [
-        { label: t("pergola.bioclimatic.specs.maxWidth"), value: "8 m" },
-        { label: t("pergola.bioclimatic.specs.maxDepth"), value: "9 m" },
+        { label: t("pergola.bioclimatic.specs.maxWidth"), value: "800 cm" },
+        { label: t("pergola.bioclimatic.specs.maxDepth"), value: "900 cm" },
         { label: t("pergola.bioclimatic.specs.maxArea"), value: "43 m²" },
         { label: t("pergola.bioclimatic.specs.verticalProfile"), value: "16 cm x 14 cm" },
         { label: t("pergola.bioclimatic.specs.horizontalProfile"), value: "12 cm x 18 cm" },

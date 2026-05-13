@@ -24,8 +24,8 @@ export default function MotorlupergolaPage() {
       title: "Boyutlar",
       icon: "ruler" as const,
       items: [
-        { label: "Maksimum Genişlik", value: "10 m" },
-        { label: "Maksimum Derinlik", value: "10 m" },
+        { label: "Maksimum Genişlik", value: "1000 cm" },
+        { label: "Maksimum Derinlik", value: "1000 cm" },
         { label: "Maksimum Alan", value: "60 m²" },
       ]
     },
