@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/contexts/language-context"
+import { pergolaPublicSrc } from "@/lib/pergola-public-path"
 
 /**
  * Kış Bahçesi Hero Section
@@ -14,7 +15,7 @@ export function KisBahcesiHero() {
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/pergola/pergola-kapak.webp"
+          src={pergolaPublicSrc("/pergola/pergola-kapak.webp")}
           alt="Kış Bahçesi Sistemleri"
           fill
           className="object-cover"

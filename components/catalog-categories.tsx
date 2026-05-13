@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Download, ArrowRight, FileText, Zap, Layers } from "lucide-react"
 import Link from "next/link"
 import { useLanguage } from "@/contexts/language-context"
+import { pergolaPublicSrc } from "@/lib/pergola-public-path"
 
 /**
  * Katalog kategorileri bileşeni
@@ -86,7 +87,7 @@ export function CatalogCategories() {
               {/* Görsel */}
               <div className="relative aspect-video overflow-hidden">
                 <img
-                  src={category.image}
+                  src={pergolaPublicSrc(category.image)}
                   alt={category.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />

@@ -106,6 +106,28 @@ export async function listSampleTigrisObjects(client: S3Client, bucket: string, 
 }
 
 /**
+ * Bucket içinde önek ve isteğe bağlı devam belirteci ile sayfalanmış nesne listesi döndürür.
+ */
+export async function listTigrisObjectPage(
+  client: S3Client,
+  bucket: string,
+  options: {
+    prefix?: string
+    maxKeys?: number
+    continuationToken?: string
+  },
+) {
+  return client.send(
+    new ListObjectsV2Command({
+      Bucket: bucket,
+      Prefix: options.prefix,
+      MaxKeys: options.maxKeys ?? 50,
+      ContinuationToken: options.continuationToken,
+    }),
+  )
+}
+
+/**
  * S3 nesne anahtarındaki her yol segmentini URL-yolu için güvenli biçimde kodlar.
  */
 export function encodeS3KeyForUrlPath(key: string) {

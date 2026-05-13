@@ -8,6 +8,7 @@ import { ArrowRight, Leaf, Cpu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { useLanguage } from "@/contexts/language-context"
+import { pergolaPublicSrc } from "@/lib/pergola-public-path"
 
 /**
  * `/pergola` ana sayfasında bioklimatik ve motorlu alt sayfalara `/cam-sistemleri` ile aynı kart düzeninde yönlendirir.
@@ -82,7 +83,7 @@ export function PergolaProductCards() {
                 <div className="relative overflow-hidden rounded-2xl bg-card shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col border border-gray-200">
                   <div className="relative h-80 overflow-hidden">
                     <Image
-                      src={system.image}
+                      src={pergolaPublicSrc(system.image)}
                       alt={system.title}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"

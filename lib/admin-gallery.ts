@@ -1,6 +1,8 @@
 import { access, readdir, readFile, writeFile } from "fs/promises"
 import { constants } from "fs"
 import path from "path"
+import { createTigrisS3ClientFromEnv, readTigrisStorageConfigFromEnv } from "@/lib/storage/tigris-s3"
+import { listPergolaBucketPublicPaths } from "@/lib/pergola-bucket-server"
 
 export interface EditableGallery {
   label: string
@@ -142,7 +144,19 @@ export async function saveGalleryImages(galleryKey: string, images: string[]): P
     throw new Error("Galeri bulunamadı.")
   }
 
-  const sanitizedImages = sanitizeGalleryImages(images, availableImages)
+  let allowedSet = new Set(availableImages)
+  if (gallery.publicFolder === "pergola") {
+    try {
+      const storage = readTigrisStorageConfigFromEnv()
+      const client = createTigrisS3ClientFromEnv()
+      const bucketPaths = await listPergolaBucketPublicPaths(client, storage.bucket)
+      allowedSet = new Set([...allowedSet, ...bucketPaths])
+    } catch {
+      /* Tigris yapılandırması yoksa yalnızca public klasörüyle sınırlı kal */
+    }
+  }
+
+  const sanitizedImages = sanitizeGalleryImages(images, [...allowedSet])
 
   if (sanitizedImages.length === 0) {
     throw new Error("Galeri en az bir görsel içermeli.")

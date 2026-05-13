@@ -6,6 +6,7 @@ import { ProductDetailSpecs } from "@/components/product-detail-specs"
 import { ProductDetailFeatures } from "@/components/product-detail-features"
 import { ContactSection } from "@/components/contact-section"
 import Image from "next/image"
+import { pergolaPublicSrc } from "@/lib/pergola-public-path"
 import { getGalleryImages } from "@/lib/gallery-config"
 
 /**
@@ -23,16 +24,16 @@ export default function MotorlupergolaPage() {
       title: "Boyutlar",
       icon: "ruler" as const,
       items: [
-        { label: "Maksimum Genişlik", value: "8,30 m" },
+        { label: "Maksimum Genişlik", value: "10 m" },
         { label: "Maksimum Derinlik", value: "10 m" },
-        { label: "Maksimum Alan", value: "43 m²" },
+        { label: "Maksimum Alan", value: "60 m²" },
       ]
     },
     {
       title: "Motor & Kontrol",
       icon: "settings" as const,
       items: [
-        { label: "Motor Tipi", value: "Somfy / Otomasyon" },
+        { label: "Motor Tipi", value: "Opsiyonel" },
         { label: "Kontrol", value: "Uzaktan Kumanda" },
         { label: "Akıllı Sistem", value: "Sensör Entegrasyonu" },
       ]
@@ -61,33 +62,37 @@ export default function MotorlupergolaPage() {
   const features = [
     {
       title: "Tam Otomatik Kontrol",
-      description: "Uzaktan kumanda ile lamellerin açılma, kapanma ve eğim açısını kolayca kontrol edin.",
+      description:
+        "Uzaktan kumanda ile açılıp kapanabilir; istenilen noktada durdurularak gölge ve havalandırma sağlanabilir.",
       icon: "smartphone" as const,
     },
     {
-      title: "Güneş Sensörü",
-      description: "Güneş ışığını algılayarak otomatik olarak ideal pozisyona geçer.",
-      icon: "sun" as const,
-    },
-    {
-      title: "Rüzgar Sensörü",
-      description: "Yüksek rüzgar hızlarında sistemi otomatik olarak koruma moduna alır.",
-      icon: "wind" as const,
-    },
-    {
-      title: "Yağmur Sensörü",
-      description: "Yağmur algılandığında lameller otomatik olarak kapanır.",
+      title: "Su Geçirmezlik",
+      description: "Özel blackout kumaş ve gizli oluk sistemi sayesinde yağmur suyunu mevcut sistem direkleri içerisinden kontrollü tahliye eder.",
       icon: "rain" as const,
     },
     {
-      title: "Sessiz Motor",
-      description: "Yüksek kaliteli motorlar ile sessiz ve pürüzsüz çalışma.",
-      icon: "volume" as const,
+      title: "Rüzgar ve Yağmur Sensörleri",
+      description:
+        "Sisteme haricen entegre edilen rüzgar ve yağmur sensörleri sayesinde oluşacak hava muhalefetine göre sistem kendini açıp kapatabilir.",
+      icon: "wind" as const,
     },
     {
-      title: "Güvenlik Sistemi",
-      description: "Engel algılama sistemi ile güvenli kullanım.",
-      icon: "shield" as const,
+      title: "Dört Mevsim Kullanım",
+      description:
+        "Zip perde, giyotin cam, sürme cam gibi sistemlerle etrafı tamamen kapalı bir mekana dönüştürülebilir.",
+      icon: "sun" as const,
+    },
+    {
+      title: "LED Aydınlatma",
+      description:
+        "Kumaş profillerinin üzerine takılan lineer LED'ler ile mekan aydınlatılır.",
+      icon: "zap" as const,
+    },
+    {
+      title: "Özel Ölçü ve Üretim",
+      description: "Mekanınıza göre ister tek modül ister çoklu modüllerin birbirine birleşimi ile mimariye uyumlu sistemler üretilir.",
+      icon: "maximize" as const,
     },
   ]
 
@@ -99,7 +104,7 @@ export default function MotorlupergolaPage() {
         <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/pergola/pergola-render-siyah-gece.webp"
+              src={pergolaPublicSrc("/pergola/pergola-render-siyah-gece.webp")}
               alt="Motorlu Pergola Sistemleri"
               fill
               className="object-cover"
@@ -129,7 +134,7 @@ export default function MotorlupergolaPage() {
         
         {/* Özellikler */}
         <ProductDetailFeatures
-          title="Akıllı Otomasyon"
+          title="Motorlu Pergola Teknolojisi"
           subtitle="Sensör teknolojisi ve uzaktan kontrol ile konforlu kullanım"
           features={features}
         />

@@ -8,7 +8,8 @@
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
-    "images:to-webp": "node scripts/convert-public-raster-to-webp.mjs"
+    "images:to-webp": "node scripts/convert-public-raster-to-webp.mjs",
+    "sync:pergola-tigris": "node --env-file=.env.local scripts/sync-public-pergola-to-tigris.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1045.0",

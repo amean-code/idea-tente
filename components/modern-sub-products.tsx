@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
+import { pergolaPublicSrc } from "@/lib/pergola-public-path"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Check } from "lucide-react"
@@ -66,7 +67,7 @@ export function ModernSubProducts({ title, subtitle, products }: ModernSubProduc
                   {/* Görsel */}
                   <div className="relative h-64 overflow-hidden">
                     <Image
-                      src={product.image}
+                      src={pergolaPublicSrc(product.image)}
                       alt={product.name}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"

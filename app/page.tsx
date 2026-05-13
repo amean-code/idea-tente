@@ -5,22 +5,27 @@ import { CTASection } from "@/components/cta-section"
 // import { FeaturedProjects } from "@/components/featured-projects"
 import { CertificatesSection } from "@/components/certificates-section"
 import { CompanyVideoSection } from "@/components/company-video-section"
+import { readPergolaHeroSlides } from "@/lib/pergola-hero-slides"
 
-export default function HomePage() {
+export const dynamic = "force-dynamic"
+
+export default async function HomePage() {
+  const heroManifest = await readPergolaHeroSlides()
+
   return (
     <div className="min-h-screen relative">
       {/* Arka plan görseli */}
       <div className="fixed inset-0 z-0">
-        <div 
+        <div
           className="w-full h-full bg-cover bg-center bg-no-repeat opacity-5"
           style={{
-            backgroundImage: "url('/luxury-modern-pergola-with-glass-panels-by-pool-at.webp')"
+            backgroundImage: "url('/luxury-modern-pergola-with-glass-panels-by-pool-at.webp')",
           }}
         />
       </div>
-      
+
       <main className="relative z-10">
-        <HeroSection />
+        <HeroSection slides={heroManifest.slides} />
         <ProductsOverview />
         <CompanyVideoSection />
         {/* <FeaturedProjects /> */}

@@ -5,19 +5,25 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { MessageCircle, Play, ArrowRight } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+import { pergolaBackgroundUrl } from "@/lib/pergola-public-path"
 
-const heroImages = [
-  "/pergola/pergola-kapak.webp",
-  "/pergola/pergola-kafe-gorsel.webp",
-  "/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-3.webp",
-  "/pergola/pergola-dıs-mekan.webp",
-  "/pergola/pergola-render-siyah-gece.webp",
-  "/slide-1.webp",
-]
+export interface HeroSectionProps {
+  /** Ana sayfa tam ekran slayt görselleri (public yolları veya CDN yolları). */
+  slides: string[]
+}
 
-export function HeroSection() {
+/**
+ * Ana sayfa kahraman bölümü: slayt arka planları ve CTA içeriği.
+ */
+export function HeroSection({ slides }: HeroSectionProps) {
   const { t } = useLanguage()
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  const heroImages = slides.length > 0 ? slides : ["/pergola/pergola-kapak.webp"]
+
+  useEffect(() => {
+    setCurrentImageIndex(0)
+  }, [slides])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,18 +31,18 @@ export function HeroSection() {
     }, 8000)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [heroImages.length])
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {heroImages.map((image, index) => (
         <div
-          key={index}
+          key={`${image}-${index}`}
           className={`absolute inset-0 z-0 transition-opacity duration-1000 ${
             index === currentImageIndex ? "opacity-100" : "opacity-0"
           }`}
           style={{
-            backgroundImage: `url('${image}')`,
+            backgroundImage: `url('${pergolaBackgroundUrl(image)}')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -97,6 +103,7 @@ export function HeroSection() {
           {heroImages.map((_, index) => (
             <button
               key={index}
+              type="button"
               onClick={() => setCurrentImageIndex(index)}
               className={`w-3 h-3 rounded-full transition-all ${
                 index === currentImageIndex ? "bg-white" : "bg-white/50"

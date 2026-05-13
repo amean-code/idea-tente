@@ -1,12 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server"
+import { processTigrisFileUpload } from "@/lib/storage/process-tigris-file-upload"
 import { isStorageApiRequestAuthorized } from "@/lib/storage/storage-api-auth"
-import { buildUploadObjectKey } from "@/lib/storage/upload-key"
-import {
-  buildPublicTigrisObjectUrl,
-  createTigrisS3ClientFromEnv,
-  putTigrisObject,
-  readTigrisStorageConfigFromEnv,
-} from "@/lib/storage/tigris-s3"
 
 export const runtime = "nodejs"
 
@@ -26,9 +20,6 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const config = readTigrisStorageConfigFromEnv()
-    const client = createTigrisS3ClientFromEnv()
-
     const form = await request.formData()
     const file = form.get("file")
 
@@ -36,31 +27,11 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ ok: false, message: "file alanı zorunlu (multipart/form-data)." }, { status: 400 })
     }
 
-    const originalName = typeof file.name === "string" ? file.name : "upload.bin"
-    const key = buildUploadObjectKey(originalName)
-    const bytes = new Uint8Array(await file.arrayBuffer())
-    const contentType = file.type || "application/octet-stream"
-
-    await putTigrisObject(
-      client,
-      {
-        Key: key,
-        Body: bytes,
-        ContentType: contentType,
-        CacheControl: "public, max-age=31536000, immutable",
-      },
-      config.bucket,
-    )
-
-    const publicUrl = buildPublicTigrisObjectUrl(config, key)
+    const uploaded = await processTigrisFileUpload(file)
 
     return NextResponse.json({
       ok: true,
-      key,
-      bucket: config.bucket,
-      contentType,
-      size: bytes.byteLength,
-      publicUrl,
+      ...uploaded,
       note:
         "publicUrl ancak bucket okuma izinleri herkese açıksa doğrudan görüntülenir; özel bucket'ta GET presigned URL kullanın.",
     })

@@ -128,12 +128,6 @@ export default function WinterGardenPage() {
         {/* Alt Ürünler */}
         {/* <KisBahcesiProductCards /> */}
         
-        {/* Referans Projeler */}
-        <ReferenceProjects 
-          serviceType="winter-garden"
-          useTranslations={true}
-        />
-        
         {/* İletişim Bölümü */}
         <ContactSection />
       </main>

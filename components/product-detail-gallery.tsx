@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { pergolaPublicSrc } from "@/lib/pergola-public-path"
 
 interface ProductDetailGalleryProps {
   images: string[]
@@ -67,7 +68,7 @@ export function ProductDetailGallery({ images, productName }: ProductDetailGalle
         <div className="relative mb-8 max-w-5xl mx-auto">
           <div className="relative w-full rounded-2xl overflow-hidden bg-gray-100 flex items-center justify-center">
             <Image
-              src={images[currentIndex]}
+              src={pergolaPublicSrc(images[currentIndex])}
               alt={`${productName} - ${currentIndex + 1}`}
               width={1920}
               height={1080}
@@ -122,7 +123,7 @@ export function ProductDetailGallery({ images, productName }: ProductDetailGalle
                 }`}
               >
                 <Image
-                  src={image}
+                  src={pergolaPublicSrc(image)}
                   alt={`${productName} - ${index + 1}`}
                   width={200}
                   height={200}

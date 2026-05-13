@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/contexts/language-context"
+import { pergolaPublicSrc } from "@/lib/pergola-public-path"
 
 /**
  * Pergola ana sayfası hero bölümü
@@ -16,7 +17,7 @@ export function PergolaHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/pergola/pergola-beyaz.webp"
+          src={pergolaPublicSrc("/pergola/pergola-beyaz.webp")}
           alt="Pergola Sistemleri"
           fill
           className="object-cover"

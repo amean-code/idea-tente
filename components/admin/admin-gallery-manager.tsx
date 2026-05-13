@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useMemo, useState } from "react"
 import { ArrowDown, ArrowUp, Check, Folder, LogOut, Plus, RefreshCw, Save, Trash2 } from "lucide-react"
@@ -12,6 +13,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
 import type { AdminGalleryState, EditableGalleryConfig } from "@/lib/admin-gallery"
+import { pergolaPublicSrc } from "@/lib/pergola-public-path"
 
 interface AdminGalleryManagerProps {
   initialState: AdminGalleryState
@@ -235,6 +237,12 @@ export function AdminGalleryManager({ initialState }: AdminGalleryManagerProps) 
             <p className="mt-2 text-gray-600">Public klasöründeki mevcut görselleri seçin, sıralayın ve kaydedin.</p>
           </div>
           <div className="flex flex-wrap gap-2">
+            <Button variant="outline" asChild>
+              <Link href="/admin/pergola">Pergola bucket</Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <Link href="/admin/bucket">Bucket (Tigris)</Link>
+            </Button>
             <Button variant="outline" onClick={handleReload} disabled={isReloading}>
               <RefreshCw className="mr-2 h-4 w-4" />
               {isReloading ? "Yenileniyor..." : "Yenile"}
@@ -301,7 +309,7 @@ export function AdminGalleryManager({ initialState }: AdminGalleryManagerProps) 
                         onClick={() => handlePreviewImage(imagePath)}
                         aria-label="Görseli büyük göster"
                       >
-                        <Image src={imagePath} alt={imagePath} fill className="object-cover" sizes="80px" />
+                        <Image src={pergolaPublicSrc(imagePath)} alt={imagePath} fill className="object-cover" sizes="80px" />
                       </button>
                       <div className="min-w-0">
                         <div className="flex flex-wrap items-center gap-2">
@@ -410,7 +418,7 @@ export function AdminGalleryManager({ initialState }: AdminGalleryManagerProps) 
                             onClick={() => handlePreviewImage(imagePath)}
                             aria-label="Görseli büyük göster"
                           >
-                            <Image src={imagePath} alt={imagePath} fill className="object-cover" sizes="64px" />
+                            <Image src={pergolaPublicSrc(imagePath)} alt={imagePath} fill className="object-cover" sizes="64px" />
                           </button>
                           <div className="min-w-0 self-center">
                             <div className="mb-1 flex flex-wrap items-center gap-2">
@@ -457,7 +465,7 @@ export function AdminGalleryManager({ initialState }: AdminGalleryManagerProps) 
           </DialogHeader>
           {previewImage && (
             <div className="relative h-[75vh] w-full overflow-hidden rounded-xl bg-gray-100">
-              <Image src={previewImage} alt={previewImage} fill className="object-contain" sizes="95vw" />
+              <Image src={pergolaPublicSrc(previewImage)} alt={previewImage} fill className="object-contain" sizes="95vw" />
             </div>
           )}
         </DialogContent>

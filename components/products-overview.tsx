@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import { getProducts } from "@/data/products"
 import { useState, useRef, useEffect } from "react"
+import { pergolaBackgroundUrl } from "@/lib/pergola-public-path"
 
 /**
  * Ana sayfa ürünler bölümü bileşeni
@@ -151,7 +152,7 @@ export function ProductsOverview() {
               {/* Full-size background image */}
               <div
                 className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
-                style={{ backgroundImage: `url('${product.image}')` }}
+                style={{ backgroundImage: `url('${pergolaBackgroundUrl(product.image)}')` }}
               />
 
               {/* Gradient overlay - hover'da resmi bulanıklaştırır */}

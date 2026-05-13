@@ -317,16 +317,19 @@ export const enTranslations = {
         badge: "Technical Documentation",
         title: "Detailed Information and",
         titleHighlight: "Documentation",
-        description: "You can download detailed technical information and catalog files about our product",
+        description:
+          "Open PDFs in your browser or download them to your device.",
         technicalFile: {
           title: "Technical Specifications",
           description: "Detailed technical specifications and technical drawings of bioclimatic pergola systems",
-          download: "Download Technical File"
+          view: "View",
+          download: "Download",
         },
         catalog: {
           title: "E-Catalog",
           description: "Comprehensive e-catalog file containing our entire product range",
-          download: "Download E-Catalog"
+          view: "View",
+          download: "Download",
         }
       },
       mainPage: {

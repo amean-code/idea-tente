@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Star, Award, Zap } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { pergolaPublicSrc } from "@/lib/pergola-public-path"
 
 interface SubProduct {
   id: string
@@ -65,7 +66,7 @@ export function SubProductsShowcase({ title, subtitle, products }: SubProductsSh
 
                 <div className="relative h-72 overflow-hidden">
                   <Image
-                    src={product.image || "/placeholder.svg"}
+                    src={pergolaPublicSrc(product.image || "/placeholder.svg")}
                     alt={product.name}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"

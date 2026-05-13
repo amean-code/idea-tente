@@ -10,7 +10,7 @@ import { ContactSection } from "@/components/contact-section"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { Download, FileText, BookOpen } from "lucide-react"
+import { Download, Eye, FileText, BookOpen } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import { getGalleryImages } from "@/lib/gallery-config"
 
@@ -31,8 +31,8 @@ export default function BioklimatikSistemlerPage() {
       title: t("pergola.bioclimatic.specs.dimensions"),
       icon: "ruler" as const,
       items: [
-        { label: t("pergola.bioclimatic.specs.maxWidth"), value: "8,30 m" },
-        { label: t("pergola.bioclimatic.specs.maxDepth"), value: "10 m" },
+        { label: t("pergola.bioclimatic.specs.maxWidth"), value: "8 m" },
+        { label: t("pergola.bioclimatic.specs.maxDepth"), value: "9 m" },
         { label: t("pergola.bioclimatic.specs.maxArea"), value: "43 m²" },
         { label: t("pergola.bioclimatic.specs.verticalProfile"), value: "16 cm x 14 cm" },
         { label: t("pergola.bioclimatic.specs.horizontalProfile"), value: "12 cm x 18 cm" },
@@ -44,7 +44,7 @@ export default function BioklimatikSistemlerPage() {
       items: [
         { label: t("pergola.bioclimatic.specs.profileMaterial"), value: "Alüminyum 6063-T6 F25" },
         { label: t("pergola.bioclimatic.specs.motorSystem"), value: "IP 68 Linear Motor" },
-        { label: t("pergola.bioclimatic.specs.accessoryCoating"), value: "Krom İnoks Paslanmaz" },
+        { label: t("pergola.bioclimatic.specs.accessoryCoating"), value: "Krom İnox Paslanmaz" },
         { label: t("pergola.bioclimatic.specs.surfaceTreatment"), value: "Elektrostatik Fırın Boyası" },
         { label: t("pergola.bioclimatic.specs.gasketMaterial"), value: "EPDM" },
       ]
@@ -218,33 +218,41 @@ export default function BioklimatikSistemlerPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="bg-card rounded-2xl p-8 border border-border shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-card rounded-2xl p-8 border border-border shadow-lg hover:shadow-xl transition-shadow min-w-0 overflow-hidden"
               >
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                <div className="flex items-start gap-4 mb-6 min-w-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
                     <FileText className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <h3 className="text-xl font-bold mb-2">{t("pergola.bioclimatic.documents.technicalFile.title")}</h3>
                     <p className="text-muted-foreground text-sm">
                       {t("pergola.bioclimatic.documents.technicalFile.description")}
                     </p>
                   </div>
                 </div>
-                <Button 
-                  className="w-full" 
-                  asChild
-                >
-                  <a 
-                    href="/TEKNİK DOSYALAR/IDEA BIOCLIMATIC PERGOLA TECHINAL FEATURES.pdf" 
-                    download
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Download className="h-4 w-4 mr-2" />
-                    {t("pergola.bioclimatic.documents.technicalFile.download")}
-                  </a>
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-3 w-full min-w-0">
+                  <Button className="w-full sm:flex-1 sm:min-w-0" variant="outline" asChild>
+                    <a
+                      href="/api/documents/pdf?id=bioclimatic-technical&mode=inline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Eye className="h-4 w-4 mr-2" />
+                      {t("pergola.bioclimatic.documents.technicalFile.view")}
+                    </a>
+                  </Button>
+                  <Button className="w-full sm:flex-1 sm:min-w-0" asChild>
+                    <a
+                      href="/api/documents/pdf?id=bioclimatic-technical&mode=attachment"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Download className="h-4 w-4 mr-2" />
+                      {t("pergola.bioclimatic.documents.technicalFile.download")}
+                    </a>
+                  </Button>
+                </div>
               </motion.div>
 
               {/* E-Katalog */}
@@ -253,33 +261,41 @@ export default function BioklimatikSistemlerPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="bg-card rounded-2xl p-8 border border-border shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-card rounded-2xl p-8 border border-border shadow-lg hover:shadow-xl transition-shadow min-w-0 overflow-hidden"
               >
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                <div className="flex items-start gap-4 mb-6 min-w-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
                     <BookOpen className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <h3 className="text-xl font-bold mb-2">{t("pergola.bioclimatic.documents.catalog.title")}</h3>
                     <p className="text-muted-foreground text-sm">
                       {t("pergola.bioclimatic.documents.catalog.description")}
                     </p>
                   </div>
                 </div>
-                <Button 
-                  className="w-full" 
-                  asChild
-                >
-                  <a 
-                    href="/E-KATALOG/IDEA E- CATALOG (1).pdf" 
-                    download
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Download className="h-4 w-4 mr-2" />
-                    {t("pergola.bioclimatic.documents.catalog.download")}
-                  </a>
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-3 w-full min-w-0">
+                  <Button className="w-full sm:flex-1 sm:min-w-0" variant="outline" asChild>
+                    <a
+                      href="/api/documents/pdf?id=bioclimatic-catalog&mode=inline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Eye className="h-4 w-4 mr-2" />
+                      {t("pergola.bioclimatic.documents.catalog.view")}
+                    </a>
+                  </Button>
+                  <Button className="w-full sm:flex-1 sm:min-w-0" asChild>
+                    <a
+                      href="/api/documents/pdf?id=bioclimatic-catalog&mode=attachment"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Download className="h-4 w-4 mr-2" />
+                      {t("pergola.bioclimatic.documents.catalog.download")}
+                    </a>
+                  </Button>
+                </div>
               </motion.div>
             </div>
           </div>

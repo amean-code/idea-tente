@@ -39,9 +39,10 @@ export default function SurmeCamPage() {
       title: t("glassSystems.specs.productStandards"),
       icon: "settings" as const,
       items: [
+        { label: t("glassSystems.specs.profileMaterial"), value: t("glassSystems.specs.profileMaterialValue") },
         { label: t("glassSystems.specs.glassType"), value: t("glassSystems.specs.glassTypeValue") },
-        { label: t("glassSystems.specs.glassThickness"), value: "8-10 mm" },
-        { label: t("glassSystems.specs.system"), value: "Sürme" },
+        { label: t("glassSystems.specs.glassThickness"), value: "8/10/20 mm" },
+        { label: t("glassSystems.specs.system"), value: "Sağ ve Sol Çift Yönlü Kayar Sistem" },
       ]
     },
     {
@@ -58,6 +59,7 @@ export default function SurmeCamPage() {
       items: [
         { label: t("glassSystems.specs.soundInsulation"), value: "30-35 dB" },
         { label: t("glassSystems.specs.security"), value: t("glassSystems.specs.securityValue") },
+        { label: t("glassSystems.specs.lockType"), value: t("glassSystems.specs.lockTypeValue") },
       ]
     },
   ], [t, language])
@@ -151,7 +153,6 @@ function SlidingGlassHero() {
       badge={badge}
       title={title}
       description={description}
-      subdescription={subdescription}
       imageSrc="/SürmeCam/sürme-cam-sistemleri-dis-gorunum-1.webp"
     />
   )

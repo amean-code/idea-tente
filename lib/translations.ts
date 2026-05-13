@@ -542,17 +542,20 @@ export const translations = {
           badge: "Teknik Dokümantasyon",
           title: "Detaylı Bilgi ve",
           titleHighlight: "Dokümantasyon",
-          description: "Ürünümüz hakkında detaylı teknik bilgiler ve katalog dosyalarını indirebilirsiniz",
+          description:
+            "PDF dosyalarını tarayıcıda görüntüleyebilir veya cihazınıza indirebilirsiniz.",
           technicalFile: {
             title: "Teknik Özellikler",
             description: "Bioklimatik pergola sistemlerinin detaylı teknik özellikleri ve teknik çizimler",
-            download: "Teknik Dosyayı İndir"
+            view: "Görüntüle",
+            download: "İndir",
           },
           catalog: {
             title: "E-Katalog",
             description: "Tüm ürün gamımızı içeren kapsamlı e-katalog dosyası",
-            download: "E-Kataloğu İndir"
-          }
+            view: "Görüntüle",
+            download: "İndir",
+          },
         }
       }
     },
@@ -1286,7 +1289,7 @@ export const translations = {
     // Glass Systems translations
     glassSystems: {
       hero: {
-        badge: "Modern Cam Teknolojisi",
+        badge: "Giyotin Cam Teknolojisi",
         title: "Cam Sistemleri",
         description: "Giyotin cam sistemlerimiz ile mekanlarınızı dış etkenlere karşı korurken, manzaranızdan ödün vermeden konforunuzu artırın. Modern ve şık tasarım ile yaşam alanlarınızı dönüştürün.",
         subdescription: "Kolay açılır kapanır mekanizması, temperli güvenlik camı ve dayanıklı yapısı ile giyotin cam sistemleri. Geniş açılım imkanı ve sessiz çalışma ile maksimum konfor."
@@ -1337,49 +1340,55 @@ export const translations = {
         dimensions: "Boyutlar",
         productStandards: "Ürün Standartları",
         colorOptions: "Renk Seçenekleri",
-        additionalFeatures: "Ek Özellikler",
+        additionalFeatures: "Çalışma Mekanizması",
         maxWidth: "Genişlik (maks.)",
         maxHeight: "Yükseklik (maks.)",
         glassType: "Cam Tipi",
         glassThickness: "Cam Kalınlığı",
+        profileMaterial: "Profil Malzeme",
         system: "Sistem",
         profileColor: "Profil Rengi",
         glass: "Cam",
-        soundInsulation: "Ses Yalıtımı",
+        soundInsulation: "Sistem",
         security: "Güvenlik",
+        lockType: "Kilit Sistemi",
         // Values
         glassTypeValue: "Temperli / Lamine",
-        systemValue: "Sürme / Katlanır",
+        profileMaterialValue: "Alüminyum 6063-T6 F25",
+        systemValue: "Aşağı/Yukarı Hareket",
         profileColorValue: "RAL Renk Seçenekleri",
-        glassValue: "Şeffaf / Tonlu / Mat",
-        securityValue: "Temperli Cam"
+        glassValue: "Şeffaf / Füme / Reflekte / Satine / Mavi / Yeşil / Bronz",
+        securityValue: "Temperli / Lamine Cam",
+        lockTypeValue: "İspanyolet / Klips Kilit Sistemi",
+        engineType: "Motor Sistemi",
+        engineTypeValue: "Tubular Motor - Uzaktan Kumanda Kontrollü"
       },
       features: {
-        title: "Modern Cam Teknolojisi",
+        title: "Giyotin Cam Teknolojisi",
         subtitle: "Güvenlik, estetik ve fonksiyonelliği bir arada sunan cam sistemleri",
         slidingMechanism: {
-          title: "Giyotin Sürme Mekanizması",
-          description: "Kolay açılır kapanır sistemi ile geniş açılım imkanı ve pratik kullanım."
+          title: "Kolay Temizlenebilir Sistem",
+          description: "Özel üretim vasistas sistemi ile camlar öne doğru açılıp temizlenebilir. Bu sayede yüksek katlarda bulunan giyotin cam sistemleri rahatça içerden temizlenir."
         },
         easyUse: {
-          title: "Kolay Kullanım",
-          description: "Hafif ve sessiz mekanizması ile kolayca açılıp kapanır. Sessiz çalışma ile konforlu yaşam."
+          title: "Uzaktan Kumanda ile Kontrol",
+          description: "Kumanda ile aşağı/yukarı hareket ettirilir ve istenilen yerde durdurulup hava sirkülasyonu sağlanır."
         },
         weatherResistant: {
           title: "Hava Koşullarına Dayanıklı",
-          description: "Rüzgar, yağmur ve kar gibi hava koşullarına karşı yüksek dayanım."
+          description: "Rüzgar, yağmur ve kar gibi hava koşullarına karşı ergonomik tasarımı sayesinde yüksek dayanım."
         },
         safetyGlass: {
-          title: "Güvenlik Camı",
-          description: "Temperli veya lamine cam seçenekleri ile maksimum güvenlik sağlar."
+          title: "Güvenlik",
+          description: "Temperli veya lamine cam seçenekleri ile maksimum güvenlik sağlar. Opsiyonel olarak güvenlik sensörlü engel algılyan motorlar ile güvenlik sürekliliği sağlanır."
         },
         energyEfficiency: {
           title: "Enerji Verimliliği",
-          description: "Özel cam kaplama teknolojisi ile ısı yalıtımı ve enerji tasarrufu."
+          description: "Özel üretim konfor/sinerji cam seçenekleri ile normal ısı cama göre daha fazla ısı yalıtımı ve enerji tasarrufu sağlar."
         },
         soundInsulation: {
           title: "Ses Yalıtımı",
-          description: "Kalın cam yapısı ile dış gürültüleri minimize eder."
+          description: "Özel conta tasarımı ve birbirine tam uyumlu bileşenleri sayesinde dışarıdan gelen sesleri minimize eder."
         }
       },
       gallery: {
@@ -1388,13 +1397,12 @@ export const translations = {
       // Sliding Glass Systems (Sürme Cam Sistemleri)
       slidingGlass: {
         hero: {
-          badge: "Modern Cam Teknolojisi",
+          badge: "Sürme Cam Teknolojisi",
           title: "Sürme Cam Sistemleri",
-          description: "Sürme cam sistemlerimiz ile mekanlarınızı dış etkenlere karşı korurken, manzaranızdan ödün vermeden konforunuzu artırın. Modern ve şık tasarım ile yaşam alanlarınızı dönüştürün.",
-          subdescription: "Kesintisiz manzara için sürme cam sistemleri, kolay açılır kapanır sürme mekanizması ve temperli güvenlik camı ile maksimum güvenlik."
+          description: "Geniş açıklıklar için tasarlanan sürme cam sistemleri, dört mevsim kullanım, temperli ve lamine camlarla güvenli ve kolay kullanımı ile modern mimariye uyum sunar.",
         },
         features: {
-          title: "Modern Cam Teknolojisi",
+          title: "Sürme Cam Teknolojisi",
           subtitle: "Güvenlik, estetik ve fonksiyonelliği bir arada sunan sürme cam sistemleri",
           framelessDesign: {
             title: "Panoramik Tasarım",
@@ -1402,7 +1410,7 @@ export const translations = {
           },
           slidingMechanism: {
             title: "Sürme Mekanizması",
-            description: "Kolay açılır kapanır sürme sistemi ile geniş açılım imkanı ve pratik kullanım."
+            description: "Kolay açılır kapanır, sağ ve sol çift yönlü kayar sürme sistemi pratik kullanım."
           },
           easyUse: {
             title: "Kolay Kullanım",
@@ -1410,7 +1418,7 @@ export const translations = {
           },
           weatherResistant: {
             title: "Hava Koşullarına Dayanıklı",
-            description: "Rüzgar, yağmur ve kar gibi hava koşullarına karşı yüksek dayanım."
+            description: "Rüzgar, yağmur ve kar gibi hava koşullarına karşı yüksek dayanım. "
           },
           safetyGlass: {
             title: "Güvenlik Camı",
@@ -1418,13 +1426,18 @@ export const translations = {
           },
           energyEfficiency: {
             title: "Enerji Verimliliği",
-            description: "Özel cam kaplama teknolojisi ile ısı yalıtımı ve enerji tasarrufu."
+            description: "Özel üretim konfor/sinerji cam seçenekleri ile normal ısı cama göre daha fazla ısı yalıtımı ve enerji tasarrufu sağlar."
           }
         },
         gallery: {
           productName: "Sürme Cam Sistemleri"
         }
-      }
+      },
+      guillotine: {
+        hero: {
+          title: "Giyotin Cam Sistemleri",
+        },
+      },
     },
 
     // Winter Garden translations
@@ -1963,6 +1976,19 @@ export const translations = {
         contact: "With our 15 years of experience and expert team, we offer customized solutions"
       }
     },
+    glassSystems: {
+      guillotine: {
+        hero: {
+          title: "Guillotine Glass Systems",
+        },
+      },
+      specs: {
+        profileMaterial: "Profile Material",
+        profileMaterialValue: "Aluminum 6063-T6 F25",
+        lockType: "Lock System",
+        lockTypeValue: "Espagnolette / Clip Lock System",
+      },
+    },
     // Hero Section
     hero: {
       title: "Premium Bioclimatic Pergola & Glass Systems",
@@ -2464,17 +2490,20 @@ export const translations = {
           badge: "Technical Documentation",
           title: "Detailed Information and",
           titleHighlight: "Documentation",
-          description: "You can download detailed technical information and catalog files about our product",
+          description:
+            "Open PDFs in your browser or download them to your device.",
           technicalFile: {
             title: "Technical Specifications",
             description: "Detailed technical specifications and technical drawings of bioclimatic pergola systems",
-            download: "Download Technical File"
+            view: "View",
+            download: "Download",
           },
           catalog: {
             title: "E-Catalog",
             description: "Comprehensive e-catalog file containing our entire product range",
-            download: "Download E-Catalog"
-          }
+            view: "View",
+            download: "Download",
+          },
         }
       },
 
@@ -2755,6 +2784,14 @@ export const translations = {
         blog: "أخبار الصناعة والاتجاهات والمحتوى الخاص",
         contact: "مع خبرتنا البالغة 15 عاماً وفريقنا من الخبراء، نقدم حلولاً مخصصة"
       }
+    },
+    glassSystems: {
+      specs: {
+        profileMaterial: "مادة البروفيل",
+        profileMaterialValue: "ألومنيوم 6063-T6 F25",
+        lockType: "نظام القفل",
+        lockTypeValue: "إسبانيوليت / نظام قفل كليبس",
+      },
     },
     // Hero Section
     hero: {
@@ -3641,6 +3678,14 @@ export const translations = {
         blog: "Branchennachrichten, Trends und spezielle Inhalte",
         contact: "Mit unserer 15-jährigen Erfahrung und unserem Expertenteam bieten wir maßgeschneiderte Lösungen"
       }
+    },
+    glassSystems: {
+      specs: {
+        profileMaterial: "Profilmaterial",
+        profileMaterialValue: "Aluminium 6063-T6 F25",
+        lockType: "Schließsystem",
+        lockTypeValue: "Espagnolette / Klipp-Schließsystem",
+      },
     },
     // Hero Section
     hero: {
@@ -4529,6 +4574,14 @@ export const translations = {
         blog: "Отраслевые новости, тенденции и специальный контент",
         contact: "С нашим 15-летним опытом и командой экспертов мы предлагаем индивидуальные решения"
       }
+    },
+    glassSystems: {
+      specs: {
+        profileMaterial: "Материал профиля",
+        profileMaterialValue: "Алюминий 6063-T6 F25",
+        lockType: "Система запирания",
+        lockTypeValue: "Эспаньолета / клипсовый замок",
+      },
     },
     // Hero Section
     hero: {

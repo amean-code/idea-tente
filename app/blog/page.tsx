@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, User, ArrowRight, Clock } from "lucide-react"
 import Link from "next/link"
+import { pergolaPublicSrc } from "@/lib/pergola-public-path"
 
 export default function BlogPage() {
   const posts = [
@@ -74,7 +75,7 @@ export default function BlogPage() {
         {/* Arka Plan Görseli */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/pergola/pergola-beyaz.webp"
+            src={pergolaPublicSrc("/pergola/pergola-beyaz.webp")}
             alt="Blog"
             className="w-full h-full object-cover"
           />

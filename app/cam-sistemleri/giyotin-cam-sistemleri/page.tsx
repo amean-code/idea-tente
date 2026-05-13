@@ -32,17 +32,19 @@ export default function GiyotinCamSistemleriPage() {
       title: t("glassSystems.specs.dimensions"),
       icon: "ruler" as const,
       items: [
-        { label: t("glassSystems.specs.maxWidth"), value: "600 cm" },
-        { label: t("glassSystems.specs.maxHeight"), value: "300 cm" },
+        { label: t("glassSystems.specs.maxWidth"), value: "450 cm" },
+        { label: t("glassSystems.specs.maxHeight"), value: "350 cm" },
       ]
     },
     {
       title: t("glassSystems.specs.productStandards"),
       icon: "settings" as const,
       items: [
+        { label: t("glassSystems.specs.profileMaterial"), value: t("glassSystems.specs.profileMaterialValue") },
         { label: t("glassSystems.specs.glassType"), value: t("glassSystems.specs.glassTypeValue") },
-        { label: t("glassSystems.specs.glassThickness"), value: "8-10 mm" },
+        { label: t("glassSystems.specs.glassThickness"), value: "8-24 mm" },
         { label: t("glassSystems.specs.system"), value: t("glassSystems.specs.systemValue") },
+        { label: t("glassSystems.specs.soundInsulation"), value: "30-35 dB" },
       ]
     },
     {
@@ -57,8 +59,8 @@ export default function GiyotinCamSistemleriPage() {
       title: t("glassSystems.specs.additionalFeatures"),
       icon: "layers" as const,
       items: [
-        { label: t("glassSystems.specs.soundInsulation"), value: "30-35 dB" },
-        { label: t("glassSystems.specs.security"), value: t("glassSystems.specs.securityValue") },
+        { label: t("glassSystems.specs.soundInsulation"), value: "Zincirli / Kayışlı" },
+        { label: t("glassSystems.specs.engineType"), value: t("glassSystems.specs.engineTypeValue") }
       ]
     },
   ], [t, language])
@@ -103,13 +105,20 @@ export default function GiyotinCamSistemleriPage() {
   const featuresTitle = useMemo(() => t("glassSystems.features.title"), [t, language])
   const featuresSubtitle = useMemo(() => t("glassSystems.features.subtitle"), [t, language])
   const galleryProductName = useMemo(() => t("glassSystems.gallery.productName"), [t, language])
+  /**
+   * Giyotin cam alt sayfası hero başlığı; üst liste sayfasındaki genel "Cam Sistemleri" başlığından ayrılır.
+   */
+  const giyotinHeroTitle = useMemo(
+    () => t("glassSystems.guillotine.hero.title"),
+    [t, language],
+  )
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
       <main>
         {/* Hero Section */}
-        <CamSistemleriHero key={`hero-${language}`} />
+        <CamSistemleriHero key={`hero-${language}`} title={giyotinHeroTitle} />
         
         {/* Galeri */}
         <ProductDetailGallery
