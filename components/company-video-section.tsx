@@ -83,14 +83,7 @@ export function CompanyVideoSection() {
             className="space-y-8"
           >
             {/* Başlık ve Açıklama */}
-            <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full w-fit">
-                <Award className="h-4 w-4 text-primary" />
-                <span className="text-sm font-medium text-primary">
-                  {t("companyVideo.subtitle")}
-                </span>
-              </div>
-              
+            <div className="space-y-4">              
               <h2 className="text-4xl md:text-5xl font-bold text-foreground">
                 {t("companyVideo.title")}
               </h2>

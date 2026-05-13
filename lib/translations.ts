@@ -1724,7 +1724,7 @@ export const translations = {
     },
     // Company Video Section
     companyVideo: {
-      title: "IDEA Hakkında",
+      title: "Hakkımızda",
       subtitle: "15 Yıllık Deneyim ve Güven",
       description:
         "2008'den bu yana bioklimatik pergola, giyotin cam ve kış bahçesi sistemlerinde uzmanlaşan IDEA, yüksek kalite standartlarında üretim ve Avrupa başta olmak üzere birçok ülkeye ihracat gerçekleştirmektedir.",
