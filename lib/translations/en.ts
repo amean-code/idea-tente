@@ -74,7 +74,7 @@ export const enTranslations = {
   hero: {
     title: "Premium IDEA & Glass Systems",
     subtitle:
-      "Transform your living spaces with aesthetic and functional solutions. World-class products from Turkey's leading IDEA manufacturer.",
+      "Premium manufacturing solutions for bioclimatic pergolas, guillotine glass, winter gardens, and motorized shading systems.",
     getQuote: "Get Quote",
     viewProducts: "View Products",
     whatsappQuote: "WhatsApp Quote",
@@ -903,7 +903,7 @@ export const enTranslations = {
     services: "Our Services",
     contact: "Contact",
     whatsappContact: "WhatsApp Contact",
-    copyright: "© 2025 {company}. All rights reserved.",
+    copyright: "© 2026 IDEA. All rights reserved.",
     company: "IDEA"
   },
 

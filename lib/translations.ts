@@ -23,9 +23,9 @@ export const translations = {
       // Pergola dropdown
       pergolaMain: "Pergola Sistemleri",
       pergolaMainDesc: "Tüm pergola modellerini görüntüle",
-      pergolaBioclimatic: "Bioklimatik Sistemler",
+      pergolaBioclimatic: "Bioklimatik Pergola Sistemleri",
       pergolaBioclimaticDesc: "105° dönebilen lameller",
-      pergolaMotorized: "Motorlu Sistemler",
+      pergolaMotorized: "Motorlu Pergola Sistemleri",
       pergolaMotorizedDesc: "Sensör teknolojisi, otomasyon",
       // Glass dropdown
       glassMain: "Cam Sistemleri",
@@ -88,9 +88,9 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      title: "Premium IDEA ve Cam Sistemleri",
+      title: "Premium Bioklimatik Pergola ve Cam Sistemleri",
       subtitle:
-        "Yaşam alanlarınızı dönüştüren, estetik ve fonksiyonel çözümler. Türkiye'nin lider IDEA üreticisinden dünya standartlarında ürünler.",
+        "Bioklimatik pergola, giyotin cam, kış bahçesi ve motorlu gölgelendirme sistemlerinde premium üretim çözümleri.",
       getQuote: "Teklif Al",
       viewProducts: "Ürünleri İncele",
       whatsappQuote: "WhatsApp'tan Teklif Al",
@@ -564,7 +564,7 @@ export const translations = {
       services: "Hizmetlerimiz",
       contact: "İletişim",
       whatsappContact: "WhatsApp İletişim",
-      copyright: "© 2025 {company}. Tüm hakları saklıdır.",
+      copyright: "© 2026 IDEA. Tüm hakları saklıdır.",
       company: "IDEA"
     },
 
@@ -1705,7 +1705,8 @@ export const translations = {
     companyVideo: {
       title: "IDEA Hakkında",
       subtitle: "15 Yıllık Deneyim ve Güven",
-      description: "2008 yılından bu yana outdoor yaşam alanları konusunda uzmanlaşmış, binlerce projeye imza atmış bir ekibiz. Premium IDEA ve cam sistemleri ile yaşam alanlarınızı dönüştürüyoruz.",
+      description:
+        "2008'den bu yana bioklimatik pergola, giyotin cam ve kış bahçesi sistemlerinde uzmanlaşan IDEA, yüksek kalite standartlarında üretim ve Avrupa başta olmak üzere birçok ülkeye ihracat gerçekleştirmektedir.",
       videoTitle: "Firmamızı Tanıyın",
       stats: {
         projects: "Tamamlanan Proje",
@@ -1890,9 +1891,9 @@ export const translations = {
       // Pergola dropdown
       pergolaMain: "Pergola Systems",
       pergolaMainDesc: "View all pergola models",
-      pergolaBioclimatic: "Bioclimatic Systems",
+      pergolaBioclimatic: "Bioclimatic Pergola Systems",
       pergolaBioclimaticDesc: "105° rotating louvers",
-      pergolaMotorized: "Motorized Systems",
+      pergolaMotorized: "Motorized Pergola Systems",
       pergolaMotorizedDesc: "Sensor technology, automation",
       pergolaRolling: "Rolling Roof",
       pergolaRollingDesc: "Retractable awning",
@@ -1957,9 +1958,9 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      title: "Premium IDEA & Glass Systems",
+      title: "Premium Bioclimatic Pergola & Glass Systems",
       subtitle:
-        "Transform your living spaces with aesthetic and functional solutions. World-class products from Turkey's leading IDEA manufacturer.",
+        "Premium manufacturing solutions for bioclimatic pergolas, guillotine glass, winter gardens, and motorized shading systems.",
       getQuote: "Get Quote",
       viewProducts: "View Products",
       whatsappQuote: "WhatsApp Quote",
@@ -2258,7 +2259,8 @@ export const translations = {
     companyVideo: {
       title: "About IDEA",
       subtitle: "15 Years of Experience and Trust",
-      description: "Since 2008, we have been specializing in outdoor living spaces, having completed thousands of projects. We transform your living spaces with premium IDEA and glass systems.",
+      description:
+        "Since 2008, IDEA has specialized in bioclimatic pergola, guillotine glass and winter garden systems, manufacturing to high quality standards and exporting to many countries, with Europe at the forefront.",
       videoTitle: "Get to Know Our Company",
       stats: {
         projects: "Completed Projects",
@@ -2513,7 +2515,7 @@ export const translations = {
         services: "Our Services",
         contact: "Contact",
         whatsappContact: "WhatsApp Contact",
-        copyright: "© 2025 {company}. All rights reserved.",
+        copyright: "© 2026 IDEA. All rights reserved.",
         company: "IDEA"
       },
 
@@ -2631,9 +2633,9 @@ export const translations = {
       // Pergola dropdown
       pergolaMain: "أنظمة البرجولا",
       pergolaMainDesc: "عرض جميع نماذج البرجولا",
-      pergolaBioclimatic: "الأنظمة البيوكليماتية",
+      pergolaBioclimatic: "أنظمة البرجولا البيوكليماتية",
       pergolaBioclimaticDesc: "شرائح دوارة 105°",
-      pergolaMotorized: "الأنظمة الآلية",
+      pergolaMotorized: "أنظمة البرجولا المحركة",
       pergolaMotorizedDesc: "تقنية المستشعر، الأتمتة",
       pergolaRolling: "السقف المتحرك",
       pergolaRollingDesc: "مظلة قابلة للسحب",
@@ -2698,9 +2700,9 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      title: "أنظمة البرجولا والزجاج المتميزة",
+      title: "أنظمة البرجولا البيوكليماتية والزجاج المتميزة عالمي المستوى",
       subtitle:
-        "حوّل مساحات معيشتك بحلول جمالية وعملية. منتجات عالمية المستوى من الشركة الرائدة في تركيا لتصنيع البرجولا.",
+        "حلول تصنيع مميزة للبرجولا البيوكليماتية، وزجاج الجيلوتين، والحدائق الشتوية، وأنظمة التظليل المحرّكة.",
       getQuote: "احصل على عرض سعر",
       viewProducts: "عرض المنتجات",
       whatsappQuote: "عرض سعر واتساب",
@@ -2966,7 +2968,8 @@ export const translations = {
     companyVideo: {
       title: "حول IDEA",
       subtitle: "15 عامًا من الخبرة والثقة",
-      description: "منذ عام 2008، تخصصنا في مساحات المعيشة الخارجية، حيث أكملنا آلاف المشاريع. نحول مساحات معيشتك باستخدام أنظمة IDEA والزجاج المتميزة.",
+      description:
+        "منذ عام 2008، تتخصص آيدا في أنظمة البرجولا البيوكليماتية والزجاج المقصّص وحدائق الشتاء، وتنتج وفق معايير جودة عالية وتصدر إلى العديد من البلدان على رأسها أوروبا.",
       videoTitle: "تعرف على شركتنا",
       stats: {
         projects: "المشاريع المكتملة",
@@ -3158,7 +3161,7 @@ export const translations = {
       services: "خدماتنا",
       contact: "اتصل بنا",
       whatsappContact: "واتساب",
-      copyright: "© 2025 {company}. جميع الحقوق محفوظة.",
+      copyright: "© 2026 IDEA. جميع الحقوق محفوظة.",
       company: "IDEA"
     },
 
@@ -3451,9 +3454,9 @@ export const translations = {
       // Pergola dropdown
       pergolaMain: "Pergola-Systeme",
       pergolaMainDesc: "Alle Pergola-Modelle ansehen",
-      pergolaBioclimatic: "Bioklimatische Systeme",
+      pergolaBioclimatic: "Bioklimatische Pergola-Systeme",
       pergolaBioclimaticDesc: "105° drehbare Lamellen",
-      pergolaMotorized: "Motorisierte Systeme",
+      pergolaMotorized: "Motorisierte Pergola-Systeme",
       pergolaMotorizedDesc: "Sensortechnologie, Automatisierung",
       // Glass dropdown
       glassMain: "Glassysteme",
@@ -3516,9 +3519,9 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      title: "Premium Pergola & Glassysteme",
+      title: "Premium Bioclimatic Pergola & Glass Systems",
       subtitle:
-        "Verwandeln Sie Ihre Wohnräume mit ästhetischen und funktionalen Lösungen. Weltklasse-Produkte vom führenden Pergola-Hersteller der Türkei.",
+        "Premium-Fertigungslösungen für bioklimatische Pergolen, Guillotine-Verglasung, Wintergärten und motorisierte Beschattungssysteme.",
       getQuote: "Angebot erhalten",
       viewProducts: "Produkte ansehen",
       whatsappQuote: "WhatsApp-Angebot",
@@ -3784,7 +3787,8 @@ export const translations = {
     companyVideo: {
       title: "Über IDEA",
       subtitle: "15 Jahre Erfahrung und Vertrauen",
-      description: "Seit 2008 spezialisieren wir uns auf Außenwohnräume und haben Tausende von Projekten abgeschlossen. Wir verwandeln Ihre Wohnräume mit Premium-IDEA- und Glassystemen.",
+      description:
+        "Seit 2008 hat sich IDEA auf bioklimatische Pergolen, Guillotine-Glas und Wintergarten-Systeme spezialisiert, fertigt nach hohen Qualitätsstandards und exportiert in zahlreiche Länder, an vorderster Stelle nach Europa.",
       videoTitle: "Lernen Sie unser Unternehmen kennen",
       stats: {
         projects: "Abgeschlossene Projekte",
@@ -3976,7 +3980,7 @@ export const translations = {
       services: "Unsere Dienstleistungen",
       contact: "Kontakt",
       whatsappContact: "WhatsApp Kontakt",
-      copyright: "© 2025 {company}. Alle Rechte vorbehalten.",
+      copyright: "© 2026 IDEA. Alle Rechte vorbehalten.",
       company: "IDEA"
     },
 
@@ -4269,9 +4273,9 @@ export const translations = {
       // Pergola dropdown
       pergolaMain: "Системы Пергол",
       pergolaMainDesc: "Посмотреть все модели пергол",
-      pergolaBioclimatic: "Биоклиматические Системы",
+      pergolaBioclimatic: "Биоклиматические Пергол Системы",
       pergolaBioclimaticDesc: "Вращающиеся ламели 105°",
-      pergolaMotorized: "Моторизованные Системы",
+      pergolaMotorized: "Моторизованные Пергол Системы",
       pergolaMotorizedDesc: "Технология датчиков, автоматизация",
       pergolaRolling: "Rolling Roof",
       pergolaRollingDesc: "Выдвижной навес",
@@ -4336,9 +4340,9 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      title: "Премиальные Системы Пергол и Стекла",
+      title: "Премиальные Производители Пергол и Стекла из Турции",
       subtitle:
-        "Преобразите ваши жилые пространства эстетичными и функциональными решениями. Продукция мирового класса от ведущего производителя пергол Турции.",
+        "Премиальные производственные решения для биоклиматических пергол, гильотинного остекления, зимних садов и моторизованных систем затенения.",
       getQuote: "Получить предложение",
       viewProducts: "Посмотреть продукты",
       whatsappQuote: "WhatsApp предложение",
@@ -4477,7 +4481,8 @@ export const translations = {
     companyVideo: {
       title: "О IDEA",
       subtitle: "15 лет опыта и доверия",
-      description: "С 2008 года мы специализируемся на открытых жилых пространствах и завершили тысячи проектов. Мы преобразуем ваши жилые пространства с помощью премиальных систем IDEA и стекла.",
+      description:
+        "С 2008 года IDEA специализируется на системах биоклиматических пергол, гильотинного стекла и зимних садов, ведёт производство по высоким стандартам качества и осуществляет экспорт во многие страны, в первую очередь в Европу.",
       videoTitle: "Узнайте о нашей компании",
       stats: {
         projects: "Завершенные проекты",
@@ -4669,7 +4674,7 @@ export const translations = {
       services: "Наши Услуги",
       contact: "Контакты",
       whatsappContact: "WhatsApp Контакт",
-      copyright: "© 2025 {company}. Все права защищены.",
+      copyright: "© 2026 IDEA. Все права защищены.",
       company: "IDEA"
     },
 

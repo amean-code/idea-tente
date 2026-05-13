@@ -39,14 +39,14 @@ export function CertificatesSection() {
       id: 4,
       title: t("certificates.items.conformityPergola"),
       image:
-        "/SERTİFİKALAR/DECLERATION OF CONFORMITY (MOTORIZED PERGOLA SYSTEM).webp",
+        "/SERTİFİKALAR/1.jpg",
       category: t("certificates.categories.conformity"),
     },
     {
       id: 5,
       title: t("certificates.items.conformityGlass"),
       image:
-        "/SERTİFİKALAR/DECLERATION OF CONFORMITY (MOTORIZED GUILLOTINE GLASS SYSTEM).webp",
+        "/SERTİFİKALAR/2.jpg",
       category: t("certificates.categories.conformity"),
     },
     {
@@ -104,32 +104,37 @@ export function CertificatesSection() {
                 className="group relative cursor-pointer"
                 onClick={() => setSelectedCertificate(certificate.id)}
               >
-                <div className="relative aspect-[3/4] bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-primary/30">
-                  <Image
-                    src={certificate.image}
-                    alt={certificate.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
-                      <ZoomIn className="w-6 h-6 text-white" />
+                {/* Dış sarı çerçeve: degrade, kavisli köşeler ve hafif parlama */}
+                <div
+                  className="rounded-2xl p-[3px] bg-gradient-to-br from-amber-200 via-yellow-400 to-amber-600 ring-1 ring-amber-300/70 transition-all duration-300 shadow-[0_8px_28px_-6px_rgba(180,83,9,0.35),inset_0_1px_0_rgba(255,255,255,0.45)] group-hover:shadow-[0_14px_36px_-6px_rgba(180,83,9,0.42),inset_0_1px_0_rgba(255,255,255,0.5)] group-hover:ring-amber-200/90"
+                >
+                  <div className="relative aspect-[3/4] bg-white rounded-[13px] overflow-hidden shadow-inner border border-amber-100/80 hover:border-primary/25 transition-all duration-300">
+                    <Image
+                      src={certificate.image}
+                      alt={certificate.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
+                        <ZoomIn className="w-6 h-6 text-white" />
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Category Badge */}
-                  <div className="absolute top-3 left-3">
-                    <span className="px-2 py-1 bg-primary/90 text-primary-foreground text-xs font-semibold rounded-md">
-                      {certificate.category}
-                    </span>
-                  </div>
+                    {/* Category Badge */}
+                    <div className="absolute top-3 left-3">
+                      <span className="px-2 py-1 bg-primary/90 text-primary-foreground text-xs font-semibold rounded-md">
+                        {certificate.category}
+                      </span>
+                    </div>
 
-                  {/* Title on Hover */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <p className="text-white text-sm font-semibold">{certificate.title}</p>
+                    {/* Title on Hover */}
+                    <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                      <p className="text-white text-sm font-semibold">{certificate.title}</p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -151,16 +156,18 @@ export function CertificatesSection() {
             className="relative max-w-4xl w-full my-8"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative bg-white rounded-xl overflow-hidden shadow-2xl p-6">
-              <div className="relative w-full" style={{ minHeight: "400px" }}>
-                <Image
-                  src={certificates.find((c) => c.id === selectedCertificate)?.image || ""}
-                  alt={certificates.find((c) => c.id === selectedCertificate)?.title || ""}
-                  width={1200}
-                  height={1600}
-                  className="w-full h-auto object-contain"
-                  style={{ maxHeight: "80vh" }}
-                />
+            <div className="rounded-2xl p-[3px] bg-gradient-to-br from-amber-200 via-yellow-400 to-amber-600 ring-1 ring-amber-300/70 shadow-[0_25px_50px_-12px_rgba(146,64,14,0.45),inset_0_1px_0_rgba(255,255,255,0.45)]">
+              <div className="relative bg-white rounded-[13px] overflow-hidden shadow-inner p-6 border border-amber-100/80">
+                <div className="relative w-full" style={{ minHeight: "400px" }}>
+                  <Image
+                    src={certificates.find((c) => c.id === selectedCertificate)?.image || ""}
+                    alt={certificates.find((c) => c.id === selectedCertificate)?.title || ""}
+                    width={1200}
+                    height={1600}
+                    className="w-full h-auto object-contain"
+                    style={{ maxHeight: "80vh" }}
+                  />
+                </div>
               </div>
             </div>
             <button

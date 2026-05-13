@@ -74,7 +74,7 @@ export const deTranslations = {
   hero: {
     title: "Premium IDEA & Glassysteme",
     subtitle:
-      "Verwandeln Sie Ihre Wohnräume mit ästhetischen und funktionalen Lösungen. Weltklasse-Produkte vom führenden IDEA-Hersteller der Türkei.",
+      "Premium-Fertigungslösungen für bioklimatische Pergolen, Guillotine-Verglasung, Wintergärten und motorisierte Beschattungssysteme.",
     getQuote: "Angebot erhalten",
     viewProducts: "Produkte ansehen",
     whatsappQuote: "WhatsApp-Angebot",
@@ -902,7 +902,7 @@ export const deTranslations = {
     services: "Unsere Dienstleistungen",
     contact: "Kontakt",
     whatsappContact: "WhatsApp Kontakt",
-    copyright: "© 2025 {company}. Alle Rechte vorbehalten.",
+    copyright: "© 2026 IDEA. Alle Rechte vorbehalten.",
     company: "IDEA"
   },
 

@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef, useState, useMemo, useCallback } from "react"
+import { useEffect, useRef, useState, useMemo } from "react"
 import { motion } from "motion/react"
 import { useLanguage } from "@/contexts/language-context"
 
@@ -9,8 +9,6 @@ const translations = {
     globe: {
       title: "Dünya Çapında İhracat Ağı",
       subtitle: "Türkiye'den 50'den fazla ülkeye uzanan ihracat ağımızla, kaliteli IDEA pergola sistemlerini dünya ile buluşturuyoruz.",
-      sideDragAria: "Küreyi döndürmek için sol veya sağ kenardan sürükleyin",
-      sideDragHint: "← Sürükleyerek döndür →",
       stats: {
         countries: "İhracat Ülkesi",
         distributors: "Global Distribütör",
@@ -37,8 +35,6 @@ const translations = {
     globe: {
       title: "Worldwide Export Network",
       subtitle: "With our export network extending to more than 50 countries from Turkey, we bring quality IDEA pergola systems together with the world.",
-      sideDragAria: "Drag from the left or right edge to rotate the globe",
-      sideDragHint: "← Drag to rotate →",
       stats: {
         countries: "Export Countries",
         distributors: "Global Distributors",
@@ -65,8 +61,6 @@ const translations = {
     globe: {
       title: "Weltweites Exportnetzwerk",
       subtitle: "Mit unserem Exportnetzwerk, das sich von der Türkei auf mehr als 50 Länder erstreckt, bringen wir qualitativ hochwertige IDEA-Pergola-Systeme mit der Welt zusammen.",
-      sideDragAria: "Ziehen Sie am linken oder rechten Rand, um den Globus zu drehen",
-      sideDragHint: "← Zum Drehen ziehen →",
       stats: {
         countries: "Exportländer",
         distributors: "Globale Vertriebspartner",
@@ -93,8 +87,6 @@ const translations = {
     globe: {
       title: "شبكة التصدير العالمية",
       subtitle: "مع شبكة التصدير لدينا التي تمتد إلى أكثر من 50 دولة من تركيا، نجمع أنظمة البرجولا عالية الجودة من IDEA مع العالم.",
-      sideDragAria: "اسحب من الحافة اليسرى أو اليمنى لتدوير الكرة الأرضية",
-      sideDragHint: "← اسحب للتدوير →",
       stats: {
         countries: "دول التصدير",
         distributors: "موزعون عالميون",
@@ -119,40 +111,13 @@ const translations = {
   }
 }
 
-/** globe.gl örneğinin genişlik/yüksekliğini düzenli ölçülen konteynere eşitler (kaydırma sırası küçülmeyi önler). */
-function fitGlobeToContainer(world: any, container: HTMLElement | null): void {
-  if (!world || !container) return
-  const cw = container.clientWidth
-  const ch = container.clientHeight
-  if (cw > 0 && ch > 0) {
-    world.width(cw).height(ch)
-  }
-}
-
-/** Kenar sürüklemesinde kamera açısını lng/lat ile günceller (geçiş süresi 0 = anında). */
-function nudgeGlobePointOfView(world: any, deltaX: number, deltaY: number): void {
-  if (!world) return
-  const pov = world.pointOfView()
-  const lng = pov.lng - deltaX * 0.35
-  const lat = Math.max(-60, Math.min(60, pov.lat - deltaY * 0.18))
-  world.pointOfView({ lng, lat, altitude: pov.altitude }, 0)
-}
-
 /**
  * ExportGlobe komponenti
  * globe.gl kütüphanesini kullanarak Türkiye'den ihracat yapılan ülkelere
  * oklar gösteren interaktif 3D globe görselleştirmesi
  */
 export function ExportGlobe() {
-  const globeOuterRef = useRef<HTMLDivElement>(null)
   const globeEl = useRef<HTMLDivElement>(null)
-  const worldRef = useRef<any>(null)
-  const dragRef = useRef({
-    active: false,
-    ptrId: -1,
-    lastX: 0,
-    lastY: 0,
-  })
   const [isClient, setIsClient] = useState(false)
   const { language } = useLanguage()
 
@@ -163,150 +128,108 @@ export function ExportGlobe() {
   // globe.gl Arcs Layer formatına uygun veri yapısı
   const exportArcs = useMemo(() => {
     const t = translations[language as keyof typeof translations] || translations.tr
-    
+
     return [
-    {
-      startLat: 39.9334,
-      startLng: 32.8597,
-      endLat: 52.52,
-      endLng: 13.405,
-      color: colors[0],
-      country: t.globe.countries.germany,
-    },
-    {
-      startLat: 39.9334,
-      startLng: 32.8597,
-      endLat: 48.8566,
-      endLng: 2.3522,
-      color: colors[1],
-      country: t.globe.countries.france,
-    },
-    {
-      startLat: 39.9334,
-      startLng: 32.8597,
-      endLat: 51.5074,
-      endLng: -0.1278,
-      color: colors[2],
-      country: t.globe.countries.england,
-    },
-    {
-      startLat: 39.9334,
-      startLng: 32.8597,
-      endLat: 41.9028,
-      endLng: 12.4964,
-      color: colors[0],
-      country: t.globe.countries.italy,
-    },
-    {
-      startLat: 39.9334,
-      startLng: 32.8597,
-      endLat: 40.4168,
-      endLng: -3.7038,
-      color: colors[1],
-      country: t.globe.countries.spain,
-    },
-    {
-      startLat: 39.9334,
-      startLng: 32.8597,
-      endLat: 25.2048,
-      endLng: 55.2708,
-      color: colors[2],
-      country: t.globe.countries.dubai,
-    },
-    {
-      startLat: 39.9334,
-      startLng: 32.8597,
-      endLat: 24.7136,
-      endLng: 46.6753,
-      color: colors[0],
-      country: t.globe.countries.riyadh,
-    },
-    {
-      startLat: 39.9334,
-      startLng: 32.8597,
-      endLat: 30.0444,
-      endLng: 31.2357,
-      color: colors[1],
-      country: t.globe.countries.cairo,
-    },
-    {
-      startLat: 39.9334,
-      startLng: 32.8597,
-      endLat: -33.9249,
-      endLng: 18.4241,
-      color: colors[2],
-      country: t.globe.countries.capeTown,
-    },
-    {
-      startLat: 39.9334,
-      startLng: 32.8597,
-      endLat: 35.6762,
-      endLng: 139.6503,
-      color: colors[0],
-      country: t.globe.countries.tokyo,
-    },
-    {
-      startLat: 39.9334,
-      startLng: 32.8597,
-      endLat: 40.7128,
-      endLng: -74.006,
-      color: colors[1],
-      country: t.globe.countries.newYork,
-    },
-    {
-      startLat: 39.9334,
-      startLng: 32.8597,
-      endLat: -33.8688,
-      endLng: 151.2093,
-      color: colors[2],
-      country: t.globe.countries.sydney,
-    },
+      {
+        startLat: 39.9334,
+        startLng: 32.8597,
+        endLat: 52.52,
+        endLng: 13.405,
+        color: colors[0],
+        country: t.globe.countries.germany,
+      },
+      {
+        startLat: 39.9334,
+        startLng: 32.8597,
+        endLat: 48.8566,
+        endLng: 2.3522,
+        color: colors[1],
+        country: t.globe.countries.france,
+      },
+      {
+        startLat: 39.9334,
+        startLng: 32.8597,
+        endLat: 51.5074,
+        endLng: -0.1278,
+        color: colors[2],
+        country: t.globe.countries.england,
+      },
+      {
+        startLat: 39.9334,
+        startLng: 32.8597,
+        endLat: 41.9028,
+        endLng: 12.4964,
+        color: colors[0],
+        country: t.globe.countries.italy,
+      },
+      {
+        startLat: 39.9334,
+        startLng: 32.8597,
+        endLat: 40.4168,
+        endLng: -3.7038,
+        color: colors[1],
+        country: t.globe.countries.spain,
+      },
+      {
+        startLat: 39.9334,
+        startLng: 32.8597,
+        endLat: 25.2048,
+        endLng: 55.2708,
+        color: colors[2],
+        country: t.globe.countries.dubai,
+      },
+      {
+        startLat: 39.9334,
+        startLng: 32.8597,
+        endLat: 24.7136,
+        endLng: 46.6753,
+        color: colors[0],
+        country: t.globe.countries.riyadh,
+      },
+      {
+        startLat: 39.9334,
+        startLng: 32.8597,
+        endLat: 30.0444,
+        endLng: 31.2357,
+        color: colors[1],
+        country: t.globe.countries.cairo,
+      },
+      {
+        startLat: 39.9334,
+        startLng: 32.8597,
+        endLat: -33.9249,
+        endLng: 18.4241,
+        color: colors[2],
+        country: t.globe.countries.capeTown,
+      },
+      {
+        startLat: 39.9334,
+        startLng: 32.8597,
+        endLat: 35.6762,
+        endLng: 139.6503,
+        color: colors[0],
+        country: t.globe.countries.tokyo,
+      },
+      {
+        startLat: 39.9334,
+        startLng: 32.8597,
+        endLat: 40.7128,
+        endLng: -74.006,
+        color: colors[1],
+        country: t.globe.countries.newYork,
+      },
+      {
+        startLat: 39.9334,
+        startLng: 32.8597,
+        endLat: -33.8688,
+        endLng: 151.2093,
+        color: colors[2],
+        country: t.globe.countries.sydney,
+      },
     ]
   }, [language])
 
   const t = translations[language as keyof typeof translations] || translations.tr
-
-  /** Yan şeritte sürüklemeye başlandığında otomatik dönüşü durdurur ve işaretçiyi yakalar. */
-  const onSidePointerDown = useCallback((event: React.PointerEvent<HTMLDivElement>) => {
-    event.preventDefault()
-    const world = worldRef.current
-    if (!world) return
-    const controls = world.controls?.()
-    if (controls) controls.autoRotate = false
-    dragRef.current = {
-      active: true,
-      ptrId: event.pointerId,
-      lastX: event.clientX,
-      lastY: event.clientY,
-    }
-    event.currentTarget.setPointerCapture(event.pointerId)
-  }, [])
-
-  /** Yan şerit sürüklemesinde küreyi lng/lat ile döndürür. */
-  const onSidePointerMove = useCallback((event: React.PointerEvent<HTMLDivElement>) => {
-    const d = dragRef.current
-    if (!d.active || event.pointerId !== d.ptrId) return
-    const dx = event.clientX - d.lastX
-    const dy = event.clientY - d.lastY
-    d.lastX = event.clientX
-    d.lastY = event.clientY
-    nudgeGlobePointOfView(worldRef.current, dx, dy)
-  }, [])
-
-  /** Sürükleme bittiğinde otomatik dönüşü yeniden açar. */
-  const onSidePointerUp = useCallback((event: React.PointerEvent<HTMLDivElement>) => {
-    const d = dragRef.current
-    if (!d.active || event.pointerId !== d.ptrId) return
-    d.active = false
-    try {
-      event.currentTarget.releasePointerCapture(event.pointerId)
-    } catch {
-      /* releasePointerCapture istisnası yok sayılır */
-    }
-    const world = worldRef.current
-    const controls = world?.controls?.()
-    if (controls) controls.autoRotate = true
-  }, [])
 
   // Client-side kontrolü
   useEffect(() => {
@@ -316,58 +239,47 @@ export function ExportGlobe() {
   useEffect(() => {
     if (!globeEl.current || !isClient) return
 
-    let instance: any = null
-    let cancelled = false
-    let resizeObserver: ResizeObserver | null = null
+    let world: any = null
 
+    // Dinamik import - sadece client-side'da yükle
     import("globe.gl").then((GlobeModule) => {
-      if (cancelled || !globeEl.current) return
-
       const Globe = GlobeModule.default
-      const world = new Globe(globeEl.current, {
+
+      // Globe instance oluştur
+      world = new Globe(globeEl.current!, {
         rendererConfig: {
           antialias: true,
           alpha: true,
         },
       })
-      instance = world
-      worldRef.current = world
 
-      if (cancelled) {
-        world._destructor?.()
-        worldRef.current = null
-        instance = null
-        return
-      }
-
+      // Globe temel ayarları
       world
         .globeImageUrl("//unpkg.com/three-globe/example/img/earth-blue-marble.jpg")
         .backgroundColor("rgba(0,0,0,0)")
         .showAtmosphere(true)
-        .atmosphereColor("#FFD100")
+        .atmosphereColor("#FFD100") // IDEA Sarı atmosfer
         .atmosphereAltitude(0.15)
-        .globeOffset([0, 0])
+        .globeOffset([0, 0]) // Globu ortala
 
+      // Renderer canvas'ını ortala
       const renderer = world.renderer()
-      if (renderer?.domElement) {
+      if (renderer && renderer.domElement) {
         const canvas = renderer.domElement
         canvas.style.margin = "0 auto"
         canvas.style.display = "block"
         canvas.style.width = "100%"
         canvas.style.height = "100%"
-        canvas.style.touchAction = "pan-y"
       }
 
-      fitGlobeToContainer(world, globeOuterRef.current)
-
-      const outer = globeOuterRef.current
-      if (outer && typeof ResizeObserver !== "undefined") {
-        resizeObserver = new ResizeObserver(() => {
-          fitGlobeToContainer(worldRef.current, globeOuterRef.current)
-        })
-        resizeObserver.observe(outer)
+      // Globe boyutlarını container'a göre ayarla (sadece bir kez, sabit boyutlar)
+      if (globeEl.current) {
+        const containerWidth = globeEl.current.clientWidth || 1200
+        const containerHeight = globeEl.current.clientHeight || 600
+        world.width(containerWidth).height(containerHeight)
       }
 
+      // Arcs Layer - İhracat rotalarını göster
       world
         .arcsData(exportArcs)
         .arcStartLat((d: any) => d.startLat)
@@ -376,35 +288,37 @@ export function ExportGlobe() {
         .arcEndLng((d: any) => d.endLng)
         .arcColor((d: any) => d.color)
         .arcAltitude((d: any) => {
+          // Mesafeye göre otomatik yükseklik hesaplama
           const distance = Math.sqrt(
-            Math.pow(d.endLat - d.startLat, 2) + Math.pow(d.endLng - d.startLng, 2),
+            Math.pow(d.endLat - d.startLat, 2) +
+              Math.pow(d.endLng - d.startLng, 2)
           )
           return Math.min(distance * 0.1, 0.3)
         })
-        .arcStroke(() => 0.4)
+        .arcStroke((d: any) => 0.4)
         .arcDashLength(0.4)
         .arcDashGap(0.2)
         .arcDashAnimateTime(2000)
         .arcsTransitionDuration(1000)
 
+      // Tooltip için label ayarları
       world.arcLabel((d: any) => `${d.country}`)
 
+      // Kamera pozisyonu - Türkiye'ye odaklan
       world.pointOfView({ lat: 39.9334, lng: 32.8597, altitude: 2.5 }, 0)
 
+      // Otomatik döndürme
       const controls = world.controls()
       if (controls) {
         controls.autoRotate = true
         controls.autoRotateSpeed = 0.5
-        controls.enableRotate = false
       }
     })
 
+    // Cleanup
     return () => {
-      cancelled = true
-      resizeObserver?.disconnect()
-      worldRef.current = null
-      if (instance?._destructor) {
-        instance._destructor()
+      if (world && world._destructor) {
+        world._destructor()
       }
     }
   }, [isClient, exportArcs])
@@ -429,50 +343,25 @@ export function ExportGlobe() {
         </motion.div>
       </div>
 
-      {/* Globe: sabit yükseklik + ResizeObserver ile boyut; ortada dikey kaydırma, yanlarda sürükleyerek dönüş */}
-      <div
-        ref={globeOuterRef}
-        className="relative mx-auto h-[600px] w-full max-w-[1600px] shrink-0 overflow-hidden"
-        style={{ minHeight: 600, maxHeight: 600 }}
+      {/* Globe container - container dışında tam genişlikte */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{
+          once: true,
+          margin: "-30% 0px", // Viewport kontrolünü daralt - sadece %30 görünür olduğunda tetikle
+          amount: 0.5 // Elementin %50'si görünür olduğunda tetikle
+        }}
+        className="h-[600px] w-full relative flex items-center justify-center overflow-hidden"
+        style={{ minHeight: "600px", maxHeight: "600px" }}
       >
-        <div ref={globeEl} className="absolute inset-0 h-full w-full" aria-hidden />
-
         <div
-          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[min(20%,7rem)] bg-gradient-to-r from-black/35 to-transparent"
-          aria-hidden
+          ref={globeEl}
+          className="w-full h-full mx-auto"
+          style={{ width: "100%", height: "600px" }}
         />
-        <div
-          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-[min(20%,7rem)] bg-gradient-to-l from-black/35 to-transparent"
-          aria-hidden
-        />
-
-        <div
-          role="presentation"
-          aria-label={t.globe.sideDragAria}
-          className="absolute inset-y-0 left-0 z-20 flex w-[min(20%,7rem)] cursor-grab touch-none select-none flex-col items-center justify-center border-r border-white/10 active:cursor-grabbing"
-          onPointerDown={onSidePointerDown}
-          onPointerMove={onSidePointerMove}
-          onPointerUp={onSidePointerUp}
-          onPointerCancel={onSidePointerUp}
-        >
-          <span className="mx-1 text-center text-[10px] font-medium uppercase tracking-wide text-white/50 md:text-xs">
-            {t.globe.sideDragHint}
-          </span>
-        </div>
-        <div
-          role="presentation"
-          aria-label={t.globe.sideDragAria}
-          className="absolute inset-y-0 right-0 z-20 flex w-[min(20%,7rem)] cursor-grab touch-none select-none flex-col items-center justify-center border-l border-white/10 active:cursor-grabbing"
-          onPointerDown={onSidePointerDown}
-          onPointerMove={onSidePointerMove}
-          onPointerUp={onSidePointerUp}
-          onPointerCancel={onSidePointerUp}
-        >
-          <span className="mx-1 text-center text-[10px] font-medium uppercase tracking-wide text-white/50 md:text-xs">
-            {t.globe.sideDragHint}
-          </span>
-        </div>
-      </div>
+      </motion.div>
 
       <div className="container mx-auto px-4 relative z-10">
 
