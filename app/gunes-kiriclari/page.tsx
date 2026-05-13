@@ -23,15 +23,15 @@ export default function SunBreakersPage() {
       title: "Boyutlar",
       icon: "ruler" as const,
       items: [
-        { label: "Genişlik (maks.)", value: "500 cm" },
-        { label: "Yükseklik (maks.)", value: "400 cm" },
+        { label: "Genişlik (min. - maks.)", value: "70 - 600 cm" },
+        { label: "Yükseklik (min. - maks.)", value: "100 - 600 cm" },
       ]
     },
     {
       title: "Ürün Standartları",
       icon: "settings" as const,
       items: [
-        { label: "Malzeme", value: "Alüminyum" },
+        { label: "Malzeme", value: "Alüminyum 6063-T6 F25" },
         { label: "Kontrol", value: "Manuel / Motorlu" },
         { label: "Tip", value: "Sabit / Hareketli" },
       ]
@@ -58,32 +58,32 @@ export default function SunBreakersPage() {
   const features = [
     {
       title: "UV Koruma",
-      description: "Güneşin zararlı ışınlarını %95'e kadar engelleyerek iç mekanı korur.",
+      description: "Güneş ışığını kontrollü şekilde yöneterek iç mekan konforunu artırır.",
       icon: "sun" as const,
     },
     {
-      title: "Enerji Tasarrufu",
-      description: "Güneş kontrolü ile klimatizasyon maliyetlerini %30'a kadar azaltır.",
+      title: "Enerji Verimliliği",
+      description: "Güneş kontrolü sayesinde iç mekan hava dengesine katkı sağlar.",
       icon: "battery" as const,
     },
     {
       title: "Estetik Cephe",
-      description: "Modern mimari tasarıma katkı sağlayan şık ve işlevsel cephe çözümü.",
+      description: "Modern mimari ile uyumlu şık ve fonksiyonel cephe görünümü sunar.",
       icon: "check" as const,
     },
     {
-      title: "Mahremiyet",
-      description: "Dış görüş engellemesi ile özel alanlarınızı korur.",
+      title: "Görsel Konfor",
+      description: "Işık geçirgenliğini korurken dış görünürlüğü kontrollü hale getirir.",
       icon: "lock" as const,
     },
     {
       title: "Akıllı Kontrol",
-      description: "Motorlu sistemlerde güneş sensörü ile otomatik açılma kapanma.",
+      description: "Motorlu sistem seçenekleri ile otomasyon ve kolay kullanım imkanı sunar.",
       icon: "smartphone" as const,
     },
     {
       title: "Dayanıklılık",
-      description: "Hava koşullarına karşı yüksek dayanıklı alüminyum profil.",
+      description: "Alüminyum yapısı ve dayanıklı profilleriyle uzun ömürlü kullanım sunar.",
       icon: "shield" as const,
     },
   ]
@@ -106,7 +106,7 @@ export default function SunBreakersPage() {
         
         {/* Özellikler ve Avantajlar */}
         <ProductDetailFeatures
-          title="Akıllı Güneş Kontrolü"
+          title="Güneş Kontrolü"
           subtitle="Enerji verimliliği ve konfor için tasarlanmış güneş kırıcı sistemleri"
           features={features}
         />

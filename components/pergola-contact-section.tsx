@@ -66,7 +66,7 @@ export function PergolaContactSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
             {t("contactSection.title")}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty whitespace-pre-line">
             {t("contactSection.subtitle")}
           </p>
         </div>

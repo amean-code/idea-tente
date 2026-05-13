@@ -574,8 +574,8 @@ export const translations = {
     // Contact Section translations
     contactSection: {
       badge: "İletişim",
-      title: "Hayalinizdeki Projeyi Birlikte Gerçekleştirelim",
-      subtitle: "15 yıllık deneyimimiz ve uzman ekibimizle, size özel çözümler sunuyoruz. Ücretsiz keşif ve detaylı teklif için hemen iletişime geçin.",
+      title: "Projeniz İçin Uzman Çözüm Alın",
+      subtitle: "Üretimden mimari proje desteğine kadar tüm süreçlerde profesyonel çözümler sunuyoruz.\nDetaylı bilgi ve teklif için bizimle iletişime geçin.",
       methods: {
         phone: {
           title: "Telefon",
@@ -1547,7 +1547,7 @@ export const translations = {
       hero: {
         badge: "Enerji Verimli Çözümler",
         title: "Güneş Kırıcı Sistemleri",
-        description: "Modern güneş kırıcı sistemleri ile binalarınızı güneşin zararlı etkilerinden koruyun ve enerji tasarrufu sağlayın.",
+        description: "Alüminyum güneş kırıcı sistemleri, güneş kontrolü, enerji verimliliği ve estetik cephe tasarımını bir araya getirir.",
         subdescription: "Güneş kontrolü, enerji tasarrufu, UV koruma ve estetik cephe çözümleri ile binanızın değerini artırın."
       },
       wizard: {

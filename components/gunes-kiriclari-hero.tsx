@@ -25,14 +25,6 @@ export function GunesKiriclariHero() {
       </div>
 
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary mb-6 backdrop-blur-sm"
-        >
-          <span className="text-sm font-medium">{t("sunBreakers.hero.badge")}</span>
-        </motion.div>
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,16 +41,6 @@ export function GunesKiriclariHero() {
         >
           <p className="text-lg md:text-xl text-white/90 mb-8 text-pretty leading-relaxed drop-shadow-md">
             {t("sunBreakers.hero.description")}
-          </p>
-        </motion.div>
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="max-w-6xl mx-auto"
-        >
-          <p className="text-base md:text-lg text-white/80 text-pretty drop-shadow-md">
-            {t("sunBreakers.hero.subdescription")}
           </p>
         </motion.div>
       </div>
