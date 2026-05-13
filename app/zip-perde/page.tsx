@@ -30,17 +30,17 @@ export default function ZipScreenPage() {
       title: t("zipScreen.specs.dimensions"),
       icon: "ruler" as const,
       items: [
-        { label: t("zipScreen.specs.widthRange"), value: "150 - 600 cm" },
-        { label: t("zipScreen.specs.maxHeight"), value: "300 cm" },
+        { label: t("zipScreen.specs.widthRange"), value: "100 - 400 cm" },
+        { label: t("zipScreen.specs.maxHeight"), value: "400 cm" },
       ]
     },
     {
       title: t("zipScreen.specs.productStandards"),
       icon: "settings" as const,
       items: [
+        { label: t("zipScreen.specs.profileMaterial"), value: t("zipScreen.specs.profileMaterialValue") },
         { label: t("zipScreen.specs.controlType"), value: t("zipScreen.specs.controlTypeValue") },
         { label: t("zipScreen.specs.fabric"), value: t("zipScreen.specs.fabricValue") },
-        { label: t("zipScreen.specs.profile"), value: t("zipScreen.specs.profileValue") },
       ]
     },
     {
@@ -57,6 +57,7 @@ export default function ZipScreenPage() {
       items: [
         { label: t("zipScreen.specs.windResistance"), value: t("zipScreen.specs.windResistanceValue") },
         { label: t("zipScreen.specs.uvProtection"), value: "UPF 50+" },
+        { label: t("zipScreen.specs.sensorControl"), value: t("zipScreen.specs.sensorControlValue") },
       ]
     },
   ], [t, language])
@@ -66,17 +67,17 @@ export default function ZipScreenPage() {
     {
       title: t("zipScreen.features.windResistance.title"),
       description: t("zipScreen.features.windResistance.description"),
-      icon: "wind" as const,
+      icon: "eyeClosed" as const,
     },
     {
       title: t("zipScreen.features.uvProtection.title"),
       description: t("zipScreen.features.uvProtection.description"),
-      icon: "sun" as const,
+      icon: "uvLogo" as const,
     },
     {
       title: t("zipScreen.features.waterproof.title"),
       description: t("zipScreen.features.waterproof.description"),
-      icon: "rain" as const,
+      icon: "sparkles" as const,
     },
     {
       title: t("zipScreen.features.smartControl.title"),

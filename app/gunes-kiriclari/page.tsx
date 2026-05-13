@@ -74,7 +74,7 @@ export default function SunBreakersPage() {
     {
       title: "Görsel Konfor",
       description: "Işık geçirgenliğini korurken dış görünürlüğü kontrollü hale getirir.",
-      icon: "lock" as const,
+      icon: "eyeClosed" as const,
     },
     {
       title: "Akıllı Kontrol",

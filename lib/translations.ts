@@ -1650,34 +1650,40 @@ export const translations = {
         additionalFeatures: "Ek Özellikler",
         widthRange: "Genişlik (min. - maks.)",
         maxHeight: "Yükseklik (maks.)",
-        controlType: "Kontrol Tipi",
-        controlTypeValue: "Manuel / Motorlu",
+        profileType: "Profil Tipi",
+        profileTypeValue: "Zip kanallı alüminyum profil",
+        controlType: "Çalışma Şekli",
+        controlTypeValue: "Motorlu",
         fabric: "Kumaş",
         fabricValue: "Screen / Blackout",
         profile: "Profil",
         profileValue: "Alüminyum",
+        profileMaterial: "Profil Malzeme",
+        profileMaterialValue: "Alüminyum 6063-T6 F25",
         profileColor: "Profil Rengi",
         profileColorValue: "RAL Renk Seçenekleri",
         fabricColor: "Kumaş Rengi",
-        fabricColorValue: "Geniş Renk Paleti",
+        fabricColorValue: "Ferrari / Copaco Screen Kumaş",
         windResistance: "Rüzgar Dayanımı",
-        windResistanceValue: "80 km/saat'e kadar",
-        uvProtection: "UV Koruma"
+        windResistanceValue: "Maks. 70 km/h",
+        uvProtection: "UV Koruma",
+        sensorControl: "Sensör (Opsiyonel)",
+        sensorControlValue: "Rüzgar ve Güneş Sensörü",
       },
       features: {
         title: "Kontrol ve Otomasyon",
         subtitle: "Modern teknoloji ile donatılmış zip perde sistemlerimiz, konforunuz için tasarlandı",
         windResistance: {
-          title: "Rüzgar Dayanımı",
-          description: "Fermuarlı sistem sayesinde yüksek rüzgar hızlarına karşı maksimum dayanım sağlar."
+          title: "Görsel Konfor",
+          description: "Işık geçirgenliğini korurken dış görünürlüğü kontrollü hale getirir."
         },
         uvProtection: {
           title: "UV Koruma",
-          description: "UPF 50+ koruma ile zararlı güneş ışınlarını engeller, mekanınızı serinletir."
+          description: "UPF 50+ koruma ile güneş ışınlarını engeller ve mekanınızı gölgelendirir."
         },
         waterproof: {
-          title: "Su Geçirmezlik",
-          description: "Özel kumaş ve profil yapısı ile yağmura karşı tam koruma sağlar."
+          title: "Estetik ve Modern Tasarım",
+          description: "Özel teknik yapısı sayesinde dış ortam şartlarına uygun şık ve dekoratif görünüm."
         },
         smartControl: {
           title: "Akıllı Kontrol",
