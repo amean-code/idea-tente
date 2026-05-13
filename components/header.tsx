@@ -161,14 +161,6 @@ const MobileMenuContent = memo(({
                     <div className="font-medium text-gray-800 group-hover:text-primary text-sm">{t("nav.pergolaMotorized")}</div>
                     <div className="text-xs text-gray-600">{t("nav.pergolaMotorizedDesc")}</div>
                   </Link>
-                  <Link
-                    href="/pergola/rolling-roof"
-                    className="block p-3 ml-4 rounded-lg hover:bg-gray-100 transition-colors group"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <div className="font-medium text-gray-800 group-hover:text-primary text-sm">{t("nav.pergolaRolling")}</div>
-                    <div className="text-xs text-gray-600">{t("nav.pergolaRollingDesc")}</div>
-                  </Link>
                 </div>
                 {/* Cam Sistemleri - Ana kategori */}
                 <div className="space-y-2">
@@ -451,10 +443,6 @@ export function Header() {
                     <Link href="/pergola/motorlu-sistemler" className="block p-3 rounded-md hover:bg-primary/10">
                       <div className="text-sm font-medium text-gray-800">{t("nav.pergolaMotorized")}</div>
                       <p className="text-xs text-gray-600">{t("nav.pergolaMotorizedDesc")}</p>
-                    </Link>
-                    <Link href="/pergola/rolling-roof" className="block p-3 rounded-md hover:bg-primary/10">
-                      <div className="text-sm font-medium text-gray-800">{t("nav.pergolaRolling")}</div>
-                      <p className="text-xs text-gray-600">{t("nav.pergolaRollingDesc")}</p>
                     </Link>
                   </div>
                 </div>

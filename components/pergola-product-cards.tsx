@@ -43,21 +43,6 @@ export function PergolaProductCards() {
       ],
       explore: t("pergolaProducts.motorized.explore")
     },
-    {
-      id: "rolling",
-      title: t("pergolaProducts.rolling.title"),
-      subtitle: t("pergolaProducts.rolling.subtitle"),
-      description: t("pergolaProducts.rolling.description"),
-      image: "/pergola/pergola-render-siyah.webp",
-      href: "/pergola/rolling-roof",
-      features: [
-        t("pergolaProducts.rolling.features.openClose"),
-        t("pergolaProducts.rolling.features.durableFabric"),
-        t("pergolaProducts.rolling.features.motorized"),
-        t("pergolaProducts.rolling.features.modernDesign")
-      ],
-      explore: t("pergolaProducts.rolling.explore")
-    }
   ]
 
   return (

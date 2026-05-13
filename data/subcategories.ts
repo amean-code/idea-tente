@@ -40,16 +40,6 @@ export const getPergolaSubCategories = (t: any): SubCategory[] => [
     badge: t("products.badges.premium"),
     href: "/pergola/motorlu-sistemler",
     parentProduct: "bioclimatic-pergola"
-  },
-  {
-    id: "rolling-roof",
-    name: t("nav.pergolaRolling"), 
-    description: t("nav.pergolaRollingDesc"),
-    image: "/pergola/pergola-render-siyah.webp",
-    features: ["Açılır Kapanır", "Dayanıklı Kumaş", "Motorlu Sistem", "Modern Tasarım"],
-    badge: t("products.badges.new"),
-    href: "/pergola/rolling-roof",
-    parentProduct: "bioclimatic-pergola"
   }
 ]
 

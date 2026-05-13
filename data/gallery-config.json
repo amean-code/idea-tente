@@ -187,16 +187,6 @@
         "/pergola/pergola-beyaz.webp"
       ]
     },
-    "rolling-roof": {
-      "label": "Rolling Roof",
-      "publicFolder": "pergola",
-      "images": [
-        "/pergola/pergola-kafe-aktif.webp",
-        "/pergola/pergola-dıs-mekan.webp",
-        "/pergola/pergola-render-siyah.webp",
-        "/pergola/pergola-beyaz.webp"
-      ]
-    },
     "gunes-kiriclari": {
       "label": "Güneş Kırıcıları",
       "publicFolder": "pergola",

@@ -4,6 +4,9 @@ import { Clock, Phone, Mail, MapPin, Globe } from "lucide-react"
 import { contactInfo } from "@/lib/contact-info"
 import { useLanguage } from "@/contexts/language-context"
 
+/**
+ * İletişim sayfasında telefon, e-posta, adres ve çalışma saatlerini çok dilli olarak gösterir.
+ */
 export function ContactInfo() {
   const { t } = useLanguage()
 
@@ -24,9 +27,9 @@ export function ContactInfo() {
           <div>
             <h3 className="font-semibold text-foreground mb-1">{t("contactInfo.phone")}</h3>
             <p className="text-muted-foreground">
-              Türkiye: {contactInfo.phone.display.primary}
+              {t("contactInfo.phoneFactory")} {contactInfo.phone.display.primary}
               <br />
-              International: {contactInfo.phone.display.secondary}
+              {t("contactInfo.phoneMobileWhatsapp")} {contactInfo.phone.display.secondary}
             </p>
           </div>
         </div>
@@ -38,11 +41,11 @@ export function ContactInfo() {
           <div>
             <h3 className="font-semibold text-foreground mb-1">{t("contactInfo.email")}</h3>
             <p className="text-muted-foreground">
-              Genel: {contactInfo.email.info}
+              {t("contactInfo.emailGeneral")} {contactInfo.email.info}
               <br />
-              İhracat: {contactInfo.email.export}
+              {t("contactInfo.emailExport")} {contactInfo.email.export}
               <br />
-              Destek: {contactInfo.email.support}
+              {t("contactInfo.emailSupport")} {contactInfo.email.support}
             </p>
           </div>
         </div>

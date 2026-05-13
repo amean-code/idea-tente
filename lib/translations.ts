@@ -27,8 +27,6 @@ export const translations = {
       pergolaBioclimaticDesc: "105° dönebilen lameller",
       pergolaMotorized: "Motorlu Sistemler",
       pergolaMotorizedDesc: "Sensör teknolojisi, otomasyon",
-      pergolaRolling: "Rolling Roof",
-      pergolaRollingDesc: "Açılır kapanır tente",
       // Glass dropdown
       glassMain: "Cam Sistemleri",
       glassMainDesc: "Tüm cam sistem modellerini görüntüle",
@@ -656,7 +654,12 @@ export const translations = {
       address: "Adres",
       workingHours: "Çalışma Saatleri",
       languageSupport: "Dil Desteği",
-      languages: "Türkçe, English, العربية, Deutsch, Français"
+      languages: "Türkçe, English, العربية, Deutsch, Français",
+      phoneFactory: "Fabrika:",
+      phoneMobileWhatsapp: "Mobil/WhatsApp:",
+      emailGeneral: "Genel:",
+      emailExport: "İhracat:",
+      emailSupport: "Destek:"
     },
 
     // Global Reach translations
@@ -1799,18 +1802,6 @@ export const translations = {
           quietOperation: "Sessiz Çalışma"
         },
         explore: "Keşfet"
-      },
-      rolling: {
-        title: "Rolling Roof",
-        subtitle: "Açılır Kapanır Tente",
-        description: "Ray sistemi üzerinde hareket eden esnek pergola çözümü",
-        features: {
-          openClose: "Açılır Kapanır",
-          durableFabric: "Dayanıklı Kumaş",
-          motorized: "Motorlu",
-          modernDesign: "Modern Tasarım"
-        },
-        explore: "Keşfet"
       }
     },
 
@@ -2136,6 +2127,22 @@ export const translations = {
       showroomInfo: "To view product samples",
       appointmentInfo: "we recommend making an appointment",
       getDirections: "Get Directions on Google Maps",
+    },
+    // Contact Info translations
+    contactInfo: {
+      title: "Contact Information",
+      subtitle: "Our expert team is ready to provide you with the best service. Get professional support for your projects.",
+      phone: "Phone",
+      email: "Email",
+      address: "Address",
+      workingHours: "Working Hours",
+      languageSupport: "Language Support",
+      languages: "Turkish, English, العربية, Deutsch, Français",
+      phoneFactory: "Factory:",
+      phoneMobileWhatsapp: "Mobile/WhatsApp:",
+      emailGeneral: "General:",
+      emailExport: "Export:",
+      emailSupport: "Support:"
     },
     // Forms
     forms: {
@@ -2860,6 +2867,22 @@ export const translations = {
       appointmentInfo: "نوصي بحجز موعد",
       getDirections: "احصل على الاتجاهات على خرائط جوجل",
     },
+    // Contact Info translations
+    contactInfo: {
+      title: "معلومات الاتصال",
+      subtitle: "فريقنا الخبير جاهز لتقديم أفضل خدمة لك. احصل على دعم احترافي لمشاريعك.",
+      phone: "الهاتف",
+      email: "البريد الإلكتروني",
+      address: "العنوان",
+      workingHours: "ساعات العمل",
+      languageSupport: "دعم اللغة",
+      languages: "Turkish, English, العربية, Deutsch, Français",
+      phoneFactory: "المصنع:",
+      phoneMobileWhatsapp: "الجوال / واتساب:",
+      emailGeneral: "عام:",
+      emailExport: "التصدير:",
+      emailSupport: "الدعم:"
+    },
     // Forms
     forms: {
       name: "الاسم الكامل",
@@ -3432,8 +3455,6 @@ export const translations = {
       pergolaBioclimaticDesc: "105° drehbare Lamellen",
       pergolaMotorized: "Motorisierte Systeme",
       pergolaMotorizedDesc: "Sensortechnologie, Automatisierung",
-      pergolaRolling: "Rolling Roof",
-      pergolaRollingDesc: "Ausfahrbare Markise",
       // Glass dropdown
       glassMain: "Glassysteme",
       glassMainDesc: "Alle Glassystem-Modelle ansehen",
@@ -3663,6 +3684,22 @@ export const translations = {
       showroomInfo: "Um Produktmuster zu sehen",
       appointmentInfo: "empfehlen wir eine Terminvereinbarung",
       getDirections: "Wegbeschreibung bei Google Maps abrufen",
+    },
+    // Contact Info translations
+    contactInfo: {
+      title: "Kontaktinformationen",
+      subtitle: "Unser Expertenteam steht bereit, Ihnen den besten Service zu bieten. Erhalten Sie professionelle Unterstützung für Ihre Projekte.",
+      phone: "Telefon",
+      email: "E-Mail",
+      address: "Adresse",
+      workingHours: "Arbeitszeiten",
+      languageSupport: "Sprachunterstützung",
+      languages: "Türkçe, English, العربية, Deutsch, Français",
+      phoneFactory: "Werk:",
+      phoneMobileWhatsapp: "Mobil/WhatsApp:",
+      emailGeneral: "Allgemein:",
+      emailExport: "Export:",
+      emailSupport: "Support:"
     },
     // Forms
     forms: {
@@ -4340,6 +4377,22 @@ export const translations = {
       showroomInfo: "Для просмотра образцов продукции",
       appointmentInfo: "рекомендуем записаться на прием",
       getDirections: "Получить направления в Google Картах",
+    },
+    // Contact Info translations
+    contactInfo: {
+      title: "Контактная информация",
+      subtitle: "Наша команда экспертов готова предоставить вам лучший сервис. Получите профессиональную поддержку для ваших проектов.",
+      phone: "Телефон",
+      email: "Электронная почта",
+      address: "Адрес",
+      workingHours: "Рабочие часы",
+      languageSupport: "Языковая поддержка",
+      languages: "Türkçe, English, العربية, Deutsch, Français",
+      phoneFactory: "Завод:",
+      phoneMobileWhatsapp: "Мобильный/WhatsApp:",
+      emailGeneral: "Общие вопросы:",
+      emailExport: "Экспорт:",
+      emailSupport: "Поддержка:"
     },
     // Forms
     forms: {
