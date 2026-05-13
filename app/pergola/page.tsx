@@ -7,7 +7,6 @@ import { ProductDetailGallery } from "@/components/product-detail-gallery"
 import { ProductDetailSpecs } from "@/components/product-detail-specs"
 import { ProductDetailFeatures } from "@/components/product-detail-features"
 import { PergolaProductCards } from "@/components/pergola-product-cards"
-import { ReferenceProjects } from "@/components/reference-projects"
 import { ContactSection } from "@/components/contact-section"
 import { useLanguage } from "@/contexts/language-context"
 import { getGalleryImages } from "@/lib/gallery-config"
@@ -49,15 +48,15 @@ export default function BioklimatikPergolaPage() {
       icon: "palette" as const,
       items: [
         { label: t("pergola.mainPage.specs.waterproof"), value: "%100" },
-        { label: t("pergola.mainPage.specs.distributedLoad"), value: "50kg+25kg/m²" },
-        { label: t("pergola.mainPage.specs.windLoad"), value: "50 kg/m²" },
+        { label: t("pergola.mainPage.specs.distributedLoad"), value: "200kg-250kg/m²" },
+        { label: t("pergola.mainPage.specs.windLoad"), value: "100 - 120 km/h" },
       ]
     },
     {
       title: t("pergola.mainPage.specs.warranty"),
       icon: "layers" as const,
       items: [
-        { label: t("pergola.mainPage.specs.motorWarranty"), value: "2 Yıl" },
+        { label: t("pergola.mainPage.specs.motorWarranty"), value: "5 Yıl" },
         { label: t("pergola.mainPage.specs.mechanicalWarranty"), value: "2 Yıl" },
         { label: t("pergola.mainPage.specs.slope"), value: "Düz veya %5 Eğimli" },
       ]
@@ -109,7 +108,10 @@ export default function BioklimatikPergolaPage() {
       <main>
         {/* Hero Section - Palmiye tarzı */}
         <PergolaHero key={`hero-${language}`} />
-        
+
+        {/* Alt sayfa yönlendirme kartları (cam-sistemleri düzeni) */}
+        <PergolaProductCards />
+
         {/* Galeri */}
         <ProductDetailGallery
           key={`gallery-${language}`}
@@ -128,17 +130,8 @@ export default function BioklimatikPergolaPage() {
           features={features}
         />
         
-        {/* Ana Ürün Kartları */}
-        <PergolaProductCards />
-        
         {/* Etkileşimli Ürün Seçim Sihirbazı - Kaldırıldı */}
         {/* <PergolaSelectionWizard /> */}
-        
-        {/* Referans Projeler */}
-        <ReferenceProjects 
-          serviceType="bioclimatic-pergola"
-          useTranslations={true}
-        />
         
         {/* İletişim Bölümü */}
         <ContactSection />

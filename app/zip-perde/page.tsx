@@ -128,12 +128,6 @@ export default function ZipScreenPage() {
         {/* Alt Ürünler */}
         {/* <ZipPerdeProductCards /> */}
         
-        {/* Referans Projeler */}
-        <ReferenceProjects 
-          serviceType="zip-screen"
-          useTranslations={true}
-        />
-        
         {/* İletişim Bölümü */}
         <ContactSection />
       </main>

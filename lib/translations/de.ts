@@ -266,17 +266,17 @@ export const deTranslations = {
         warranty: "Garantie & Funktionen",
         maxWidth: "Maximale Breite",
         maxDepth: "Maximale Tiefe",
-        maxArea: "Maximale Fläche",
+        maxArea: "Maximale Fläche (Einzelanlage)",
         verticalProfile: "Vertikales Trägerprofil",
         horizontalProfile: "Horizontales Trägerprofil",
         profileMaterial: "Profilmaterial",
         louverAngle: "Lamellenwinkel",
         gasketMaterial: "Dichtungsmaterial",
         surfaceTreatment: "Oberflächenbehandlung",
-        accessoryCoating: "Zubehörbeschichtung",
+        accessoryCoating: "Zubehör-Verbindungsmaterialien",
         waterproof: "Wasserdicht",
-        distributedLoad: "Verteilte Lastkapazität",
-        windLoad: "Windlast",
+        distributedLoad: "Maximale Schneelast",
+        windLoad: "Windbeständigkeit",
         motorSystem: "Motorsystem",
         control: "Steuerung",
         motorWarranty: "Motor-Garantie",
@@ -287,8 +287,9 @@ export const deTranslations = {
       },
       featureList: {
         rotatableLouvers: {
-          title: "105° Drehbare Lamellen",
-          description: "Kontrollieren Sie Sonnenlicht und Belüftung gleichzeitig mit Lamellen, die sich axial um 105° öffnen lassen."
+          title: "105° Drehbare und einziehbare Lamellen",
+          description:
+            "Steuern Sie Sonnenlicht und Belüftung gleichzeitig mit Lamellen, die sich axial bis 105° öffnen und wieder einziehen lassen.",
         },
         climateControl: {
           title: "Intelligente Klimasteuerung",
@@ -335,21 +336,22 @@ export const deTranslations = {
           warranty: "Garantie & Funktionen",
           maxWidth: "Maximale Breite",
           maxDepth: "Maximale Tiefe",
-          maxArea: "Maximale Fläche",
+          maxArea: "Maximale Fläche (Einzelanlage)",
           profileMaterial: "Profilmaterial",
           louverAngle: "Lamellenwinkel",
           gasketMaterial: "Dichtungsmaterial",
           waterproof: "Wasserdicht",
-          distributedLoad: "Verteilte Lastkapazität",
-          windLoad: "Windlast",
+          distributedLoad: "Maximale Schneelast",
+          windLoad: "Windbeständigkeit",
           motorWarranty: "Motor-Garantie",
           mechanicalWarranty: "Mechanische Garantie",
           slope: "Neigung"
         },
         features: {
           rotatableLouvers: {
-            title: "105° Drehbare Lamellen",
-            description: "Kontrollieren Sie Sonnenlicht und Belüftung gleichzeitig mit Lamellen, die sich axial um 105° öffnen lassen."
+            title: "105° Drehbare und einziehbare Lamellen",
+            description:
+              "Steuern Sie Sonnenlicht und Belüftung gleichzeitig mit Lamellen, die sich axial bis 105° öffnen und wieder einziehen lassen.",
           },
           waterproof: {
             title: "100% Wasserdicht",
@@ -941,7 +943,7 @@ export const deTranslations = {
     },
     info: {
       title: "Kontaktinformationen",
-      phoneLabel: "Haupttelefon",
+      phoneLabel: "Fabrikbüro",
       emailLabel: "E-Mail",
       locationLabel: "Landesweit",
       provincesLabel: "81 Provinz-Service"
@@ -1177,9 +1179,10 @@ export const deTranslations = {
     bioclimatic: {
       title: "Bioklimatische Systeme",
       subtitle: "Intelligente Klimasteuerung",
-      description: "Sonnen-, Belüftungs- und Regenkontrolle mit 105° drehbaren Lamellen",
+      description:
+        "Sonnen-, Belüftungs- und Regenkontrolle mit 105° drehbaren und einziehbaren Lamellen",
       features: {
-        rotatable: "105° Drehbare Lamellen",
+        rotatable: "105° Drehbare und einziehbare Lamellen",
         waterproof: "100% Wasserdicht",
         energySaving: "Energieeinsparung",
         allSeasons: "Alle Jahreszeiten"

@@ -267,17 +267,17 @@ export const enTranslations = {
         warranty: "Warranty & Features",
         maxWidth: "Maximum Width",
         maxDepth: "Maximum Depth",
-        maxArea: "Maximum Area",
+        maxArea: "Maximum Area (Single System)",
         verticalProfile: "Vertical Carrier Profile",
         horizontalProfile: "Horizontal Carrier Profile",
         profileMaterial: "Profile Material",
         louverAngle: "Louver Angle",
         gasketMaterial: "Gasket Material",
         surfaceTreatment: "Surface Treatment",
-        accessoryCoating: "Accessory Coating",
+        accessoryCoating: "Accessory connection materials",
         waterproof: "Waterproof",
-        distributedLoad: "Distributed Load Capacity",
-        windLoad: "Wind Load",
+        distributedLoad: "Maximum Snow Load",
+        windLoad: "Wind resistance",
         motorSystem: "Motor System",
         control: "Control",
         motorWarranty: "Motor Warranty",
@@ -288,8 +288,9 @@ export const enTranslations = {
       },
       featureList: {
         rotatableLouvers: {
-          title: "105° Rotatable Louvers",
-          description: "Control sunlight and ventilation simultaneously with louvers that can open axially at 105° angle."
+          title: "105° Rotatable and Retractable Louvers",
+          description:
+            "Control sunlight and ventilation simultaneously with louvers that open axially up to 105° and retract.",
         },
         climateControl: {
           title: "Smart Climate Control",
@@ -336,21 +337,22 @@ export const enTranslations = {
           warranty: "Warranty & Features",
           maxWidth: "Maximum Width",
           maxDepth: "Maximum Depth",
-          maxArea: "Maximum Area",
+          maxArea: "Maximum Area (Single System)",
           profileMaterial: "Profile Material",
           louverAngle: "Louver Angle",
           gasketMaterial: "Gasket Material",
           waterproof: "Waterproof",
-          distributedLoad: "Distributed Load Capacity",
-          windLoad: "Wind Load",
+          distributedLoad: "Maximum Snow Load",
+          windLoad: "Wind resistance",
           motorWarranty: "Motor Warranty",
           mechanicalWarranty: "Mechanical Warranty",
           slope: "Slope"
         },
         features: {
           rotatableLouvers: {
-            title: "105° Rotatable Louvers",
-            description: "Control sunlight and ventilation simultaneously with louvers that can open axially at 105° angle."
+            title: "105° Rotatable and Retractable Louvers",
+            description:
+              "Control sunlight and ventilation simultaneously with louvers that open axially up to 105° and retract.",
           },
           waterproof: {
             title: "100% Waterproof",
@@ -942,7 +944,7 @@ export const enTranslations = {
     },
     info: {
       title: "Contact Information",
-      phoneLabel: "Main Phone",
+      phoneLabel: "Factory Office",
       emailLabel: "Email",
       locationLabel: "Nationwide",
       provincesLabel: "81 Province Service"
@@ -1390,9 +1392,10 @@ export const enTranslations = {
     bioclimatic: {
       title: "Bioclimatic Systems",
       subtitle: "Smart Climate Control",
-      description: "Sun, ventilation and rain control with 105° rotatable louvers",
+      description:
+        "Sun, ventilation and rain control with 105° rotatable and retractable louvers",
       features: {
-        rotatable: "105° Rotatable Louvers",
+        rotatable: "105° Rotatable and Retractable Louvers",
         waterproof: "100% Waterproof",
         energySaving: "Energy Saving",
         allSeasons: "All Seasons"

@@ -18,7 +18,7 @@ export const contactInfo = {
 
   // E-posta Adresleri
   email: {
-    info: "info@ideatente.com",
+    info: "idea@ideatente.com",
     idea: "idea@ideatente.com",
     export: "export@ideatente.com",
     support: "destek@ideatente.com",

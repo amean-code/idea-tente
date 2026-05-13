@@ -52,7 +52,7 @@ export function CTASection() {
             </Button>
 
             <Button variant="ghost" asChild className="text-primary-foreground hover:bg-primary-foreground/10">
-              <Link href="/export">
+              <Link href="/export#distributor-application">
                 <Globe className="mr-2 h-4 w-4" />
                 {t("cta.becomeDistributor")}
               </Link>

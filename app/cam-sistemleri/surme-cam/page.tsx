@@ -128,12 +128,6 @@ export default function SurmeCamPage() {
           features={features}
         />
         
-        {/* Referans Projeler */}
-        <ReferenceProjects 
-          serviceType="glass-systems"
-          useTranslations={true}
-        />
-        
         {/* İletişim Bölümü */}
         <ContactSection />
       </main>

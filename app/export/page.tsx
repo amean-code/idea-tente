@@ -6,6 +6,7 @@ import { DistributorBenefits } from "@/components/distributor-benefits"
 import { ExportProducts } from "@/components/export-products"
 import { DistributorApplication } from "@/components/distributor-application"
 import { ExportShippingProcess } from "@/components/export-shipping-process"
+import { ScrollToHash } from "@/components/scroll-to-hash"
 
 /**
  * Export sayfası
@@ -15,6 +16,7 @@ export default function ExportPage() {
   return (
     <div className="min-h-screen bg-slate-50">
       <Header />
+      <ScrollToHash />
       <main>
         <ExportHero />
         <ExportGlobe />

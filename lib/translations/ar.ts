@@ -235,17 +235,17 @@ export const arTranslations = {
         warranty: "الضمان والميزات",
         maxWidth: "الحد الأقصى للعرض",
         maxDepth: "الحد الأقصى للعمق",
-        maxArea: "الحد الأقصى للمساحة",
+        maxArea: "المساحة القصوى (نظام واحد)",
         verticalProfile: "الملف الحامل العمودي",
         horizontalProfile: "الملف الحامل الأفقي",
         profileMaterial: "مادة الملف",
         louverAngle: "زاوية اللاميل",
         gasketMaterial: "مادة الحشية",
         surfaceTreatment: "معالجة السطح",
-        accessoryCoating: "طلاء الملحقات",
+        accessoryCoating: "مواد توصيل الملحقات",
         waterproof: "مقاوم للماء",
-        distributedLoad: "سعة الحمل الموزع",
-        windLoad: "حمل الرياح",
+        distributedLoad: "الحد الأقصى لحمل الثلج",
+        windLoad: "مقاومة الرياح",
         motorSystem: "نظام المحرك",
         control: "التحكم",
         motorWarranty: "ضمان المحرك",
@@ -256,8 +256,9 @@ export const arTranslations = {
       },
       featureList: {
         rotatableLouvers: {
-          title: "لاميل قابلة للدوران 105°",
-          description: "تحكم في ضوء الشمس والتهوية في نفس الوقت مع اللاميل التي يمكن فتحها محورياً بزاوية 105°."
+          title: "لاميل دوارة وقابلة للانكماش بزاوية 105°",
+          description:
+            "تحكّم في ضوء الشمس والتهوية في آنٍ واحد مع لاميل تُفتح محوريًا حتى 105° ويمكن إعادتها وتراصها للخلف.",
         },
         climateControl: {
           title: "التحكم الذكي في المناخ",
@@ -304,21 +305,22 @@ export const arTranslations = {
           warranty: "الضمان والميزات",
           maxWidth: "الحد الأقصى للعرض",
           maxDepth: "الحد الأقصى للعمق",
-          maxArea: "الحد الأقصى للمساحة",
+          maxArea: "المساحة القصوى (نظام واحد)",
           profileMaterial: "مادة الملف",
           louverAngle: "زاوية اللاميل",
           gasketMaterial: "مادة الحشية",
           waterproof: "مقاوم للماء",
-          distributedLoad: "سعة الحمل الموزع",
-          windLoad: "حمل الرياح",
+          distributedLoad: "الحد الأقصى لحمل الثلج",
+          windLoad: "مقاومة الرياح",
           motorWarranty: "ضمان المحرك",
           mechanicalWarranty: "الضمان الميكانيكي",
           slope: "الميل"
         },
         features: {
           rotatableLouvers: {
-            title: "لاميل قابلة للدوران 105°",
-            description: "تحكم في ضوء الشمس والتهوية في نفس الوقت مع اللاميل التي يمكن فتحها محورياً بزاوية 105°."
+            title: "لاميل دوارة وقابلة للانكماش بزاوية 105°",
+            description:
+              "تحكّم في ضوء الشمس والتهوية في آنٍ واحد مع لاميل تُفتح محوريًا حتى 105° ويمكن إعادتها وتراصها للخلف.",
           },
           waterproof: {
             title: "مقاوم للماء 100%",
@@ -910,7 +912,7 @@ export const arTranslations = {
     },
     info: {
       title: "معلومات الاتصال",
-      phoneLabel: "الهاتف الرئيسي",
+      phoneLabel: "مكتب المصنع",
       emailLabel: "البريد الإلكتروني",
       locationLabel: "على مستوى تركيا",
       provincesLabel: "خدمة 81 محافظة"
@@ -1146,9 +1148,10 @@ export const arTranslations = {
     bioclimatic: {
       title: "الأنظمة البيوكليماتية",
       subtitle: "التحكم الذكي في المناخ",
-      description: "التحكم في الشمس والتهوية والمطر مع اللاميل القابلة للدوران 105°",
+      description:
+        "التحكم في الشمس والتهوية والمطر مع شرائح لاميل 105° دوارة وقابلة للانكماش",
       features: {
-        rotatable: "لاميل قابلة للدوران 105°",
+        rotatable: "لاميل دوارة وقابلة للانكماش بزاوية 105°",
         waterproof: "مقاوم للماء 100%",
         energySaving: "توفير الطاقة",
         allSeasons: "جميع الفصول"

@@ -4,7 +4,6 @@ import { ProductDetailGallery } from "@/components/product-detail-gallery"
 import { ProductDetailSpecs } from "@/components/product-detail-specs"
 import { ProductDetailFeatures } from "@/components/product-detail-features"
 import { GunesKiriclariProductCards } from "@/components/gunes-kiriclari-product-cards"
-import { ReferenceProjects } from "@/components/reference-projects"
 import { ContactSection } from "@/components/contact-section"
 import { getGalleryImages } from "@/lib/gallery-config"
 
@@ -114,12 +113,6 @@ export default function SunBreakersPage() {
         
         {/* Alt Ürünler */}
         {/* <GunesKiriclariProductCards /> */}
-        
-        {/* Referans Projeler */}
-        <ReferenceProjects 
-          serviceType="sun-breakers"
-          useTranslations={true}
-        />
         
         {/* İletişim Bölümü */}
         <ContactSection />

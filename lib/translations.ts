@@ -24,7 +24,7 @@ export const translations = {
       pergolaMain: "Pergola Sistemleri",
       pergolaMainDesc: "Tüm pergola modellerini görüntüle",
       pergolaBioclimatic: "Bioklimatik Pergola Sistemleri",
-      pergolaBioclimaticDesc: "105° dönebilen lameller",
+      pergolaBioclimaticDesc: "105° dönebilen ve geri toplanabilen lameller",
       pergolaMotorized: "Motorlu Pergola Sistemleri",
       pergolaMotorizedDesc: "Sensör teknolojisi, otomasyon",
       // Glass dropdown
@@ -66,7 +66,7 @@ export const translations = {
       // Header specific
       menu: "Menü",
       bioclimaticTitle: "Bioklimatik Sistemler",
-      bioclimaticDesc: "105° dönebilen lameller",
+      bioclimaticDesc: "105° dönebilen ve geri toplanabilen lameller",
       glassTitle: "Cam Sistemleri",
       glassDesc: "Frameless sürme sistem",
       languageSelection: "Dil Seçimi",
@@ -429,21 +429,21 @@ export const translations = {
           warranty: "Garanti & Özellikler",
           maxWidth: "Maksimum Genişlik",
           maxDepth: "Maksimum Derinlik",
-          maxArea: "Maksimum Alan",
+          maxArea: "Maksimum Alan (Tek Sistem)",
           profileMaterial: "Profil Malzeme",
           louverAngle: "Lamel Açısı",
           gasketMaterial: "Fitil Malzemesi",
           waterproof: "Su Geçirmezlik",
-          distributedLoad: "Yayılı Yük Kapasitesi",
-          windLoad: "Rüzgar Yükü",
+          distributedLoad: "Maksimum Kar Yükü",
+          windLoad: "Rüzgar Dayanımı",
           motorWarranty: "Motor Garantisi",
           mechanicalWarranty: "Mekanik Garanti",
           slope: "Eğim"
         },
         features: {
           rotatableLouvers: {
-            title: "105° Dönebilen Lameller",
-            description: "Eksenel olarak 105° açıda açılabilen lameller ile güneş ışığını ve havalandırmayı aynı anda kontrol edin."
+            title: "105° Dönebilen ve Geri Toplanabilen Lameller",
+            description: "Eksenel olarak 105° açıda açılabilen ve geri toplanabilen lameller ile güneş ışığını ve havalandırmayı aynı anda kontrol edin."
           },
           waterproof: {
             title: "%100 Su Geçirmezlik",
@@ -473,7 +473,7 @@ export const translations = {
           subtitle: "Doğa ile uyumlu, akıllı iklim kontrolü ile konforlu yaşam alanları"
         },
         features: {
-          title: "Bioklimatik Teknoloji",
+          title: "Bioklimatik Pergola Teknolojisi",
           subtitle: "Doğal havalandırma ve iklim kontrolü ile enerji verimliliği",
           pageTitle: "Akıllı Pergola Teknolojisi",
           pageSubtitle: "Modern yaşam için tasarlanmış bioklimatik pergola sistemlerimizin sunduğu üstün özellikler"
@@ -485,17 +485,17 @@ export const translations = {
           warranty: "Garanti & Özellikler",
           maxWidth: "Maksimum Genişlik",
           maxDepth: "Maksimum Derinlik",
-          maxArea: "Maksimum Alan",
+          maxArea: "Maksimum Alan (Tek Sistem)",
           verticalProfile: "Dikey Taşıyıcı Profil",
           horizontalProfile: "Yatay Taşıyıcı Profil",
           profileMaterial: "Profil Malzeme",
           louverAngle: "Lamel Açısı",
           gasketMaterial: "Fitil Malzemesi",
           surfaceTreatment: "Yüzey İşlemi",
-          accessoryCoating: "Aksesuar Kaplama",
+          accessoryCoating: "Aksesuar Bağlantı Malzemeleri",
           waterproof: "Su Geçirmezlik",
-          distributedLoad: "Yayılı Yük Kapasitesi",
-          windLoad: "Rüzgar Yükü",
+          distributedLoad: "Maksimum Kar Yükü",
+          windLoad: "Rüzgar Dayanımı",
           motorSystem: "Motor Sistemi",
           control: "Kontrol",
           motorWarranty: "Motor Garantisi",
@@ -506,8 +506,8 @@ export const translations = {
         },
         featureList: {
           rotatableLouvers: {
-            title: "105° Dönebilen Lameller",
-            description: "Eksenel olarak 105° açıda açılabilen lameller ile güneş ışığını ve havalandırmayı aynı anda kontrol edin."
+            title: "105° Dönebilen ve Geri Toplanabilen Lameller",
+            description: "Eksenel olarak 105° açıda açılabilen ve geri toplanabilen lameller ile güneş ışığını ve havalandırmayı aynı anda kontrol edin."
           },
           climateControl: {
             title: "Akıllı İklim Kontrolü",
@@ -603,7 +603,7 @@ export const translations = {
       },
       info: {
         title: "İletişim Bilgileri",
-        phoneLabel: "Ana Telefon",
+        phoneLabel: "Fabrika Ofis",
         emailLabel: "E-posta",
         locationLabel: "Türkiye Geneli",
         provincesLabel: "81 İl Hizmeti"
@@ -655,7 +655,7 @@ export const translations = {
       workingHours: "Çalışma Saatleri",
       languageSupport: "Dil Desteği",
       languages: "Türkçe, English, العربية, Deutsch, Français",
-      phoneFactory: "Fabrika:",
+      phoneFactory: "Fabrika Ofis:",
       phoneMobileWhatsapp: "Mobil/WhatsApp:",
       emailGeneral: "Genel:",
       emailExport: "İhracat:",
@@ -1682,8 +1682,9 @@ export const translations = {
 
     // CTA Section translations
     cta: {
-      title: "Hayalinizdeki Outdoor Alanı Gerçekleştirin",
-      subtitle: "Uzman ekibimizle ücretsiz keşif ve teklif alın. Premium kalitede IDEA ve cam sistemleri için hemen iletişime geçin.",
+      title: "Outdoor projelerinizi birlikte hayata geçirelim",
+      subtitle:
+        "Üretimden mimari desteğe, teknik çözümlerden ihracata kadar tüm süreçlerde profesyonel destek sağlıyoruz.",
       whatsappContact: "WhatsApp İletişim",
       quoteForm: "Teklif Formu",
       downloadCatalog: "Katalog İndir",
@@ -1780,12 +1781,18 @@ export const translations = {
 
     // Pergola Product Cards translations
     pergolaProducts: {
+      subpages: {
+        title: "Pergola Sisteminizi Seçin",
+        subtitle:
+          "Bioklimatik ve motorlu çözümlerimiz için ayrıntılı bilgi ve görseller alt sayfalarımızda.",
+      },
+      viewDetails: "Detayları Gör",
       bioclimatic: {
         title: "Bioklimatik Sistemler",
         subtitle: "Akıllı İklim Kontrolü",
-        description: "105° dönebilen lameller ile güneş, havalandırma ve yağmur kontrolü",
+        description: "105° dönebilen ve geri toplanabilen lameller ile güneş, havalandırma ve yağmur kontrolü",
         features: {
-          rotatable: "105° Dönebilen Lameller",
+          rotatable: "105° Dönebilen ve Geri Toplanabilen Lameller",
           waterproof: "%100 Su Geçirmez",
           energySaving: "Enerji Tasarrufu",
           allSeasons: "Tüm Mevsim"
@@ -1892,7 +1899,7 @@ export const translations = {
       pergolaMain: "Pergola Systems",
       pergolaMainDesc: "View all pergola models",
       pergolaBioclimatic: "Bioclimatic Pergola Systems",
-      pergolaBioclimaticDesc: "105° rotating louvers",
+      pergolaBioclimaticDesc: "105° rotatable and retractable louvers",
       pergolaMotorized: "Motorized Pergola Systems",
       pergolaMotorizedDesc: "Sensor technology, automation",
       pergolaRolling: "Rolling Roof",
@@ -1937,7 +1944,7 @@ export const translations = {
       menu: "Menu",
       languageSelection: "Language Selection",
       bioclimaticTitle: "Bioclimatic Systems",
-      bioclimaticDesc: "105° rotating louvers",
+      bioclimaticDesc: "105° rotatable and retractable louvers",
       glassTitle: "Glass Systems",
       glassDesc: "Frameless sliding system",
       menuDescriptions: {
@@ -2139,7 +2146,7 @@ export const translations = {
       workingHours: "Working Hours",
       languageSupport: "Language Support",
       languages: "Turkish, English, العربية, Deutsch, Français",
-      phoneFactory: "Factory:",
+      phoneFactory: "Factory Office:",
       phoneMobileWhatsapp: "Mobile/WhatsApp:",
       emailGeneral: "General:",
       emailExport: "Export:",
@@ -2236,8 +2243,9 @@ export const translations = {
 
     // CTA Section translations
     cta: {
-      title: "Make Your Dream Outdoor Space a Reality",
-      subtitle: "Get free inspection and quote with our expert team. Contact us now for premium quality pergola and glass systems.",
+      title: "Let's bring your outdoor projects to life together",
+      subtitle:
+        "From production to architectural support, from technical solutions to export, we provide professional assistance at every step.",
       whatsappContact: "WhatsApp Contact",
       quoteForm: "Quote Form",
       downloadCatalog: "Download Catalog",
@@ -2325,11 +2333,60 @@ export const translations = {
       }
     },
 
+    // Pergola Product Cards translations
+    pergolaProducts: {
+      subpages: {
+        title: "Choose Your Pergola System",
+        subtitle:
+          "Visit dedicated pages for detailed specs, gallery and bioclimatic or motorized solutions.",
+      },
+      viewDetails: "View Details",
+      bioclimatic: {
+        title: "Bioclimatic Systems",
+        subtitle: "Smart Climate Control",
+        description:
+          "Sun, ventilation and rain control with 105° rotatable and retractable louvers",
+        features: {
+          rotatable: "105° Rotatable and Retractable Louvers",
+          waterproof: "100% Waterproof",
+          energySaving: "Energy Saving",
+          allSeasons: "All Seasons",
+        },
+        explore: "Explore",
+      },
+      motorized: {
+        title: "Motorized Systems",
+        subtitle: "Fully Automatic Control",
+        description: "Smart living with sensor technology and remote control",
+        features: {
+          sunSensor: "Sun Sensor",
+          windSensor: "Wind Sensor",
+          remoteControl: "Remote Control",
+          quietOperation: "Quiet Operation",
+        },
+        explore: "Explore",
+      },
+    },
+
     // Pergola specific translations
     pergola: {
       hero: {
         description: "IDEA pergola systems feature durable aluminum carrier structures and offer various ceiling options ideal for different architectural designs. With options like glass, PVC fabric or aluminum panels, enhance your outdoor spaces with a unique style.",
         subdescription: "Create a serene space surrounded by bioclimatic pergola and loungers, perfect for relaxing and soaking up the sun."
+      },
+      mainPage: {
+        specs: {
+          maxArea: "Maximum Area (Single System)",
+          distributedLoad: "Maximum Snow Load",
+          windLoad: "Wind resistance",
+        },
+        features: {
+          rotatableLouvers: {
+            title: "105° Rotatable and Retractable Louvers",
+            description:
+              "Control sunlight and ventilation simultaneously with louvers that open axially up to 105° and retract.",
+          },
+        },
       },
       bioclimatic: {
         hero: {
@@ -2349,17 +2406,17 @@ export const translations = {
           warranty: "Warranty & Features",
           maxWidth: "Maximum Width",
           maxDepth: "Maximum Depth",
-          maxArea: "Maximum Area",
+          maxArea: "Maximum Area (Single System)",
           verticalProfile: "Vertical Carrier Profile",
           horizontalProfile: "Horizontal Carrier Profile",
           profileMaterial: "Profile Material",
           louverAngle: "Louver Angle",
           gasketMaterial: "Gasket Material",
           surfaceTreatment: "Surface Treatment",
-          accessoryCoating: "Accessory Coating",
+          accessoryCoating: "Accessory connection materials",
           waterproof: "Waterproof",
-          distributedLoad: "Distributed Load Capacity",
-          windLoad: "Wind Load",
+          distributedLoad: "Maximum Snow Load",
+          windLoad: "Wind resistance",
           motorSystem: "Motor System",
           control: "Control",
           motorWarranty: "Motor Warranty",
@@ -2370,8 +2427,9 @@ export const translations = {
         },
         featureList: {
           rotatableLouvers: {
-            title: "105° Rotatable Louvers",
-            description: "Control sunlight and ventilation simultaneously with louvers that can open axially at 105° angle."
+            title: "105° Rotatable and Retractable Louvers",
+            description:
+              "Control sunlight and ventilation simultaneously with louvers that open axially up to 105° and retract.",
           },
           climateControl: {
             title: "Smart Climate Control",
@@ -2554,7 +2612,7 @@ export const translations = {
         },
         info: {
           title: "Contact Information",
-          phoneLabel: "Main Phone",
+          phoneLabel: "Factory Office",
           emailLabel: "Email",
           locationLabel: "Nationwide",
           provincesLabel: "81 Province Service"
@@ -2634,7 +2692,7 @@ export const translations = {
       pergolaMain: "أنظمة البرجولا",
       pergolaMainDesc: "عرض جميع نماذج البرجولا",
       pergolaBioclimatic: "أنظمة البرجولا البيوكليماتية",
-      pergolaBioclimaticDesc: "شرائح دوارة 105°",
+      pergolaBioclimaticDesc: "شرائح لاميل 105° دوارة وقابلة للانكماش",
       pergolaMotorized: "أنظمة البرجولا المحركة",
       pergolaMotorizedDesc: "تقنية المستشعر، الأتمتة",
       pergolaRolling: "السقف المتحرك",
@@ -2679,7 +2737,7 @@ export const translations = {
       menu: "القائمة",
       languageSelection: "اختيار اللغة",
       bioclimaticTitle: "الأنظمة البيوكليماتية",
-      bioclimaticDesc: "شرائح دوارة 105°",
+      bioclimaticDesc: "شرائح لاميل 105° دوارة وقابلة للانكماش",
       glassTitle: "الأنظمة الزجاجية",
       glassDesc: "نظام منزلق بدون إطار",
       menuDescriptions: {
@@ -2846,6 +2904,72 @@ export const translations = {
         "ضمان 10 سنوات"
       ]
     },
+    // Pergola Product Cards translations
+    pergolaProducts: {
+      subpages: {
+        title: "اختر نظام البرجولا",
+        subtitle:
+          "انتقل إلى الصفحات المخصّصة للمواصفات التفصيلية والمعرض وحلول البيوكليماتيك أو الأنظمة المزوّدة بمحرّك.",
+      },
+      viewDetails: "عرض التفاصيل",
+      bioclimatic: {
+        title: "أنظمة بيوكليماتيك",
+        subtitle: "التحكم الذكي في المناخ",
+        description:
+          "التحكم في الشمس والتهوية والمطر مع شرائح لاميل 105° دوارة وقابلة للانكماش",
+        features: {
+          rotatable: "لاميل دوارة وقابلة للانكماش بزاوية 105°",
+          waterproof: "عازل للماء 100٪",
+          energySaving: "توفير الطاقة",
+          allSeasons: "جميع المواسم",
+        },
+        explore: "استكشف",
+      },
+      motorized: {
+        title: "أنظمة آلية",
+        subtitle: "تحكم أوتوماتيكي كامل",
+        description: "حياة ذكية بتقنية المستشعرات والتحكم عن بعد",
+        features: {
+          sunSensor: "مستشعر الشمس",
+          windSensor: "مستشعر الرياح",
+          remoteControl: "تحكم عن بعد",
+          quietOperation: "تشغيل هادئ",
+        },
+        explore: "استكشف",
+      },
+    },
+    // Pergola (kısmi – specs.maxArea, lamel çevirileri)
+    pergola: {
+      mainPage: {
+        specs: {
+          maxArea: "المساحة القصوى (نظام واحد)",
+          distributedLoad: "الحد الأقصى لحمل الثلج",
+          windLoad: "مقاومة الرياح",
+        },
+        features: {
+          rotatableLouvers: {
+            title: "لاميل دوارة وقابلة للانكماش بزاوية 105°",
+            description:
+              "تحكّم في ضوء الشمس والتهوية في آنٍ واحد مع لاميل تُفتح محوريًا حتى 105° ويمكن إعادتها وتراصها للخلف.",
+          },
+        },
+      },
+      bioclimatic: {
+        specs: {
+          maxArea: "المساحة القصوى (نظام واحد)",
+          distributedLoad: "الحد الأقصى لحمل الثلج",
+          accessoryCoating: "مواد توصيل الملحقات",
+          windLoad: "مقاومة الرياح",
+        },
+        featureList: {
+          rotatableLouvers: {
+            title: "لاميل دوارة وقابلة للانكماش بزاوية 105°",
+            description:
+              "تحكّم في ضوء الشمس والتهوية في آنٍ واحد مع لاميل تُفتح محوريًا حتى 105° ويمكن إعادتها وتراصها للخلف.",
+          },
+        },
+      },
+    },
     // Contact
     contact: {
       title: "تواصل معنا",
@@ -2879,7 +3003,7 @@ export const translations = {
       workingHours: "ساعات العمل",
       languageSupport: "دعم اللغة",
       languages: "Turkish, English, العربية, Deutsch, Français",
-      phoneFactory: "المصنع:",
+      phoneFactory: "مكتب المصنع:",
       phoneMobileWhatsapp: "الجوال / واتساب:",
       emailGeneral: "عام:",
       emailExport: "التصدير:",
@@ -2945,8 +3069,9 @@ export const translations = {
 
     // CTA Section translations
     cta: {
-      title: "اجعل مساحتك الخارجية الحلم حقيقة",
-      subtitle: "احصل على فحص مجاني وعرض سعر مع فريق الخبراء لدينا. اتصل بنا الآن للحصول على أنظمة برجولا وزجاج ذات جودة ممتازة.",
+      title: "لنجسد مشاريعكم الخارجية معًا",
+      subtitle:
+        "من الإنتاج إلى الدعم المعماري، ومن الحلول التقنية إلى التصدير، نقدّم دعمًا احترافيًا في جميع مراحل العملية.",
       whatsappContact: "اتصال واتساب",
       quoteForm: "نموذج عرض الأسعار",
       downloadCatalog: "تحميل الكتالوج",
@@ -3247,7 +3372,7 @@ export const translations = {
       },
       info: {
         title: "معلومات الاتصال",
-        phoneLabel: "الهاتف الرئيسي",
+        phoneLabel: "مكتب المصنع",
         emailLabel: "البريد الإلكتروني",
         locationLabel: "على مستوى البلاد",
         provincesLabel: "خدمة 81 محافظة"
@@ -3455,7 +3580,7 @@ export const translations = {
       pergolaMain: "Pergola-Systeme",
       pergolaMainDesc: "Alle Pergola-Modelle ansehen",
       pergolaBioclimatic: "Bioklimatische Pergola-Systeme",
-      pergolaBioclimaticDesc: "105° drehbare Lamellen",
+      pergolaBioclimaticDesc: "105° drehbare und einziehbare Lamellen",
       pergolaMotorized: "Motorisierte Pergola-Systeme",
       pergolaMotorizedDesc: "Sensortechnologie, Automatisierung",
       // Glass dropdown
@@ -3498,7 +3623,7 @@ export const translations = {
       menu: "Menü",
       languageSelection: "Sprachauswahl",
       bioclimaticTitle: "Bioklimatische Systeme",
-      bioclimaticDesc: "105° drehbare Lamellen",
+      bioclimaticDesc: "105° drehbare und einziehbare Lamellen",
       glassTitle: "Glassysteme",
       glassDesc: "Rahmenloses Schiebesystem",
       menuDescriptions: {
@@ -3665,6 +3790,72 @@ export const translations = {
         "10 Jahre Garantie"
       ]
     },
+    // Pergola Product Cards translations
+    pergolaProducts: {
+      subpages: {
+        title: "Wählen Sie Ihr Pergola-System",
+        subtitle:
+          "Separate Seiten mit technischen Daten, Galerie und Lösungen für bioklimatische oder motorisierte Systeme.",
+      },
+      viewDetails: "Details anzeigen",
+      bioclimatic: {
+        title: "Bioklimatische Systeme",
+        subtitle: "Intelligente Klimaregulierung",
+        description:
+          "Sonnen-, Belüftungs- und Regenkontrolle mit 105° drehbaren und einziehbaren Lamellen",
+        features: {
+          rotatable: "105° Drehbare und einziehbare Lamellen",
+          waterproof: "100% wasserdicht",
+          energySaving: "Energieeinsparung",
+          allSeasons: "Alle Jahreszeiten",
+        },
+        explore: "Entdecken",
+      },
+      motorized: {
+        title: "Motorisierte Systeme",
+        subtitle: "Vollautomatische Steuerung",
+        description: "Intelligentes Wohnen mit Sensortechnik und Fernbedienung",
+        features: {
+          sunSensor: "Sonnensensor",
+          windSensor: "Windsensor",
+          remoteControl: "Fernbedienung",
+          quietOperation: "Leiser Betrieb",
+        },
+        explore: "Entdecken",
+      },
+    },
+    // Pergola (partiell – specs.maxArea, Lamellen-Übersetzungen)
+    pergola: {
+      mainPage: {
+        specs: {
+          maxArea: "Maximale Fläche (Einzelanlage)",
+          distributedLoad: "Maximale Schneelast",
+          windLoad: "Windbeständigkeit",
+        },
+        features: {
+          rotatableLouvers: {
+            title: "105° Drehbare und einziehbare Lamellen",
+            description:
+              "Steuern Sie Sonnenlicht und Belüftung gleichzeitig mit Lamellen, die sich axial bis 105° öffnen und wieder einziehen lassen.",
+          },
+        },
+      },
+      bioclimatic: {
+        specs: {
+          maxArea: "Maximale Fläche (Einzelanlage)",
+          distributedLoad: "Maximale Schneelast",
+          accessoryCoating: "Zubehör-Verbindungsmaterialien",
+          windLoad: "Windbeständigkeit",
+        },
+        featureList: {
+          rotatableLouvers: {
+            title: "105° Drehbare und einziehbare Lamellen",
+            description:
+              "Steuern Sie Sonnenlicht und Belüftung gleichzeitig mit Lamellen, die sich axial bis 105° öffnen und wieder einziehen lassen.",
+          },
+        },
+      },
+    },
     // Contact
     contact: {
       title: "Kontakt aufnehmen",
@@ -3698,7 +3889,7 @@ export const translations = {
       workingHours: "Arbeitszeiten",
       languageSupport: "Sprachunterstützung",
       languages: "Türkçe, English, العربية, Deutsch, Français",
-      phoneFactory: "Werk:",
+      phoneFactory: "Werksbüro:",
       phoneMobileWhatsapp: "Mobil/WhatsApp:",
       emailGeneral: "Allgemein:",
       emailExport: "Export:",
@@ -3764,8 +3955,9 @@ export const translations = {
 
     // CTA Section translations
     cta: {
-      title: "Verwirklichen Sie Ihren Traum-Außenbereich",
-      subtitle: "Erhalten Sie kostenlose Inspektion und Angebot mit unserem Expertenteam. Kontaktieren Sie uns jetzt für Premium-Qualität Pergola- und Glassysteme.",
+      title: "Gemeinsam verwirklichen wir Ihre Outdoor-Projekte",
+      subtitle:
+        "Von der Produktion über architektonische Betreuung bis zu technischen Lösungen und Export begleiten wir Sie in allen Phasen professionell.",
       whatsappContact: "WhatsApp-Kontakt",
       quoteForm: "Angebotsformular",
       downloadCatalog: "Katalog herunterladen",
@@ -4066,7 +4258,7 @@ export const translations = {
       },
       info: {
         title: "Kontaktinformationen",
-        phoneLabel: "Haupttelefon",
+        phoneLabel: "Fabrikbüro",
         emailLabel: "E-Mail",
         locationLabel: "Landesweit",
         provincesLabel: "81 Provinz-Service"
@@ -4274,7 +4466,7 @@ export const translations = {
       pergolaMain: "Системы Пергол",
       pergolaMainDesc: "Посмотреть все модели пергол",
       pergolaBioclimatic: "Биоклиматические Пергол Системы",
-      pergolaBioclimaticDesc: "Вращающиеся ламели 105°",
+      pergolaBioclimaticDesc: "Поворотные убирающиеся ламели 105°",
       pergolaMotorized: "Моторизованные Пергол Системы",
       pergolaMotorizedDesc: "Технология датчиков, автоматизация",
       pergolaRolling: "Rolling Roof",
@@ -4318,7 +4510,7 @@ export const translations = {
       // Header specific
       menu: "Меню",
       bioclimaticTitle: "Биоклиматические Системы",
-      bioclimaticDesc: "Вращающиеся ламели 105°",
+      bioclimaticDesc: "Поворотные убирающиеся ламели 105°",
       glassTitle: "Стеклянные Системы",
       glassDesc: "Безрамная раздвижная система",
       languageSelection: "Выбор языка",
@@ -4359,6 +4551,72 @@ export const translations = {
       title: "Наши Продукты",
       subtitle: "Индивидуально разработанные продукты IDEA",
     },
+    // Pergola Product Cards translations
+    pergolaProducts: {
+      subpages: {
+        title: "Выберите систему перголы",
+        subtitle:
+          "Отдельные страницы с характеристиками, галереей и решениями: биоклиматика или моторизация.",
+      },
+      viewDetails: "Подробнее",
+      bioclimatic: {
+        title: "Биоклиматические системы",
+        subtitle: "Умный климат-контроль",
+        description:
+          "Контроль солнца, вентиляции и дождя с поворотными убирающимися ламелями 105°",
+        features: {
+          rotatable: "Ламели 105° с поворотом и отводом",
+          waterproof: "100% влагозащита",
+          energySaving: "Энергосбережение",
+          allSeasons: "Все сезоны",
+        },
+        explore: "Подробнее",
+      },
+      motorized: {
+        title: "Моторизованные системы",
+        subtitle: "Полностью автоматическое управление",
+        description: "Умный дом с датчиками и пультом дистанционного управления",
+        features: {
+          sunSensor: "Датчик солнца",
+          windSensor: "Датчик ветра",
+          remoteControl: "Пульт управления",
+          quietOperation: "Тихая работа",
+        },
+        explore: "Подробнее",
+      },
+    },
+    // Pergola (частично – specs.maxArea, переводы ламелей)
+    pergola: {
+      mainPage: {
+        specs: {
+          maxArea: "Максимальная площадь (одна система)",
+          distributedLoad: "Максимальная снеговая нагрузка",
+          windLoad: "Ветроустойчивость",
+        },
+        features: {
+          rotatableLouvers: {
+            title: "Ламели 105° с поворотом и отводом",
+            description:
+              "Одновременно управляйте солнцезащитой и вентиляцией: ламели открываются по оси до 105° и убираются обратно.",
+          },
+        },
+      },
+      bioclimatic: {
+        specs: {
+          maxArea: "Максимальная площадь (одна система)",
+          distributedLoad: "Максимальная снеговая нагрузка",
+          accessoryCoating: "Материалы крепления аксессуаров",
+          windLoad: "Ветроустойчивость",
+        },
+        featureList: {
+          rotatableLouvers: {
+            title: "Ламели 105° с поворотом и отводом",
+            description:
+              "Одновременно управляйте солнцезащитой и вентиляцией: ламели открываются по оси до 105° и убираются обратно.",
+          },
+        },
+      },
+    },
     // Contact
     contact: {
       title: "Связаться с нами",
@@ -4392,7 +4650,7 @@ export const translations = {
       workingHours: "Рабочие часы",
       languageSupport: "Языковая поддержка",
       languages: "Türkçe, English, العربية, Deutsch, Français",
-      phoneFactory: "Завод:",
+      phoneFactory: "Заводской офис:",
       phoneMobileWhatsapp: "Мобильный/WhatsApp:",
       emailGeneral: "Общие вопросы:",
       emailExport: "Экспорт:",
@@ -4458,8 +4716,9 @@ export const translations = {
 
     // CTA Section translations
     cta: {
-      title: "Воплотите свое идеальное открытое пространство в реальность",
-      subtitle: "Получите бесплатный осмотр и предложение с нашей командой экспертов. Свяжитесь с нами сейчас для систем пергол и стекла премиум-качества.",
+      title: "Воплотим вместе ваши проекты открытых пространств",
+      subtitle:
+        "От производства и архитектурной поддержки до технических решений и экспорта мы обеспечиваем профессиональное сопровождение на всех этапах.",
       whatsappContact: "WhatsApp контакт",
       quoteForm: "Форма предложения",
       downloadCatalog: "Скачать каталог",
@@ -4713,7 +4972,7 @@ export const translations = {
       },
       info: {
         title: "Контактная информация",
-        phoneLabel: "Основной телефон",
+        phoneLabel: "Заводской офис",
         emailLabel: "Электронная почта",
         locationLabel: "По всей стране",
         provincesLabel: "Сервис в 81 провинции"

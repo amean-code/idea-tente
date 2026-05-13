@@ -4,10 +4,8 @@ import { Header } from "@/components/header"
 import { ProductDetailGallery } from "@/components/product-detail-gallery"
 import { ProductDetailSpecs } from "@/components/product-detail-specs"
 import { ProductDetailFeatures } from "@/components/product-detail-features"
-import { ReferenceProjects } from "@/components/reference-projects"
 import { ContactSection } from "@/components/contact-section"
 import Image from "next/image"
-import { motion } from "framer-motion"
 import { getGalleryImages } from "@/lib/gallery-config"
 
 /**
@@ -52,7 +50,7 @@ export default function MotorlupergolaPage() {
       title: "Garanti",
       icon: "layers" as const,
       items: [
-        { label: "Motor Garantisi", value: "2 Yıl" },
+        { label: "Motor Garantisi", value: "5 Yıl" },
         { label: "Mekanik Garanti", value: "2 Yıl" },
         { label: "Otomasyon", value: "2 Yıl" },
       ]
@@ -134,12 +132,6 @@ export default function MotorlupergolaPage() {
           title="Akıllı Otomasyon"
           subtitle="Sensör teknolojisi ve uzaktan kontrol ile konforlu kullanım"
           features={features}
-        />
-        
-        {/* Referans Projeler */}
-        <ReferenceProjects 
-          serviceType="bioclimatic-pergola"
-          useTranslations={true}
         />
         
         {/* İletişim */}

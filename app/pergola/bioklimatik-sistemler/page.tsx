@@ -43,10 +43,10 @@ export default function BioklimatikSistemlerPage() {
       icon: "settings" as const,
       items: [
         { label: t("pergola.bioclimatic.specs.profileMaterial"), value: "Alüminyum 6063-T6 F25" },
-        { label: t("pergola.bioclimatic.specs.louverAngle"), value: "105° Dönebilir (Eksenel)" },
-        { label: t("pergola.bioclimatic.specs.gasketMaterial"), value: "EPDM" },
+        { label: t("pergola.bioclimatic.specs.motorSystem"), value: "IP 68 Linear Motor" },
+        { label: t("pergola.bioclimatic.specs.accessoryCoating"), value: "Krom İnoks Paslanmaz" },
         { label: t("pergola.bioclimatic.specs.surfaceTreatment"), value: "Elektrostatik Fırın Boyası" },
-        { label: t("pergola.bioclimatic.specs.accessoryCoating"), value: "Galvaniz + Elektrostatik Boya" },
+        { label: t("pergola.bioclimatic.specs.gasketMaterial"), value: "EPDM" },
       ]
     },
     {
@@ -54,9 +54,9 @@ export default function BioklimatikSistemlerPage() {
       icon: "palette" as const,
       items: [
         { label: t("pergola.bioclimatic.specs.waterproof"), value: "%100" },
-        { label: t("pergola.bioclimatic.specs.distributedLoad"), value: "50kg+25kg/m²" },
-        { label: t("pergola.bioclimatic.specs.windLoad"), value: "50 kg/m²" },
-        { label: t("pergola.bioclimatic.specs.motorSystem"), value: "2-4 Linear Motor" },
+        { label: t("pergola.bioclimatic.specs.distributedLoad"), value: "200kg-250kg/m²" },
+        { label: t("pergola.bioclimatic.specs.windLoad"), value: "100 - 120 km/h" },
+        { label: t("pergola.bioclimatic.specs.louverAngle"), value: "105° Dönebilir (Eksenel)" },
         { label: t("pergola.bioclimatic.specs.control"), value: "Uzaktan Kumanda + Otomasyon" },
       ]
     },
@@ -64,7 +64,7 @@ export default function BioklimatikSistemlerPage() {
       title: t("pergola.bioclimatic.specs.warranty"),
       icon: "layers" as const,
       items: [
-        { label: t("pergola.bioclimatic.specs.motorWarranty"), value: "2 Yıl" },
+        { label: t("pergola.bioclimatic.specs.motorWarranty"), value: "5 Yıl" },
         { label: t("pergola.bioclimatic.specs.mechanicalWarranty"), value: "2 Yıl" },
         { label: t("pergola.bioclimatic.specs.slope"), value: "Düz veya %5 Eğimli" },
         { label: t("pergola.bioclimatic.specs.rainMode"), value: "Kontrollü Havalandırma" },
@@ -284,13 +284,7 @@ export default function BioklimatikSistemlerPage() {
             </div>
           </div>
         </section>
-        
-        {/* Referans Projeler */}
-        <ReferenceProjects 
-          serviceType="bioclimatic-pergola"
-          useTranslations={true}
-        />
-        
+
         {/* İletişim */}
         <ContactSection />
       </main>

@@ -26,7 +26,12 @@ export const getPergolaSubCategories = (t: any): SubCategory[] => [
     name: t("nav.pergolaBioclimatic"),
     description: t("nav.pergolaBioclimaticDesc"),
     image: "/pergola/pergola-dıs-gunes.webp",
-    features: ["105° Dönebilen Lamel", "Akıllı İklim", "Su Geçirmez", "Enerji Tasarrufu"],
+    features: [
+      t("pergolaProducts.bioclimatic.features.rotatable"),
+      "Akıllı İklim",
+      "Su Geçirmez",
+      "Enerji Tasarrufu",
+    ],
     badge: t("products.badges.popular"),
     href: "/pergola/bioklimatik-sistemler",
     parentProduct: "bioclimatic-pergola"

@@ -212,12 +212,6 @@ export function ContactSection() {
                   </a>
                 </Button>
                 <Button asChild variant="outline" className="w-full justify-start">
-                  <a href="/referanslar">
-                    <Users className="mr-2 h-4 w-4" />
-                    {t("contactSection.quickAccess.referenceProjects")}
-                  </a>
-                </Button>
-                <Button asChild variant="outline" className="w-full justify-start">
                   <a href="/katalog">
                     <Shield className="mr-2 h-4 w-4" />
                     {t("contactSection.quickAccess.downloadCatalog")}

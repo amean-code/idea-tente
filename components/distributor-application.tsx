@@ -239,7 +239,10 @@ export function DistributorApplication() {
   }
 
   return (
-    <section id="distributor-application" className="py-20 bg-gradient-to-b from-blue-50/30 to-white">
+    <section
+      id="distributor-application"
+      className="scroll-mt-28 py-20 bg-gradient-to-b from-blue-50/30 to-white"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">

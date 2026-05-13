@@ -132,12 +132,6 @@ export default function GiyotinCamSistemleriPage() {
         {/* Alt Ürünler */}
         {/* <CamSistemleriProductCards /> */}
         
-        {/* Referans Projeler */}
-        <ReferenceProjects 
-          serviceType="glass-systems"
-          useTranslations={true}
-        />
-        
         {/* İletişim Bölümü */}
         <ContactSection />
       </main>
