@@ -3,6 +3,8 @@
  * Ana ürünlerin alt kategorilerini organize eder
  */
 
+import { GIYOTIN_CAM_COVER, MOTORLU_PERGOLA_COVER } from "@/lib/gallery-covers"
+
 export interface SubCategory {
   id: string
   name: string
@@ -40,7 +42,7 @@ export const getPergolaSubCategories = (t: any): SubCategory[] => [
     id: "motorlu-sistemler", 
     name: t("nav.pergolaMotorized"),
     description: t("nav.pergolaMotorizedDesc"),
-    image: "/pergola/pergola-kafe-aktif.webp",
+    image: MOTORLU_PERGOLA_COVER,
     features: ["Güneş Sensörü", "Rüzgar Sensörü", "Uzaktan Kumanda", "Sessiz Motor"],
     badge: t("products.badges.premium"),
     href: "/pergola/motorlu-sistemler",
@@ -78,7 +80,7 @@ export const getGlassSystemsSubCategories = (t: any): SubCategory[] => [
     id: "sabit-cam",
     name: t("nav.glassFixed"),
     description: t("nav.glassFixedDesc"),
-    image: "/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-3.webp",
+    image: GIYOTIN_CAM_COVER,
     features: ["Sabit Panel", "Yalıtım", "UV Koruma", "Kolay Bakım"],
     badge: t("products.badges.efficient"),
     href: "/cam-sistemleri/sabit-cam",

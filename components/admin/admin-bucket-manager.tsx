@@ -38,11 +38,11 @@ interface AdminStorageListResponse {
 }
 
 /**
- * Admin oturumuyla Tigris bucket’ta nesne listeler, görsel önizleme ve dosya yükleme sağlar.
+ * Admin oturumuyla Railway bucket'ta nesne listeler, görsel önizleme ve dosya yükleme sağlar.
  */
 export function AdminBucketManager() {
   const router = useRouter()
-  const [prefix, setPrefix] = useState("uploads/")
+  const [prefix, setPrefix] = useState("site/public/")
   const [items, setItems] = useState<AdminStorageItem[]>([])
   const [nextContinuationToken, setNextContinuationToken] = useState<string | null>(null)
   const [bucketName, setBucketName] = useState("")
@@ -144,6 +144,11 @@ export function AdminBucketManager() {
 
     const body = new FormData()
     body.append("file", file)
+    const publicFolderInput = form.elements.namedItem("publicFolder") as HTMLInputElement | null
+    const publicFolder = publicFolderInput?.value?.trim()
+    if (publicFolder) {
+      body.append("publicFolder", publicFolder)
+    }
 
     const response = await fetch("/api/admin/storage", {
       method: "POST",
@@ -157,7 +162,11 @@ export function AdminBucketManager() {
       return
     }
 
-    setMessage(data?.message ?? `Yüklendi: ${data?.key ?? ""}`)
+    setMessage(
+      data?.publicPath
+        ? `Yüklendi: ${data.publicPath}`
+        : (data?.message ?? `Yüklendi: ${data?.key ?? ""}`),
+    )
     setIsUploading(false)
     form.reset()
     await handleRefresh()
@@ -190,7 +199,7 @@ export function AdminBucketManager() {
             <p className="text-sm font-medium uppercase tracking-wide text-primary">Admin Panel</p>
             <h1 className="text-3xl font-bold text-gray-900">Bucket — Görsel yönetimi</h1>
             <p className="mt-2 text-gray-600">
-              Tigris bucket’a yükleme yapın; özel okuma politikasında önizleme için kısa süreli imzalı URL kullanılır
+              Railway bucket'a yükleme yapın; özel okuma politikasında önizleme için kısa süreli imzalı URL kullanılır
               (~{Math.max(1, Math.round(previewExpiresIn / 60))} dk).
             </p>
             {bucketName && (
@@ -230,10 +239,21 @@ export function AdminBucketManager() {
                 <ImageUp className="h-5 w-5" />
                 Görsel yükle
               </CardTitle>
-              <CardDescription>Dosya sunucu üzerinden Tigris’e yüklenir (`uploads/` altında benzersiz anahtar).</CardDescription>
+              <CardDescription>Dosya sunucu üzerinden bucket'a yüklenir (`site/public/` veya `uploads/` altında benzersiz anahtar).</CardDescription>
             </CardHeader>
             <CardContent>
               <form className="space-y-4" onSubmit={handleUpload}>
+                <div className="space-y-2">
+                  <Label htmlFor="public-folder">Galeri klasörü (opsiyonel)</Label>
+                  <Input
+                    id="public-folder"
+                    name="publicFolder"
+                    placeholder="bioklimatik-pergola"
+                  />
+                  <p className="text-xs text-muted-foreground">
+                    Doluysa dosya `site/public/&#123;klasör&#125;/` altına yüklenir ve public yol üretilir.
+                  </p>
+                </div>
                 <div className="space-y-2">
                   <Label htmlFor="bucket-file">Dosya</Label>
                   <Input id="bucket-file" name="file" type="file" accept="image/*" required />

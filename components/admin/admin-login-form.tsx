@@ -1,7 +1,6 @@
 "use client"
 
 import { FormEvent, useState } from "react"
-import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -11,7 +10,6 @@ import { Label } from "@/components/ui/label"
  * Admin giriş formunu render eder ve doğrulama isteğini API route'a gönderir.
  */
 export function AdminLoginForm() {
-  const router = useRouter()
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [message, setMessage] = useState("")
@@ -30,7 +28,11 @@ export function AdminLoginForm() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email, password }),
+      credentials: "same-origin",
+      body: JSON.stringify({
+        email: email.trim(),
+        password: password.trim(),
+      }),
     })
 
     if (!response.ok) {
@@ -40,15 +42,15 @@ export function AdminLoginForm() {
       return
     }
 
-    router.refresh()
+    window.location.assign("/admin")
   }
 
   return (
-    <div className="min-h-[70vh] bg-gray-50 px-4 pb-16 pt-28 md:pt-32">
-      <Card className="mx-auto max-w-md">
-        <CardHeader>
-          <CardTitle>Admin Girişi</CardTitle>
-          <CardDescription>Galeri görsellerini yönetmek için giriş yapın.</CardDescription>
+    <div className="flex min-h-screen items-center justify-center bg-slate-100 px-4 py-12">
+      <Card className="w-full max-w-md shadow-lg">
+        <CardHeader className="text-center">
+          <CardTitle>IDEA Admin</CardTitle>
+          <CardDescription>Site içeriklerini yönetmek için giriş yapın.</CardDescription>
         </CardHeader>
         <CardContent>
           <form className="space-y-4" onSubmit={handleSubmit}>

@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Maximize, Move } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+import { publicAssetSrc } from "@/lib/pergola-public-path"
+import { GIYOTIN_CAM_COVER } from "@/lib/gallery-covers"
 
 /**
  * Cam Sistemleri Ana Sayfası
@@ -22,7 +24,7 @@ export default function CamSistemleriPage() {
       id: "giyotin",
       title: t("glassSystems.products.surmeCam.title"),
       description: t("glassSystems.products.surmeCam.description"),
-      image: "/giyotin-cam/giyotin-cam-sistemleri-ev-dis-acik-1.webp",
+      image: GIYOTIN_CAM_COVER,
       badge: t("glassSystems.products.surmeCam.badge"),
       href: "/cam-sistemleri/giyotin-cam-sistemleri",
       icon: Move,
@@ -61,7 +63,7 @@ export default function CamSistemleriPage() {
         <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
           <div className="absolute inset-0 z-0 opacity-20">
             <Image
-              src="/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-3.webp"
+              src={publicAssetSrc(GIYOTIN_CAM_COVER)}
               alt="Cam Sistemleri"
               fill
               className="object-cover"
@@ -122,7 +124,7 @@ export default function CamSistemleriPage() {
                       {/* Görsel */}
                       <div className="relative h-80 overflow-hidden">
                         <Image
-                          src={system.image}
+                          src={publicAssetSrc(system.image)}
                           alt={system.title}
                           fill
                           className="object-cover group-hover:scale-110 transition-transform duration-700"

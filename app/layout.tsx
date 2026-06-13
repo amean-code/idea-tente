@@ -3,8 +3,7 @@ import type { Metadata } from "next"
 import { Barlow } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { LanguageProvider } from "@/contexts/language-context"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { ConditionalSiteChrome } from "@/components/conditional-site-chrome"
 import "./globals.css"
 
 /**
@@ -45,9 +44,7 @@ export default function RootLayout({
     <html lang="tr" suppressHydrationWarning>
       <body className={`font-sans ${barlow.variable} antialiased`} suppressHydrationWarning>
         <LanguageProvider>
-          <Header />
-          {children}
-          <Footer />
+          <ConditionalSiteChrome>{children}</ConditionalSiteChrome>
         </LanguageProvider>
         <Analytics />
       </body>

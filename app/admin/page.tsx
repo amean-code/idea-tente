@@ -7,7 +7,7 @@ import { loadAdminGalleryState } from "@/lib/admin-gallery"
 export const dynamic = "force-dynamic"
 
 export const metadata: Metadata = {
-  title: "Admin Galeri Yönetimi",
+  title: "Admin — Sayfa Galerileri",
   robots: {
     index: false,
     follow: false,

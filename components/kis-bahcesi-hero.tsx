@@ -8,14 +8,14 @@ import { pergolaPublicSrc } from "@/lib/pergola-public-path"
 /**
  * Kış Bahçesi Hero Section
  */
-export function KisBahcesiHero() {
+export function KisBahcesiHero({ imageSrc = "/pergola/pergola-kapak.webp" }: { imageSrc?: string }) {
   const { t } = useLanguage()
 
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src={pergolaPublicSrc("/pergola/pergola-kapak.webp")}
+          src={pergolaPublicSrc(imageSrc)}
           alt="Kış Bahçesi Sistemleri"
           fill
           className="object-cover"

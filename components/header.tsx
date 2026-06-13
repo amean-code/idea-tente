@@ -408,7 +408,7 @@ export function Header() {
             >
               <div className="relative" style={{ overflow: 'visible' }}>
                 <Image 
-                  src="/idea-logo.png" 
+                  src="/idea-logo.webp" 
                   alt="IDEA Logo" 
                   width={200}
                   height={80}

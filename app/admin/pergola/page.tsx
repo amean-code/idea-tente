@@ -1,22 +1,16 @@
 import type { Metadata } from "next"
-import { AdminLoginForm } from "@/components/admin/admin-login-form"
-import { AdminPergolaManager } from "@/components/admin/admin-pergola-manager"
-import { isAdminCookieAuthenticated } from "@/lib/admin-auth"
+import { redirect } from "next/navigation"
 
 export const dynamic = "force-dynamic"
 
 export const metadata: Metadata = {
-  title: "Admin — Pergola bucket",
+  title: "Admin — Yönlendirme",
   robots: { index: false, follow: false },
 }
 
 /**
- * Pergola bucket ve kahraman slaytlarını yöneten admin alt sayfası.
+ * Eski pergola URL'sini ana sayfa slaytları sayfasına yönlendirir.
  */
-export default async function AdminPergolaPage() {
-  const isAuthenticated = await isAdminCookieAuthenticated()
-  if (!isAuthenticated) {
-    return <AdminLoginForm />
-  }
-  return <AdminPergolaManager />
+export default function AdminPergolaRedirectPage() {
+  redirect("/admin/anasayfa")
 }

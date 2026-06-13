@@ -9,7 +9,7 @@ import { pergolaPublicSrc } from "@/lib/pergola-public-path"
  * Pergola ana sayfası hero bölümü
  * Palmiye Global tasarımı referans alınarak oluşturulmuştur
  */
-export function PergolaHero() {
+export function PergolaHero({ imageSrc = "/pergola/pergola-beyaz.webp" }: { imageSrc?: string }) {
   const { t } = useLanguage()
 
   return (
@@ -17,7 +17,7 @@ export function PergolaHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={pergolaPublicSrc("/pergola/pergola-beyaz.webp")}
+          src={pergolaPublicSrc(imageSrc)}
           alt="Pergola Sistemleri"
           fill
           className="object-cover"

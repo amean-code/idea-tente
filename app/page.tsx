@@ -5,12 +5,14 @@ import { CTASection } from "@/components/cta-section"
 // import { FeaturedProjects } from "@/components/featured-projects"
 import { CertificatesSection } from "@/components/certificates-section"
 import { CompanyVideoSection } from "@/components/company-video-section"
-import { readPergolaHeroSlides } from "@/lib/pergola-hero-slides"
+import { readPergolaHeroSlidesCached } from "@/lib/pergola-hero-slides"
+import { pergolaBackgroundUrl } from "@/lib/pergola-public-path"
 
-export const dynamic = "force-dynamic"
+/** Kahraman slaytları manifest değişince admin kaydından sonra revalidate edilir. */
+export const revalidate = 3600
 
 export default async function HomePage() {
-  const heroManifest = await readPergolaHeroSlides()
+  const heroManifest = await readPergolaHeroSlidesCached()
 
   return (
     <div className="min-h-screen relative">
@@ -19,7 +21,7 @@ export default async function HomePage() {
         <div
           className="w-full h-full bg-cover bg-center bg-no-repeat opacity-5"
           style={{
-            backgroundImage: "url('/luxury-modern-pergola-with-glass-panels-by-pool-at.webp')",
+            backgroundImage: `url('${pergolaBackgroundUrl("/luxury-modern-pergola-with-glass-panels-by-pool-at.webp")}')`,
           }}
         />
       </div>

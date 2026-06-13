@@ -1,10 +1,10 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
-import { useRouter } from "next/navigation"
 import { useMemo, useState } from "react"
-import { ArrowDown, ArrowUp, Check, Folder, LogOut, Plus, RefreshCw, Save, Trash2 } from "lucide-react"
+import { ArrowDown, ArrowUp, Check, Folder, Plus, RefreshCw, Save, Trash2 } from "lucide-react"
+import { AdminFolderStatsCard } from "@/components/admin/admin-folder-stats-card"
+import { AdminPageHeader } from "@/components/admin/admin-page-header"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -13,6 +13,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
 import type { AdminGalleryState, EditableGalleryConfig } from "@/lib/admin-gallery"
+import { buildGalleryFolderStats, getPublicImageFolderName } from "@/lib/admin-folder-stats"
 import { pergolaPublicSrc } from "@/lib/pergola-public-path"
 
 interface AdminGalleryManagerProps {
@@ -25,18 +26,9 @@ interface AvailableImageGroup {
 }
 
 /**
- * Public görsel yolundan ilk klasör adını çıkarır.
- */
-function getPublicImageFolder(imagePath: string): string {
-  const pathParts = imagePath.split("/").filter(Boolean)
-  return pathParts[0] ?? "public"
-}
-
-/**
  * Admin panelinde seçili galeriye ait görsel ekleme, silme ve sıralama işlemlerini yönetir.
  */
 export function AdminGalleryManager({ initialState }: AdminGalleryManagerProps) {
-  const router = useRouter()
   const galleryKeys = Object.keys(initialState.config.galleries)
   const [config, setConfig] = useState<EditableGalleryConfig>(initialState.config)
   const [availableImages, setAvailableImages] = useState(initialState.availableImages)
@@ -52,6 +44,11 @@ export function AdminGalleryManager({ initialState }: AdminGalleryManagerProps) 
 
   const selectedGallery = config.galleries[selectedGalleryKey]
   const selectedImages = selectedGallery?.images ?? []
+
+  const folderStats = useMemo(
+    () => buildGalleryFolderStats(availableImages, config),
+    [availableImages, config],
+  )
 
   /**
    * Seçili galerideki görsel yollarını hızlı arama için küme olarak tutar.
@@ -79,7 +76,7 @@ export function AdminGalleryManager({ initialState }: AdminGalleryManagerProps) 
     const imageGroups = new Map<string, string[]>()
 
     filteredPublicImagesForPicker.forEach((imagePath) => {
-      const folderName = getPublicImageFolder(imagePath)
+      const folderName = getPublicImageFolderName(imagePath)
       const folderImages = imageGroups.get(folderName) ?? []
       imageGroups.set(folderName, [...folderImages, imagePath])
     })
@@ -194,7 +191,6 @@ export function AdminGalleryManager({ initialState }: AdminGalleryManagerProps) 
     setConfig(data.config)
     setMessage(data.message ?? "Galeri kaydedildi.")
     setIsSaving(false)
-    router.refresh()
   }
 
   /**
@@ -219,40 +215,19 @@ export function AdminGalleryManager({ initialState }: AdminGalleryManagerProps) 
     setIsReloading(false)
   }
 
-  /**
-   * Admin oturumunu kapatır ve giriş ekranına döndürür.
-   */
-  const handleLogout = async () => {
-    await fetch("/api/admin/logout", { method: "POST" })
-    router.refresh()
-  }
-
   return (
-    <div className="min-h-screen bg-gray-50 px-4 pb-10 pt-28 md:pt-32">
-      <div className="mx-auto max-w-7xl space-y-6">
-        <div className="flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-sm md:flex-row md:items-center md:justify-between">
-          <div>
-            <p className="text-sm font-medium uppercase tracking-wide text-primary">Admin Panel</p>
-            <h1 className="text-3xl font-bold text-gray-900">Galeri Yönetimi</h1>
-            <p className="mt-2 text-gray-600">Public klasöründeki mevcut görselleri seçin, sıralayın ve kaydedin.</p>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            <Button variant="outline" asChild>
-              <Link href="/admin/pergola">Pergola bucket</Link>
-            </Button>
-            <Button variant="outline" asChild>
-              <Link href="/admin/bucket">Bucket (Tigris)</Link>
-            </Button>
-            <Button variant="outline" onClick={handleReload} disabled={isReloading}>
-              <RefreshCw className="mr-2 h-4 w-4" />
-              {isReloading ? "Yenileniyor..." : "Yenile"}
-            </Button>
-            <Button variant="outline" onClick={handleLogout}>
-              <LogOut className="mr-2 h-4 w-4" />
-              Çıkış
-            </Button>
-          </div>
-        </div>
+    <div className="mx-auto max-w-7xl space-y-6">
+      <AdminPageHeader
+        title="Sayfa Galerileri"
+        description="Her ürün sayfasında gösterilecek fotoğrafları seçin, sıralayın ve kaydedin. Yeni fotoğraf için önce Görsel Yükle bölümünü kullanın."
+      />
+
+      <div className="flex flex-wrap gap-2">
+        <Button variant="outline" onClick={handleReload} disabled={isReloading}>
+          <RefreshCw className="mr-2 h-4 w-4" />
+          {isReloading ? "Yenileniyor..." : "Yenile"}
+        </Button>
+      </div>
 
         {!canWriteConfig && (
           <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800">
@@ -263,13 +238,15 @@ export function AdminGalleryManager({ initialState }: AdminGalleryManagerProps) 
 
         {message && <div className="rounded-xl border bg-white p-4 text-sm text-gray-700 shadow-sm">{message}</div>}
 
+      <AdminFolderStatsCard stats={folderStats} totalImages={availableImages.length} />
+
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <Card>
             <CardHeader>
               <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                 <div>
-                  <CardTitle>Seçili Galeri</CardTitle>
-                  <CardDescription>Görselleri yukarı/aşağı taşıyabilir veya galeriden silebilirsiniz.</CardDescription>
+              <CardTitle>Sayfa galerisi</CardTitle>
+              <CardDescription>Görselleri yukarı/aşağı taşıyın veya galeriden çıkarın. Değişiklikten sonra Kaydet’e basın.</CardDescription>
                 </div>
                 <select
                   className="h-10 rounded-md border border-input bg-white px-3 text-sm"
@@ -277,11 +254,15 @@ export function AdminGalleryManager({ initialState }: AdminGalleryManagerProps) 
                   aria-label="Yönetilecek galeriyi seç"
                   onChange={(event) => setSelectedGalleryKey(event.target.value)}
                 >
-                  {Object.entries(config.galleries).map(([galleryKey, gallery]) => (
-                    <option key={galleryKey} value={galleryKey}>
-                      {gallery.label}
-                    </option>
-                  ))}
+                  {Object.entries(config.galleries).map(([galleryKey, gallery]) => {
+                    const folderStat = folderStats.find((stat) => stat.folder === gallery.publicFolder)
+
+                    return (
+                      <option key={galleryKey} value={galleryKey}>
+                        {gallery.label} — klasörde {folderStat?.folderImageCount ?? 0}, sayfada {gallery.images.length}
+                      </option>
+                    )
+                  })}
                 </select>
               </div>
             </CardHeader>
@@ -366,10 +347,9 @@ export function AdminGalleryManager({ initialState }: AdminGalleryManagerProps) 
 
           <Card>
             <CardHeader>
-              <CardTitle>Public Görseller</CardTitle>
+              <CardTitle>Klasördeki görseller</CardTitle>
               <CardDescription>
-                Klasördeki tüm uygun uzantılı dosyalar listelenir. Galeride zaten olanlar &quot;Galeride&quot; etiketiyle
-                gösterilir; yalnızca eklenmemişleri görmek için anahtarı kullanın.
+                Yüklenmiş tüm fotoğraflar burada listelenir. Sağdaki + ile seçili sayfaya ekleyin.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -455,7 +435,6 @@ export function AdminGalleryManager({ initialState }: AdminGalleryManagerProps) 
             </CardContent>
           </Card>
         </div>
-      </div>
 
       <Dialog open={Boolean(previewImage)} onOpenChange={(open) => !open && setPreviewImage(null)}>
         <DialogContent className="max-w-[95vw] p-4 sm:max-w-5xl">

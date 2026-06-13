@@ -37,7 +37,7 @@ function getPergolaBackedGalleryKeys(config: EditableGalleryConfig): string[] {
 }
 
 /**
- * Tigris `site/pergola/` görsellerini ve pergola kaynaklı galerileri yönetir.
+ * `site/pergola/` görsellerini ve pergola kaynaklı galerileri yönetir.
  */
 export function AdminPergolaManager() {
   const router = useRouter()
@@ -315,8 +315,8 @@ export function AdminPergolaManager() {
             <p className="text-sm font-medium uppercase tracking-wide text-primary">Admin Panel</p>
             <h1 className="text-3xl font-bold text-gray-900">Pergola bucket &amp; kahraman slaytları</h1>
             <p className="mt-2 text-muted-foreground">
-              Görseller Tigris’te `site/pergola/` altında; senkron için:{" "}
-              <code className="rounded bg-muted px-1 text-sm">npm run sync:pergola-tigris</code>. Ön yüzde{" "}
+              Görseller bucket'ta `site/pergola/` altında; senkron için:{" "}
+              <code className="rounded bg-muted px-1 text-sm">pnpm sync:bucket-pergola</code>. Ön yüzde{" "}
               <code className="rounded bg-muted px-1 text-sm">NEXT_PUBLIC_PERGOLA_IMAGE_BASE</code> tanımlı olmalı.
             </p>
           </div>

@@ -1,12 +1,12 @@
 import { NextResponse, type NextRequest } from "next/server"
 import { isStorageApiRequestAuthorized } from "@/lib/storage/storage-api-auth"
 import {
-  buildPublicTigrisObjectUrl,
-  createTigrisS3ClientFromEnv,
-  headTigrisBucket,
-  listSampleTigrisObjects,
-  readTigrisStorageConfigFromEnv,
-} from "@/lib/storage/tigris-s3"
+  buildPublicS3ObjectUrl,
+  createS3BucketClientFromEnv,
+  headS3Bucket,
+  listSampleS3Objects,
+  readS3BucketConfigFromEnv,
+} from "@/lib/storage/s3-bucket"
 
 export const runtime = "nodejs"
 
@@ -18,7 +18,7 @@ function unauthorizedResponse() {
 }
 
 /**
- * Ortam değişkenleri ve kimlik bilgileriyle Tigris bucket bağlantısını doğrular; örnek nesne anahtarlarını listeler.
+ * Ortam değişkenleri ve kimlik bilgileriyle S3 bucket bağlantısını doğrular; örnek nesne anahtarlarını listeler.
  */
 export async function GET(request: NextRequest) {
   if (!isStorageApiRequestAuthorized(request)) {
@@ -26,18 +26,18 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const config = readTigrisStorageConfigFromEnv()
-    const client = createTigrisS3ClientFromEnv()
+    const config = readS3BucketConfigFromEnv()
+    const client = createS3BucketClientFromEnv()
 
-    await headTigrisBucket(client, config.bucket)
-    const listed = await listSampleTigrisObjects(client, config.bucket, 5)
+    await headS3Bucket(client, config.bucket)
+    const listed = await listSampleS3Objects(client, config.bucket, 5)
 
     const sampleKeys =
       listed.Contents?.map((item) => item.Key).filter((key): key is string => typeof key === "string") ?? []
 
     const samplePublicUrls = sampleKeys.map((key) => ({
       key,
-      publicUrl: buildPublicTigrisObjectUrl(config, key),
+      publicUrl: buildPublicS3ObjectUrl(config, key),
     }))
 
     return NextResponse.json({

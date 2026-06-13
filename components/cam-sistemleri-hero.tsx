@@ -4,6 +4,8 @@ import { useMemo } from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/contexts/language-context"
+import { publicAssetSrc } from "@/lib/pergola-public-path"
+import { GIYOTIN_CAM_COVER } from "@/lib/gallery-covers"
 
 /**
  * Cam Sistemleri Hero Section
@@ -36,7 +38,7 @@ export function CamSistemleriHero(props?: CamSistemleriHeroProps) {
     props?.subdescription || t("glassSystems.hero.subdescription"), 
     [props?.subdescription, t, language]
   )
-  const imageSrc = props?.imageSrc || "/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-3.webp"
+  const imageSrc = publicAssetSrc(props?.imageSrc || GIYOTIN_CAM_COVER)
 
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">

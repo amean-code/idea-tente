@@ -8,14 +8,14 @@ import { pergolaPublicSrc } from "@/lib/pergola-public-path"
 /**
  * Güneş Kırıcıları Hero Section
  */
-export function GunesKiriclariHero() {
+export function GunesKiriclariHero({ imageSrc = "/pergola/pergola-dıs-gunes.webp" }: { imageSrc?: string }) {
   const { t } = useLanguage()
 
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src={pergolaPublicSrc("/pergola/pergola-dıs-gunes.webp")}
+          src={pergolaPublicSrc(imageSrc)}
           alt="Güneş Kırıcıları"
           fill
           className="object-cover"

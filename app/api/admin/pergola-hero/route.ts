@@ -1,14 +1,15 @@
 import { NextRequest, NextResponse } from "next/server"
+import { revalidatePath, revalidateTag } from "next/cache"
 import { isAdminRequestAuthenticated } from "@/lib/admin-auth"
+import { listAvailableGalleryImages } from "@/lib/admin-gallery"
 import {
   canWritePergolaHeroSlides,
   readPergolaHeroSlides,
   savePergolaHeroSlides,
 } from "@/lib/pergola-hero-slides"
-import { listPergolaBucketPublicPaths } from "@/lib/pergola-bucket-server"
-import { createTigrisS3ClientFromEnv, readTigrisStorageConfigFromEnv } from "@/lib/storage/tigris-s3"
+import { listAllSiteImagePublicPaths } from "@/lib/pergola-bucket-server"
+import { createS3BucketClientFromEnv, readS3BucketConfigFromEnv } from "@/lib/storage/s3-bucket"
 
-export const dynamic = "force-dynamic"
 export const runtime = "nodejs"
 
 /**
@@ -19,18 +20,41 @@ function unauthorizedResponse() {
 }
 
 /**
- * Bucket istemcisi ile `site/pergola/` altındaki tüm public yolları toplar.
+ * Bucket istemcisi ile site görsellerinin public yollarını toplar.
  */
-async function loadBucketPergolaPathSet(): Promise<Set<string>> {
-  const cfg = readTigrisStorageConfigFromEnv()
-  const client = createTigrisS3ClientFromEnv()
-  return listPergolaBucketPublicPaths(client, cfg.bucket)
+async function loadBucketPublicPathSet(): Promise<Set<string>> {
+  const cfg = readS3BucketConfigFromEnv()
+  const client = createS3BucketClientFromEnv()
+  return listAllSiteImagePublicPaths(client, cfg.bucket)
 }
 
 /**
- * İstemci gövdesindeki slayt yollarını tekil ve güvenli hale getirir; `/pergola/` yolları bucket ile eşleşmelidir.
+ * Bucket ve yerel public klasöründeki izin verilen slayt yollarını toplar.
  */
-function sanitizeHeroSlidesPayload(rawSlides: unknown, bucketPaths: Set<string>): string[] {
+async function loadAllowedSlidePathSet(): Promise<Set<string>> {
+  const paths = new Set<string>()
+
+  try {
+    const bucketPaths = await loadBucketPublicPathSet()
+    for (const bucketPath of bucketPaths) {
+      paths.add(bucketPath)
+    }
+  } catch {
+    /* Bucket yapılandırması yoksa yerel public ile devam */
+  }
+
+  const localImages = await listAvailableGalleryImages()
+  for (const localPath of localImages) {
+    paths.add(localPath)
+  }
+
+  return paths
+}
+
+/**
+ * İstemci gövdesindeki slayt yollarını tekil ve güvenli hale getirir.
+ */
+function sanitizeHeroSlidesPayload(rawSlides: unknown, allowedPaths: Set<string>): string[] {
   if (!Array.isArray(rawSlides)) {
     throw new Error("slides bir dizi olmalı.")
   }
@@ -46,8 +70,8 @@ function sanitizeHeroSlidesPayload(rawSlides: unknown, bucketPaths: Set<string>)
     if (p.includes("..") || !p.startsWith("/")) {
       throw new Error("Geçersiz slayt yolu.")
     }
-    if (p.startsWith("/pergola/") && !bucketPaths.has(p)) {
-      throw new Error(`Bucket'ta bulunamadı: ${p}`)
+    if (!allowedPaths.has(p)) {
+      throw new Error(`Görsel bulunamadı: ${p}`)
     }
   }
 
@@ -59,7 +83,7 @@ function sanitizeHeroSlidesPayload(rawSlides: unknown, bucketPaths: Set<string>)
 }
 
 /**
- * Kahraman slayt manifestini ve bucket'taki pergola public yollarını döndürür.
+ * Kahraman slayt manifestini ve bucket'taki public yolları döndürür.
  */
 export async function GET(request: NextRequest) {
   if (!isAdminRequestAuthenticated(request)) {
@@ -70,7 +94,7 @@ export async function GET(request: NextRequest) {
     const [manifest, canWrite, bucketPaths] = await Promise.all([
       readPergolaHeroSlides(),
       canWritePergolaHeroSlides(),
-      loadBucketPergolaPathSet().catch(() => new Set<string>()),
+      loadAllowedSlidePathSet().catch(() => new Set<string>()),
     ])
 
     return NextResponse.json({
@@ -86,7 +110,7 @@ export async function GET(request: NextRequest) {
 }
 
 /**
- * Kahraman slayt sırasını doğrulayıp manifest dosyasına yazar.
+ * Kahraman slayt sırasını doğrulayıp bucket manifestine yazar.
  */
 export async function PUT(request: NextRequest) {
   if (!isAdminRequestAuthenticated(request)) {
@@ -95,7 +119,7 @@ export async function PUT(request: NextRequest) {
 
   if (!(await canWritePergolaHeroSlides())) {
     return NextResponse.json(
-      { ok: false, message: "Manifest dosyası bu ortamda yazılamıyor (salt okunur)." },
+      { ok: false, message: "Manifest bu ortamda yazılamıyor (bucket yapılandırması gerekli)." },
       { status: 400 },
     )
   }
@@ -103,9 +127,12 @@ export async function PUT(request: NextRequest) {
   const body = await request.json().catch(() => null)
 
   try {
-    const bucketPaths = await loadBucketPergolaPathSet()
-    const slides = sanitizeHeroSlidesPayload(body?.slides, bucketPaths)
+    const allowedPaths = await loadAllowedSlidePathSet()
+    const slides = sanitizeHeroSlidesPayload(body?.slides, allowedPaths)
     const manifest = await savePergolaHeroSlides(slides)
+    revalidateTag("pergola-hero-slides")
+    revalidatePath("/")
+    revalidatePath("/en")
     return NextResponse.json({ ok: true, slides: manifest.slides, message: "Kahraman slaytları güncellendi." })
   } catch (error) {
     const message = error instanceof Error ? error.message : "Kayıt başarısız."

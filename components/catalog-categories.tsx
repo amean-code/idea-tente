@@ -5,6 +5,7 @@ import { Download, ArrowRight, FileText, Zap, Layers } from "lucide-react"
 import Link from "next/link"
 import { useLanguage } from "@/contexts/language-context"
 import { pergolaPublicSrc } from "@/lib/pergola-public-path"
+import { GIYOTIN_CAM_COVER } from "@/lib/gallery-covers"
 
 /**
  * Katalog kategorileri bileşeni
@@ -30,7 +31,7 @@ export function CatalogCategories() {
       id: "glass",
       title: t("nav.glassSystems"),
       description: t("nav.menuDescriptions.glass"),
-      image: "/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-3.webp",
+      image: GIYOTIN_CAM_COVER,
       href: "/cam-sistemleri",
       icon: Layers,
     },

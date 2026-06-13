@@ -4,6 +4,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -13,6 +14,16 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 't3.storageapi.dev',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'storage.railway.app',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.storage.railway.app',
         pathname: '/**',
       },
     ],

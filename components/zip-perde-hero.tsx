@@ -4,17 +4,19 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/contexts/language-context"
 
+import { publicAssetSrc } from "@/lib/pergola-public-path"
+
 /**
  * Zip Perde Hero Section
  */
-export function ZipPerdeHero() {
+export function ZipPerdeHero({ imageSrc = "/zip-perde/zip-perde-9.webp" }: { imageSrc?: string }) {
   const { t } = useLanguage()
 
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/zip-perde/zip-perde-9.webp"
+          src={publicAssetSrc(imageSrc)}
           alt="Zip Perde Sistemleri"
           fill
           className="object-cover"

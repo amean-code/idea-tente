@@ -4,15 +4,16 @@ import { ProductsOverview } from "@/components/products-overview"
 import { FeaturedProjects } from "@/components/featured-projects"
 import { StatsSection } from "@/components/stats-section"
 import { CTASection } from "@/components/cta-section"
-import { readPergolaHeroSlides } from "@/lib/pergola-hero-slides"
+import { readPergolaHeroSlidesCached } from "@/lib/pergola-hero-slides"
 
-export const dynamic = "force-dynamic"
+/** Kahraman slaytları manifest değişince admin kaydından sonra revalidate edilir. */
+export const revalidate = 3600
 
 /**
  * İngilizce ana sayfa — kahraman slayt manifesti Türkçe ana sayfa ile paylaşılır.
  */
 export default async function EnglishHomePage() {
-  const heroManifest = await readPergolaHeroSlides()
+  const heroManifest = await readPergolaHeroSlidesCached()
 
   return (
     <div className="min-h-screen">

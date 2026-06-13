@@ -59,7 +59,13 @@ export function verifyAdminCredentials(email: string, password: string): boolean
     return false
   }
 
-  return safeCompare(email, adminCredentials.email) && safeCompare(password, adminCredentials.password)
+  const normalizedEmail = email.trim()
+  const normalizedPassword = password.trim()
+
+  return (
+    safeCompare(normalizedEmail, adminCredentials.email) &&
+    safeCompare(normalizedPassword, adminCredentials.password)
+  )
 }
 
 /**

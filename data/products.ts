@@ -1,4 +1,5 @@
 import { Zap, Shield, Star, Sun, Wind } from "lucide-react"
+import { GIYOTIN_CAM_COVER } from "@/lib/gallery-covers"
 
 /**
  * Ürün tipi tanımı
@@ -39,7 +40,7 @@ export const getProducts = (t: any): Product[] => [
     id: "glass-systems",
     title: t("products.glass"),
     description: t("nav.glassDesc"),
-      image: "/giyotin-cam/giyotin-cam-sistemleri-restorant-dis-acik-3.webp",
+      image: GIYOTIN_CAM_COVER,
     href: "/cam-sistemleri",
     features: [
       t("products.features.framelessDesign"), 

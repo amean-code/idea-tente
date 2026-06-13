@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server"
-import { processTigrisFileUpload } from "@/lib/storage/process-tigris-file-upload"
+import { processBucketFileUpload } from "@/lib/storage/process-bucket-upload"
 import { isStorageApiRequestAuthorized } from "@/lib/storage/storage-api-auth"
 
 export const runtime = "nodejs"
@@ -12,7 +12,7 @@ function unauthorizedResponse() {
 }
 
 /**
- * multipart/form-data ile gelen dosyayı Tigris bucket'a yükler ve herkese açık URL tahminini döndürür.
+ * multipart/form-data ile gelen dosyayı S3 bucket'a yükler ve herkese açık URL tahminini döndürür.
  */
 export async function POST(request: NextRequest) {
   if (!isStorageApiRequestAuthorized(request)) {
@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ ok: false, message: "file alanı zorunlu (multipart/form-data)." }, { status: 400 })
     }
 
-    const uploaded = await processTigrisFileUpload(file)
+    const uploaded = await processBucketFileUpload(file)
 
     return NextResponse.json({
       ok: true,

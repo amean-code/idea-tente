@@ -1,11 +1,11 @@
 import { NextResponse, type NextRequest } from "next/server"
 import { isStorageApiRequestAuthorized } from "@/lib/storage/storage-api-auth"
 import {
-  createTigrisGetObjectPresignedUrl,
-  createTigrisPutObjectPresignedUrl,
-  createTigrisS3ClientFromEnv,
-  readTigrisStorageConfigFromEnv,
-} from "@/lib/storage/tigris-s3"
+  createS3GetObjectPresignedUrl,
+  createS3PutObjectPresignedUrl,
+  createS3BucketClientFromEnv,
+  readS3BucketConfigFromEnv,
+} from "@/lib/storage/s3-bucket"
 
 export const runtime = "nodejs"
 
@@ -37,13 +37,13 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const config = readTigrisStorageConfigFromEnv()
-    const client = createTigrisS3ClientFromEnv()
+    const config = readS3BucketConfigFromEnv()
+    const client = createS3BucketClientFromEnv()
 
     const signedUrl =
       mode === "put"
-        ? await createTigrisPutObjectPresignedUrl(client, config.bucket, key, contentType, expiresIn)
-        : await createTigrisGetObjectPresignedUrl(client, config.bucket, key, expiresIn)
+        ? await createS3PutObjectPresignedUrl(client, config.bucket, key, contentType, expiresIn)
+        : await createS3GetObjectPresignedUrl(client, config.bucket, key, expiresIn)
 
     return NextResponse.json({
       ok: true,

@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Award, ZoomIn } from "lucide-react"
 import { useState } from "react"
 import { useLanguage } from "@/contexts/language-context"
+import { publicAssetSrc } from "@/lib/pergola-public-path"
 
 /**
  * Sertifikalar bölümü - Ana sayfada gösterilen sertifika galerisi
@@ -17,55 +18,49 @@ export function CertificatesSection() {
     {
       id: 1,
       title: t("certificates.items.iso9001"),
-      image:
-        "/SERTİFİKALAR/İDEA TENTE ISO9001 copy.webp",
+      image: publicAssetSrc("/SERTİFİKALAR/İDEA TENTE ISO9001 copy.webp"),
       category: t("certificates.categories.quality"),
     },
     {
       id: 2,
       title: t("certificates.items.cePergola"),
-      image:
-        "/SERTİFİKALAR/İDEA TENTE CE BELGESİ (MOTORIZED PERGOLA SYSTEM) copy.webp",
+      image: publicAssetSrc("/SERTİFİKALAR/İDEA TENTE CE BELGESİ (MOTORIZED PERGOLA SYSTEM) copy.webp"),
       category: t("certificates.categories.ce"),
     },
     {
       id: 3,
       title: t("certificates.items.ceGlass"),
-      image:
-        "/SERTİFİKALAR/İDEA TENTE CE BELGESİ (MOTORIZED GUILLOTINE GLASS SYSTEM) copy.webp",
+      image: publicAssetSrc("/SERTİFİKALAR/İDEA TENTE CE BELGESİ (MOTORIZED GUILLOTINE GLASS SYSTEM) copy.webp"),
       category: t("certificates.categories.ce"),
     },
     {
       id: 4,
       title: t("certificates.items.conformityPergola"),
-      image:
-        "/SERTİFİKALAR/1.jpg",
+      image: publicAssetSrc("/SERTİFİKALAR/1.webp"),
       category: t("certificates.categories.conformity"),
     },
     {
       id: 5,
       title: t("certificates.items.conformityGlass"),
-      image:
-        "/SERTİFİKALAR/2.jpg",
+      image: publicAssetSrc("/SERTİFİKALAR/2.webp"),
       category: t("certificates.categories.conformity"),
     },
     {
       id: 6,
       title: t("certificates.items.designRegistration"),
-      image: "/SERTİFİKALAR/TASARIM TESCİL.webp",
+      image: publicAssetSrc("/SERTİFİKALAR/TASARIM TESCİL.webp"),
       category: t("certificates.categories.design"),
     },
     {
       id: 7,
       title: t("certificates.items.designRegistrationGlass"),
-      image:
-        "/SERTİFİKALAR/TASARIM TESCİL BELGESİ GİYOTİN.webp",
+      image: publicAssetSrc("/SERTİFİKALAR/TASARIM TESCİL BELGESİ GİYOTİN.webp"),
       category: t("certificates.categories.design"),
     },
     {
       id: 8,
       title: t("certificates.items.baibMembership"),
-      image: "/SERTİFİKALAR/BAİB ÜYELİK BELGESİ.webp",
+      image: publicAssetSrc("/SERTİFİKALAR/BAİB ÜYELİK BELGESİ.webp"),
       category: t("certificates.categories.membership"),
     },
   ]

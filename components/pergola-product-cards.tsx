@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { useLanguage } from "@/contexts/language-context"
 import { pergolaPublicSrc } from "@/lib/pergola-public-path"
+import { MOTORLU_PERGOLA_COVER } from "@/lib/gallery-covers"
 
 /**
  * `/pergola` ana sayfasında bioklimatik ve motorlu alt sayfalara `/cam-sistemleri` ile aynı kart düzeninde yönlendirir.
@@ -40,7 +41,7 @@ export function PergolaProductCards() {
         id: "motorized",
         title: t("pergolaProducts.motorized.title"),
         description: t("pergolaProducts.motorized.description"),
-        image: "/pergola/pergola-kafe-aktif.webp",
+        image: MOTORLU_PERGOLA_COVER,
         badge: t("pergolaProducts.motorized.subtitle"),
         href: "/pergola/motorlu-sistemler",
         icon: Cpu,
