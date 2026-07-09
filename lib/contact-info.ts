@@ -27,7 +27,7 @@ export const contactInfo = {
 
   // Sosyal Medya Linkleri
   social: {
-    instagram: "https://www.instagram.com/ideatente/",
+    instagram: "https://www.instagram.com/idea.outdoorliving/",
     facebook: "https://www.facebook.com/ideatentegiyotincam",
     linkedin: "https://www.linkedin.com/in/idea-tente-giyotin-camsistemler-825280148/",
     youtube: "https://www.youtube.com/channel/UCwX-TkAJ-5jN_N80o0Tta5g",
